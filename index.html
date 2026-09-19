@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can You Watch The Habs? | Montreal Canadiens Broadcast & Blackout Calculator</title>
+  
+  <!-- OpenGraph / Social Sharing Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://maltos-mk.github.io/habs-blackout-guide/">
+  <meta property="og:title" content="Can You Watch The Habs? 89-Game Broadcast & Blackout Calculator">
+  <meta property="og:description" content="Calculate exactly which Montreal Canadiens games are watchable vs blacked out based on your region and subscriptions.">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Habs Broadcast & Blackout Calculator (2026-27)">
+  <meta property="twitter:description" content="Solve regional NHL blackouts across all preseason and regular season games.">
+
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8"></script>
+
+  <!-- Tailwind CSS & Font Awesome Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            habsRed: '#AF1E2D',
+            habsBlue: '#192168',
+            habsDarkRed: '#871420',
+            iceBlue: '#eef6fc',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+    .font-teko { font-family: 'Teko', sans-serif; }
+    body { font-family: 'Inter', sans-serif; }
+    .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+    .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #334155; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200">
+
+  <!-- Header Banner -->
+  <header class="bg-gradient-to-r from-habsBlue via-habsDarkRed to-habsRed text-white shadow-lg border-b-4 border-white/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-4 text-center md:text-left">
+        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-md p-1 border-2 border-habsBlue">
+          <span class="font-teko text-3xl font-bold text-habsRed tracking-tighter">CH</span>
+        </div>
+        <div>
+          <h1 class="text-2xl sm:text-3xl font-black tracking-tight font-teko uppercase text-white">Habs Blackout & Broadcast Calculator</h1>
+          <p class="text-xs sm:text-sm text-slate-200 font-medium">89-Game Guide (5 Preseason + 84 Regular Season) • Complete NHL Broadcast Logic</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3">
+        <button id="themeToggle" class="p-2.5 rounded-xl bg-black/25 hover:bg-black/40 text-slate-200 text-sm border border-white/10 transition" title="Toggle Theme">
+          <i class="fa-solid fa-moon text-amber-300 dark:hidden"></i>
+          <i class="fa-solid fa-sun text-amber-400 hidden dark:inline"></i>
+        </button>
+        <button onclick="openDeepDiveModal()" class="px-4 py-2 rounded-xl bg-white text-habsBlue hover:bg-slate-100 font-semibold text-xs sm:text-sm shadow flex items-center gap-2 transition">
+          <i class="fa-solid fa-circle-question text-habsRed"></i>
+          <span>Why Blackouts Exist?</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+    
+    <!-- Top Configuration Grid -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      
+      <!-- User Input Card -->
+      <div class="lg:col-span-7 bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-6">
+        <div class="border-b border-slate-100 dark:border-slate-800 pb-4 flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="w-2.5 h-6 bg-habsRed rounded-full inline-block"></span>
+            <h2 class="text-lg font-bold">1. Your Location & Services</h2>
+          </div>
+          <span class="text-xs text-slate-500 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-full font-medium">Live Instant Logic</span>
+        </div>
+
+        <!-- Region Selector -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+            Where do you live?
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="regionSelector">
+            <button data-region="in_market" class="region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-habsBlue bg-habsBlue/5 text-habsBlue font-semibold dark:border-blue-400 dark:bg-blue-950/40 dark:text-blue-300">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-sm">In-Market</span>
+                <i class="fa-solid fa-location-dot text-xs"></i>
+              </div>
+              <span class="text-[11px] opacity-80 leading-tight font-normal">QC, Atlantic Canada, Eastern Ontario (Ottawa Valley)</span>
+            </button>
+
+            <button data-region="out_market_canada" class="region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-slate-200 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-sm">Out-of-Market (Canada)</span>
+                <i class="fa-solid fa-map-pin text-xs"></i>
+              </div>
+              <span class="text-[11px] opacity-80 leading-tight font-normal">GTA/Ontario-West, Manitoba, Alberta, BC</span>
+            </button>
+
+            <button data-region="us_intl" class="region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-slate-200 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-sm">US & International</span>
+                <i class="fa-solid fa-globe text-xs"></i>
+              </div>
+              <span class="text-[11px] opacity-80 leading-tight font-normal">United States, Europe, International</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Subscriptions Checklist -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+            Services & Channels You Have Access To:
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="subsList">
+            
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_sn" class="rounded border-slate-300 text-habsBlue focus:ring-habsBlue h-4 w-4" checked>
+              <div class="flex-1">
+                <p class="text-sm font-semibold">Sportsnet (Cable / SN+ Standard)</p>
+                <p class="text-[11px] text-slate-500">Saturday HNIC marquee, national midweek</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_sn_prem" class="rounded border-slate-300 text-habsBlue focus:ring-habsBlue h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">Sportsnet+ Premium / Centre Ice</p>
+                <p class="text-[11px] text-slate-500">Unlocks out-of-market regional feeds</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_tsn" class="rounded border-slate-300 text-habsBlue focus:ring-habsBlue h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">TSN / TSN2</p>
+                <p class="text-[11px] text-slate-500">50 English Regional games (subject to blackouts)</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_prime" class="rounded border-slate-300 text-habsBlue focus:ring-habsBlue h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">Amazon Prime Video</p>
+                <p class="text-[11px] text-slate-500">Prime Monday Night Hockey national feeds</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_rds" class="rounded border-slate-300 text-habsBlue focus:ring-habsBlue h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">RDS / RDS Direct</p>
+                <p class="text-[11px] text-slate-500">45 French Regional games (in-market only)</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_tva" class="rounded border-slate-300 text-habsBlue focus:ring-habsBlue h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">TVA Sports</p>
+                <p class="text-[11px] text-slate-500">National French broadcasts (zero blackouts)</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition sm:col-span-2">
+              <input type="checkbox" id="sub_espn" class="rounded border-slate-300 text-habsBlue focus:ring-habsBlue h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">ESPN Select (ESPN+) / NHL.tv</p>
+                <p class="text-[11px] text-slate-500">US & International out-of-market streaming service</p>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- Language Preference -->
+        <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Language Feeds You Watch:</span>
+          <div class="inline-flex rounded-lg p-1 bg-slate-100 dark:bg-slate-800 text-xs font-semibold">
+            <button id="lang_en" onclick="setLang('en')" class="px-3 py-1.5 rounded-md bg-white dark:bg-slate-700 shadow-sm text-habsRed font-bold">English Only</button>
+            <button id="lang_fr" onclick="setLang('fr')" class="px-3 py-1.5 rounded-md text-slate-500">French Only</button>
+            <button id="lang_any" onclick="setLang('any')" class="px-3 py-1.5 rounded-md text-slate-500">Either (Any)</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- KPI & Summary Scorecard -->
+      <div class="lg:col-span-5 flex flex-col gap-4">
+        
+        <!-- Score Box -->
+        <div class="bg-gradient-to-br from-habsBlue to-slate-900 text-white p-6 rounded-2xl shadow-sm border border-slate-800 relative overflow-hidden flex-1 flex flex-col justify-between">
+          <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-habsRed/10 rounded-full blur-2xl pointer-events-none"></div>
+
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-300" id="kpiSeasonTitle">Current Coverage Score</span>
+              <span id="pctBadge" class="text-xs font-bold px-2.5 py-1 rounded-full bg-habsRed text-white">0% Watchable</span>
+            </div>
+
+            <div class="flex items-baseline space-x-2">
+              <span id="watchableCount" class="font-teko text-6xl sm:text-7xl font-bold leading-none text-white">0</span>
+              <span id="totalGameLabel" class="text-slate-300 font-teko text-2xl font-medium">/ 89 GAMES</span>
+            </div>
+
+            <p id="kpiVerdict" class="text-xs sm:text-sm text-slate-200 mt-3 font-normal leading-relaxed">
+              Evaluating your setup...
+            </p>
+          </div>
+
+          <!-- Progress Bars Breakdown -->
+          <div class="space-y-3 pt-6 border-t border-white/10 mt-4">
+            <div>
+              <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
+                <span>Watchable Without Blackout</span>
+                <span id="watchableBreakdown">0 games</span>
+              </div>
+              <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div id="watchBar" class="bg-emerald-500 transition-all duration-300" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
+                <span>Blacked Out Locally</span>
+                <span id="blackoutBreakdown">0 games</span>
+              </div>
+              <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div id="blackoutBar" class="bg-amber-500 transition-all duration-300" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
+                <span>Requires Missing Subscription</span>
+                <span id="missingBreakdown">0 games</span>
+              </div>
+              <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div id="missingBar" class="bg-rose-500 transition-all duration-300" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strategy Notice Card -->
+        <div id="adviceCard" class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs sm:text-sm">
+          <!-- Populated by JS -->
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Schedule & Filter Section -->
+    <section class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+      
+      <!-- Top Bar Filters -->
+      <div class="p-4 sm:p-6 border-b border-slate-100 dark:border-slate-800 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+        
+        <!-- Phase Filter (Preseason vs Regular Season) -->
+        <div class="inline-flex rounded-xl p-1 bg-slate-100 dark:bg-slate-800 text-xs font-semibold self-start">
+          <button onclick="setPhase('all')" id="phase_all" class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 shadow-sm text-habsRed font-bold transition">All (89)</button>
+          <button onclick="setPhase('preseason')" id="phase_preseason" class="px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white transition">Preseason (5)</button>
+          <button onclick="setPhase('regular')" id="phase_regular" class="px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white transition">Regular Season (84)</button>
+        </div>
+
+        <!-- Filter Pills & Search -->
+        <div class="flex flex-wrap items-center gap-2">
+          
+          <div class="relative flex-1 sm:flex-initial">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+            <input type="text" id="opponentSearch" placeholder="Search opponent, arena..." class="pl-8 pr-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-habsBlue w-full sm:w-48">
+          </div>
+
+          <select id="statusFilter" class="px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-habsBlue">
+            <option value="all">Status: All Games</option>
+            <option value="watchable">Available to Watch</option>
+            <option value="blacked_out">Blacked Out</option>
+            <option value="missing_sub">Missing Subscription</option>
+          </select>
+
+          <select id="channelFilter" class="px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-habsBlue">
+            <option value="all">Channel: All</option>
+            <option value="Sportsnet">Sportsnet (HNIC)</option>
+            <option value="TSN2">TSN2 (Regional EN)</option>
+            <option value="Prime Video">Prime Video (Monday)</option>
+            <option value="RDS">RDS (Regional FR)</option>
+            <option value="TVA Sports">TVA Sports (National FR)</option>
+          </select>
+
+        </div>
+      </div>
+
+      <!-- Schedule Table / List -->
+      <div class="overflow-x-auto custom-scrollbar max-h-[650px]">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse">
+          <thead class="sticky top-0 bg-slate-100/95 dark:bg-slate-800/95 backdrop-blur z-10 text-slate-600 dark:text-slate-300 uppercase tracking-wider text-[11px]">
+            <tr>
+              <th class="py-3 px-4 font-semibold">Gm</th>
+              <th class="py-3 px-4 font-semibold">Date & Time (ET)</th>
+              <th class="py-3 px-4 font-semibold">Matchup / Venue</th>
+              <th class="py-3 px-4 font-semibold">Broadcast Feeds</th>
+              <th class="py-3 px-4 font-semibold">Coverage Type</th>
+              <th class="py-3 px-4 font-semibold text-right">Your Access Status</th>
+            </tr>
+          </thead>
+          <tbody id="scheduleTableBody" class="divide-y divide-slate-100 dark:divide-slate-800">
+            <!-- Rows injected by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Footer count -->
+      <div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 flex justify-between items-center">
+        <span id="renderedCountLabel">Showing 89 games</span>
+        <span class="text-[11px] italic">Game dates, split-squad locations & national allocations calibrated for 2026-27 rights</span>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Explainer Modal -->
+  <div id="deepDiveModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-800 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3">
+        <h3 class="text-lg font-bold font-teko uppercase tracking-wide text-habsRed">The NHL Blackout & Rights Architecture Explained</h3>
+        <button onclick="closeDeepDiveModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+        <p>
+          <strong>Why are 50 TSN2 games blacked out if I live in Toronto or Calgary?</strong><br>
+          Bell Media (TSN and RDS) only negotiated and purchased the <em>regional</em> broadcast rights for Quebec, Atlantic Canada, and Eastern Ontario (Pembroke, Ottawa, Cornwall). If you live anywhere west of that boundary, the NHL strictly forbids TSN and RDS from broadcasting Habs games to your television, because they want to protect the Maple Leafs, Senators, Oilers, and Flames home broadcast markets.
+        </p>
+        <p>
+          <strong>Does having a cable box bypass this?</strong><br>
+          <strong>No.</strong> Blackouts originated on cable. Cable and satellite providers (Rogers, Bell, Shaw Direct, Cogeco) read your postal code and will place a static blackout screen on TSN2 or RDS during game time unless you pay for <em>NHL Centre Ice</em>.
+        </p>
+        <p>
+          <strong>Why are Saturday nights never blacked out?</strong><br>
+          Saturday night games are <strong>National rights</strong> owned by Rogers (Sportsnet) and TVA Sports. National rights carry coast-to-coast clearance across all Canadian territories with zero regional blackouts.
+        </p>
+        <p>
+          <strong>What about tonight's preseason split-squad game?</strong><br>
+          Tonight's Bell Centre game is on TSN2 (Montreal territory), while the Scotiabank Arena game is on TSN4 (Toronto territory). If you live in the GTA, TSN4 is in-market for you, but TSN2 is regionally blacked out.
+        </p>
+      </div>
+
+      <div class="pt-3 border-t border-slate-100 dark:border-slate-800 text-right">
+        <button onclick="closeDeepDiveModal()" class="px-4 py-2 bg-habsBlue text-white font-semibold text-xs rounded-xl hover:bg-slate-800 transition">
+          Got It, Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Logic & Schedule Engine -->
+  <script>
+    // State
+    const state = {
+      region: 'in_market',
+      lang: 'en',
+      phase: 'all',
+      search: '',
+      statusFilter: 'all',
+      channelFilter: 'all',
+      subs: {
+        sn: true,
+        sn_prem: false,
+        tsn: false,
+        prime: false,
+        rds: false,
+        tva: false,
+        espn: false
+      }
+    };
+
+    // 89 Games Data (5 Preseason + 84 Regular Season)
+    const games = [
+      // Preseason
+      { id: 'P1', phase: 'preseason', date: 'Sat, Sep 19, 2026', time: '7:00 PM', vs: 'vs Toronto Maple Leafs (Split Squad)', venue: 'Bell Centre (Montreal)', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl', note: 'Preseason Split-Squad' },
+      { id: 'P2', phase: 'preseason', date: 'Sat, Sep 19, 2026', time: '7:00 PM', vs: '@ Toronto Maple Leafs (Split Squad)', venue: 'Scotiabank Arena (Toronto)', netEN: 'TSN4', netFR: 'RDS Info', type: 'regional_tor', note: 'Preseason Split-Squad' },
+      { id: 'P3', phase: 'preseason', date: 'Mon, Sep 21, 2026', time: '7:00 PM', vs: 'vs Ottawa Senators (Trois-Rivières)', venue: 'Colisée Vidéotron', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national', note: 'Kraft Hockeyville' },
+      { id: 'P4', phase: 'preseason', date: 'Sat, Sep 26, 2026', time: '7:00 PM', vs: 'vs Ottawa Senators (Split Squad)', venue: 'Bell Centre (Montreal)', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl', note: 'Preseason' },
+      { id: 'P5', phase: 'preseason', date: 'Sat, Sep 26, 2026', time: '7:00 PM', vs: '@ Ottawa Senators (Split Squad)', venue: 'Canadian Tire Centre', netEN: 'TSN5', netFR: 'RDS Info', type: 'regional_ott', note: 'Preseason' },
+      
+      // Regular Season (84 Games)
+      { id: '1', phase: 'regular', date: 'Tue, Sep 29, 2026', time: '7:00 PM', vs: '@ Toronto Maple Leafs', venue: 'Scotiabank Arena', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national', note: 'Season Opener' },
+      { id: '2', phase: 'regular', date: 'Sat, Oct 3, 2026', time: '7:00 PM', vs: '@ Pittsburgh Penguins', venue: 'PPG Paints Arena', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national', note: 'HNIC Showcase' },
+      { id: '3', phase: 'regular', date: 'Tue, Oct 6, 2026', time: '7:00 PM', vs: 'vs Carolina Hurricanes', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl', note: 'Home Opener' },
+      { id: '4', phase: 'regular', date: 'Thu, Oct 8, 2026', time: '7:00 PM', vs: 'vs Detroit Red Wings', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '5', phase: 'regular', date: 'Sat, Oct 10, 2026', time: '7:00 PM', vs: 'vs Boston Bruins', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national', note: 'Saturday Marquee' },
+      { id: '6', phase: 'regular', date: 'Mon, Oct 12, 2026', time: '7:30 PM', vs: '@ Ottawa Senators', venue: 'Canadian Tire Centre', netEN: 'Prime Video', netFR: 'TVA Sports', type: 'prime_monday', note: 'Thanksgiving Monday' },
+      { id: '7', phase: 'regular', date: 'Thu, Oct 15, 2026', time: '7:00 PM', vs: '@ Buffalo Sabres', venue: 'KeyBank Center', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '8', phase: 'regular', date: 'Sat, Oct 17, 2026', time: '7:00 PM', vs: 'vs New York Rangers', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '9', phase: 'regular', date: 'Tue, Oct 20, 2026', time: '7:00 PM', vs: 'vs Tampa Bay Lightning', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '10', phase: 'regular', date: 'Thu, Oct 22, 2026', time: '7:00 PM', vs: '@ New Jersey Devils', venue: 'Prudential Center', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '11', phase: 'regular', date: 'Sun, Oct 25, 2026', time: '6:00 PM', vs: '@ Winnipeg Jets', venue: 'Princess Auto Stadium', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national', note: 'Heritage Classic Outdoor' },
+      { id: '12', phase: 'regular', date: 'Tue, Oct 27, 2026', time: '8:00 PM', vs: '@ Minnesota Wild', venue: 'Xcel Energy Center', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '13', phase: 'regular', date: 'Thu, Oct 29, 2026', time: '7:00 PM', vs: 'vs Columbus Blue Jackets', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '14', phase: 'regular', date: 'Sat, Oct 31, 2026', time: '7:00 PM', vs: 'vs Toronto Maple Leafs', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '15', phase: 'regular', date: 'Tue, Nov 3, 2026', time: '7:00 PM', vs: 'vs Philadelphia Flyers', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '16', phase: 'regular', date: 'Thu, Nov 5, 2026', time: '7:00 PM', vs: '@ Washington Capitals', venue: 'Capital One Arena', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '17', phase: 'regular', date: 'Sat, Nov 7, 2026', time: '7:00 PM', vs: '@ Boston Bruins', venue: 'TD Garden', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '18', phase: 'regular', date: 'Mon, Nov 9, 2026', time: '7:00 PM', vs: 'vs Vancouver Canucks', venue: 'Bell Centre', netEN: 'Prime Video', netFR: 'RDS', type: 'prime_monday' },
+      { id: '19', phase: 'regular', date: 'Wed, Nov 11, 2026', time: '7:30 PM', vs: 'vs Calgary Flames', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '20', phase: 'regular', date: 'Fri, Nov 13, 2026', time: '7:00 PM', vs: '@ Florida Panthers', venue: 'Amerant Bank Arena', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '21', phase: 'regular', date: 'Sat, Nov 14, 2026', time: '7:00 PM', vs: '@ Tampa Bay Lightning', venue: 'Amalie Arena', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '22', phase: 'regular', date: 'Tue, Nov 17, 2026', time: '7:00 PM', vs: 'vs Edmonton Oilers', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '23', phase: 'regular', date: 'Thu, Nov 19, 2026', time: '7:00 PM', vs: 'vs Vegas Golden Knights', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '24', phase: 'regular', date: 'Sat, Nov 21, 2026', time: '7:00 PM', vs: 'vs Ottawa Senators', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '25', phase: 'regular', date: 'Tue, Nov 24, 2026', time: '7:00 PM', vs: '@ New York Islanders', venue: 'UBS Arena', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '26', phase: 'regular', date: 'Fri, Nov 27, 2026', time: '1:00 PM', vs: '@ Detroit Red Wings', venue: 'Little Caesars Arena', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl', note: 'Black Friday Matinee' },
+      { id: '27', phase: 'regular', date: 'Sat, Nov 28, 2026', time: '7:00 PM', vs: 'vs Chicago Blackhawks', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '28', phase: 'regular', date: 'Tue, Dec 1, 2026', time: '7:00 PM', vs: 'vs Seattle Kraken', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '29', phase: 'regular', date: 'Thu, Dec 3, 2026', time: '7:00 PM', vs: 'vs Nashville Predators', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '30', phase: 'regular', date: 'Sat, Dec 5, 2026', time: '7:00 PM', vs: '@ Toronto Maple Leafs', venue: 'Scotiabank Arena', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '31', phase: 'regular', date: 'Mon, Dec 7, 2026', time: '7:00 PM', vs: 'vs Anaheim Ducks', venue: 'Bell Centre', netEN: 'Prime Video', netFR: 'RDS', type: 'prime_monday' },
+      { id: '32', phase: 'regular', date: 'Wed, Dec 9, 2026', time: '7:00 PM', vs: '@ Ottawa Senators', venue: 'Canadian Tire Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '33', phase: 'regular', date: 'Fri, Dec 11, 2026', time: '7:00 PM', vs: 'vs Pittsburgh Penguins', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '34', phase: 'regular', date: 'Sat, Dec 12, 2026', time: '7:00 PM', vs: '@ New York Rangers', venue: 'Madison Square Garden', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '35', phase: 'regular', date: 'Tue, Dec 15, 2026', time: '7:00 PM', vs: 'vs Buffalo Sabres', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '36', phase: 'regular', date: 'Thu, Dec 17, 2026', time: '7:00 PM', vs: '@ Philadelphia Flyers', venue: 'Wells Fargo Center', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '37', phase: 'regular', date: 'Sat, Dec 19, 2026', time: '7:00 PM', vs: 'vs Detroit Red Wings', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '38', phase: 'regular', date: 'Tue, Dec 22, 2026', time: '7:00 PM', vs: '@ Columbus Blue Jackets', venue: 'Nationwide Arena', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '39', phase: 'regular', date: 'Sun, Dec 27, 2026', time: '7:00 PM', vs: '@ Tampa Bay Lightning', venue: 'Amalie Arena', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '40', phase: 'regular', date: 'Tue, Dec 29, 2026', time: '7:00 PM', vs: '@ Florida Panthers', venue: 'Amerant Bank Arena', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '41', phase: 'regular', date: 'Thu, Dec 31, 2026', time: '5:00 PM', vs: '@ Carolina Hurricanes', venue: 'Lenovo Center', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl', note: 'New Year\'s Eve' },
+      { id: '42', phase: 'regular', date: 'Sat, Jan 2, 2027', time: '7:00 PM', vs: 'vs Washington Capitals', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '43', phase: 'regular', date: 'Tue, Jan 5, 2027', time: '7:00 PM', vs: 'vs San Jose Sharks', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '44', phase: 'regular', date: 'Thu, Jan 7, 2027', time: '7:00 PM', vs: 'vs St. Louis Blues', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '45', phase: 'regular', date: 'Sat, Jan 9, 2027', time: '7:00 PM', vs: 'vs Boston Bruins', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '46', phase: 'regular', date: 'Mon, Jan 11, 2027', time: '7:00 PM', vs: '@ Dallas Stars', venue: 'American Airlines Center', netEN: 'Prime Video', netFR: 'RDS', type: 'prime_monday' },
+      { id: '47', phase: 'regular', date: 'Wed, Jan 13, 2027', time: '9:00 PM', vs: '@ Colorado Avalanche', venue: 'Ball Arena', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '48', phase: 'regular', date: 'Fri, Jan 15, 2027', time: '9:00 PM', vs: '@ Utah Hockey Club', venue: 'Delta Center', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '49', phase: 'regular', date: 'Sat, Jan 16, 2027', time: '10:00 PM', vs: '@ Vegas Golden Knights', venue: 'T-Mobile Arena', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '50', phase: 'regular', date: 'Tue, Jan 19, 2027', time: '7:00 PM', vs: 'vs Florida Panthers', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '51', phase: 'regular', date: 'Thu, Jan 21, 2027', time: '7:00 PM', vs: 'vs New Jersey Devils', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '52', phase: 'regular', date: 'Sat, Jan 23, 2027', time: '7:00 PM', vs: 'vs Toronto Maple Leafs', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '53', phase: 'regular', date: 'Tue, Jan 26, 2027', time: '7:00 PM', vs: '@ Buffalo Sabres', venue: 'KeyBank Center', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '54', phase: 'regular', date: 'Thu, Jan 28, 2027', time: '7:00 PM', vs: 'vs New York Islanders', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '55', phase: 'regular', date: 'Sat, Jan 30, 2027', time: '2:00 PM', vs: 'vs Los Angeles Kings', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl', note: 'Super Bowl Weekend Matinee' },
+      { id: '56', phase: 'regular', date: 'Sun, Jan 31, 2027', time: '2:00 PM', vs: 'vs Anaheim Ducks', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl', note: 'Super Bowl Weekend Matinee' },
+      { id: '57', phase: 'regular', date: 'Tue, Feb 2, 2027', time: '7:00 PM', vs: '@ Boston Bruins', venue: 'TD Garden', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '58', phase: 'regular', date: 'Thu, Feb 4, 2027', time: '7:00 PM', vs: 'vs Ottawa Senators', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '59', phase: 'regular', date: 'Sat, Feb 6, 2027', time: '7:00 PM', vs: '@ Pittsburgh Penguins', venue: 'PPG Paints Arena', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '60', phase: 'regular', date: 'Mon, Feb 22, 2027', time: '7:00 PM', vs: 'vs Carolina Hurricanes', venue: 'Bell Centre', netEN: 'Prime Video', netFR: 'RDS', type: 'prime_monday' },
+      { id: '61', phase: 'regular', date: 'Wed, Feb 24, 2027', time: '7:30 PM', vs: '@ Detroit Red Wings', venue: 'Little Caesars Arena', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '62', phase: 'regular', date: 'Fri, Feb 26, 2027', time: '7:00 PM', vs: '@ Washington Capitals', venue: 'Capital One Arena', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '63', phase: 'regular', date: 'Sat, Feb 27, 2027', time: '7:00 PM', vs: 'vs Tampa Bay Lightning', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '64', phase: 'regular', date: 'Tue, Mar 2, 2027', time: '7:00 PM', vs: 'vs Winnipeg Jets', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '65', phase: 'regular', date: 'Thu, Mar 4, 2027', time: '7:00 PM', vs: '@ Columbus Blue Jackets', venue: 'Nationwide Arena', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '66', phase: 'regular', date: 'Sat, Mar 6, 2027', time: '7:00 PM', vs: '@ Ottawa Senators', venue: 'Canadian Tire Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '67', phase: 'regular', date: 'Tue, Mar 9, 2027', time: '9:00 PM', vs: '@ Edmonton Oilers', venue: 'Rogers Place', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '68', phase: 'regular', date: 'Thu, Mar 11, 2027', time: '9:00 PM', vs: '@ Calgary Flames', venue: 'Scotiabank Saddledome', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '69', phase: 'regular', date: 'Sat, Mar 13, 2027', time: '10:00 PM', vs: '@ Vancouver Canucks', venue: 'Rogers Arena', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '70', phase: 'regular', date: 'Tue, Mar 16, 2027', time: '10:00 PM', vs: '@ Seattle Kraken', venue: 'Climate Pledge Arena', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '71', phase: 'regular', date: 'Thu, Mar 18, 2027', time: '7:00 PM', vs: 'vs Florida Panthers', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '72', phase: 'regular', date: 'Sat, Mar 20, 2027', time: '7:00 PM', vs: 'vs New York Rangers', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '73', phase: 'regular', date: 'Tue, Mar 23, 2027', time: '7:00 PM', vs: '@ New Jersey Devils', venue: 'Prudential Center', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '74', phase: 'regular', date: 'Thu, Mar 25, 2027', time: '7:00 PM', vs: '@ New York Islanders', venue: 'UBS Arena', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '75', phase: 'regular', date: 'Sat, Mar 27, 2027', time: '7:00 PM', vs: 'vs Buffalo Sabres', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '76', phase: 'regular', date: 'Tue, Mar 30, 2027', time: '7:00 PM', vs: 'vs Ottawa Senators', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '77', phase: 'regular', date: 'Thu, Apr 1, 2027', time: '7:00 PM', vs: 'vs Philadelphia Flyers', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '78', phase: 'regular', date: 'Sat, Apr 3, 2027', time: '7:00 PM', vs: '@ Toronto Maple Leafs', venue: 'Scotiabank Arena', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '79', phase: 'regular', date: 'Tue, Apr 6, 2027', time: '7:00 PM', vs: 'vs Pittsburgh Penguins', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '80', phase: 'regular', date: 'Thu, Apr 8, 2027', time: '7:00 PM', vs: '@ Detroit Red Wings', venue: 'Little Caesars Arena', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '81', phase: 'regular', date: 'Sat, Apr 10, 2027', time: '7:00 PM', vs: 'vs Boston Bruins', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' },
+      { id: '82', phase: 'regular', date: 'Tue, Apr 13, 2027', time: '7:00 PM', vs: 'vs Washington Capitals', venue: 'Bell Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '83', phase: 'regular', date: 'Thu, Apr 15, 2027', time: '7:00 PM', vs: '@ Ottawa Senators', venue: 'Canadian Tire Centre', netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' },
+      { id: '84', phase: 'regular', date: 'Sat, Apr 17, 2027', time: '7:00 PM', vs: 'vs Toronto Maple Leafs', venue: 'Bell Centre', netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national', note: 'Season Finale' }
+    ];
+
+    function evaluateGame(g) {
+      let canEN = false;
+      let reasonEN = '';
+      let canFR = false;
+      let reasonFR = '';
+
+      // ENGLISH FEED EVALUATION
+      if (g.netEN === 'Sportsnet') {
+        if (state.region === 'us_intl') {
+          if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
+          else { reasonEN = 'Requires ESPN+ in US'; }
+        } else {
+          if (state.subs.sn || state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet (National)'; }
+          else { reasonEN = 'Requires Sportsnet subscription'; }
+        }
+      } else if (g.netEN === 'Prime Video') {
+        if (state.region === 'us_intl') {
+          if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
+          else { reasonEN = 'Requires ESPN+ in US'; }
+        } else {
+          if (state.subs.prime) { canEN = true; reasonEN = 'Watch on Amazon Prime Video'; }
+          else { reasonEN = 'Requires Amazon Prime subscription'; }
+        }
+      } else if (g.netEN === 'TSN2' || g.type === 'regional_mtl') {
+        if (state.region === 'in_market') {
+          if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN2 (In-Market)'; }
+          else { reasonEN = 'Requires TSN subscription'; }
+        } else if (state.region === 'out_market_canada') {
+          if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ Premium (Out-of-Market feed)'; }
+          else if (state.subs.tsn) { reasonEN = 'BLACKED OUT on TSN (Outside Habs territory). Need SN+ Premium.'; }
+          else { reasonEN = 'Requires SN+ Premium (Blacked out on regular TSN)'; }
+        } else {
+          if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
+          else { reasonEN = 'Requires ESPN+ in US'; }
+        }
+      } else if (g.type === 'regional_tor') {
+        if (state.region === 'out_market_canada') {
+          if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN4 (Local in Ontario)'; }
+          else { reasonEN = 'Requires TSN subscription'; }
+        } else if (state.region === 'in_market') {
+          if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch via Sportsnet+ Premium'; }
+          else { reasonEN = 'Blacked out in QC/Atl on TSN4. Requires SN+ Premium'; }
+        } else {
+          if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+'; }
+          else { reasonEN = 'Requires ESPN+'; }
+        }
+      } else if (g.type === 'regional_ott') {
+        if (state.region === 'in_market' || state.region === 'out_market_canada') {
+          if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch via Sportsnet+ Premium'; }
+          else if (state.subs.tsn) { reasonEN = 'TSN5 regional restrictions apply'; }
+          else { reasonEN = 'Requires SN+ Premium or TSN5'; }
+        } else {
+          if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+'; }
+          else { reasonEN = 'Requires ESPN+'; }
+        }
+      }
+
+      // FRENCH FEED EVALUATION
+      if (g.netFR === 'TVA Sports') {
+        if (state.region === 'us_intl') {
+          if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ (when available)'; }
+          else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
+        } else {
+          if (state.subs.tva) { canFR = true; reasonFR = 'Watch on TVA Sports (Coast-to-Coast)'; }
+          else { reasonFR = 'Requires TVA Sports subscription'; }
+        }
+      } else if (g.netFR === 'RDS' || g.netFR === 'RDS Info') {
+        if (state.region === 'in_market') {
+          if (state.subs.rds) { canFR = true; reasonFR = 'Watch on RDS (In-Market)'; }
+          else { reasonFR = 'Requires RDS subscription'; }
+        } else if (state.region === 'out_market_canada') {
+          if (state.subs.sn_prem) { canFR = true; reasonFR = 'Watch via Sportsnet+ Premium (French feed)'; }
+          else if (state.subs.rds) { reasonFR = 'BLACKED OUT on RDS outside Quebec. Need SN+ Premium.'; }
+          else { reasonFR = 'Requires SN+ Premium (Blacked out on regular RDS)'; }
+        } else {
+          if (state.subs.espn) { canFR = true; reasonFR = 'Watch French feed on ESPN+ (select games)'; }
+          else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
+        }
+      }
+
+      // COMBINED STATUS BY LANGUAGE PREFERENCE
+      let status = 'missing_sub';
+      let summaryReason = '';
+
+      if (state.lang === 'en') {
+        if (canEN) { status = 'watchable'; summaryReason = reasonEN; }
+        else if (reasonEN.includes('BLACKED OUT')) { status = 'blacked_out'; summaryReason = reasonEN; }
+        else { status = 'missing_sub'; summaryReason = reasonEN; }
+      } else if (state.lang === 'fr') {
+        if (canFR) { status = 'watchable'; summaryReason = reasonFR; }
+        else if (reasonFR.includes('BLACKED OUT')) { status = 'blacked_out'; summaryReason = reasonFR; }
+        else { status = 'missing_sub'; summaryReason = reasonFR; }
+      } else {
+        if (canEN || canFR) {
+          status = 'watchable';
+          summaryReason = canEN ? reasonEN : reasonFR;
+        } else if (reasonEN.includes('BLACKED OUT') || reasonFR.includes('BLACKED OUT')) {
+          status = 'blacked_out';
+          summaryReason = reasonEN.includes('BLACKED OUT') ? reasonEN : reasonFR;
+        } else {
+          status = 'missing_sub';
+          summaryReason = reasonEN + ' / ' + reasonFR;
+        }
+      }
+
+      return { status, summaryReason, canEN, canFR };
+    }
+
+    function render() {
+      const tbody = document.getElementById('scheduleTableBody');
+      tbody.innerHTML = '';
+
+      let watchableCount = 0;
+      let blackedOutCount = 0;
+      let missingSubCount = 0;
+
+      const activeGames = games.filter(g => {
+        if (state.phase === 'preseason') return g.phase === 'preseason';
+        if (state.phase === 'regular') return g.phase === 'regular';
+        return true;
+      });
+
+      let displayedCount = 0;
+
+      activeGames.forEach(g => {
+        const evalRes = evaluateGame(g);
+
+        if (evalRes.status === 'watchable') watchableCount++;
+        else if (evalRes.status === 'blacked_out') blackedOutCount++;
+        else missingSubCount++;
+
+        // Filters
+        if (state.statusFilter !== 'all' && evalRes.status !== state.statusFilter) return;
+        if (state.channelFilter !== 'all') {
+          const matchChan = (g.netEN && g.netEN.includes(state.channelFilter)) || (g.netFR && g.netFR.includes(state.channelFilter));
+          if (!matchChan) return;
+        }
+        if (state.search) {
+          const s = state.search.toLowerCase();
+          const matchSearch = g.vs.toLowerCase().includes(s) || g.venue.toLowerCase().includes(s) || (g.note && g.note.toLowerCase().includes(s));
+          if (!matchSearch) return;
+        }
+
+        displayedCount++;
+
+        const tr = document.createElement('tr');
+        tr.className = "hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60";
+
+        let badge = '';
+        if (evalRes.status === 'watchable') {
+          badge = '<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300"><i class="fa-solid fa-check mr-1.5 text-[10px]"></i>Watchable</span>';
+        } else if (evalRes.status === 'blacked_out') {
+          badge = '<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300"><i class="fa-solid fa-ban mr-1.5 text-[10px]"></i>Blacked Out</span>';
+        } else {
+          badge = '<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300"><i class="fa-solid fa-lock mr-1.5 text-[10px]"></i>Need Sub</span>';
+        }
+
+        tr.innerHTML = `
+          <td class="py-3 px-4 font-bold text-slate-400 dark:text-slate-500 font-teko text-base">${g.id}</td>
+          <td class="py-3 px-4 whitespace-nowrap">
+            <div class="font-semibold text-slate-800 dark:text-slate-200">${g.date}</div>
+            <div class="text-[11px] text-slate-400">${g.time}</div>
+          </td>
+          <td class="py-3 px-4">
+            <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
+              <span>${g.vs}</span>
+              ${g.phase === 'preseason' ? '<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">Preseason</span>' : ''}
+              ${g.note ? `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-habsRed/10 text-habsRed">${g.note}</span>` : ''}
+            </div>
+            <div class="text-[11px] text-slate-500">${g.venue}</div>
+          </td>
+          <td class="py-3 px-4">
+            <div class="flex items-center space-x-1.5">
+              <span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">${g.netEN}</span>
+              <span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">${g.netFR}</span>
+            </div>
+          </td>
+          <td class="py-3 px-4">
+            <span class="text-[11px] font-medium uppercase tracking-wider text-slate-500">
+              ${g.type === 'national' ? 'National (Coast-to-Coast)' : g.type === 'prime_monday' ? 'Prime Monday Exclusive' : 'Regional Territory'}
+            </span>
+          </td>
+          <td class="py-3 px-4 text-right whitespace-nowrap">
+            ${badge}
+            <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 max-w-xs ml-auto truncate" title="${evalRes.summaryReason}">
+              ${evalRes.summaryReason}
+            </div>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Update KPIs
+      const total = activeGames.length;
+      const pct = Math.round((watchableCount / total) * 100) || 0;
+
+      document.getElementById('watchableCount').textContent = watchableCount;
+      document.getElementById('totalGameLabel').textContent = `/ ${total} GAMES`;
+      document.getElementById('pctBadge').textContent = `${pct}% Watchable`;
+      document.getElementById('kpiSeasonTitle').textContent = 
+        state.phase === 'preseason' ? 'Preseason Coverage Score' :
+        state.phase === 'regular' ? 'Regular Season Coverage Score' : 'Total Coverage Score (All 89)';
+
+      document.getElementById('watchableBreakdown').textContent = `${watchableCount} games (${pct}%)`;
+      document.getElementById('blackoutBreakdown').textContent = `${blackedOutCount} games (${Math.round((blackedOutCount/total)*100)||0}%)`;
+      document.getElementById('missingBreakdown').textContent = `${missingSubCount} games (${Math.round((missingSubCount/total)*100)||0}%)`;
+
+      document.getElementById('watchBar').style.width = `${pct}%`;
+      document.getElementById('blackoutBar').style.width = `${(blackedOutCount/total)*100}%`;
+      document.getElementById('missingBar').style.width = `${(missingSubCount/total)*100}%`;
+
+      document.getElementById('renderedCountLabel').textContent = `Showing ${displayedCount} of ${total} games`;
+
+      // Verdict Text & Advice Box
+      const verdictEl = document.getElementById('kpiVerdict');
+      const adviceCard = document.getElementById('adviceCard');
+
+      if (state.region === 'out_market_canada') {
+        if (!state.subs.sn_prem) {
+          verdictEl.textContent = `You live outside Quebec/Atlantic territory. All 50 TSN2 games are blacked out on cable and regular TSN streaming. You only get national games.`;
+          adviceCard.innerHTML = `
+            <div class="flex items-start space-x-3">
+              <i class="fa-solid fa-lightbulb text-amber-500 text-lg mt-0.5"></i>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white">Smart Money Saving Tip:</h4>
+                <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+                  Instead of paying $45/mo for Sportsnet+ Premium, run a VPN (set to Montreal) on your computer or Fire Stick while logged into TSN to unlock the 50 regional games, or use ESPN+ via US VPN (~$20/mo).
+                </p>
+              </div>
+            </div>
+          `;
+        } else {
+          verdictEl.textContent = `Excellent. With Sportsnet+ Premium, all out-of-market regional Habs games on TSN and RDS are unlocked for streaming across Canada.`;
+          adviceCard.innerHTML = `
+            <div class="flex items-start space-x-3">
+              <i class="fa-solid fa-circle-check text-emerald-500 text-lg mt-0.5"></i>
+              <div>
+                <h4 class="font-bold text-slate-900 dark:text-white">Full Out-of-Market Coverage Active</h4>
+                <p class="text-slate-600 dark:text-slate-300 mt-1">
+                  You have the official NHL out-of-market streaming tier. Remember to also check Amazon Prime for Monday night national broadcasts.
+                </p>
+              </div>
+            </div>
+          `;
+        }
+      } else if (state.region === 'in_market') {
+        verdictEl.textContent = `You are in the Canadiens home broadcast territory (QC, Atlantic, Eastern ON). Standard TSN and RDS subscriptions will never be blacked out for you.`;
+        adviceCard.innerHTML = `
+          <div class="flex items-start space-x-3">
+            <i class="fa-solid fa-house-user text-habsBlue text-lg mt-0.5 dark:text-blue-400"></i>
+            <div>
+              <h4 class="font-bold text-slate-900 dark:text-white">In-Market Sweet Spot</h4>
+              <p class="text-slate-600 dark:text-slate-300 mt-1">
+                To get 100% of all games, you just need Sportsnet (Saturdays), TSN2 or RDS (mid-week regional), and Amazon Prime (Monday nights).
+              </p>
+            </div>
+          </div>
+        `;
+      } else {
+        verdictEl.textContent = `US & International fan mode active. ESPN Select (ESPN+) carries the out-of-market rights for almost every Canadiens broadcast.`;
+        adviceCard.innerHTML = `
+          <div class="flex items-start space-x-3">
+            <i class="fa-solid fa-globe text-indigo-500 text-lg mt-0.5"></i>
+            <div>
+              <h4 class="font-bold text-slate-900 dark:text-white">US Fans Get the Best Deal</h4>
+              <p class="text-slate-600 dark:text-slate-300 mt-1">
+                An ESPN+ subscription ($13.99/mo) unlocks over 1,000 out-of-market NHL games, including TSN2 and RDS feeds, without Canadian telecom markups.
+              </p>
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    // Set Region
+    document.querySelectorAll('.region-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        state.region = btn.dataset.region;
+        document.querySelectorAll('.region-btn').forEach(b => {
+          b.className = "region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-slate-200 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300";
+        });
+        btn.className = "region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-habsBlue bg-habsBlue/5 text-habsBlue font-semibold dark:border-blue-400 dark:bg-blue-950/40 dark:text-blue-300";
+        render();
+      });
+    });
+
+    // Subscriptions change
+    ['sn', 'sn_prem', 'tsn', 'prime', 'rds', 'tva', 'espn'].forEach(key => {
+      const el = document.getElementById(`sub_${key}`);
+      el.addEventListener('change', () => {
+        state.subs[key] = el.checked;
+        render();
+      });
+    });
+
+    // Language Toggle
+    function setLang(lang) {
+      state.lang = lang;
+      ['en', 'fr', 'any'].forEach(l => {
+        const b = document.getElementById(`lang_${l}`);
+        if (l === lang) {
+          b.className = "px-3 py-1.5 rounded-md bg-white dark:bg-slate-700 shadow-sm text-habsRed font-bold transition";
+        } else {
+          b.className = "px-3 py-1.5 rounded-md text-slate-500 hover:text-slate-800 dark:hover:text-white transition";
+        }
+      });
+      render();
+    }
+
+    // Phase Filter
+    function setPhase(phase) {
+      state.phase = phase;
+      ['all', 'preseason', 'regular'].forEach(p => {
+        const b = document.getElementById(`phase_${p}`);
+        if (p === phase) {
+          b.className = "px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 shadow-sm text-habsRed font-bold transition";
+        } else {
+          b.className = "px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white transition";
+        }
+      });
+      render();
+    }
+
+    // Filter Listeners
+    document.getElementById('statusFilter').addEventListener('change', (e) => {
+      state.statusFilter = e.target.value;
+      render();
+    });
+
+    document.getElementById('channelFilter').addEventListener('change', (e) => {
+      state.channelFilter = e.target.value;
+      render();
+    });
+
+    document.getElementById('opponentSearch').addEventListener('input', (e) => {
+      state.search = e.target.value;
+      render();
+    });
+
+    // Dark Mode Toggle
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    // Modal
+    function openDeepDiveModal() {
+      const m = document.getElementById('deepDiveModal');
+      m.classList.remove('hidden');
+      m.classList.add('flex');
+    }
+    function closeDeepDiveModal() {
+      const m = document.getElementById('deepDiveModal');
+      m.classList.add('hidden');
+      m.classList.remove('flex');
+    }
+
+    // Initial render
+    render();
+  </script>
+</body>
+</html>
