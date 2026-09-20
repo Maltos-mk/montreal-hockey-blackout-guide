@@ -1,0 +1,25 @@
+{
+  "name": "Montreal Hockey Broadcast & Blackout Guide",
+  "short_name": "MTL Broadcast",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#192168",
+  "theme_color": "#192168",
+  "description": "Independent Montreal Canadiens 89-game broadcast and regional blackout guide across TSN, RDS, Sportsnet, and Prime Video.",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/824/824325.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/824/824325.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
