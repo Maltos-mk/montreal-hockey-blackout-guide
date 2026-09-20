@@ -1,0 +1,17 @@
+{
+  "team": {
+    "id": "TOR",
+    "name": "Toronto Maple Leafs",
+    "nickname": "Leafs",
+    "colors": {
+      "primary": "#00205B",
+      "secondary": "#FFFFFF",
+      "dark": "#00153D"
+    },
+    "marketRegion": {
+      "description": "Ontario (excluding Eastern Ontario)",
+      "regionCode": "tor_territory"
+    }
+  },
+  "schedule": []
+}
