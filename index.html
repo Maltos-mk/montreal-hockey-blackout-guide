@@ -138,15 +138,15 @@
         </div>
       </div>
       <div class="flex items-center space-x-3 flex-wrap justify-center">
-        <!-- Persistent Install Button in Header -->
-        <button id="pwaHeaderInstallBtn" onclick="triggerPwaInstall()" class="hidden px-3.5 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs shadow flex items-center gap-1.5 transition">
-          <i class="fa-solid fa-download"></i>
-          <span>Install App</span>
+        <!-- Direct Install Modal Button -->
+        <button onclick="openDirectInstallModal()" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="Add to Home Screen">
+          <i class="fa-solid fa-mobile-screen-button text-amber-300"></i>
+          <span>Add App</span>
         </button>
 
         <!-- Ko-fi Tip Button in Header -->
-        <a href="https://ko-fi.com/maltosmk" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="Support on Ko-fi">
-          <i class="fa-solid fa-mug-hot text-amber-300"></i>
+        <a href="https://ko-fi.com/maltosmk" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs shadow flex items-center gap-1.5 transition" title="Support on Ko-fi">
+          <i class="fa-solid fa-mug-hot"></i>
           <span>Support on Ko-fi</span>
         </a>
 
@@ -362,6 +362,24 @@
 
     </section>
 
+    <!-- Contextual Direct Support & Community Tip Callout with User Copy -->
+    <section class="bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent border border-amber-500/30 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-3.5 text-center sm:text-left">
+        <div class="w-10 h-10 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center text-lg flex-shrink-0 shadow-sm">
+          <i class="fa-solid fa-mug-hot"></i>
+        </div>
+        <div>
+          <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
+            This is an independently built passion project. If this guide helped you avoid a blackout tonight, consider buying a coffee on Ko-fi ($3).
+          </p>
+        </div>
+      </div>
+      <a href="https://ko-fi.com/maltosmk" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-habsRed hover:bg-habsDarkRed text-white text-xs font-bold rounded-xl shadow transition whitespace-nowrap flex items-center gap-1.5 flex-shrink-0">
+        <span>Support on Ko-fi</span>
+        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+      </a>
+    </section>
+
     <!-- AUTOMATIC NEXT UPCOMING GAME SPOTLIGHT HERO -->
     <section id="nextGameSpotlight" class="transition-all duration-300">
       <!-- Injected by JavaScript based on live system clock -->
@@ -532,29 +550,33 @@
     </div>
   </div>
 
-  <!-- Smart, Non-Intrusive PWA Bottom Banner with LocalStorage Cookie -->
-  <div id="pwaSlideBanner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md z-40 bg-slate-900/95 text-white p-4 rounded-2xl shadow-2xl border border-slate-700 backdrop-blur-md transition-all duration-500 translate-y-32 opacity-0 pointer-events-none flex flex-col gap-3">
-    <div class="flex items-start justify-between gap-3">
-      <div class="flex items-center space-x-3">
-        <div class="w-10 h-10 rounded-xl bg-habsBlue border border-habsRed flex items-center justify-center font-teko text-xl font-bold text-white flex-shrink-0">
-          MTL
-        </div>
-        <div>
-          <h4 class="text-sm font-bold text-white">Add Guide to Home Screen</h4>
-          <p class="text-[11px] text-slate-300 leading-tight">Access Montreal broadcast schedules and live blackout checks instantly like a native app.</p>
-        </div>
+  <!-- DIRECT "GLOBAL NEWS" STYLE ADD TO HOME SCREEN MODAL -->
+  <div id="directInstallModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-800 text-center space-y-4">
+      
+      <div class="w-16 h-16 rounded-2xl bg-habsBlue border-2 border-habsRed flex items-center justify-center font-teko text-3xl font-bold text-white mx-auto shadow-md">
+        MTL
       </div>
-      <button onclick="dismissPwaBanner(true)" class="text-slate-400 hover:text-white p-1" title="Dismiss">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-    </div>
 
-    <!-- Dynamic Action: Android / Desktop Button vs. iOS Safari Instructions -->
-    <div id="pwaActionContainer">
-      <button onclick="triggerPwaInstall()" class="w-full py-2 bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs rounded-xl shadow transition flex items-center justify-center gap-2">
-        <i class="fa-solid fa-download"></i>
-        <span>Install App</span>
-      </button>
+      <div>
+        <h3 class="text-lg font-bold font-teko uppercase tracking-wide text-slate-900 dark:text-white">Add Guide to Home Screen</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Get full-screen, 1-tap access to live blackout checks with no browser bars.</p>
+      </div>
+
+      <!-- Dynamic Action Area -->
+      <div id="directInstallBody" class="text-left bg-slate-50 dark:bg-slate-800/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 text-xs space-y-2.5">
+        <!-- Injected by JavaScript based on iOS vs Chrome/Android -->
+      </div>
+
+      <div class="flex items-center gap-2 pt-1">
+        <button onclick="dismissDirectInstallModal(true)" class="flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-semibold text-xs hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          Don't show again
+        </button>
+        <button onclick="dismissDirectInstallModal(false)" class="flex-1 py-2.5 rounded-xl bg-habsBlue text-white font-semibold text-xs hover:bg-slate-800 transition">
+          Got it
+        </button>
+      </div>
+
     </div>
   </div>
 
@@ -686,7 +708,6 @@
           if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
           else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
         } else {
-          // National Sportsnet: coast-to-coast clearance across Canada
           if (state.subs.sn || state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet (National)'; }
           else { reasonEN = 'Requires Sportsnet subscription'; }
         }
@@ -695,7 +716,6 @@
           if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
           else { reasonEN = 'Requires ESPN+ in US'; }
         } else {
-          // National Prime Video: coast-to-coast clearance across Canada
           if (state.subs.prime) { canEN = true; reasonEN = 'Watch on Prime Video (National)'; }
           else { reasonEN = 'Requires Amazon Prime subscription'; }
         }
@@ -704,14 +724,12 @@
           if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN2 (In-Market)'; }
           else { reasonEN = 'Requires TSN subscription'; }
         } else if (state.region === 'out_market_canada') {
-          // OUT OF MARKET CANADA: Regional TSN2 is strictly blacked out
           if (state.subs.sn_prem) { 
             canEN = true; 
             reasonEN = 'Watch via Sportsnet+ Premium (Out-of-market pass)'; 
           } else { 
-            // FIXED: If in out-of-market Canada without SN+ Premium, it is strictly BLACKED OUT.
             isBlackedOutEN = true;
-            reasonEN = 'BLACKED OUT on TSN (Outside QC/Atlantic territory). Requires Sportsnet+ Premium.'; 
+            reasonEN = 'BLACKED OUT on TSN (Outside QC/Atlantic). Requires Sportsnet+ Premium.'; 
           }
         } else {
           if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
@@ -740,7 +758,6 @@
           if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ (select games)'; }
           else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
         } else {
-          // National TVA Sports: coast-to-coast clearance across Canada
           if (state.subs.tva) { canFR = true; reasonFR = 'Watch on TVA Sports (Coast-to-Coast)'; }
           else { reasonFR = 'Requires TVA Sports'; }
         }
@@ -749,14 +766,12 @@
           if (state.subs.rds) { canFR = true; reasonFR = 'Watch on RDS (In-Market)'; }
           else { reasonFR = 'Requires RDS subscription'; }
         } else if (state.region === 'out_market_canada') {
-          // OUT OF MARKET CANADA: Regional RDS is strictly blacked out
           if (state.subs.sn_prem) { 
             canFR = true; 
             reasonFR = 'Watch French feed via Sportsnet+ Premium'; 
           } else { 
-            // FIXED: If in out-of-market Canada without SN+ Premium, it is strictly BLACKED OUT.
             isBlackedOutFR = true;
-            reasonFR = 'BLACKED OUT on RDS (Outside QC/Atlantic territory). Requires Sportsnet+ Premium.'; 
+            reasonFR = 'BLACKED OUT on RDS (Outside QC/Atlantic). Requires Sportsnet+ Premium.'; 
           }
         } else {
           if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ (select feeds)'; }
@@ -777,7 +792,6 @@
         else if (isBlackedOutFR) { status = 'blacked_out'; summaryReason = reasonFR; }
         else { status = 'missing_sub'; summaryReason = reasonFR; }
       } else {
-        // "Either / Any" language selected
         if (canEN || canFR) {
           status = 'watchable';
           summaryReason = canEN ? reasonEN : reasonFR;
@@ -1147,96 +1161,111 @@
       m.classList.remove('flex');
     }
 
-    // ==========================================
-    // ROBUST PWA INSTALL & COOKIE / STORAGE LOGIC
-    // ==========================================
+    // ==============================================================
+    // DIRECT "GLOBAL NEWS" STYLE ADD TO HOME SCREEN MODAL ENGINE
+    // ==============================================================
     let deferredPrompt = null;
     const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
-    function shouldShowBanner() {
-      if (isStandalone) return false; // Already installed as an app
-      const dismissed = localStorage.getItem('pwa_banner_dismissed');
-      if (!dismissed) return true;
-      if (dismissed === 'installed') return false; // Installed permanently
-      // If closed with 'X', mute for 14 days
-      const dismissedTime = parseInt(dismissed, 10);
-      const fourteenDays = 14 * 24 * 60 * 60 * 1000;
-      return (Date.now() - dismissedTime) > fourteenDays;
-    }
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
 
-    function showPwaBanner() {
-      const banner = document.getElementById('pwaSlideBanner');
-      const actionContainer = document.getElementById('pwaActionContainer');
-      if (!banner) return;
+    function openDirectInstallModal() {
+      const modal = document.getElementById('directInstallModal');
+      const body = document.getElementById('directInstallBody');
+      if (!modal || !body) return;
 
       if (isIOS) {
-        // iOS Safari custom guidance
-        actionContainer.innerHTML = `
-          <div class="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700 text-center text-xs space-y-1">
-            <p class="font-medium text-slate-200">
-              Tap <i class="fa-solid fa-arrow-up-from-bracket text-blue-400 mx-1"></i> (Share) in Safari, then select <br>
-              <span class="font-bold text-amber-300">"Add to Home Screen" <i class="fa-regular fa-square-plus ml-1"></i></span>
-            </p>
+        body.innerHTML = `
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-habsBlue text-white font-bold text-[10px] flex items-center justify-center flex-shrink-0">1</span>
+              <span>Tap the <strong class="text-blue-500 font-semibold"><i class="fa-solid fa-arrow-up-from-bracket"></i> Share icon</strong> at the bottom of Safari.</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-habsBlue text-white font-bold text-[10px] flex items-center justify-center flex-shrink-0">2</span>
+              <span>Scroll down & select <strong class="text-slate-900 dark:text-white font-semibold">"Add to Home Screen" <i class="fa-regular fa-square-plus ml-1"></i></strong></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-habsBlue text-white font-bold text-[10px] flex items-center justify-center flex-shrink-0">3</span>
+              <span>Tap <strong class="text-amber-500 font-semibold">"Add"</strong> in the top right.</span>
+            </div>
+          </div>
+        `;
+      } else if (deferredPrompt) {
+        body.innerHTML = `
+          <p class="text-slate-600 dark:text-slate-300 mb-2 leading-relaxed">Install directly to your device for instant launch and offline access.</p>
+          <button onclick="triggerDirectInstall()" class="w-full py-2.5 bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold rounded-xl shadow transition flex items-center justify-center gap-2">
+            <i class="fa-solid fa-download"></i>
+            <span>Install Now</span>
+          </button>
+        `;
+      } else {
+        body.innerHTML = `
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-habsBlue text-white font-bold text-[10px] flex items-center justify-center flex-shrink-0">1</span>
+              <span>Tap the browser menu <strong class="text-slate-900 dark:text-white font-semibold">(three dots <i class="fa-solid fa-ellipsis-vertical"></i>)</strong>.</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-5 h-5 rounded-full bg-habsBlue text-white font-bold text-[10px] flex items-center justify-center flex-shrink-0">2</span>
+              <span>Select <strong class="text-slate-900 dark:text-white font-semibold">"Install App"</strong> or <strong class="text-slate-900 dark:text-white font-semibold">"Add to Home screen"</strong>.</span>
+            </div>
           </div>
         `;
       }
 
-      banner.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
-      banner.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
     }
 
-    function dismissPwaBanner(userClosed = false) {
-      const banner = document.getElementById('pwaSlideBanner');
-      if (banner) {
-        banner.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
-        banner.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
-      }
-      if (userClosed) {
-        localStorage.setItem('pwa_banner_dismissed', Date.now().toString());
-      }
-    }
-
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      const headerBtn = document.getElementById('pwaHeaderInstallBtn');
-      if (headerBtn && !isStandalone) {
-        headerBtn.classList.remove('hidden');
-      }
-    });
-
-    async function triggerPwaInstall() {
+    async function triggerDirectInstall() {
       if (deferredPrompt) {
         deferredPrompt.prompt();
         const { outcome } = await deferredPrompt.userChoice;
         if (outcome === 'accepted') {
-          localStorage.setItem('pwa_banner_dismissed', 'installed');
-          dismissPwaBanner(false);
-          const headerBtn = document.getElementById('pwaHeaderInstallBtn');
-          if (headerBtn) headerBtn.classList.add('hidden');
+          localStorage.setItem('pwa_prompt_dismissed', 'installed');
         }
         deferredPrompt = null;
-      } else if (isIOS) {
-        alert("To install on iOS:\n1. Tap the Share button (square with arrow up)\n2. Scroll down and tap 'Add to Home Screen'");
+        dismissDirectInstallModal(false);
+      }
+    }
+
+    function dismissDirectInstallModal(neverShowAgain = false) {
+      const modal = document.getElementById('directInstallModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
+      if (neverShowAgain) {
+        localStorage.setItem('pwa_prompt_dismissed', 'permanent');
       } else {
-        alert("To install: Open your browser's menu (three dots) and select 'Add to Home Screen' or 'Install App'.");
+        localStorage.setItem('pwa_prompt_dismissed', Date.now().toString());
       }
     }
 
     window.addEventListener('appinstalled', () => {
-      localStorage.setItem('pwa_banner_dismissed', 'installed');
-      dismissPwaBanner(false);
-      const headerBtn = document.getElementById('pwaHeaderInstallBtn');
-      if (headerBtn) headerBtn.classList.add('hidden');
+      localStorage.setItem('pwa_prompt_dismissed', 'installed');
+      dismissDirectInstallModal(false);
     });
 
-    // Display banner after 4 seconds if not muted/installed
+    // Auto-display direct modal once after 3 seconds if never dismissed
     setTimeout(() => {
-      if (shouldShowBanner()) {
-        showPwaBanner();
+      if (isStandalone) return;
+      const dismissed = localStorage.getItem('pwa_prompt_dismissed');
+      if (!dismissed) {
+        openDirectInstallModal();
+      } else if (dismissed !== 'installed' && dismissed !== 'permanent') {
+        const dismissedTime = parseInt(dismissed, 10);
+        const fourteenDays = 14 * 24 * 60 * 60 * 1000;
+        if ((Date.now() - dismissedTime) > fourteenDays) {
+          openDirectInstallModal();
+        }
       }
-    }, 4000);
+    }, 3000);
 
     render();
   </script>
