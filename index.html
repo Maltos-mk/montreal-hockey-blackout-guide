@@ -138,9 +138,9 @@
         </div>
       </div>
       <div class="flex items-center space-x-3 flex-wrap justify-center">
-        <!-- PWA Install Button -->
-        <button id="pwaInstallBtn" class="hidden px-3.5 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs shadow flex items-center gap-1.5 transition">
-          <i class="fa-solid fa-mobile-screen-button"></i>
+        <!-- Persistent Install Button in Header -->
+        <button id="pwaHeaderInstallBtn" onclick="triggerPwaInstall()" class="hidden px-3.5 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs shadow flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-download"></i>
           <span>Install App</span>
         </button>
 
@@ -532,6 +532,32 @@
     </div>
   </div>
 
+  <!-- Smart, Non-Intrusive PWA Bottom Banner with LocalStorage Cookie -->
+  <div id="pwaSlideBanner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:max-w-md z-40 bg-slate-900/95 text-white p-4 rounded-2xl shadow-2xl border border-slate-700 backdrop-blur-md transition-all duration-500 translate-y-32 opacity-0 pointer-events-none flex flex-col gap-3">
+    <div class="flex items-start justify-between gap-3">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-habsBlue border border-habsRed flex items-center justify-center font-teko text-xl font-bold text-white flex-shrink-0">
+          MTL
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white">Add Guide to Home Screen</h4>
+          <p class="text-[11px] text-slate-300 leading-tight">Access Montreal broadcast schedules and live blackout checks instantly like a native app.</p>
+        </div>
+      </div>
+      <button onclick="dismissPwaBanner(true)" class="text-slate-400 hover:text-white p-1" title="Dismiss">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Dynamic Action: Android / Desktop Button vs. iOS Safari Instructions -->
+    <div id="pwaActionContainer">
+      <button onclick="triggerPwaInstall()" class="w-full py-2 bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs rounded-xl shadow transition flex items-center justify-center gap-2">
+        <i class="fa-solid fa-download"></i>
+        <span>Install App</span>
+      </button>
+    </div>
+  </div>
+
   <!-- Application Logic & Schedule Engine -->
   <script>
     const state = {
@@ -648,14 +674,19 @@
     function evaluateGame(g) {
       let canEN = false;
       let reasonEN = '';
+      let isBlackedOutEN = false;
+
       let canFR = false;
       let reasonFR = '';
+      let isBlackedOutFR = false;
 
+      // --- English Evaluation ---
       if (g.netEN === 'Sportsnet') {
         if (state.region === 'us_intl') {
           if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
           else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
         } else {
+          // National Sportsnet: coast-to-coast clearance across Canada
           if (state.subs.sn || state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet (National)'; }
           else { reasonEN = 'Requires Sportsnet subscription'; }
         }
@@ -664,6 +695,7 @@
           if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
           else { reasonEN = 'Requires ESPN+ in US'; }
         } else {
+          // National Prime Video: coast-to-coast clearance across Canada
           if (state.subs.prime) { canEN = true; reasonEN = 'Watch on Prime Video (National)'; }
           else { reasonEN = 'Requires Amazon Prime subscription'; }
         }
@@ -672,35 +704,43 @@
           if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN2 (In-Market)'; }
           else { reasonEN = 'Requires TSN subscription'; }
         } else if (state.region === 'out_market_canada') {
-          if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch via Sportsnet+ Premium / Centre Ice'; }
-          else if (state.subs.tsn) { reasonEN = 'BLACKED OUT on TSN (Outside regional territory). Requires SN+ Premium.'; }
-          else { reasonEN = 'Requires Sportsnet+ Premium / Centre Ice'; }
+          // OUT OF MARKET CANADA: Regional TSN2 is strictly blacked out
+          if (state.subs.sn_prem) { 
+            canEN = true; 
+            reasonEN = 'Watch via Sportsnet+ Premium (Out-of-market pass)'; 
+          } else { 
+            // FIXED: If in out-of-market Canada without SN+ Premium, it is strictly BLACKED OUT.
+            isBlackedOutEN = true;
+            reasonEN = 'BLACKED OUT on TSN (Outside QC/Atlantic territory). Requires Sportsnet+ Premium.'; 
+          }
         } else {
           if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
           else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
         }
       } else if (g.type === 'regional_tor') {
         if (state.region === 'out_market_canada') {
-          if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN4 (Local in Ontario)'; }
+          if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN4 (Local Ontario feed)'; }
           else { reasonEN = 'Requires TSN subscription'; }
         } else if (state.region === 'in_market') {
           if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch via Sportsnet+ Premium'; }
-          else { reasonEN = 'Blacked out in QC/Atlantic on TSN4. Requires SN+ Premium.'; }
+          else { isBlackedOutEN = true; reasonEN = 'Blacked out in QC/Atlantic on TSN4. Requires SN+ Premium.'; }
         } else {
           if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+'; }
           else { reasonEN = 'Requires ESPN+'; }
         }
       } else if (g.type === 'regional_ott') {
         if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch via Sportsnet+ Premium'; }
-        else if (state.subs.tsn) { reasonEN = 'Subject to regional restrictions. Requires SN+ Premium.'; }
+        else if (state.subs.tsn) { isBlackedOutEN = true; reasonEN = 'Blacked out regionally. Requires SN+ Premium.'; }
         else { reasonEN = 'Requires SN+ Premium or TSN5'; }
       }
 
+      // --- French Evaluation ---
       if (g.netFR === 'TVA Sports') {
         if (state.region === 'us_intl') {
-          if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ (when available)'; }
+          if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ (select games)'; }
           else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
         } else {
+          // National TVA Sports: coast-to-coast clearance across Canada
           if (state.subs.tva) { canFR = true; reasonFR = 'Watch on TVA Sports (Coast-to-Coast)'; }
           else { reasonFR = 'Requires TVA Sports'; }
         }
@@ -709,33 +749,47 @@
           if (state.subs.rds) { canFR = true; reasonFR = 'Watch on RDS (In-Market)'; }
           else { reasonFR = 'Requires RDS subscription'; }
         } else if (state.region === 'out_market_canada') {
-          if (state.subs.sn_prem) { canFR = true; reasonFR = 'Watch via Sportsnet+ Premium (French feed)'; }
-          else if (state.subs.rds) { reasonFR = 'BLACKED OUT on RDS outside QC/Atlantic. Requires SN+ Premium.'; }
-          else { reasonFR = 'Requires Sportsnet+ Premium'; }
+          // OUT OF MARKET CANADA: Regional RDS is strictly blacked out
+          if (state.subs.sn_prem) { 
+            canFR = true; 
+            reasonFR = 'Watch French feed via Sportsnet+ Premium'; 
+          } else { 
+            // FIXED: If in out-of-market Canada without SN+ Premium, it is strictly BLACKED OUT.
+            isBlackedOutFR = true;
+            reasonFR = 'BLACKED OUT on RDS (Outside QC/Atlantic territory). Requires Sportsnet+ Premium.'; 
+          }
         } else {
-          if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ (select games)'; }
+          if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ (select feeds)'; }
           else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
         }
       }
 
+      // --- Synthesize Final Status Based on Language Preference ---
       let status = 'missing_sub';
       let summaryReason = '';
 
       if (state.lang === 'en') {
         if (canEN) { status = 'watchable'; summaryReason = reasonEN; }
-        else if (reasonEN.includes('BLACKED OUT')) { status = 'blacked_out'; summaryReason = reasonEN; }
+        else if (isBlackedOutEN) { status = 'blacked_out'; summaryReason = reasonEN; }
         else { status = 'missing_sub'; summaryReason = reasonEN; }
       } else if (state.lang === 'fr') {
         if (canFR) { status = 'watchable'; summaryReason = reasonFR; }
-        else if (reasonFR.includes('BLACKED OUT')) { status = 'blacked_out'; summaryReason = reasonFR; }
+        else if (isBlackedOutFR) { status = 'blacked_out'; summaryReason = reasonFR; }
         else { status = 'missing_sub'; summaryReason = reasonFR; }
       } else {
+        // "Either / Any" language selected
         if (canEN || canFR) {
           status = 'watchable';
           summaryReason = canEN ? reasonEN : reasonFR;
-        } else if (reasonEN.includes('BLACKED OUT') || reasonFR.includes('BLACKED OUT')) {
+        } else if (isBlackedOutEN && isBlackedOutFR) {
           status = 'blacked_out';
-          summaryReason = reasonEN.includes('BLACKED OUT') ? reasonEN : reasonFR;
+          summaryReason = 'Regional feeds blacked out in your territory. Requires Sportsnet+ Premium.';
+        } else if (isBlackedOutEN) {
+          status = 'blacked_out';
+          summaryReason = reasonEN;
+        } else if (isBlackedOutFR) {
+          status = 'blacked_out';
+          summaryReason = reasonFR;
         } else {
           status = 'missing_sub';
           summaryReason = reasonEN + ' / ' + reasonFR;
@@ -970,7 +1024,7 @@
               <div>
                 <h4 class="font-bold text-slate-900 dark:text-white">Official Out-of-Market Options:</h4>
                 <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
-                  To view regional TSN2 & RDS games from Ontario or Western Canada, the official options are <strong>Sportsnet+ Premium</strong> (streaming) or adding <strong>NHL Centre Ice</strong> to your cable box.
+                  Subscribing to TSN or RDS does <strong>not</strong> work in Ontario or Western Canada due to NHL blackouts. To watch those 50 regional games, you need <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable).
                 </p>
               </div>
             </div>
@@ -1093,30 +1147,96 @@
       m.classList.remove('flex');
     }
 
-    // PWA Install Prompt Handling
-    let deferredPrompt;
-    const pwaInstallBtn = document.getElementById('pwaInstallBtn');
+    // ==========================================
+    // ROBUST PWA INSTALL & COOKIE / STORAGE LOGIC
+    // ==========================================
+    let deferredPrompt = null;
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+    function shouldShowBanner() {
+      if (isStandalone) return false; // Already installed as an app
+      const dismissed = localStorage.getItem('pwa_banner_dismissed');
+      if (!dismissed) return true;
+      if (dismissed === 'installed') return false; // Installed permanently
+      // If closed with 'X', mute for 14 days
+      const dismissedTime = parseInt(dismissed, 10);
+      const fourteenDays = 14 * 24 * 60 * 60 * 1000;
+      return (Date.now() - dismissedTime) > fourteenDays;
+    }
+
+    function showPwaBanner() {
+      const banner = document.getElementById('pwaSlideBanner');
+      const actionContainer = document.getElementById('pwaActionContainer');
+      if (!banner) return;
+
+      if (isIOS) {
+        // iOS Safari custom guidance
+        actionContainer.innerHTML = `
+          <div class="bg-slate-800/80 p-2.5 rounded-xl border border-slate-700 text-center text-xs space-y-1">
+            <p class="font-medium text-slate-200">
+              Tap <i class="fa-solid fa-arrow-up-from-bracket text-blue-400 mx-1"></i> (Share) in Safari, then select <br>
+              <span class="font-bold text-amber-300">"Add to Home Screen" <i class="fa-regular fa-square-plus ml-1"></i></span>
+            </p>
+          </div>
+        `;
+      }
+
+      banner.classList.remove('translate-y-32', 'opacity-0', 'pointer-events-none');
+      banner.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+    }
+
+    function dismissPwaBanner(userClosed = false) {
+      const banner = document.getElementById('pwaSlideBanner');
+      if (banner) {
+        banner.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+        banner.classList.add('translate-y-32', 'opacity-0', 'pointer-events-none');
+      }
+      if (userClosed) {
+        localStorage.setItem('pwa_banner_dismissed', Date.now().toString());
+      }
+    }
 
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
-      pwaInstallBtn.classList.remove('hidden');
+      const headerBtn = document.getElementById('pwaHeaderInstallBtn');
+      if (headerBtn && !isStandalone) {
+        headerBtn.classList.remove('hidden');
+      }
     });
 
-    pwaInstallBtn.addEventListener('click', async () => {
+    async function triggerPwaInstall() {
       if (deferredPrompt) {
         deferredPrompt.prompt();
         const { outcome } = await deferredPrompt.userChoice;
         if (outcome === 'accepted') {
-          pwaInstallBtn.classList.add('hidden');
+          localStorage.setItem('pwa_banner_dismissed', 'installed');
+          dismissPwaBanner(false);
+          const headerBtn = document.getElementById('pwaHeaderInstallBtn');
+          if (headerBtn) headerBtn.classList.add('hidden');
         }
         deferredPrompt = null;
+      } else if (isIOS) {
+        alert("To install on iOS:\n1. Tap the Share button (square with arrow up)\n2. Scroll down and tap 'Add to Home Screen'");
+      } else {
+        alert("To install: Open your browser's menu (three dots) and select 'Add to Home Screen' or 'Install App'.");
       }
-    });
+    }
 
     window.addEventListener('appinstalled', () => {
-      pwaInstallBtn.classList.add('hidden');
+      localStorage.setItem('pwa_banner_dismissed', 'installed');
+      dismissPwaBanner(false);
+      const headerBtn = document.getElementById('pwaHeaderInstallBtn');
+      if (headerBtn) headerBtn.classList.add('hidden');
     });
+
+    // Display banner after 4 seconds if not muted/installed
+    setTimeout(() => {
+      if (shouldShowBanner()) {
+        showPwaBanner();
+      }
+    }, 4000);
 
     render();
   </script>
