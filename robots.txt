@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maltos-mk.github.io/montreal-hockey-blackout-guide/sitemap.xml
