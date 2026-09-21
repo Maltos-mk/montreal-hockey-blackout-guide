@@ -217,7 +217,7 @@ const state = {
               <div class="space-y-1.5">
                 <div class="flex items-center gap-2">
                   <span class="px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider ${isGameToday ? 'bg-amber-400 text-slate-950 animate-pulse' : 'bg-white/20 text-white'}">
-                    ${isGameToday ? '★ Game Today' : 'Next ${window.TEAM_DATA.team.nickname} Game'}
+                    ${isGameToday ? '★ Game Today' : 'Next ' + window.TEAM_DATA.team.nickname + ' Game'}
                   </span>
                   <span class="text-xs text-slate-300 font-medium">${nextGame.date} • ${nextGame.time} ET</span>
                   <span class="text-xs text-slate-400">#${nextGame.id}</span>
@@ -624,6 +624,4 @@ const state = {
     // Auto-display modal once after 3 seconds on mobile devices only
     
 
-    render();
-
-initApp();
+    initApp();
