@@ -15,7 +15,7 @@
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="../../shared/favicon.svg">
-  <link rel="alternate icon" href="https://cdn-icons-png.flaticon.com/512/824/824325.png">
+  <link rel="alternate icon" href="../../shared/favicon.svg">
 
   <!-- Progressive Web App (PWA) / Mobile Standalone Tags -->
   <link rel="manifest" href="../../manifest.json">
@@ -24,7 +24,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Leafs Guide">
-  <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/824/824325.png">
+  <link rel="apple-touch-icon" href="../../shared/favicon.svg">
 
   <!-- OpenGraph / Facebook / Discord -->
   <meta property="og:type" content="website">
@@ -107,6 +107,498 @@
   <!-- Tailwind CSS & Font Awesome Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            teamPrimary: '#AF1E2D',
+            teamSecondary: '#192168',
+            teamDark: '#871420',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../../shared/app.css">
+
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
+
+  <!-- Header Banner -->
+  <header class="bg-gradient-to-r from-teamSecondary via-teamDark to-teamPrimary text-white shadow-lg border-b-4 border-white/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-4 text-center md:text-left">
+        <!-- Neutral MTL Badge -->
+        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-md p-1 border-2 border-teamSecondary flex-shrink-0">
+          <span class="font-teko text-3xl font-bold text-teamSecondary tracking-tighter">TOR</span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 flex-wrap justify-center md:justify-start">
+            <h1 class="text-2xl sm:text-3xl font-black tracking-tight font-teko uppercase text-white">Toronto Hockey Broadcast Guide</h1>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-white/15 text-slate-200 border border-white/20">Unofficial Fan Resource</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-200 font-medium">89-Game Guide for Toronto Maple Leafs (Leafs) Fans • Real-Time Broadcast & Blackout Calculator</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 flex-wrap justify-center">
+        
+        <button onclick="shareApp()" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="Share App">
+          <i class="fa-solid fa-share-nodes text-emerald-300"></i>
+          <span class="hidden sm:inline">Share</span>
+        </button>
+
+        <!-- Direct Install Modal Button -->
+        <button onclick="openDirectInstallModal()" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="Add to Home Screen">
+          <i class="fa-solid fa-mobile-screen-button text-amber-300"></i>
+          <span>Add App</span>
+        </button>
+
+        <!-- Ko-fi Tip Button in Header -->
+        <a href="https://ko-fi.com/maltosmk" data-umami-event="kofi-click" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs shadow flex items-center gap-1.5 transition" title="Support on Ko-fi">
+          <i class="fa-solid fa-mug-hot"></i>
+          <span>Support on Ko-fi</span>
+        </a>
+
+        <button id="themeToggle" class="p-2.5 rounded-xl bg-black/25 hover:bg-black/40 text-slate-200 text-sm border border-white/10 transition" title="Toggle Theme">
+          <i class="fa-solid fa-moon text-amber-300 dark:hidden"></i>
+          <i class="fa-solid fa-sun text-amber-400 hidden dark:inline"></i>
+        </button>
+        <button onclick="openDeepDiveModal()" class="px-4 py-2 rounded-xl bg-white text-teamSecondary hover:bg-slate-100 font-semibold text-xs sm:text-sm shadow flex items-center gap-2 transition">
+          <i class="fa-solid fa-circle-question text-teamPrimary"></i>
+          <span>Blackout Rules FAQ</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-8 flex-1 w-full">
+    
+    <!-- Top Configuration Grid -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      
+      <!-- User Input Card -->
+      <div class="lg:col-span-7 bg-white dark:bg-slate-900 p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-6">
+        <div class="border-b border-slate-100 dark:border-slate-800 pb-4 flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="w-2.5 h-6 bg-teamPrimary rounded-full inline-block"></span>
+            <h2 class="text-base sm:text-lg font-bold">1. Location & Subscriptions</h2>
+          </div>
+          <span class="text-xs text-slate-500 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-full font-medium">Official Rules</span>
+        </div>
+
+        <!-- Region Selector -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+            Where do you live?
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="regionSelector">
+            <button data-region="in_market" class="region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-teamSecondary bg-teamSecondary/5 text-teamSecondary font-semibold dark:border-blue-400 dark:bg-blue-950/40 dark:text-blue-300">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-sm">In-Market</span>
+                <i class="fa-solid fa-location-dot text-xs"></i>
+              </div>
+              <span class="text-[11px] opacity-80 leading-tight font-normal">QC, Atlantic Canada, Eastern Ontario (Leafs Broadcast Territory)</span>
+            </button>
+
+            <button data-region="out_market_canada" class="region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-slate-200 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-sm">Out-of-Market (Canada)</span>
+                <i class="fa-solid fa-map-pin text-xs"></i>
+              </div>
+              <span class="text-[11px] opacity-80 leading-tight font-normal">GTA/Ontario-West, Manitoba, Alberta, BC</span>
+            </button>
+
+            <button data-region="us_intl" class="region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-slate-200 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-sm">US & International</span>
+                <i class="fa-solid fa-globe text-xs"></i>
+              </div>
+              <span class="text-[11px] opacity-80 leading-tight font-normal">United States, Europe, International</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Subscriptions Checklist -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+            Your Active Subscriptions & Channels:
+          </label>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="subsList">
+            
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_sn" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4" checked>
+              <div class="flex-1">
+                <p class="text-sm font-semibold">Sportsnet (Cable / Standard)</p>
+                <p class="text-[11px] text-slate-500">Saturday marquee, national games</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_sn_prem" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">Sportsnet+ Premium / Centre Ice</p>
+                <p class="text-[11px] text-slate-500">Official out-of-market regional package</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_tsn" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">TSN / TSN2</p>
+                <p class="text-[11px] text-slate-500">50 Regional Leafs games (in-market only)</p>
+              </div>
+            </label>
+
+            <!-- Amazon Prime Video with Affiliate Tracking Link -->
+            <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition flex flex-col justify-between gap-1">
+              <label class="flex items-center space-x-3 cursor-pointer">
+                <input type="checkbox" id="sub_prime" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+                <div class="flex-1">
+                  <p class="text-sm font-semibold">Amazon Prime Video</p>
+                  <p class="text-[11px] text-slate-500">National Monday Night Hockey feeds</p>
+                </div>
+              </label>
+              <div class="text-[11px] pl-7 pt-1">
+                <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" data-umami-event="amazon-prime-click" target="_blank" rel="noopener noreferrer" class="text-teamPrimary dark:text-red-400 font-semibold hover:underline inline-flex items-center gap-1">
+                  <span>Need Prime? Try 30-Day Free Trial</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_rds" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">RDS / RDS Direct</p>
+                <p class="text-[11px] text-slate-500">45 Regional French Canadiens games</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_tva" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">TVA Sports</p>
+                <p class="text-[11px] text-slate-500">National French broadcasts (zero blackouts)</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition sm:col-span-2">
+              <input type="checkbox" id="sub_espn" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">ESPN+ / NHL.tv (US / International)</p>
+                <p class="text-[11px] text-slate-500">Official out-of-market Leafs streaming outside Canada</p>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <!-- Language Preference -->
+        <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Language Feeds You Watch:</span>
+          <div class="inline-flex rounded-lg p-1 bg-slate-100 dark:bg-slate-800 text-xs font-semibold">
+            <button id="lang_en" onclick="setLang('en')" class="px-3 py-1.5 rounded-md bg-white dark:bg-slate-700 shadow-sm text-teamPrimary font-bold">English Only</button>
+            <button id="lang_fr" onclick="setLang('fr')" class="px-3 py-1.5 rounded-md text-slate-500">French Only</button>
+            <button id="lang_any" onclick="setLang('any')" class="px-3 py-1.5 rounded-md text-slate-500">Either (Any)</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="lg:col-span-5 flex flex-col gap-4">
+        
+        <!-- Score Box -->
+        <div class="bg-gradient-to-br from-teamSecondary to-slate-900 text-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-800 relative overflow-hidden flex-1 flex flex-col justify-between">
+          <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-teamPrimary/10 rounded-full blur-2xl pointer-events-none"></div>
+
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-300" id="kpiSeasonTitle">Current Coverage Score</span>
+              <span id="pctBadge" class="text-xs font-bold px-2.5 py-1 rounded-full bg-teamPrimary text-white">0% Watchable</span>
+            </div>
+
+            <div class="flex items-baseline space-x-2">
+              <span id="watchableCount" class="font-teko text-6xl sm:text-7xl font-bold leading-none text-white">0</span>
+              <span id="totalGameLabel" class="text-slate-300 font-teko text-2xl font-medium">/ 89 GAMES</span>
+            </div>
+
+            <p id="kpiVerdict" class="text-xs sm:text-sm text-slate-200 mt-3 font-normal leading-relaxed">
+              Evaluating your setup...
+            </p>
+          </div>
+
+          <!-- Progress Bars Breakdown -->
+          <div class="space-y-3 pt-6 border-t border-white/10 mt-4">
+            <div>
+              <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
+                <span>Watchable Without Blackout</span>
+                <span id="watchableBreakdown">0 games</span>
+              </div>
+              <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div id="watchBar" class="bg-emerald-500 transition-all duration-300" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
+                <span>Blacked Out Regionally</span>
+                <span id="blackoutBreakdown">0 games</span>
+              </div>
+              <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div id="blackoutBar" class="bg-amber-500 transition-all duration-300" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
+                <span>Missing Required Subscription</span>
+                <span id="missingBreakdown">0 games</span>
+              </div>
+              <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div id="missingBar" class="bg-rose-500 transition-all duration-300" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Official Advice Card -->
+        <div id="adviceCard" class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs sm:text-sm">
+          <!-- Populated by JS -->
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Contextual Direct Support & Community Tip Callout -->
+    <section class="bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent border border-amber-500/30 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-3.5 text-center sm:text-left">
+        <div class="w-10 h-10 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center text-lg flex-shrink-0 shadow-sm">
+          <i class="fa-solid fa-mug-hot"></i>
+        </div>
+        <div>
+          <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
+            This is an independently built passion project for Toronto Maple Leafs and Leafs fans. If this guide helped you avoid a blackout tonight, consider buying me a coffee on Ko-fi ($3).
+          </p>
+        </div>
+      </div>
+      <a href="https://ko-fi.com/maltosmk" data-umami-event="kofi-click" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-teamPrimary hover:bg-teamDark text-white text-xs font-bold rounded-xl shadow transition whitespace-nowrap flex items-center gap-1.5 flex-shrink-0">
+        <span>Support on Ko-fi</span>
+        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+      </a>
+    </section>
+
+    <!-- AUTOMATIC NEXT UPCOMING GAME SPOTLIGHT HERO -->
+    <section id="nextGameSpotlight" class="transition-all duration-300">
+      <!-- Injected by JavaScript based on live system clock -->
+    </section>
+
+    <section class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+      
+      <!-- Top Bar Filters -->
+      <div class="p-4 sm:p-6 border-b border-slate-100 dark:border-slate-800 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+        
+        <!-- View Timing Toggle -->
+        <div class="inline-flex rounded-xl p-1 bg-slate-100 dark:bg-slate-800 text-xs font-semibold self-start">
+          <button onclick="setTimeFilter('upcoming')" id="time_upcoming" class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 shadow-sm text-teamPrimary font-bold transition">Upcoming Games</button>
+          <button onclick="setTimeFilter('all')" id="time_all" class="px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white transition">All Games (89)</button>
+          <button onclick="setTimeFilter('past')" id="time_past" class="px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white transition">Past Games</button>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap items-center gap-2">
+          
+          <div class="relative flex-1 sm:flex-initial">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
+            <input type="text" id="opponentSearch" placeholder="Search opponent, venue..." class="pl-8 pr-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary w-full sm:w-44">
+          </div>
+
+          <select id="statusFilter" class="px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary">
+            <option value="all">Status: All</option>
+            <option value="watchable">Watchable</option>
+            <option value="blacked_out">Blacked Out</option>
+            <option value="missing_sub">Need Sub</option>
+          </select>
+
+          <select id="channelFilter" class="px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary">
+            <option value="all">Channel: All</option>
+            <option value="Sportsnet">Sportsnet</option>
+            <option value="TSN2">TSN2</option>
+            <option value="Prime Video">Prime Video</option>
+            <option value="RDS">RDS</option>
+            <option value="TVA Sports">TVA Sports</option>
+          </select>
+
+        </div>
+      </div>
+
+      <!-- Mobile Cards View -->
+      <div id="scheduleCardsMobile" class="block md:hidden divide-y divide-slate-100 dark:divide-slate-800 p-3 space-y-3">
+        <!-- Injected by JS -->
+      </div>
+
+      <!-- Desktop Table View: Clean Balanced Column Layout (No text cut off) -->
+      <div class="hidden md:block overflow-x-auto max-h-[680px]">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse">
+          <thead class="sticky top-0 bg-slate-100/95 dark:bg-slate-800/95 backdrop-blur z-10 text-slate-600 dark:text-slate-300 uppercase tracking-wider text-[11px]">
+            <tr>
+              <th class="py-3 px-4 font-semibold w-12 text-center">Gm</th>
+              <th class="py-3 px-4 font-semibold whitespace-nowrap w-36">Date & Time</th>
+              <th class="py-3 px-4 font-semibold min-w-[200px]">Matchup / Venue</th>
+              <th class="py-3 px-4 font-semibold w-36">Broadcast</th>
+              <th class="py-3 px-4 font-semibold w-40">Coverage Type</th>
+              <th class="py-3 px-4 font-semibold min-w-[240px] text-right">Access Status</th>
+            </tr>
+          </thead>
+          <tbody id="scheduleTableBody" class="divide-y divide-slate-100 dark:divide-slate-800">
+            <!-- Injected by JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Footer count -->
+      <div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <span id="renderedCountLabel">Showing upcoming Toronto Maple Leafs games</span>
+        <span class="text-[11px] italic text-center sm:text-right">Automatically synchronized with client device clock</span>
+      </div>
+
+    </section>
+
+    <article class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-xs sm:text-sm space-y-4 shadow-sm">
+      <h2 class="text-base font-bold text-slate-900 dark:text-white uppercase font-teko text-2xl tracking-wider text-teamPrimary">
+        Toronto Maple Leafs Hockey Broadcast Rights & Regional Blackout Guide (2026–27 Leafs Season)
+      </h2>
+      <p class="leading-relaxed">
+        Following the <strong>Toronto Maple Leafs (Leafs)</strong> regular season and preseason broadcasts across Canada requires understanding how NHL broadcast territory rights are allocated between national networks and regional partners. For Toronto Maple Leafs fans, games are split across five distinct television and streaming networks: <strong>TSN2, RDS, Sportsnet, Amazon Prime Video, and TVA Sports</strong>.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Regional Toronto Maple Leafs Games (TSN2 & RDS)</h3>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+            <strong>TSN2</strong> (50 English games) and <strong>RDS</strong> (45 French games) hold the official regional rights for the Toronto Maple Leafs. Their broadcast boundary is restricted by NHL carriage rules strictly to <strong>Quebec, Atlantic Canada (New Brunswick, Nova Scotia, PEI, Newfoundland), and Eastern Ontario (Pembroke, Ottawa, Cornwall)</strong>.
+          </p>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400 mt-2">
+            If you reside outside this territory (such as Toronto, the GTA, Northern Ontario, Manitoba, Saskatchewan, Alberta, or British Columbia), standard cable subscriptions to TSN or RDS will show a <strong>regional blackout screen</strong> during live Toronto Maple Leafs games. Out-of-market Leafs fans must use <strong>Sportsnet+ Premium</strong> or add <strong>NHL Centre Ice</strong> to watch regional feeds legally.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">National Leafs Games (Sportsnet, Prime & TVA Sports)</h3>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+            When the Toronto Maple Leafs play on Saturday night <em>Hockey Night in Canada</em> broadcasts, <strong>Sportsnet</strong> (English) and <strong>TVA Sports</strong> (French) broadcast coast-to-coast with <strong>zero regional blackouts anywhere in Canada</strong>. Every Canadian viewer with standard cable or basic streaming packages can watch these matchups.
+          </p>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400 mt-2">
+            Select regular-season Toronto Maple Leafs games stream nationally on Monday nights exclusively on <strong>Amazon Prime Video</strong> in English, which also carries coast-to-coast clearance with no regional blackouts.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/40 text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
+        <strong>Quick Summary for Leafs Fans Living Outside Quebec:</strong> If tonight's Toronto Maple Leafs game is scheduled on Sportsnet, Prime Video, or TVA Sports, you can watch anywhere in Canada without blackouts. If the game is on TSN2 or RDS, you will be blacked out in Western Ontario and the West unless you have Sportsnet+ Premium or NHL Centre Ice.
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      
+      <!-- Community Support Link -->
+      <div class="inline-flex items-center gap-2 p-2 px-4 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+        <i class="fa-solid fa-mug-hot text-amber-500"></i>
+        <span>Found this Toronto Maple Leafs guide helpful?</span>
+        <a href="https://ko-fi.com/maltosmk" data-umami-event="kofi-click" target="_blank" rel="noopener noreferrer" class="font-bold text-teamPrimary hover:underline ml-1">
+          Buy me a coffee on Ko-fi &rarr;
+        </a>
+      </div>
+
+      <!-- Statutory Amazon Associate Disclosure -->
+      <p class="text-[11px] text-slate-500 italic">
+        As an Amazon Associate I earn from qualifying purchases.
+      </p>
+
+      <p class="font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider text-[11px] pt-2">
+        Non-Affiliation & Nominative Fair Use Disclaimer
+      </p>
+      <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
+        This website is an independent fan resource created exclusively for public informational purposes. This service is <strong>not affiliated with, maintained by, endorsed by, or in any way associated with</strong> Club de hockey Canadien Inc., the Toronto Maple Leafs, the Leafs, Groupe CH, the National Hockey League (NHL), or any of their member clubs.
+      </p>
+      <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
+        All team names (Toronto Maple Leafs, Leafs), schedules, network titles (TSN, RDS, Sportsnet, TVA Sports, Amazon Prime Video), and trademarks referenced herein are used strictly for descriptive and nominative identification under applicable intellectual property laws.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Explainer Modal with Natural Leafs & Canadiens Copy -->
+  <div id="deepDiveModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-800 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3">
+        <h3 class="text-lg font-bold font-teko uppercase tracking-wide text-teamPrimary">Toronto Maple Leafs Broadcast & Blackout Principles</h3>
+        <button onclick="closeDeepDiveModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+        <p>
+          <strong>Why are Toronto Maple Leafs games blacked out on TSN2 in Ontario?</strong><br>
+          TSN2 and RDS own <em>regional</em> broadcast rights, which only cover the Toronto Maple Leafs' home broadcast territory (Quebec, Atlantic Canada, and Eastern Ontario including Pembroke, Ottawa, and Cornwall). If you live outside this region (such as Toronto, GTA, or Western Canada), regional licenses do not grant clearance for those games, protecting local home-market rights for teams like the Maple Leafs, Senators, Jets, Flames, Oilers, and Canucks.
+        </p>
+        <p>
+          <strong>Does having a standard cable box prevent Leafs blackouts?</strong><br>
+          <strong>No.</strong> Blackout rules apply directly to standard cable and satellite subscriptions. If your cable billing address is in Toronto, Winnipeg, or Vancouver, your screen will display a blackout notice during live regional Toronto Maple Leafs games on TSN2 or RDS.
+        </p>
+        <p>
+          <strong>How can out-of-market Leafs fans watch without blackouts?</strong><br>
+          The official method to watch blacked-out regional Toronto Maple Leafs games across Canada is the out-of-market package: <strong>Sportsnet+ Premium</strong> for streaming, or the <strong>NHL Centre Ice</strong> subscription package through your digital cable provider.
+        </p>
+        <p>
+          <strong>Why are Saturday night Leafs games never blacked out?</strong><br>
+          Saturday night games are part of the <strong>National rights</strong> package on Sportsnet and TVA Sports. National broadcasts carry coast-to-coast clearance without regional blackouts across Canada.
+        </p>
+      </div>
+
+      <div class="pt-3 border-t border-slate-100 dark:border-slate-800 text-right">
+        <button onclick="closeDeepDiveModal()" class="px-4 py-2 bg-teamSecondary text-white font-semibold text-xs rounded-xl hover:bg-slate-800 transition">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIRECT "GLOBAL NEWS" STYLE ADD TO HOME SCREEN MODAL -->
+  <div id="directInstallModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-800 text-center space-y-4">
+      
+      <div class="w-16 h-16 rounded-2xl bg-teamSecondary border-2 border-teamPrimary flex items-center justify-center font-teko text-3xl font-bold text-white mx-auto shadow-md">
+        MTL
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold font-teko uppercase tracking-wide text-slate-900 dark:text-white">Add Leafs Guide to Home Screen</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Get full-screen, 1-tap access to live Toronto Maple Leafs blackout checks with no browser bars.</p>
+      </div>
+
+      <!-- Dynamic Action Area -->
+      <div id="directInstallBody" class="text-left bg-slate-50 dark:bg-slate-800/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 text-xs space-y-2.5">
+        <!-- Injected by JavaScript based on iOS vs Chrome/Android -->
+      </div>
+
+      <div class="flex items-center gap-2 pt-1">
+        <button onclick="dismissDirectInstallModal(true)" class="flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-semibold text-xs hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          Don't show again
+        </button>
+        <button onclick="dismissDirectInstallModal(false)" class="flex-1 py-2.5 rounded-xl bg-teamSecondary text-white font-semibold text-xs hover:bg-slate-800 transition">
+          Got it
+        </button>
+      </div>
+
+    </div>
+  </div>
 
   <script>
   window.TEAM_DATA_URL = "../../data/tor.json";
