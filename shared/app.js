@@ -5,7 +5,7 @@ window.shareApp = async function() {
     try {
       await navigator.share({
         title: window.TEAM_DATA ? window.TEAM_DATA.team.name + ' Broadcast Guide' : 'Hockey Broadcast Guide',
-        text: 'Check if tonight's game is blacked out!',
+        text: "Check if tonight's game is blacked out!",
         url: window.location.href,
       });
       // Umami tracking for share
