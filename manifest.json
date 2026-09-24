@@ -1,0 +1,16 @@
+{
+  "name": "Hockey Broadcast & Blackout Guide",
+  "short_name": "Hockey Guide",
+  "description": "Independent Canadian hockey broadcast schedule and regional blackout calculator.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "shared/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
