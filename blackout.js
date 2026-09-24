@@ -16,8 +16,8 @@ window.evaluateGame = function(g, state) {
       if (state.subs.sn || state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet (National)'; }
       else { reasonEN = 'Requires Sportsnet+'; }
     }
-  } else if (g.netEN === 'TSN2') {
-    if (state.region === 'regional_mtl') {
+  } else if (g.netEN && g.netEN.includes('TSN')) {
+    if (state.region === 'in_market') {
       if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN2'; }
       else { reasonEN = 'Requires TSN+'; }
     } else if (state.region === 'us_intl') {
@@ -36,12 +36,12 @@ window.evaluateGame = function(g, state) {
       canEN = true;
       reasonEN = `Watch on ${g.netEN} (Free) or Sportsnet+`;
     }
-  } else if (g.netEN === 'Amazon Prime') {
+  } else if (g.netEN === 'Prime Video') {
     if (state.region === 'us_intl') {
       if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
       else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
     } else {
-      if (state.subs.amazon) { canEN = true; reasonEN = 'Watch on Amazon Prime Video'; }
+      if (state.subs.prime) { canEN = true; reasonEN = 'Watch on Amazon Prime Video'; }
       else { reasonEN = 'Requires Amazon Prime Video'; }
     }
   } else {
@@ -50,7 +50,7 @@ window.evaluateGame = function(g, state) {
 
   // --- French Evaluation ---
   if (g.netFR === 'RDS') {
-    if (state.region === 'regional_mtl') {
+    if (state.region === 'in_market') {
       if (state.subs.rds) { canFR = true; reasonFR = 'Watch on RDS'; }
       else { reasonFR = 'Requires RDS'; }
     } else if (state.region === 'us_intl') {
@@ -69,12 +69,12 @@ window.evaluateGame = function(g, state) {
       if (state.subs.tva) { canFR = true; reasonFR = 'Watch on TVA Sports'; }
       else { reasonFR = 'Requires TVA Sports'; }
     }
-  } else if (g.netFR === 'Amazon Prime') {
+  } else if (g.netFR === 'Prime Video') {
     if (state.region === 'us_intl') {
       if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ / NHL.tv'; }
       else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
     } else {
-      if (state.subs.amazon) { canFR = true; reasonFR = 'Watch on Amazon Prime Video'; }
+      if (state.subs.prime) { canFR = true; reasonFR = 'Watch on Amazon Prime Video'; }
       else { reasonFR = 'Requires Amazon Prime Video'; }
     }
   } else {
@@ -85,7 +85,7 @@ window.evaluateGame = function(g, state) {
 };
 
 window.renderAdviceCards = function(state) {
-  if (state.region === 'in_market' || state.region === 'regional_mtl') {
+  if (state.region === 'in_market' || state.region === 'in_market') {
     return `
       <div class="space-y-4">
         <div>
