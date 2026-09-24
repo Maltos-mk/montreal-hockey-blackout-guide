@@ -80,7 +80,7 @@ const state = {
 
       const spotlightEl = document.getElementById('nextGameSpotlight');
       if (nextGame) {
-        const nextEval = evaluateGame(nextGame);
+        const nextEval = evaluateGame(nextGame, state);
         let badgeHtml = '';
         if (nextEval.status === 'watchable') {
           badgeHtml = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Watchable On Your Setup</span>';
@@ -139,7 +139,7 @@ const state = {
       let missingSubCount = 0;
 
       games.forEach(g => {
-        const evalRes = evaluateGame(g);
+        const evalRes = evaluateGame(g, state);
         if (evalRes.status === 'watchable') watchableCount++;
         else if (evalRes.status === 'blacked_out') blackedOutCount++;
         else missingSubCount++;
@@ -172,7 +172,7 @@ const state = {
         if (state.timeFilter === 'upcoming' && g.isPast) return false;
         if (state.timeFilter === 'past' && !g.isPast) return false;
 
-        const evalRes = evaluateGame(g);
+        const evalRes = evaluateGame(g, state);
 
         if (state.statusFilter !== 'all' && evalRes.status !== state.statusFilter) return false;
 
@@ -192,7 +192,7 @@ const state = {
 
       filteredGames.forEach(g => {
         displayedCount++;
-        const evalRes = evaluateGame(g);
+        const evalRes = evaluateGame(g, state);
 
         let badge = '';
         if (g.isPast) {
