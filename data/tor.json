@@ -2,16 +2,746 @@
   "team": {
     "id": "TOR",
     "name": "Toronto Maple Leafs",
-    "nickname": "Leafs",
-    "colors": {
-      "primary": "#00205B",
-      "secondary": "#FFFFFF",
-      "dark": "#00153D"
-    },
-    "marketRegion": {
-      "description": "Ontario (excluding Eastern Ontario)",
-      "regionCode": "tor_territory"
-    }
+    "nickname": "Leafs"
   },
-  "schedule": []
+  "schedule": [
+    {
+      "id": "2024020006",
+      "date": "2024-10-09T23:00:00Z",
+      "opponent": "Montr\u00e9al Canadiens",
+      "isHome": false,
+      "netEN": "Sportsnet",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024020015",
+      "date": "2024-10-10T23:00:00Z",
+      "opponent": "New Jersey Devils",
+      "isHome": false,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020026",
+      "date": "2024-10-12T23:00:00Z",
+      "opponent": "Pittsburgh Penguins",
+      "isHome": true,
+      "netEN": "Sportsnet/CBC",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024020058",
+      "date": "2024-10-16T23:30:00Z",
+      "opponent": "Los Angeles Kings",
+      "isHome": true,
+      "netEN": "Sportsnet",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024020079",
+      "date": "2024-10-19T23:00:00Z",
+      "opponent": "New York Rangers",
+      "isHome": true,
+      "netEN": "Sportsnet/CBC",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024020091",
+      "date": "2024-10-21T23:30:00Z",
+      "opponent": "Tampa Bay Lightning",
+      "isHome": true,
+      "netEN": "Prime",
+      "netFR": "",
+      "type": "prime_monday"
+    },
+    {
+      "id": "2024020097",
+      "date": "2024-10-22T23:30:00Z",
+      "opponent": "Columbus Blue Jackets",
+      "isHome": false,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020110",
+      "date": "2024-10-24T23:00:00Z",
+      "opponent": "St. Louis Blues",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020125",
+      "date": "2024-10-26T23:00:00Z",
+      "opponent": "Boston Bruins",
+      "isHome": false,
+      "netEN": "Sportsnet/CBC",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024020143",
+      "date": "2024-10-28T23:30:00Z",
+      "opponent": "Winnipeg Jets",
+      "isHome": false,
+      "netEN": "Prime",
+      "netFR": "",
+      "type": "prime_monday"
+    },
+    {
+      "id": "2024020161",
+      "date": "2024-10-31T23:00:00Z",
+      "opponent": "Seattle Kraken",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020181",
+      "date": "2024-11-02T23:00:00Z",
+      "opponent": "St. Louis Blues",
+      "isHome": false,
+      "netEN": "Sportsnet/CBC",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024020189",
+      "date": "2024-11-03T23:00:00Z",
+      "opponent": "Minnesota Wild",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020195",
+      "date": "2024-11-06T00:00:00Z",
+      "opponent": "Boston Bruins",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020220",
+      "date": "2024-11-09T00:00:00Z",
+      "opponent": "Detroit Red Wings",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020227",
+      "date": "2024-11-10T00:00:00Z",
+      "opponent": "Montr\u00e9al Canadiens",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020245",
+      "date": "2024-11-13T00:00:00Z",
+      "opponent": "Ottawa Senators",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "RDS",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020253",
+      "date": "2024-11-14T00:30:00Z",
+      "opponent": "Washington Capitals",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020274",
+      "date": "2024-11-17T00:00:00Z",
+      "opponent": "Edmonton Oilers",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020301",
+      "date": "2024-11-21T00:30:00Z",
+      "opponent": "Vegas Golden Knights",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020333",
+      "date": "2024-11-25T00:00:00Z",
+      "opponent": "Utah Utah Hockey Club",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020352",
+      "date": "2024-11-28T00:30:00Z",
+      "opponent": "Florida Panthers",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020378",
+      "date": "2024-12-01T00:00:00Z",
+      "opponent": "Tampa Bay Lightning",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020394",
+      "date": "2024-12-03T00:30:00Z",
+      "opponent": "Chicago Blackhawks",
+      "isHome": true,
+      "netEN": "Prime",
+      "netFR": "",
+      "type": "prime_monday"
+    },
+    {
+      "id": "2024020406",
+      "date": "2024-12-05T00:30:00Z",
+      "opponent": "Nashville Predators",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020419",
+      "date": "2024-12-07T00:00:00Z",
+      "opponent": "Washington Capitals",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020433",
+      "date": "2024-12-08T00:00:00Z",
+      "opponent": "Pittsburgh Penguins",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020446",
+      "date": "2024-12-11T00:00:00Z",
+      "opponent": "New Jersey Devils",
+      "isHome": false,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020459",
+      "date": "2024-12-13T00:00:00Z",
+      "opponent": "Anaheim Ducks",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020479",
+      "date": "2024-12-15T00:00:00Z",
+      "opponent": "Detroit Red Wings",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020490",
+      "date": "2024-12-15T22:00:00Z",
+      "opponent": "Buffalo Sabres",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020508",
+      "date": "2024-12-19T00:30:00Z",
+      "opponent": "Dallas Stars",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020521",
+      "date": "2024-12-21T00:00:00Z",
+      "opponent": "Buffalo Sabres",
+      "isHome": false,
+      "netEN": "Sportsnet/CBC",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024020532",
+      "date": "2024-12-22T00:00:00Z",
+      "opponent": "New York Islanders",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020546",
+      "date": "2024-12-23T19:00:00Z",
+      "opponent": "Winnipeg Jets",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020559",
+      "date": "2024-12-28T00:00:00Z",
+      "opponent": "Detroit Red Wings",
+      "isHome": false,
+      "netEN": "Sportsnet/CBC",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024020571",
+      "date": "2024-12-29T00:00:00Z",
+      "opponent": "Washington Capitals",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020590",
+      "date": "2024-12-31T18:00:00Z",
+      "opponent": "New York Islanders",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020607",
+      "date": "2025-01-03T00:30:00Z",
+      "opponent": "New York Islanders",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020623",
+      "date": "2025-01-05T00:00:00Z",
+      "opponent": "Boston Bruins",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020635",
+      "date": "2025-01-06T00:00:00Z",
+      "opponent": "Philadelphia Flyers",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020644",
+      "date": "2025-01-08T00:30:00Z",
+      "opponent": "Philadelphia Flyers",
+      "isHome": false,
+      "netEN": "Sportsnet",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024020659",
+      "date": "2025-01-10T00:30:00Z",
+      "opponent": "Carolina Hurricanes",
+      "isHome": false,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020672",
+      "date": "2025-01-12T00:00:00Z",
+      "opponent": "Vancouver Canucks",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020693",
+      "date": "2025-01-15T00:00:00Z",
+      "opponent": "Dallas Stars",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020707",
+      "date": "2025-01-17T00:00:00Z",
+      "opponent": "New Jersey Devils",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020726",
+      "date": "2025-01-19T00:00:00Z",
+      "opponent": "Montr\u00e9al Canadiens",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020744",
+      "date": "2025-01-21T00:30:00Z",
+      "opponent": "Tampa Bay Lightning",
+      "isHome": true,
+      "netEN": "Prime",
+      "netFR": "",
+      "type": "prime_monday"
+    },
+    {
+      "id": "2024020757",
+      "date": "2025-01-23T00:30:00Z",
+      "opponent": "Columbus Blue Jackets",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020780",
+      "date": "2025-01-26T00:00:00Z",
+      "opponent": "Ottawa Senators",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020807",
+      "date": "2025-01-30T00:00:00Z",
+      "opponent": "Minnesota Wild",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020833",
+      "date": "2025-02-02T00:00:00Z",
+      "opponent": "Edmonton Oilers",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020853",
+      "date": "2025-02-05T02:00:00Z",
+      "opponent": "Calgary Flames",
+      "isHome": false,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020869",
+      "date": "2025-02-07T03:00:00Z",
+      "opponent": "Seattle Kraken",
+      "isHome": false,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020884",
+      "date": "2025-02-09T00:00:00Z",
+      "opponent": "Vancouver Canucks",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020900",
+      "date": "2025-02-23T00:00:00Z",
+      "opponent": "Carolina Hurricanes",
+      "isHome": true,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020912",
+      "date": "2025-02-24T00:00:00Z",
+      "opponent": "Chicago Blackhawks",
+      "isHome": false,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020918",
+      "date": "2025-02-26T00:00:00Z",
+      "opponent": "Boston Bruins",
+      "isHome": false,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020945",
+      "date": "2025-03-01T00:00:00Z",
+      "opponent": "New York Rangers",
+      "isHome": false,
+      "netEN": "Sportsnet/CBC",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024020961",
+      "date": "2025-03-02T18:00:00Z",
+      "opponent": "Pittsburgh Penguins",
+      "isHome": false,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024020971",
+      "date": "2025-03-04T00:30:00Z",
+      "opponent": "San Jose Sharks",
+      "isHome": true,
+      "netEN": "Prime",
+      "netFR": "",
+      "type": "prime_monday"
+    },
+    {
+      "id": "2024020985",
+      "date": "2025-03-06T03:00:00Z",
+      "opponent": "Vegas Golden Knights",
+      "isHome": false,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024021007",
+      "date": "2025-03-09T00:00:00Z",
+      "opponent": "Colorado Avalanche",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024021024",
+      "date": "2025-03-11T02:00:00Z",
+      "opponent": "Utah Utah Hockey Club",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024021040",
+      "date": "2025-03-13T23:00:00Z",
+      "opponent": "Florida Panthers",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024021059",
+      "date": "2025-03-15T23:00:00Z",
+      "opponent": "Ottawa Senators",
+      "isHome": true,
+      "netEN": "Sportsnet/CBC",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024021076",
+      "date": "2025-03-17T23:30:00Z",
+      "opponent": "Calgary Flames",
+      "isHome": true,
+      "netEN": "Prime",
+      "netFR": "",
+      "type": "prime_monday"
+    },
+    {
+      "id": "2024021087",
+      "date": "2025-03-19T23:00:00Z",
+      "opponent": "Colorado Avalanche",
+      "isHome": true,
+      "netEN": "Sportsnet",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024021091",
+      "date": "2025-03-20T23:00:00Z",
+      "opponent": "New York Rangers",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024021114",
+      "date": "2025-03-22T23:00:00Z",
+      "opponent": "Nashville Predators",
+      "isHome": false,
+      "netEN": "Sportsnet/CBC",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024021130",
+      "date": "2025-03-25T23:00:00Z",
+      "opponent": "Philadelphia Flyers",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024021152",
+      "date": "2025-03-28T02:30:00Z",
+      "opponent": "San Jose Sharks",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024021165",
+      "date": "2025-03-29T23:00:00Z",
+      "opponent": "Los Angeles Kings",
+      "isHome": false,
+      "netEN": "Sportsnet/CBC",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024021176",
+      "date": "2025-03-31T00:00:00Z",
+      "opponent": "Anaheim Ducks",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024021194",
+      "date": "2025-04-02T23:30:00Z",
+      "opponent": "Florida Panthers",
+      "isHome": true,
+      "netEN": "Sportsnet",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024021216",
+      "date": "2025-04-05T23:00:00Z",
+      "opponent": "Columbus Blue Jackets",
+      "isHome": true,
+      "netEN": "Sportsnet/CBC",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024021237",
+      "date": "2025-04-08T23:00:00Z",
+      "opponent": "Florida Panthers",
+      "isHome": false,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024021245",
+      "date": "2025-04-09T23:00:00Z",
+      "opponent": "Tampa Bay Lightning",
+      "isHome": false,
+      "netEN": "Sportsnet",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024021269",
+      "date": "2025-04-12T23:00:00Z",
+      "opponent": "Montr\u00e9al Canadiens",
+      "isHome": true,
+      "netEN": "Sportsnet/CBC",
+      "netFR": "",
+      "type": "national"
+    },
+    {
+      "id": "2024021279",
+      "date": "2025-04-13T21:00:00Z",
+      "opponent": "Carolina Hurricanes",
+      "isHome": false,
+      "netEN": "Sportsnet Ontario",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024021292",
+      "date": "2025-04-15T23:00:00Z",
+      "opponent": "Buffalo Sabres",
+      "isHome": false,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    },
+    {
+      "id": "2024021308",
+      "date": "2025-04-17T23:00:00Z",
+      "opponent": "Detroit Red Wings",
+      "isHome": true,
+      "netEN": "TSN4",
+      "netFR": "",
+      "type": "regional_tor"
+    }
+  ]
 }
