@@ -20,7 +20,15 @@ jobs:
           cp -r shared build/
           cp -r data/mtl.json build/data.json
           cp -r teams/montreal/* build/
-      
+          
+          # Fix paths to be root-relative for the standalone deployment
+          sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
+          sed -i 's|\.\./\.\./data/mtl.json|data.json|g' build/index.html
+          sed -i 's|\.\./\.\./manifest.json|manifest.json|g' build/index.html
+          
+          # Make sure manifest and favicon exist at root
+          cp manifest.json build/
+          
       - name: Deploy Montreal to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -38,7 +46,14 @@ jobs:
           cp -r shared build/
           cp -r data/tor.json build/data.json
           cp -r teams/toronto/* build/
-      
+          
+          # Fix paths
+          sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
+          sed -i 's|\.\./\.\./data/tor.json|data.json|g' build/index.html
+          sed -i 's|\.\./\.\./manifest.json|manifest.json|g' build/index.html
+          
+          cp manifest.json build/
+          
       - name: Deploy Toronto to Separate Repo
         uses: cpina/github-action-push-to-another-repository@main
         env:
