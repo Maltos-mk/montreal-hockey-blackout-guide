@@ -8,7 +8,7 @@ window.evaluateGame = function(g, state) {
   let isBlackedOutFR = false;
 
   // Toronto region is 'regional_tor'
-  if (g.netEN === 'Sportsnet') {
+  if (g.netEN && (g.netEN.includes('Sportsnet') || g.netEN.includes('CBC') || g.netEN.includes('CityTV') || g.netEN.includes('HNIC'))) {
     if (state.region === 'us_intl') {
       if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
       else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
@@ -39,14 +39,6 @@ window.evaluateGame = function(g, state) {
       isBlackedOutEN = true;
       if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ PREMIUM'; isBlackedOutEN = false; }
       else { reasonEN = 'BLACKOUT (Out of Market)'; }
-    }
-  } else if (g.netEN === 'CBC' || g.netEN === 'CityTV' || g.netEN.includes('HNIC')) {
-    if (state.region === 'us_intl') {
-      if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
-      else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
-    } else {
-      canEN = true;
-      reasonEN = `Watch on ${g.netEN} (Free) or Sportsnet+`;
     }
   } else if (g.netEN === 'Prime') {
     if (state.region === 'us_intl') {
