@@ -61,125 +61,7 @@ const state = {
 
     let games = [];
 
-    function evaluateGame(g) {
-      let canEN = false;
-      let reasonEN = '';
-      let isBlackedOutEN = false;
-
-      let canFR = false;
-      let reasonFR = '';
-      let isBlackedOutFR = false;
-
-      // --- English Evaluation ---
-      if (g.netEN === 'Sportsnet') {
-        if (state.region === 'us_intl') {
-          if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
-          else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
-        } else {
-          if (state.subs.sn || state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet (National)'; }
-          else { reasonEN = 'Requires Sportsnet subscription'; }
-        }
-      } else if (g.netEN === 'Prime Video') {
-        if (state.region === 'us_intl') {
-          if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
-          else { reasonEN = 'Requires ESPN+ in US'; }
-        } else {
-          if (state.subs.prime) { canEN = true; reasonEN = 'Watch on Prime Video (National)'; }
-          else { reasonEN = 'Requires Amazon Prime subscription'; }
-        }
-      } else if (g.netEN === 'TSN2' || g.type === 'regional_mtl') {
-        if (state.region === 'in_market') {
-          if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN2 (In-Market)'; }
-          else { reasonEN = 'Requires TSN subscription'; }
-        } else if (state.region === 'out_market_canada') {
-          if (state.subs.sn_prem) { 
-            canEN = true; 
-            reasonEN = 'Watch via Sportsnet+ Premium (Out-of-market pass)'; 
-          } else { 
-            isBlackedOutEN = true;
-            reasonEN = 'BLACKED OUT on TSN (Outside QC/Atlantic territory). Requires Sportsnet+ Premium.'; 
-          }
-        } else {
-          if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
-          else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
-        }
-      } else if (g.type === 'regional_tor') {
-        if (state.region === 'out_market_canada') {
-          if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN4 (Local Ontario feed)'; }
-          else { reasonEN = 'Requires TSN subscription'; }
-        } else if (state.region === 'in_market') {
-          if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch via Sportsnet+ Premium'; }
-          else { isBlackedOutEN = true; reasonEN = 'Blacked out in QC/Atlantic on TSN4. Requires SN+ Premium.'; }
-        } else {
-          if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+'; }
-          else { reasonEN = 'Requires ESPN+'; }
-        }
-      } else if (g.type === 'regional_ott') {
-        if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch via Sportsnet+ Premium'; }
-        else if (state.subs.tsn) { isBlackedOutEN = true; reasonEN = 'Blacked out regionally. Requires SN+ Premium.'; }
-        else { reasonEN = 'Requires SN+ Premium or TSN5'; }
-      }
-
-      // --- French Evaluation ---
-      if (g.netFR === 'TVA Sports') {
-        if (state.region === 'us_intl') {
-          if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ (select games)'; }
-          else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
-        } else {
-          if (state.subs.tva) { canFR = true; reasonFR = 'Watch on TVA Sports (Coast-to-Coast)'; }
-          else { reasonFR = 'Requires TVA Sports'; }
-        }
-      } else if (g.netFR === 'RDS' || g.netFR === 'RDS Info') {
-        if (state.region === 'in_market') {
-          if (state.subs.rds) { canFR = true; reasonFR = 'Watch on RDS (In-Market)'; }
-          else { reasonFR = 'Requires RDS subscription'; }
-        } else if (state.region === 'out_market_canada') {
-          if (state.subs.sn_prem) { 
-            canFR = true; 
-            reasonFR = 'Watch French feed via Sportsnet+ Premium'; 
-          } else { 
-            isBlackedOutFR = true;
-            reasonFR = 'BLACKED OUT on RDS (Outside QC/Atlantic territory). Requires Sportsnet+ Premium.'; 
-          }
-        } else {
-          if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ (select feeds)'; }
-          else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
-        }
-      }
-
-      // --- Synthesize Final Status Based on Language Preference ---
-      let status = 'missing_sub';
-      let summaryReason = '';
-
-      if (state.lang === 'en') {
-        if (canEN) { status = 'watchable'; summaryReason = reasonEN; }
-        else if (isBlackedOutEN) { status = 'blacked_out'; summaryReason = reasonEN; }
-        else { status = 'missing_sub'; summaryReason = reasonEN; }
-      } else if (state.lang === 'fr') {
-        if (canFR) { status = 'watchable'; summaryReason = reasonFR; }
-        else if (isBlackedOutFR) { status = 'blacked_out'; summaryReason = reasonFR; }
-        else { status = 'missing_sub'; summaryReason = reasonFR; }
-      } else {
-        if (canEN || canFR) {
-          status = 'watchable';
-          summaryReason = canEN ? reasonEN : reasonFR;
-        } else if (isBlackedOutEN && isBlackedOutFR) {
-          status = 'blacked_out';
-          summaryReason = 'Regional feeds blacked out in your territory. Requires Sportsnet+ Premium.';
-        } else if (isBlackedOutEN) {
-          status = 'blacked_out';
-          summaryReason = reasonEN;
-        } else if (isBlackedOutFR) {
-          status = 'blacked_out';
-          summaryReason = reasonFR;
-        } else {
-          status = 'missing_sub';
-          summaryReason = reasonEN + ' / ' + reasonFR;
-        }
-      }
-
-      return { status, summaryReason, canEN, canFR };
-    }
+    const evaluateGame = window.evaluateGame;
 
     function render() {
       const now = new Date();
@@ -397,62 +279,10 @@ const state = {
       const verdictEl = document.getElementById('kpiVerdict');
       const adviceCard = document.getElementById('adviceCard');
 
-      if (state.region === 'out_market_canada') {
-        if (!state.subs.sn_prem) {
-          verdictEl.textContent = `You live outside Quebec/Atlantic territory. Regional ${window.TEAM_DATA.team.name} games on TSN2 and RDS are blacked out without an official out-of-market package.`;
-          adviceCard.innerHTML = `
-            <div class="flex items-start space-x-3">
-              <i class="fa-solid fa-circle-info text-teamSecondary text-lg mt-0.5 dark:text-blue-400"></i>
-              <div>
-                <h4 class="font-bold text-slate-900 dark:text-white">Official Out-of-Market Options for ${window.TEAM_DATA.team.nickname} Fans:</h4>
-                <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
-                  Subscribing to TSN or RDS does <strong>not</strong> unlock ${window.TEAM_DATA.team.name} regional games in Ontario or Western Canada due to NHL blackouts. To watch those 50 regional games, you need <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable).
-                </p>
-              </div>
-            </div>
-          `;
-        } else {
-          verdictEl.textContent = `Full coverage active. With Sportsnet+ Premium or NHL Centre Ice, out-of-market regional ${window.TEAM_DATA.team.name} games on TSN and RDS are unlocked.`;
-          adviceCard.innerHTML = `
-            <div class="flex items-start space-x-3">
-              <i class="fa-solid fa-circle-check text-emerald-500 text-lg mt-0.5"></i>
-              <div>
-                <h4 class="font-bold text-slate-900 dark:text-white">Complete Out-of-Market Clearance</h4>
-                <p class="text-slate-600 dark:text-slate-300 mt-1">
-                  You have the official out-of-market package. For Monday national broadcasts, ensure you have <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" target="_blank" rel="noopener noreferrer" class="text-teamPrimary dark:text-red-400 font-bold underline">Prime Video</a>.
-                </p>
-              </div>
-            </div>
-          `;
+      if (window.renderAdviceCards) {
+          adviceCard.innerHTML = window.renderAdviceCards(state);
         }
-      } else if (state.region === 'in_market') {
-        verdictEl.textContent = `You are in the ${window.TEAM_DATA.team.name} home broadcast territory (QC, Atlantic Canada, Eastern ON). Standard TSN and RDS subscriptions will never be blacked out for you.`;
-        adviceCard.innerHTML = `
-          <div class="flex items-start space-x-3">
-            <i class="fa-solid fa-house-user text-teamSecondary text-lg mt-0.5 dark:text-blue-400"></i>
-            <div>
-              <h4 class="font-bold text-slate-900 dark:text-white">In-Market Full Season ${window.TEAM_DATA.team.nickname} Setup</h4>
-              <p class="text-slate-600 dark:text-slate-300 mt-1">
-                To receive all ${window.TEAM_DATA.team.name} games, you need Sportsnet (Saturdays), TSN2 or RDS (regional mid-week), and <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" target="_blank" rel="noopener noreferrer" class="text-teamPrimary dark:text-red-400 font-bold underline">Amazon Prime</a> for Monday night feeds.
-              </p>
-            </div>
-          </div>
-        `;
-      } else {
-        verdictEl.textContent = `US & International ${window.TEAM_DATA.team.nickname} fan mode active. Out-of-market ${window.TEAM_DATA.team.name} games stream officially via ESPN+ in the US and NHL.tv internationally.`;
-        adviceCard.innerHTML = `
-          <div class="flex items-start space-x-3">
-            <i class="fa-solid fa-globe text-indigo-500 text-lg mt-0.5"></i>
-            <div>
-              <h4 class="font-bold text-slate-900 dark:text-white">International & US ${window.TEAM_DATA.team.nickname} Viewing</h4>
-              <p class="text-slate-600 dark:text-slate-300 mt-1">
-                ESPN+ carries out-of-market NHL games for US viewers. National US broadcasts on ESPN or TNT follow local US availability rules.
-              </p>
-            </div>
-          </div>
-        `;
       }
-    }
 
     document.querySelectorAll('.region-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -467,10 +297,12 @@ const state = {
 
     ['sn', 'sn_prem', 'tsn', 'prime', 'rds', 'tva', 'espn'].forEach(key => {
       const el = document.getElementById(`sub_${key}`);
-      el.addEventListener('change', () => {
-        state.subs[key] = el.checked;
-        render();
-      });
+      if (el) {
+        el.addEventListener('change', () => {
+          state.subs[key] = el.checked;
+          render();
+        });
+      }
     });
 
     function setLang(lang) {

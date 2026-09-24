@@ -1,0 +1,59 @@
+name: Deploy Teams to Separate Repos
+
+# This action is currently DISABLED.
+# To enable it, uncomment the "push" trigger below and set up the target repositories
+# with the appropriate secrets (API_TOKEN_GITHUB) that has repo access.
+
+on:
+  # push:
+  #   branches:
+  #     - main
+  workflow_dispatch:
+
+jobs:
+  deploy-montreal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      # We would compile the specific team site by moving files to a clean structure
+      - name: Prepare Montreal Build
+        run: |
+          mkdir build
+          cp -r shared build/
+          cp -r data/mtl.json build/data.json
+          cp -r teams/montreal/* build/
+          # In a real scenario we'd use sed to update paths in index.html to be root relative
+      
+      # - name: Push to Montreal Repo
+      #   uses: cpina/github-action-push-to-another-repository@main
+      #   env:
+      #     API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      #   with:
+      #     source-directory: 'build'
+      #     destination-github-username: 'maltos-mk'
+      #     destination-repository-name: 'montreal-hockey-blackout-guide'
+      #     user-email: 'keithrobinson@example.com'
+      #     target-branch: main
+
+  deploy-toronto:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Prepare Toronto Build
+        run: |
+          mkdir build
+          cp -r shared build/
+          cp -r data/tor.json build/data.json
+          cp -r teams/toronto/* build/
+          # Path rewrites would go here
+      
+      # - name: Push to Toronto Repo
+      #   uses: cpina/github-action-push-to-another-repository@main
+      #   env:
+      #     API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      #   with:
+      #     source-directory: 'build'
+      #     destination-github-username: 'maltos-mk'
+      #     destination-repository-name: 'toronto-hockey-blackout-guide'
+      #     user-email: 'keithrobinson@example.com'
+      #     target-branch: main
