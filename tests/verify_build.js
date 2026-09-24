@@ -109,3 +109,16 @@ if (errors > 0) {
 } else {
   console.log(`\n🚀 All checks passed! Proceeding to deployment.`);
 }
+
+// Added CBC Test
+const cbcGame = { netEN: 'CBC', netFR: 'TVA Sports', type: 'national' };
+const mtlJsCBC = fs.readFileSync(path.join(TEAMS_DIR, 'montreal/blackout.js'), 'utf-8');
+const mockWindowCBC = {};
+new Function('window', mtlJsCBC)(mockWindowCBC);
+const resCBC = mockWindowCBC.evaluateGame(cbcGame, { region: 'in_market', subs: { sn: false } });
+if (resCBC.canEN !== false) {
+  console.error('❌ [Montreal] CBC game was incorrectly marked watchable without SN subscription!');
+  process.exit(1);
+} else {
+  console.log('✅ [Montreal] CBC game correctly requires SN subscription.');
+}
