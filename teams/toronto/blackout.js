@@ -17,7 +17,7 @@ window.evaluateGame = function(g, state) {
       else { reasonEN = 'Requires Sportsnet+'; }
     }
   } else if (g.netEN === 'TSN4') {
-    if (state.region === 'regional_tor') {
+    if (state.region === 'in_market') {
       if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN4'; }
       else { reasonEN = 'Requires TSN+'; }
     } else if (state.region === 'us_intl') {
@@ -29,7 +29,7 @@ window.evaluateGame = function(g, state) {
       else { reasonEN = 'BLACKOUT (Out of Market)'; }
     }
   } else if (g.netEN === 'Sportsnet Ontario') {
-    if (state.region === 'regional_tor') {
+    if (state.region === 'in_market') {
       if (state.subs.sn || state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet Ontario'; }
       else { reasonEN = 'Requires Sportsnet+'; }
     } else if (state.region === 'us_intl') {
@@ -48,12 +48,12 @@ window.evaluateGame = function(g, state) {
       canEN = true;
       reasonEN = `Watch on ${g.netEN} (Free) or Sportsnet+`;
     }
-  } else if (g.netEN === 'Amazon Prime') {
+  } else if (g.netEN === 'Prime') {
     if (state.region === 'us_intl') {
       if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
       else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
     } else {
-      if (state.subs.amazon) { canEN = true; reasonEN = 'Watch on Amazon Prime Video'; }
+      if (state.subs.prime) { canEN = true; reasonEN = 'Watch on Amazon Prime Video'; }
       else { reasonEN = 'Requires Amazon Prime Video'; }
     }
   } else {
@@ -75,7 +75,7 @@ window.evaluateGame = function(g, state) {
 };
 
 window.renderAdviceCards = function(state) {
-  if (state.region === 'in_market' || state.region === 'regional_tor') {
+  if (state.region === 'in_market' || state.region === 'in_market') {
     return `
       <div class="space-y-4">
         <div>
