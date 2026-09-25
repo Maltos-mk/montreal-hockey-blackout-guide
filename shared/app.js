@@ -59,11 +59,42 @@ const state = {
       }
     };
 
+function updateHash() {
+  const params = new URLSearchParams();
+  params.set('region', state.region);
+  params.set('timeFilter', state.timeFilter);
+  params.set('statusFilter', state.statusFilter);
+  params.set('channelFilter', state.channelFilter);
+  Object.keys(state.subs).forEach(k => {
+    params.set(k, state.subs[k]);
+  });
+  window.history.replaceState(null, null, '#' + params.toString());
+}
+
+function loadStateFromHash() {
+  if (window.location.hash) {
+    try {
+      const params = new URLSearchParams(window.location.hash.substring(1));
+      if (params.has('region')) state.region = params.get('region');
+      if (params.has('timeFilter')) state.timeFilter = params.get('timeFilter');
+      if (params.has('statusFilter')) state.statusFilter = params.get('statusFilter');
+      if (params.has('channelFilter')) state.channelFilter = params.get('channelFilter');
+      
+      const subKeys = ['sn', 'sn_prem', 'tsn', 'prime', 'rds', 'tva', 'espn'];
+      subKeys.forEach(k => {
+        if (params.has(k)) state.subs[k] = params.get(k) === 'true';
+      });
+    } catch(e) {}
+  }
+}
+
+
     let games = [];
 
     const evaluateGame = window.evaluateGame;
 
     function render() {
+      updateHash();
       const now = new Date();
       const threeHoursThirtyMs = 3.5 * 60 * 60 * 1000;
 
@@ -404,28 +435,53 @@ const state = {
         }
       }
 
-    document.querySelectorAll('.region-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        state.region = btn.dataset.region;
+    function updateRegionUI() {
         document.querySelectorAll('.region-btn').forEach(b => {
-          b.className = "region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-slate-200 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300";
-        });
-        btn.className = "region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-teamSecondary bg-teamSecondary/5 text-teamSecondary font-semibold dark:border-blue-400 dark:bg-blue-950/40 dark:text-blue-300";
-        render();
-      });
-    });
-
-    ['sn', 'sn_prem', 'tsn', 'prime', 'rds', 'tva', 'espn'].forEach(key => {
-      const el = document.getElementById(`sub_${key}`);
-      if (el) {
-        el.addEventListener('change', () => {
-          state.subs[key] = el.checked;
-          render();
+          if (b.dataset.region === state.region) {
+            b.className = "region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-teamSecondary bg-teamSecondary/5 text-teamSecondary font-semibold dark:border-blue-400 dark:bg-blue-950/40 dark:text-blue-300";
+            const check = b.querySelector('.fa-circle-check');
+            if (check) check.classList.remove('hidden');
+          } else {
+            b.className = "region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-slate-200 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300";
+            const check = b.querySelector('.fa-circle-check');
+            if (check) check.classList.add('hidden');
+          }
         });
       }
-    });
+      updateRegionUI();
+      document.querySelectorAll('.region-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.region = btn.dataset.region;
+          updateRegionUI();
+          render();
+        });
+      });
 
-    function setLang(lang) {
+    ['sn', 'sn_prem', 'tsn', 'prime', 'rds', 'tva', 'espn'].forEach(key => {
+        const el = document.getElementById(`sub_${key}`);
+        if (el) {
+          el.checked = state.subs[key];
+          el.addEventListener('change', () => {
+            state.subs[key] = el.checked;
+            render();
+          });
+        }
+      });
+
+    ['upcoming', 'past', 'all'].forEach(f => {
+        const b = document.getElementById(`time_${f}`);
+        if (b && state.timeFilter === f) {
+          b.className = "px-3 py-1.5 rounded-md bg-white dark:bg-slate-700 shadow-sm text-slate-900 dark:text-white font-bold transition";
+        }
+      });
+      ['en', 'fr', 'any'].forEach(l => {
+        const b = document.getElementById(`lang_${l}`);
+        if (b && state.lang === l) {
+          b.className = "px-3 py-1.5 rounded-md bg-white dark:bg-slate-700 shadow-sm text-teamPrimary font-bold transition";
+        }
+      });
+      
+      function setLang(lang) {
       state.lang = lang;
       ['en', 'fr', 'any'].forEach(l => {
         const b = document.getElementById(`lang_${l}`);
