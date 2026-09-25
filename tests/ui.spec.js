@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 test('Montreal: Status filtering works correctly', async ({ page }) => {
   await page.goto('http://localhost:8000/teams/montreal/index.html');
   
-  await page.waitForSelector('#scheduleContainer');
+  await page.waitForSelector('#scheduleCardsMobile');
 
   // Verify Sportsnet is checked by default or check it
   const snCheckbox = page.locator('#sub_sn');
@@ -15,12 +15,12 @@ test('Montreal: Status filtering works correctly', async ({ page }) => {
   await page.click('#status_watchable');
   
   // The bug previously caused this to return 0 games. It should return > 0 now.
-  const watchableCards = await page.locator('#scheduleContainer > div').count();
+  const watchableCards = await page.locator('#scheduleCardsMobile > div').count();
   expect(watchableCards).toBeGreaterThan(0);
 
   // Switch to All filter
   await page.click('#status_all');
-  const allCards = await page.locator('#scheduleContainer > div').count();
+  const allCards = await page.locator('#scheduleCardsMobile > div').count();
   expect(allCards).toBeGreaterThan(watchableCards);
 });
 
