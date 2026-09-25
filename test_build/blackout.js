@@ -4,10 +4,10 @@ window.evaluateGame = function(g, state) {
   let isBlackedOutEN = false;
 
   let canFR = false;
-  let reasonFR = '';
+  let reasonFR = 'No French Broadcast';
   let isBlackedOutFR = false;
 
-  // --- English Evaluation ---
+  // Toronto region is 'regional_tor'
   if (g.netEN && (g.netEN.includes('Sportsnet') || g.netEN.includes('HNIC'))) {
     if (state.region === 'us_intl') {
       if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
@@ -16,9 +16,9 @@ window.evaluateGame = function(g, state) {
       if (state.subs.sn || state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet (National)'; }
       else { reasonEN = 'Requires Sportsnet+'; }
     }
-  } else if (g.netEN && g.netEN.includes('TSN')) {
+  } else if (g.netEN === 'TSN4') {
     if (state.region === 'in_market') {
-      if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN2'; }
+      if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN4'; }
       else { reasonEN = 'Requires TSN+'; }
     } else if (state.region === 'us_intl') {
       if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
@@ -28,7 +28,19 @@ window.evaluateGame = function(g, state) {
       if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ PREMIUM'; isBlackedOutEN = false; }
       else { reasonEN = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
     }
-  } else if (g.netEN === 'Prime Video') {
+  } else if (g.netEN === 'Sportsnet Ontario') {
+    if (state.region === 'in_market') {
+      if (state.subs.sn || state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet Ontario'; }
+      else { reasonEN = 'Requires Sportsnet+'; }
+    } else if (state.region === 'us_intl') {
+      if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
+      else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
+    } else {
+      isBlackedOutEN = true;
+      if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ PREMIUM'; isBlackedOutEN = false; }
+      else { reasonEN = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
+    }
+  } else if (g.netEN === 'Prime') {
     if (state.region === 'us_intl') {
       if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
       else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
@@ -37,23 +49,11 @@ window.evaluateGame = function(g, state) {
       else { reasonEN = 'Requires Amazon Prime Video'; }
     }
   } else {
-    reasonEN = 'No English Broadcast';
+    reasonEN = 'No Broadcast Listed';
   }
 
-  // --- French Evaluation ---
-  if (g.netFR === 'RDS') {
-    if (state.region === 'in_market') {
-      if (state.subs.rds) { canFR = true; reasonFR = 'Watch on RDS'; }
-      else { reasonFR = 'Requires RDS'; }
-    } else if (state.region === 'us_intl') {
-      if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ / NHL.tv'; }
-      else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
-    } else {
-      isBlackedOutFR = true;
-      if (state.subs.sn_prem) { canFR = true; reasonFR = 'Watch on Sportsnet+ PREMIUM (French)'; isBlackedOutFR = false; }
-      else { reasonFR = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
-    }
-  } else if (g.netFR === 'TVA Sports') {
+  // French (Leafs generally only have TVA Sports nationally, if at all)
+  if (g.netFR === 'TVA Sports') {
     if (state.region === 'us_intl') {
       if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ / NHL.tv'; }
       else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
@@ -61,16 +61,6 @@ window.evaluateGame = function(g, state) {
       if (state.subs.tva) { canFR = true; reasonFR = 'Watch on TVA Sports'; }
       else { reasonFR = 'Requires TVA Sports'; }
     }
-  } else if (g.netFR === 'Prime Video') {
-    if (state.region === 'us_intl') {
-      if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ / NHL.tv'; }
-      else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
-    } else {
-      if (state.subs.prime) { canFR = true; reasonFR = 'Watch on Amazon Prime Video'; }
-      else { reasonFR = 'Requires Amazon Prime Video'; }
-    }
-  } else {
-    reasonFR = 'No French Broadcast';
   }
 
   return { canEN, reasonEN, isBlackedOutEN, canFR, reasonFR, isBlackedOutFR };
@@ -81,9 +71,9 @@ window.renderAdviceCards = function(state) {
     return `
       <div class="space-y-4">
         <div>
-          <h4 class="font-bold text-slate-900 dark:text-white">In-Market Full Season Montreal Canadiens Setup</h4>
+          <h4 class="font-bold text-slate-900 dark:text-white">In-Market Full Season Toronto Maple Leafs Setup</h4>
           <p class="text-slate-600 dark:text-slate-300 mt-1">
-            To receive all Montreal Canadiens games, you need Sportsnet (Saturdays), TSN2 or RDS (regional mid-week), and <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" data-umami-event="amazon-prime-click" target="_blank" rel="noopener noreferrer" class="text-teamPrimary dark:text-red-400 font-bold underline">Amazon Prime</a> for Monday night feeds.
+            To receive all Toronto Maple Leafs games, you need Sportsnet, TSN4, and <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" target="_blank" rel="noopener noreferrer" class="text-teamPrimary dark:text-blue-400 font-bold underline">Amazon Prime</a> for Monday night feeds.
           </p>
         </div>
       </div>
@@ -92,9 +82,9 @@ window.renderAdviceCards = function(state) {
     return `
       <div class="space-y-4">
         <div>
-          <h4 class="font-bold text-slate-900 dark:text-white">Official Out-of-Market Options for Habs Fans:</h4>
+          <h4 class="font-bold text-slate-900 dark:text-white">Official Out-of-Market Options for Leafs Fans:</h4>
           <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
-            Subscribing to TSN or RDS does <strong>not</strong> unlock Montreal Canadiens regional games in Ontario or Western Canada due to NHL blackouts. To watch those 50 regional games, you need <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable).
+            Subscribing to TSN4 or Sportsnet Ontario does <strong>not</strong> unlock Leafs regional games outside of Ontario due to NHL blackouts. To watch those regional games, you need <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable).
           </p>
         </div>
       </div>
@@ -103,7 +93,7 @@ window.renderAdviceCards = function(state) {
     return `
       <div class="space-y-4">
         <div>
-          <h4 class="font-bold text-slate-900 dark:text-white">International & US Montreal Viewing</h4>
+          <h4 class="font-bold text-slate-900 dark:text-white">International & US Leafs Viewing</h4>
           <p class="text-slate-600 dark:text-slate-300 mt-1">
             ESPN+ carries out-of-market NHL games for US viewers. National US broadcasts on ESPN or TNT follow local US availability rules.
           </p>
