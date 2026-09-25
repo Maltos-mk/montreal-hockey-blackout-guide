@@ -82,7 +82,7 @@ window.renderAdviceCards = function(state) {
     return `
       <div class="space-y-4">
         <div>
-          <h4 class="font-bold text-slate-900 dark:text-white">Official Out-of-Market Options for Leafs Fans:</h4>
+          <h4 class="font-bold text-slate-900 dark:text-white">Official Out-of-Market Options for Toronto Fans:</h4>
           <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
             Subscribing to TSN4 or Sportsnet Ontario does <strong>not</strong> unlock Leafs regional games outside of Ontario due to NHL blackouts. To watch those regional games, you need <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable).
           </p>
