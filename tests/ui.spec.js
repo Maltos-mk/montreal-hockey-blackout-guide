@@ -15,12 +15,12 @@ test('Montreal: Status filtering works correctly', async ({ page }) => {
   await page.click('#status_watchable');
   
   // The bug previously caused this to return 0 games. It should return > 0 now.
-  const watchableCards = await page.locator('#scheduleTableBody > div').count();
+  const watchableCards = await page.locator('#scheduleTableBody > tr').count();
   expect(watchableCards).toBeGreaterThan(0);
 
   // Switch to All filter
   await page.click('#status_all');
-  const allCards = await page.locator('#scheduleTableBody > div').count();
+  const allCards = await page.locator('#scheduleTableBody > tr').count();
   expect(allCards).toBeGreaterThan(watchableCards);
 });
 
