@@ -1,0 +1,27 @@
+{
+  "name": "broadcast-and-blackout-pwas",
+  "version": "1.0.0",
+  "description": "This repository contains the core logic, UI engine, and data files for independent NHL blackout guides. The architecture is designed to support deploying multiple independent single-page Progressive Web Apps (PWAs) from a single shared codebase.",
+  "main": "compare.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maltos-mk/montreal-hockey-blackout-guide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/maltos-mk/montreal-hockey-blackout-guide/issues"
+  },
+  "homepage": "https://github.com/maltos-mk/montreal-hockey-blackout-guide#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}
