@@ -5,7 +5,6 @@ window.shareApp = async function() {
     try {
       await navigator.share({
         title: window.TEAM_DATA ? window.TEAM_DATA.team.name + ' Broadcast Guide' : 'Hockey Broadcast Guide',
-        text: "Check if tonight's game is blacked out!",
         url: window.location.href,
       });
       // Umami tracking for share
@@ -14,7 +13,12 @@ window.shareApp = async function() {
       console.log('Error sharing', err);
     }
   } else {
-    alert('Sharing not supported on this browser. Copy the URL to share!');
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      alert("Link copied to clipboard!");
+      if (window.umami) umami.track('copy-link');
+    }).catch(() => {
+      alert('Sharing not supported on this browser. Copy the URL from your address bar to share!');
+    });
   }
 };
 
