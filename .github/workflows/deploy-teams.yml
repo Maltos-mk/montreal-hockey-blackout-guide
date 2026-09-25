@@ -69,5 +69,5 @@ jobs:
           source-directory: 'build'
           destination-github-username: 'Maltos-mk'
           destination-repository-name: 'toronto-hockey-blackout-guide'
-          user-email: 'keithrobinson@example.com'
+          user-email: 'bot@maltos-mk.com'
           target-branch: main
