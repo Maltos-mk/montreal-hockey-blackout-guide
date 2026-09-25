@@ -1,0 +1,4 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+  <circle cx='50' cy='50' r='46' fill='#AF1E2D' stroke='#192168' stroke-width='8'/>
+  <text x='50' y='65' font-family='sans-serif' font-weight='bold' font-size='48' fill='#ffffff' text-anchor='middle'>H</text>
+</svg>
