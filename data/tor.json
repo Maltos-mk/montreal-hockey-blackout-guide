@@ -6,8 +6,8 @@
   },
   "schedule": [
     {
-      "id": "2024020006",
-      "date": "Wed, Oct 9, 2024",
+      "id": "2026020006",
+      "date": "Wed, Oct 9, 2026",
       "netEN": "Sportsnet",
       "netFR": "",
       "type": "national",
@@ -19,8 +19,8 @@
       "note": ""
     },
     {
-      "id": "2024020015",
-      "date": "Thu, Oct 10, 2024",
+      "id": "2026020015",
+      "date": "Thu, Oct 10, 2026",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -32,8 +32,8 @@
       "note": ""
     },
     {
-      "id": "2024020026",
-      "date": "Sat, Oct 12, 2024",
+      "id": "2026020026",
+      "date": "Sat, Oct 12, 2026",
       "netEN": "Sportsnet/CBC",
       "netFR": "",
       "type": "national",
@@ -45,8 +45,8 @@
       "note": ""
     },
     {
-      "id": "2024020058",
-      "date": "Wed, Oct 16, 2024",
+      "id": "2026020058",
+      "date": "Wed, Oct 16, 2026",
       "netEN": "Sportsnet",
       "netFR": "",
       "type": "national",
@@ -58,8 +58,8 @@
       "note": ""
     },
     {
-      "id": "2024020079",
-      "date": "Sat, Oct 19, 2024",
+      "id": "2026020079",
+      "date": "Sat, Oct 19, 2026",
       "netEN": "Sportsnet/CBC",
       "netFR": "",
       "type": "national",
@@ -71,8 +71,8 @@
       "note": ""
     },
     {
-      "id": "2024020091",
-      "date": "Mon, Oct 21, 2024",
+      "id": "2026020091",
+      "date": "Mon, Oct 21, 2026",
       "netEN": "Prime",
       "netFR": "",
       "type": "prime_monday",
@@ -84,8 +84,8 @@
       "note": ""
     },
     {
-      "id": "2024020097",
-      "date": "Tue, Oct 22, 2024",
+      "id": "2026020097",
+      "date": "Tue, Oct 22, 2026",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -97,8 +97,8 @@
       "note": ""
     },
     {
-      "id": "2024020110",
-      "date": "Thu, Oct 24, 2024",
+      "id": "2026020110",
+      "date": "Thu, Oct 24, 2026",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -110,8 +110,8 @@
       "note": ""
     },
     {
-      "id": "2024020125",
-      "date": "Sat, Oct 26, 2024",
+      "id": "2026020125",
+      "date": "Sat, Oct 26, 2026",
       "netEN": "Sportsnet/CBC",
       "netFR": "",
       "type": "national",
@@ -123,8 +123,8 @@
       "note": ""
     },
     {
-      "id": "2024020143",
-      "date": "Mon, Oct 28, 2024",
+      "id": "2026020143",
+      "date": "Mon, Oct 28, 2026",
       "netEN": "Prime",
       "netFR": "",
       "type": "prime_monday",
@@ -136,8 +136,8 @@
       "note": ""
     },
     {
-      "id": "2024020161",
-      "date": "Thu, Oct 31, 2024",
+      "id": "2026020161",
+      "date": "Thu, Oct 31, 2026",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -149,8 +149,8 @@
       "note": ""
     },
     {
-      "id": "2024020181",
-      "date": "Sat, Nov 2, 2024",
+      "id": "2026020181",
+      "date": "Sat, Nov 2, 2026",
       "netEN": "Sportsnet/CBC",
       "netFR": "",
       "type": "national",
@@ -162,8 +162,8 @@
       "note": ""
     },
     {
-      "id": "2024020189",
-      "date": "Sun, Nov 3, 2024",
+      "id": "2026020189",
+      "date": "Sun, Nov 3, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -175,8 +175,8 @@
       "note": ""
     },
     {
-      "id": "2024020195",
-      "date": "Tue, Nov 5, 2024",
+      "id": "2026020195",
+      "date": "Tue, Nov 5, 2026",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -188,8 +188,8 @@
       "note": ""
     },
     {
-      "id": "2024020220",
-      "date": "Fri, Nov 8, 2024",
+      "id": "2026020220",
+      "date": "Fri, Nov 8, 2026",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -201,8 +201,8 @@
       "note": ""
     },
     {
-      "id": "2024020227",
-      "date": "Sat, Nov 9, 2024",
+      "id": "2026020227",
+      "date": "Sat, Nov 9, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -214,8 +214,8 @@
       "note": ""
     },
     {
-      "id": "2024020245",
-      "date": "Tue, Nov 12, 2024",
+      "id": "2026020245",
+      "date": "Tue, Nov 12, 2026",
       "netEN": "TSN4",
       "netFR": "RDS",
       "type": "regional_tor",
@@ -227,8 +227,8 @@
       "note": ""
     },
     {
-      "id": "2024020253",
-      "date": "Wed, Nov 13, 2024",
+      "id": "2026020253",
+      "date": "Wed, Nov 13, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -240,8 +240,8 @@
       "note": ""
     },
     {
-      "id": "2024020274",
-      "date": "Sat, Nov 16, 2024",
+      "id": "2026020274",
+      "date": "Sat, Nov 16, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -253,8 +253,8 @@
       "note": ""
     },
     {
-      "id": "2024020301",
-      "date": "Wed, Nov 20, 2024",
+      "id": "2026020301",
+      "date": "Wed, Nov 20, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -266,8 +266,8 @@
       "note": ""
     },
     {
-      "id": "2024020333",
-      "date": "Sun, Nov 24, 2024",
+      "id": "2026020333",
+      "date": "Sun, Nov 24, 2026",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -279,8 +279,8 @@
       "note": ""
     },
     {
-      "id": "2024020352",
-      "date": "Wed, Nov 27, 2024",
+      "id": "2026020352",
+      "date": "Wed, Nov 27, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -292,8 +292,8 @@
       "note": ""
     },
     {
-      "id": "2024020378",
-      "date": "Sat, Nov 30, 2024",
+      "id": "2026020378",
+      "date": "Sat, Nov 30, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -305,8 +305,8 @@
       "note": ""
     },
     {
-      "id": "2024020394",
-      "date": "Mon, Dec 2, 2024",
+      "id": "2026020394",
+      "date": "Mon, Dec 2, 2026",
       "netEN": "Prime",
       "netFR": "",
       "type": "prime_monday",
@@ -318,8 +318,8 @@
       "note": ""
     },
     {
-      "id": "2024020406",
-      "date": "Wed, Dec 4, 2024",
+      "id": "2026020406",
+      "date": "Wed, Dec 4, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -331,8 +331,8 @@
       "note": ""
     },
     {
-      "id": "2024020419",
-      "date": "Fri, Dec 6, 2024",
+      "id": "2026020419",
+      "date": "Fri, Dec 6, 2026",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -344,8 +344,8 @@
       "note": ""
     },
     {
-      "id": "2024020433",
-      "date": "Sat, Dec 7, 2024",
+      "id": "2026020433",
+      "date": "Sat, Dec 7, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -357,8 +357,8 @@
       "note": ""
     },
     {
-      "id": "2024020446",
-      "date": "Tue, Dec 10, 2024",
+      "id": "2026020446",
+      "date": "Tue, Dec 10, 2026",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -370,8 +370,8 @@
       "note": ""
     },
     {
-      "id": "2024020459",
-      "date": "Thu, Dec 12, 2024",
+      "id": "2026020459",
+      "date": "Thu, Dec 12, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -383,8 +383,8 @@
       "note": ""
     },
     {
-      "id": "2024020479",
-      "date": "Sat, Dec 14, 2024",
+      "id": "2026020479",
+      "date": "Sat, Dec 14, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -396,8 +396,8 @@
       "note": ""
     },
     {
-      "id": "2024020490",
-      "date": "Sun, Dec 15, 2024",
+      "id": "2026020490",
+      "date": "Sun, Dec 15, 2026",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -409,8 +409,8 @@
       "note": ""
     },
     {
-      "id": "2024020508",
-      "date": "Wed, Dec 18, 2024",
+      "id": "2026020508",
+      "date": "Wed, Dec 18, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -422,8 +422,8 @@
       "note": ""
     },
     {
-      "id": "2024020521",
-      "date": "Fri, Dec 20, 2024",
+      "id": "2026020521",
+      "date": "Fri, Dec 20, 2026",
       "netEN": "Sportsnet/CBC",
       "netFR": "",
       "type": "national",
@@ -435,8 +435,8 @@
       "note": ""
     },
     {
-      "id": "2024020532",
-      "date": "Sat, Dec 21, 2024",
+      "id": "2026020532",
+      "date": "Sat, Dec 21, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -448,8 +448,8 @@
       "note": ""
     },
     {
-      "id": "2024020546",
-      "date": "Mon, Dec 23, 2024",
+      "id": "2026020546",
+      "date": "Mon, Dec 23, 2026",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -461,8 +461,8 @@
       "note": ""
     },
     {
-      "id": "2024020559",
-      "date": "Fri, Dec 27, 2024",
+      "id": "2026020559",
+      "date": "Fri, Dec 27, 2026",
       "netEN": "Sportsnet/CBC",
       "netFR": "",
       "type": "national",
@@ -474,8 +474,8 @@
       "note": ""
     },
     {
-      "id": "2024020571",
-      "date": "Sat, Dec 28, 2024",
+      "id": "2026020571",
+      "date": "Sat, Dec 28, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -487,8 +487,8 @@
       "note": ""
     },
     {
-      "id": "2024020590",
-      "date": "Tue, Dec 31, 2024",
+      "id": "2026020590",
+      "date": "Tue, Dec 31, 2026",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -500,8 +500,8 @@
       "note": ""
     },
     {
-      "id": "2024020607",
-      "date": "Thu, Jan 2, 2025",
+      "id": "2026020607",
+      "date": "Thu, Jan 2, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -513,8 +513,8 @@
       "note": ""
     },
     {
-      "id": "2024020623",
-      "date": "Sat, Jan 4, 2025",
+      "id": "2026020623",
+      "date": "Sat, Jan 4, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -526,8 +526,8 @@
       "note": ""
     },
     {
-      "id": "2024020635",
-      "date": "Sun, Jan 5, 2025",
+      "id": "2026020635",
+      "date": "Sun, Jan 5, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -539,8 +539,8 @@
       "note": ""
     },
     {
-      "id": "2024020644",
-      "date": "Tue, Jan 7, 2025",
+      "id": "2026020644",
+      "date": "Tue, Jan 7, 2027",
       "netEN": "Sportsnet",
       "netFR": "",
       "type": "national",
@@ -552,8 +552,8 @@
       "note": ""
     },
     {
-      "id": "2024020659",
-      "date": "Thu, Jan 9, 2025",
+      "id": "2026020659",
+      "date": "Thu, Jan 9, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -565,8 +565,8 @@
       "note": ""
     },
     {
-      "id": "2024020672",
-      "date": "Sat, Jan 11, 2025",
+      "id": "2026020672",
+      "date": "Sat, Jan 11, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -578,8 +578,8 @@
       "note": ""
     },
     {
-      "id": "2024020693",
-      "date": "Tue, Jan 14, 2025",
+      "id": "2026020693",
+      "date": "Tue, Jan 14, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -591,8 +591,8 @@
       "note": ""
     },
     {
-      "id": "2024020707",
-      "date": "Thu, Jan 16, 2025",
+      "id": "2026020707",
+      "date": "Thu, Jan 16, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -604,8 +604,8 @@
       "note": ""
     },
     {
-      "id": "2024020726",
-      "date": "Sat, Jan 18, 2025",
+      "id": "2026020726",
+      "date": "Sat, Jan 18, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -617,8 +617,8 @@
       "note": ""
     },
     {
-      "id": "2024020744",
-      "date": "Mon, Jan 20, 2025",
+      "id": "2026020744",
+      "date": "Mon, Jan 20, 2027",
       "netEN": "Prime",
       "netFR": "",
       "type": "prime_monday",
@@ -630,8 +630,8 @@
       "note": ""
     },
     {
-      "id": "2024020757",
-      "date": "Wed, Jan 22, 2025",
+      "id": "2026020757",
+      "date": "Wed, Jan 22, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -643,8 +643,8 @@
       "note": ""
     },
     {
-      "id": "2024020780",
-      "date": "Sat, Jan 25, 2025",
+      "id": "2026020780",
+      "date": "Sat, Jan 25, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -656,8 +656,8 @@
       "note": ""
     },
     {
-      "id": "2024020807",
-      "date": "Wed, Jan 29, 2025",
+      "id": "2026020807",
+      "date": "Wed, Jan 29, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -669,8 +669,8 @@
       "note": ""
     },
     {
-      "id": "2024020833",
-      "date": "Sat, Feb 1, 2025",
+      "id": "2026020833",
+      "date": "Sat, Feb 1, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -682,8 +682,8 @@
       "note": ""
     },
     {
-      "id": "2024020853",
-      "date": "Tue, Feb 4, 2025",
+      "id": "2026020853",
+      "date": "Tue, Feb 4, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -695,8 +695,8 @@
       "note": ""
     },
     {
-      "id": "2024020869",
-      "date": "Thu, Feb 6, 2025",
+      "id": "2026020869",
+      "date": "Thu, Feb 6, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -708,8 +708,8 @@
       "note": ""
     },
     {
-      "id": "2024020884",
-      "date": "Sat, Feb 8, 2025",
+      "id": "2026020884",
+      "date": "Sat, Feb 8, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -721,8 +721,8 @@
       "note": ""
     },
     {
-      "id": "2024020900",
-      "date": "Sat, Feb 22, 2025",
+      "id": "2026020900",
+      "date": "Sat, Feb 22, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -734,8 +734,8 @@
       "note": ""
     },
     {
-      "id": "2024020912",
-      "date": "Sun, Feb 23, 2025",
+      "id": "2026020912",
+      "date": "Sun, Feb 23, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -747,8 +747,8 @@
       "note": ""
     },
     {
-      "id": "2024020918",
-      "date": "Tue, Feb 25, 2025",
+      "id": "2026020918",
+      "date": "Tue, Feb 25, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -760,8 +760,8 @@
       "note": ""
     },
     {
-      "id": "2024020945",
-      "date": "Fri, Feb 28, 2025",
+      "id": "2026020945",
+      "date": "Fri, Feb 28, 2027",
       "netEN": "Sportsnet/CBC",
       "netFR": "",
       "type": "national",
@@ -773,8 +773,8 @@
       "note": ""
     },
     {
-      "id": "2024020961",
-      "date": "Sun, Mar 2, 2025",
+      "id": "2026020961",
+      "date": "Sun, Mar 2, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -786,8 +786,8 @@
       "note": ""
     },
     {
-      "id": "2024020971",
-      "date": "Mon, Mar 3, 2025",
+      "id": "2026020971",
+      "date": "Mon, Mar 3, 2027",
       "netEN": "Prime",
       "netFR": "",
       "type": "prime_monday",
@@ -799,8 +799,8 @@
       "note": ""
     },
     {
-      "id": "2024020985",
-      "date": "Wed, Mar 5, 2025",
+      "id": "2026020985",
+      "date": "Wed, Mar 5, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -812,8 +812,8 @@
       "note": ""
     },
     {
-      "id": "2024021007",
-      "date": "Sat, Mar 8, 2025",
+      "id": "2026021007",
+      "date": "Sat, Mar 8, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -825,8 +825,8 @@
       "note": ""
     },
     {
-      "id": "2024021024",
-      "date": "Mon, Mar 10, 2025",
+      "id": "2026021024",
+      "date": "Mon, Mar 10, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -838,8 +838,8 @@
       "note": ""
     },
     {
-      "id": "2024021040",
-      "date": "Thu, Mar 13, 2025",
+      "id": "2026021040",
+      "date": "Thu, Mar 13, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -851,8 +851,8 @@
       "note": ""
     },
     {
-      "id": "2024021059",
-      "date": "Sat, Mar 15, 2025",
+      "id": "2026021059",
+      "date": "Sat, Mar 15, 2027",
       "netEN": "Sportsnet/CBC",
       "netFR": "",
       "type": "national",
@@ -864,8 +864,8 @@
       "note": ""
     },
     {
-      "id": "2024021076",
-      "date": "Mon, Mar 17, 2025",
+      "id": "2026021076",
+      "date": "Mon, Mar 17, 2027",
       "netEN": "Prime",
       "netFR": "",
       "type": "prime_monday",
@@ -877,8 +877,8 @@
       "note": ""
     },
     {
-      "id": "2024021087",
-      "date": "Wed, Mar 19, 2025",
+      "id": "2026021087",
+      "date": "Wed, Mar 19, 2027",
       "netEN": "Sportsnet",
       "netFR": "",
       "type": "national",
@@ -890,8 +890,8 @@
       "note": ""
     },
     {
-      "id": "2024021091",
-      "date": "Thu, Mar 20, 2025",
+      "id": "2026021091",
+      "date": "Thu, Mar 20, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -903,8 +903,8 @@
       "note": ""
     },
     {
-      "id": "2024021114",
-      "date": "Sat, Mar 22, 2025",
+      "id": "2026021114",
+      "date": "Sat, Mar 22, 2027",
       "netEN": "Sportsnet/CBC",
       "netFR": "",
       "type": "national",
@@ -916,8 +916,8 @@
       "note": ""
     },
     {
-      "id": "2024021130",
-      "date": "Tue, Mar 25, 2025",
+      "id": "2026021130",
+      "date": "Tue, Mar 25, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -929,8 +929,8 @@
       "note": ""
     },
     {
-      "id": "2024021152",
-      "date": "Thu, Mar 27, 2025",
+      "id": "2026021152",
+      "date": "Thu, Mar 27, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -942,8 +942,8 @@
       "note": ""
     },
     {
-      "id": "2024021165",
-      "date": "Sat, Mar 29, 2025",
+      "id": "2026021165",
+      "date": "Sat, Mar 29, 2027",
       "netEN": "Sportsnet/CBC",
       "netFR": "",
       "type": "national",
@@ -955,8 +955,8 @@
       "note": ""
     },
     {
-      "id": "2024021176",
-      "date": "Sun, Mar 30, 2025",
+      "id": "2026021176",
+      "date": "Sun, Mar 30, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -968,8 +968,8 @@
       "note": ""
     },
     {
-      "id": "2024021194",
-      "date": "Wed, Apr 2, 2025",
+      "id": "2026021194",
+      "date": "Wed, Apr 2, 2027",
       "netEN": "Sportsnet",
       "netFR": "",
       "type": "national",
@@ -981,8 +981,8 @@
       "note": ""
     },
     {
-      "id": "2024021216",
-      "date": "Sat, Apr 5, 2025",
+      "id": "2026021216",
+      "date": "Sat, Apr 5, 2027",
       "netEN": "Sportsnet/CBC",
       "netFR": "",
       "type": "national",
@@ -994,8 +994,8 @@
       "note": ""
     },
     {
-      "id": "2024021237",
-      "date": "Tue, Apr 8, 2025",
+      "id": "2026021237",
+      "date": "Tue, Apr 8, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -1007,8 +1007,8 @@
       "note": ""
     },
     {
-      "id": "2024021245",
-      "date": "Wed, Apr 9, 2025",
+      "id": "2026021245",
+      "date": "Wed, Apr 9, 2027",
       "netEN": "Sportsnet",
       "netFR": "",
       "type": "national",
@@ -1020,8 +1020,8 @@
       "note": ""
     },
     {
-      "id": "2024021269",
-      "date": "Sat, Apr 12, 2025",
+      "id": "2026021269",
+      "date": "Sat, Apr 12, 2027",
       "netEN": "Sportsnet/CBC",
       "netFR": "",
       "type": "national",
@@ -1033,8 +1033,8 @@
       "note": ""
     },
     {
-      "id": "2024021279",
-      "date": "Sun, Apr 13, 2025",
+      "id": "2026021279",
+      "date": "Sun, Apr 13, 2027",
       "netEN": "Sportsnet Ontario",
       "netFR": "",
       "type": "regional_tor",
@@ -1046,8 +1046,8 @@
       "note": ""
     },
     {
-      "id": "2024021292",
-      "date": "Tue, Apr 15, 2025",
+      "id": "2026021292",
+      "date": "Tue, Apr 15, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -1059,8 +1059,8 @@
       "note": ""
     },
     {
-      "id": "2024021308",
-      "date": "Thu, Apr 17, 2025",
+      "id": "2026021308",
+      "date": "Thu, Apr 17, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -1073,7 +1073,7 @@
     },
     {
       "id": 2026020083,
-      "date": "Tue, Apr 15, 2025",
+      "date": "Tue, Apr 15, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
@@ -1086,7 +1086,7 @@
     },
     {
       "id": 2026020084,
-      "date": "Thu, Apr 17, 2025",
+      "date": "Thu, Apr 17, 2027",
       "netEN": "TSN4",
       "netFR": "",
       "type": "regional_tor",
