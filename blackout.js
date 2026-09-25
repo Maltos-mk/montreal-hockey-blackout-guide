@@ -83,7 +83,7 @@ window.renderAdviceCards = function(state) {
         <div>
           <h4 class="font-bold text-slate-900 dark:text-white">In-Market Full Season Montreal Canadiens Setup</h4>
           <p class="text-slate-600 dark:text-slate-300 mt-1">
-            To receive all Montreal Canadiens games, you need Sportsnet (Saturdays), TSN2 or RDS (regional mid-week), and <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" target="_blank" rel="noopener noreferrer" class="text-teamPrimary dark:text-red-400 font-bold underline">Amazon Prime</a> for Monday night feeds.
+            To receive all Montreal Canadiens games, you need Sportsnet (Saturdays), TSN2 or RDS (regional mid-week), and <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" data-umami-event="amazon-prime-click" target="_blank" rel="noopener noreferrer" class="text-teamPrimary dark:text-red-400 font-bold underline">Amazon Prime</a> for Monday night feeds.
           </p>
         </div>
       </div>
