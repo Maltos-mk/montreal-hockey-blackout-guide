@@ -36,6 +36,13 @@ jobs:
           sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
           sed -i 's|\.\./\.\./data/mtl.json|data.json|g' build/index.html
           
+          # Inject cache-busters into HTML assets so PWAs force update
+          TIMESTAMP=$(date +%s)
+          sed -i "s|shared/app.css|shared/app.css?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|shared/app.js|shared/app.js?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|blackout.js|blackout.js?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|data.json|data.json?v=$TIMESTAMP|g" build/index.html
+          
           
       - name: Deploy Montreal to gh-pages
         uses: peaceiris/actions-gh-pages@v3
@@ -59,6 +66,13 @@ jobs:
           # Fix paths
           sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
           sed -i 's|\.\./\.\./data/tor.json|data.json|g' build/index.html
+          
+          # Inject cache-busters into HTML assets so PWAs force update
+          TIMESTAMP=$(date +%s)
+          sed -i "s|shared/app.css|shared/app.css?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|shared/app.js|shared/app.js?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|blackout.js|blackout.js?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|data.json|data.json?v=$TIMESTAMP|g" build/index.html
           
           
       - name: Deploy Toronto to Separate Repo
