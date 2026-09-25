@@ -26,7 +26,7 @@ window.evaluateGame = function(g, state) {
     } else {
       isBlackedOutEN = true;
       if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ PREMIUM'; isBlackedOutEN = false; }
-      else { reasonEN = 'BLACKOUT (Out of Market)'; }
+      else { reasonEN = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
     }
   } else if (g.netEN === 'Sportsnet Ontario') {
     if (state.region === 'in_market') {
@@ -38,7 +38,7 @@ window.evaluateGame = function(g, state) {
     } else {
       isBlackedOutEN = true;
       if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ PREMIUM'; isBlackedOutEN = false; }
-      else { reasonEN = 'BLACKOUT (Out of Market)'; }
+      else { reasonEN = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
     }
   } else if (g.netEN === 'Prime') {
     if (state.region === 'us_intl') {
