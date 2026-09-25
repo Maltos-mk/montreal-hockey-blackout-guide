@@ -219,7 +219,25 @@ function loadStateFromHash() {
       let missingSubCount = 0;
 
       games.forEach(g => {
-        const evalRes = g._cachedEvalRes;
+        // Evaluate safely if not cached
+        let evalRes = g._cachedEvalRes;
+        if (!evalRes) {
+          const rawRes = evaluateGame(g, state);
+          let status = 'missing_sub';
+          if (state.lang === 'en') {
+            if (rawRes.canEN) status = 'watchable';
+            else if (rawRes.isBlackedOutEN) status = 'blacked_out';
+          } else if (state.lang === 'fr') {
+            if (rawRes.canFR) status = 'watchable';
+            else if (rawRes.isBlackedOutFR) status = 'blacked_out';
+          } else {
+            if (rawRes.canEN || rawRes.canFR) status = 'watchable';
+            else if (rawRes.isBlackedOutEN && rawRes.isBlackedOutFR) status = 'blacked_out';
+            else if (rawRes.isBlackedOutEN || rawRes.isBlackedOutFR) status = 'blacked_out';
+          }
+          evalRes = { status };
+        }
+        
         if (evalRes.status === 'watchable') watchableCount++;
         else if (evalRes.status === 'blacked_out') blackedOutCount++;
         else missingSubCount++;
