@@ -200,37 +200,7 @@ function loadStateFromHash() {
       let missingSubCount = 0;
 
       games.forEach(g => {
-        const rawRes = evaluateGame(g, state);
-        let status = 'missing_sub';
-        let summaryReason = '';
-
-        if (state.lang === 'en') {
-          if (rawRes.canEN) { status = 'watchable'; summaryReason = rawRes.reasonEN; }
-          else if (rawRes.isBlackedOutEN) { status = 'blacked_out'; summaryReason = rawRes.reasonEN; }
-          else { status = 'missing_sub'; summaryReason = rawRes.reasonEN; }
-        } else if (state.lang === 'fr') {
-          if (rawRes.canFR) { status = 'watchable'; summaryReason = rawRes.reasonFR; }
-          else if (rawRes.isBlackedOutFR) { status = 'blacked_out'; summaryReason = rawRes.reasonFR; }
-          else { status = 'missing_sub'; summaryReason = rawRes.reasonFR; }
-        } else {
-          if (rawRes.canEN || rawRes.canFR) {
-            status = 'watchable';
-            summaryReason = rawRes.canEN ? rawRes.reasonEN : rawRes.reasonFR;
-          } else if (rawRes.isBlackedOutEN && rawRes.isBlackedOutFR) {
-            status = 'blacked_out';
-            summaryReason = 'Regional feeds blacked out in your territory. Requires Premium sub.';
-          } else if (rawRes.isBlackedOutEN) {
-            status = 'blacked_out';
-            summaryReason = rawRes.reasonEN;
-          } else if (rawRes.isBlackedOutFR) {
-            status = 'blacked_out';
-            summaryReason = rawRes.reasonFR;
-          } else {
-            status = 'missing_sub';
-            summaryReason = rawRes.reasonEN + ' / ' + rawRes.reasonFR;
-          }
-        }
-        const evalRes = Object.assign({}, rawRes, { status, summaryReason });
+        const evalRes = g._cachedEvalRes;
         if (evalRes.status === 'watchable') watchableCount++;
         else if (evalRes.status === 'blacked_out') blackedOutCount++;
         else missingSubCount++;
