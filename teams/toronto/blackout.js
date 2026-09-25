@@ -8,7 +8,7 @@ window.evaluateGame = function(g, state) {
   let isBlackedOutFR = false;
 
   // Toronto region is 'regional_tor'
-  if (g.netEN && (g.netEN.includes('Sportsnet') || g.netEN.includes('CBC') || g.netEN.includes('CityTV') || g.netEN.includes('HNIC'))) {
+  if (g.netEN && (g.netEN.includes('Sportsnet') || g.netEN.includes('HNIC'))) {
     if (state.region === 'us_intl') {
       if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
       else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
