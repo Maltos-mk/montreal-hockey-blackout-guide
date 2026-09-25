@@ -1,4 +1,19 @@
 
+
+function formatLocalTime(isoStr, fallbackTime) {
+  if (!isoStr) return fallbackTime + ' ET';
+  try {
+    const d = new Date(isoStr);
+    return new Intl.DateTimeFormat('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      timeZoneName: 'short'
+    }).format(d);
+  } catch(e) {
+    return fallbackTime + ' ET';
+  }
+}
+
 // Add Web Share API handler
 window.shareApp = async function() {
   if (navigator.share) {
