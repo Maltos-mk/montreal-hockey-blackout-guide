@@ -1,21 +1,83 @@
 const fs = require('fs');
-let js = fs.readFileSync('shared/app.js', 'utf8');
+let js = fs.readFileSync('shared/app.js', 'utf-8');
 
-// Fix null listener bug
-js = js.replace(/\[\'sn\', \'sn_prem\', \'tsn\', \'prime\', \'rds\', \'tva\', \'espn\'\]\.forEach\(key => \{\n\s*const el = document\.getElementById\(\`sub_\$\{key\}\`\);\n\s*el\.addEventListener\(\'change\', \(\) => \{\n\s*state\.subs\[key\] = el\.checked;\n\s*render\(\);\n\s*\}\);\n\s*\}\);/g, 
-  "['sn', 'sn_prem', 'tsn', 'prime', 'rds', 'tva', 'espn'].forEach(key => {\n      const el = document.getElementById(`sub_${key}`);\n      if (el) {\n        el.addEventListener('change', () => {\n          state.subs[key] = el.checked;\n          render();\n        });\n      }\n    });");
+const search = `        const evalRes = evaluateGame(g, state);`;
 
-// Replace the hardcoded advice cards block in render()
-const renderAdviceStart = js.indexOf("if (state.region === 'out_market_canada') {");
-if (renderAdviceStart !== -1) {
-  const renderAdviceEndMarker = "</div>\n        `;\n      }\n    }";
-  const renderAdviceEnd = js.indexOf(renderAdviceEndMarker, renderAdviceStart);
-  if (renderAdviceEnd !== -1) {
-    const before = js.substring(0, renderAdviceStart);
-    const after = js.substring(renderAdviceEnd + renderAdviceEndMarker.length);
-    js = before + "if (window.renderAdviceCards) {\n          adviceCard.innerHTML = window.renderAdviceCards(state);\n        }\n      }" + after;
-  }
-}
+const replace = `        const rawRes = evaluateGame(g, state);
+        let status = 'missing_sub';
+        let summaryReason = '';
+
+        if (state.lang === 'en') {
+          if (rawRes.canEN) { status = 'watchable'; summaryReason = rawRes.reasonEN; }
+          else if (rawRes.isBlackedOutEN) { status = 'blacked_out'; summaryReason = rawRes.reasonEN; }
+          else { status = 'missing_sub'; summaryReason = rawRes.reasonEN; }
+        } else if (state.lang === 'fr') {
+          if (rawRes.canFR) { status = 'watchable'; summaryReason = rawRes.reasonFR; }
+          else if (rawRes.isBlackedOutFR) { status = 'blacked_out'; summaryReason = rawRes.reasonFR; }
+          else { status = 'missing_sub'; summaryReason = rawRes.reasonFR; }
+        } else {
+          if (rawRes.canEN || rawRes.canFR) {
+            status = 'watchable';
+            summaryReason = rawRes.canEN ? rawRes.reasonEN : rawRes.reasonFR;
+          } else if (rawRes.isBlackedOutEN && rawRes.isBlackedOutFR) {
+            status = 'blacked_out';
+            summaryReason = 'Regional feeds blacked out in your territory. Requires Premium sub.';
+          } else if (rawRes.isBlackedOutEN) {
+            status = 'blacked_out';
+            summaryReason = rawRes.reasonEN;
+          } else if (rawRes.isBlackedOutFR) {
+            status = 'blacked_out';
+            summaryReason = rawRes.reasonFR;
+          } else {
+            status = 'missing_sub';
+            summaryReason = rawRes.reasonEN + ' / ' + rawRes.reasonFR;
+          }
+        }
+        const evalRes = Object.assign({}, rawRes, { status, summaryReason });`;
+
+// Replace first occurrence (mobile cards)
+js = js.replace(search, replace);
+
+// Replace second occurrence (status filter logic)
+js = js.replace(search, replace);
+
+// Replace third occurrence (table rows)
+js = js.replace(search, replace);
+
+// Replace the nextEval occurrence
+const searchNext = `        const nextEval = evaluateGame(nextGame, state);`;
+const replaceNext = `        const rawNextRes = evaluateGame(nextGame, state);
+        let nextStatus = 'missing_sub';
+        let nextSummaryReason = '';
+
+        if (state.lang === 'en') {
+          if (rawNextRes.canEN) { nextStatus = 'watchable'; nextSummaryReason = rawNextRes.reasonEN; }
+          else if (rawNextRes.isBlackedOutEN) { nextStatus = 'blacked_out'; nextSummaryReason = rawNextRes.reasonEN; }
+          else { nextStatus = 'missing_sub'; nextSummaryReason = rawNextRes.reasonEN; }
+        } else if (state.lang === 'fr') {
+          if (rawNextRes.canFR) { nextStatus = 'watchable'; nextSummaryReason = rawNextRes.reasonFR; }
+          else if (rawNextRes.isBlackedOutFR) { nextStatus = 'blacked_out'; nextSummaryReason = rawNextRes.reasonFR; }
+          else { nextStatus = 'missing_sub'; nextSummaryReason = rawNextRes.reasonFR; }
+        } else {
+          if (rawNextRes.canEN || rawNextRes.canFR) {
+            nextStatus = 'watchable';
+            nextSummaryReason = rawNextRes.canEN ? rawNextRes.reasonEN : rawNextRes.reasonFR;
+          } else if (rawNextRes.isBlackedOutEN && rawNextRes.isBlackedOutFR) {
+            nextStatus = 'blacked_out';
+            nextSummaryReason = 'Regional feeds blacked out in your territory. Requires Premium sub.';
+          } else if (rawNextRes.isBlackedOutEN) {
+            nextStatus = 'blacked_out';
+            nextSummaryReason = rawNextRes.reasonEN;
+          } else if (rawNextRes.isBlackedOutFR) {
+            nextStatus = 'blacked_out';
+            nextSummaryReason = rawNextRes.reasonFR;
+          } else {
+            nextStatus = 'missing_sub';
+            nextSummaryReason = rawNextRes.reasonEN + ' / ' + rawNextRes.reasonFR;
+          }
+        }
+        const nextEval = Object.assign({}, rawNextRes, { status: nextStatus, summaryReason: nextSummaryReason });`;
+
+js = js.replace(searchNext, replaceNext);
 
 fs.writeFileSync('shared/app.js', js);
-console.log('Updated app.js');
