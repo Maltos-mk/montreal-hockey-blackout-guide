@@ -92,7 +92,7 @@ window.renderAdviceCards = function(state) {
     return `
       <div class="space-y-4">
         <div>
-          <h4 class="font-bold text-slate-900 dark:text-white">Official Out-of-Market Options for Habs Fans:</h4>
+          <h4 class="font-bold text-slate-900 dark:text-white">Official Out-of-Market Options for Montreal Fans:</h4>
           <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
             Subscribing to TSN or RDS does <strong>not</strong> unlock Montreal Canadiens regional games in Ontario or Western Canada due to NHL blackouts. To watch those 50 regional games, you need <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable).
           </p>
@@ -103,7 +103,7 @@ window.renderAdviceCards = function(state) {
     return `
       <div class="space-y-4">
         <div>
-          <h4 class="font-bold text-slate-900 dark:text-white">International & US Habs Viewing</h4>
+          <h4 class="font-bold text-slate-900 dark:text-white">International & US Montreal Viewing</h4>
           <p class="text-slate-600 dark:text-slate-300 mt-1">
             ESPN+ carries out-of-market NHL games for US viewers. National US broadcasts on ESPN or TNT follow local US availability rules.
           </p>
