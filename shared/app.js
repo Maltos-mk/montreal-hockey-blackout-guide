@@ -131,7 +131,7 @@ const state = {
                   <span class="px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider ${isGameToday ? 'bg-amber-400 text-slate-950 animate-pulse' : 'bg-white/20 text-white'}">
                     ${isGameToday ? '★ Game Today' : 'Next ' + window.TEAM_DATA.team.nickname + ' Game'}
                   </span>
-                  <span class="text-xs text-slate-300 font-medium">${nextGame.date} • ${nextGame.time} ET</span>
+                  <span class="text-xs text-slate-300 font-medium">${nextGame.date} • ${formatLocalTime(nextGame.iso, nextGame.time)}</span>
                   <span class="text-xs text-slate-400">#${nextGame.id}</span>
                 </div>
                 
@@ -334,7 +334,7 @@ const state = {
                 <span class="font-teko text-base font-bold text-slate-400">#${g.id}</span>
                 <span class="font-bold text-sm text-slate-900 dark:text-white">${g.vs}</span>
               </div>
-              <div class="text-[11px] text-slate-500">${g.date} • ${g.time}</div>
+              <div class="text-[11px] text-slate-500">${g.date} • ${formatLocalTime(g.iso, g.time)}</div>
             </div>
             <div>${badge}</div>
           </div>
@@ -361,7 +361,7 @@ const state = {
           <td class="py-3 px-4 font-bold text-slate-400 dark:text-slate-500 font-teko text-base text-center">${g.id}</td>
           <td class="py-3 px-4 whitespace-nowrap">
             <div class="font-semibold text-slate-800 dark:text-slate-200">${g.date}</div>
-            <div class="text-[11px] text-slate-400">${g.time}</div>
+            <div class="text-[11px] text-slate-400">${formatLocalTime(g.iso, g.time)}</div>
           </td>
           <td class="py-3 px-4">
             <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
