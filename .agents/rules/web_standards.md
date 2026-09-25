@@ -34,3 +34,32 @@
 ## Social & Sharing
 - **Web Share API Fallbacks:** When invoking `navigator.share()`, omit the `text` payload. If included, native iOS/Android "Copy Link" buttons will concatenate the text and URL, breaking the copied link.
 - **Desktop Clipboard:** If `navigator.share()` is unsupported (desktop), gracefully fallback to `navigator.clipboard.writeText()` with a toast notification, rather than triggering an error alert.
+
+## Pre-Launch Checklists
+
+### 1. SEO & Search Console Checklist
+- [ ] **robots.txt:** Deployed to the root directory allowing crawling.
+- [ ] **sitemap.xml:** Deployed to the root directory containing all canonical paths.
+- [ ] **Canonical URL:** `<link rel="canonical" href="...">` is set and strictly matches the deployed domain.
+- [ ] **Meta Description:** Hardcoded in `<head>` (under 160 characters).
+- [ ] **Page Title:** Neutral, non-infringing `<title>` optimized for primary keywords.
+- [ ] **Google Search Console:** `<meta name="google-site-verification" content="...">` tag injected into `<head>`.
+- [ ] **Index Request:** Property added to Google Search Console and sitemap submitted.
+
+### 2. Social & OpenGraph Checklist
+- [ ] **OG Title & Description:** `og:title` and `og:description` populated.
+- [ ] **OG URL:** `og:url` matches the canonical URL.
+- [ ] **OG Image:** `og:image` URL is absolute (not relative) and points to a generic, non-infringing preview image (e.g., `og-preview.png`).
+- [ ] **Twitter Cards:** `twitter:card` set to `summary_large_image`.
+- [ ] **Web Share Validation:** `navigator.share` payload strictly omits the `text` attribute to preserve native "Copy Link" integrity.
+
+### 3. Analytics & Tracking Checklist
+- [ ] **Platform Script:** Umami (or equivalent privacy-first) tracking script injected into `<head>` with the correct `data-website-id`.
+- [ ] **Domain Verification:** Tracking script `data-domains` property explicitly matches the production domain.
+- [ ] **CTA Tracking:** High-value buttons (Share, Affiliate Links, PWA Installs) have `data-umami-event="event-name"` properties attached.
+- [ ] **Internal Exclusions:** Ensure local development (`localhost`) is excluded from tracking views.
+
+### 4. PWA & Asset Checklist
+- [ ] **Manifest:** `manifest.json` deployed with `name`, `short_name`, `theme_color`, and `background_color`.
+- [ ] **Icons:** `favicon.svg` (SVG) and `apple-touch-icon.png` (PNG) exist and are linked in `<head>`.
+- [ ] **Theme Color:** `<meta name="theme-color" content="...">` matches the brand identity.
