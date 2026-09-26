@@ -62,7 +62,7 @@ async function initApp() {
 }
 const state = {
       region: 'in_market',
-      lang: 'en',
+      lang: 'any',
       timeFilter: 'upcoming',
       search: '',
       statusFilter: 'all',
