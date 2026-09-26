@@ -22,3 +22,10 @@ This standard operating procedure ensures all changes are safely tested and veri
 
 ## 5. Rollback Procedure
 - **Action:** If a production deployment fails or introduces a critical bug, immediately run `git revert HEAD` and push to restore the previous stable state before debugging.
+
+## 6. Persona Testing (Major Releases)
+- **Action:** For major feature releases or significant UI changes, spawn targeted subagents to simulate real-world users.
+- **Example Personas:** 
+  - *Serge (Trois-Rivières):* Francophone, Habs fan, traditional cable user, highly sensitive to translation quality and local blackout rules.
+  - *Dave (Toronto):* Anglophone, Leafs fan, cord-cutter seeking the cheapest streaming combinations.
+- **Nuance:** Subagents must navigate the local development environment and provide qualitative critique on UX, tone, and accuracy before the change is merged.

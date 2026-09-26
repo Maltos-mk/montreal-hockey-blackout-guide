@@ -10,14 +10,14 @@ window.evaluateGame = function(g, state) {
   if (g.netEN === 'Sportsnet Ontario' || (g.type === 'regional_tor' && g.netEN.includes('Sportsnet'))) {
     if (state.region === 'in_market') {
       if (state.subs.sn || state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet Ontario'; }
-      else { reasonEN = 'Requires Sportsnet+'; }
+      else { reasonEN = 'Requires Sportsnet'; }
     } else if (state.region === 'us_intl') {
       if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
       else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
     } else {
       isBlackedOutEN = true;
       if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ PREMIUM'; isBlackedOutEN = false; }
-      else { reasonEN = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
+      else { reasonEN = 'BLACKED OUT outside territory. Requires Sportsnet Premium or Centre Ice.'; }
     }
   } else if (g.netEN && (g.netEN === 'Sportsnet' || g.netEN.includes('HNIC') || (g.type === 'national' && g.netEN.includes('Sportsnet')))) {
     if (state.region === 'us_intl') {
@@ -25,7 +25,7 @@ window.evaluateGame = function(g, state) {
       else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
     } else {
       if (state.subs.sn || state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet (National)'; }
-      else { reasonEN = 'Requires Sportsnet+'; }
+      else { reasonEN = 'Requires Sportsnet'; }
     }
   } else if (g.netEN === 'TSN4') {
     if (state.region === 'in_market') {
@@ -37,7 +37,7 @@ window.evaluateGame = function(g, state) {
     } else {
       isBlackedOutEN = true;
       if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ PREMIUM'; isBlackedOutEN = false; }
-      else { reasonEN = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
+      else { reasonEN = 'BLACKED OUT outside territory. Requires Sportsnet Premium or Centre Ice.'; }
     }
   } else if (g.netEN && g.netEN.includes('Prime')) {
     if (state.region === 'us_intl') {
@@ -72,7 +72,7 @@ window.renderAdviceCards = function(state) {
         <div>
           <h4 class="font-bold text-slate-900 dark:text-white">In-Market Full Season Toronto Maple Leafs Setup</h4>
           <p class="text-slate-600 dark:text-slate-300 mt-1">
-            To receive all Toronto Maple Leafs games, you need Sportsnet, TSN4, and <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" data-umami-event="amazon-prime-click" target="_blank" rel="noopener noreferrer" class="text-teamPrimary dark:text-blue-400 font-bold underline">Amazon Prime</a> for Monday night feeds.
+            To receive all Toronto Maple Leafs games, you need Sportsnet, TSN4, and <span class="font-bold">Amazon Prime</span> for Monday night feeds.
           </p>
         </div>
       </div>
