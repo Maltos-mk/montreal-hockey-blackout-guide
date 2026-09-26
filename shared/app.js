@@ -62,7 +62,7 @@ async function initApp() {
 }
 const state = {
       region: 'in_market',
-      lang: 'en',
+      lang: 'any',
       timeFilter: 'upcoming',
       search: '',
       statusFilter: 'all',
@@ -157,7 +157,9 @@ function loadStateFromHash() {
             nextSummaryReason = rawNextRes.reasonFR;
           } else {
             nextStatus = 'missing_sub';
-            nextSummaryReason = rawNextRes.reasonEN + ' / ' + rawNextRes.reasonFR;
+            if (rawNextRes.reasonFR === 'No French Broadcast') nextSummaryReason = rawNextRes.reasonEN;
+            else if (rawNextRes.reasonEN === 'No English Broadcast') nextSummaryReason = rawNextRes.reasonFR;
+            else nextSummaryReason = rawNextRes.reasonEN + ' / ' + rawNextRes.reasonFR;
           }
         }
         const nextEval = Object.assign({}, rawNextRes, { status: nextStatus, summaryReason: nextSummaryReason });
@@ -297,7 +299,9 @@ function loadStateFromHash() {
             summaryReason = rawRes.reasonFR;
           } else {
             status = 'missing_sub';
-            summaryReason = rawRes.reasonEN + ' / ' + rawRes.reasonFR;
+            if (rawRes.reasonFR === 'No French Broadcast') summaryReason = rawRes.reasonEN;
+            else if (rawRes.reasonEN === 'No English Broadcast') summaryReason = rawRes.reasonFR;
+            else summaryReason = rawRes.reasonEN + ' / ' + rawRes.reasonFR;
           }
         }
         const evalRes = Object.assign({}, rawRes, { status, summaryReason });
@@ -347,7 +351,9 @@ function loadStateFromHash() {
             summaryReason = rawRes.reasonFR;
           } else {
             status = 'missing_sub';
-            summaryReason = rawRes.reasonEN + ' / ' + rawRes.reasonFR;
+            if (rawRes.reasonFR === 'No French Broadcast') summaryReason = rawRes.reasonEN;
+            else if (rawRes.reasonEN === 'No English Broadcast') summaryReason = rawRes.reasonFR;
+            else summaryReason = rawRes.reasonEN + ' / ' + rawRes.reasonFR;
           }
         }
         const evalRes = Object.assign({}, rawRes, { status, summaryReason });
