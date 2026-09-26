@@ -113,6 +113,7 @@ function loadStateFromHash() {
     const evaluateGame = window.evaluateGame;
 
     function render() {
+      const t = (str) => window.i18n ? window.i18n.t(str) : str;
       updateHash();
       const now = new Date();
       const threeHoursThirtyMs = 3.5 * 60 * 60 * 1000;
@@ -370,7 +371,7 @@ function loadStateFromHash() {
             <div>
               <div class="flex items-center gap-1.5 flex-wrap">
                 <span class="font-teko text-base font-bold text-slate-400">#${g.id}</span>
-                <span class="font-bold text-sm text-slate-900 dark:text-white">${g.vs}</span>
+                <span class="font-bold text-sm text-slate-900 dark:text-white">${t(g.vs.replace('vs ', '').replace('@ ', '').replace(' (Split Squad)', '')) ? (g.vs.startsWith('vs ') ? 'vs ' : '@ ') + t(g.vs.replace('vs ', '').replace('@ ', '').replace(' (Split Squad)', '')) + (g.vs.includes('Split Squad') ? ' (' + t('Split Squad') + ')' : '') : g.vs}</span>
               </div>
               <div class="text-[11px] text-slate-500">${g.date} • ${formatLocalTime(g.iso, g.time)}</div>
             </div>
@@ -403,9 +404,9 @@ function loadStateFromHash() {
           </td>
           <td class="py-3 px-4">
             <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
-              <span>${g.vs}</span>
-              ${g.phase === 'preseason' ? '<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">Preseason</span>' : ''}
-              ${g.note ? `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-teamPrimary/10 text-teamPrimary">${g.note}</span>` : ''}
+              <span>${t(g.vs.replace('vs ', '').replace('@ ', '').replace(' (Split Squad)', '')) ? (g.vs.startsWith('vs ') ? 'vs ' : '@ ') + t(g.vs.replace('vs ', '').replace('@ ', '').replace(' (Split Squad)', '')) + (g.vs.includes('Split Squad') ? ' (' + t('Split Squad') + ')' : '') : g.vs}</span>
+              ${g.phase === 'preseason' ? '<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">' + t('Preseason') + '</span>' : ''}
+              ${g.note ? `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-teamPrimary/10 text-teamPrimary">${t(g.note)}</span>` : ''}
             </div>
             <div class="text-[11px] text-slate-500">${g.venue}</div>
           </td>
@@ -439,8 +440,10 @@ function loadStateFromHash() {
 
       if (window.renderAdviceCards) {
           adviceCard.innerHTML = window.renderAdviceCards(state);
-        }
       }
+
+      if (window.i18n) window.i18n.apply();
+    }
 
     function updateRegionUI() {
         document.querySelectorAll('.region-btn').forEach(b => {
