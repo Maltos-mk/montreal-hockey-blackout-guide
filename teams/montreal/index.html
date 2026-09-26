@@ -94,7 +94,7 @@
         "name": "Which Montreal Canadiens games stream exclusively on Amazon Prime Video?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "National Monday Night Hockey broadcasts featuring the Montreal Canadiens are exclusive to Amazon Prime Video in English across Canada."
+          "text": "<span data-i18n="filter-national"><span data-i18n="filter-national">National</span></span> Monday Night Hockey broadcasts featuring the Montreal Canadiens are exclusive to Amazon Prime Video in English across Canada."
         }
       }
     ]
@@ -153,14 +153,22 @@
         <!-- Direct Install Modal Button -->
         <button onclick="openDirectInstallModal()" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="Add to Home Screen">
           <i class="fa-solid fa-mobile-screen-button text-amber-300"></i>
-          <span>Add App</span>
+          <span data-i18n="btn-add-app">Add App</span>
         </button>
 
-        <!-- Ko-fi Tip Button in Header -->
+        <!-- Ko-fi Tip Button in Header (Temporarily disabled for soft launch) -->
+        <!-- 
         <a href="https://ko-fi.com/maltosmk" data-umami-event="kofi-click" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs shadow flex items-center gap-1.5 transition" title="Support on Ko-fi">
           <i class="fa-solid fa-mug-hot"></i>
           <span>Support on Ko-fi</span>
         </a>
+        -->
+
+        <div class="flex items-center space-x-2 bg-black/25 rounded-xl px-3 py-1.5 border border-white/10 text-sm">
+          <button onclick="window.i18n.toggle()" class="lang-btn uppercase font-bold text-teamPrimary dark:text-red-400" data-lang="en">EN</button>
+          <span class="text-white/30">|</span>\n          <button onclick="window.i18n.toggle()" class="lang-btn uppercase text-slate-300 hover:text-white transition" data-lang="fr">FR</button>\n        </div>\n        <div class="w-full text-center mt-2 hidden" id="frDisclaimer"><span class="text-[10px] text-slate-500 italic" data-i18n="footer-disclaimer">Traduit automatiquement. Veuillez excuser les éventuelles erreurs.</span></div>|</span>
+          <button onclick="window.i18n.toggle()" class="lang-btn uppercase text-slate-300 hover:text-white transition" data-lang="fr">FR</button>
+        </div>
 
         <button id="themeToggle" class="p-2.5 rounded-xl bg-black/25 hover:bg-black/40 text-slate-200 text-sm border border-white/10 transition" title="Toggle Theme">
           <i class="fa-solid fa-moon text-amber-300 dark:hidden"></i>
@@ -192,7 +200,7 @@
         <!-- Region Selector -->
         <div>
           <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
-            Where do you live?
+            <span data-i18n="where-live"><span data-i18n="where-live">Where do you live?</span></span>
           </label>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="regionSelector">
             <button data-region="in_market" class="region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-teamSecondary bg-teamSecondary/5 text-teamSecondary font-semibold dark:border-blue-400 dark:bg-blue-950/40 dark:text-blue-300">
@@ -248,7 +256,7 @@
               <input type="checkbox" id="sub_tsn" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">TSN / TSN2</p>
-                <p class="text-[11px] text-slate-500">50 Regional Habs games (in-market only)</p>
+                <p class="text-[11px] text-slate-500">50 <span data-i18n="filter-regional"><span data-i18n="filter-regional">Regional</span></span> Habs games (in-market only)</p>
               </div>
             </label>
 
@@ -258,14 +266,16 @@
                 <input type="checkbox" id="sub_prime" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
                 <div class="flex-1">
                   <p class="text-sm font-semibold">Amazon Prime Video</p>
-                  <p class="text-[11px] text-slate-500">National Monday Night Hockey feeds</p>
+                  <p class="text-[11px] text-slate-500"><span data-i18n="filter-national"><span data-i18n="filter-national">National</span></span> Monday Night Hockey feeds</p>
                 </div>
               </label>
               <div class="text-[11px] pl-7 pt-1">
+                <!-- Temporarily disabled affiliate link
                 <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" data-umami-event="amazon-prime-click" target="_blank" rel="noopener noreferrer" class="text-teamPrimary dark:text-red-400 font-semibold hover:underline inline-flex items-center gap-1">
                   <span>Need Prime? Try 30-Day Free Trial</span>
                   <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                 </a>
+                -->
               </div>
             </div>
 
@@ -273,7 +283,7 @@
               <input type="checkbox" id="sub_rds" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">RDS / RDS Direct</p>
-                <p class="text-[11px] text-slate-500">45 Regional French Canadiens games</p>
+                <p class="text-[11px] text-slate-500">45 <span data-i18n="filter-regional"><span data-i18n="filter-regional">Regional</span></span> French Canadiens games</p>
               </div>
             </label>
 
@@ -281,7 +291,7 @@
               <input type="checkbox" id="sub_tva" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">TVA Sports</p>
-                <p class="text-[11px] text-slate-500">National French broadcasts (zero blackouts)</p>
+                <p class="text-[11px] text-slate-500"><span data-i18n="filter-national"><span data-i18n="filter-national">National</span></span> French broadcasts (zero blackouts)</p>
               </div>
             </label>
 
@@ -344,7 +354,7 @@
 
             <div>
               <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
-                <span>Blacked Out Regionally</span>
+                <span>Blacked Out <span data-i18n="filter-regional"><span data-i18n="filter-regional">Regional</span></span>ly</span>
                 <span id="blackoutBreakdown">0 games</span>
               </div>
               <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
@@ -373,7 +383,8 @@
 
     </section>
 
-    <!-- Contextual Direct Support & Community Tip Callout -->
+    <!-- Contextual Direct Support & Community Tip Callout (Temporarily disabled for soft launch) -->
+    <!--
     <section class="bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent border border-amber-500/30 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center space-x-3.5 text-center sm:text-left">
         <div class="w-10 h-10 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center text-lg flex-shrink-0 shadow-sm">
@@ -390,6 +401,7 @@
         <i class="fa-solid fa-arrow-right text-[10px]"></i>
       </a>
     </section>
+    -->
 
     <!-- AUTOMATIC NEXT UPCOMING GAME SPOTLIGHT HERO -->
     <section id="nextGameSpotlight" class="transition-all duration-300">
@@ -404,7 +416,7 @@
         <!-- View Timing Toggle -->
         <div class="inline-flex rounded-xl p-1 bg-slate-100 dark:bg-slate-800 text-xs font-semibold self-start">
           <button onclick="setTimeFilter('upcoming')" id="time_upcoming" class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 shadow-sm text-teamPrimary font-bold transition">Upcoming Games</button>
-          <button onclick="setTimeFilter('all')" id="time_all" class="px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white transition">All Games</button>
+          <button onclick="setTimeFilter('all')" id="time_all" class="px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white transition"><span data-i18n="filter-all"><span data-i18n="filter-all">All Games</span></span></button>
           <button onclick="setTimeFilter('past')" id="time_past" class="px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white transition">Past Games</button>
         </div>
 
@@ -469,7 +481,7 @@
 
     <article class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-xs sm:text-sm space-y-4 shadow-sm">
       <h2 class="text-base font-bold text-slate-900 dark:text-white uppercase font-teko text-2xl tracking-wider text-teamPrimary">
-        Montreal Canadiens Hockey Broadcast Rights & Regional Blackout Guide (2026–27 Habs Season)
+        Montreal Canadiens Hockey Broadcast Rights & <span data-i18n="filter-regional"><span data-i18n="filter-regional">Regional</span></span> Blackout Guide (2026–27 Habs Season)
       </h2>
       <p class="leading-relaxed">
         Following the <strong>Montreal Canadiens </strong> regular season and preseason broadcasts across Canada requires understanding how NHL broadcast territory rights are allocated between national networks and regional partners. For Montreal Canadiens fans, games are split across five distinct television and streaming networks: <strong>TSN2, RDS, Sportsnet, Amazon Prime Video, and TVA Sports</strong>.
@@ -477,7 +489,7 @@
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
         <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
-          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Regional Montreal Canadiens Games (TSN2 & RDS)</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1"><span data-i18n="filter-regional"><span data-i18n="filter-regional">Regional</span></span> Montreal Canadiens Games (TSN2 & RDS)</h3>
           <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400">
             <strong>TSN2</strong> (50 English games) and <strong>RDS</strong> (45 French games) hold the official regional rights for the Montreal Canadiens. Their broadcast boundary is restricted by NHL carriage rules strictly to <strong>Quebec, Atlantic Canada (New Brunswick, Nova Scotia, PEI, Newfoundland), and Eastern Ontario (Pembroke, Ottawa, Cornwall)</strong>.
           </p>
@@ -487,7 +499,7 @@
         </div>
 
         <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
-          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">National Habs Games (Sportsnet, Prime & TVA Sports)</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1"><span data-i18n="filter-national"><span data-i18n="filter-national">National</span></span> Habs Games (Sportsnet, Prime & TVA Sports)</h3>
           <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400">
             When the Montreal Canadiens play on Saturday night <em>Hockey Night in Canada</em> broadcasts, <strong>Sportsnet</strong> (English) and <strong>TVA Sports</strong> (French) broadcast coast-to-coast with <strong>zero regional blackouts anywhere in Canada</strong>. Every Canadian viewer with standard cable or basic streaming packages can watch these matchups.
           </p>
@@ -519,21 +531,23 @@
       <!-- Other Teams (Temporarily disabled for soft launch) -->
       <!-- 
       <div class="py-2 flex flex-wrap items-center justify-center gap-3 text-sm">
-        <span class="font-semibold text-slate-600 dark:text-slate-400"><i class="fa-solid fa-map-location-dot mr-1"></i> More Regional Guides:</span>
+        <span class="font-semibold text-slate-600 dark:text-slate-400"><i class="fa-solid fa-map-location-dot mr-1"></i> More <span data-i18n="filter-regional"><span data-i18n="filter-regional">Regional</span></span> Guides:</span>
         <a href="https://maltos-mk.github.io/toronto-hockey-blackout-guide/" data-umami-event="crosslink-tor" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 border border-slate-200 dark:border-slate-700 transition font-bold">Toronto Maple Leafs</a>
       </div>
       -->
 
-      <!-- Statutory Amazon Associate Disclosure -->
+      <!-- Statutory Amazon Associate Disclosure (Disabled) -->
+      <!--
       <p class="text-[11px] text-slate-500 italic">
         As an Amazon Associate I earn from qualifying purchases.
       </p>
+      -->
 
       <p class="font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider text-[11px] pt-2">
         Non-Affiliation & Nominative Fair Use Disclaimer
       </p>
       <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
-        This website is an independent fan resource created exclusively for public informational purposes. This service is <strong>not affiliated with, maintained by, endorsed by, or in any way associated with</strong> Club de hockey Canadien Inc., the Montreal Canadiens, the Habs, Groupe CH, the National Hockey League (NHL), or any of their member clubs.
+        This website is an independent fan resource created exclusively for public informational purposes. This service is <strong>not affiliated with, maintained by, endorsed by, or in any way associated with</strong> Club de hockey Canadien Inc., the Montreal Canadiens, the Habs, Groupe CH, the <span data-i18n="filter-national"><span data-i18n="filter-national">National</span></span> Hockey League (NHL), or any of their member clubs.
       </p>
       <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
         All team names (Montreal Canadiens, Habs), schedules, network titles (TSN, RDS, Sportsnet, TVA Sports, Amazon Prime Video), and trademarks referenced herein are used strictly for descriptive and nominative identification under applicable intellectual property laws.
@@ -566,7 +580,7 @@
         </p>
         <p>
           <strong>Why are Saturday night Habs games never blacked out?</strong><br>
-          Saturday night games are part of the <strong>National rights</strong> package on Sportsnet and TVA Sports. National broadcasts carry coast-to-coast clearance without regional blackouts across Canada.
+          Saturday night games are part of the <strong><span data-i18n="filter-national"><span data-i18n="filter-national">National</span></span> rights</strong> package on Sportsnet and TVA Sports. <span data-i18n="filter-national"><span data-i18n="filter-national">National</span></span> broadcasts carry coast-to-coast clearance without regional blackouts across Canada.
         </p>
       </div>
 
@@ -611,7 +625,7 @@
   <script>
   window.TEAM_DATA_URL = "../../data/mtl.json";
 </script>
-<script src="blackout.js"></script>
+<script src="i18n.js"></script>
+  <script src="blackout.js"></script>
 <script src="../../shared/app.js"></script>
-</body>
-</html>
+<script>document.addEventListener("DOMContentLoaded", () => { if(window.i18n) window.i18n.init(); });</script></body>
