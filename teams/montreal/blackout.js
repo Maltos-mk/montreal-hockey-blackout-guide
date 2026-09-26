@@ -18,12 +18,21 @@ window.evaluateGame = function(g, state) {
     }
   } else if (g.netEN && g.netEN.includes('TSN')) {
     if (state.region === 'in_market') {
-      if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN2'; }
-      else { reasonEN = 'Requires TSN+'; }
+      if (g.type === 'regional_ott') {
+        // Ottawa regional game: blacked out for Montreal fans unless they have Premium
+        isBlackedOutEN = true;
+        if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ PREMIUM (Out of Market)'; isBlackedOutEN = false; }
+        else { reasonEN = 'BLACKED OUT in Montreal. Requires Sportsnet+ Premium or Centre Ice.'; }
+      } else {
+        if (state.subs.tsn) { canEN = true; reasonEN = `Watch on ${g.netEN}`; }
+        else { reasonEN = 'Requires TSN+'; }
+      }
     } else if (state.region === 'us_intl') {
       if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
       else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
     } else {
+      // Out of market Canada (either regional_mtl or regional_ott, if they don't live in the market)
+      // Note: If they live in out_market_canada (e.g. BC), both are out of market.
       isBlackedOutEN = true;
       if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ PREMIUM'; isBlackedOutEN = false; }
       else { reasonEN = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
@@ -41,10 +50,17 @@ window.evaluateGame = function(g, state) {
   }
 
   // --- French Evaluation ---
-  if (g.netFR === 'RDS') {
+  if (g.netFR && g.netFR.includes('RDS')) {
     if (state.region === 'in_market') {
-      if (state.subs.rds) { canFR = true; reasonFR = 'Watch on RDS'; }
-      else { reasonFR = 'Requires RDS'; }
+      if (g.type === 'regional_ott') {
+        // Ottawa regional game: blacked out for Montreal fans unless they have Premium
+        isBlackedOutFR = true;
+        if (state.subs.sn_prem) { canFR = true; reasonFR = 'Watch on Sportsnet+ PREMIUM (French)'; isBlackedOutFR = false; }
+        else { reasonFR = 'BLACKED OUT in Montreal. Requires Sportsnet+ Premium or Centre Ice.'; }
+      } else {
+        if (state.subs.rds) { canFR = true; reasonFR = `Watch on ${g.netFR}`; }
+        else { reasonFR = 'Requires RDS'; }
+      }
     } else if (state.region === 'us_intl') {
       if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ / NHL.tv'; }
       else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
