@@ -114,6 +114,12 @@ function loadStateFromHash() {
 
     function render() {
       const t = (str) => window.i18n ? window.i18n.t(str) : str;
+      const getVs = (vs) => {
+        let clean = vs.replace('vs ', '').replace('@ ', '').replace(' (Split Squad)', '');
+        let prefix = vs.startsWith('vs ') ? 'vs ' : '@ ';
+        let suffix = vs.includes('Split Squad') ? ' (' + t('Split Squad') + ')' : '';
+        return prefix + t(clean) + suffix;
+      };
       updateHash();
       const now = new Date();
       const threeHoursThirtyMs = 3.5 * 60 * 60 * 1000;
@@ -158,7 +164,9 @@ function loadStateFromHash() {
             nextSummaryReason = rawNextRes.reasonFR;
           } else {
             nextStatus = 'missing_sub';
-            nextSummaryReason = rawNextRes.reasonEN + ' / ' + rawNextRes.reasonFR;
+            if (rawNextRes.reasonFR === 'No French Broadcast') nextSummaryReason = rawNextRes.reasonEN;
+            else if (rawNextRes.reasonEN === 'No English Broadcast') nextSummaryReason = rawNextRes.reasonFR;
+            else nextSummaryReason = rawNextRes.reasonEN + ' / ' + rawNextRes.reasonFR;
           }
         }
         const nextEval = Object.assign({}, rawNextRes, { status: nextStatus, summaryReason: nextSummaryReason });
@@ -298,7 +306,9 @@ function loadStateFromHash() {
             summaryReason = rawRes.reasonFR;
           } else {
             status = 'missing_sub';
-            summaryReason = rawRes.reasonEN + ' / ' + rawRes.reasonFR;
+            if (rawRes.reasonFR === 'No French Broadcast') summaryReason = rawRes.reasonEN;
+            else if (rawRes.reasonEN === 'No English Broadcast') summaryReason = rawRes.reasonFR;
+            else summaryReason = rawRes.reasonEN + ' / ' + rawRes.reasonFR;
           }
         }
         const evalRes = Object.assign({}, rawRes, { status, summaryReason });
@@ -348,7 +358,9 @@ function loadStateFromHash() {
             summaryReason = rawRes.reasonFR;
           } else {
             status = 'missing_sub';
-            summaryReason = rawRes.reasonEN + ' / ' + rawRes.reasonFR;
+            if (rawRes.reasonFR === 'No French Broadcast') summaryReason = rawRes.reasonEN;
+            else if (rawRes.reasonEN === 'No English Broadcast') summaryReason = rawRes.reasonFR;
+            else summaryReason = rawRes.reasonEN + ' / ' + rawRes.reasonFR;
           }
         }
         const evalRes = Object.assign({}, rawRes, { status, summaryReason });
@@ -371,7 +383,7 @@ function loadStateFromHash() {
             <div>
               <div class="flex items-center gap-1.5 flex-wrap">
                 <span class="font-teko text-base font-bold text-slate-400">#${g.id}</span>
-                <span class="font-bold text-sm text-slate-900 dark:text-white">${t(g.vs.replace('vs ', '').replace('@ ', '').replace(' (Split Squad)', '')) ? (g.vs.startsWith('vs ') ? 'vs ' : '@ ') + t(g.vs.replace('vs ', '').replace('@ ', '').replace(' (Split Squad)', '')) + (g.vs.includes('Split Squad') ? ' (' + t('Split Squad') + ')' : '') : g.vs}</span>
+                <span class="font-bold text-sm text-slate-900 dark:text-white">${getVs(g.vs)}</span>
               </div>
               <div class="text-[11px] text-slate-500">${g.date} • ${formatLocalTime(g.iso, g.time)}</div>
             </div>
@@ -404,9 +416,9 @@ function loadStateFromHash() {
           </td>
           <td class="py-3 px-4">
             <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
-              <span>${t(g.vs.replace('vs ', '').replace('@ ', '').replace(' (Split Squad)', '')) ? (g.vs.startsWith('vs ') ? 'vs ' : '@ ') + t(g.vs.replace('vs ', '').replace('@ ', '').replace(' (Split Squad)', '')) + (g.vs.includes('Split Squad') ? ' (' + t('Split Squad') + ')' : '') : g.vs}</span>
-              ${g.phase === 'preseason' ? '<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">' + t('Preseason') + '</span>' : ''}
-              ${g.note ? `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-teamPrimary/10 text-teamPrimary">${t(g.note)}</span>` : ''}
+              <span>${getVs(g.vs)}</span>
+              ${g.phase === 'preseason' ? `<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">${t('Preseason')}</span>` : ''}
+              ${g.note ? `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-teamPrimary/10 text-teamPrimary">${g.note ? t(g.note) : ""}</span>` : ''}
             </div>
             <div class="text-[11px] text-slate-500">${g.venue}</div>
           </td>
@@ -442,7 +454,7 @@ function loadStateFromHash() {
           adviceCard.innerHTML = window.renderAdviceCards(state);
       }
 
-      if (window.i18n) window.i18n.apply();
+      if (window.i18n) { window.i18n.translateNode(adviceCard); window.i18n.translateNode(desktopTable); window.i18n.translateNode(mobileContainer); window.i18n.apply(); }
     }
 
     function updateRegionUI() {

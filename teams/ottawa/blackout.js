@@ -18,7 +18,7 @@ window.evaluateGame = function(g, state) {
     }
   } else if (g.netEN && g.netEN.includes('TSN')) {
     if (state.region === 'in_market') {
-      if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN2'; }
+      if (state.subs.tsn) { canEN = true; reasonEN = 'Watch on TSN5'; }
       else { reasonEN = 'Requires TSN+'; }
     } else if (state.region === 'us_intl') {
       if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
@@ -81,9 +81,9 @@ window.renderAdviceCards = function(state) {
     return `
       <div class="space-y-4">
         <div>
-          <h4 class="font-bold text-slate-900 dark:text-white">${t('In-Market Full Season Montreal Canadiens Setup')}</h4>
+          <h4 class="font-bold text-slate-900 dark:text-white">In-Market Full Season Ottawa Senators Setup</h4>
           <p class="text-slate-600 dark:text-slate-300 mt-1">
-            ${t('To receive all Montreal Canadiens games, you need Sportsnet (Saturdays), TSN2 or RDS (regional mid-week), and <span class="font-bold">Amazon Prime</span> for Monday night feeds.')}
+            To receive all Ottawa Senators games, you need Sportsnet (Saturdays), TSN5 or RDS (regional mid-week), and <span class="font-bold">Amazon Prime</span> for Monday night feeds.
           </p>
         </div>
       </div>
@@ -92,9 +92,9 @@ window.renderAdviceCards = function(state) {
     return `
       <div class="space-y-4">
         <div>
-          <h4 class="font-bold text-slate-900 dark:text-white">${t('Official Out-of-Market Options for Habs Fans:')}</h4>
+          <h4 class="font-bold text-slate-900 dark:text-white">Official Out-of-Market Options for Sens Fans:</h4>
           <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
-            Subscribing to TSN or RDS does <strong>not</strong> unlock Montreal Canadiens regional games in Ontario or Western Canada due to NHL blackouts. To watch those 50 regional games, you need <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable).
+            Subscribing to TSN or RDS does <strong>not</strong> unlock Ottawa Senators regional games in Ontario or Western Canada due to NHL blackouts. To watch those 50 regional games, you need <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable).
           </p>
         </div>
       </div>
@@ -103,9 +103,9 @@ window.renderAdviceCards = function(state) {
     return `
       <div class="space-y-4">
         <div>
-          <h4 class="font-bold text-slate-900 dark:text-white">${t('International & US Montreal Viewing')}</h4>
+          <h4 class="font-bold text-slate-900 dark:text-white">International & US Ottawa Senators Viewing</h4>
           <p class="text-slate-600 dark:text-slate-300 mt-1">
-            ${t('ESPN+ carries out-of-market NHL games for US viewers. National US broadcasts on ESPN or TNT follow local US availability rules.')}
+            ESPN+ carries out-of-market NHL games for US viewers. National US broadcasts on ESPN or TNT follow local US availability rules.
           </p>
         </div>
       </div>
