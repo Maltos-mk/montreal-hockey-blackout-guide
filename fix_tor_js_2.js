@@ -1,4 +1,6 @@
-window.evaluateGame = function(g, state) {
+const fs = require('fs');
+
+const content = `window.evaluateGame = function(g, state) {
   let canEN = false;
   let reasonEN = '';
   let isBlackedOutEN = false;
@@ -67,7 +69,7 @@ window.evaluateGame = function(g, state) {
 
 window.renderAdviceCards = function(state) {
   if (state.region === 'in_market' || state.region === 'in_market') {
-    return `
+    return \`
       <div class="space-y-4">
         <div>
           <h4 class="font-bold text-slate-900 dark:text-white">In-Market Full Season Toronto Maple Leafs Setup</h4>
@@ -76,9 +78,9 @@ window.renderAdviceCards = function(state) {
           </p>
         </div>
       </div>
-    `;
+    \`;
   } else if (state.region === 'out_market_canada') {
-    return `
+    return \`
       <div class="space-y-4">
         <div>
           <h4 class="font-bold text-slate-900 dark:text-white">Official Out-of-Market Options for Leafs Fans:</h4>
@@ -87,9 +89,9 @@ window.renderAdviceCards = function(state) {
           </p>
         </div>
       </div>
-    `;
+    \`;
   } else {
-    return `
+    return \`
       <div class="space-y-4">
         <div>
           <h4 class="font-bold text-slate-900 dark:text-white">International & US Leafs Viewing</h4>
@@ -98,6 +100,10 @@ window.renderAdviceCards = function(state) {
           </p>
         </div>
       </div>
-    `;
+    \`;
   }
 };
+`;
+
+fs.writeFileSync('teams/toronto/blackout.js', content);
+console.log('Fixed blackout logic syntax block.');
