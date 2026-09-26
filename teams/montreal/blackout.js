@@ -41,9 +41,9 @@ window.evaluateGame = function(g, state) {
   }
 
   // --- French Evaluation ---
-  if (g.netFR === 'RDS') {
+  if (g.netFR && g.netFR.includes('RDS')) {
     if (state.region === 'in_market') {
-      if (state.subs.rds) { canFR = true; reasonFR = 'Watch on RDS'; }
+      if (state.subs.rds) { canFR = true; reasonFR = `Watch on ${g.netFR}`; }
       else { reasonFR = 'Requires RDS'; }
     } else if (state.region === 'us_intl') {
       if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ / NHL.tv'; }
