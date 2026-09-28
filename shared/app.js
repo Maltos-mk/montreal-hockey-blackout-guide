@@ -70,10 +70,10 @@ const state = {
       subs: {
         sn: true,
         sn_prem: false,
-        tsn: false,
+        regional_en: false,
         prime: false,
-        rds: false,
-        tva: false,
+        regional_fr: false,
+        national_fr: false,
         espn: false
       }
     };
@@ -99,7 +99,7 @@ function loadStateFromHash() {
       if (params.has('statusFilter')) state.statusFilter = params.get('statusFilter');
       if (params.has('channelFilter')) state.channelFilter = params.get('channelFilter');
       
-      const subKeys = ['sn', 'sn_prem', 'tsn', 'prime', 'rds', 'tva', 'espn'];
+      const subKeys = ['sn', 'sn_prem', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
       subKeys.forEach(k => {
         if (params.has(k)) state.subs[k] = params.get(k) === 'true';
       });
@@ -108,11 +108,141 @@ function loadStateFromHash() {
 }
 
 
+    
+// Universal Blackout Engine
+function evaluateGame(g, state) {
+  let canEN = false, reasonEN = '', isBlackedOutEN = false;
+  let canFR = false, reasonFR = '', isBlackedOutFR = false;
+  
+  const networks = window.TEAM_DATA ? window.TEAM_DATA.team.networks : {
+    regionalEN: 'TSN',
+    regionalFR: 'RDS',
+    nationalEN: ['Sportsnet', 'Prime Video', 'CBC'],
+    nationalFR: ['TVA Sports']
+  };
+
+  // --- English Evaluation ---
+  if (g.netEN === 'Prime Video') {
+    if (state.region === 'us_intl') {
+      if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
+      else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
+    } else {
+      if (state.subs.prime) { canEN = true; reasonEN = 'Watch on Amazon Prime Video'; }
+      else { reasonEN = 'Requires Amazon Prime Video'; }
+    }
+  } else if (g.netEN && (g.netEN.includes('Sportsnet') || g.netEN.includes('HNIC') || g.netEN.includes('CBC'))) {
+    if (state.region === 'us_intl') {
+      if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
+      else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
+    } else {
+      if (state.subs.sn || state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet (National)'; }
+      else { reasonEN = 'Requires Sportsnet+'; }
+    }
+  } else if (g.netEN && networks.regionalEN && g.netEN.includes(networks.regionalEN)) {
+    if (state.region === 'in_market') {
+      // Use the generic sub_regional_en checkbox state
+      if (state.subs.regional_en) { canEN = true; reasonEN = `Watch on ${g.netEN}`; }
+      else { reasonEN = `Requires ${g.netEN}`; }
+    } else if (state.region === 'us_intl') {
+      if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
+      else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
+    } else {
+      isBlackedOutEN = true;
+      if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ PREMIUM'; isBlackedOutEN = false; }
+      else { reasonEN = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
+    }
+  } else {
+    reasonEN = 'No English Broadcast';
+  }
+
+  // --- French Evaluation ---
+  if (g.netFR === 'Prime Video') {
+    if (state.region === 'us_intl') {
+      if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ / NHL.tv'; }
+      else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
+    } else {
+      if (state.subs.prime) { canFR = true; reasonFR = 'Watch on Amazon Prime Video'; }
+      else { reasonFR = 'Requires Amazon Prime Video'; }
+    }
+  } else if (g.netFR && networks.nationalFR && networks.nationalFR.some(n => g.netFR.includes(n))) {
+    if (state.region === 'us_intl') {
+      if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ / NHL.tv'; }
+      else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
+    } else {
+      if (state.subs.national_fr) { canFR = true; reasonFR = `Watch on ${g.netFR}`; }
+      else { reasonFR = `Requires ${g.netFR}`; }
+    }
+  } else if (g.netFR && networks.regionalFR && g.netFR.includes(networks.regionalFR)) {
+    if (state.region === 'in_market') {
+      if (state.subs.regional_fr) { canFR = true; reasonFR = `Watch on ${g.netFR}`; }
+      else { reasonFR = `Requires ${g.netFR}`; }
+    } else if (state.region === 'us_intl') {
+      if (state.subs.espn) { canFR = true; reasonFR = 'Watch on ESPN+ / NHL.tv'; }
+      else { reasonFR = 'Requires ESPN+ / NHL.tv'; }
+    } else {
+      isBlackedOutFR = true;
+      if (state.subs.sn_prem) { canFR = true; reasonFR = 'Watch on Sportsnet+ PREMIUM (French)'; isBlackedOutFR = false; }
+      else { reasonFR = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
+    }
+  } else {
+    reasonFR = 'No French Broadcast';
+  }
+
+  return { canEN, reasonEN, isBlackedOutEN, canFR, reasonFR, isBlackedOutFR };
+}
+
+function renderAdviceCards(state) {
+  const team = window.TEAM_DATA ? window.TEAM_DATA.team : { name: 'Your Team' };
+  const t = (str) => window.i18n ? window.i18n.t(str) : str;
+  if (state.region === 'in_market') {
+    return `
+      <div class="space-y-4">
+        <div>
+          <h4 class="font-bold text-slate-900 dark:text-white">${t('In-Market Full Season Setup')}</h4>
+          <p class="text-slate-600 dark:text-slate-300 mt-1">
+            ${t('To receive all')} ${team.name} ${t('games locally, you generally need Sportsnet (Saturdays), your local regional channel, and Amazon Prime.')}
+          </p>
+        </div>
+      </div>
+    `;
+  } else if (state.region === 'out_market_canada') {
+    return `
+      <div class="space-y-4">
+        <div>
+          <h4 class="font-bold text-slate-900 dark:text-white">${t('Official Out-of-Market Options')}</h4>
+          <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
+            ${t('Subscribing to a regional channel from another province does <strong>not</strong> bypass NHL blackouts. To watch out-of-market regional games, you need <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable).')}
+          </p>
+        </div>
+      </div>
+    `;
+  } else {
+    return `
+      <div class="space-y-4">
+        <div>
+          <h4 class="font-bold text-slate-900 dark:text-white">${t('International & US Viewing')}</h4>
+          <p class="text-slate-600 dark:text-slate-300 mt-1">
+            ${t('ESPN+ carries out-of-market NHL games for US viewers. National US broadcasts on ESPN or TNT follow local US availability rules.')}
+          </p>
+        </div>
+      </div>
+    `;
+  }
+}
+
+
     let games = [];
 
-    const evaluateGame = window.evaluateGame;
+    
 
     function render() {
+      const t = (str) => window.i18n ? window.i18n.t(str) : str;
+      const getVs = (vs) => {
+        let clean = vs.replace('vs ', '').replace('@ ', '').replace(' (Split Squad)', '');
+        let prefix = vs.startsWith('vs ') ? 'vs ' : '@ ';
+        let suffix = vs.includes('Split Squad') ? ' (' + t('Split Squad') + ')' : '';
+        return prefix + t(clean) + suffix;
+      };
       updateHash();
       const now = new Date();
       const threeHoursThirtyMs = 3.5 * 60 * 60 * 1000;
@@ -251,7 +381,7 @@ function loadStateFromHash() {
       document.getElementById('watchableCount').textContent = watchableCount;
       document.getElementById('totalGameLabel').textContent = `/ ${total} GAMES`;
       document.getElementById('pctBadge').textContent = `${pct}% Watchable`;
-      document.getElementById('kpiSeasonTitle').textContent = 'Full Season Coverage (All 89 Games)';
+      document.getElementById('kpiSeasonTitle').textContent = 'Full Season Coverage (All 84 Games)';
 
       document.getElementById('watchableBreakdown').textContent = `${watchableCount} games (${pct}%)`;
       document.getElementById('blackoutBreakdown').textContent = `${blackedOutCount} games (${Math.round((blackedOutCount/total)*100)||0}%)`;
@@ -376,7 +506,7 @@ function loadStateFromHash() {
             <div>
               <div class="flex items-center gap-1.5 flex-wrap">
                 <span class="font-teko text-base font-bold text-slate-400">#${g.id}</span>
-                <span class="font-bold text-sm text-slate-900 dark:text-white">${g.vs}</span>
+                <span class="font-bold text-sm text-slate-900 dark:text-white">${getVs(g.vs)}</span>
               </div>
               <div class="text-[11px] text-slate-500">${g.date} • ${formatLocalTime(g.iso, g.time)}</div>
             </div>
@@ -409,9 +539,9 @@ function loadStateFromHash() {
           </td>
           <td class="py-3 px-4">
             <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
-              <span>${g.vs}</span>
-              ${g.phase === 'preseason' ? '<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">Preseason</span>' : ''}
-              ${g.note ? `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-teamPrimary/10 text-teamPrimary">${g.note}</span>` : ''}
+              <span>${getVs(g.vs)}</span>
+              ${g.phase === 'preseason' ? `<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">${t('Preseason')}</span>` : ''}
+              ${g.note ? `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-teamPrimary/10 text-teamPrimary">${g.note ? t(g.note) : ""}</span>` : ''}
             </div>
             <div class="text-[11px] text-slate-500">${g.venue}</div>
           </td>
@@ -445,8 +575,10 @@ function loadStateFromHash() {
 
       if (window.renderAdviceCards) {
           adviceCard.innerHTML = window.renderAdviceCards(state);
-        }
       }
+
+      if (window.i18n) { window.i18n.translateNode(adviceCard); window.i18n.translateNode(desktopTable); window.i18n.translateNode(mobileContainer); window.i18n.apply(); }
+    }
 
     function updateRegionUI() {
         document.querySelectorAll('.region-btn').forEach(b => {
@@ -470,7 +602,7 @@ function loadStateFromHash() {
         });
       });
 
-    ['sn', 'sn_prem', 'tsn', 'prime', 'rds', 'tva', 'espn'].forEach(key => {
+    ['sn', 'sn_prem', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'].forEach(key => {
         const el = document.getElementById(`sub_${key}`);
         if (el) {
           el.checked = state.subs[key];

@@ -11,74 +11,21 @@
     "marketRegion": {
       "description": "QC, Atlantic Canada, Eastern Ontario",
       "regionCode": "mtl_territory"
+    },
+    "networks": {
+      "regionalEN": "TSN2",
+      "regionalFR": "RDS",
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video",
+        "CBC"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
     }
   },
   "schedule": [
-    {
-      "id": "P1",
-      "iso": "2026-09-19T19:00:00-04:00",
-      "phase": "preseason",
-      "date": "Sat, Sep 19, 2026",
-      "time": "7:00 PM",
-      "vs": "vs Toronto Maple Leafs (Split Squad)",
-      "venue": "Bell Centre (Montreal)",
-      "netEN": "TSN2",
-      "netFR": "RDS",
-      "type": "regional_mtl",
-      "note": "Preseason Split-Squad"
-    },
-    {
-      "id": "P2",
-      "iso": "2026-09-19T19:00:00-04:00",
-      "phase": "preseason",
-      "date": "Sat, Sep 19, 2026",
-      "time": "7:00 PM",
-      "vs": "@ Toronto Maple Leafs (Split Squad)",
-      "venue": "Scotiabank Arena (Toronto)",
-      "netEN": "TSN4",
-      "netFR": "RDS Info",
-      "type": "regional_tor",
-      "note": "Preseason Split-Squad"
-    },
-    {
-      "id": "P3",
-      "iso": "2026-09-21T19:00:00-04:00",
-      "phase": "preseason",
-      "date": "Mon, Sep 21, 2026",
-      "time": "7:00 PM",
-      "vs": "vs Ottawa Senators",
-      "venue": "Colisée Vidéotron (Trois-Rivières)",
-      "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
-      "type": "national",
-      "note": "Kraft Hockeyville"
-    },
-    {
-      "id": "P4",
-      "iso": "2026-09-26T19:00:00-04:00",
-      "phase": "preseason",
-      "date": "Sat, Sep 26, 2026",
-      "time": "7:00 PM",
-      "vs": "vs Ottawa Senators (Split Squad)",
-      "venue": "Bell Centre (Montreal)",
-      "netEN": "TSN2",
-      "netFR": "RDS",
-      "type": "regional_mtl",
-      "note": "Preseason"
-    },
-    {
-      "id": "P5",
-      "iso": "2026-09-26T19:00:00-04:00",
-      "phase": "preseason",
-      "date": "Sat, Sep 26, 2026",
-      "time": "7:00 PM",
-      "vs": "@ Ottawa Senators (Split Squad)",
-      "venue": "Canadian Tire Centre",
-      "netEN": "TSN5",
-      "netFR": "RDS Info",
-      "type": "regional_ott",
-      "note": "Preseason"
-    },
     {
       "id": "1",
       "iso": "2026-09-29T19:00:00-04:00",
