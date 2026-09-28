@@ -11,11 +11,11 @@
   <meta name="description" content="Independent Montreal Canadiens  broadcast schedule and regional blackout guide. Find out which channel is showing the Montreal game tonight across TSN2, RDS, Sportsnet, Prime Video, and TVA Sports.">
   <meta name="keywords" content="Montreal Canadiens game tonight, Habs blackout rules, Montreal Canadiens broadcast schedule, TSN2 blackout Ontario, watch Habs online, Sportsnet Montreal Canadiens, RDS blackout Ontario, Montreal hockey live stream">
   <meta name="author" content="Maltos-mk">
-  <link rel="canonical" href="https://maltos-mk.github.io/montreal-hockey-blackout-guide/">
+  <link rel="canonical" href="https://maltos-mk.github.io/{{REPO_NAME}}/">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="alternate icon" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+  <link rel="alternate icon" href="favicon.svg?v=2">
 
   <!-- Progressive Web App (PWA) / Mobile Standalone Tags -->
   <link rel="manifest" href="manifest.json">
@@ -24,21 +24,21 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Montreal Guide">
-  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg?v=2">
 
   <!-- OpenGraph / Facebook / Discord -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://maltos-mk.github.io/montreal-hockey-blackout-guide/">
+  <meta property="og:url" content="https://maltos-mk.github.io/{{REPO_NAME}}/">
   <meta property="og:title" content="Montreal Canadiens Broadcast & Blackout Guide (Hockey Schedule)">
   <meta property="og:description" content="Find out if tonight's Montreal Canadiens  game is watchable or blacked out based on your region and television subscriptions.">
-  <meta property="og:image" content="https://maltos-mk.github.io/montreal-hockey-blackout-guide/og-preview.png">
+  <meta property="og:image" content="https://maltos-mk.github.io/{{REPO_NAME}}/og-preview.png">
 
   <!-- Twitter / X Cards -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://maltos-mk.github.io/montreal-hockey-blackout-guide/">
+  <meta property="twitter:url" content="https://maltos-mk.github.io/{{REPO_NAME}}/">
   <meta property="twitter:title" content="Montreal Canadiens Broadcast & Blackout Guide">
-  <meta property="twitter:description" content="Check live broadcast channels and regional blackouts for all 89 Montreal Canadiens exhibition and regular season games.">
-  <meta property="twitter:image" content="https://maltos-mk.github.io/montreal-hockey-blackout-guide/og-preview.png">
+  <meta property="twitter:description" content="Check live broadcast channels and regional blackouts for all 84 Montreal Canadiens regular season games.">
+  <meta property="twitter:image" content="https://maltos-mk.github.io/{{REPO_NAME}}/og-preview.png">
 
   <!-- Schema.org WebApplication Markup -->
   <script type="application/ld+json">
@@ -46,7 +46,7 @@
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Montreal Canadiens Hockey Broadcast & Blackout Guide",
-    "url": "https://maltos-mk.github.io/montreal-hockey-blackout-guide/",
+    "url": "https://maltos-mk.github.io/{{REPO_NAME}}/",
     "applicationCategory": "SportsApplication",
     "operatingSystem": "All",
     "browserRequirements": "Requires JavaScript",
@@ -122,7 +122,7 @@
       }
     }
   </script>
-  <link rel="stylesheet" href="shared/app.css?v=1790446710">
+  <link rel="stylesheet" href="shared/app.css?v=1790559630">
 
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
@@ -140,11 +140,15 @@
             <h1 class="text-2xl sm:text-3xl font-black tracking-tight font-teko uppercase text-white">Montreal Hockey Broadcast Guide</h1>
             <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-white/15 text-slate-200 border border-white/20">Unofficial Fan Resource</span>
           </div>
-          <p class="text-xs sm:text-sm text-slate-200 font-medium">89-Game Guide for Montreal Canadiens Fans (84 Regular Season + 5 Preseason) • Real-Time Broadcast & Blackout Calculator</p>
+          <p class="text-xs sm:text-sm text-slate-200 font-medium">84-Game Guide for Montreal Canadiens Fans • Real-Time Broadcast & Blackout Calculator</p>
         </div>
       </div>
       <div class="flex items-center space-x-3 flex-wrap justify-center">
         
+        <a href="#faq" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="Blackout FAQ">
+          <i class="fa-solid fa-circle-question text-sky-300"></i>
+          <span class="hidden sm:inline">FAQ</span>
+        </a>
         <button onclick="shareApp()" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="Share App">
           <i class="fa-solid fa-share-nodes text-emerald-300"></i>
           <span class="hidden sm:inline">Share</span>
@@ -164,14 +168,18 @@
         </a>
         -->
 
+        <div class="flex items-center space-x-2 bg-black/25 rounded-xl px-3 py-1.5 border border-white/10 text-sm">
+          <button onclick="window.i18n.toggle()" class="lang-btn uppercase font-bold text-teamPrimary dark:text-red-400" data-lang="en">EN</button>
+          <span class="text-white/30">|</span>
+          <button onclick="window.i18n.toggle()" class="lang-btn uppercase text-slate-300 hover:text-white transition" data-lang="fr">FR</button>
+        </div>
+        <div class="w-full text-center mt-2 hidden" id="frDisclaimer"><span class="text-[10px] text-slate-500 italic">Traduit automatiquement. Veuillez excuser les éventuelles erreurs.</span></div>
+
         <button id="themeToggle" class="p-2.5 rounded-xl bg-black/25 hover:bg-black/40 text-slate-200 text-sm border border-white/10 transition" title="Toggle Theme">
           <i class="fa-solid fa-moon text-amber-300 dark:hidden"></i>
           <i class="fa-solid fa-sun text-amber-400 hidden dark:inline"></i>
         </button>
-        <button onclick="openDeepDiveModal()" class="px-4 py-2 rounded-xl bg-white text-teamSecondary hover:bg-slate-100 font-semibold text-xs sm:text-sm shadow flex items-center gap-2 transition">
-          <i class="fa-solid fa-circle-question text-teamPrimary"></i>
-          <span>Blackout Rules FAQ</span>
-        </button>
+        
       </div>
     </div>
   </header>
@@ -194,7 +202,7 @@
         <!-- Region Selector -->
         <div>
           <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
-            Where do you live?
+            Where do you live??
           </label>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="regionSelector">
             <button data-region="in_market" class="region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-teamSecondary bg-teamSecondary/5 text-teamSecondary font-semibold dark:border-blue-400 dark:bg-blue-950/40 dark:text-blue-300">
@@ -247,7 +255,7 @@
             </label>
 
             <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
-              <input type="checkbox" id="sub_tsn" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <input type="checkbox" id="sub_regional_en" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">TSN / TSN2</p>
                 <p class="text-[11px] text-slate-500">50 Regional Habs games (in-market only)</p>
@@ -263,16 +271,16 @@
                   <p class="text-[11px] text-slate-500">National Monday Night Hockey feeds</p>
                 </div>
               </label>
-              <!-- <div class="text-[11px] pl-7 pt-1">
-                <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" data-umami-event="amazon-prime-click" target="_blank" rel="noopener noreferrer" class="text-teamPrimary dark:text-red-400 font-semibold hover:underline inline-flex items-center gap-1">
+              <div class="text-[11px] pl-7 pt-1 hidden">
+                <span class="font-bold">
                   <span>Need Prime? Try 30-Day Free Trial</span>
                   <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                </a>
-              </div> -->
+                </span>
+              </div>
             </div>
 
             <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
-              <input type="checkbox" id="sub_rds" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <input type="checkbox" id="sub_regional_fr" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">RDS / RDS Direct</p>
                 <p class="text-[11px] text-slate-500">45 Regional French Canadiens games</p>
@@ -280,7 +288,7 @@
             </label>
 
             <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
-              <input type="checkbox" id="sub_tva" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <input type="checkbox" id="sub_national_fr" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">TVA Sports</p>
                 <p class="text-[11px] text-slate-500">National French broadcasts (zero blackouts)</p>
@@ -324,7 +332,7 @@
 
             <div class="flex items-baseline space-x-2">
               <span id="watchableCount" class="font-teko text-6xl sm:text-7xl font-bold leading-none text-white">0</span>
-              <span id="totalGameLabel" class="text-slate-300 font-teko text-2xl font-medium">/ 89 GAMES</span>
+              <span id="totalGameLabel" class="text-slate-300 font-teko text-2xl font-medium">/ 84 GAMES</span>
             </div>
 
             <p id="kpiVerdict" class="text-xs sm:text-sm text-slate-200 mt-3 font-normal leading-relaxed">
@@ -506,6 +514,29 @@
       </div>
     </article>
 
+  
+    <!-- FAQ Section (Moved from Modal for SEO) -->
+    <section id="faq" class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+      <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-teamPrimary border-b border-slate-100 dark:border-slate-800 pb-3">Blackout Rules & FAQ</h2>
+      <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+        <p>
+          <strong>Why are Montreal Canadiens games blacked out on TSN2 in Ontario?</strong><br>
+          TSN2 and RDS own <em>regional</em> broadcast rights, which only cover the Montreal Canadiens' home broadcast territory (Quebec, Atlantic Canada, and Eastern Ontario including Pembroke, Ottawa, and Cornwall). If you live outside this region (such as Toronto, GTA, or Western Canada), regional licenses do not grant clearance for those games, protecting local home-market rights for teams like the Maple Leafs, Senators, Jets, Flames, Oilers, and Canucks.
+        </p>
+        <p>
+          <strong>Does having a standard cable box prevent Habs blackouts?</strong><br>
+          <strong>No.</strong> Blackout rules apply directly to standard cable and satellite subscriptions. If your cable billing address is in Toronto, Winnipeg, or Vancouver, your screen will display a blackout notice during live regional Montreal Canadiens games on TSN2 or RDS.
+        </p>
+        <p>
+          <strong>How can out-of-market Habs fans watch without blackouts?</strong><br>
+          The official method to watch blacked-out regional Montreal Canadiens games across Canada is the out-of-market package: <strong>Sportsnet+ Premium</strong> for streaming, or the <strong>NHL Centre Ice</strong> subscription package through your digital cable provider.
+        </p>
+        <p>
+          <strong>Why are Saturday night Habs games never blacked out?</strong><br>
+          Saturday night games are part of the <strong>National rights</strong> package on Sportsnet and TVA Sports. National broadcasts carry coast-to-coast clearance without regional blackouts across Canada.
+        </p>
+      </div>
+    </section>
   </main>
 
   <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500">
@@ -528,10 +559,8 @@
       </div>
       -->
 
-      <!-- <!-- Statutory Amazon Associate Disclosure -->
-      <p class="text-[11px] text-slate-500 italic">
-        As an Amazon Associate I earn from qualifying purchases.
-      </p> -->
+      
+      </p>
 
       <p class="font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider text-[11px] pt-2">
         Non-Affiliation & Nominative Fair Use Disclaimer
@@ -546,41 +575,7 @@
   </footer>
 
   <!-- Explainer Modal with Natural Habs & Canadiens Copy -->
-  <div id="deepDiveModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-2xl w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-800 space-y-4 max-h-[90vh] overflow-y-auto">
-      <div class="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3">
-        <h3 class="text-lg font-bold font-teko uppercase tracking-wide text-teamPrimary">Montreal Canadiens Broadcast & Blackout Principles</h3>
-        <button onclick="closeDeepDiveModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-white text-lg">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-      </div>
-
-      <div class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-        <p>
-          <strong>Why are Montreal Canadiens games blacked out on TSN2 in Ontario?</strong><br>
-          TSN2 and RDS own <em>regional</em> broadcast rights, which only cover the Montreal Canadiens' home broadcast territory (Quebec, Atlantic Canada, and Eastern Ontario including Pembroke, Ottawa, and Cornwall). If you live outside this region (such as Toronto, GTA, or Western Canada), regional licenses do not grant clearance for those games, protecting local home-market rights for teams like the Maple Leafs, Senators, Jets, Flames, Oilers, and Canucks.
-        </p>
-        <p>
-          <strong>Does having a standard cable box prevent Habs blackouts?</strong><br>
-          <strong>No.</strong> Blackout rules apply directly to standard cable and satellite subscriptions. If your cable billing address is in Toronto, Winnipeg, or Vancouver, your screen will display a blackout notice during live regional Montreal Canadiens games on TSN2 or RDS.
-        </p>
-        <p>
-          <strong>How can out-of-market Habs fans watch without blackouts?</strong><br>
-          The official method to watch blacked-out regional Montreal Canadiens games across Canada is the out-of-market package: <strong>Sportsnet+ Premium</strong> for streaming, or the <strong>NHL Centre Ice</strong> subscription package through your digital cable provider.
-        </p>
-        <p>
-          <strong>Why are Saturday night Habs games never blacked out?</strong><br>
-          Saturday night games are part of the <strong>National rights</strong> package on Sportsnet and TVA Sports. National broadcasts carry coast-to-coast clearance without regional blackouts across Canada.
-        </p>
-      </div>
-
-      <div class="pt-3 border-t border-slate-100 dark:border-slate-800 text-right">
-        <button onclick="closeDeepDiveModal()" class="px-4 py-2 bg-teamSecondary text-white font-semibold text-xs rounded-xl hover:bg-slate-800 transition">
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
+  
 
   <!-- DIRECT "GLOBAL NEWS" STYLE ADD TO HOME SCREEN MODAL -->
   <div id="directInstallModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
@@ -613,9 +608,21 @@
   </div>
 
   <script>
-  window.TEAM_DATA_URL = "data.json?v=1790446710";
+  window.TEAM_DATA_URL = "data.json?v=1790559630?v=2";
 </script>
-<script src="blackout.js?v=1790446710"></script>
-<script src="shared/app.js?v=1790446710"></script>
+<script src="shared/i18n.js?v=1790559630"></script>
+<script src="shared/app.js?v=1790559630"></script>
+<script>
+  if (window.i18n) window.i18n.init();
+</script>
+
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 py-8 text-center text-sm text-slate-500">
+    <h3 class="font-bold mb-2">Other Team Guides</h3>
+    <div class="flex justify-center space-x-4">
+      <a href="/toronto/" class="hover:text-teamPrimary transition">Toronto Maple Leafs</a>
+      <a href="/montreal/" class="hover:text-teamPrimary transition">Montreal Canadiens</a>
+      <a href="/ottawa/" class="hover:text-teamPrimary transition">Ottawa Senators</a>
+    </div>
+  </footer>
 </body>
 </html>
