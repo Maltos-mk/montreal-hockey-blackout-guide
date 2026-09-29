@@ -70,8 +70,9 @@ const mtlGameTSN = { netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' };
 const mtlGameSN = { netEN: 'Sportsnet', netFR: 'TVA Sports', type: 'national' };
 
 runTest('Montreal', mtlNetworks, mtlGameTSN, { region: 'in_market', subs: { regional_en: true, regional_fr: true } }, true, true);
-runTest('Montreal', mtlNetworks, mtlGameTSN, { region: 'out_market_canada', subs: { regional_en: true, regional_fr: true, sn_prem: false } }, false, false);
+runTest('Montreal', mtlNetworks, mtlGameTSN, { region: 'out_market_canada', subs: { regional_en: true, regional_fr: true, sn_prem: false, centre_ice_fr: false } }, false, false);
 runTest('Montreal', mtlNetworks, mtlGameTSN, { region: 'out_market_canada', subs: { sn_prem: true } }, true, true);
+runTest('Montreal', mtlNetworks, mtlGameTSN, { region: 'out_market_canada', subs: { centre_ice_fr: true } }, false, true);
 
 const torNetworks = { regionalEN: 'TSN4', regionalFR: null, nationalEN: ['Sportsnet', 'Prime Video'], nationalFR: ['TVA Sports'] };
 runTest('Toronto', torNetworks, { netEN: 'TSN4' }, { region: 'out_market_canada', subs: { regional_en: true, sn_prem: false } }, false, undefined);

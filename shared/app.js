@@ -70,6 +70,7 @@ const state = {
       subs: {
         sn: true,
         sn_prem: false,
+        centre_ice_fr: false,
         regional_en: false,
         prime: false,
         regional_fr: false,
@@ -99,7 +100,7 @@ function loadStateFromHash() {
       if (params.has('statusFilter')) state.statusFilter = params.get('statusFilter');
       if (params.has('channelFilter')) state.channelFilter = params.get('channelFilter');
       
-      const subKeys = ['sn', 'sn_prem', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
+      const subKeys = ['sn', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
       subKeys.forEach(k => {
         if (params.has(k)) state.subs[k] = params.get(k) === 'true';
       });
@@ -182,7 +183,8 @@ function evaluateGame(g, state) {
     } else {
       isBlackedOutFR = true;
       if (state.subs.sn_prem) { canFR = true; reasonFR = 'Watch on Sportsnet+ PREMIUM (French)'; isBlackedOutFR = false; }
-      else { reasonFR = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
+      else if (state.subs.centre_ice_fr) { canFR = true; reasonFR = 'Watch on NHL Centre Ice French'; isBlackedOutFR = false; }
+      else { reasonFR = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice French.'; }
     }
   } else {
     reasonFR = 'No French Broadcast';
@@ -602,7 +604,7 @@ function renderAdviceCards(state) {
         });
       });
 
-    ['sn', 'sn_prem', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'].forEach(key => {
+    ['sn', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'].forEach(key => {
         const el = document.getElementById(`sub_${key}`);
         if (el) {
           el.checked = state.subs[key];
