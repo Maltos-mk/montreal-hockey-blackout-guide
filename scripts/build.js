@@ -27,6 +27,8 @@ dataFiles.forEach(file => {
   if (!team.networks.regionalFR) {
     const rdsRegex = /<label[^>]*>(?:(?!<label)[\s\S])*?id="sub_regional_fr"[\s\S]*?<\/label>/;
     html = html.replace(rdsRegex, '');
+    const cifRegex = /<label[^>]*>(?:(?!<label)[\s\S])*?id="sub_centre_ice_fr"[\s\S]*?<\/label>/;
+    html = html.replace(cifRegex, '');
   }
   
   const teamDir = `teams/${team.name.split(' ')[0].toLowerCase()}`;
