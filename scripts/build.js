@@ -12,6 +12,8 @@ dataFiles.forEach(file => {
   html = html.replace(/\{\{TEAM_NAME\}\}/g, team.name);
   html = html.replace(/\{\{TEAM_NICKNAME\}\}/g, team.nickname);
   
+  const repoName = `${team.name.split(' ')[0].toLowerCase()}-hockey-blackout-guide`;
+  html = html.replace(/\{\{REPO_NAME\}\}/g, repoName);
   const city = team.name.split(' ')[0];
   html = html.replace(/\{\{CITY_NAME\}\}/g, city); html = html.replace(/\{\{TEAM_ID\}\}/g, team.id);
   html = html.replace(/\{\{REGION_CODE\}\}/g, team.marketRegion.regionCode);
