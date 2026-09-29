@@ -30,6 +30,10 @@ dataFiles.forEach(file => {
     const cifRegex = /<label[^>]*>(?:(?!<label)[\s\S])*?id="sub_centre_ice_fr"[\s\S]*?<\/label>/;
     html = html.replace(cifRegex, '');
   }
+
+  // Remove the crosslink for the current team
+  const crosslinkRegex = new RegExp(`<a href="[^"]+" data-umami-event="crosslink-[a-z]+" class="[^"]*">${team.name}</a>`, 'g');
+  html = html.replace(crosslinkRegex, '');
   
   const teamDir = `teams/${team.name.split(' ')[0].toLowerCase()}`;
   if (!fs.existsSync(teamDir)) fs.mkdirSync(teamDir, { recursive: true });

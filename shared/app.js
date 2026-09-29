@@ -796,3 +796,24 @@ function renderAdviceCards(state) {
     
 
     initApp();
+
+// Manual fallback for Umami events (sometimes data-umami-event fails on outbound links)
+function bindUmamiEvents() {
+  document.querySelectorAll('[data-umami-event]').forEach(el => {
+    // Avoid double-binding
+    if (el.dataset.umamiBound) return;
+    el.dataset.umamiBound = 'true';
+    el.addEventListener('click', () => {
+      const eventName = el.getAttribute('data-umami-event');
+      if (window.umami) {
+        try { umami.track(eventName); } catch(e) {}
+      }
+    });
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', bindUmamiEvents);
+} else {
+  bindUmamiEvents();
+}
