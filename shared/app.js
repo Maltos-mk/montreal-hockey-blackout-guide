@@ -136,7 +136,7 @@ function evaluateGame(g, state) {
   const networks = window.TEAM_DATA ? window.TEAM_DATA.team.networks : {
     regionalEN: 'TSN',
     regionalFR: 'RDS',
-    nationalEN: ['Sportsnet', 'Prime Video', 'CBC'],
+    nationalEN: ['Sportsnet', 'Prime Video', 'SN+'],
     nationalFR: ['TVA Sports']
   };
 
@@ -155,15 +155,54 @@ function evaluateGame(g, state) {
       if (state.subs.prime) { canEN = true; reasonEN = 'Watch on Amazon Prime Video'; }
       else { reasonEN = 'Requires Amazon Prime Video'; }
     }
-  } else if (g.netEN && (g.netEN.includes('Sportsnet') || g.netEN.includes('HNIC') || g.netEN.includes('CBC') || g.netEN.includes('CityTV'))) {
-    if (state.region === 'us_intl') {
-      if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
-      else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
-    } else {
-      if (state.subs.sn || state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet (National)'; }
-      else { reasonEN = 'Requires Sportsnet+'; }
+  } else if (g.netEN) {
+    let matchesNat = g.netEN.includes('Sportsnet') || g.netEN.includes('SN+');
+    let matchesReg = networks.regionalEN && g.netEN.includes(networks.regionalEN);
+    
+    // Evaluate Regional
+    let canReg = false, reasonReg = '';
+    if (matchesReg) {
+      if (state.region === 'us_intl') {
+        if (state.subs.espn) { canReg = true; reasonReg = 'Watch on ESPN+ / NHL.tv'; }
+        else { reasonReg = 'Requires ESPN+ / NHL.tv'; }
+      } else if (isPrimaryInMarket) {
+        if (state.subs.regional_en) { canReg = true; reasonReg = `Watch on ${g.netEN}`; }
+        else { reasonReg = `Requires ${g.netEN}`; }
+      } else if (isOpponentInMarket) {
+        if (state.subs.regional_en || state.subs.sn) {
+          canReg = true; reasonReg = "Watch on local opponent feed";
+        } else {
+          reasonReg = "Requires Sportsnet/TSN for opponent feed";
+        }
+      } else {
+        isBlackedOutEN = true;
+        if (state.subs.sn_prem) { canReg = true; reasonReg = 'Watch on Sportsnet+ PREMIUM'; isBlackedOutEN = false; }
+        else { reasonReg = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
+      }
     }
-  } else if (g.netEN && networks.regionalEN && g.netEN.includes(networks.regionalEN)) {
+
+    // Evaluate National
+    let canNat = false, reasonNat = '';
+    if (matchesNat) {
+      if (state.region === 'us_intl') {
+        if (state.subs.espn) { canNat = true; reasonNat = 'Watch on ESPN+ / NHL.tv'; }
+        else { reasonNat = 'Requires ESPN+ / NHL.tv'; }
+      } else {
+        if (state.subs.sn || state.subs.sn_prem) { canNat = true; reasonNat = 'Watch on Sportsnet (National)'; }
+        else { reasonNat = 'Requires Sportsnet+'; }
+      }
+    }
+
+    // Combine logic (if it has both, user gets access if EITHER succeeds)
+    if (matchesNat && matchesReg) {
+      canEN = canNat || canReg;
+      reasonEN = canEN ? (canReg ? reasonReg : reasonNat) : reasonNat; 
+    } else if (matchesNat) {
+      canEN = canNat; reasonEN = reasonNat;
+    } else if (matchesReg) {
+      canEN = canReg; reasonEN = reasonReg;
+    }
+  } else if (false) {
     if (state.region === 'us_intl') {
       if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
       else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
@@ -246,7 +285,19 @@ function evaluateGame(g, state) {
     summaryReason = (!canEN && g.netEN) ? reasonEN : reasonFR;
   }
 
-  return { canEN, reasonEN, isBlackedOutEN, canFR, reasonFR, isBlackedOutFR, summaryStatus, summaryReason };
+  let displayNetEN = g.netEN;
+  let displayNetFR = g.netFR;
+  if (canEN && isOpponentInMarket && g.netEN && networks.regionalEN && g.netEN.includes(networks.regionalEN)) {
+      let opponentNets = g.netEN.split(',').map(s => s.trim()).filter(s => s !== networks.regionalEN);
+      if (opponentNets.length > 0) {
+          displayNetEN = opponentNets.join(', ');
+          reasonEN = `Watch on local opponent feed (${displayNetEN})`;
+          if (summaryStatus === 'watchable' && summaryReason === 'Watch on local opponent feed (Sportsnet/TSN)') {
+              summaryReason = reasonEN;
+          }
+      }
+  }
+  return { canEN, reasonEN, isBlackedOutEN, canFR, reasonFR, isBlackedOutFR, summaryStatus, summaryReason, displayNetEN, displayNetFR };
 }
 
 function renderAdviceCards(state) {
@@ -409,7 +460,7 @@ function renderAdviceCards(state) {
       let blackedOutCount = 0;
       let missingSubCount = 0;
 
-      games.forEach(g => {
+      games.forEach((g, index) => {
         // Evaluate safely if not cached
         let evalRes = g._cachedEvalRes;
         if (!evalRes) {
@@ -440,7 +491,7 @@ function renderAdviceCards(state) {
       document.getElementById('watchableCount').textContent = watchableCount;
       document.getElementById('totalGameLabel').textContent = `/ ${total} GAMES`;
       document.getElementById('pctBadge').textContent = `${pct}% Watchable`;
-      document.getElementById('kpiSeasonTitle').textContent = 'Full Season Coverage (All 84 Games)';
+      document.getElementById('kpiSeasonTitle').textContent = `Full Season Coverage (All ${total} Games)`;
 
       document.getElementById('watchableBreakdown').textContent = `${watchableCount} games (${pct}%)`;
       document.getElementById('blackoutBreakdown').textContent = `${blackedOutCount} games (${Math.round((blackedOutCount/total)*100)||0}%)`;
@@ -564,7 +615,7 @@ function renderAdviceCards(state) {
           <div class="flex items-start justify-between gap-2">
             <div>
               <div class="flex items-center gap-1.5 flex-wrap">
-                <span class="font-teko text-base font-bold text-slate-400">#${g.id}</span>
+                <span class="font-teko text-base font-bold text-slate-400">#${games.findIndex(orig => orig.id === g.id) + 1}</span>
                 <span class="font-bold text-sm text-slate-900 dark:text-white">${getVs(g.vs)}</span>
               </div>
               <div class="text-[11px] text-slate-500">${g.date} • ${formatLocalTime(g.iso, g.time)}</div>
@@ -574,7 +625,7 @@ function renderAdviceCards(state) {
 
           <div class="flex items-center justify-between text-xs pt-1 border-t border-slate-200/60 dark:border-slate-700/60">
             <div class="flex items-center gap-1">
-              <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${g.netEN}</span>
+              <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${evalRes.displayNetEN || g.netEN}</span>
               <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${g.netFR}</span>
             </div>
             <span class="text-[11px] text-slate-500 font-medium">
@@ -591,7 +642,7 @@ function renderAdviceCards(state) {
         const tr = document.createElement('tr');
         tr.className = `hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60 ${g.isPast ? 'opacity-60 bg-slate-50/40 dark:bg-slate-900/20' : ''}`;
         tr.innerHTML = `
-          <td class="py-3 px-4 font-bold text-slate-400 dark:text-slate-500 font-teko text-base text-center">${g.id}</td>
+          <td class="py-3 px-4 font-bold text-slate-400 dark:text-slate-500 font-teko text-base text-center">${games.findIndex(orig => orig.id === g.id) + 1}</td>
           <td class="py-3 px-4 whitespace-nowrap">
             <div class="font-semibold text-slate-800 dark:text-slate-200">${g.date}</div>
             <div class="text-[11px] text-slate-400">${formatLocalTime(g.iso, g.time)}</div>
@@ -606,8 +657,8 @@ function renderAdviceCards(state) {
           </td>
           <td class="py-3 px-4">
             <div class="flex items-center space-x-1.5">
-              <span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">${g.netEN}</span>
-              <span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">${g.netFR}</span>
+              <span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">${evalRes.displayNetEN || g.netEN}</span>
+              <span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">${evalRes.displayNetFR || g.netFR}</span>
             </div>
           </td>
           <td class="py-3 px-4">
@@ -636,32 +687,18 @@ function renderAdviceCards(state) {
           adviceCard.innerHTML = window.renderAdviceCards(state);
       }
 
-      if (window.i18n) { window.i18n.translateNode(adviceCard); window.i18n.translateNode(desktopTable); window.i18n.translateNode(mobileContainer); window.i18n.apply(); }
+      if (window.i18n) { window.i18n.translateNode(adviceCard);  window.i18n.translateNode(mobileContainer); window.i18n.apply(); }
     }
 
-    function updateRegionUI() {
-        document.querySelectorAll('.region-btn').forEach(b => {
-          if (b.dataset.region === state.region) {
-            b.className = "region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-teamSecondary bg-teamSecondary/5 text-teamSecondary font-semibold dark:border-blue-400 dark:bg-blue-950/40 dark:text-blue-300";
-            const check = b.querySelector('.fa-circle-check');
-            if (check) check.classList.remove('hidden');
-          } else {
-            b.className = "region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-slate-200 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300";
-            const check = b.querySelector('.fa-circle-check');
-            if (check) check.classList.add('hidden');
-          }
-        });
-      }
-      updateRegionUI();
-      document.querySelectorAll('.region-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          state.region = btn.dataset.region;
-          trackUmamiEvent('Toggle Region', { region: state.region });
-          updateRegionUI();
-          render();
-        });
+    const regionSelect = document.getElementById('regionSelect');
+    if (regionSelect) {
+      regionSelect.value = state.region;
+      regionSelect.addEventListener('change', (e) => {
+        state.region = e.target.value;
+        if (typeof trackUmamiEvent !== 'undefined') trackUmamiEvent('Toggle Region', { region: state.region });
+        render();
       });
-
+    }
     ['sn', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'].forEach(key => {
         const el = document.getElementById(`sub_${key}`);
         if (el) {
