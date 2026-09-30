@@ -68,7 +68,7 @@ const state = {
       statusFilter: 'all',
       channelFilter: 'all',
       subs: {
-        sn: true,
+        sn: false,
         sn_prem: false,
         centre_ice_fr: false,
         regional_en: false,
@@ -78,6 +78,12 @@ const state = {
         espn: false
       }
     };
+
+function trackUmamiEvent(name, data) {
+  if (typeof umami !== 'undefined' && umami.track) {
+    try { umami.track(name, data); } catch (e) {}
+  }
+}
 
 function updateHash() {
   const params = new URLSearchParams();
@@ -599,6 +605,7 @@ function renderAdviceCards(state) {
       document.querySelectorAll('.region-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           state.region = btn.dataset.region;
+          trackUmamiEvent('Toggle Region', { region: state.region });
           updateRegionUI();
           render();
         });
@@ -610,6 +617,7 @@ function renderAdviceCards(state) {
           el.checked = state.subs[key];
           el.addEventListener('change', () => {
             state.subs[key] = el.checked;
+            trackUmamiEvent('Toggle Sub', { sub: key, active: el.checked ? 'yes' : 'no' });
             render();
           });
         }
@@ -643,6 +651,7 @@ function renderAdviceCards(state) {
 
     function setTimeFilter(filter) {
       state.timeFilter = filter;
+      trackUmamiEvent('Toggle Time', { time: filter });
       ['upcoming', 'all', 'past'].forEach(f => {
         const b = document.getElementById(`time_${f}`);
         if (f === filter) {
@@ -656,11 +665,13 @@ function renderAdviceCards(state) {
 
     document.getElementById('statusFilter').addEventListener('change', (e) => {
       state.statusFilter = e.target.value;
+      trackUmamiEvent('Toggle Status Filter', { status: e.target.value });
       render();
     });
 
     document.getElementById('channelFilter').addEventListener('change', (e) => {
       state.channelFilter = e.target.value;
+      trackUmamiEvent('Toggle Channel Filter', { channel: e.target.value });
       render();
     });
 
