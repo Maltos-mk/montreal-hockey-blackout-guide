@@ -1,3 +1,134 @@
+
+
+function formatLocalTime(isoStr, fallbackTime) {
+  if (!isoStr) return fallbackTime + ' ET';
+  try {
+    const d = new Date(isoStr);
+    return new Intl.DateTimeFormat('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      timeZoneName: 'short'
+    }).format(d);
+  } catch(e) {
+    return fallbackTime + ' ET';
+  }
+}
+
+// Add Web Share API handler
+window.shareApp = async function() {
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: window.TEAM_DATA ? window.TEAM_DATA.team.name + ' Broadcast Guide' : 'Hockey Broadcast Guide',
+        url: window.location.href,
+      });
+      // Umami tracking for share
+      if (window.umami) umami.track('share-click');
+    } catch (err) {
+      console.log('Error sharing', err);
+    }
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      alert("Link copied to clipboard!");
+      if (window.umami) umami.track('copy-link');
+    }).catch(() => {
+      alert('Sharing not supported on this browser. Copy the URL from your address bar to share!');
+    });
+  }
+};
+
+async function initApp() {
+  if (!window.TEAM_DATA_URL) {
+    console.error('window.TEAM_DATA_URL is not set.');
+    return;
+  }
+  
+  try {
+    const res = await fetch(window.TEAM_DATA_URL);
+    window.TEAM_DATA = await res.json();
+    games = window.TEAM_DATA.schedule;
+    
+    // Update basic UI elements that might have team name
+    document.querySelectorAll('.team-nickname-text').forEach(el => el.textContent = window.TEAM_DATA.team.nickname);
+    document.querySelectorAll('.team-name-text').forEach(el => el.textContent = window.TEAM_DATA.team.name);
+    
+    // Auto-display direct install after 3s on mobile
+    
+
+    render();
+  } catch (err) {
+    console.error('Failed to load team data:', err);
+  }
+}
+const state = {
+      region: window.TEAM_DATA ? window.TEAM_DATA.team.marketRegion.regionCode : 'on_east_qc_atl',
+      lang: 'any',
+      timeFilter: 'upcoming',
+      search: '',
+      statusFilter: 'all',
+      channelFilter: 'all',
+      subs: {
+        sn: false,
+        sn_prem: false,
+        centre_ice_fr: false,
+        regional_en: false,
+        prime: false,
+        regional_fr: false,
+        national_fr: false,
+        espn: false
+      }
+    };
+
+function trackUmamiEvent(name, data) {
+  if (typeof umami !== 'undefined' && umami.track) {
+    try { umami.track(name, data); } catch (e) {}
+  }
+}
+
+function updateHash() {
+  const params = new URLSearchParams();
+  params.set('region', state.region);
+  params.set('timeFilter', state.timeFilter);
+  params.set('statusFilter', state.statusFilter);
+  params.set('channelFilter', state.channelFilter);
+  Object.keys(state.subs).forEach(k => {
+    params.set(k, state.subs[k]);
+  });
+  window.history.replaceState(null, null, '#' + params.toString());
+}
+
+function loadStateFromHash() {
+  if (window.location.hash) {
+    try {
+      const params = new URLSearchParams(window.location.hash.substring(1));
+      if (params.has('region')) state.region = params.get('region');
+      if (params.has('timeFilter')) state.timeFilter = params.get('timeFilter');
+      if (params.has('statusFilter')) state.statusFilter = params.get('statusFilter');
+      if (params.has('channelFilter')) state.channelFilter = params.get('channelFilter');
+      
+      const subKeys = ['sn', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
+      subKeys.forEach(k => {
+        if (params.has(k)) state.subs[k] = params.get(k) === 'true';
+      });
+    } catch(e) {}
+  }
+}
+
+
+    
+// Universal Blackout Engine
+
+const broadcastZones = {
+  'bc': ['VAN'],
+  'ab': ['EDM', 'CGY'],
+  'sk': ['EDM', 'CGY', 'WPG'],
+  'mb': ['WPG'],
+  'nw_on': ['TOR', 'WPG'],
+  'on_west': ['TOR'],
+  'on_east_qc_atl': ['MTL', 'OTT'],
+  'us_intl': []
+};
+
 function evaluateGame(g, state) {
   let canEN = false, reasonEN = '', isBlackedOutEN = false;
   let canFR = false, reasonFR = '', isBlackedOutFR = false;
@@ -40,12 +171,12 @@ function evaluateGame(g, state) {
       if (state.subs.regional_en) { canEN = true; reasonEN = `Watch on ${g.netEN}`; }
       else { reasonEN = `Requires ${g.netEN}`; }
     } else if (isOpponentInMarket) {
-      // User is out-of-market for the primary team, but in-market for the opponent!
-      // They can watch on their local regional channel for the opponent.
-      // Since 'regional_en' acts as a proxy for "I have my local sports channel", we use it, 
-      // or we can just say Sportsnet/TSN. Usually they need 'sn' or 'regional_en'.
-      canEN = true; 
-      reasonEN = "Available on your local opponent feed (Sportsnet/TSN).";
+      if (state.subs.regional_en || state.subs.sn) {
+        canEN = true; 
+        reasonEN = "Watch on local opponent feed (Sportsnet/TSN)";
+      } else {
+        reasonEN = "Requires Sportsnet/TSN for opponent feed";
+      }
     } else {
       isBlackedOutEN = true;
       if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ PREMIUM'; isBlackedOutEN = false; }
@@ -80,7 +211,11 @@ function evaluateGame(g, state) {
       if (state.subs.regional_fr) { canFR = true; reasonFR = `Watch on ${g.netFR}`; }
       else { reasonFR = `Requires ${g.netFR}`; }
     } else if (isOpponentInMarket) {
-       canFR = true; reasonFR = "Available on your local opponent feed.";
+      if (state.subs.regional_fr || state.subs.national_fr) {
+        canFR = true; reasonFR = "Watch on local opponent feed";
+      } else {
+        reasonFR = "Requires French channel for opponent feed";
+      }
     } else {
       isBlackedOutFR = true;
       if (state.subs.centre_ice_fr) { canFR = true; reasonFR = 'Watch on NHL Centre Ice'; isBlackedOutFR = false; }
@@ -504,17 +639,28 @@ function renderAdviceCards(state) {
       if (window.i18n) { window.i18n.translateNode(adviceCard); window.i18n.translateNode(desktopTable); window.i18n.translateNode(mobileContainer); window.i18n.apply(); }
     }
 
-          const regionSelect = document.getElementById('regionSelect');
-      if (regionSelect) {
-        regionSelect.value = state.region;
-        regionSelect.addEventListener('change', (e) => {
-          state.region = e.target.value;
-          if (typeof trackUmamiEvent !== 'undefined') {
-            trackUmamiEvent('Toggle Region', { region: state.region });
+    function updateRegionUI() {
+        document.querySelectorAll('.region-btn').forEach(b => {
+          if (b.dataset.region === state.region) {
+            b.className = "region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-teamSecondary bg-teamSecondary/5 text-teamSecondary font-semibold dark:border-blue-400 dark:bg-blue-950/40 dark:text-blue-300";
+            const check = b.querySelector('.fa-circle-check');
+            if (check) check.classList.remove('hidden');
+          } else {
+            b.className = "region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-slate-200 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300";
+            const check = b.querySelector('.fa-circle-check');
+            if (check) check.classList.add('hidden');
           }
-          render();
         });
       }
+      updateRegionUI();
+      document.querySelectorAll('.region-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          state.region = btn.dataset.region;
+          trackUmamiEvent('Toggle Region', { region: state.region });
+          updateRegionUI();
+          render();
+        });
+      });
 
     ['sn', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'].forEach(key => {
         const el = document.getElementById(`sub_${key}`);
