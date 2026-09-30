@@ -202,33 +202,18 @@
         <!-- Region Selector -->
         <div>
           <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
-            Where do you live??
+            Where do you live?
           </label>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="regionSelector">
-            <button data-region="in_market" class="region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-teamSecondary bg-teamSecondary/5 text-teamSecondary font-semibold dark:border-blue-400 dark:bg-blue-950/40 dark:text-blue-300">
-              <div class="flex items-center justify-between mb-1">
-                <span class="font-bold text-sm">In-Market</span>
-                <i class="fa-solid fa-location-dot text-xs"></i>
-              </div>
-              <span class="text-[11px] opacity-80 leading-tight font-normal">QC, Atlantic Canada, Eastern Ontario ({{TEAM_NICKNAME}} Broadcast Territory)</span>
-            </button>
-
-            <button data-region="out_market_canada" class="region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-slate-200 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300">
-              <div class="flex items-center justify-between mb-1">
-                <span class="font-bold text-sm">Out-of-Market (Canada)</span>
-                <i class="fa-solid fa-map-pin text-xs"></i>
-              </div>
-              <span class="text-[11px] opacity-80 leading-tight font-normal">GTA/Ontario-West, Manitoba, Alberta, BC</span>
-            </button>
-
-            <button data-region="us_intl" class="region-btn p-3 rounded-xl border text-left flex flex-col justify-between transition border-slate-200 dark:border-slate-800 hover:border-slate-300 text-slate-700 dark:text-slate-300">
-              <div class="flex items-center justify-between mb-1">
-                <span class="font-bold text-sm">US & International</span>
-                <i class="fa-solid fa-globe text-xs"></i>
-              </div>
-              <span class="text-[11px] opacity-80 leading-tight font-normal">United States, Europe, International</span>
-            </button>
-          </div>
+          <select id="regionSelect" class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 px-4 py-3 rounded-xl shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teamSecondary">
+            <option value="on_east_qc_atl">Quebec, Eastern Ontario, Atlantic Canada</option>
+            <option value="on_west">Ontario (West of Belleville)</option>
+            <option value="nw_on">Northwestern Ontario (Thunder Bay)</option>
+            <option value="mb">Manitoba</option>
+            <option value="sk">Saskatchewan, NWT & Nunavut</option>
+            <option value="ab">Alberta</option>
+            <option value="bc">British Columbia & Yukon</option>
+            <option value="us_intl">USA & International</option>
+          </select>
         </div>
 
         <!-- Subscriptions Checklist -->
@@ -239,7 +224,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="subsList">
             
             <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
-              <input type="checkbox" id="sub_sn" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4" checked>
+              <input type="checkbox" id="sub_sn" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">Sportsnet (Cable / Standard)</p>
                 <p class="text-[11px] text-slate-500">Saturday marquee, national games</p>
