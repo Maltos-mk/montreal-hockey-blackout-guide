@@ -51,16 +51,7 @@ dataFiles.forEach(file => {
 
   // Remove the crosslink for the current team
   
-  if (team.id === 'TOR') {
-    html = html.replace(/\{\{AMAZON_AFFILIATE_LINK\}\}/g, `              <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" target="_blank" rel="noopener noreferrer" class="text-[11px] pl-7 pt-1 text-habsRed dark:text-red-400 hover:underline block w-max">
-                <span class="font-bold">
-                  <span>Need Prime? Try 30-Day Free Trial</span>
-                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px] ml-1"></i>
-                </span>
-              </a>`);
-  } else {
-    html = html.replace(/\{\{AMAZON_AFFILIATE_LINK\}\}/g, '');
-  }
+  
 
   const crosslinkRegex = new RegExp(`<a href="[^"]+" data-umami-event="crosslink-[a-z]+" class="[^"]*">${team.name}</a>`, 'g');
   html = html.replace(crosslinkRegex, '');
