@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const TEAMS_DIR = path.join(__dirname, '../teams');
 const DATA_DIR = path.join(__dirname, '../data');
@@ -7,6 +8,23 @@ const DATA_DIR = path.join(__dirname, '../data');
 let errors = 0;
 
 console.log('Running automated build checks...\n');
+
+// 0. Privacy Scan
+console.log('--- Privacy & Anonymity Scan ---');
+try {
+  // We use grep to check for the real name, excluding the tests dir itself to avoid self-triggering
+  execSync('grep -iR "keithrobinson" . --exclude-dir=".git" --exclude-dir="node_modules" --exclude-dir="tests" || true', { stdio: 'pipe' });
+  const result = execSync('grep -iR "keithrobinson" . --exclude-dir=".git" --exclude-dir="node_modules" --exclude-dir="tests" | wc -l').toString().trim();
+  if (parseInt(result) > 0) {
+    console.error('❌ PRIVACY BREACH DETECTED: Found "keithrobinson" in codebase!');
+    errors++;
+  } else {
+    console.log('✅ No real name leaks detected.');
+  }
+} catch(e) {
+  console.log('✅ No real name leaks detected.');
+}
+console.log('');
 
 // 1. Data Schema Validation
 console.log('--- Checking JSON Data Schemas ---');
