@@ -916,3 +916,8 @@ if (document.readyState === 'loading') {
 } else {
   bindUmamiEvents();
 }
+
+// --- Node.js Exports for Testing ---
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { evaluateGame, broadcastZones };
+}
