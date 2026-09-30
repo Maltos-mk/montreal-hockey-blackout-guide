@@ -187,7 +187,7 @@
       "time": "7:00 PM",
       "vs": "vs Jets",
       "venue": "Centre Bell",
-      "netEN": "TSN2",
+      "netEN": "TSN2, TSN3",
       "netFR": "RDS",
       "type": "regional"
     },
@@ -253,9 +253,9 @@
       "time": "7:30 PM",
       "vs": "@ Rangers",
       "venue": "Madison Square Garden",
-      "netEN": "TSN2",
-      "netFR": "RDS",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020345,
@@ -297,9 +297,9 @@
       "time": "7:30 PM",
       "vs": "vs Kings",
       "venue": "Centre Bell",
-      "netEN": "TSN2",
-      "netFR": "RDS",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020397,
@@ -320,8 +320,8 @@
       "vs": "@ Golden Knights",
       "venue": "T-Mobile Arena",
       "netEN": "TSN2",
-      "netFR": "RDS",
-      "type": "regional"
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020435,
@@ -363,9 +363,9 @@
       "time": "7:00 PM",
       "vs": "vs Senators",
       "venue": "Centre Bell",
-      "netEN": "TSN2",
-      "netFR": "RDS",
-      "type": "regional"
+      "netEN": "TSN2, TSN5",
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020486,
@@ -407,9 +407,9 @@
       "time": "7:30 PM",
       "vs": "vs Oilers",
       "venue": "Centre Bell",
-      "netEN": "TSN2",
-      "netFR": "RDS",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020559,
@@ -496,8 +496,8 @@
       "vs": "@ Panthers",
       "venue": "Amerant Bank Arena",
       "netEN": "TSN2",
-      "netFR": "RDS",
-      "type": "regional"
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020675,
@@ -506,9 +506,9 @@
       "time": "7:30 PM",
       "vs": "vs Blackhawks",
       "venue": "Centre Bell",
-      "netEN": "TSN2",
-      "netFR": "RDS",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020690,
@@ -649,9 +649,9 @@
       "time": "8:30 PM",
       "vs": "@ Canucks",
       "venue": "Rogers Arena",
-      "netEN": "TSN2",
-      "netFR": "RDS",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020894,
@@ -847,9 +847,9 @@
       "time": "7:30 PM",
       "vs": "vs Maple Leafs",
       "venue": "Centre Bell",
-      "netEN": "TSN2",
-      "netFR": "RDS",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026021208,
@@ -892,8 +892,8 @@
       "vs": "@ Bruins",
       "venue": "TD Garden",
       "netEN": "TSN2",
-      "netFR": "RDS",
-      "type": "regional"
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026021263,
@@ -936,8 +936,8 @@
       "vs": "@ Lightning",
       "venue": "Benchmark International Arena",
       "netEN": "TSN2",
-      "netFR": "RDS",
-      "type": "regional"
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026021338,

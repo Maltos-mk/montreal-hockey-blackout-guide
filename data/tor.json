@@ -56,7 +56,7 @@
       "vs": "vs Senators",
       "venue": "Scotiabank Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -89,7 +89,7 @@
       "vs": "@ Avalanche",
       "venue": "Ball Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -111,8 +111,8 @@
       "vs": "vs Sabres",
       "venue": "Scotiabank Arena",
       "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020125,
@@ -122,7 +122,7 @@
       "vs": "vs Islanders",
       "venue": "Scotiabank Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -132,9 +132,9 @@
       "time": "7:30 PM",
       "vs": "vs Sharks",
       "venue": "Scotiabank Arena",
-      "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020145,
@@ -144,7 +144,7 @@
       "vs": "@ Blue Jackets",
       "venue": "Nationwide Arena",
       "netEN": "Sportsnet, Sportsnet 360",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -166,7 +166,7 @@
       "vs": "@ Oilers",
       "venue": "Rogers Place",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -176,7 +176,7 @@
       "time": "8:30 PM",
       "vs": "@ Flames",
       "venue": "Scotiabank Saddledome",
-      "netEN": "TSN4",
+      "netEN": "SN+",
       "netFR": "",
       "type": "regional"
     },
@@ -188,7 +188,7 @@
       "vs": "@ Kraken",
       "venue": "Climate Pledge Arena",
       "netEN": "Sportsnet Ontario",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -199,7 +199,7 @@
       "vs": "@ Canucks",
       "venue": "Rogers Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -243,8 +243,8 @@
       "vs": "vs Avalanche",
       "venue": "Scotiabank Arena",
       "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020300,
@@ -254,7 +254,7 @@
       "vs": "vs Wild",
       "venue": "Scotiabank Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -265,7 +265,7 @@
       "vs": "vs Oilers",
       "venue": "Scotiabank Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -287,7 +287,7 @@
       "vs": "vs Kings",
       "venue": "Scotiabank Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -298,7 +298,7 @@
       "vs": "vs Blue Jackets",
       "venue": "Scotiabank Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -309,7 +309,7 @@
       "vs": "@ Islanders",
       "venue": "UBS Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -320,8 +320,8 @@
       "vs": "@ Bruins",
       "venue": "TD Garden",
       "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020420,
@@ -331,7 +331,7 @@
       "vs": "@ Penguins",
       "venue": "PPG Paints Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -341,7 +341,7 @@
       "time": "7:30 PM",
       "vs": "vs Flyers",
       "venue": "Scotiabank Arena",
-      "netEN": "TSN4",
+      "netEN": "SN+",
       "netFR": "",
       "type": "regional"
     },
@@ -353,8 +353,8 @@
       "vs": "vs Panthers",
       "venue": "Scotiabank Arena",
       "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020471,
@@ -364,7 +364,7 @@
       "vs": "@ Hurricanes",
       "venue": "Lenovo Center",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -386,7 +386,7 @@
       "vs": "vs Golden Knights",
       "venue": "Scotiabank Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -430,7 +430,7 @@
       "vs": "vs Lightning",
       "venue": "Scotiabank Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -440,7 +440,7 @@
       "time": "2:00 PM",
       "vs": "vs Capitals",
       "venue": "Scotiabank Arena",
-      "netEN": "TSN4",
+      "netEN": "SN+",
       "netFR": "",
       "type": "regional"
     },
@@ -452,7 +452,7 @@
       "vs": "@ Red Wings",
       "venue": "Little Caesars Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -485,7 +485,7 @@
       "vs": "@ Kings",
       "venue": "Crypto.com Arena",
       "netEN": "Sportsnet Ontario",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -496,7 +496,7 @@
       "vs": "@ Sharks",
       "venue": "SAP Center at San Jose",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -506,7 +506,7 @@
       "time": "7:30 PM",
       "vs": "@ Capitals",
       "venue": "Capital One Arena",
-      "netEN": "TSN4",
+      "netEN": "SN+",
       "netFR": "",
       "type": "regional"
     },
@@ -529,7 +529,7 @@
       "vs": "vs Flyers",
       "venue": "Scotiabank Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -539,9 +539,9 @@
       "time": "7:30 PM",
       "vs": "vs Jets",
       "venue": "Scotiabank Arena",
-      "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020745,
@@ -562,7 +562,7 @@
       "vs": "vs Penguins",
       "venue": "Scotiabank Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -572,7 +572,7 @@
       "time": "7:30 PM",
       "vs": "vs Blues",
       "venue": "Scotiabank Arena",
-      "netEN": "TSN4",
+      "netEN": "SN+",
       "netFR": "",
       "type": "regional"
     },
@@ -595,7 +595,7 @@
       "vs": "@ Blues",
       "venue": "Enterprise Center",
       "netEN": "Sportsnet Ontario",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -606,7 +606,7 @@
       "vs": "vs Flames",
       "venue": "Scotiabank Arena",
       "netEN": "TSN4, Sportsnet West",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -628,7 +628,7 @@
       "vs": "@ Bruins",
       "venue": "TD Garden",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -638,9 +638,9 @@
       "time": "7:30 PM",
       "vs": "vs Blue Jackets",
       "venue": "Scotiabank Arena",
-      "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026020901,
@@ -694,7 +694,7 @@
       "vs": "@ Lightning",
       "venue": "Benchmark International Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -716,8 +716,8 @@
       "vs": "@ Penguins",
       "venue": "PPG Paints Arena",
       "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026021022,
@@ -727,7 +727,7 @@
       "vs": "@ Sabres",
       "venue": "KeyBank Center",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -737,9 +737,9 @@
       "time": "7:00 PM",
       "vs": "vs Red Wings",
       "venue": "Scotiabank Arena",
-      "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026021048,
@@ -760,8 +760,8 @@
       "vs": "@ Hurricanes",
       "venue": "Lenovo Center",
       "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026021076,
@@ -771,7 +771,7 @@
       "vs": "@ Panthers",
       "venue": "Amerant Bank Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -781,9 +781,9 @@
       "time": "7:30 PM",
       "vs": "vs Stars",
       "venue": "Scotiabank Arena",
-      "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports 2",
+      "type": "national"
     },
     {
       "id": 2026021112,
@@ -792,7 +792,7 @@
       "time": "7:00 PM",
       "vs": "@ Jets",
       "venue": "Canada Life Centre",
-      "netEN": "TSN4",
+      "netEN": "TSN4, TSN3",
       "netFR": "",
       "type": "regional"
     },
@@ -804,7 +804,7 @@
       "vs": "vs Canucks",
       "venue": "Scotiabank Arena",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -814,9 +814,9 @@
       "time": "7:30 PM",
       "vs": "vs Panthers",
       "venue": "Scotiabank Arena",
-      "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports 2",
+      "type": "national"
     },
     {
       "id": 2026021155,
@@ -837,7 +837,7 @@
       "vs": "@ Rangers",
       "venue": "Madison Square Garden",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -848,7 +848,7 @@
       "vs": "@ Devils",
       "venue": "Prudential Center",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     },
     {
@@ -858,9 +858,9 @@
       "time": "7:30 PM",
       "vs": "@ Canadiens",
       "venue": "Centre Bell",
-      "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026021212,
@@ -935,9 +935,9 @@
       "time": "7:00 PM",
       "vs": "vs Bruins",
       "venue": "Scotiabank Arena",
-      "netEN": "TSN4",
-      "netFR": "",
-      "type": "regional"
+      "netEN": "SN+",
+      "netFR": "TVA Sports",
+      "type": "national"
     },
     {
       "id": 2026021339,
@@ -947,7 +947,7 @@
       "vs": "@ Rangers",
       "venue": "Madison Square Garden",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "type": "national"
     }
   ]
