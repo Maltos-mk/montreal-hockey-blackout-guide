@@ -168,12 +168,6 @@
         </a>
         -->
 
-        <div class="flex items-center space-x-2 bg-black/25 rounded-xl px-3 py-1.5 border border-white/10 text-sm">
-          <button onclick="window.i18n.toggle()" class="lang-btn uppercase font-bold text-teamPrimary dark:text-red-400" data-lang="en">EN</button>
-          <span class="text-white/30">|</span>
-          <button onclick="window.i18n.toggle()" class="lang-btn uppercase text-slate-300 hover:text-white transition" data-lang="fr">FR</button>
-        </div>
-        <div class="w-full text-center mt-2 hidden" id="frDisclaimer"><span class="text-[10px] text-slate-500 italic">Traduit automatiquement. Veuillez excuser les éventuelles erreurs.</span></div>
 
         <button id="themeToggle" class="p-2.5 rounded-xl bg-black/25 hover:bg-black/40 text-slate-200 text-sm border border-white/10 transition" title="Toggle Theme">
           <i class="fa-solid fa-moon text-amber-300 dark:hidden"></i>
@@ -602,11 +596,7 @@
   <script>
   window.TEAM_DATA_URL = "../../data/mtl.json?v=2";
 </script>
-<script src="../../shared/i18n.js"></script>
 <script src="../../shared/app.js?v=1790776244"></script>
-<script>
-  if (window.i18n) window.i18n.init();
-</script>
 
 </body>
 </html>
