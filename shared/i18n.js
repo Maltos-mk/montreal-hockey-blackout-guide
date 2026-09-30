@@ -16,7 +16,7 @@ window.i18n = {
     "TSN / TSN2": "TSN / TSN2",
     "50 Regional Habs games (in-market only)": "50 matchs régionaux des Canadiens",
     "Amazon Prime Video": "Amazon Prime Video",
-    "National Monday Night Hockey feeds": "Matchs nationaux du lundi soir",
+    "National Wednesday Night Hockey feeds": "Matchs nationaux du mercredi soir",
     "RDS / RDS Direct": "RDS / RDS Direct",
     "45 Regional French Canadiens games": "45 matchs régionaux en français",
     "TVA Sports": "TVA Sports",
