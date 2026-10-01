@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '20'
       - name: Run Schema and Logic Verification
         run: node tests/verify_build.js
 
