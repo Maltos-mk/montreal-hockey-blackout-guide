@@ -4,30 +4,30 @@ const { execSync } = require('child_process');
 const http = require('http');
 
 const team = process.argv[2] || 'montreal';
-const buildDir = path.join(__dirname, '../build');
+const buildDir = path.join(__dirname, '../build_' + team);
 
 console.log(`Building production environment for: ${team}`);
 
 // 1. Clean build dir
-execSync('rm -rf build && mkdir build');
+execSync(`rm -rf build_${team} && mkdir build_${team}`);
 
 // 2. Copy files mimicking deploy-teams.yml
-execSync(`cp -r shared build/`);
-execSync(`cp -r data/${team === 'montreal' ? 'mtl' : team === 'toronto' ? 'tor' : 'ott'}.json build/data.json`);
-execSync(`cp -r teams/${team}/* build/`);
+execSync(`cp -r shared build_${team}/`);
+execSync(`cp -r data/${team === 'montreal' ? 'mtl' : team === 'toronto' ? 'tor' : 'ott'}.json build_${team}/data.json`);
+execSync(`cp -r teams/${team}/* build_${team}/`);
 
 // 3. Fix paths
-execSync(`sed -i '' 's|\\.\\./\\.\\./shared/|shared/|g' build/index.html`);
-execSync(`sed -i '' 's|\\.\\./\\.\\./data/.*\\.json|data.json|g' build/index.html`);
+execSync(`sed -i '' 's|\\.\\./\\.\\./shared/|shared/|g' build_${team}/index.html`);
+execSync(`sed -i '' 's|\\.\\./\\.\\./data/.*\\.json|data.json|g' build_${team}/index.html`);
 
 // 4. Inject cache-busters
 const timestamp = Date.now();
-execSync(`sed -i '' "s|shared/app.css|shared/app.css?v=${timestamp}|g" build/index.html`);
-execSync(`sed -i '' "s|shared/app.js|shared/app.js?v=${timestamp}|g" build/index.html`);
-execSync(`sed -i '' "s|shared/i18n.js|shared/i18n.js?v=${timestamp}|g" build/index.html`);
-execSync(`sed -i '' "s|data.json|data.json?v=${timestamp}|g" build/index.html`);
+execSync(`sed -i '' "s|shared/app.css|shared/app.css?v=${timestamp}|g" build_${team}/index.html`);
+execSync(`sed -i '' "s|shared/app.js|shared/app.js?v=${timestamp}|g" build_${team}/index.html`);
+execSync(`sed -i '' "s|shared/i18n.js|shared/i18n.js?v=${timestamp}|g" build_${team}/index.html`);
+execSync(`sed -i '' "s|data.json|data.json?v=${timestamp}|g" build_${team}/index.html`);
 
-console.log(`✅ Build complete. Serving at http://localhost:8080`);
+console.log(`✅ Build complete. Serving at http://localhost:${team === 'montreal' ? 8081 : team === 'ottawa' ? 8082 : 8080}`);
 
 // 5. Serve
 const mimeTypes = {
@@ -62,4 +62,4 @@ http.createServer((req, res) => {
       res.end(content, 'utf-8');
     }
   });
-}).listen(8080);
+}).listen(team === 'montreal' ? 8081 : team === 'ottawa' ? 8082 : 8080);
