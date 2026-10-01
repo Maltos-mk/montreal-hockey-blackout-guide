@@ -332,7 +332,7 @@ function renderAdviceCards(state) {
         <div>
           <h4 class="font-bold text-slate-900 dark:text-white">${t('International & US Viewing')}</h4>
           <p class="text-slate-600 dark:text-slate-300 mt-1">
-            ${t('ESPN+ carries out-of-market NHL games for US viewers. National US broadcasts on ESPN or TNT follow local US availability rules.')}
+            ${t('ESPN+ carries out-of-market NHL games for US viewers. National US broadcasts on ESPN, TNT, or simulcast on NHL Network follow local US availability rules and will be blacked out on ESPN+.')}
           </p>
         </div>
       </div>
