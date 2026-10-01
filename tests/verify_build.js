@@ -3,7 +3,8 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 // Mock browser globals BEFORE requiring browser scripts
-global.window = { matchMedia: () => ({ matches: false }), navigator: {}, addEventListener: () => {} };
+global.window = { matchMedia: () => ({ matches: false }), navigator: { userAgent: '' }, addEventListener: () => {} };
+global.navigator = { userAgent: '' }; // Polyfill for Node 18
 global.document = {
   readyState: 'complete',
   addEventListener: () => {},
