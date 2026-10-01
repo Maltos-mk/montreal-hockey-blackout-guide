@@ -70,7 +70,7 @@
         "name": "Why are {{TEAM_NAME}} games blacked out on {{REGIONAL_EN}} in Ontario?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "{{REGIONAL_EN}} and {{REGIONAL_FR}} hold regional broadcast rights for the {{TEAM_NAME}} limited strictly to Quebec, Atlantic Canada, and Eastern Ontario. {{TEAM_NICKNAME}} fans in Western Ontario, Toronto, and Western Canada are subject to NHL territorial blackouts unless watching via Sportsnet+ Premium or NHL Centre Ice."
+          "text": "{{SCHEMA_ONTARIO_BOUNDARY}}"
         }
       },
       {
@@ -199,8 +199,8 @@
             Where do you live?
           </label>
           <select id="regionSelect" class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 px-4 py-3 rounded-xl shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teamSecondary">
-            <option value="on_east_qc_atl">Quebec, Eastern Ontario, Atlantic Canada</option>
-            <option value="on_west">Ontario (West of Belleville)</option>
+            <option value="on_east_qc_atl">Quebec, Atlantic Canada, Ottawa Valley</option>
+            <option value="on_west">Ontario (Outside Ottawa Valley)</option>
             <option value="nw_on">Northwestern Ontario (Thunder Bay)</option>
             <option value="mb">Manitoba</option>
             <option value="sk">Saskatchewan, NWT & Nunavut</option>
@@ -220,15 +220,15 @@
             <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
               <input type="checkbox" id="sub_sn" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
-                <p class="text-sm font-semibold">Sportsnet (Cable / Standard)</p>
-                <p class="text-[11px] text-slate-500">Saturday marquee, national games</p>
+                <p class="text-sm font-semibold">Sportsnet Standard (or Basic Cable)</p>
+                <p class="text-[11px] text-slate-500">National games on SN (No out-of-market regional)</p>
               </div>
             </label>
 
             <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
               <input type="checkbox" id="sub_sn_prem" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
-                <p class="text-sm font-semibold">Sportsnet+ Premium / Centre Ice</p>
+                <p class="text-sm font-semibold">Sportsnet+ Premium (or Centre Ice)</p>
                 <p class="text-[11px] text-slate-500">Official out-of-market regional package</p>
               </div>
             </label>
@@ -506,13 +506,10 @@
     <section id="faq" class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
       <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-teamPrimary border-b border-slate-100 dark:border-slate-800 pb-3">Blackout Rules & FAQ</h2>
       <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-        <p>
-          <strong>Why are {{TEAM_NAME}} games blacked out on {{REGIONAL_EN}} in Ontario?</strong><br>
-          {{REGIONAL_EN}} and {{REGIONAL_FR}} own <em>regional</em> broadcast rights, which only cover the {{TEAM_NAME}}' home broadcast territory (Quebec, Atlantic Canada, and Eastern Ontario including Pembroke, Ottawa, and Cornwall). If you live outside this region (such as Toronto, GTA, or Western Canada), regional licenses do not grant clearance for those games, protecting local home-market rights for teams like the Maple Leafs, Senators, Jets, Flames, Oilers, and Canucks.
-        </p>
+        {{FAQ_ONTARIO_BOUNDARY}}
         <p>
           <strong>Does having a standard cable box prevent {{TEAM_NICKNAME}} blackouts?</strong><br>
-          <strong>No.</strong> Blackout rules apply directly to standard cable and satellite subscriptions. If your cable billing address is in Toronto, Winnipeg, or Vancouver, your screen will display a blackout notice during live regional {{TEAM_NAME}} games on {{REGIONAL_EN}} or {{REGIONAL_FR}}.
+          <strong>No.</strong> Blackout rules apply directly to standard cable and satellite subscriptions. If your cable billing address is in Toronto, Winnipeg, or Vancouver, your screen will display a blackout notice during live regional {{TEAM_NAME}} games on {{REGIONAL_RIGHTS_FAQ_STRING}}.
         </p>
         <p>
           <strong>How can out-of-market {{TEAM_NICKNAME}} fans watch without blackouts?</strong><br>
