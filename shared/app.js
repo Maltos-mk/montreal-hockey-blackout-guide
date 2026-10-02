@@ -126,6 +126,7 @@ const broadcastZones = {
   'nw_on': ['TOR', 'WPG'],
   'on_west': ['TOR'],
   'on_east_qc_atl': ['MTL', 'OTT'],
+  'on_overlap': ['TOR', 'OTT', 'MTL'],
   'us_intl': []
 };
 
