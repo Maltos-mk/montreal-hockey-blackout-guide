@@ -681,8 +681,7 @@ function renderAdviceCards(state) {
         state.timeFilter === 'upcoming' ? `Showing ${displayedCount} upcoming ${window.TEAM_DATA.team.name} games` :
         state.timeFilter === 'past' ? `Showing ${displayedCount} completed games` : `Showing ${displayedCount} total games`;
 
-      const verdictEl = document.getElementById('kpiVerdict');
-      const adviceCard = document.getElementById('adviceCard');
+            const adviceCard = document.getElementById('adviceCard');
 
       if (window.renderAdviceCards) {
           adviceCard.innerHTML = window.renderAdviceCards(state);
