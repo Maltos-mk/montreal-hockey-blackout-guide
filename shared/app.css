@@ -7,3 +7,63 @@
 body { 
   font-family: 'Inter', sans-serif; 
 }
+
+/* Print / PDF Export Styles */
+@media print {
+  /* Hide hero section, sidebars, FAQ, filters */
+  #hero-configurator,
+  #faq,
+  footer,
+  .print-hidden,
+  .md\:col-span-4 /* left panel container */ {
+    display: none !important;
+  }
+
+  /* Make sure schedule panel takes full width */
+  .md\:col-span-8 {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    grid-column: span 12 / span 12 !important;
+  }
+
+  /* Reset body and containers */
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  /* Force the desktop table view, hide mobile view */
+  #scheduleCardsMobile { display: none !important; }
+  .hidden.md\:block { display: block !important; }
+  
+  /* Remove scrolling container max-height */
+  .max-h-\\[680px\\] {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  table { width: 100% !important; border-collapse: collapse; page-break-inside: auto; }
+  tr { page-break-inside: avoid; page-break-after: auto; }
+  thead { display: table-header-group; }
+  tfoot { display: table-footer-group; }
+  
+  th, td {
+    padding: 6px 4px !important;
+    border-bottom: 1px solid #ddd !important;
+    font-size: 10pt;
+    color: black !important;
+  }
+
+  /* Keep background colors on badges */
+  th, .bg-slate-100, .bg-red-50, .bg-emerald-50, .bg-blue-50, .bg-teamPrimary, .bg-slate-800 {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
