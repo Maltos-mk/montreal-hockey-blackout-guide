@@ -122,7 +122,7 @@
       }
     }
   </script>
-  <link rel="stylesheet" href="shared/app.css?v=1790900875">
+  <link rel="stylesheet" href="shared/app.css?v=1790905560">
 
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
@@ -200,7 +200,8 @@
           </label>
           <select id="regionSelect" class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 px-4 py-3 rounded-xl shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teamSecondary">
             <option value="on_east_qc_atl">Quebec, Eastern Ontario, Atlantic Canada</option>
-            <option value="on_west">Ontario (West of Belleville)</option>
+            <option value="on_overlap">Ontario Overlap (Belleville, Kingston, Pembroke)</option>
+            <option value="on_west">Ontario West (Toronto, London)</option>
             <option value="nw_on">Northwestern Ontario (Thunder Bay)</option>
             <option value="mb">Manitoba</option>
             <option value="sk">Saskatchewan, NWT & Nunavut</option>
@@ -513,7 +514,7 @@
       <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
         <p>
           <strong>Why are Montreal Canadiens games blacked out on TSN2 in Western Ontario?</strong><br>
-          The NHL broadcast boundary line in Ontario is drawn at Belleville. If you live in Eastern Ontario (Kingston, Brockville, Cornwall, Ottawa) or further east into Quebec and Atlantic Canada, you are in the Montreal Canadiens' home territory and can watch regional games on standard cable. However, if you live west of Belleville (including Toronto and the GTA), you are in the Maple Leafs' home territory. In that zone, regional Montreal Canadiens games are blacked out to protect local Leafs rights unless you subscribe to <strong>Sportsnet+ Premium</strong> or <strong>NHL Centre Ice</strong>. <em>(Note: Belleville itself is an overlap edge-case where many providers offer feeds for both regions).</em>
+          The NHL broadcast boundary line in Ontario is drawn near Belleville. If you live strictly in Eastern Ontario (Ottawa, Cornwall, Brockville) or further east into Quebec and Atlantic Canada, you are in the Montreal Canadiens' home territory and can watch regional games on standard cable. However, if you live west of Belleville (including Toronto and the GTA), you are in the Maple Leafs' home territory. In that zone, regional Montreal Canadiens games are blacked out to protect local Leafs rights unless you subscribe to <strong>Sportsnet+ Premium</strong> or <strong>NHL Centre Ice</strong>. <em>(Note: The Belleville to Kingston corridor is a designated "Overlap" zone where providers offer feeds for both regions. Use the "Ontario Overlap" region in the dropdown above to accurately see your games).</em>
         </p>
         <p>
           <strong>Does having a standard cable box prevent Habs blackouts?</strong><br>
@@ -599,9 +600,9 @@
   </div>
 
   <script>
-  window.TEAM_DATA_URL = "data.json?v=1790900875?v=2";
+  window.TEAM_DATA_URL = "data.json?v=1790905560?v=2";
 </script>
-<script src="shared/app.js?v=1790900875?v=1790776244"></script>
+<script src="shared/app.js?v=1790905560?v=1790776244"></script>
 
 </body>
 </html>
