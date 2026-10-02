@@ -19,6 +19,17 @@ dataFiles.forEach(file => {
   html = html.replace(/\{\{REGION_CODE\}\}/g, team.marketRegion.regionCode);
   html = html.replace(/\{\{REGION_DESCRIPTION\}\}/g, team.marketRegion.description);
 
+  
+  let quickSummary = '';
+  if (team.id === 'TOR') {
+    quickSummary = "<strong>Quick Summary for Leafs Fans Living Outside the Toronto Region:</strong> If tonight's Toronto Maple Leafs game is scheduled on Sportsnet, Prime Video, or CBC, you can watch anywhere in Canada without blackouts. If the game is on TSN4 or Sportsnet Ontario, you will be blacked out in Eastern Ontario, Quebec, and the rest of Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
+  } else if (team.id === 'OTT') {
+    quickSummary = "<strong>Quick Summary for Sens Fans Living Outside the Ottawa Region:</strong> If tonight's Ottawa Senators game is scheduled on Sportsnet, Prime Video, or CBC, you can watch anywhere in Canada without blackouts. If the game is on TSN5 or RDS, you will be blacked out in Western Ontario and the rest of Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
+  } else {
+    quickSummary = "<strong>Quick Summary for Habs Fans Living Outside Quebec:</strong> If tonight's Montreal Canadiens game is scheduled on Sportsnet, Prime Video, CBC, or TVA Sports, you can watch anywhere in Canada without blackouts. If the game is on TSN2 or RDS, you will be blacked out in Western Ontario and the West unless you have Sportsnet+ Premium or NHL Centre Ice.";
+  }
+  html = html.replace(/\{\{QUICK_SUMMARY\}\}/g, quickSummary);
+
   let faqHtml = '';
   let schemaText = '';
   if (team.id === 'TOR') {
