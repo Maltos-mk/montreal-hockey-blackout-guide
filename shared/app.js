@@ -993,7 +993,11 @@ function buildAndDownloadPDF(btn, originalText) {
 
   doc.setFontSize(11);
   doc.setTextColor(71, 85, 105); // slate-600
-  doc.text(`Configured Region: ${regionText}  |  Active Subscriptions: ${subLabels.length > 0 ? subLabels.join(', ') : 'None'}`, 40, 105);
+  const contextStr = `Configured Region: ${regionText}  |  Active Subscriptions: ${subLabels.length > 0 ? subLabels.join(', ') : 'None'}`;
+  const contextLines = doc.splitTextToSize(contextStr, pageWidth - 80);
+  doc.text(contextLines, 40, 105);
+  
+  const dynamicStartY = 105 + (contextLines.length * 14);
 
   // 3. Table Data
   const head = [['Date & Time', 'Matchup', 'Network', 'Access Status']];
@@ -1016,7 +1020,7 @@ function buildAndDownloadPDF(btn, originalText) {
 
   // 4. AutoTable
   doc.autoTable({
-    startY: 120,
+    startY: dynamicStartY,
     head: head,
     body: body,
     theme: 'striped',
