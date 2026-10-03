@@ -6,16 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary SEO Meta Tags with Natural Canadiens & {{TEAM_NICKNAME}} Keywords -->
-  <title>{{CITY_NAME}} Hockey Broadcast & Blackout Guide | Can You Watch Tonight?</title>
-  <meta name="title" content="{{CITY_NAME}} Hockey Broadcast & Blackout Guide | Can You Watch Tonight?">
+  <title>Where to watch the {{TEAM_NAME}} game tonight | {{TEAM_NICKNAME}} Blackout Guide</title>
+  <meta name="title" content="Where to watch the {{TEAM_NAME}} game tonight | {{TEAM_NICKNAME}} Blackout Guide">
   <meta name="description" content="Independent {{TEAM_NAME}}  broadcast schedule and regional blackout guide. Find out which channel is showing the {{CITY_NAME}} game tonight across {{REGIONAL_EN}}, {{REGIONAL_FR}}, Sportsnet, Prime Video, and TVA Sports.">
   <meta name="keywords" content="{{TEAM_NAME}} game tonight, {{TEAM_NICKNAME}} blackout rules, {{TEAM_NAME}} broadcast schedule, {{REGIONAL_EN}} blackout Ontario, watch {{TEAM_NICKNAME}} online, Sportsnet {{TEAM_NAME}}, {{REGIONAL_FR}} blackout Ontario, {{CITY_NAME}} hockey live stream">
   <meta name="author" content="Maltos-mk">
   <link rel="canonical" href="https://maltos-mk.github.io/{{REPO_NAME}}/">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
-  <link rel="alternate icon" href="favicon.svg?v=2">
+  <link rel="icon" type="image/png" sizes="48x48" href="shared/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="shared/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="shared/favicon-192x192.png">
+  <link rel="shortcut icon" href="shared/favicon-48x48.png">
 
   <!-- Progressive Web App (PWA) / Mobile Standalone Tags -->
   <link rel="manifest" href="manifest.json">
@@ -24,10 +26,11 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="{{CITY_NAME}} Guide">
-  <link rel="apple-touch-icon" href="favicon.svg?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="shared/apple-touch-icon.png">
 
   <!-- OpenGraph / Facebook / Discord -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Maltos NHL Blackout Guides">
   <meta property="og:url" content="https://maltos-mk.github.io/{{REPO_NAME}}/">
   <meta property="og:title" content="{{TEAM_NAME}} Broadcast & Blackout Guide (Hockey Schedule)">
   <meta property="og:description" content="Find out if tonight's {{TEAM_NAME}}  game is watchable or blacked out based on your region and television subscriptions.">
@@ -55,6 +58,26 @@
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "CAD"
+    }
+  }
+  </script>
+
+
+  <!-- Schema.org WebSite & Publisher Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Maltos NHL Blackout Guides",
+    "alternateName": "{{TEAM_NAME}} Broadcast Guide",
+    "url": "https://maltos-mk.github.io/{{REPO_NAME}}/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Maltos",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://maltos-mk.github.io/{{REPO_NAME}}/shared/favicon-192x192.png"
+      }
     }
   }
   </script>
@@ -127,6 +150,17 @@
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
 
+
+  <!-- Global Network Bar -->
+  <nav class="bg-slate-900 text-slate-400 text-xs border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 flex items-center overflow-x-auto whitespace-nowrap hide-scrollbar">
+      <div class="flex items-center space-x-1 py-2 font-semibold">
+        <span class="text-slate-500 mr-2 uppercase tracking-wider text-[10px] hidden sm:inline">Other Teams:</span>
+        {{NETWORK_LINKS}}
+      </div>
+    </div>
+  </nav>
+
   <!-- Header Banner -->
   <header class="bg-gradient-to-r from-teamSecondary via-teamDark to-teamPrimary text-white shadow-lg border-b-4 border-white/20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -137,10 +171,10 @@
         </div>
         <div>
           <div class="flex items-center gap-2 flex-wrap justify-center md:justify-start">
-            <h1 class="text-2xl sm:text-3xl font-black tracking-tight font-teko uppercase text-white">{{CITY_NAME}} Hockey Broadcast Guide</h1>
+            <h1 class="text-2xl sm:text-3xl font-black tracking-tight font-teko uppercase text-white">Where to watch the {{TEAM_NAME}} tonight</h1>
             <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-white/15 text-slate-200 border border-white/20">Unofficial Fan Resource</span>
           </div>
-          <p class="text-xs sm:text-sm text-slate-200 font-medium">Full Season Guide for {{TEAM_NAME}} Fans • Real-Time Broadcast & Blackout Calculator</p>
+          <p class="text-xs sm:text-sm text-slate-200 font-medium">Real-Time Broadcast & Blackout Calculator for {{TEAM_NICKNAME}} fans</p>
         </div>
       </div>
       <div class="flex items-center space-x-3 flex-wrap justify-center">
@@ -245,7 +279,7 @@
             <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
               <input type="checkbox" id="sub_regional_en" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
-                <p class="text-sm font-semibold">TSN / {{REGIONAL_EN}}</p>
+                <p class="text-sm font-semibold">My Local Sports Channel ({{REGIONAL_EN}})</p>
                 <p class="text-[11px] text-slate-500">{{REGIONAL_EN_COUNT}} Regional {{TEAM_NICKNAME}} games (in-market only)</p>
               </div>
             </label>
@@ -271,7 +305,7 @@
               <input type="checkbox" id="sub_regional_fr" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">{{REGIONAL_FR}} / {{REGIONAL_FR}} Direct</p>
-                <p class="text-[11px] text-slate-500">45 Regional French Canadiens games</p>
+                <p class="text-[11px] text-slate-500">{{REGIONAL_FR_COUNT}} Regional French {{TEAM_NICKNAME}} games</p>
               </div>
             </label>
 
@@ -511,6 +545,12 @@
       <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-teamPrimary border-b border-slate-100 dark:border-slate-800 pb-3">Blackout Rules & FAQ</h2>
       <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
         {{FAQ_ONTARIO_BOUNDARY}}
+        
+        <p>
+          <strong>Does {{REGIONAL_EN}} show every {{TEAM_NICKNAME}} game?</strong><br>
+          <strong>No.</strong> Regional networks like {{REGIONAL_EN}} only hold the broadcast rights to a specific portion of the season (usually around 40 to 60 games). The remaining {{TEAM_NICKNAME}} games are designated as "National" broadcasts and are exclusively spread across Sportsnet (National), CBC, CityTV, and Amazon Prime Video. To watch the entire 84-game regular season schedule, you need access to both the regional network and the national networks.
+        </p>
+
         <p>
           <strong>Does having a standard cable box prevent {{TEAM_NICKNAME}} blackouts?</strong><br>
           <strong>No.</strong> Blackout rules apply directly to standard cable and satellite subscriptions. If your cable billing address is in Toronto, Winnipeg, or Vancouver, your screen will display a blackout notice during live regional {{TEAM_NAME}} games on {{REGIONAL_RIGHTS_FAQ_STRING}}.
@@ -541,22 +581,26 @@
 
       <div class="py-2 flex flex-wrap items-center justify-center gap-3 text-sm">
         <span class="font-semibold text-slate-600 dark:text-slate-400"><i class="fa-solid fa-map-location-dot mr-1"></i> More Regional Guides:</span>
-        <a href="https://maltos-mk.github.io/toronto-hockey-blackout-guide/" data-umami-event="crosslink-tor" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 border border-slate-200 dark:border-slate-700 transition font-bold">Toronto Maple Leafs</a>
-        <a href="https://maltos-mk.github.io/montreal-hockey-blackout-guide/" data-umami-event="crosslink-mtl" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 border border-slate-200 dark:border-slate-700 transition font-bold">Montreal Canadiens</a>
-        <a href="https://maltos-mk.github.io/ottawa-hockey-blackout-guide/" data-umami-event="crosslink-ott" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 border border-slate-200 dark:border-slate-700 transition font-bold">Ottawa Senators</a>
+        {{FOOTER_LINKS}}
       </div>
 
       
       </p>
 
+      
+      <!-- About the Data -->
+      <div class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-left bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mb-6">
+        <strong class="text-slate-700 dark:text-slate-300">About the Data Source:</strong> This independent blackout guide calculates watchability in real-time by cross-referencing your selected region and TV subscriptions against the official NHL API schedule. By analyzing local broadcast boundaries against network assignments ({{REGIONAL_EN}}, Sportsnet, Prime Video), this tool mathematically determines whether the {{TEAM_NAME}} game is in-market (watchable on standard cable) or out-of-market (requires a Premium streaming subscription) and serves accurate, tailored advice.
+      </div>
+
       <p class="font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider text-[11px] pt-2">
         Non-Affiliation & Nominative Fair Use Disclaimer
       </p>
       <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
-        This website is an independent fan resource created exclusively for public informational purposes. This service is <strong>not affiliated with, maintained by, endorsed by, or in any way associated with</strong> Club de hockey Canadien Inc., the {{TEAM_NAME}}, the {{TEAM_NICKNAME}}, Groupe CH, the National Hockey League (NHL), or any of their member clubs.
+        This website is an independent fan resource created exclusively for public informational purposes. This service is <strong>not affiliated with, maintained by, endorsed by, or in any way associated with</strong> {{OWNERSHIP_GROUP}}, the {{TEAM_NAME}}, the {{TEAM_NICKNAME}}, the National Hockey League (NHL), or any of their member clubs.
       </p>
       <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
-        All team names ({{TEAM_NAME}}, {{TEAM_NICKNAME}}), schedules, network titles (TSN, {{REGIONAL_FR}}, Sportsnet, TVA Sports, Amazon Prime Video), and trademarks referenced herein are used strictly for descriptive and nominative identification under applicable intellectual property laws.
+        All team names ({{TEAM_NAME}}, {{TEAM_NICKNAME}}), schedules, network titles ({{REGIONAL_EN}}{{REGIONAL_FR_DISCLAIMER}}, Sportsnet, TVA Sports, Amazon Prime Video), and trademarks referenced herein are used strictly for descriptive and nominative identification under applicable intellectual property laws.
       </p>
     </div>
   </footer>
@@ -569,7 +613,7 @@
     <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-800 text-center space-y-4">
       
       <div class="w-16 h-16 rounded-2xl bg-teamSecondary border-2 border-teamPrimary flex items-center justify-center font-teko text-3xl font-bold text-white mx-auto shadow-md">
-        MTL
+        {{TEAM_ID}}
       </div>
 
       <div>
