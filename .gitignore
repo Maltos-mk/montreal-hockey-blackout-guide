@@ -1,5 +1,9 @@
-
-# Scratch files and scripts
+node_modules/
+build*/
+scratch/
+test-results/
+.env
+.DS_Store
 update_marketing.js
 update_projection.js
 rewrite_git_history.sh

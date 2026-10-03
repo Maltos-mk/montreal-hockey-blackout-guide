@@ -1,10 +1,10 @@
 {
-  "name": "Ottawa Senators Blackout Guide",
-  "short_name": "OTT",
+  "name": "Edmonton Oilers Blackout Guide",
+  "short_name": "EDM",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#8b1623",
-  "theme_color": "#c52032",
+  "background_color": "#02122A",
+  "theme_color": "#041E42",
   "icons": [
     {
       "src": "shared/favicon-192x192.png",

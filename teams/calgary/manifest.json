@@ -1,10 +1,10 @@
 {
-  "name": "Ottawa Senators Blackout Guide",
-  "short_name": "OTT",
+  "name": "Calgary Flames Blackout Guide",
+  "short_name": "CGY",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#8b1623",
-  "theme_color": "#c52032",
+  "background_color": "#8A0B20",
+  "theme_color": "#C8102E",
   "icons": [
     {
       "src": "shared/favicon-192x192.png",
