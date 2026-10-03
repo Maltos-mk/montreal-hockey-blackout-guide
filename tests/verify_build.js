@@ -84,15 +84,15 @@ function runTest(team, id, networks, game, state, expectedCanEN, expectedCanFR) 
 }
 
 const mtlNetworks = { regionalEN: 'TSN2', regionalFR: 'RDS', nationalEN: ['Sportsnet', 'Prime Video'], nationalFR: ['TVA Sports'] };
-const mtlGameTSN = { netEN: 'TSN2', netFR: 'RDS', type: 'regional_mtl' };
+const mtlGameTSN = { netEN: 'TSN2', netFR: 'RDS', type: 'regional' };
 
 runTest('Montreal', 'MTL', mtlNetworks, mtlGameTSN, { region: 'on_east_qc_atl', subs: { regional_en: true, regional_fr: true } }, true, true);
 runTest('Montreal', 'MTL', mtlNetworks, mtlGameTSN, { region: 'mb', subs: { regional_en: true, regional_fr: true, sn_prem: false, centre_ice_fr: false } }, false, false);
 runTest('Montreal', 'MTL', mtlNetworks, mtlGameTSN, { region: 'mb', subs: { sn_prem: true, centre_ice_fr: true } }, true, true);
 
 const torNetworks = { regionalEN: 'TSN4', regionalFR: null, nationalEN: ['Sportsnet', 'Prime Video'], nationalFR: ['TVA Sports'] };
-runTest('Toronto', 'TOR', torNetworks, { netEN: 'TSN4' }, { region: 'mb', subs: { regional_en: true, sn_prem: false } }, false, undefined);
-runTest('Toronto', 'TOR', torNetworks, { netEN: 'TSN4' }, { region: 'mb', subs: { regional_en: true, sn_prem: true } }, true, undefined);
+runTest('Toronto', 'TOR', torNetworks, { netEN: 'TSN4', type: 'regional' }, { region: 'mb', subs: { regional_en: true, sn_prem: false } }, false, undefined);
+runTest('Toronto', 'TOR', torNetworks, { netEN: 'TSN4', type: 'regional' }, { region: 'mb', subs: { regional_en: true, sn_prem: true } }, true, undefined);
 
 if (errors > 0) {
   console.error(`\n🚨 Build verification failed with ${errors} errors. Deployment aborted.`);
