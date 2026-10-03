@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maltos-mk.github.io/calgary-hockey-blackout-guide/sitemap.xml
+Sitemap: https://hockeyblackouts.ca/calgary/sitemap.xml

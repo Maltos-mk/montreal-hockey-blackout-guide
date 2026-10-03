@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maltos-mk.github.io/toronto-hockey-blackout-guide/sitemap.xml
+Sitemap: https://hockeyblackouts.ca/toronto/sitemap.xml
