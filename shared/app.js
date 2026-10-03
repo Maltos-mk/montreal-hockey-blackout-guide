@@ -68,7 +68,8 @@ const state = {
       statusFilter: 'all',
       channelFilter: 'all',
       subs: {
-        sn: false,
+        sn_cable: false,
+        sn_plus: false,
         sn_prem: false,
         centre_ice_fr: false,
         regional_en: false,
@@ -109,7 +110,7 @@ function loadStateFromHash() {
       if (params.has('statusFilter')) state.statusFilter = params.get('statusFilter');
       if (params.has('channelFilter')) state.channelFilter = params.get('channelFilter');
       
-      const subKeys = ['sn', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
+      const subKeys = ['sn_cable', 'sn_plus', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
       subKeys.forEach(k => {
         if (params.has(k)) state.subs[k] = params.get(k) === 'true';
       });
@@ -705,7 +706,7 @@ function renderAdviceCards(state) {
         render();
       });
     }
-    ['sn', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'].forEach(key => {
+    ['sn_cable', 'sn_plus', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'].forEach(key => {
         const el = document.getElementById(`sub_${key}`);
         if (el) {
           el.checked = state.subs[key];
