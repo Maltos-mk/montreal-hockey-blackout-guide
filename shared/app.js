@@ -160,8 +160,8 @@ function evaluateGame(g, state) {
       else { reasonEN = 'Requires Amazon Prime Video'; }
     }
   } else if (g.netEN) {
-    let matchesNat = g.type === 'national' || g.netEN === 'Prime Video' || g.netEN.includes('CBC') || g.netEN.includes('CityTV');
-    let matchesReg = g.type === 'regional';
+    let matchesNat = g.typeEN === 'national' || g.netEN === 'Prime Video' || g.netEN.includes('CBC') || g.netEN.includes('CityTV');
+    let matchesReg = g.typeEN === 'regional';
     
     // Evaluate Regional
     let canReg = false, reasonReg = '';

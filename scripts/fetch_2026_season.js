@@ -76,26 +76,27 @@ async function run() {
       
       let netEN = '';
       let netFR = '';
-      let type = 'regional';
+      
       
       const broadcasts = g.tvBroadcasts || [];
       const canadianNets = broadcasts.filter(b => b.countryCode === 'CA').map(b => networkMap[b.network] || b.network);
       
+      let typeEN = 'regional';
+      let typeFR = 'regional';
       if (canadianNets.includes('Prime Video')) {
         netEN = 'Prime Video';
         netFR = 'Prime Video';
-        type = 'prime_wednesday';
+        typeEN = 'national';
+        typeFR = 'national';
       } else {
         let enNets = canadianNets.filter(n => !n.includes('RDS') && !n.includes('TVA'));
         let frNets = canadianNets.filter(n => n.includes('RDS') || n.includes('TVA'));
         
-        // Check if there are national networks
-        const hasNationalEN = enNets.some(n => n === 'Sportsnet' || n === 'Sportsnet One' || n === 'Sportsnet 360' || n === 'CBC' || n === 'CityTV');
+        const hasNationalEN = enNets.some(n => n === 'Sportsnet' || n === 'Sportsnet One' || n === 'Sportsnet 360' || n === 'CBC' || n === 'CityTV' || n === 'SN+');
         const hasNationalFR = frNets.some(n => n.includes('TVA Sports'));
         
-        if (hasNationalEN || hasNationalFR) {
-            type = 'national';
-        }
+        if (hasNationalEN) typeEN = 'national';
+        if (hasNationalFR) typeFR = 'national';
         
         // Fallbacks for regional gaps
         if (enNets.length === 0) {
@@ -126,7 +127,8 @@ async function run() {
         venue: g.venue.default,
         netEN: netEN,
         netFR: netFR,
-        type: type
+        typeEN: typeEN,
+        typeFR: typeFR
       });
     }
     
