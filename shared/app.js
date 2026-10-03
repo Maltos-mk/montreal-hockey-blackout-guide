@@ -353,7 +353,45 @@ function renderAdviceCards(state) {
 
     
 
-    function render() {
+    
+function syncRegionalCheckbox() {
+  const regCb = document.getElementById('sub_regional_en');
+  const regText = regCb ? regCb.nextElementSibling.querySelector('p.text-sm') : null;
+  if (!regCb || !window.TEAM_DATA) return;
+  
+  const primaryTeamId = window.TEAM_DATA.team.id;
+  const localTeams = broadcastZones[state.region] || [];
+  const isPrimaryInMarket = localTeams.includes(primaryTeamId);
+  const isSnRegional = window.TEAM_DATA.team.networks.regionalEN.includes('Sportsnet');
+  
+  if (isPrimaryInMarket && isSnRegional) {
+    if (state.subs.sn_cable || state.subs.sn_plus) {
+      regCb.checked = true;
+      state.subs.regional_en = true;
+      regCb.disabled = true;
+      if (regText) {
+        if (!regText.dataset.orig) regText.dataset.orig = regText.innerText;
+        regText.innerText = regText.dataset.orig + " (Included)";
+        regText.classList.add('text-emerald-600');
+      }
+    } else {
+      regCb.disabled = false;
+      if (regText && regText.dataset.orig) {
+        regText.innerText = regText.dataset.orig;
+        regText.classList.remove('text-emerald-600');
+      }
+    }
+  } else {
+    regCb.disabled = false;
+    if (regText && regText.dataset.orig) {
+      regText.innerText = regText.dataset.orig;
+      regText.classList.remove('text-emerald-600');
+    }
+  }
+}
+
+function render() {
+  syncRegionalCheckbox();
       const t = (str) => window.i18n ? window.i18n.t(str) : str;
       const getVs = (vs) => {
         let clean = vs.replace('vs ', '').replace('@ ', '').replace(' (Split Squad)', '');
