@@ -114,8 +114,8 @@ dataFiles.forEach(file => {
     if (t.id === team.id) {
       topNavLinks += `<span class="px-3 py-1 rounded-md text-white font-bold bg-white/20 shadow-sm border border-white/10">${t.id}</span>`;
     } else {
-      topNavLinks += `<a href="https://maltos-mk.github.io/${t.repoName}/" data-umami-event="nav-${t.id.toLowerCase()}" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">${t.id}</a>`;
-      footerNavLinks += `<a href="https://maltos-mk.github.io/${t.repoName}/" data-umami-event="crosslink-${t.id.toLowerCase()}" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 border border-slate-200 dark:border-slate-700 transition font-bold">${t.name}</a>\n`;
+      topNavLinks += `<a href="https://hockeyblackouts.ca/${t.name.split(' ')[0].toLowerCase()}/" data-umami-event="nav-${t.id.toLowerCase()}" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">${t.id}</a>`;
+      footerNavLinks += `<a href="https://hockeyblackouts.ca/${t.name.split(' ')[0].toLowerCase()}/" data-umami-event="crosslink-${t.id.toLowerCase()}" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 border border-slate-200 dark:border-slate-700 transition font-bold">${t.name}</a>\n`;
     }
   });
   html = html.replace(/\{\{NETWORK_LINKS\}\}/g, topNavLinks);
@@ -144,11 +144,11 @@ dataFiles.forEach(file => {
   fs.writeFileSync(path.join(teamDir, 'index.html'), html);
 
   // SEO: Generate robots.txt
-  const robots = `User-agent: *\nAllow: /\n\nSitemap: https://maltos-mk.github.io/${repoName}/sitemap.xml`;
+  const robots = `User-agent: *\nAllow: /\n\nSitemap: https://hockeyblackouts.ca/${team.name.split(' ')[0].toLowerCase()}/sitemap.xml`;
   fs.writeFileSync(path.join(teamDir, 'robots.txt'), robots);
 
   // SEO: Generate sitemap.xml
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>https://maltos-mk.github.io/${repoName}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n</urlset>`;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>https://hockeyblackouts.ca/${team.name.split(' ')[0].toLowerCase()}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n</urlset>`;
   fs.writeFileSync(path.join(teamDir, 'sitemap.xml'), sitemap);
 
   
