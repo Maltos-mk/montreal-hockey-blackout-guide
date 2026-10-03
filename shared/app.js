@@ -171,7 +171,7 @@ function evaluateGame(g, state) {
         if (state.subs.espn) { canReg = true; reasonReg = 'Watch on ESPN+ / NHL.tv'; }
         else { reasonReg = 'Requires ESPN+ / NHL.tv'; }
       } else if (isPrimaryInMarket) {
-        if (state.subs.regional_en) { canReg = true; reasonReg = `Watch on ${g.netEN}`; }
+        if (state.subs.regional_en || ((g.netEN.includes('Sportsnet') || g.netEN.includes('SNW') || g.netEN.includes('SNP')) && (state.subs.sn_cable || state.subs.sn_plus))) { canReg = true; reasonReg = `Watch on ${g.netEN}`; }
         else { reasonReg = `Requires ${g.netEN}`; }
       } else if (isOpponentInMarket) {
         if (state.subs.regional_en || state.subs.sn_cable || state.subs.sn_plus) {
@@ -215,7 +215,7 @@ function evaluateGame(g, state) {
       if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
       else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
     } else if (isPrimaryInMarket) {
-      if (state.subs.regional_en) { canEN = true; reasonEN = `Watch on ${g.netEN}`; }
+      if (state.subs.regional_en || ((g.netEN.includes('Sportsnet') || g.netEN.includes('SNW') || g.netEN.includes('SNP')) && (state.subs.sn_cable || state.subs.sn_plus))) { canEN = true; reasonEN = `Watch on ${g.netEN}`; }
       else { reasonEN = `Requires ${g.netEN}`; }
     } else if (isOpponentInMarket) {
       if (state.subs.regional_en || state.subs.sn_cable || state.subs.sn_plus) {
