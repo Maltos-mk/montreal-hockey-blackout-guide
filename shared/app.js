@@ -183,7 +183,7 @@ function evaluateGame(g, state) {
         if (state.subs.regional_en || ((g.netEN.includes('Sportsnet') || g.netEN.includes('SNW') || g.netEN.includes('SNP')) && (state.subs.sn_cable || state.subs.sn_plus))) { canReg = true; reasonReg = `Watch on ${g.netEN}`; }
         else { reasonReg = `Requires ${g.netEN}`; }
       } else if (isOpponentInMarket) {
-        if (state.subs.regional_en || state.subs.sn_cable || state.subs.sn_plus) {
+        if (state.subs.regional_en || state.subs.sn_cable || state.subs.sn_plus || state.subs.sn_prem) {
           canReg = true; reasonReg = "Watch on local opponent feed";
         } else {
           reasonReg = "Requires Sportsnet/TSN for opponent feed";
