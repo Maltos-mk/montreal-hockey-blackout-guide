@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
+const { execSync } = require('child_process');
+execSync('node scripts/build.js');
 const BUILD_DIR = 'build';
 
 if (fs.existsSync(BUILD_DIR)) {
@@ -43,8 +45,7 @@ teams.forEach(team => {
   
   
   // Update canonicals and sitemap
-  html = html.replace(/href="https:\/\/maltos-mk\.github\.io\/[^"]+"/g, `href="https://hockeyblackouts.ca/${team.dir}/"`);
-  
+    
   if (fs.existsSync(path.join(teamBuildDir, 'sitemap.xml'))) {
     let sitemap = fs.readFileSync(path.join(teamBuildDir, 'sitemap.xml'), 'utf-8');
     sitemap = sitemap.replace(/https:\/\/maltos-mk\.github\.io\/[^</]+/g, `https://hockeyblackouts.ca/${team.dir}/`);
