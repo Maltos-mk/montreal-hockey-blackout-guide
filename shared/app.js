@@ -45,8 +45,17 @@ async function initApp() {
   
   try {
     const res = await fetch(window.TEAM_DATA_URL);
+
     window.TEAM_DATA = await res.json();
     games = window.TEAM_DATA.schedule;
+    
+    // Correctly initialize default region from async data if not in hash
+    if (!window.location.hash || !new URLSearchParams(window.location.hash.substring(1)).has('region')) {
+      state.region = window.TEAM_DATA.team.marketRegion.regionCode;
+      const rSel = document.getElementById('regionSelect');
+      if (rSel) rSel.value = state.region;
+    }
+
     
     // Update basic UI elements that might have team name
     document.querySelectorAll('.team-nickname-text').forEach(el => el.textContent = window.TEAM_DATA.team.nickname);
@@ -364,6 +373,7 @@ function syncRegionalCheckbox() {
   const isPrimaryInMarket = localTeams.includes(primaryTeamId);
   const isSnRegional = window.TEAM_DATA.team.networks.regionalEN.includes('Sportsnet');
   
+  console.log("state.region:", state.region, "isPrimaryInMarket:", isPrimaryInMarket, "isSnRegional:", isSnRegional);
   if (isPrimaryInMarket && isSnRegional) {
     if (state.subs.sn_cable || state.subs.sn_plus) {
       regCb.checked = true;
