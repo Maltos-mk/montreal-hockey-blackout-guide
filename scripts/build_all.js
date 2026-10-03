@@ -57,3 +57,21 @@ teams.forEach(team => {
 const splashHtml = fs.readFileSync('templates/splash.html', 'utf-8');
 fs.writeFileSync(path.join(BUILD_DIR, 'index.html'), splashHtml);
 console.log('Build complete.');
+
+let masterSitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://hockeyblackouts.ca/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+`;
+teams.forEach(team => {
+  masterSitemap += `  <url>
+    <loc>https://hockeyblackouts.ca/${team.dir}/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>\n`;
+});
+masterSitemap += '</urlset>';
+fs.writeFileSync(path.join(BUILD_DIR, 'sitemap.xml'), masterSitemap);
