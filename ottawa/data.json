@@ -36,7 +36,8 @@
       "venue": "Scotiabank Arena",
       "netEN": "Sportsnet",
       "netFR": "RDS",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "regional"
     },
     {
       "id": 2026020041,
@@ -48,7 +49,8 @@
       "venue": "TD Garden",
       "netEN": "SN+",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020046,
@@ -60,7 +62,8 @@
       "venue": "Little Caesars Arena",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020059,
@@ -72,7 +75,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDSI",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020076,
@@ -84,7 +88,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet One",
       "netFR": "RDS",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "regional"
     },
     {
       "id": 2026020088,
@@ -96,7 +101,8 @@
       "venue": "Prudential Center",
       "netEN": "SN+",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020096,
@@ -108,7 +114,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDSI",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020109,
@@ -120,7 +127,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020128,
@@ -132,7 +140,8 @@
       "venue": "Xfinity Mobile Arena",
       "netEN": "Sportsnet One",
       "netFR": "RDS",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "regional"
     },
     {
       "id": 2026020153,
@@ -144,7 +153,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Prime Video",
       "netFR": "Prime Video",
-      "type": "prime_wednesday"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020156,
@@ -156,7 +166,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020171,
@@ -168,7 +179,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet East",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "regional",
+      "typeFR": "national"
     },
     {
       "id": 2026020196,
@@ -180,7 +192,8 @@
       "venue": "T-Mobile Arena",
       "netEN": "TSN5",
       "netFR": "RDSI",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020212,
@@ -192,7 +205,8 @@
       "venue": "Crypto.com Arena",
       "netEN": "TSN5",
       "netFR": "RDSI",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020222,
@@ -204,7 +218,8 @@
       "venue": "SAP Center at San Jose",
       "netEN": "TSN5",
       "netFR": "RDSI",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020231,
@@ -216,7 +231,8 @@
       "venue": "Honda Center",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020247,
@@ -228,7 +244,8 @@
       "venue": "KeyBank Center",
       "netEN": "Prime Video",
       "netFR": "Prime Video",
-      "type": "prime_wednesday"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020269,
@@ -240,7 +257,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet One",
       "netFR": "RDS",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "regional"
     },
     {
       "id": 2026020288,
@@ -252,7 +270,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020301,
@@ -264,7 +283,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020317,
@@ -276,7 +296,8 @@
       "venue": "PPG Paints Arena",
       "netEN": "Sportsnet One",
       "netFR": "TVA Sports 2",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020341,
@@ -288,7 +309,8 @@
       "venue": "Canada Life Centre",
       "netEN": "TSN5, TSN3",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020348,
@@ -300,7 +322,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020366,
@@ -312,7 +335,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet One",
       "netFR": "RDS",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "regional"
     },
     {
       "id": 2026020380,
@@ -324,7 +348,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "SN+",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "national",
+      "typeFR": "regional"
     },
     {
       "id": 2026020389,
@@ -336,7 +361,8 @@
       "venue": "Amerant Bank Arena",
       "netEN": "TSN5",
       "netFR": "RDSI",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020404,
@@ -348,7 +374,8 @@
       "venue": "Benchmark International Arena",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020421,
@@ -360,7 +387,8 @@
       "venue": "Lenovo Center",
       "netEN": "Sportsnet East",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "regional",
+      "typeFR": "national"
     },
     {
       "id": 2026020430,
@@ -372,7 +400,8 @@
       "venue": "Bridgestone Arena",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020449,
@@ -384,7 +413,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020469,
@@ -396,7 +426,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet East",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "regional",
+      "typeFR": "national"
     },
     {
       "id": 2026020478,
@@ -408,7 +439,8 @@
       "venue": "Centre Bell",
       "netEN": "TSN5, TSN2",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "regional",
+      "typeFR": "national"
     },
     {
       "id": 2026020487,
@@ -420,7 +452,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020501,
@@ -432,7 +465,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020520,
@@ -444,7 +478,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020531,
@@ -456,7 +491,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020560,
@@ -468,7 +504,8 @@
       "venue": "PSD Bank Dome",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020577,
@@ -480,7 +517,8 @@
       "venue": "PSD Bank Dome",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020617,
@@ -492,7 +530,8 @@
       "venue": "UBS Arena",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020627,
@@ -504,7 +543,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDSI",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020642,
@@ -516,7 +556,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020658,
@@ -528,7 +569,8 @@
       "venue": "Capital One Arena",
       "netEN": "Sportsnet East",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "regional",
+      "typeFR": "national"
     },
     {
       "id": 2026020686,
@@ -540,7 +582,8 @@
       "venue": "Delta Center",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020691,
@@ -552,7 +595,8 @@
       "venue": "Ball Arena",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020705,
@@ -564,7 +608,8 @@
       "venue": "Enterprise Center",
       "netEN": "Sportsnet",
       "netFR": "RDS",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "regional"
     },
     {
       "id": 2026020734,
@@ -576,7 +621,8 @@
       "venue": "American Airlines Center",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020746,
@@ -588,7 +634,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5, TSN3",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020759,
@@ -600,7 +647,8 @@
       "venue": "Benchmark International Arena",
       "netEN": "Sportsnet",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020784,
@@ -612,7 +660,8 @@
       "venue": "Amerant Bank Arena",
       "netEN": "SN+",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020794,
@@ -624,7 +673,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Prime Video",
       "netFR": "Prime Video",
-      "type": "prime_wednesday"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020813,
@@ -636,7 +686,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020832,
@@ -648,7 +699,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "SN+",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020849,
@@ -660,7 +712,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020870,
@@ -672,7 +725,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet One",
       "netFR": "TVA Sports 2",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020897,
@@ -684,7 +738,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020903,
@@ -696,7 +751,8 @@
       "venue": "Nationwide Arena",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020918,
@@ -708,7 +764,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020934,
@@ -720,7 +777,8 @@
       "venue": "Grand Casino Arena",
       "netEN": "SN+",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026020950,
@@ -732,7 +790,8 @@
       "venue": "Climate Pledge Arena",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020959,
@@ -744,7 +803,8 @@
       "venue": "Rogers Arena",
       "netEN": "TSN5, Sportsnet Pacific",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020984,
@@ -756,7 +816,8 @@
       "venue": "Scotiabank Saddledome",
       "netEN": "TSN5, Sportsnet West",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026020988,
@@ -768,7 +829,8 @@
       "venue": "Rogers Place",
       "netEN": "SN+",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026021004,
@@ -780,7 +842,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021012,
@@ -792,7 +855,8 @@
       "venue": "KeyBank Center",
       "netEN": "Sportsnet",
       "netFR": "RDS",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "regional"
     },
     {
       "id": 2026021045,
@@ -804,7 +868,8 @@
       "venue": "Prudential Center",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021058,
@@ -816,7 +881,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021073,
@@ -828,7 +894,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026021085,
@@ -840,7 +907,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021095,
@@ -852,7 +920,8 @@
       "venue": "PPG Paints Arena",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021107,
@@ -864,7 +933,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021126,
@@ -876,7 +946,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet East, Sportsnet One",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026021136,
@@ -888,7 +959,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5, Sportsnet Pacific",
       "netFR": "RDSI",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021148,
@@ -900,7 +972,8 @@
       "venue": "Madison Square Garden",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021162,
@@ -912,7 +985,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS2",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021179,
@@ -924,7 +998,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet East",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "regional",
+      "typeFR": "national"
     },
     {
       "id": 2026021208,
@@ -936,7 +1011,8 @@
       "venue": "Centre Bell",
       "netEN": "Prime Video",
       "netFR": "Prime Video",
-      "type": "prime_wednesday"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026021211,
@@ -948,7 +1024,8 @@
       "venue": "TD Garden",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021231,
@@ -960,7 +1037,8 @@
       "venue": "Scotiabank Arena",
       "netEN": "Sportsnet",
       "netFR": "TVA Sports 2",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     },
     {
       "id": 2026021249,
@@ -972,7 +1050,8 @@
       "venue": "Little Caesars Arena",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021273,
@@ -984,7 +1063,8 @@
       "venue": "UBS Arena",
       "netEN": "Sportsnet One",
       "netFR": "RDS",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "regional"
     },
     {
       "id": 2026021292,
@@ -996,7 +1076,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021313,
@@ -1008,7 +1089,8 @@
       "venue": "Lenovo Center",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021316,
@@ -1020,7 +1102,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
       "netFR": "RDS",
-      "type": "regional"
+      "typeEN": "regional",
+      "typeFR": "regional"
     },
     {
       "id": 2026021338,
@@ -1032,7 +1115,8 @@
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet",
       "netFR": "TVA Sports",
-      "type": "national"
+      "typeEN": "national",
+      "typeFR": "national"
     }
   ]
 }
