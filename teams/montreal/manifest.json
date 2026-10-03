@@ -1,16 +1,15 @@
 {
-  "name": "Montreal Hockey Broadcast & Blackout Guide",
-  "short_name": "Montreal Guide",
-  "description": "Independent Montreal Canadiens broadcast schedule and regional blackout calculator.",
-  "start_url": "./",
+  "name": "Montreal Canadiens Blackout Guide",
+  "short_name": "MTL",
+  "start_url": ".",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#192168",
+  "background_color": "#871420",
+  "theme_color": "#AF1E2D",
   "icons": [
     {
-      "src": "favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "shared/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
     }
   ]
 }
