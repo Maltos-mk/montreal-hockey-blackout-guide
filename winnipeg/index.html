@@ -145,7 +145,7 @@
       }
     }
   </script>
-  <link rel="stylesheet" href="../shared/app.css?v=1791056500385">
+  <link rel="stylesheet" href="../shared/app.css?v=1791059087832">
 
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
@@ -253,18 +253,26 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="subsList">
             
             <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
-              <input type="checkbox" id="sub_sn" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <input type="checkbox" id="sub_sn_cable" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
-                <p class="text-sm font-semibold">Sportsnet (Cable) / SN+ Standard</p>
-                <p class="text-[11px] text-slate-500">National games on SN (No out-of-market regional)</p>
+                <p class="text-sm font-semibold">Sportsnet (Linear TV Cable)</p>
+                <p class="text-[10px] text-slate-500 font-medium">Bell, Telus, Shaw (Excludes SN+ app exclusives)</p>
               </div>
             </label>
 
             <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_sn_plus" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">Sportsnet+ Standard (Streaming)</p>
+                <p class="text-[10px] text-slate-500 font-medium">Or Rogers Cable subscribers</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition sm:col-span-2">
               <input type="checkbox" id="sub_sn_prem" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
-                <p class="text-sm font-semibold">Sportsnet+ Premium (or Centre Ice)</p>
-                <p class="text-[11px] text-slate-500">Official out-of-market regional package</p>
+                <p class="text-sm font-semibold">Sportsnet+ PREMIUM / NHL Centre Ice</p>
+                <p class="text-[10px] text-slate-500 font-medium">Out-of-market regional package</p>
               </div>
             </label>
 
@@ -634,9 +642,9 @@
   </div>
 
   <script>
-  window.TEAM_DATA_URL = "data.json?v=1791056500385?v=2";
+  window.TEAM_DATA_URL = "data.json?v=1791059087832?v=2";
 </script>
-<script src="../shared/app.js?v=1791056500385?v=1790776244"></script>
+<script src="../shared/app.js?v=1791059087832?v=1790776244"></script>
 
 </body>
 </html>
