@@ -31,6 +31,8 @@ jobs:
           cp -r shared build/
           cp -r data/mtl.json build/data.json
           cp -r teams/montreal/* build/
+          cp LICENSE build/
+          cp README.md build/
           
           # Fix paths to be root-relative for the standalone deployment
           sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
@@ -62,6 +64,8 @@ jobs:
           cp -r shared build/
           cp -r data/tor.json build/data.json
           cp -r teams/toronto/* build/
+          cp LICENSE build/
+          cp README.md build/
           
           # Fix paths
           sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
@@ -97,6 +101,8 @@ jobs:
           cp -r shared build/
           cp -r data/ott.json build/data.json
           cp -r teams/ottawa/* build/
+          cp LICENSE build/
+          cp README.md build/
           
           # Fix paths
           sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
@@ -131,6 +137,8 @@ jobs:
           cp -r shared build/
           cp -r data/van.json build/data.json
           cp -r teams/vancouver/* build/
+          cp LICENSE build/
+          cp README.md build/
           
           # Fix paths
           sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
@@ -165,6 +173,8 @@ jobs:
           cp -r shared build/
           cp -r data/cgy.json build/data.json
           cp -r teams/calgary/* build/
+          cp LICENSE build/
+          cp README.md build/
           
           # Fix paths
           sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
@@ -199,6 +209,8 @@ jobs:
           cp -r shared build/
           cp -r data/edm.json build/data.json
           cp -r teams/edmonton/* build/
+          cp LICENSE build/
+          cp README.md build/
           
           # Fix paths
           sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
@@ -233,6 +245,8 @@ jobs:
           cp -r shared build/
           cp -r data/wpg.json build/data.json
           cp -r teams/winnipeg/* build/
+          cp LICENSE build/
+          cp README.md build/
           
           # Fix paths
           sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
