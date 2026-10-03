@@ -744,7 +744,7 @@
       "venue": "Rogers Arena",
       "netEN": "TSN5, Sportsnet Pacific",
       "netFR": "RDS2",
-      "type": "national"
+      "type": "regional"
     },
     {
       "id": 2026020984,
@@ -756,7 +756,7 @@
       "venue": "Scotiabank Saddledome",
       "netEN": "TSN5, Sportsnet West",
       "netFR": "RDS",
-      "type": "national"
+      "type": "regional"
     },
     {
       "id": 2026020988,
@@ -888,7 +888,7 @@
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5, Sportsnet Pacific",
       "netFR": "RDSI",
-      "type": "national"
+      "type": "regional"
     },
     {
       "id": 2026021148,

@@ -119,3 +119,139 @@ jobs:
           destination-repository-name: 'ottawa-hockey-blackout-guide'
           user-email: 'bot@maltos-mk.com'
           target-branch: main
+
+  deploy-vancouver:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Prepare Vancouver Build
+        run: |
+          mkdir build
+          cp -r shared build/
+          cp -r data/van.json build/data.json
+          cp -r teams/vancouver/* build/
+          
+          # Fix paths
+          sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
+          sed -i 's|\.\./\.\./data/van.json|data.json|g' build/index.html
+          
+          # Inject cache-busters into HTML assets so PWAs force update
+          TIMESTAMP=$(date +%s)
+          sed -i "s|shared/app.css|shared/app.css?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|shared/app.js|shared/app.js?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|shared/i18n.js|shared/i18n.js?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|data.json|data.json?v=$TIMESTAMP|g" build/index.html
+          
+      - name: Deploy Vancouver to Separate Repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'build'
+          destination-github-username: 'Maltos-mk'
+          destination-repository-name: 'vancouver-hockey-blackout-guide'
+          user-email: 'bot@maltos-mk.com'
+          target-branch: main
+
+  deploy-calgary:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Prepare Calgary Build
+        run: |
+          mkdir build
+          cp -r shared build/
+          cp -r data/cgy.json build/data.json
+          cp -r teams/calgary/* build/
+          
+          # Fix paths
+          sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
+          sed -i 's|\.\./\.\./data/cgy.json|data.json|g' build/index.html
+          
+          # Inject cache-busters into HTML assets so PWAs force update
+          TIMESTAMP=$(date +%s)
+          sed -i "s|shared/app.css|shared/app.css?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|shared/app.js|shared/app.js?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|shared/i18n.js|shared/i18n.js?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|data.json|data.json?v=$TIMESTAMP|g" build/index.html
+          
+      - name: Deploy Calgary to Separate Repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'build'
+          destination-github-username: 'Maltos-mk'
+          destination-repository-name: 'calgary-hockey-blackout-guide'
+          user-email: 'bot@maltos-mk.com'
+          target-branch: main
+
+  deploy-edmonton:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Prepare Edmonton Build
+        run: |
+          mkdir build
+          cp -r shared build/
+          cp -r data/edm.json build/data.json
+          cp -r teams/edmonton/* build/
+          
+          # Fix paths
+          sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
+          sed -i 's|\.\./\.\./data/edm.json|data.json|g' build/index.html
+          
+          # Inject cache-busters into HTML assets so PWAs force update
+          TIMESTAMP=$(date +%s)
+          sed -i "s|shared/app.css|shared/app.css?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|shared/app.js|shared/app.js?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|shared/i18n.js|shared/i18n.js?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|data.json|data.json?v=$TIMESTAMP|g" build/index.html
+          
+      - name: Deploy Edmonton to Separate Repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'build'
+          destination-github-username: 'Maltos-mk'
+          destination-repository-name: 'edmonton-hockey-blackout-guide'
+          user-email: 'bot@maltos-mk.com'
+          target-branch: main
+
+  deploy-winnipeg:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Prepare Winnipeg Build
+        run: |
+          mkdir build
+          cp -r shared build/
+          cp -r data/wpg.json build/data.json
+          cp -r teams/winnipeg/* build/
+          
+          # Fix paths
+          sed -i 's|\.\./\.\./shared/|shared/|g' build/index.html
+          sed -i 's|\.\./\.\./data/wpg.json|data.json|g' build/index.html
+          
+          # Inject cache-busters into HTML assets so PWAs force update
+          TIMESTAMP=$(date +%s)
+          sed -i "s|shared/app.css|shared/app.css?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|shared/app.js|shared/app.js?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|shared/i18n.js|shared/i18n.js?v=$TIMESTAMP|g" build/index.html
+          sed -i "s|data.json|data.json?v=$TIMESTAMP|g" build/index.html
+          
+      - name: Deploy Winnipeg to Separate Repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'build'
+          destination-github-username: 'Maltos-mk'
+          destination-repository-name: 'winnipeg-hockey-blackout-guide'
+          user-email: 'bot@maltos-mk.com'
+          target-branch: main
