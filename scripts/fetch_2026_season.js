@@ -92,10 +92,19 @@ async function run() {
         let enNets = canadianNets.filter(n => !n.includes('RDS') && !n.includes('TVA'));
         let frNets = canadianNets.filter(n => n.includes('RDS') || n.includes('TVA'));
         
-        const hasNationalEN = enNets.some(n => n === 'Sportsnet' || n === 'Sportsnet One' || n === 'Sportsnet 360' || n === 'CBC' || n === 'CityTV' || n === 'SN+');
+
+        let hasNationalEN = enNets.some(n => n === 'Sportsnet' || n === 'Sportsnet One' || n === 'Sportsnet 360' || n === 'CBC' || n === 'CityTV' || n === 'SN+');
         const hasNationalFR = frNets.some(n => n.includes('TVA Sports'));
         
+        const dateStr = convertDate(dt);
+        const isSaturday = dateStr.startsWith('Sat ');
+        // Hockey Night in Canada Rule: Any Saturday game on ANY Sportsnet channel is a National broadcast
+        if (isSaturday && enNets.some(n => n.includes('Sportsnet'))) {
+            hasNationalEN = true;
+        }
+        
         if (hasNationalEN) typeEN = 'national';
+
         if (hasNationalFR) typeFR = 'national';
         
         // Fallbacks for regional gaps
