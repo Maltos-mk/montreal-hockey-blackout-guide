@@ -85,7 +85,7 @@ dataFiles.forEach(file => {
   // Replace the data url based on the file name
   
   // Calculate regional game counts
-  const regEnCount = data.schedule.filter(g => g.netEN && g.netEN.includes(team.networks.regionalEN)).length;
+  const regEnCount = data.schedule.filter(g => g.typeEN === 'regional').length;
   const regFrCount = team.networks.regionalFR ? data.schedule.filter(g => g.netFR && g.netFR.includes(team.networks.regionalFR)).length : 0;
   
   html = html.replace(/\{\{REGIONAL_EN_COUNT\}\}/g, regEnCount);
