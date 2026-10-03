@@ -41,6 +41,16 @@ teams.forEach(team => {
   html = html.replace(/shared\/i18n\.js/g, `shared/i18n.js?v=${timestamp}`);
   html = html.replace(/data\.json/g, `data.json?v=${timestamp}`);
   
+  
+  // Update canonicals and sitemap
+  html = html.replace(/href="https:\/\/maltos-mk\.github\.io\/[^"]+"/g, `href="https://hockeyblackouts.ca/${team.dir}/"`);
+  
+  if (fs.existsSync(path.join(teamBuildDir, 'sitemap.xml'))) {
+    let sitemap = fs.readFileSync(path.join(teamBuildDir, 'sitemap.xml'), 'utf-8');
+    sitemap = sitemap.replace(/https:\/\/maltos-mk\.github\.io\/[^</]+/g, `https://hockeyblackouts.ca/${team.dir}/`);
+    fs.writeFileSync(path.join(teamBuildDir, 'sitemap.xml'), sitemap);
+  }
+
   fs.writeFileSync(path.join(teamBuildDir, 'index.html'), html);
 });
 
