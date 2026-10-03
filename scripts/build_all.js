@@ -2,7 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const { execSync } = require('child_process');
 execSync('node scripts/build.js');
 const BUILD_DIR = 'build';
 
