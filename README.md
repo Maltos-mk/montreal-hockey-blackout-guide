@@ -2,7 +2,7 @@
 
 An independent, real-time broadcast and blackout calculator for Canadian NHL fans. 
 
-This repository contains the core logic, build scripts, and templates used to generate a suite of highly-optimized Progressive Web Apps (PWAs). The engine ingests official NHL API schedule data and mathematically cross-references it against complex regional broadcast boundaries to output tailored, blackout-free viewing advice.
+The engine ingests official NHL API schedule data and mathematically cross-references it against complex regional broadcast boundaries to output tailored, blackout-free viewing advice.
 
 ## Live Production Guides
 * [Vancouver Canucks Guide](https://maltos-mk.github.io/vancouver-hockey-blackout-guide/)
@@ -13,18 +13,8 @@ This repository contains the core logic, build scripts, and templates used to ge
 * [Ottawa Senators Guide](https://maltos-mk.github.io/ottawa-hockey-blackout-guide/)
 * [Montreal Canadiens Guide](https://maltos-mk.github.io/montreal-hockey-blackout-guide/)
 
-## Architecture Overview
-* `data/`: Raw JSON schedule data pulled from the NHL API.
-* `scripts/`: Node.js build pipeline that generates the static sites.
-* `shared/`: The frontend logic (UI, Umami telemetry, evaluation engine).
-* `templates/`: The master HTML template injected with SEO-optimized publisher schema.
+## License & Copyright
+© 2026 Maltos. All Rights Reserved.
+This codebase is proprietary and is not open source. It is hosted publicly solely for deployment purposes.
 
-## Local Development
-1. Install dependencies: `npm install`
-2. Fetch latest schedules: `node scripts/fetch_2026_season.js`
-3. Generate all sites: `node scripts/build.js`
-4. Run preview server: `node scripts/serve_prod.js toronto`
-
-## License
-The codebase is open-sourced under the MIT License by Maltos. 
 *Disclaimer: Unofficial fan resource. Not affiliated with the NHL.*
