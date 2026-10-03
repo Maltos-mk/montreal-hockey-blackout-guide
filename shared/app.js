@@ -373,7 +373,6 @@ function syncRegionalCheckbox() {
   const isPrimaryInMarket = localTeams.includes(primaryTeamId);
   const isSnRegional = window.TEAM_DATA.team.networks.regionalEN.includes('Sportsnet');
   
-  console.log("state.region:", state.region, "isPrimaryInMarket:", isPrimaryInMarket, "isSnRegional:", isSnRegional);
   if (isPrimaryInMarket && isSnRegional) {
     if (state.subs.sn_cable || state.subs.sn_plus) {
       regCb.checked = true;
