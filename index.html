@@ -1,39 +1,161 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canadian NHL Blackout Guides</title>
+    <title>NHL Blackout Calculators & Broadcast Guides | Canada</title>
+    <meta name="description" content="Tired of NHL regional blackouts? Use our interactive calculators to figure out exactly which games are on Sportsnet, TSN, and Amazon Prime in your region.">
     <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f1f5f9; color: #0f172a; margin: 0; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
-        h1 { font-size: 2.5rem; margin-bottom: 1rem; font-weight: 800; tracking: -0.025em; }
-        p { font-size: 1.125rem; color: #475569; max-width: 600px; margin-bottom: 2rem; line-height: 1.6; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; width: 100%; max-width: 900px; }
-        .card { background: white; padding: 1.5rem; border-radius: 1rem; text-decoration: none; color: #0f172a; font-weight: 700; font-size: 1.25rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); transition: transform 0.2s, box-shadow 0.2s; border: 2px solid transparent; }
-        .card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); border-color: #3b82f6; color: #3b82f6; }
-        .mtl { border-top: 4px solid #AF1E2D; }
-        .tor { border-top: 4px solid #00205B; }
-        .ott { border-top: 4px solid #C52032; }
-        .van { border-top: 4px solid #00205B; }
-        .cgy { border-top: 4px solid #C8102E; }
-        .edm { border-top: 4px solid #FF4C00; }
-        .wpg { border-top: 4px solid #041E42; }
+        :root {
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+        }
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            background-color: var(--bg-page); 
+            color: var(--text-main); 
+            margin: 0; 
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        h1 { 
+            font-size: 2.75rem; 
+            margin-bottom: 1rem; 
+            font-weight: 800; 
+            letter-spacing: -0.025em; 
+            line-height: 1.1;
+        }
+        .subtitle { 
+            font-size: 1.25rem; 
+            color: var(--text-muted); 
+            max-width: 700px; 
+            margin: 0 auto; 
+        }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 1.25rem; 
+            margin-bottom: 4rem;
+        }
+        .card { 
+            background: var(--bg-card); 
+            padding: 1.5rem; 
+            border-radius: 0.75rem; 
+            text-decoration: none; 
+            color: var(--text-main); 
+            font-weight: 700; 
+            font-size: 1.25rem; 
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            transition: all 0.2s; 
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .card:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); 
+            border-color: #cbd5e1;
+        }
+        .card::after {
+            content: "→";
+            color: #94a3b8;
+            transition: transform 0.2s;
+        }
+        .card:hover::after {
+            transform: translateX(4px);
+            color: var(--text-main);
+        }
+        /* Team Colors */
+        .mtl { border-left: 6px solid #AF1E2D; }
+        .tor { border-left: 6px solid #00205B; }
+        .ott { border-left: 6px solid #C52032; }
+        .van { border-left: 6px solid #00205B; }
+        .cgy { border-left: 6px solid #C8102E; }
+        .edm { border-left: 6px solid #FF4C00; }
+        .wpg { border-left: 6px solid #041E42; }
+        
+        .content-section {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        }
+        .content-section h2 {
+            font-size: 1.75rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+        .content-section p {
+            margin-bottom: 1.25rem;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+        .content-section p:last-child {
+            margin-bottom: 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: #64748b;
+            font-size: 0.875rem;
+        }
     </style>
 </head>
 <body>
-    <h1>NHL Blackout Calculators</h1>
-    <p>Select your team below to instantly calculate which games are blacked out in your region, and exactly which networks (Sportsnet, TSN, Amazon Prime) carry the games you want to watch.</p>
-    
-    <div class="grid">
-        <a href="/montreal/" class="card mtl" data-umami-event="splash-nav" data-umami-event-team="MTL">Montreal Canadiens</a>
-        <a href="/toronto/" class="card tor" data-umami-event="splash-nav" data-umami-event-team="TOR">Toronto Maple Leafs</a>
-        <a href="/ottawa/" class="card ott" data-umami-event="splash-nav" data-umami-event-team="OTT">Ottawa Senators</a>
-        <a href="/vancouver/" class="card van" data-umami-event="splash-nav" data-umami-event-team="VAN">Vancouver Canucks</a>
-        <a href="/calgary/" class="card cgy" data-umami-event="splash-nav" data-umami-event-team="CGY">Calgary Flames</a>
-        <a href="/edmonton/" class="card edm" data-umami-event="splash-nav" data-umami-event-team="EDM">Edmonton Oilers</a>
-        <a href="/winnipeg/" class="card wpg" data-umami-event="splash-nav" data-umami-event-team="WPG">Winnipeg Jets</a>
+    <div class="container">
+        <header>
+            <h1>Canadian NHL Blackout Guides</h1>
+            <p class="subtitle">Select your team below to instantly calculate which games are blacked out in your region, and exactly which networks carry the games you want to watch.</p>
+        </header>
+        
+        <div class="grid">
+            <a href="/montreal/" class="card mtl" data-umami-event="splash-nav" data-umami-event-team="MTL">Montreal Canadiens</a>
+            <a href="/toronto/" class="card tor" data-umami-event="splash-nav" data-umami-event-team="TOR">Toronto Maple Leafs</a>
+            <a href="/ottawa/" class="card ott" data-umami-event="splash-nav" data-umami-event-team="OTT">Ottawa Senators</a>
+            <a href="/vancouver/" class="card van" data-umami-event="splash-nav" data-umami-event-team="VAN">Vancouver Canucks</a>
+            <a href="/calgary/" class="card cgy" data-umami-event="splash-nav" data-umami-event-team="CGY">Calgary Flames</a>
+            <a href="/edmonton/" class="card edm" data-umami-event="splash-nav" data-umami-event-team="EDM">Edmonton Oilers</a>
+            <a href="/winnipeg/" class="card wpg" data-umami-event="splash-nav" data-umami-event-team="WPG">Winnipeg Jets</a>
+        </div>
+
+        <div class="content-section">
+            <h2>Why are NHL games blacked out in Canada?</h2>
+            <p>If you've ever tuned in to watch your team on Sportsnet or TSN only to be met with a blank screen and a "Blackout in Effect" message, you aren't alone. The NHL's broadcasting rights in Canada are governed by a complex set of regional boundaries.</p>
+            <p>The 82-game schedule is split into two categories: <strong>National Games</strong> and <strong>Regional Games</strong>.</p>
+            <p>National games (like Hockey Night in Canada, or the new Amazon Prime Monday Night Hockey broadcasts) are available to everyone coast-to-coast without restriction. However, Regional games are strictly geofenced. For example, if a network like TSN5 owns the regional rights to the Ottawa Senators, only people physically located within the Senators' designated territory (Eastern Ontario, Quebec, Maritimes) are allowed to watch that channel.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>How this calculator works</h2>
+            <p>Figuring out exactly which channel carries the game tonight—and whether your specific TV package or streaming service (like Sportsnet+ Premium) will actually let you watch it—requires cross-referencing your physical location with the NHL's territory map.</p>
+            <p>That is exactly what these calculators do. Simply select your team above, input your province and your current subscriptions, and the algorithm will parse the entire 2026-2027 NHL broadcast schedule to mathematically calculate exactly which games you can watch, and which ones will be blacked out.</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Maltos. All Rights Reserved. Not affiliated with the NHL, Rogers Media, Bell Media, or Amazon.</p>
+        </footer>
     </div>
 </body>
 </html>
