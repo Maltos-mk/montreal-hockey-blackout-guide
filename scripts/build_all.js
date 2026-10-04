@@ -75,3 +75,4 @@ teams.forEach(team => {
 });
 masterSitemap += '</urlset>';
 fs.writeFileSync(path.join(BUILD_DIR, 'sitemap.xml'), masterSitemap);
+node scripts/qa_validator.js
