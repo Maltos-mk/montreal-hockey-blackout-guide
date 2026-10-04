@@ -17,7 +17,7 @@ dataFiles.forEach(file => {
   html = html.replace(/\{\{REPO_NAME\}\}/g, repoName);
   
   const teamDirSlug = team.name.split(' ')[0].toLowerCase();
-  html = html.replace(/\{\{TEAM_DIR\}\}/g, teamDir);
+  html = html.replace(/\{\{TEAM_DIR\}\}/g, teamDirSlug);
 
   const city = team.name.split(' ')[0];
   html = html.replace(/\{\{CITY_NAME\}\}/g, city); html = html.replace(/\{\{TEAM_ID\}\}/g, team.id);
