@@ -133,7 +133,7 @@
 
   <script>
     tailwind.config = {
-      darkMode: 'media',
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -145,7 +145,17 @@
       }
     }
   </script>
-  <link rel="stylesheet" href="../shared/app.css?v=1791073332701">
+  <link rel="stylesheet" href="../shared/app.css?v=1791073490575">
+
+
+  <script>
+    // Initialize theme based on user preference or OS setting immediately to prevent flash
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
 
 </head>
 <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
@@ -186,6 +196,11 @@
         <button onclick="shareApp()" data-umami-event="share-click" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="Share App">
           <i class="fa-solid fa-share-nodes text-emerald-300"></i>
           <span class="hidden sm:inline">Share</span>
+        </button>
+
+        
+        <button onclick="toggleTheme()" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/20 shadow-sm flex items-center justify-center transition" title="Toggle Night Mode" id="themeToggleBtn">
+          <i class="fa-solid fa-circle-half-stroke"></i>
         </button>
 
         <!-- Direct Install Modal Button -->
@@ -229,7 +244,7 @@
 
         <!-- Region Selector -->
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-300 mb-2">
             Where do you live?
           </label>
           <select id="regionSelect" class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 px-4 py-3 rounded-xl shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teamSecondary">
@@ -247,7 +262,7 @@
 
         <!-- Subscriptions Checklist -->
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-300 mb-2">
             Your Active Subscriptions & Channels:
           </label>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="subsList">
@@ -326,7 +341,7 @@
 
         <!-- Language Preference -->
         <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Language Feeds You Watch:</span>
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-300">Language Feeds You Watch:</span>
           <div class="inline-flex rounded-lg p-1 bg-slate-100 dark:bg-slate-800 text-xs font-semibold">
             <button id="lang_en" onclick="setLang('en')" class="px-3 py-1.5 rounded-md text-slate-500 hover:text-slate-800 dark:hover:text-white transition">English Only</button>
             <button id="lang_fr" onclick="setLang('fr')" class="px-3 py-1.5 rounded-md text-slate-500">French Only</button>
@@ -511,20 +526,20 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
         <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
           <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Regional Toronto Maple Leafs Games (TSN4 & )</h3>
-          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300">
             <strong>TSN4</strong> (29 English games) hold the official regional rights for the Toronto Maple Leafs. Their broadcast boundary is restricted by NHL carriage rules strictly to <strong>Ontario (West of Belleville)</strong>.
           </p>
-          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400 mt-2">
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300 mt-2">
             If you reside outside this territory, standard cable subscriptions to TSN4 will show a <strong>regional blackout screen</strong> during live Toronto Maple Leafs games. Out-of-market Leafs fans must use <strong>Sportsnet+ Premium (for online streaming)</strong> or add <strong>NHL Centre Ice (for traditional cable/satellite TV)</strong> to watch regional feeds legally. Note that NHL Centre Ice does not include an online streaming option.
           </p>
         </div>
 
         <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
           <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">National Leafs Games (Sportsnet, Prime & TVA Sports)</h3>
-          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400">
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300">
             When the Toronto Maple Leafs play on Saturday night <em>Hockey Night in Canada</em> broadcasts, <strong>Sportsnet</strong> (English) and <strong>TVA Sports</strong> (French) broadcast coast-to-coast with <strong>zero regional blackouts anywhere in Canada</strong>. Every Canadian viewer with standard cable or basic streaming packages can watch these matchups.
           </p>
-          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-400 mt-2">
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300 mt-2">
             Select regular-season Toronto Maple Leafs games stream nationally on Wednesday nights exclusively on <strong>Amazon Prime Video</strong> in English, which also carries coast-to-coast clearance with no regional blackouts.
           </p>
         </div>
@@ -576,7 +591,7 @@
       </div>
 
       <div class="py-2 flex flex-wrap items-center justify-center gap-3 text-sm">
-        <span class="font-semibold text-slate-600 dark:text-slate-400"><i class="fa-solid fa-map-location-dot mr-1"></i> More Regional Guides:</span>
+        <span class="font-semibold text-slate-600 dark:text-slate-300"><i class="fa-solid fa-map-location-dot mr-1"></i> More Regional Guides:</span>
         <a href="https://hockeyblackouts.ca/" data-umami-event="crosslink-home" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 border border-slate-200 dark:border-slate-700 transition font-bold">Home</a>
 <a href="https://hockeyblackouts.ca/calgary/" data-umami-event="crosslink-cgy" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 border border-slate-200 dark:border-slate-700 transition font-bold">Calgary Flames</a>
 <a href="https://hockeyblackouts.ca/edmonton/" data-umami-event="crosslink-edm" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 border border-slate-200 dark:border-slate-700 transition font-bold">Edmonton Oilers</a>
@@ -592,17 +607,17 @@
 
       
       <!-- About the Data -->
-      <div class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-left bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mb-6">
+      <div class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-300 max-w-2xl mx-auto text-left bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mb-6">
         <strong class="text-slate-700 dark:text-slate-300">About the Data Source:</strong> This independent blackout guide calculates watchability in real-time by cross-referencing your selected region and TV subscriptions against the official NHL API schedule. By analyzing local broadcast boundaries against network assignments (TSN4, Sportsnet, Prime Video), this tool mathematically determines whether the Toronto Maple Leafs game is in-market (watchable on standard cable) or out-of-market (requires a Premium streaming subscription) and serves accurate, tailored advice.
       </div>
 
       <p class="font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider text-[11px] pt-2">
         Non-Affiliation & Nominative Fair Use Disclaimer
       </p>
-      <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
+      <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-300">
         This website is an independent fan resource created exclusively for public informational purposes. This service is <strong>not affiliated with, maintained by, endorsed by, or in any way associated with</strong> Maple Leaf Sports & Entertainment (MLSE), the Toronto Maple Leafs, the Leafs, the National Hockey League (NHL), or any of their member clubs.
       </p>
-      <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400">
+      <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-300">
         All team names (Toronto Maple Leafs, Leafs), schedules, network titles (TSN4, Sportsnet, TVA Sports, Amazon Prime Video), and trademarks referenced herein are used strictly for descriptive and nominative identification under applicable intellectual property laws.
       </p>
     </div>
@@ -621,7 +636,7 @@
 
       <div>
         <h3 class="text-lg font-bold font-teko uppercase tracking-wide text-slate-900 dark:text-white">Add Leafs Guide to Home Screen</h3>
-        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Get full-screen, 1-tap access to live Toronto Maple Leafs blackout checks with no browser bars.</p>
+        <p class="text-xs text-slate-500 dark:text-slate-300 mt-1">Get full-screen, 1-tap access to live Toronto Maple Leafs blackout checks with no browser bars.</p>
       </div>
 
       <!-- Dynamic Action Area -->
@@ -642,9 +657,9 @@
   </div>
 
   <script>
-  window.TEAM_DATA_URL = "data.json?v=1791073332701?v=2";
+  window.TEAM_DATA_URL = "data.json?v=1791073490575?v=2";
 </script>
-<script src="../shared/app.js?v=1791073332701?v=1790776244"></script>
+<script src="../shared/app.js?v=1791073490575?v=1790776244"></script>
 
 </body>
 </html>
