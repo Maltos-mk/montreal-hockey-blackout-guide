@@ -69,6 +69,23 @@ async function initApp() {
     console.error('Failed to load team data:', err);
   }
 }
+
+const NHL_TEAMS = {
+  'ANA': 'Anaheim Ducks', 'BOS': 'Boston Bruins', 'BUF': 'Buffalo Sabres', 'CAR': 'Carolina Hurricanes',
+  'CBJ': 'Columbus Blue Jackets', 'CGY': 'Calgary Flames', 'CHI': 'Chicago Blackhawks', 'COL': 'Colorado Avalanche',
+  'DAL': 'Dallas Stars', 'DET': 'Detroit Red Wings', 'EDM': 'Edmonton Oilers', 'FLA': 'Florida Panthers',
+  'LAK': 'Los Angeles Kings', 'MIN': 'Minnesota Wild', 'MTL': 'Montreal Canadiens', 'NJD': 'New Jersey Devils',
+  'NSH': 'Nashville Predators', 'NYI': 'New York Islanders', 'NYR': 'New York Rangers', 'OTT': 'Ottawa Senators',
+  'PHI': 'Philadelphia Flyers', 'PIT': 'Pittsburgh Penguins', 'SJS': 'San Jose Sharks', 'SEA': 'Seattle Kraken',
+  'STL': 'St. Louis Blues', 'TBL': 'Tampa Bay Lightning', 'TOR': 'Toronto Maple Leafs', 'UTA': 'Utah Hockey Club',
+  'VAN': 'Vancouver Canucks', 'VGK': 'Vegas Golden Knights', 'WSH': 'Washington Capitals', 'WPG': 'Winnipeg Jets'
+};
+function getFullMatchup(teamName, vsStr, oppCode) {
+  const oppName = NHL_TEAMS[oppCode] || oppCode;
+  const isAway = vsStr.startsWith('@');
+  return isAway ? `${teamName} at ${oppName}` : `${teamName} vs ${oppName}`;
+}
+
 const state = {
       region: window.TEAM_DATA ? window.TEAM_DATA.team.marketRegion.regionCode : 'on_east_qc_atl',
       lang: 'any',
@@ -672,6 +689,8 @@ function render() {
               <div class="flex items-center gap-1.5 flex-wrap">
                 <span class="font-teko text-base font-bold text-slate-400">#${games.findIndex(orig => orig.id === g.id) + 1}</span>
                 <span class="font-bold text-sm text-slate-900 dark:text-white">${getVs(g.vs)}</span>
+   </div>
+   <div class="text-[10px] text-slate-400 dark:text-slate-500 font-medium leading-tight hidden sm:block">${getFullMatchup(window.TEAM_DATA.team.name, g.vs, g.opp)}</div>
               </div>
               <div class="text-[11px] text-slate-500">${g.date} • ${formatLocalTime(g.iso, g.time)}</div>
             </div>
