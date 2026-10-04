@@ -16,8 +16,8 @@ function validateHtml(filePath) {
   }
   
   if (errors.length > 0) {
-    console.error(\`\\n❌ QA FAILED in \${filePath}:\`);
-    errors.forEach(e => console.error(\`   - \${e}\`));
+    console.error(`\n❌ QA FAILED in ${filePath}:`);
+    errors.forEach(e => console.error(`   - ${e}`));
     process.exit(1);
   }
 }
@@ -41,4 +41,4 @@ if (fs.existsSync(teamsDir)) {
     });
 }
 
-console.log('✅ All pages passed SEO QA validation.\\n');
+console.log('✅ All pages passed SEO QA validation.');

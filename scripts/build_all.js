@@ -1,6 +1,6 @@
+const { execSync } = require("child_process");
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 execSync('node scripts/build.js');
 const BUILD_DIR = 'build';
@@ -75,5 +75,4 @@ teams.forEach(team => {
 });
 masterSitemap += '</urlset>';
 fs.writeFileSync(path.join(BUILD_DIR, 'sitemap.xml'), masterSitemap);
-const { execSync } = require('child_process');
 execSync('node scripts/qa_validator.js', { stdio: 'inherit' });
