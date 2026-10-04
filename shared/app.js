@@ -496,7 +496,7 @@ function render() {
                     ${isGameToday ? '★ Game Today' : 'Next ' + window.TEAM_DATA.team.nickname + ' Game'}
                   </span>
                   <span class="text-xs text-slate-300 font-medium">${nextGame.date} • ${formatLocalTime(nextGame.iso, nextGame.time)}</span>
-                  <span class="text-xs text-slate-400">#${nextGame.id}</span>
+                  <span class="text-xs text-slate-400 font-teko text-sm tracking-wide">Game ${games.findIndex(orig => orig.id === nextGame.id) + 1} of ${games.length}</span>
                 </div>
                 
                 <h3 class="text-xl sm:text-2xl font-black font-teko uppercase tracking-wide flex items-center gap-2">
