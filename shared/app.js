@@ -23,14 +23,14 @@ window.shareApp = async function() {
         url: window.location.href,
       });
       // Umami tracking for share
-      if (window.umami) umami.track('share-click');
+      try { umami.track('share-click'); } catch(e) {}
     } catch (err) {
       console.log('Error sharing', err);
     }
   } else {
     navigator.clipboard.writeText(window.location.href).then(() => {
       alert("Link copied to clipboard!");
-      if (window.umami) umami.track('copy-link');
+      try { umami.track('copy-link'); } catch(e) {}
     }).catch(() => {
       alert('Sharing not supported on this browser. Copy the URL from your address bar to share!');
     });
@@ -45,8 +45,17 @@ async function initApp() {
   
   try {
     const res = await fetch(window.TEAM_DATA_URL);
+
     window.TEAM_DATA = await res.json();
     games = window.TEAM_DATA.schedule;
+    
+    // Correctly initialize default region from async data if not in hash
+    if (!window.location.hash || !new URLSearchParams(window.location.hash.substring(1)).has('region')) {
+      state.region = window.TEAM_DATA.team.marketRegion.regionCode;
+      const rSel = document.getElementById('regionSelect');
+      if (rSel) rSel.value = state.region;
+    }
+
     
     // Update basic UI elements that might have team name
     document.querySelectorAll('.team-nickname-text').forEach(el => el.textContent = window.TEAM_DATA.team.nickname);
@@ -60,6 +69,23 @@ async function initApp() {
     console.error('Failed to load team data:', err);
   }
 }
+
+const NHL_TEAMS = {
+  'ANA': 'Anaheim Ducks', 'BOS': 'Boston Bruins', 'BUF': 'Buffalo Sabres', 'CAR': 'Carolina Hurricanes',
+  'CBJ': 'Columbus Blue Jackets', 'CGY': 'Calgary Flames', 'CHI': 'Chicago Blackhawks', 'COL': 'Colorado Avalanche',
+  'DAL': 'Dallas Stars', 'DET': 'Detroit Red Wings', 'EDM': 'Edmonton Oilers', 'FLA': 'Florida Panthers',
+  'LAK': 'Los Angeles Kings', 'MIN': 'Minnesota Wild', 'MTL': 'Montreal Canadiens', 'NJD': 'New Jersey Devils',
+  'NSH': 'Nashville Predators', 'NYI': 'New York Islanders', 'NYR': 'New York Rangers', 'OTT': 'Ottawa Senators',
+  'PHI': 'Philadelphia Flyers', 'PIT': 'Pittsburgh Penguins', 'SJS': 'San Jose Sharks', 'SEA': 'Seattle Kraken',
+  'STL': 'St. Louis Blues', 'TBL': 'Tampa Bay Lightning', 'TOR': 'Toronto Maple Leafs', 'UTA': 'Utah Hockey Club',
+  'VAN': 'Vancouver Canucks', 'VGK': 'Vegas Golden Knights', 'WSH': 'Washington Capitals', 'WPG': 'Winnipeg Jets'
+};
+function getFullMatchup(teamName, vsStr, oppCode) {
+  const oppName = NHL_TEAMS[oppCode] || oppCode;
+  const isAway = vsStr.startsWith('@');
+  return isAway ? `${teamName} at ${oppName}` : `${teamName} vs ${oppName}`;
+}
+
 const state = {
       region: window.TEAM_DATA ? window.TEAM_DATA.team.marketRegion.regionCode : 'on_east_qc_atl',
       lang: 'any',
@@ -68,7 +94,8 @@ const state = {
       statusFilter: 'all',
       channelFilter: 'all',
       subs: {
-        sn: false,
+        sn_cable: false,
+        sn_plus: false,
         sn_prem: false,
         centre_ice_fr: false,
         regional_en: false,
@@ -109,7 +136,7 @@ function loadStateFromHash() {
       if (params.has('statusFilter')) state.statusFilter = params.get('statusFilter');
       if (params.has('channelFilter')) state.channelFilter = params.get('channelFilter');
       
-      const subKeys = ['sn', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
+      const subKeys = ['sn_cable', 'sn_plus', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
       subKeys.forEach(k => {
         if (params.has(k)) state.subs[k] = params.get(k) === 'true';
       });
@@ -160,8 +187,8 @@ function evaluateGame(g, state) {
       else { reasonEN = 'Requires Amazon Prime Video'; }
     }
   } else if (g.netEN) {
-    let matchesNat = g.type === 'national' || g.netEN === 'Prime Video' || g.netEN.includes('CBC') || g.netEN.includes('CityTV');
-    let matchesReg = g.type === 'regional';
+    let matchesNat = g.typeEN === 'national' || g.netEN === 'Prime Video' || g.netEN.includes('CBC') || g.netEN.includes('CityTV');
+    let matchesReg = g.typeEN === 'regional';
     
     // Evaluate Regional
     let canReg = false, reasonReg = '';
@@ -170,18 +197,18 @@ function evaluateGame(g, state) {
         if (state.subs.espn) { canReg = true; reasonReg = 'Watch on ESPN+ / NHL.tv'; }
         else { reasonReg = 'Requires ESPN+ / NHL.tv'; }
       } else if (isPrimaryInMarket) {
-        if (state.subs.regional_en) { canReg = true; reasonReg = `Watch on ${g.netEN}`; }
+        if (state.subs.regional_en || ((g.netEN.includes('Sportsnet') || g.netEN.includes('SNW') || g.netEN.includes('SNP')) && (state.subs.sn_cable || state.subs.sn_plus))) { canReg = true; reasonReg = `Watch on ${g.netEN}`; }
         else { reasonReg = `Requires ${g.netEN}`; }
       } else if (isOpponentInMarket) {
-        if (state.subs.regional_en || state.subs.sn) {
+        if (state.subs.regional_en || state.subs.sn_cable || state.subs.sn_plus || state.subs.sn_prem) {
           canReg = true; reasonReg = "Watch on local opponent feed";
         } else {
           reasonReg = "Requires Sportsnet/TSN for opponent feed";
         }
       } else {
         isBlackedOutEN = true;
-        if (state.subs.sn_prem) { canReg = true; reasonReg = 'Watch on Sportsnet+ PREMIUM'; isBlackedOutEN = false; }
-        else { reasonReg = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
+        if (state.subs.sn_prem) { canReg = true; reasonReg = 'Watch on Sportsnet+ PREMIUM (or Centre Ice)'; isBlackedOutEN = false; }
+        else { reasonReg = 'BLACKED OUT outside territory. Requires Sportsnet (Cable or Stream) Premium or Centre Ice.'; }
       }
     }
 
@@ -191,9 +218,12 @@ function evaluateGame(g, state) {
       if (state.region === 'us_intl') {
         if (state.subs.espn) { canNat = true; reasonNat = 'Watch on ESPN+ / NHL.tv'; }
         else { reasonNat = 'Requires ESPN+ / NHL.tv'; }
+      } else if (g.netEN === 'SN+') {
+        if (state.subs.sn_plus || state.subs.sn_prem) { canNat = true; reasonNat = 'Watch on SN+'; }
+        else { reasonNat = 'Requires Sportsnet+ (Streaming)'; }
       } else {
-        if (state.subs.sn || state.subs.sn_prem) { canNat = true; reasonNat = 'Watch on Sportsnet (National)'; }
-        else { reasonNat = 'Requires Sportsnet+'; }
+        if (state.subs.sn_cable || state.subs.sn_plus || state.subs.sn_prem) { canNat = true; reasonNat = 'Watch on Sportsnet'; }
+        else { reasonNat = 'Requires Sportsnet (Cable or Stream)'; }
       }
     }
 
@@ -211,10 +241,10 @@ function evaluateGame(g, state) {
       if (state.subs.espn) { canEN = true; reasonEN = 'Watch on ESPN+ / NHL.tv'; }
       else { reasonEN = 'Requires ESPN+ / NHL.tv'; }
     } else if (isPrimaryInMarket) {
-      if (state.subs.regional_en) { canEN = true; reasonEN = `Watch on ${g.netEN}`; }
+      if (state.subs.regional_en || ((g.netEN.includes('Sportsnet') || g.netEN.includes('SNW') || g.netEN.includes('SNP')) && (state.subs.sn_cable || state.subs.sn_plus))) { canEN = true; reasonEN = `Watch on ${g.netEN}`; }
       else { reasonEN = `Requires ${g.netEN}`; }
     } else if (isOpponentInMarket) {
-      if (state.subs.regional_en || state.subs.sn) {
+      if (state.subs.regional_en || state.subs.sn_cable || state.subs.sn_plus) {
         canEN = true; 
         reasonEN = "Watch on local opponent feed (Sportsnet/TSN)";
       } else {
@@ -222,8 +252,8 @@ function evaluateGame(g, state) {
       }
     } else {
       isBlackedOutEN = true;
-      if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ PREMIUM'; isBlackedOutEN = false; }
-      else { reasonEN = 'BLACKED OUT outside territory. Requires Sportsnet+ Premium or Centre Ice.'; }
+      if (state.subs.sn_prem) { canEN = true; reasonEN = 'Watch on Sportsnet+ PREMIUM (or Centre Ice)'; isBlackedOutEN = false; }
+      else { reasonEN = 'BLACKED OUT outside territory. Requires Sportsnet (Cable or Stream) Premium or Centre Ice.'; }
     }
   } else {
     reasonEN = 'No English Broadcast';
@@ -349,7 +379,45 @@ function renderAdviceCards(state) {
 
     
 
-    function render() {
+    
+function syncRegionalCheckbox() {
+  const regCb = document.getElementById('sub_regional_en');
+  const regText = regCb ? regCb.nextElementSibling.querySelector('p.text-sm') : null;
+  if (!regCb || !window.TEAM_DATA) return;
+  
+  const primaryTeamId = window.TEAM_DATA.team.id;
+  const localTeams = broadcastZones[state.region] || [];
+  const isPrimaryInMarket = localTeams.includes(primaryTeamId);
+  const isSnRegional = window.TEAM_DATA.team.networks.regionalEN.includes('Sportsnet');
+  
+  if (isPrimaryInMarket && isSnRegional) {
+    if (state.subs.sn_cable || state.subs.sn_plus) {
+      regCb.checked = true;
+      state.subs.regional_en = true;
+      regCb.disabled = true;
+      if (regText) {
+        if (!regText.dataset.orig) regText.dataset.orig = regText.innerText;
+        regText.innerText = regText.dataset.orig + " (Included)";
+        regText.classList.add('text-emerald-600');
+      }
+    } else {
+      regCb.disabled = false;
+      if (regText && regText.dataset.orig) {
+        regText.innerText = regText.dataset.orig;
+        regText.classList.remove('text-emerald-600');
+      }
+    }
+  } else {
+    regCb.disabled = false;
+    if (regText && regText.dataset.orig) {
+      regText.innerText = regText.dataset.orig;
+      regText.classList.remove('text-emerald-600');
+    }
+  }
+}
+
+function render() {
+  syncRegionalCheckbox();
       const t = (str) => window.i18n ? window.i18n.t(str) : str;
       const getVs = (vs) => {
         let clean = vs.replace('vs ', '').replace('@ ', '').replace(' (Split Squad)', '');
@@ -428,7 +496,7 @@ function renderAdviceCards(state) {
                     ${isGameToday ? '★ Game Today' : 'Next ' + window.TEAM_DATA.team.nickname + ' Game'}
                   </span>
                   <span class="text-xs text-slate-300 font-medium">${nextGame.date} • ${formatLocalTime(nextGame.iso, nextGame.time)}</span>
-                  <span class="text-xs text-slate-400">#${nextGame.id}</span>
+                  <span class="text-xs text-slate-400 font-teko text-sm tracking-wide">Game ${games.findIndex(orig => orig.id === nextGame.id) + 1} of ${games.length}</span>
                 </div>
                 
                 <h3 class="text-xl sm:text-2xl font-black font-teko uppercase tracking-wide flex items-center gap-2">
@@ -621,6 +689,8 @@ function renderAdviceCards(state) {
               <div class="flex items-center gap-1.5 flex-wrap">
                 <span class="font-teko text-base font-bold text-slate-400">#${games.findIndex(orig => orig.id === g.id) + 1}</span>
                 <span class="font-bold text-sm text-slate-900 dark:text-white">${getVs(g.vs)}</span>
+   </div>
+   <div class="text-[10px] text-slate-400 dark:text-slate-500 font-medium leading-tight mt-0.5">${getFullMatchup(window.TEAM_DATA.team.name, g.vs, g.opp)}</div>
               </div>
               <div class="text-[11px] text-slate-500">${g.date} • ${formatLocalTime(g.iso, g.time)}</div>
             </div>
@@ -646,7 +716,7 @@ function renderAdviceCards(state) {
         const tr = document.createElement('tr');
         tr.className = `hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60 ${g.isPast ? 'opacity-60 bg-slate-50/40 dark:bg-slate-900/20' : ''}`;
         tr.innerHTML = `
-          <td class="py-3 px-4 font-bold text-slate-400 dark:text-slate-500 font-teko text-base text-center">${games.findIndex(orig => orig.id === g.id) + 1}</td>
+          <td class="py-3 px-4 font-bold text-slate-400 dark:text-slate-400 font-teko text-base text-center">${games.findIndex(orig => orig.id === g.id) + 1}</td>
           <td class="py-3 px-4 whitespace-nowrap">
             <div class="font-semibold text-slate-800 dark:text-slate-200">${g.date}</div>
             <div class="text-[11px] text-slate-400">${formatLocalTime(g.iso, g.time)}</div>
@@ -672,7 +742,7 @@ function renderAdviceCards(state) {
           </td>
           <td class="py-3 px-4 text-right">
             <div>${badge}</div>
-            <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 leading-snug">
+            <div class="text-[11px] text-slate-500 dark:text-slate-300 mt-1 leading-snug">
               ${evalRes.summaryReason}
             </div>
           </td>
@@ -681,7 +751,7 @@ function renderAdviceCards(state) {
       });
 
       document.getElementById('renderedCountLabel').textContent = 
-        state.timeFilter === 'upcoming' ? `Showing ${displayedCount} upcoming ${window.TEAM_DATA.team.name} games` :
+        state.timeFilter === 'upcoming' ? `Showing the ${displayedCount}-game ${window.TEAM_DATA.team.name} TV broadcast schedule` :
         state.timeFilter === 'past' ? `Showing ${displayedCount} completed games` : `Showing ${displayedCount} total games`;
 
             const adviceCard = document.getElementById('adviceCard');
@@ -702,7 +772,7 @@ function renderAdviceCards(state) {
         render();
       });
     }
-    ['sn', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'].forEach(key => {
+    ['sn_cable', 'sn_plus', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'].forEach(key => {
         const el = document.getElementById(`sub_${key}`);
         if (el) {
           el.checked = state.subs[key];
@@ -1056,3 +1126,14 @@ function buildAndDownloadPDF(btn, originalText) {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { evaluateGame, broadcastZones };
 }
+
+
+window.toggleTheme = function() {
+  if (document.documentElement.classList.contains('dark')) {
+    document.documentElement.classList.remove('dark');
+    localStorage.theme = 'light';
+  } else {
+    document.documentElement.classList.add('dark');
+    localStorage.theme = 'dark';
+  }
+};

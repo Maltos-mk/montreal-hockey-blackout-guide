@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NHL Blackout Calculators & Broadcast Guides | Canada</title>
+    <title>Where & How to Watch NHL Games in Canada | TV Schedules & Blackouts</title>
+    <link rel="canonical" href="https://hockeyblackouts.ca/">
     <meta name="description" content="Tired of NHL regional blackouts? Use our interactive calculators to figure out exactly which games are on Sportsnet, TSN, and Amazon Prime in your region.">
+    <link rel="icon" type="image/svg+xml" href="/shared/favicon.svg">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="HockeyBlackouts.ca">
+    <meta property="og:url" content="https://hockeyblackouts.ca/">
+    <meta property="og:title" content="Where & How to Watch NHL Games in Canada | TV Schedules & Blackouts">
+    <meta property="og:description" content="Tired of NHL regional blackouts? Use our interactive calculators to figure out exactly which games are on Sportsnet, TSN, and Amazon Prime in your region.">
+    <meta property="og:image" content="https://hockeyblackouts.ca/shared/assets/maltos_logo.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hockeyblackouts.ca/">
+    <meta property="twitter:title" content="Where & How to Watch NHL Games in Canada | TV Schedules & Blackouts">
+    <meta property="twitter:description" content="Tired of NHL regional blackouts? Use our interactive calculators to figure out exactly which games are on Sportsnet, TSN, and Amazon Prime in your region.">
+    <meta property="twitter:image" content="https://hockeyblackouts.ca/shared/assets/maltos_logo.jpg">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "HockeyBlackouts.ca",
+      "url": "https://hockeyblackouts.ca/"
+    }
+    </script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -121,28 +143,62 @@
             color: #64748b;
             font-size: 0.875rem;
         }
-    </style>
+    
+        :root.dark {
+            --bg-page: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+        :root.dark .card {
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.5);
+        }
+        :root.dark .card:hover {
+            border-color: #64748b;
+        }
+</style>
+
+    <script>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      function toggleTheme() {
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.theme = 'light';
+        } else {
+          document.documentElement.classList.add('dark');
+          localStorage.theme = 'dark';
+        }
+      }
+    </script>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Canadian NHL Blackout Guides</h1>
-            <p class="subtitle">Select your team below to instantly calculate which games are blacked out in your region, and exactly which networks carry the games you want to watch.</p>
+            <div style="display: flex; justify-content: flex-end; margin-bottom: 0.5rem;">
+                <button onclick="toggleTheme()" style="background: none; border: none; cursor: pointer; font-size: 1.5rem; color: var(--text-muted); transition: color 0.2s; padding: 0;" onmouseover="this.style.color='var(--text-main)'" onmouseout="this.style.color='var(--text-muted)'" title="Toggle Night Mode">🌓</button>
+            </div>
+            <h1 style="font-size: clamp(1.8rem, 8vw, 2.75rem); word-break: break-word;"><span style="color:#AF1E2D;">Hockey</span>Blackouts.ca</h1>
+            <p class="subtitle">Select your team below to instantly calculate which NHL games are blacked out in your region, and view the complete TV schedule for exactly where and how to watch the games tonight.</p>
         </header>
         
         <div class="grid">
             <a href="/montreal/" class="card mtl" data-umami-event="splash-nav" data-umami-event-team="MTL">Montreal Canadiens</a>
-            <a href="/toronto/" class="card tor" data-umami-event="splash-nav" data-umami-event-team="TOR">Toronto Maple Leafs</a>
             <a href="/ottawa/" class="card ott" data-umami-event="splash-nav" data-umami-event-team="OTT">Ottawa Senators</a>
-            <a href="/vancouver/" class="card van" data-umami-event="splash-nav" data-umami-event-team="VAN">Vancouver Canucks</a>
-            <a href="/calgary/" class="card cgy" data-umami-event="splash-nav" data-umami-event-team="CGY">Calgary Flames</a>
-            <a href="/edmonton/" class="card edm" data-umami-event="splash-nav" data-umami-event-team="EDM">Edmonton Oilers</a>
+            <a href="/toronto/" class="card tor" data-umami-event="splash-nav" data-umami-event-team="TOR">Toronto Maple Leafs</a>
             <a href="/winnipeg/" class="card wpg" data-umami-event="splash-nav" data-umami-event-team="WPG">Winnipeg Jets</a>
+            <a href="/edmonton/" class="card edm" data-umami-event="splash-nav" data-umami-event-team="EDM">Edmonton Oilers</a>
+            <a href="/calgary/" class="card cgy" data-umami-event="splash-nav" data-umami-event-team="CGY">Calgary Flames</a>
+            <a href="/vancouver/" class="card van" data-umami-event="splash-nav" data-umami-event-team="VAN">Vancouver Canucks</a>
         </div>
 
         <div class="content-section">
             <h2>Why are NHL games blacked out in Canada?</h2>
-            <p>If you've ever tuned in to watch your team on Sportsnet or TSN only to be met with a blank screen and a "Blackout in Effect" message, you aren't alone. The NHL's broadcasting rights in Canada are governed by a complex set of regional boundaries.</p>
+            <p>If you've ever tuned in to watch your team tonight only to be met with a blank screen and a Sportsnet blackout or NHL regional blackout message, you aren't alone. The NHL's broadcasting rights in Canada are governed by a complex set of regional television boundaries.</p>
             <p>The 82-game schedule is split into two categories: <strong>National Games</strong> and <strong>Regional Games</strong>.</p>
             <p>National games (like Hockey Night in Canada, or the new Amazon Prime Monday Night Hockey broadcasts) are available to everyone coast-to-coast without restriction. However, Regional games are strictly geofenced. For example, if a network like TSN5 owns the regional rights to the Ottawa Senators, only people physically located within the Senators' designated territory (Eastern Ontario, Quebec, Maritimes) are allowed to watch that channel.</p>
         </div>
