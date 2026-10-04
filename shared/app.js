@@ -690,7 +690,7 @@ function render() {
                 <span class="font-teko text-base font-bold text-slate-400">#${games.findIndex(orig => orig.id === g.id) + 1}</span>
                 <span class="font-bold text-sm text-slate-900 dark:text-white">${getVs(g.vs)}</span>
    </div>
-   <div class="text-[10px] text-slate-400 dark:text-slate-500 font-medium leading-tight hidden sm:block">${getFullMatchup(window.TEAM_DATA.team.name, g.vs, g.opp)}</div>
+   <div class="text-[10px] text-slate-400 dark:text-slate-500 font-medium leading-tight mt-0.5">${getFullMatchup(window.TEAM_DATA.team.name, g.vs, g.opp)}</div>
               </div>
               <div class="text-[11px] text-slate-500">${g.date} • ${formatLocalTime(g.iso, g.time)}</div>
             </div>
@@ -751,7 +751,7 @@ function render() {
       });
 
       document.getElementById('renderedCountLabel').textContent = 
-        state.timeFilter === 'upcoming' ? `Showing ${displayedCount} upcoming ${window.TEAM_DATA.team.name} games` :
+        state.timeFilter === 'upcoming' ? `Showing the ${displayedCount}-game ${window.TEAM_DATA.team.name} TV broadcast schedule` :
         state.timeFilter === 'past' ? `Showing ${displayedCount} completed games` : `Showing ${displayedCount} total games`;
 
             const adviceCard = document.getElementById('adviceCard');
