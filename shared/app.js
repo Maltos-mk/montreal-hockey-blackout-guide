@@ -697,7 +697,7 @@ function render() {
         const tr = document.createElement('tr');
         tr.className = `hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60 ${g.isPast ? 'opacity-60 bg-slate-50/40 dark:bg-slate-900/20' : ''}`;
         tr.innerHTML = `
-          <td class="py-3 px-4 font-bold text-slate-400 dark:text-slate-500 font-teko text-base text-center">${games.findIndex(orig => orig.id === g.id) + 1}</td>
+          <td class="py-3 px-4 font-bold text-slate-400 dark:text-slate-400 font-teko text-base text-center">${games.findIndex(orig => orig.id === g.id) + 1}</td>
           <td class="py-3 px-4 whitespace-nowrap">
             <div class="font-semibold text-slate-800 dark:text-slate-200">${g.date}</div>
             <div class="text-[11px] text-slate-400">${formatLocalTime(g.iso, g.time)}</div>
@@ -723,7 +723,7 @@ function render() {
           </td>
           <td class="py-3 px-4 text-right">
             <div>${badge}</div>
-            <div class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 leading-snug">
+            <div class="text-[11px] text-slate-500 dark:text-slate-300 mt-1 leading-snug">
               ${evalRes.summaryReason}
             </div>
           </td>
@@ -1107,3 +1107,14 @@ function buildAndDownloadPDF(btn, originalText) {
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { evaluateGame, broadcastZones };
 }
+
+
+window.toggleTheme = function() {
+  if (document.documentElement.classList.contains('dark')) {
+    document.documentElement.classList.remove('dark');
+    localStorage.theme = 'light';
+  } else {
+    document.documentElement.classList.add('dark');
+    localStorage.theme = 'dark';
+  }
+};
