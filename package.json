@@ -23,5 +23,8 @@
   "homepage": "https://github.com/maltos-mk/montreal-hockey-blackout-guide#readme",
   "devDependencies": {
     "@playwright/test": "^1.63.0"
+  },
+  "dependencies": {
+    "puppeteer": "^25.12.0"
   }
 }
