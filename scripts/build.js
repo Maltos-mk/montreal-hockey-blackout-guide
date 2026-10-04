@@ -166,9 +166,9 @@ dataFiles.forEach(file => {
     "theme_color": team.colors.primary,
     "icons": [
       {
-        "src": "shared/favicon-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
+        "src": "shared/favicon.svg",
+        "sizes": "any",
+        "type": "image/svg+xml"
       }
     ]
   };
