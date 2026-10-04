@@ -23,14 +23,14 @@ window.shareApp = async function() {
         url: window.location.href,
       });
       // Umami tracking for share
-      if (window.umami) umami.track('share-click');
+      try { umami.track('share-click');
     } catch (err) {
       console.log('Error sharing', err);
     }
   } else {
     navigator.clipboard.writeText(window.location.href).then(() => {
       alert("Link copied to clipboard!");
-      if (window.umami) umami.track('copy-link');
+      try { umami.track('copy-link');
     }).catch(() => {
       alert('Sharing not supported on this browser. Copy the URL from your address bar to share!');
     });
