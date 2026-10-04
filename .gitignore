@@ -9,3 +9,4 @@ update_projection.js
 rewrite_git_history.sh
 parse_md.py
 *.tmp
+docs/monetization_master.md
