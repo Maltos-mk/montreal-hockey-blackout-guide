@@ -10,7 +10,26 @@ function validateHtml(filePath) {
   }
   if (!content.includes('<title>')) {
     errors.push('Missing <title> tag');
+  } else {
+    const titleMatch = content.match(/<title>([^<]+)<\/title>/i);
+    if (titleMatch && titleMatch[1]) {
+      const titleText = titleMatch[1].replace(/&amp;/g, '&').trim();
+      if (titleText.length > 70) {
+        errors.push(`Title tag exceeds 70 characters (${titleText.length} chars): "${titleText}"`);
+      }
+    }
   }
+
+  const descMatch = content.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i);
+  if (!descMatch) {
+    errors.push('Missing <meta name="description"> tag');
+  } else if (descMatch[1]) {
+    const descText = descMatch[1].replace(/&amp;/g, '&').trim();
+    if (descText.length > 160) {
+      errors.push(`Meta description exceeds 160 characters (${descText.length} chars)`);
+    }
+  }
+
   if (content.includes('display: none') && content.toLowerCase().includes('seo')) {
     errors.push('Contains hidden text for SEO (black-hat tactic detected)');
   }
