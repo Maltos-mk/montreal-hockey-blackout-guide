@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "playwright test"
+    "test": "playwright test",
+    "test:all": "bash tests/check_privacy.sh && node scripts/matrix_test.js && node scripts/qa_validator.js"
   },
   "repository": {
     "type": "git",
