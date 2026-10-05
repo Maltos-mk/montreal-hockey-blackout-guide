@@ -34,6 +34,14 @@ function validateHtml(filePath) {
     errors.push('Contains hidden text for SEO (black-hat tactic detected)');
   }
   
+  // Monetization / Tracking Checks
+  if (content.includes('amazon.ca') && !content.includes('data-umami-event="amazon-prime-click"')) {
+    errors.push('Found Amazon link but missing data-umami-event="amazon-prime-click" tracking attribute.');
+  }
+  if (content.includes('ko-fi.com') && !content.includes('data-umami-event="kofi-click"')) {
+    errors.push('Found Ko-fi link but missing data-umami-event="kofi-click" tracking attribute.');
+  }
+  
   if (errors.length > 0) {
     console.error(`\n❌ QA FAILED in ${filePath}:`);
     errors.forEach(e => console.error(`   - ${e}`));
