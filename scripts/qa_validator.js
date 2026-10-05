@@ -34,6 +34,16 @@ function validateHtml(filePath) {
     errors.push('Contains hidden text for SEO (black-hat tactic detected)');
   }
   
+  // AI Overview / SGE Checks
+  if (!filePath.endsWith('build/index.html')) {
+    if (!content.includes('"@type": "FAQPage"')) {
+      errors.push('Missing FAQPage Schema for AI Overviews.');
+    }
+    if (content.includes('id="faq"') && !content.includes('<table')) {
+      errors.push('FAQ section is missing the structured summary <table> required for AI Overviews.');
+    }
+  }
+
   // Monetization / Tracking Checks
   if (content.includes('amazon.ca') && !content.includes('data-umami-event="amazon-prime-click"')) {
     errors.push('Found Amazon link but missing data-umami-event="amazon-prime-click" tracking attribute.');

@@ -90,7 +90,7 @@
         "name": "Why am I getting a Sportsnet blackout or NHL regional blackout tonight?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "If your screen suddenly goes dark and displays a 'Blackout in Effect' message on Sportsnet or TSN, it means the game is a Regional Broadcast and you live outside the NHL's strictly drawn geographical boundaries for that team. Even if you pay for the channel through a standard TV package, the NHL forces the network to blackout the signal for out-of-market viewers."
+          "text": "If your screen goes dark and displays a blackout message on Sportsnet or TSN, the game is a Regional Broadcast and your physical location is outside the team's NHL-defined territory. You must use Sportsnet+ Premium to stream out-of-market regional games."
         }
       },
       {
@@ -103,10 +103,10 @@
       },
       {
         "@type": "Question",
-        "name": "How to watch Calgary Flames  games in Canada without regional blackouts?",
+        "name": "How do I watch Calgary Flames games in Canada without regional blackouts?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Out-of-market Canadian fans living outside Quebec and Eastern Ontario can watch all regional Calgary Flames games on Sportsnet West and  by subscribing to Sportsnet+ Premium or NHL Centre Ice. Saturday night games on Sportsnet and Wednesday games on Amazon Prime Video have zero regional blackouts across Canada."
+          "text": "Out-of-market fans living outside the team's regional territory can watch all regional Calgary Flames games on Sportsnet West and  by subscribing to Sportsnet+ Premium or NHL Centre Ice. This bypasses the standard blackout restrictions for standard cable subscribers."
         }
       },
       {
@@ -114,7 +114,7 @@
         "name": "Are Saturday night Calgary Flames games blacked out anywhere in Canada?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Saturday night Calgary Flames games on Sportsnet (English) and TVA Sports (French) are part of the NHL's national broadcast rights package and clear coast-to-coast across Canada with zero regional blackouts."
+          "text": "No. Saturday night Calgary Flames games on Sportsnet and TVA Sports are part of the NHL's national broadcast package. These games clear coast-to-coast across Canada with zero regional blackouts on standard cable packages."
         }
       },
       {
@@ -122,7 +122,7 @@
         "name": "Which Calgary Flames games stream exclusively on Amazon Prime Video?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "National Wednesday Night Hockey broadcasts featuring the Calgary Flames are exclusive to Amazon Prime Video in English across Canada."
+          "text": "National Wednesday Night Hockey broadcasts featuring the Calgary Flames are exclusive to Amazon Prime Video in English across Canada. These streams carry no regional blackout restrictions for Prime subscribers anywhere in the country."
         }
       }
     ]
@@ -217,7 +217,7 @@
         <!--
         <a href="https://ko-fi.com/maltosmk" data-umami-event="kofi-click" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs shadow flex items-center gap-1.5 transition" title="Support on Ko-fi">
           <i class="fa-solid fa-mug-hot"></i>
-          <span>Support on Ko-fi</span>
+          <span class="hidden sm:inline">Support on Ko-fi</span>
         </a>
         -->
 
@@ -314,11 +314,11 @@
                   <p class="text-[11px] text-slate-500">National Wednesday Night Hockey feeds</p>
                 </div>
               </label>
-              <div class="text-[11px] pl-7 pt-1 hidden">
-                <span class="font-bold">
+              <div class="text-[11px] pl-7 pt-1">
+                <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" data-umami-event="amazon-prime-click" target="_blank" rel="noopener noreferrer" class="font-bold text-teamPrimary hover:underline flex items-center gap-1 w-fit">
                   <span>Need Prime? Try 30-Day Free Trial</span>
                   <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                </span>
+                </a>
               </div>
             </div>
 
@@ -419,15 +419,14 @@
     </section>
 
     <!-- Contextual Direct Support & Community Tip Callout -->
-    <!--
-<section class="bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent border border-amber-500/30 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <section class="bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent border border-amber-500/30 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center space-x-3.5 text-center sm:text-left">
         <div class="w-10 h-10 rounded-xl bg-amber-400 text-slate-950 flex items-center justify-center text-lg flex-shrink-0 shadow-sm">
           <i class="fa-solid fa-mug-hot"></i>
         </div>
         <div>
           <p class="text-xs sm:text-sm font-medium text-slate-800 dark:text-slate-200 leading-relaxed">
-            This is an independently built passion project for Calgary Flames fans. If this guide helped you avoid a blackout tonight, consider buying me a coffee on Ko-fi ($5).
+            Navigating broadcast regions is a nightmare. If this tool saved you a headache tonight, buy me a coffee.
           </p>
         </div>
       </div>
@@ -436,7 +435,6 @@
         <i class="fa-solid fa-arrow-right text-[10px]"></i>
       </a>
     </section>
--->
 
     <!-- AUTOMATIC NEXT UPCOMING GAME SPOTLIGHT HERO -->
     <section id="nextGameSpotlight" class="transition-all duration-300">
@@ -558,30 +556,69 @@
     <!-- FAQ Section (Moved from Modal for SEO) -->
     <section id="faq" class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
       <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-teamPrimary border-b border-slate-100 dark:border-slate-800 pb-3">Blackout Rules & FAQ</h2>
+      
+      <!-- SEO Summary Table -->
+      <div class="overflow-x-auto my-4">
+        <table class="w-full text-sm text-left text-slate-600 dark:text-slate-300 border-collapse border border-slate-200 dark:border-slate-700">
+          <thead class="bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+            <tr>
+              <th class="border border-slate-200 dark:border-slate-700 px-4 py-2">Game Type</th>
+              <th class="border border-slate-200 dark:border-slate-700 px-4 py-2">Network</th>
+              <th class="border border-slate-200 dark:border-slate-700 px-4 py-2">Blackout Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">Regional</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Sportsnet West / </td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Subject to Regional Blackouts</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">National (Sat)</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Sportsnet / CBC / TVA Sports</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">No Blackouts</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">National (Wed)</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Amazon Prime Video</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">No Blackouts</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
         <p><strong>Why are Flames games blacked out in British Columbia?</strong><br>The Flames and Oilers share a massive broadcast territory that covers all of Alberta, Saskatchewan, Nunavut, and the Northwest Territories. If you live in British Columbia, you are in the Canucks' home territory. In that zone, regional Flames games on Sportsnet West are blacked out to protect local rights unless you subscribe to Sportsnet+ Premium or NHL Centre Ice.</p>
         
-        <p>
-          <strong>Why am I getting a Sportsnet blackout or NHL regional blackout tonight?</strong><br>
-          If your screen suddenly goes dark and displays a "Blackout in Effect" message on Sportsnet or TSN, it means the game is a <strong>Regional Broadcast</strong> and you live outside the NHL's strictly drawn geographical boundaries for that team. Even if you pay for the channel through a standard TV package, the NHL forces the network to blackout the signal for out-of-market viewers.
-        </p>
-        <p>
-          <strong>Does Sportsnet West show every Flames game?</strong><br>
-          <strong>No.</strong> Regional networks like Sportsnet West only hold the broadcast rights to a specific portion of the season (usually around 40 to 60 games). The remaining Flames games are designated as "National" broadcasts and are exclusively spread across Sportsnet (National), CBC, CityTV, and Amazon Prime Video. To watch the entire 84-game regular season schedule, you need access to both the regional network and the national networks.
-        </p>
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1" itemprop="name">Why am I getting a Sportsnet blackout or NHL regional blackout tonight?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">If your screen goes dark and displays a blackout message on Sportsnet or TSN, the game is a Regional Broadcast and your physical location is outside the team's NHL-defined territory. You must use Sportsnet+ Premium to stream out-of-market regional games.</p>
+          </div>
+          <p class="mt-2 text-xs text-slate-500">Even if you pay for the channel through a standard TV package, the NHL forces the network to blackout the signal for out-of-market viewers.</p>
+        </div>
 
-        <p>
-          <strong>Does having a standard cable box prevent Flames blackouts?</strong><br>
-          <strong>No.</strong> Blackout rules apply directly to standard cable and satellite TV subscriptions. If your physical address is outside the Flames designated broadcast territory, your screen will cut to a blackout notice during live regional Calgary Flames games on {{REGIONAL_RIGHTS_FAQ_STRING}}—even if you specifically pay your TV provider for that channel.
-        </p>
-        <p>
-          <strong>How can out-of-market Flames fans watch without blackouts?</strong><br>
-          The official method to watch blacked-out regional Calgary Flames games across Canada is the out-of-market package: <strong>Sportsnet+ Premium</strong> for streaming, or the <strong>NHL Centre Ice</strong> subscription package through your digital cable provider.
-        </p>
-        <p>
-          <strong>Why are Saturday night Flames games never blacked out?</strong><br>
-          Saturday night games are part of the <strong>National rights</strong> package on Sportsnet and TVA Sports. National broadcasts carry coast-to-coast clearance without regional blackouts across Canada.
-        </p>
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1" itemprop="name">How do I watch Calgary Flames games in Canada without regional blackouts?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Out-of-market fans living outside the team's regional territory can watch all regional Calgary Flames games on Sportsnet West and  by subscribing to Sportsnet+ Premium or NHL Centre Ice. This bypasses the standard blackout restrictions for standard cable subscribers.</p>
+          </div>
+        </div>
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1" itemprop="name">Are Saturday night Calgary Flames games blacked out anywhere in Canada?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">No. Saturday night Calgary Flames games on Sportsnet and TVA Sports are part of the NHL's national broadcast package. These games clear coast-to-coast across Canada with zero regional blackouts on standard cable packages.</p>
+          </div>
+        </div>
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1" itemprop="name">Which Calgary Flames games stream exclusively on Amazon Prime Video?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">National Wednesday Night Hockey broadcasts featuring the Calgary Flames are exclusive to Amazon Prime Video in English across Canada. These streams carry no regional blackout restrictions for Prime subscribers anywhere in the country.</p>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
