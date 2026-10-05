@@ -52,6 +52,30 @@ function validateHtml(filePath) {
     errors.push('Found Ko-fi link but missing data-umami-event="kofi-click" tracking attribute.');
   }
   
+  
+  // Image & Meta Validation
+  const ogImageMatch = content.match(/<meta\s+property=["']og:image["']\s+content=["'](https:\/\/hockeyblackouts\.ca\/[^"']+)["']/i);
+  if (!ogImageMatch) {
+    errors.push('Missing or invalid og:image tag (must be absolute https://hockeyblackouts.ca/...)');
+  } else {
+    // Check if the physical file exists in the build dir
+    const imagePath = ogImageMatch[1].replace('https://hockeyblackouts.ca/', '');
+    const physicalPath = path.join(__dirname, '../build', imagePath);
+    if (!fs.existsSync(physicalPath)) {
+      errors.push(`og:image points to a 404 broken link: ${ogImageMatch[1]}`);
+    }
+  }
+
+  // Schema Validation
+  const schemaLogoMatch = content.match(/"url":\s*"(https:\/\/hockeyblackouts\.ca\/[^"]+)"/i);
+  if (schemaLogoMatch) {
+    const logoPath = schemaLogoMatch[1].replace('https://hockeyblackouts.ca/', '');
+    const physicalLogoPath = path.join(__dirname, '../build', logoPath);
+    if (!fs.existsSync(physicalLogoPath)) {
+      errors.push(`Organization schema logo points to a 404 broken link: ${schemaLogoMatch[1]}`);
+    }
+  }
+
   if (errors.length > 0) {
     console.error(`\n❌ QA FAILED in ${filePath}:`);
     errors.forEach(e => console.error(`   - ${e}`));
@@ -76,6 +100,20 @@ if (fs.existsSync(teamsDir)) {
         const teamPath = path.join(teamsDir, team, 'index.html');
         if (fs.existsSync(teamPath)) validateHtml(teamPath);
     });
+}
+
+
+// Validate robots.txt
+const robotsPath = path.join(__dirname, '../build/robots.txt');
+if (fs.existsSync(robotsPath)) {
+  const robots = fs.readFileSync(robotsPath, 'utf-8');
+  if (!robots.includes('Sitemap: https://hockeyblackouts.ca/sitemap.xml')) {
+    console.error('\n❌ QA FAILED: robots.txt is missing the correct sitemap domain.');
+    process.exit(1);
+  }
+} else {
+  console.error('\n❌ QA FAILED: robots.txt is missing from the build folder.');
+  process.exit(1);
 }
 
 console.log('✅ All pages passed SEO QA validation.');
