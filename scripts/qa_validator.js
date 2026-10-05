@@ -66,6 +66,16 @@ function validateHtml(filePath) {
     }
   }
 
+  const twImageMatch = content.match(/<meta\s+property=["']twitter:image["']\s+content=["'](https:\/\/hockeyblackouts\.ca\/[^"']+)["']/i);
+  if (!twImageMatch) {
+    errors.push('Missing or invalid twitter:image tag');
+  } else {
+    const twImagePath = twImageMatch[1].replace('https://hockeyblackouts.ca/', '');
+    const pTwImagePath = path.join(__dirname, '../build', twImagePath);
+    if (!fs.existsSync(pTwImagePath)) {
+      errors.push(`twitter:image points to a 404 broken link: ${twImageMatch[1]}`);
+    }
+  }
   // Schema Validation
   const schemaLogoMatch = content.match(/"url":\s*"(https:\/\/hockeyblackouts\.ca\/[^"]+)"/i);
   if (schemaLogoMatch) {
