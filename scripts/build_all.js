@@ -13,6 +13,7 @@ fs.mkdirSync(BUILD_DIR);
 execSync(`cp -r shared ${BUILD_DIR}/`);
 execSync(`cp LICENSE ${BUILD_DIR}/`);
 execSync(`cp README.md ${BUILD_DIR}/`);
+if (fs.existsSync("robots.txt")) fs.copyFileSync("robots.txt", path.join(BUILD_DIR, "robots.txt"));
 
 const teams = [
   { id: 'mtl', dir: 'montreal' },
