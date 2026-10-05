@@ -520,6 +520,7 @@ function render() {
                 
                 <div class="text-[11px] text-slate-300 md:text-right max-w-sm">
                   ${nextEval.summaryReason}
+                  
                 </div>
               </div>
 
@@ -841,9 +842,7 @@ function render() {
       render();
     });
 
-    document.getElementById('themeToggle').addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-    });
+    
 
     function openDeepDiveModal() {
       const m = document.getElementById('deepDiveModal');
