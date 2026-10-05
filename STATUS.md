@@ -20,3 +20,7 @@ This suite sequentially runs:
 *   **84-Game Schedule:** The NHL schedule is 84 games.
 *   **Sportsnet vs. Sportsnet+:** While regional rules are identical, SN+ streaming has ~10 exclusive national games per team that linear cable does not. Ensure the engine treats them separately.
 *   **CBC/CityTV:** Under the 2026 contracts, they no longer broadcast free over-the-air games. Do not classify them as free national broadcasters.
+
+## UX & Monetization Rules
+*   **Ko-fi Placement:** Do not place large Ko-fi or donation banners above the main schedule table. Keep them below the schedule to avoid interrupting the core user experience.
+*   **AI Overviews (SGE):** The `FAQPage` JSON-LD schema must exactly match the visible HTML in the FAQ section. The FAQ section must contain a structured `<table>` summary.
