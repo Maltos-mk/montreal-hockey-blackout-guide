@@ -114,14 +114,14 @@ dataFiles.forEach(file => {
     };
   }).sort((a, b) => eastToWest.indexOf(a.id) - eastToWest.indexOf(b.id));
 
-  let topNavLinks = '<a href="https://hockeyblackouts.ca/" data-umami-event="nav-home" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent mr-2"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span style="color:#AF1E2D;">Hockey</span>Blackouts.ca</a><div class="w-px h-4 bg-slate-700 mx-2"></div>';
-  let footerNavLinks = '<a href="https://hockeyblackouts.ca/" data-umami-event="crosslink-home" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span style="color:#AF1E2D;">Hockey</span>Blackouts.ca</a>\n';
+  let topNavLinks = '<a href="https://hockeyblackouts.ca/" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent mr-2"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span style="color:#AF1E2D;">Hockey</span>Blackouts.ca</a><div class="w-px h-4 bg-slate-700 mx-2"></div>';
+  let footerNavLinks = '<a href="https://hockeyblackouts.ca/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span style="color:#AF1E2D;">Hockey</span>Blackouts.ca</a>\n';
   allTeams.forEach(t => {
     if (t.id === team.id) {
       topNavLinks += `<span class="px-3 py-1 rounded-md text-white font-bold bg-white/20 shadow-sm border border-white/10">${t.id}</span>`;
     } else {
-      topNavLinks += `<a href="https://hockeyblackouts.ca/${t.name.split(' ')[0].toLowerCase()}/" data-umami-event="nav-${t.id.toLowerCase()}" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">${t.id}</a>`;
-      footerNavLinks += `<a href="https://hockeyblackouts.ca/${t.name.split(' ')[0].toLowerCase()}/" data-umami-event="crosslink-${t.id.toLowerCase()}" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold">${t.name}</a>\n`;
+      topNavLinks += `<a href="https://hockeyblackouts.ca/${t.name.split(' ')[0].toLowerCase()}/" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">${t.id}</a>`;
+      footerNavLinks += `<a href="https://hockeyblackouts.ca/${t.name.split(' ')[0].toLowerCase()}/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold">${t.name}</a>\n`;
     }
   });
   html = html.replace(/\{\{NETWORK_LINKS\}\}/g, topNavLinks);
@@ -141,7 +141,7 @@ dataFiles.forEach(file => {
   
   
 
-  const crosslinkRegex = new RegExp(`<a href="[^"]+" data-umami-event="crosslink-[a-z]+" class="[^"]*">${team.name}</a>`, 'g');
+  const crosslinkRegex = new RegExp(`<a href="[^"]+" class="[^"]*">${team.name}</a>`, 'g');
   html = html.replace(crosslinkRegex, '');
   
   const teamDir = `teams/${team.name.split(' ')[0].toLowerCase()}`;
