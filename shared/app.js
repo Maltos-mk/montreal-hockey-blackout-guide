@@ -769,7 +769,7 @@ function render() {
       regionSelect.value = state.region;
       regionSelect.addEventListener('change', (e) => {
         state.region = e.target.value;
-        if (typeof trackUmamiEvent !== 'undefined') trackUmamiEvent('Toggle Region', { region: state.region });
+        // tracking removed
         render();
       });
     }
@@ -779,7 +779,7 @@ function render() {
           el.checked = state.subs[key];
           el.addEventListener('change', () => {
             state.subs[key] = el.checked;
-            trackUmamiEvent('Toggle Sub', { sub: key, active: el.checked ? 'yes' : 'no' });
+            // tracking removed
             render();
           });
         }
@@ -813,7 +813,7 @@ function render() {
 
     function setTimeFilter(filter) {
       state.timeFilter = filter;
-      trackUmamiEvent('Toggle Time', { time: filter });
+      // tracking removed
       ['upcoming', 'all', 'past'].forEach(f => {
         const b = document.getElementById(`time_${f}`);
         if (f === filter) {
@@ -827,13 +827,13 @@ function render() {
 
     document.getElementById('statusFilter').addEventListener('change', (e) => {
       state.statusFilter = e.target.value;
-      trackUmamiEvent('Toggle Status Filter', { status: e.target.value });
+      // tracking removed
       render();
     });
 
     document.getElementById('channelFilter').addEventListener('change', (e) => {
       state.channelFilter = e.target.value;
-      trackUmamiEvent('Toggle Channel Filter', { channel: e.target.value });
+      // tracking removed
       render();
     });
 
