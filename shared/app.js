@@ -704,7 +704,7 @@ function render() {
               <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${g.netFR}</span>
             </div>
             <span class="text-[11px] text-slate-500 font-medium">
-              ${g.type === 'national' ? 'National' : g.type === 'prime_wednesday' ? 'Prime Wednesday' : 'Regional'}
+              ${g.typeEN === 'national' ? 'National' : g.typeEN === 'prime_wednesday' ? 'Prime Wednesday' : 'Regional'}
             </span>
           </div>
 
@@ -738,7 +738,7 @@ function render() {
           </td>
           <td class="py-3 px-4">
             <span class="text-[11px] font-medium uppercase tracking-wider text-slate-500">
-              ${g.type === 'national' ? 'National (Coast-to-Coast)' : g.type === 'prime_wednesday' ? 'Prime Wednesday Exclusive' : 'Regional Territory'}
+              ${g.typeEN === 'national' ? 'National (Coast-to-Coast)' : g.typeEN === 'prime_wednesday' ? 'Prime Wednesday Exclusive' : 'Regional Territory'}
             </span>
           </td>
           <td class="py-3 px-4 text-right">
