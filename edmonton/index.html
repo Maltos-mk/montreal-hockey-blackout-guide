@@ -14,7 +14,10 @@
   <link rel="canonical" href="https://hockeyblackouts.ca/edmonton/">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="../shared/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="https://hockeyblackouts.ca/shared/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="https://hockeyblackouts.ca/shared/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://hockeyblackouts.ca/shared/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hockeyblackouts.ca/shared/apple-touch-icon.png">
 
   <!-- Progressive Web App (PWA) / Mobile Standalone Tags -->
   <link rel="manifest" href="manifest.json">
@@ -23,7 +26,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Edmonton Guide">
-  <link rel="apple-touch-icon" sizes="180x180" href="../shared/apple-touch-icon.png">
+  
 
   <!-- OpenGraph / Facebook / Discord -->
   <meta property="og:type" content="website">
@@ -152,7 +155,7 @@
       }
     }
   </script>
-  <link rel="stylesheet" href="../shared/app.css?v=1791416154869">
+  <link rel="stylesheet" href="../shared/app.css?v=1791504673123">
 
 
   <script>
@@ -451,7 +454,7 @@
             <option value="missing_sub">Need Sub</option>
           </select>
 
-          <button id="btnExportPDF" onclick="exportPDF()" class="print-hidden px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-700 hover:bg-slate-50 dark:hover:bg-slate-600 transition flex items-center gap-1.5 text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap" aria-label="Print or Save Schedule as PDF">
+          <button id="btnExportPDF" onclick="exportPDF()" data-umami-event="export-pdf-click" class="print-hidden px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-700 hover:bg-slate-50 dark:hover:bg-slate-600 transition flex items-center gap-1.5 text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap" aria-label="Print or Save Schedule as PDF">
             <i class="fa-solid fa-print"></i>
             <span class="hidden sm:inline">Export PDF</span>
           </button>
@@ -690,9 +693,9 @@
   </div>
 
   <script>
-  window.TEAM_DATA_URL = "data.json?v=1791416154869?v=2";
+  window.TEAM_DATA_URL = "data.json?v=1791504673123?v=2";
 </script>
-<script src="../shared/app.js?v=1791416154869?v=1790776244"></script>
+<script src="../shared/app.js?v=1791504673123?v=1790776244"></script>
 
 </body>
 </html>
