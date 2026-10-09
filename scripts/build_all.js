@@ -14,6 +14,7 @@ execSync(`cp -r shared ${BUILD_DIR}/`);
 execSync(`cp LICENSE ${BUILD_DIR}/`);
 execSync(`cp README.md ${BUILD_DIR}/`);
 if (fs.existsSync("robots.txt")) fs.copyFileSync("robots.txt", path.join(BUILD_DIR, "robots.txt"));
+if (fs.existsSync("shared/favicon-48x48.png")) fs.copyFileSync("shared/favicon-48x48.png", path.join(BUILD_DIR, "favicon.ico"));
 
 const teams = [
   { id: 'mtl', dir: 'montreal' },
