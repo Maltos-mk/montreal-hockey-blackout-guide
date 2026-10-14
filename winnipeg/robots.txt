@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://hockeyblackouts.ca/winnipeg/sitemap.xml
