@@ -86,6 +86,18 @@ teams.forEach(teamDir => {
     console.log(`✅ OOM-STANDARD PASS: ${teamId} yielded ${oomStdCount}/84 games (Properly blacked out regional games).`);
   }
   
+  // Test 4: CBC & CityTV 2026 contract check (STATUS.md domain logic quirk: no longer free national broadcasters)
+  const nationalEN = data.team.networks.nationalEN || [];
+  if (nationalEN.includes('CBC') || nationalEN.includes('CityTV')) {
+    console.error(`❌ CBC/CityTV CONTRACT FAIL: ${teamId} lists CBC or CityTV in nationalEN networks: ${JSON.stringify(nationalEN)}`);
+    allPassed = false;
+  }
+  const cbcInSchedule = data.schedule.some(g => (g.netEN && g.netEN.includes('CBC')) || (g.netFR && g.netFR.includes('CBC')));
+  if (cbcInSchedule) {
+    console.error(`❌ CBC IN SCHEDULE FAIL: ${teamId} schedule still contains CBC references.`);
+    allPassed = false;
+  }
+
   console.log('---');
 });
 

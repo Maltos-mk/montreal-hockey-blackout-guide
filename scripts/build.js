@@ -42,19 +42,19 @@ dataFiles.forEach(file => {
   
   let quickSummary = '';
   if (team.id === 'TOR') {
-    quickSummary = "<strong>Quick Summary for Leafs Fans Living Outside the Toronto Region:</strong> If tonight's Toronto Maple Leafs game is scheduled on Sportsnet, Prime Video, or CBC, you can watch anywhere in Canada without blackouts. If the game is on TSN4 or Sportsnet Ontario, you will be blacked out in Eastern Ontario, Quebec, and the rest of Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
+    quickSummary = "<strong>Quick Summary for Leafs Fans Living Outside the Toronto Region:</strong> If tonight's Toronto Maple Leafs game is scheduled on Sportsnet or Prime Video, you can watch anywhere in Canada without blackouts. If the game is on TSN4 or Sportsnet Ontario, you will be blacked out in Eastern Ontario, Quebec, and the rest of Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
   } else if (team.id === 'OTT') {
-    quickSummary = "<strong>Quick Summary for Sens Fans Living Outside the Ottawa Region:</strong> If tonight's Ottawa Senators game is scheduled on Sportsnet, Prime Video, or CBC, you can watch anywhere in Canada without blackouts. If the game is on TSN5 or RDS, you will be blacked out in Western Ontario and the rest of Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
+    quickSummary = "<strong>Quick Summary for Sens Fans Living Outside the Ottawa Region:</strong> If tonight's Ottawa Senators game is scheduled on Sportsnet or Prime Video, you can watch anywhere in Canada without blackouts. If the game is on TSN5 or RDS, you will be blacked out in Western Ontario and the rest of Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
   } else if (team.id === 'VAN') {
-    quickSummary = "<strong>Quick Summary for Canucks Fans Living Outside BC/Yukon:</strong> If tonight's Vancouver Canucks game is scheduled on Sportsnet, Prime Video, or CBC, you can watch anywhere in Canada without blackouts. If the game is on Sportsnet Pacific, you will be blacked out in Alberta, the Prairies, and Eastern Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
+    quickSummary = "<strong>Quick Summary for Canucks Fans Living Outside BC/Yukon:</strong> If tonight's Vancouver Canucks game is scheduled on Sportsnet or Prime Video, you can watch anywhere in Canada without blackouts. If the game is on Sportsnet Pacific, you will be blacked out in Alberta, the Prairies, and Eastern Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
   } else if (team.id === 'CGY') {
-    quickSummary = "<strong>Quick Summary for Flames Fans Living Outside Alberta/Saskatchewan:</strong> If tonight's Calgary Flames game is scheduled on Sportsnet, Prime Video, or CBC, you can watch anywhere in Canada without blackouts. If the game is on Sportsnet West, you will be blacked out in BC, Manitoba, and Eastern Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
+    quickSummary = "<strong>Quick Summary for Flames Fans Living Outside Alberta/Saskatchewan:</strong> If tonight's Calgary Flames game is scheduled on Sportsnet or Prime Video, you can watch anywhere in Canada without blackouts. If the game is on Sportsnet West, you will be blacked out in BC, Manitoba, and Eastern Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
   } else if (team.id === 'EDM') {
-    quickSummary = "<strong>Quick Summary for Oilers Fans Living Outside Alberta/Saskatchewan:</strong> If tonight's Edmonton Oilers game is scheduled on Sportsnet, Prime Video, or CBC, you can watch anywhere in Canada without blackouts. If the game is on Sportsnet West, you will be blacked out in BC, Manitoba, and Eastern Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
+    quickSummary = "<strong>Quick Summary for Oilers Fans Living Outside Alberta/Saskatchewan:</strong> If tonight's Edmonton Oilers game is scheduled on Sportsnet or Prime Video, you can watch anywhere in Canada without blackouts. If the game is on Sportsnet West, you will be blacked out in BC, Manitoba, and Eastern Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
   } else if (team.id === 'WPG') {
-    quickSummary = "<strong>Quick Summary for Jets Fans Living Outside Manitoba/Saskatchewan:</strong> If tonight's Winnipeg Jets game is scheduled on Sportsnet, Prime Video, or CBC, you can watch anywhere in Canada without blackouts. If the game is on TSN3, you will be blacked out in BC, Alberta, and Eastern Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
+    quickSummary = "<strong>Quick Summary for Jets Fans Living Outside Manitoba/Saskatchewan:</strong> If tonight's Winnipeg Jets game is scheduled on Sportsnet or Prime Video, you can watch anywhere in Canada without blackouts. If the game is on TSN3, you will be blacked out in BC, Alberta, and Eastern Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
   } else {
-    quickSummary = "<strong>Quick Summary for Habs Fans Living Outside Quebec:</strong> If tonight's Montreal Canadiens game is scheduled on Sportsnet, Prime Video, CBC, or TVA Sports, you can watch anywhere in Canada without blackouts. If the game is on TSN2 or RDS, you will be blacked out in Western Ontario and the West unless you have Sportsnet+ Premium or NHL Centre Ice.";
+    quickSummary = "<strong>Quick Summary for Habs Fans Living Outside Quebec:</strong> If tonight's Montreal Canadiens game is scheduled on Sportsnet, Prime Video, or TVA Sports, you can watch anywhere in Canada without blackouts. If the game is on TSN2 or RDS, you will be blacked out in Western Ontario and the West unless you have Sportsnet+ Premium or NHL Centre Ice.";
   }
   html = html.replace(/\{\{QUICK_SUMMARY\}\}/g, quickSummary);
 
@@ -141,17 +141,80 @@ dataFiles.forEach(file => {
   
   
 
-  const crosslinkRegex = new RegExp(`<a href="[^"]+" class="[^"]*">${team.name}</a>`, 'g');
-  html = html.replace(crosslinkRegex, '');
+  // Prerender schedule table & mobile cards into static HTML for crawlers and AI Overviews
+  let desktopRows = '';
+  let mobileCards = '';
   
+  data.schedule.forEach((g, idx) => {
+    const isNational = g.typeEN === 'national' || g.typeEN === 'prime_wednesday';
+    const coverageLabel = g.typeEN === 'national' ? 'National (Coast-to-Coast)' : g.typeEN === 'prime_wednesday' ? 'Prime Wednesday Exclusive' : 'Regional Territory';
+    const broadcastEN = g.netEN || 'TBD';
+    const broadcastFR = g.netFR || 'None';
+    const statusBadge = isNational 
+      ? '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>Watchable Nationally</span>'
+      : '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 whitespace-nowrap"><i class="fa-solid fa-ban mr-1 text-[10px]"></i>Regional Broadcast</span>';
+    const accessDesc = isNational 
+      ? 'Coast-to-coast national broadcast. Watch anywhere in Canada without blackouts.'
+      : `Regional broadcast on ${broadcastEN}. In-market fans can watch on cable; out-of-market viewers require Sportsnet+ Premium or Centre Ice.`;
+
+    desktopRows += `
+      <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60">
+        <td class="py-3 px-4 font-bold text-slate-400 dark:text-slate-400 font-teko text-base text-center">${idx + 1}</td>
+        <td class="py-3 px-4 whitespace-nowrap">
+          <div class="font-semibold text-slate-800 dark:text-slate-200">${g.date}</div>
+          <div class="text-[11px] text-slate-400">${g.time || '7:00 PM ET'}</div>
+        </td>
+        <td class="py-3 px-4">
+          <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
+            <span>${g.vs}</span>
+            ${g.phase === 'preseason' ? '<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">Preseason</span>' : ''}
+          </div>
+          <div class="text-[11px] text-slate-500">${g.venue}</div>
+        </td>
+        <td class="py-3 px-4">
+          <div class="flex items-center space-x-1.5">
+            <span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">${broadcastEN}</span>
+            ${broadcastFR !== 'None' ? `<span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">${broadcastFR}</span>` : ''}
+          </div>
+        </td>
+        <td class="py-3 px-4">
+          <span class="text-[11px] font-medium uppercase tracking-wider text-slate-500">${coverageLabel}</span>
+        </td>
+        <td class="py-3 px-4 text-right">
+          <div>${statusBadge}</div>
+          <div class="text-[11px] text-slate-500 dark:text-slate-300 mt-1 leading-snug">${accessDesc}</div>
+        </td>
+      </tr>`;
+
+    mobileCards += `
+      <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/60">
+        <div class="flex items-start justify-between gap-2">
+          <div>
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="font-teko text-base font-bold text-slate-400">#${idx + 1}</span>
+              <span class="font-bold text-sm text-slate-900 dark:text-white">${g.vs}</span>
+            </div>
+            <div class="text-[11px] text-slate-500">${g.date} • ${g.time || '7:00 PM ET'}</div>
+          </div>
+          <div>${statusBadge}</div>
+        </div>
+        <div class="flex items-center justify-between text-xs pt-1 border-t border-slate-200/60 dark:border-slate-700/60">
+          <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${broadcastEN}</span>
+          <span class="text-[11px] text-slate-500 font-medium">${coverageLabel}</span>
+        </div>
+        <div class="text-[11px] font-medium text-slate-600 dark:text-slate-300 bg-white/70 dark:bg-slate-900/50 p-2 rounded-lg border border-slate-200/50 dark:border-slate-700/50 mt-1">
+          ${accessDesc}
+        </div>
+      </div>`;
+  });
+
+  html = html.replace(/\{\{PRERENDERED_DESKTOP_SCHEDULE\}\}/g, desktopRows);
+  html = html.replace(/\{\{PRERENDERED_MOBILE_SCHEDULE\}\}/g, mobileCards);
+
   const teamDir = `teams/${team.name.split(' ')[0].toLowerCase()}`;
   if (!fs.existsSync(teamDir)) fs.mkdirSync(teamDir, { recursive: true });
   
   fs.writeFileSync(path.join(teamDir, 'index.html'), html);
-
-  // SEO: Generate robots.txt
-  const robots = `User-agent: *\nAllow: /\n\nSitemap: https://hockeyblackouts.ca/${team.name.split(' ')[0].toLowerCase()}/sitemap.xml`;
-  fs.writeFileSync(path.join(teamDir, 'robots.txt'), robots);
 
   // SEO: Generate sitemap.xml
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>https://hockeyblackouts.ca/${team.name.split(' ')[0].toLowerCase()}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n</urlset>`;

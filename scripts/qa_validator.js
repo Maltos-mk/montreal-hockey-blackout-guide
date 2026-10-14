@@ -42,11 +42,23 @@ function validateHtml(filePath) {
     if (content.includes('id="faq"') && !content.includes('<table')) {
       errors.push('FAQ section is missing the structured summary <table> required for AI Overviews.');
     }
+    // Prerendered Static HTML Schedule Check (Googlebot / AI Overviews must see real schedule in raw HTML)
+    if (!content.includes('data-prerendered="true"')) {
+      errors.push('Schedule table is missing prerendered static HTML rows (empty client-side render hurts SEO/AI Overviews).');
+    }
   }
 
   // Monetization / Tracking Checks
-  if (content.includes('amazon.ca') && !content.includes('data-umami-event="amazon-prime-click"')) {
-    errors.push('Found Amazon link but missing data-umami-event="amazon-prime-click" tracking attribute.');
+  if (content.includes('cloud.umami.is/script.js') && !content.includes('data-exclude-hash="true"')) {
+    errors.push('Umami script tag is missing data-exclude-hash="true" (hash updates artificially inflate pageviews).');
+  }
+  if (content.includes('amazon.ca')) {
+    if (!content.includes('data-umami-event="amazon-prime-click"')) {
+      errors.push('Found Amazon link but missing data-umami-event="amazon-prime-click" tracking attribute.');
+    }
+    if (!content.includes('rel="sponsored noopener noreferrer"') && !content.includes('rel="sponsored"')) {
+      errors.push('Found Amazon affiliate link missing Google-compliant rel="sponsored" attribute.');
+    }
   }
   if (content.includes('ko-fi.com') && !content.includes('data-umami-event="kofi-click"')) {
     errors.push('Found Ko-fi link but missing data-umami-event="kofi-click" tracking attribute.');
@@ -99,18 +111,16 @@ if (!fs.existsSync(buildDir)) return;
 
 const files = fs.readdirSync(buildDir);
 files.forEach(file => {
+  const fullPath = path.join(buildDir, file);
   if (file.endsWith('.html')) {
-    validateHtml(path.join(buildDir, file));
+    validateHtml(fullPath);
+  } else if (fs.statSync(fullPath).isDirectory() && file !== 'shared') {
+    const teamHtml = path.join(fullPath, 'index.html');
+    if (fs.existsSync(teamHtml)) {
+      validateHtml(teamHtml);
+    }
   }
 });
-const teamsDir = path.join(__dirname, '../build/teams');
-if (fs.existsSync(teamsDir)) {
-    const teams = fs.readdirSync(teamsDir);
-    teams.forEach(team => {
-        const teamPath = path.join(teamsDir, team, 'index.html');
-        if (fs.existsSync(teamPath)) validateHtml(teamPath);
-    });
-}
 
 
 // Validate robots.txt
@@ -125,5 +135,17 @@ if (fs.existsSync(robotsPath)) {
   console.error('\n❌ QA FAILED: robots.txt is missing from the build folder.');
   process.exit(1);
 }
+
+// Subfolder robots.txt check (crawlers ignore subfolder robots.txt; having them is an SEO antipattern)
+files.forEach(file => {
+  const fullPath = path.join(buildDir, file);
+  if (fs.statSync(fullPath).isDirectory()) {
+    const subRobots = path.join(fullPath, 'robots.txt');
+    if (fs.existsSync(subRobots)) {
+      console.error(`\n❌ QA FAILED: Found redundant robots.txt in subfolder: ${subRobots}. Web crawlers only honor the root robots.txt.`);
+      process.exit(1);
+    }
+  }
+});
 
 console.log('✅ All pages passed SEO QA validation.');

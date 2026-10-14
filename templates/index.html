@@ -143,7 +143,7 @@
   </script>
 
   <!-- Umami Analytics -->
-  <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8"></script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8" data-exclude-hash="true"></script>
 
   <!-- Tailwind CSS & Font Awesome Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -331,7 +331,7 @@
                 </div>
               </label>
               <div class="text-[11px] pl-7 pt-1">
-                <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" data-umami-event="amazon-prime-click" target="_blank" rel="noopener noreferrer" class="font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1 w-fit">
+                <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" data-umami-event="amazon-prime-click" target="_blank" rel="sponsored noopener noreferrer" class="font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1 w-fit">
                   <span>Need Prime? Try 30-Day Free Trial</span>
                   <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                 </a>
@@ -498,8 +498,8 @@
       </div>
 
       <!-- Mobile Cards View -->
-      <div id="scheduleCardsMobile" class="block md:hidden divide-y divide-slate-100 dark:divide-slate-800 p-3 space-y-3">
-        <!-- Injected by JS -->
+      <div id="scheduleCardsMobile" class="block md:hidden divide-y divide-slate-100 dark:divide-slate-800 p-3 space-y-3" data-prerendered="true">
+        {{PRERENDERED_MOBILE_SCHEDULE}}
       </div>
 
       <!-- Desktop Table View: Clean Balanced Column Layout (No text cut off) -->
@@ -515,8 +515,8 @@
               <th class="py-3 px-4 font-semibold min-w-[240px] text-right">Access Status</th>
             </tr>
           </thead>
-          <tbody id="scheduleTableBody" class="divide-y divide-slate-100 dark:divide-slate-800">
-            <!-- Injected by JS -->
+          <tbody id="scheduleTableBody" class="divide-y divide-slate-100 dark:divide-slate-800" data-prerendered="true">
+            {{PRERENDERED_DESKTOP_SCHEDULE}}
           </tbody>
         </table>
       </div>
@@ -587,7 +587,7 @@
             </tr>
             <tr>
               <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">National (Sat)</td>
-              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Sportsnet / CBC / TVA Sports</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Sportsnet / TVA Sports</td>
               <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">No Blackouts</td>
             </tr>
             <tr>

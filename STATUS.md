@@ -5,7 +5,7 @@
 ## CRITICAL AGENT INSTRUCTIONS (READ FIRST)
 1. **Test-Driven Bug Fixing:** If the user reports a bug, YOU MUST write or update an automated test (e.g. in `matrix_test.js` or `qa_validator.js`) that physically reproduces the bug and fails, *BEFORE* attempting to fix the source code.
 2. **Build Architecture:** NEVER edit files in the `build/` directory. They are auto-generated and will be wiped. Always edit `templates/` and run `node scripts/build_all.js`.
-3. **Identity & Privacy:** The author is "Maltos". The brand is "HockeyBlackouts.ca". Never use NHL trademarks (NHL, Canadiens, etc.) in domains or page titles to avoid C&D letters. Never expose the name "Keith" in commits. Commits must use the anonymous GitHub noreply email.
+3. **Identity & Privacy:** The author is "Maltos". The brand is "HockeyBlackouts.ca". Never use NHL trademarks (NHL, Canadiens, etc.) in domains, brand names, or URL slugs to avoid C&D letters. Descriptive nominative use (e.g. "Montreal Canadiens TV schedule") is allowed in page titles, descriptions, and content, provided a clear "Not affiliated with the NHL or any team" disclaimer is visible in the footer. Never expose the name "Keith" in commits. Commits must use the anonymous GitHub noreply email.
 
 ## Automated QA Suite
 We rely on a unified testing suite to prevent regressions. Before committing *any* code, run:
