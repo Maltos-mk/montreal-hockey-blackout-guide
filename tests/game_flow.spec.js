@@ -1,5 +1,11 @@
 const { test, expect } = require('@playwright/test');
 
+test.beforeEach(async ({ page }) => {
+  page.on('pageerror', exception => {
+    throw new Error(`[BROWSER UNCAUGHT EXCEPTION] ${exception.message}`);
+  });
+});
+
 test('User flow: Toronto -> Alberta + SN+ Premium -> Buffalo game page', async ({ page }) => {
   await page.goto('http://localhost:8080/toronto/');
   

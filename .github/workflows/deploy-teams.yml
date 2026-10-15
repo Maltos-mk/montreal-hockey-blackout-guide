@@ -21,6 +21,12 @@ jobs:
 
       - name: Build Unified Package
         run: node scripts/build_all.js
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Automated QA Suite
+        run: npm run test:all
           
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
