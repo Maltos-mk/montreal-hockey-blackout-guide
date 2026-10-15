@@ -268,4 +268,14 @@ if (!fs.existsSync(indexNowPath)) {
   }
 }
 
+// Validate shared/app.js for runtime integrity
+const appJsPath = path.join(__dirname, '../shared/app.js');
+if (fs.existsSync(appJsPath)) {
+  const appJsCode = fs.readFileSync(appJsPath, 'utf-8');
+  if (appJsCode.includes('getGamePath(')) {
+    console.error('\n❌ QA FAILED: shared/app.js references undefined function "getGamePath". Function in app.js is "getGameUrl".');
+    process.exit(1);
+  }
+}
+
 console.log('✅ All pages passed SEO QA validation.');
