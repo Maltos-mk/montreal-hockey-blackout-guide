@@ -25,6 +25,16 @@ function validateHtml(filePath) {
   const isGamePage = filePath.includes('/game/');
   const isTeamPage = !isSplash && !isGamePage && !isRedirect;
 
+  // H1 Tag Validation (Crucial for SEO & Bing/Google accessibility audits)
+  if (!isRedirect) {
+    const h1Matches = content.match(/<h1[^>]*>([\s\S]*?)<\/h1>/gi);
+    if (!h1Matches || h1Matches.length === 0) {
+      errors.push('Missing <h1> tag (required for search engine ranking and accessibility)');
+    } else if (h1Matches.length > 1) {
+      errors.push(`Multiple <h1> tags found (${h1Matches.length}). Expected exactly 1 per page.`);
+    }
+  }
+
   const descMatch = content.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i);
   if (!descMatch && !isRedirect) {
     errors.push('Missing <meta name="description"> tag');
