@@ -237,6 +237,10 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
   const defaultRegionKey = 'on_west';
   const defaultVerdict = regionBreakdown[defaultRegionKey];
 
+  // Calculate approximate endDate (~2.5 hours after game start)
+  const startMs = new Date(g.iso).getTime();
+  const endIso = new Date(startMs + 2.5 * 60 * 60 * 1000).toISOString();
+
   // Schema.org JSON-LD
   const schemaObj = {
     "@context": "https://schema.org",
@@ -245,8 +249,12 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
         "@type": "SportsEvent",
         "@id": `${canonicalUrl}#event`,
         "name": `${awayTeam.name} at ${homeTeam.name}`,
+        "description": metaDescription,
+        "image": ogImageUrl,
         "sport": "Ice Hockey",
         "startDate": g.iso,
+        "endDate": endIso,
+        "eventStatus": "https://schema.org/EventScheduled",
         "location": {
           "@type": "Place",
           "name": g.venue || "NHL Arena",
@@ -260,6 +268,15 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
           { "@type": "SportsTeam", "name": awayTeam.name },
           { "@type": "SportsTeam", "name": homeTeam.name }
         ],
+        "performer": [
+          { "@type": "SportsTeam", "name": awayTeam.name },
+          { "@type": "SportsTeam", "name": homeTeam.name }
+        ],
+        "organizer": {
+          "@type": "Organization",
+          "name": "National Hockey League",
+          "url": "https://www.nhl.com"
+        },
         "publication": [
           {
             "@type": "BroadcastEvent",

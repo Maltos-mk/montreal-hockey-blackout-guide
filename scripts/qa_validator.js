@@ -61,6 +61,18 @@ function validateHtml(filePath) {
     if (!content.includes('"@type": "BroadcastEvent"')) {
       errors.push('Game page is missing BroadcastEvent structured data.');
     }
+    if (!content.includes('"eventStatus"')) {
+      errors.push('Game page SportsEvent is missing eventStatus.');
+    }
+    if (!content.includes('"endDate"')) {
+      errors.push('Game page SportsEvent is missing endDate.');
+    }
+    if (!content.includes('"organizer"')) {
+      errors.push('Game page SportsEvent is missing organizer.');
+    }
+    if (!content.includes('"performer"')) {
+      errors.push('Game page SportsEvent is missing performer.');
+    }
     // City-only slug rule: game path must not contain trademarked nicknames
     const urlParts = filePath.split('/');
     const slug = urlParts[urlParts.length - 2];
