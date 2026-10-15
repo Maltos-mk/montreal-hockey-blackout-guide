@@ -20,10 +20,15 @@ function validateHtml(filePath) {
     }
   }
 
+  const isRedirect = content.includes('http-equiv="refresh"');
+  const isSplash = filePath.endsWith('build/index.html');
+  const isGamePage = filePath.includes('/game/');
+  const isTeamPage = !isSplash && !isGamePage && !isRedirect;
+
   const descMatch = content.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i);
-  if (!descMatch) {
+  if (!descMatch && !isRedirect) {
     errors.push('Missing <meta name="description"> tag');
-  } else if (descMatch[1]) {
+  } else if (descMatch && descMatch[1]) {
     const descText = descMatch[1].replace(/&amp;/g, '&').trim();
     if (descText.length > 160) {
       errors.push(`Meta description exceeds 160 characters (${descText.length} chars)`);
@@ -33,9 +38,9 @@ function validateHtml(filePath) {
   if (content.includes('display: none') && content.toLowerCase().includes('seo')) {
     errors.push('Contains hidden text for SEO (black-hat tactic detected)');
   }
-  
+
   // AI Overview / SGE Checks
-  if (!filePath.endsWith('build/index.html')) {
+  if (isTeamPage) {
     if (!content.includes('"@type": "FAQPage"')) {
       errors.push('Missing FAQPage Schema for AI Overviews.');
     }
@@ -46,6 +51,31 @@ function validateHtml(filePath) {
     if (!content.includes('data-prerendered="true"')) {
       errors.push('Schedule table is missing prerendered static HTML rows (empty client-side render hurts SEO/AI Overviews).');
     }
+  }
+
+  // Per-Game Page Schema & Trademark Validation
+  if (isGamePage && !isRedirect) {
+    if (!content.includes('"@type": "SportsEvent"')) {
+      errors.push('Game page is missing SportsEvent structured data.');
+    }
+    if (!content.includes('"@type": "BroadcastEvent"')) {
+      errors.push('Game page is missing BroadcastEvent structured data.');
+    }
+    // City-only slug rule: game path must not contain trademarked nicknames
+    const urlParts = filePath.split('/');
+    const slug = urlParts[urlParts.length - 2];
+    const bannedNicknames = ['leafs', 'canadiens', 'habs', 'senators', 'sens', 'canucks', 'flames', 'oilers', 'jets', 'bruins', 'rangers'];
+    if (bannedNicknames.some(nick => slug.includes(nick))) {
+      errors.push(`Game page URL slug "${slug}" contains trademarked team nickname. Slugs must use city names only.`);
+    }
+
+    // Region key parity test: game page REGION_DATA must support canonical app regions
+    const canonicalRegions = ['on_west', 'on_east_qc_atl', 'on_overlap', 'ab', 'sk', 'mb', 'nw_on', 'bc', 'us_intl'];
+    canonicalRegions.forEach(reg => {
+      if (!content.includes(`"${reg}":`)) {
+        errors.push(`Game page REGION_DATA is missing canonical region key: "${reg}"`);
+      }
+    });
   }
 
   // Monetization / Tracking Checks
@@ -62,6 +92,14 @@ function validateHtml(filePath) {
   }
   if (content.includes('ko-fi.com') && !content.includes('data-umami-event="kofi-click"')) {
     errors.push('Found Ko-fi link but missing data-umami-event="kofi-click" tracking attribute.');
+  }
+  if (isGamePage && !isRedirect) {
+    if (!content.includes('data-umami-event="radio-click"')) {
+      errors.push('Game page is missing data-umami-event="radio-click" tracking on radio fallback link.');
+    }
+    if (!content.includes('data-umami-event="stream-referral-click"') && !content.includes('data-umami-event="amazon-prime-click"')) {
+      errors.push('Game page is missing data-umami-event streaming referral tracking attribute.');
+    }
   }
   
   
@@ -109,17 +147,26 @@ console.log('Running Pre-Flight QA Validator...');
 const buildDir = path.join(__dirname, '../build');
 if (!fs.existsSync(buildDir)) return;
 
-const files = fs.readdirSync(buildDir);
-files.forEach(file => {
-  const fullPath = path.join(buildDir, file);
-  if (file.endsWith('.html')) {
-    validateHtml(fullPath);
-  } else if (fs.statSync(fullPath).isDirectory() && file !== 'shared') {
-    const teamHtml = path.join(fullPath, 'index.html');
-    if (fs.existsSync(teamHtml)) {
-      validateHtml(teamHtml);
+function getAllHtmlFiles(dir) {
+  let results = [];
+  const list = fs.readdirSync(dir);
+  list.forEach(file => {
+    if (file === 'shared') return;
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
+    if (stat && stat.isDirectory()) {
+      results = results.concat(getAllHtmlFiles(fullPath));
+    } else if (file.endsWith('.html')) {
+      results.push(fullPath);
     }
-  }
+  });
+  return results;
+}
+
+const allHtmlFiles = getAllHtmlFiles(buildDir);
+console.log(`Validating ${allHtmlFiles.length} HTML files...`);
+allHtmlFiles.forEach(file => {
+  validateHtml(file);
 });
 
 
@@ -137,7 +184,8 @@ if (fs.existsSync(robotsPath)) {
 }
 
 // Subfolder robots.txt check (crawlers ignore subfolder robots.txt; having them is an SEO antipattern)
-files.forEach(file => {
+const rootEntries = fs.readdirSync(buildDir);
+rootEntries.forEach(file => {
   const fullPath = path.join(buildDir, file);
   if (fs.statSync(fullPath).isDirectory()) {
     const subRobots = path.join(fullPath, 'robots.txt');

@@ -142,6 +142,31 @@ dataFiles.forEach(file => {
   
 
   // Prerender schedule table & mobile cards into static HTML for crawlers and AI Overviews
+  const TEAM_CITIES = {
+    'MTL': 'Montreal', 'TOR': 'Toronto', 'OTT': 'Ottawa', 'VAN': 'Vancouver',
+    'CGY': 'Calgary', 'EDM': 'Edmonton', 'WPG': 'Winnipeg', 'BOS': 'Boston',
+    'BUF': 'Buffalo', 'DET': 'Detroit', 'FLA': 'Florida', 'TBL': 'Tampa Bay',
+    'CAR': 'Carolina', 'NJD': 'New Jersey', 'NYI': 'Elmont', 'NYR': 'New York',
+    'PHI': 'Philadelphia', 'PIT': 'Pittsburgh', 'WSH': 'Washington', 'CBJ': 'Columbus',
+    'CHI': 'Chicago', 'COL': 'Colorado', 'DAL': 'Dallas', 'MIN': 'Minnesota',
+    'NSH': 'Nashville', 'STL': 'St Louis', 'UTA': 'Utah', 'ANA': 'Anaheim',
+    'LAK': 'Los Angeles', 'SJS': 'San Jose', 'SEA': 'Seattle', 'VGK': 'Vegas'
+  };
+  function slugifyCity(cityName) {
+    return cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  }
+  function getGamePath(g, currentTeamId) {
+    const isHome = g.vs.startsWith('vs ');
+    const homeId = isHome ? currentTeamId : g.opp;
+    const awayId = isHome ? g.opp : currentTeamId;
+    const homeCity = (TEAM_CITIES[homeId] || homeId);
+    const awayCity = (TEAM_CITIES[awayId] || awayId);
+    const homeSlug = slugifyCity(homeCity);
+    const awaySlug = slugifyCity(awayCity);
+    const datePrefix = g.iso ? g.iso.split('T')[0] : g.date;
+    return `/game/${datePrefix}/${homeSlug}-vs-${awaySlug}/`;
+  }
+
   let desktopRows = '';
   let mobileCards = '';
   
@@ -156,6 +181,7 @@ dataFiles.forEach(file => {
     const accessDesc = isNational 
       ? 'Coast-to-coast national broadcast. Watch anywhere in Canada without blackouts.'
       : `Regional broadcast on ${broadcastEN}. In-market fans can watch on cable; out-of-market viewers require Sportsnet+ Premium or Centre Ice.`;
+    const gameUrl = getGamePath(g, team.id);
 
     desktopRows += `
       <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60">
@@ -166,7 +192,10 @@ dataFiles.forEach(file => {
         </td>
         <td class="py-3 px-4">
           <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
-            <span>${g.vs}</span>
+            <a href="${gameUrl}" class="hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline transition flex items-center gap-1.5" title="View TV broadcast and blackout breakdown">
+              <span>${g.vs}</span>
+              <i class="fa-solid fa-chevron-right text-[9px] text-slate-400 opacity-60"></i>
+            </a>
             ${g.phase === 'preseason' ? '<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">Preseason</span>' : ''}
           </div>
           <div class="text-[11px] text-slate-500">${g.venue}</div>
@@ -192,7 +221,10 @@ dataFiles.forEach(file => {
           <div>
             <div class="flex items-center gap-1.5 flex-wrap">
               <span class="font-teko text-base font-bold text-slate-400">#${idx + 1}</span>
-              <span class="font-bold text-sm text-slate-900 dark:text-white">${g.vs}</span>
+              <a href="${gameUrl}" class="font-bold text-sm text-slate-900 dark:text-white hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline flex items-center gap-1">
+                <span>${g.vs}</span>
+                <i class="fa-solid fa-chevron-right text-[8px] text-slate-400"></i>
+              </a>
             </div>
             <div class="text-[11px] text-slate-500">${g.date} • ${g.time || '7:00 PM ET'}</div>
           </div>
@@ -200,7 +232,9 @@ dataFiles.forEach(file => {
         </div>
         <div class="flex items-center justify-between text-xs pt-1 border-t border-slate-200/60 dark:border-slate-700/60">
           <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${broadcastEN}</span>
-          <span class="text-[11px] text-slate-500 font-medium">${coverageLabel}</span>
+          <a href="${gameUrl}" class="text-[11px] font-semibold text-[#AF1E2D] dark:text-rose-400 hover:underline flex items-center gap-1">
+            <span>TV & Blackout Guide &rarr;</span>
+          </a>
         </div>
         <div class="text-[11px] font-medium text-slate-600 dark:text-slate-300 bg-white/70 dark:bg-slate-900/50 p-2 rounded-lg border border-slate-200/50 dark:border-slate-700/50 mt-1">
           ${accessDesc}

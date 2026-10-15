@@ -39,10 +39,10 @@ teams.forEach(team => {
   html = html.replace(/\.\.\/\.\.\/shared\//g, '../shared/');
   html = html.replace(/\.\.\/\.\.\/data\/[a-z]{3}\.json/g, 'data.json');
   
-  html = html.replace(/shared\/app\.css/g, `shared/app.css?v=${timestamp}`);
-  html = html.replace(/shared\/app\.js/g, `shared/app.js?v=${timestamp}`);
-  html = html.replace(/shared\/i18n\.js/g, `shared/i18n.js?v=${timestamp}`);
-  html = html.replace(/data\.json/g, `data.json?v=${timestamp}`);
+  html = html.replace(/shared\/app\.css(\?v=[0-9]+)?/g, `shared/app.css?v=${timestamp}`);
+  html = html.replace(/shared\/app\.js(\?v=[0-9]+)?/g, `shared/app.js?v=${timestamp}`);
+  html = html.replace(/shared\/i18n\.js(\?v=[0-9]+)?/g, `shared/i18n.js?v=${timestamp}`);
+  html = html.replace(/data\.json(\?v=[0-9]+)?/g, `data.json?v=${timestamp}`);
   
   
   // Update canonicals and sitemap
@@ -58,6 +58,10 @@ teams.forEach(team => {
 
 const splashHtml = fs.readFileSync('templates/splash.html', 'utf-8');
 fs.writeFileSync(path.join(BUILD_DIR, 'index.html'), splashHtml);
+
+// Build Phase 2 Per-Game Matchup Pages
+execSync('node scripts/build_game_pages.js', { stdio: 'inherit' });
+
 console.log('Build complete.');
 
 let masterSitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -75,6 +79,37 @@ teams.forEach(team => {
     <priority>0.9</priority>
   </url>\n`;
 });
+
+// Add active game URLs to master sitemap (Decision D2: drop games older than 7 days)
+const gamesBaseDir = path.join(BUILD_DIR, 'game');
+if (fs.existsSync(gamesBaseDir)) {
+  const dates = fs.readdirSync(gamesBaseDir);
+  const now = new Date();
+  dates.forEach(date => {
+    // If the game date is more than 7 days in the past, drop from sitemap to preserve crawl budget
+    const gameDate = new Date(date + 'T23:59:59Z');
+    const daysDiff = (now - gameDate) / (1000 * 60 * 60 * 24);
+    if (daysDiff > 7) return;
+
+    const datePath = path.join(gamesBaseDir, date);
+    if (fs.statSync(datePath).isDirectory()) {
+      const matchups = fs.readdirSync(datePath);
+      matchups.forEach(matchup => {
+        const htmlPath = path.join(datePath, matchup, 'index.html');
+        if (fs.existsSync(htmlPath)) {
+          const content = fs.readFileSync(htmlPath, 'utf-8');
+          if (content.includes('http-equiv="refresh"')) return;
+        }
+        masterSitemap += `  <url>
+    <loc>https://hockeyblackouts.ca/game/${date}/${matchup}/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>\n`;
+      });
+    }
+  });
+}
+
 masterSitemap += '</urlset>';
 fs.writeFileSync(path.join(BUILD_DIR, 'sitemap.xml'), masterSitemap);
 execSync('node scripts/qa_validator.js', { stdio: 'inherit' });

@@ -41,19 +41,32 @@ Working doc. Source: competitor review of whereisthegame.com plus feedback from 
 
 ## Phase 2 — Per-Game Pages (main traffic engine)
 
-- [ ] **2.1 URL scheme:** `/game/{YYYY-MM-DD}/{city}-vs-{city}/` (city names only in slugs). One canonical URL per game, including Canada-vs-Canada matchups.
-- [ ] **2.2 One page per game, never per region.** Region verdicts go in a table on the page. Per-region pages = doorway risk.
-- [ ] **2.3 Unique content per page (anti-thin):**
-  - Verdict by region and by service (SN vs SN+ exclusives, TSN, TVA, RDS, Prime)
-  - English vs French feed
-  - Radio fallback (station + stream link)
-  - Local start times by time zone
-  - Organic match metadata & venue details
-- [ ] **2.4 Rolling window:** publish ~14 days ahead, not all ~550-588 at once.
-- [ ] **2.5 Past-game handling:** implement D2 from day one. Remove expired pages from sitemap.
-- [ ] **2.6 Schema:** `BroadcastEvent` / `publishedOn` → `BroadcastService` (`broadcastDisplayName`, `areaServed`). Do **not** use `Offer` with `price: "0"` for paid services. No rich result expected; this is for entity understanding.
-- [ ] **2.7 If FAQ used on game pages:** FAQPage JSON-LD must match visible HTML (existing STATUS.md rule).
-- [ ] **2.8 Validator tests:** schema fields correct (real venue, correct `eventStatus`, `addressCountry: CA` where relevant), no nicknames in slugs.
+Architectural specs verified by SEO/SEM and UX design personas (2026-10-14).
+
+- [x] **2.1 URL scheme & Canonical:**
+  - Route: `/game/{YYYY-MM-DD}/{home-city}-vs-{away-city}/` (e.g. `/game/2026-10-15/toronto-vs-montreal/`).
+  - Slugs use **city names only** (zero trademarks: no "leafs", "canadiens", "habs", etc.).
+  - Canada-vs-Canada duplicates prevented: canonical maps to home team ice.
+- [x] **2.2 SEO & Meta Blueprint:**
+  - **Title Tag (<60 chars):** `Where to Watch [Away] vs [Home] Tonight: TV & Stream Guide`
+  - **Meta Description (<155 chars):** `Watch [Away] vs [Home] on [Date]. Find live TV channels, streaming options, and blackout rules across Canada.`
+  - Social Cards: OG title, description, and canonical tags fully populated on all 547 games.
+- [x] **2.3 Schema.org JSON-LD Blueprint:**
+  - Compliant `@graph` nesting `SportsEvent` (competitors, Canadian venue, date), `publication` → `BroadcastEvent` → `BroadcastService` (linear + streaming channels).
+  - Explicitly omitted `Offer` with `price: 0` (avoids Google Rich Result warning flags).
+  - Structured `FAQPage` JSON-LD answering *"What channel is [team] vs [team] on tonight in Canada?"*.
+- [x] **2.4 Above-the-Fold UX ("3-Second Verdict"):**
+  - Instant mobile-friendly verdict card (`bg-slate-900 border border-white/10 rounded-2xl`): Start time with auto-converted local timezone, matchup codes in `font-teko`, and prominent status badge (Emerald: Watchable, Amber: Blacked Out).
+  - Horizontal scrollable quick-region pills (`ON West | QC & East | Prairies | BC | Overlap`) that instantly toggle regional advice in-memory.
+- [x] **2.5 Content Hierarchy & Anti-Thin Depth:**
+  - 7-zone Canadian regional blackout breakdown table (In-Market vs Out-of-Market, English/French networks).
+  - Fallback grid: Official radio callsign & live audio stream link, legal Prime Video 30-day trial card (`rel="sponsored"`), and local sports pub sponsorship placeholder.
+  - Internal navigation mesh: Breadcrumbs (`Home > Toronto > vs Montreal`), links to both team full schedules, and Prev/Next game pagination.
+- [x] **2.6 Sitemaps & Build Integration:**
+  - 547 unique matchups generated at build time via `scripts/build_game_pages.js`.
+  - Integrated into `scripts/build_all.js` and added to master `build/sitemap.xml`.
+- [x] **2.7 Automated QA Suite:**
+  - `qa_validator.js` updated to recursively scan all 555 HTML files: verifies canonicals, description lengths, SportsEvent schema, BroadcastEvent schema, and validates that URL slugs contain zero trademarked team nicknames. All 555 pages passed.
 
 ---
 

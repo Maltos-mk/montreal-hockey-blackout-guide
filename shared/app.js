@@ -49,11 +49,44 @@ async function initApp() {
     window.TEAM_DATA = await res.json();
     games = window.TEAM_DATA.schedule;
     
-    // Correctly initialize default region from async data if not in hash
-    if (!window.location.hash || !new URLSearchParams(window.location.hash.substring(1)).has('region')) {
-      state.region = window.TEAM_DATA.team.marketRegion.regionCode;
-      const rSel = document.getElementById('regionSelect');
-      if (rSel) rSel.value = state.region;
+    // Correctly initialize default region from hash, localStorage, or team default
+    if (window.location.hash && new URLSearchParams(window.location.hash.substring(1)).has('region')) {
+      state.region = new URLSearchParams(window.location.hash.substring(1)).get('region');
+    } else {
+      try {
+        const savedRegion = localStorage.getItem('hockeyblackouts_region');
+        if (savedRegion) {
+          state.region = savedRegion;
+        } else {
+          state.region = window.TEAM_DATA.team.marketRegion.regionCode;
+        }
+      } catch(e) {
+        state.region = window.TEAM_DATA.team.marketRegion.regionCode;
+      }
+    }
+    const rSel = document.getElementById('regionSelect');
+    if (rSel) rSel.value = state.region;
+
+    // Load subscriptions from hash, or fall back to localStorage
+    const hashParams = window.location.hash ? new URLSearchParams(window.location.hash.substring(1)) : null;
+    const subKeysList = ['sn_cable', 'sn_plus', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
+    const hasHashSubs = hashParams && subKeysList.some(k => hashParams.has(k));
+    if (!hasHashSubs) {
+      try {
+        const savedSubs = localStorage.getItem('hockeyblackouts_subs');
+        if (savedSubs) {
+          const parsed = JSON.parse(savedSubs);
+          if (parsed && typeof parsed === 'object') {
+            subKeysList.forEach(k => {
+              if (k in parsed) {
+                state.subs[k] = Boolean(parsed[k]);
+                const cb = document.getElementById(`sub_${k}`);
+                if (cb) cb.checked = state.subs[k];
+              }
+            });
+          }
+        }
+      } catch(e) {}
     }
 
     
@@ -80,6 +113,36 @@ const NHL_TEAMS = {
   'STL': 'St. Louis Blues', 'TBL': 'Tampa Bay Lightning', 'TOR': 'Toronto Maple Leafs', 'UTA': 'Utah Hockey Club',
   'VAN': 'Vancouver Canucks', 'VGK': 'Vegas Golden Knights', 'WSH': 'Washington Capitals', 'WPG': 'Winnipeg Jets'
 };
+
+const TEAM_CITIES = {
+  'MTL': 'Montreal', 'TOR': 'Toronto', 'OTT': 'Ottawa', 'VAN': 'Vancouver',
+  'CGY': 'Calgary', 'EDM': 'Edmonton', 'WPG': 'Winnipeg', 'BOS': 'Boston',
+  'BUF': 'Buffalo', 'DET': 'Detroit', 'FLA': 'Florida', 'TBL': 'Tampa Bay',
+  'CAR': 'Carolina', 'NJD': 'New Jersey', 'NYI': 'Elmont', 'NYR': 'New York',
+  'PHI': 'Philadelphia', 'PIT': 'Pittsburgh', 'WSH': 'Washington', 'CBJ': 'Columbus',
+  'CHI': 'Chicago', 'COL': 'Colorado', 'DAL': 'Dallas', 'MIN': 'Minnesota',
+  'NSH': 'Nashville', 'STL': 'St Louis', 'UTA': 'Utah', 'ANA': 'Anaheim',
+  'LAK': 'Los Angeles', 'SJS': 'San Jose', 'SEA': 'Seattle', 'VGK': 'Vegas'
+};
+
+function slugifyCity(cityName) {
+  return cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+function getGameUrl(g) {
+  if (!window.TEAM_DATA || !window.TEAM_DATA.team) return '#';
+  const currentTeamId = window.TEAM_DATA.team.id;
+  const isHome = g.vs.startsWith('vs ');
+  const homeId = isHome ? currentTeamId : g.opp;
+  const awayId = isHome ? g.opp : currentTeamId;
+  const homeCity = TEAM_CITIES[homeId] || homeId;
+  const awayCity = TEAM_CITIES[awayId] || awayId;
+  const homeSlug = slugifyCity(homeCity);
+  const awaySlug = slugifyCity(awayCity);
+  const datePrefix = g.iso ? g.iso.split('T')[0] : g.date;
+  return `/game/${datePrefix}/${homeSlug}-vs-${awaySlug}/`;
+}
+
 function getFullMatchup(teamName, vsStr, oppCode) {
   const oppName = NHL_TEAMS[oppCode] || oppCode;
   const isAway = vsStr.startsWith('@');
@@ -703,9 +766,9 @@ function render() {
               <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${evalRes.displayNetEN || g.netEN}</span>
               <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${g.netFR}</span>
             </div>
-            <span class="text-[11px] text-slate-500 font-medium">
-              ${g.typeEN === 'national' ? 'National' : g.typeEN === 'prime_wednesday' ? 'Prime Wednesday' : 'Regional'}
-            </span>
+            <a href="${getGameUrl(g)}" class="text-[11px] font-semibold text-[#AF1E2D] dark:text-rose-400 hover:underline flex items-center gap-1">
+              <span>TV & Blackout Guide &rarr;</span>
+            </a>
           </div>
 
           <div class="text-[11px] font-medium text-slate-600 dark:text-slate-300 bg-white/70 dark:bg-slate-900/50 p-2 rounded-lg border border-slate-200/50 dark:border-slate-700/50">
@@ -724,7 +787,10 @@ function render() {
           </td>
           <td class="py-3 px-4">
             <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
-              <span>${getVs(g.vs)}</span>
+              <a href="${getGameUrl(g)}" class="hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline transition flex items-center gap-1.5" title="View TV broadcast and blackout breakdown">
+                <span>${getVs(g.vs)}</span>
+                <i class="fa-solid fa-chevron-right text-[9px] text-slate-400 opacity-60"></i>
+              </a>
               ${g.phase === 'preseason' ? `<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">${t('Preseason')}</span>` : ''}
               ${g.note ? `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-teamPrimary/10 text-teamPrimary">${g.note ? t(g.note) : ""}</span>` : ''}
             </div>
@@ -769,7 +835,7 @@ function render() {
       regionSelect.value = state.region;
       regionSelect.addEventListener('change', (e) => {
         state.region = e.target.value;
-        // tracking removed
+        try { localStorage.setItem('hockeyblackouts_region', state.region); } catch(err) {}
         render();
       });
     }
@@ -779,7 +845,7 @@ function render() {
           el.checked = state.subs[key];
           el.addEventListener('change', () => {
             state.subs[key] = el.checked;
-            // tracking removed
+            try { localStorage.setItem('hockeyblackouts_subs', JSON.stringify(state.subs)); } catch(err) {}
             render();
           });
         }
