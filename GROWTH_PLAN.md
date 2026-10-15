@@ -74,13 +74,14 @@ Architectural specs verified by SEO/SEM and UX design personas (2026-10-14).
 
 Stabilize core site architecture, internal linking mesh, and search authority before expanding into localization.
 
-- [ ] **3.1 Internal links mesh:**
-  - Team page schedule spotlight: prominent links directly to the next upcoming 5 games.
-  - Game pages: navigation linking back to both team schedules, adjacent game pagination, and broadcaster hubs.
+- [x] **3.1 Hub-and-Spoke Internal Mesh (Team Pages as Primary Destination):**
+  - Game pages channel all navigation and equity into the primary Canadian team hub(s) (no distracting horizontal game pagination).
+  - Clear "View Full 84-Game [Team] Guide & Blackout Matrix" primary CTA on every game page.
 - [ ] **3.2 "Today's Situation" freshness summary:**
   - Dynamic game-day broadcast status paragraph rendered at build time with visible "Updated {date}" stamp and matching `dateModified` in schema for freshness signals.
-- [ ] **3.3 "Games Tonight" & "Weekend Games" navigation:**
-  - Real crawlable quick-filter links on the splash/home page and team pages for immediate game-night lookups.
+- [x] **3.3 Game-Night Discovery & Upcoming Spotlights:**
+  - Splash page (`/`): Dynamic "Tonight's Canadian Matchups" / "Next Up" spotlight section linking directly to team guides.
+  - Team hubs: Quick "Next 3 Games" spotlight banner at the top of the schedule so mobile users get tonight's verdict instantly without scrolling the full 84-game table.
 - [ ] **3.4 Evergreen explainer hubs:**
   - Dedicated landing pages for high-volume evergreen queries: *"Sportsnet+ blackout rules explained"*, *"Prime Monday Night Hockey schedule"*, *"TVA Sports vs RDS"*.
 - [ ] **3.5 Trust & E-E-A-T signals:**

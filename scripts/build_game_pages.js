@@ -196,8 +196,8 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
       headline = `In-Market Regional Broadcast on ${g.netEN}`;
       badgeText = 'In-Market (Regional Feed)';
       badgeClass = 'bg-slate-700 text-white font-bold px-3 py-1 rounded-full text-xs shadow-sm border border-white/20';
-      boxClass = 'bg-slate-800/90 border-white/10 text-slate-200';
-      explanation = `This location is inside the official broadcast territory. Watch on your regional sports package (${g.netEN}) or standard in-market stream (Sportsnet+ / TSN+). If you only have basic TV without a sports package, this game is not included.`;
+      const inMarketStreamService = (g.netEN && g.netEN.includes('TSN')) ? 'TSN+' : 'Sportsnet+';
+      explanation = `This location is inside the official broadcast territory. Watch on your regional sports package (${g.netEN}) or standard in-market stream (${inMarketStreamService}). If you only have basic TV without a sports package, this game is not included.`;
       icon = '<i class="fa-solid fa-tv text-slate-300 text-lg"></i>';
     } else {
       headline = `Regional Blackout on ${g.netEN}`;
@@ -455,9 +455,14 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
   renderedHtml = renderedHtml.replace(/\{\{FAQ_CONTENT_HTML\}\}/g, faqHtml);
   renderedHtml = renderedHtml.replace(/\{\{REGION_DATA_JSON\}\}/g, JSON.stringify(regionBreakdown));
 
-  // Placeholder navigation
-  renderedHtml = renderedHtml.replace(/\{\{PREV_GAME_LINK\}\}/g, `<a href="https://hockeyblackouts.ca/${primaryCanadian.dir}/" class="hover:text-white transition">&larr; ${primaryCanadian.nickname} Schedule</a>`);
-  renderedHtml = renderedHtml.replace(/\{\{NEXT_GAME_LINK\}\}/g, `<a href="https://hockeyblackouts.ca/${primaryCanadian.dir}/" class="hover:text-white transition">More ${primaryCanadian.nickname} Games &rarr;</a>`);
+  // Team Hub Navigation Buttons (funneling directly into Canadian team hubs)
+  const teamHubNavButtons = canadianTeams.map(t => 
+    `<a href="https://hockeyblackouts.ca/${t.dir}/" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/10 hover:border-white/20 transition flex items-center gap-1.5 whitespace-nowrap">
+      <i class="fa-solid fa-arrow-left text-[10px]"></i>
+      <span>${t.name} Guide</span>
+    </a>`
+  ).join('\n') + `\n<a href="https://hockeyblackouts.ca/" class="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white text-xs border border-white/5 transition flex items-center gap-1.5 whitespace-nowrap"><i class="fa-solid fa-house text-[10px]"></i><span>All Teams</span></a>`;
+  renderedHtml = renderedHtml.replace(/\{\{TEAM_HUB_NAV_BUTTONS\}\}/g, teamHubNavButtons);
 
   fs.writeFileSync(path.join(gameDirPath, 'index.html'), renderedHtml);
   builtGameUrls.push(canonicalUrl);

@@ -221,15 +221,18 @@
       </div>
     </section>
 
-    <!-- Previous / Next Matchup Pagination -->
-    <nav class="flex items-center justify-between text-xs py-3 border-t border-white/10 text-slate-400" aria-label="Game Pagination">
-      <div>{{PREV_GAME_LINK}}</div>
-      <div>
-        <a href="https://hockeyblackouts.ca/{{HOME_TEAM_DIR}}/" class="hover:text-white font-semibold transition">
-          Full {{HOME_TEAM_NAME}} Schedule
-        </a>
+    <!-- Team Hub Navigation Bar (Funneling Search Traffic to Primary PWA Hubs) -->
+    <nav class="p-4 sm:p-5 rounded-2xl bg-slate-900 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300 shadow-md" aria-label="Team Hub Navigation" data-cta="team-hub-nav">
+      <div class="flex items-center gap-2.5 text-center sm:text-left">
+        <i class="fa-solid fa-compass text-[#AF1E2D] text-base"></i>
+        <div>
+          <span class="font-bold text-white block text-sm">Full Team Broadcast Guides</span>
+          <span class="text-[11px] text-slate-400">Complete 84-game blackout rules, interactive location calculator, and PWA setup:</span>
+        </div>
       </div>
-      <div>{{NEXT_GAME_LINK}}</div>
+      <div class="flex items-center gap-2 flex-wrap justify-center sm:justify-end shrink-0">
+        {{TEAM_HUB_NAV_BUTTONS}}
+      </div>
     </nav>
 
   </main>

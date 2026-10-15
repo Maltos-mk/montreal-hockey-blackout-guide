@@ -61,6 +61,21 @@ function validateHtml(filePath) {
     if (!content.includes('data-prerendered="true"')) {
       errors.push('Schedule table is missing prerendered static HTML rows (empty client-side render hurts SEO/AI Overviews).');
     }
+    if (!content.includes('data-spotlight="prerendered"')) {
+      errors.push('Team page is missing prerendered static upcoming game spotlight (data-spotlight="prerendered").');
+    }
+  }
+
+  if (isSplash) {
+    if (!content.includes('data-section="upcoming-matchups"')) {
+      errors.push('Splash page is missing upcoming matchups spotlight section (data-section="upcoming-matchups").');
+    }
+  }
+
+  // Template Placeholder Leak Check (must not output unrendered {{...}} placeholders)
+  const placeholderMatch = content.match(/\{\{[A-Z0-9_]+\}\}/g);
+  if (placeholderMatch && !isRedirect) {
+    errors.push(`Unrendered template placeholder(s) found: ${placeholderMatch.slice(0, 3).join(', ')}`);
   }
 
   // Per-Game Page Schema & Trademark Validation
@@ -110,6 +125,9 @@ function validateHtml(filePath) {
     // Front door CTA check: game page must have a dedicated season schedule CTA leading to a team page
     if (!content.includes('data-cta="team-schedule"')) {
       errors.push('Game page is missing season schedule call to action (data-cta="team-schedule").');
+    }
+    if (!content.includes('data-cta="team-hub-nav"')) {
+      errors.push('Game page is missing bottom team hub navigation bar (data-cta="team-hub-nav").');
     }
   }
 

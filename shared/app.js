@@ -583,8 +583,11 @@ function render() {
                 
                 <div class="text-[11px] text-slate-300 md:text-right max-w-sm">
                   ${nextEval.summaryReason}
-                  
                 </div>
+
+                <a href="${getGamePath(nextGame, window.TEAM_DATA.team.id)}" class="mt-1 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/10 transition">
+                  <span>View Blackout Breakdown &rarr;</span>
+                </a>
               </div>
 
             </div>
@@ -767,7 +770,7 @@ function render() {
               <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${g.netFR}</span>
             </div>
             <a href="${getGameUrl(g)}" class="text-[11px] font-semibold text-[#AF1E2D] dark:text-rose-400 hover:underline flex items-center gap-1">
-              <span>TV & Blackout Guide &rarr;</span>
+              <span>TV & Blackout Breakdown &rarr;</span>
             </a>
           </div>
 

@@ -58,7 +58,98 @@ teams.forEach(team => {
   fs.writeFileSync(path.join(teamBuildDir, 'index.html'), html);
 });
 
-const splashHtml = fs.readFileSync('templates/splash.html', 'utf-8');
+const TEAM_CITIES = {
+  'MTL': 'Montreal', 'TOR': 'Toronto', 'OTT': 'Ottawa', 'VAN': 'Vancouver',
+  'CGY': 'Calgary', 'EDM': 'Edmonton', 'WPG': 'Winnipeg', 'BOS': 'Boston',
+  'BUF': 'Buffalo', 'DET': 'Detroit', 'FLA': 'Florida', 'TBL': 'Tampa Bay',
+  'CAR': 'Carolina', 'NJD': 'New Jersey', 'NYI': 'Elmont', 'NYR': 'New York',
+  'PHI': 'Philadelphia', 'PIT': 'Pittsburgh', 'WSH': 'Washington', 'CBJ': 'Columbus',
+  'CHI': 'Chicago', 'COL': 'Colorado', 'DAL': 'Dallas', 'MIN': 'Minnesota',
+  'NSH': 'Nashville', 'STL': 'St Louis', 'UTA': 'Utah', 'ANA': 'Anaheim',
+  'LAK': 'Los Angeles', 'SJS': 'San Jose', 'SEA': 'Seattle', 'VGK': 'Vegas'
+};
+
+const TEAM_NAMES = {
+  'MTL': 'Montreal Canadiens', 'TOR': 'Toronto Maple Leafs', 'OTT': 'Ottawa Senators',
+  'VAN': 'Vancouver Canucks', 'CGY': 'Calgary Flames', 'EDM': 'Edmonton Oilers',
+  'WPG': 'Winnipeg Jets', 'BOS': 'Boston Bruins', 'BUF': 'Buffalo Sabres',
+  'DET': 'Detroit Red Wings', 'FLA': 'Florida Panthers', 'TBL': 'Tampa Bay Lightning',
+  'CAR': 'Carolina Hurricanes', 'NJD': 'New Jersey Devils', 'NYI': 'New York Islanders',
+  'NYR': 'New York Rangers', 'PHI': 'Philadelphia Flyers', 'PIT': 'Pittsburgh Penguins',
+  'WSH': 'Washington Capitals', 'CBJ': 'Columbus Blue Jackets', 'CHI': 'Chicago Blackhawks',
+  'COL': 'Colorado Avalanche', 'DAL': 'Dallas Stars', 'MIN': 'Minnesota Wild',
+  'NSH': 'Nashville Predators', 'STL': 'St. Louis Blues', 'UTA': 'Utah Mammoth',
+  'ANA': 'Anaheim Ducks', 'LAK': 'Los Angeles Kings', 'SJS': 'San Jose Sharks',
+  'SEA': 'Seattle Kraken', 'VGK': 'Vegas Golden Knights'
+};
+
+function slugifyCity(cityName) {
+  return cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+const now = new Date();
+const threeHoursThirtyMs = 3.5 * 60 * 60 * 1000;
+const allUniqueUpcoming = new Map();
+
+teams.forEach(team => {
+  const data = JSON.parse(fs.readFileSync(`data/${team.id}.json`, 'utf-8'));
+  data.schedule.forEach(g => {
+    const gDate = new Date(g.iso);
+    if ((now.getTime() - gDate.getTime()) > threeHoursThirtyMs) return;
+
+    const isHome = g.vs.startsWith('vs ');
+    const homeId = isHome ? data.team.id : g.opp;
+    const awayId = isHome ? g.opp : data.team.id;
+    const homeCity = TEAM_CITIES[homeId] || homeId;
+    const awayCity = TEAM_CITIES[awayId] || awayId;
+    const datePrefix = g.iso.split('T')[0];
+    const matchKey = `${datePrefix}_${homeId}_${awayId}`;
+
+    if (!allUniqueUpcoming.has(matchKey)) {
+      const homeSlug = slugifyCity(homeCity);
+      const awaySlug = slugifyCity(awayCity);
+      const gameUrl = `/game/${datePrefix}/${homeSlug}-vs-${awaySlug}/`;
+      
+      allUniqueUpcoming.set(matchKey, {
+        game: g,
+        homeName: TEAM_NAMES[homeId] || homeCity,
+        awayName: TEAM_NAMES[awayId] || awayCity,
+        gameUrl,
+        primaryTeamDir: team.dir,
+        primaryTeamName: data.team.name,
+        timestamp: gDate.getTime()
+      });
+    }
+  });
+});
+
+const sortedUpcoming = Array.from(allUniqueUpcoming.values())
+  .sort((a, b) => a.timestamp - b.timestamp)
+  .slice(0, 6);
+
+const splashUpcomingHtml = sortedUpcoming.map(item => `
+  <div class="matchup-card">
+    <div>
+      <div class="matchup-card-header">
+        <span>${item.game.date} • ${item.game.time || '7:00 PM ET'}</span>
+        <span class="matchup-badge">${item.game.netEN || 'Sportsnet'}</span>
+      </div>
+      <h3 class="matchup-card-title">${item.awayName} @ ${item.homeName}</h3>
+      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>${item.game.venue}</div>
+    </div>
+    <div class="matchup-card-footer">
+      <a href="/${item.primaryTeamDir}/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
+        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> ${item.primaryTeamName}
+      </a>
+      <a href="${item.gameUrl}" class="matchup-link">
+        <span>Can I Watch? &rarr;</span>
+      </a>
+    </div>
+  </div>
+`).join('\n');
+
+let splashHtml = fs.readFileSync('templates/splash.html', 'utf-8');
+splashHtml = splashHtml.replace(/\{\{SPLASH_UPCOMING_MATCHUPS_HTML\}\}/g, splashUpcomingHtml);
 fs.writeFileSync(path.join(BUILD_DIR, 'index.html'), splashHtml);
 
 // Build Phase 2 Per-Game Matchup Pages

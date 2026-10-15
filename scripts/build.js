@@ -233,7 +233,7 @@ dataFiles.forEach(file => {
         <div class="flex items-center justify-between text-xs pt-1 border-t border-slate-200/60 dark:border-slate-700/60">
           <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${broadcastEN}</span>
           <a href="${gameUrl}" class="text-[11px] font-semibold text-[#AF1E2D] dark:text-rose-400 hover:underline flex items-center gap-1">
-            <span>TV & Blackout Guide &rarr;</span>
+            <span>TV & Blackout Breakdown &rarr;</span>
           </a>
         </div>
         <div class="text-[11px] font-medium text-slate-600 dark:text-slate-300 bg-white/70 dark:bg-slate-900/50 p-2 rounded-lg border border-slate-200/50 dark:border-slate-700/50 mt-1">
@@ -244,6 +244,81 @@ dataFiles.forEach(file => {
 
   html = html.replace(/\{\{PRERENDERED_DESKTOP_SCHEDULE\}\}/g, desktopRows);
   html = html.replace(/\{\{PRERENDERED_MOBILE_SCHEDULE\}\}/g, mobileCards);
+
+  // Find next upcoming game and generate static spotlight hero
+  const now = new Date();
+  const threeHoursThirtyMs = 3.5 * 60 * 60 * 1000;
+  const upcomingGames = data.schedule.filter(g => {
+    const gDate = new Date(g.iso);
+    return (now.getTime() - gDate.getTime()) < threeHoursThirtyMs;
+  });
+  const nextGame = upcomingGames[0] || data.schedule[data.schedule.length - 1];
+  const nextGameUrl = getGamePath(nextGame, team.id);
+
+  // Format top 3 upcoming games mini-strip
+  const upcoming3 = upcomingGames.slice(0, 3);
+  const upcomingStripHtml = upcoming3.map((ug) => {
+    const ugUrl = getGamePath(ug, team.id);
+    return `
+      <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between gap-3 text-xs">
+        <div>
+          <div class="font-bold text-white text-sm flex items-center gap-1.5">
+            <span class="text-[#AF1E2D] font-teko text-base">#${data.schedule.findIndex(s => s.id === ug.id) + 1}</span>
+            <a href="${ugUrl}" class="hover:underline hover:text-rose-400">${ug.vs}</a>
+          </div>
+          <div class="text-[11px] text-slate-300 mt-0.5">${ug.date} • ${ug.time || '7:00 PM ET'}</div>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-white/10 text-white border border-white/10">${ug.netEN || 'Sportsnet'}</span>
+          <a href="${ugUrl}" class="block text-[10px] text-rose-400 font-semibold hover:underline mt-1">Breakdown &rarr;</a>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const spotlightHeroHtml = `
+    <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-teamSecondary via-slate-900 to-teamDark p-5 sm:p-6 text-white shadow-md border border-slate-700/50" data-spotlight="prerendered">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider bg-white/20 text-white">
+              Next ${team.nickname} Game
+            </span>
+            <span class="text-xs text-slate-300 font-medium">${nextGame.date} • ${nextGame.time || '7:00 PM ET'}</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-black font-teko uppercase tracking-wide flex items-center gap-2">
+            <span>${nextGame.vs}</span>
+            ${nextGame.note ? `<span class="text-xs font-sans font-semibold px-2 py-0.5 rounded bg-white/10 text-white border border-white/20">${nextGame.note}</span>` : ''}
+          </h3>
+          <p class="text-xs text-slate-300 flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-slate-400"></i> ${nextGame.venue}
+          </p>
+        </div>
+        <div class="flex flex-col md:items-end gap-2 w-full md:w-auto pt-3 md:pt-0 border-t md:border-t-0 border-white/10">
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-slate-300 font-medium">Broadcast:</span>
+            <span class="px-2 py-0.5 rounded text-xs font-bold bg-white text-teamSecondary shadow-sm">${nextGame.netEN || 'Sportsnet'}</span>
+            ${nextGame.netFR && nextGame.netFR !== 'None' ? `<span class="px-2 py-0.5 rounded text-xs font-bold bg-white/20 text-white">${nextGame.netFR}</span>` : ''}
+          </div>
+          <a href="${nextGameUrl}" class="px-4 py-2 rounded-xl bg-[#AF1E2D] hover:bg-[#901824] text-white font-bold text-xs shadow-md transition flex items-center gap-1.5 whitespace-nowrap mt-1">
+            <span>View Tonight's Blackout Breakdown &rarr;</span>
+          </a>
+        </div>
+      </div>
+      ${upcoming3.length > 1 ? `
+      <div class="mt-4 pt-4 border-t border-white/10">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1.5">
+          <i class="fa-solid fa-calendar-days text-[#AF1E2D]"></i>
+          <span>Upcoming Schedule Snapshot:</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+          ${upcomingStripHtml}
+        </div>
+      </div>` : ''}
+    </div>
+  `;
+
+  html = html.replace(/\{\{PRERENDERED_SPOTLIGHT_HERO\}\}/g, spotlightHeroHtml);
 
   const teamDir = `teams/${team.name.split(' ')[0].toLowerCase()}`;
   if (!fs.existsSync(teamDir)) fs.mkdirSync(teamDir, { recursive: true });
