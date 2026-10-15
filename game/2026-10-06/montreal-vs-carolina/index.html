@@ -140,23 +140,21 @@
           <span class="w-7 h-7 rounded-lg bg-[#AF1E2D]/20 text-[#AF1E2D] border border-[#AF1E2D]/30 flex items-center justify-center text-sm font-teko">HB</span>
           <span class="text-base"><span class="text-[#AF1E2D] font-bold">Hockey</span>Blackouts.ca</span>
         </a>
-      </div>
-
-      <div class="flex items-center space-x-3 text-xs">
-        <a href="https://hockeyblackouts.ca/montreal/" class="hidden sm:inline-flex items-center space-x-1 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition font-medium">
-          <span>Montreal Canadiens Schedule</span>
-          <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i>
+      <div class="flex items-center space-x-2 text-xs">
+        <a href="https://hockeyblackouts.ca/montreal/" class="hidden sm:inline-flex items-center space-x-1 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition font-medium"><span>Montreal Canadiens Schedule</span><i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></a>
       </div>
     </div>
   </header>
 
   <!-- Breadcrumbs -->
   <nav class="max-w-5xl mx-auto px-4 pt-4 pb-2 w-full text-xs text-slate-400 flex items-center space-x-2" aria-label="Breadcrumb">
+    
     <a href="https://hockeyblackouts.ca/" class="hover:text-white transition">Home</a>
     <span>/</span>
     <a href="https://hockeyblackouts.ca/montreal/" class="hover:text-white transition">Montreal Canadiens</a>
     <span>/</span>
     <span class="text-slate-200 font-semibold">Carolina vs Montreal</span>
+  
   </nav>
 
   <!-- Main Content -->
@@ -223,6 +221,28 @@
         </p>
       </div>
     </section>
+
+    <!-- Season Schedule Front Door CTA -->
+    
+    <section class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-5 relative overflow-hidden" data-cta="team-schedule">
+      <div class="space-y-1.5 text-center sm:text-left z-10">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-[#AF1E2D] flex items-center justify-center sm:justify-start gap-1.5">
+          <i class="fa-solid fa-calendar-days"></i> Full 84-Game Season Guide
+        </div>
+        <h2 class="text-base sm:text-lg font-bold text-white tracking-tight">
+          Looking for the full Montreal Canadiens schedule?
+        </h2>
+        <p class="text-xs text-slate-300 max-w-xl leading-relaxed">
+          Find out exactly which TV channel or streaming service carries all 84 games this season. Custom-filtered for your province and cable/streaming package. 100% free, private, and ad-free.
+        </p>
+      </div>
+      <div class="flex items-center gap-2.5 flex-wrap justify-center sm:justify-end z-10 shrink-0">
+        <a href="https://hockeyblackouts.ca/montreal/" data-cta="team-schedule" class="px-4 py-2.5 rounded-xl bg-[#AF1E2D] hover:bg-[#901824] text-white font-bold text-xs shadow-md transition flex items-center gap-2 whitespace-nowrap">
+      <span>Full Montreal Canadiens Schedule &rarr;</span>
+    </a>
+      </div>
+    </section>
+  
 
     <!-- Comprehensive 7-Region Broadcast Matrix -->
     <section class="bg-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 shadow-xl space-y-4">
@@ -380,8 +400,8 @@
     <nav class="flex items-center justify-between text-xs py-3 border-t border-white/10 text-slate-400" aria-label="Game Pagination">
       <div><a href="https://hockeyblackouts.ca/montreal/" class="hover:text-white transition">&larr; Canadiens Schedule</a></div>
       <div>
-        <a href="https://hockeyblackouts.ca/montreal/" class="hover:text-white font-semibold transition">
-          Full Montreal Canadiens Schedule
+        <a href="https://hockeyblackouts.ca/{{HOME_TEAM_DIR}}/" class="hover:text-white font-semibold transition">
+          Full {{HOME_TEAM_NAME}} Schedule
         </a>
       </div>
       <div><a href="https://hockeyblackouts.ca/montreal/" class="hover:text-white transition">More Canadiens Games &rarr;</a></div>
