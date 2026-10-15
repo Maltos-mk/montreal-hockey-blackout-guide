@@ -70,24 +70,38 @@ Architectural specs verified by SEO/SEM and UX design personas (2026-10-14).
 
 ---
 
-## Phase 3 — French Market
+## Phase 3 — Hubs, Internal Linking & Site Stabilization
 
-- [ ] **3.1** Ship `/fr/montreal/` and `/fr/ottawa/` with real French copy (not machine-only).
-- [ ] **3.2** Reciprocal `hreflang` (`en-CA`, `fr-CA`, `x-default`).
-- [ ] **3.3** French game pages once Phase 2 is stable.
+Stabilize core site architecture, internal linking mesh, and search authority before expanding into localization.
+
+- [ ] **3.1 Internal links mesh:**
+  - Team page schedule spotlight: prominent links directly to the next upcoming 5 games.
+  - Game pages: navigation linking back to both team schedules, adjacent game pagination, and broadcaster hubs.
+- [ ] **3.2 "Today's Situation" freshness summary:**
+  - Dynamic game-day broadcast status paragraph rendered at build time with visible "Updated {date}" stamp and matching `dateModified` in schema for freshness signals.
+- [ ] **3.3 "Games Tonight" & "Weekend Games" navigation:**
+  - Real crawlable quick-filter links on the splash/home page and team pages for immediate game-night lookups.
+- [ ] **3.4 Evergreen explainer hubs:**
+  - Dedicated landing pages for high-volume evergreen queries: *"Sportsnet+ blackout rules explained"*, *"Prime Monday Night Hockey schedule"*, *"TVA Sports vs RDS"*.
+- [ ] **3.5 Trust & E-E-A-T signals:**
+  - Methodology page explaining Canadian broadcast boundary contracts, source citation per verdict, and corrections contact link.
+- [ ] **3.6 IndexNow protocol integration:**
+  - Auto-ping IndexNow API on daily builds for instant discovery by Bing, Yahoo, and Microsoft Copilot.
+- [ ] **3.7 Core Web Vitals (CWV) & Performance:**
+  - Ensure Largest Contentful Paint (LCP) on verdict card text stays well under 1.2s on mobile.
 
 ---
 
-## Phase 4 — Hubs, Internal Linking, Trust
+## Phase 4 — French Market (Quebec / Francophone Broadcasts)
 
-- [ ] **4.1 Evergreen hubs:** "Sportsnet+ blackout rules", "Prime Monday games", "TVA vs RDS", market pages.
-- [ ] **4.2 Internal links:** team page → next 5 games; game page → both teams, prev/next game, broadcaster hub.
-- [ ] **4.3 "Today's Situation" summary** rendered at build time with visible "Updated {time}" and matching `dateModified`.
-- [ ] **4.4 "Games Tonight" / "Weekend" CTAs** as real crawlable links.
-- [ ] **4.5 Trust (E-E-A-T):** methodology page, source per verdict, "last verified" stamp, corrections contact. About page under "Maltos" only.
-- [ ] **4.6 Sitemaps:** accurate `<lastmod>`, monthly split, sitemap index. Drop `changefreq`/`priority`.
-- [ ] **4.7 IndexNow** for Bing/Copilot (cheap).
-- [ ] **4.8 CWV:** LCP on verdict text, reserved space for any future ad slots.
+Deferred until English feature set and site architecture are fully stabilized. Requires authentic Quebec hockey terminology rather than mechanical machine translation.
+
+- [ ] **4.1 Native French Hubs:**
+  - Ship `/fr/montreal/` and `/fr/ottawa/` with tailored copy respecting RDS/TVA Sports rights and regional broadcast nuances.
+- [ ] **4.2 Reciprocal `hreflang` tags:**
+  - Correct bidirectional `hreflang` markup (`en-CA`, `fr-CA`, `x-default`) across corresponding team hubs.
+- [ ] **4.3 French Matchup Pages:**
+  - Programmatic French matchup pages for Canadiens and Senators games once hub stability is proven.
 
 ---
 
