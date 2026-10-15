@@ -585,7 +585,7 @@ function render() {
                   ${nextEval.summaryReason}
                 </div>
 
-                <a href="${getGamePath(nextGame, window.TEAM_DATA.team.id)}" class="mt-1 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/10 transition">
+                <a href="${getGameUrl(nextGame)}" class="mt-1 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/10 transition">
                   <span>View Blackout Breakdown &rarr;</span>
                 </a>
               </div>
