@@ -101,6 +101,17 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
   const homeTeam = TEAMS_MAP[homeTeamId] || { city: homeTeamId, name: homeTeamId, nickname: homeTeamId };
   const awayTeam = TEAMS_MAP[awayTeamId] || { city: awayTeamId, name: awayTeamId, nickname: awayTeamId };
   
+  const homeIsCanadian = Boolean(TEAMS_MAP[homeTeamId] && TEAMS_MAP[homeTeamId].dir);
+  const awayIsCanadian = Boolean(TEAMS_MAP[awayTeamId] && TEAMS_MAP[awayTeamId].dir);
+
+  const canadianTeams = [];
+  if (homeIsCanadian) canadianTeams.push(TEAMS_MAP[homeTeamId]);
+  if (awayIsCanadian) canadianTeams.push(TEAMS_MAP[awayTeamId]);
+  if (canadianTeams.length === 0) {
+    canadianTeams.push(TEAMS_MAP[primaryTeamId] || TEAMS_MAP['TOR']);
+  }
+
+  const primaryCanadian = canadianTeams[0];
   const homeCitySlug = slugifyCity(homeTeam.city);
   const awayCitySlug = slugifyCity(awayTeam.city);
   
@@ -113,9 +124,7 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
     fs.mkdirSync(gameDirPath, { recursive: true });
   }
 
-  const homeTeamDir = (TEAMS_MAP[homeTeamId] && TEAMS_MAP[homeTeamId].dir) ? TEAMS_MAP[homeTeamId].dir : 'toronto';
-
-  // Decision D2: If game concluded more than 21 days ago, issue permanent 301-equivalent redirect to home team schedule
+  // Decision D2: If game concluded more than 21 days ago, issue permanent 301-equivalent redirect to Canadian team schedule
   const gameDate = new Date(g.iso);
   const now = new Date();
   const daysDiff = (now - gameDate) / (1000 * 60 * 60 * 24);
@@ -125,13 +134,13 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Redirecting to ${homeTeam.name} TV Schedule</title>
-  <meta http-equiv="refresh" content="0; url=https://hockeyblackouts.ca/${homeTeamDir}/">
-  <link rel="canonical" href="https://hockeyblackouts.ca/${homeTeamDir}/">
+  <title>Redirecting to ${primaryCanadian.name} TV Schedule</title>
+  <meta http-equiv="refresh" content="0; url=https://hockeyblackouts.ca/${primaryCanadian.dir}/">
+  <link rel="canonical" href="https://hockeyblackouts.ca/${primaryCanadian.dir}/">
   <meta name="robots" content="noindex, follow">
 </head>
 <body class="bg-slate-950 text-white font-sans p-8 text-center">
-  <p class="text-slate-400">This game has concluded. Redirecting to <a href="https://hockeyblackouts.ca/${homeTeamDir}/" class="text-rose-400 underline font-bold">${homeTeam.name} TV Schedule</a>...</p>
+  <p class="text-slate-400">This game has concluded. Redirecting to <a href="https://hockeyblackouts.ca/${primaryCanadian.dir}/" class="text-rose-400 underline font-bold">${primaryCanadian.name} TV Schedule</a>...</p>
 </body>
 </html>`;
     fs.writeFileSync(path.join(gameDirPath, 'index.html'), redirectHtml);
@@ -369,7 +378,45 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
     </div>
   `;
 
-  // Team hub directory already defined as homeTeamDir
+  // Header schedule links: only link to Canadian team hubs
+  const headerScheduleLinks = canadianTeams.map(t => 
+    `<a href="https://hockeyblackouts.ca/${t.dir}/" class="hidden sm:inline-flex items-center space-x-1 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition font-medium"><span>${t.name} Schedule</span><i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></a>`
+  ).join('\n');
+
+  // Breadcrumbs
+  const breadcrumbLinks = `
+    <a href="https://hockeyblackouts.ca/" class="hover:text-white transition">Home</a>
+    <span>/</span>
+    <a href="https://hockeyblackouts.ca/${primaryCanadian.dir}/" class="hover:text-white transition">${primaryCanadian.name}</a>
+    <span>/</span>
+    <span class="text-slate-200 font-semibold">${awayTeam.city} vs ${homeTeam.city}</span>
+  `;
+
+  // Front door Season Schedule CTA
+  const ctaButtonsHtml = canadianTeams.map(t =>
+    `<a href="https://hockeyblackouts.ca/${t.dir}/" data-cta="team-schedule" class="px-4 py-2.5 rounded-xl bg-[#AF1E2D] hover:bg-[#901824] text-white font-bold text-xs shadow-md transition flex items-center gap-2 whitespace-nowrap">
+      <span>Full ${t.name} Schedule &rarr;</span>
+    </a>`
+  ).join('\n');
+
+  const seasonScheduleCta = `
+    <section class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-5 relative overflow-hidden" data-cta="team-schedule">
+      <div class="space-y-1.5 text-center sm:text-left z-10">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-[#AF1E2D] flex items-center justify-center sm:justify-start gap-1.5">
+          <i class="fa-solid fa-calendar-days"></i> Full 84-Game Season Guide
+        </div>
+        <h2 class="text-base sm:text-lg font-bold text-white tracking-tight">
+          Looking for the full ${primaryCanadian.name} schedule?
+        </h2>
+        <p class="text-xs text-slate-300 max-w-xl leading-relaxed">
+          Find out exactly which TV channel or streaming service carries all 84 games this season. Custom-filtered for your province and cable/streaming package. 100% free, private, and ad-free.
+        </p>
+      </div>
+      <div class="flex items-center gap-2.5 flex-wrap justify-center sm:justify-end z-10 shrink-0">
+        ${ctaButtonsHtml}
+      </div>
+    </section>
+  `;
 
   let renderedHtml = template;
   renderedHtml = renderedHtml.replace(/\{\{PAGE_TITLE\}\}/g, pageTitle);
@@ -377,8 +424,9 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
   renderedHtml = renderedHtml.replace(/\{\{META_DESCRIPTION\}\}/g, metaDescription);
   renderedHtml = renderedHtml.replace(/\{\{OG_IMAGE_URL\}\}/g, ogImageUrl);
   renderedHtml = renderedHtml.replace(/\{\{SCHEMA_JSON\}\}/g, JSON.stringify(schemaObj, null, 2));
-  renderedHtml = renderedHtml.replace(/\{\{HOME_TEAM_DIR\}\}/g, homeTeamDir);
-  renderedHtml = renderedHtml.replace(/\{\{HOME_TEAM_NAME\}\}/g, homeTeam.name);
+  renderedHtml = renderedHtml.replace(/\{\{HEADER_SCHEDULE_LINKS\}\}/g, headerScheduleLinks);
+  renderedHtml = renderedHtml.replace(/\{\{BREADCRUMB_LINKS\}\}/g, breadcrumbLinks);
+  renderedHtml = renderedHtml.replace(/\{\{SEASON_SCHEDULE_CTA\}\}/g, seasonScheduleCta);
   renderedHtml = renderedHtml.replace(/\{\{MATCHUP_SHORT\}\}/g, `${awayTeam.city} vs ${homeTeam.city}`);
   renderedHtml = renderedHtml.replace(/\{\{MATCHUP_TITLE\}\}/g, `${awayTeam.name} @ ${homeTeam.name}`);
   renderedHtml = renderedHtml.replace(/\{\{PRESEASON_BADGE\}\}/g, preseasonBadge);
@@ -408,8 +456,8 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
   renderedHtml = renderedHtml.replace(/\{\{REGION_DATA_JSON\}\}/g, JSON.stringify(regionBreakdown));
 
   // Placeholder navigation
-  renderedHtml = renderedHtml.replace(/\{\{PREV_GAME_LINK\}\}/g, `<a href="https://hockeyblackouts.ca/${homeTeamDir}/" class="hover:text-white transition">&larr; ${homeTeam.nickname} Schedule</a>`);
-  renderedHtml = renderedHtml.replace(/\{\{NEXT_GAME_LINK\}\}/g, `<a href="https://hockeyblackouts.ca/${homeTeamDir}/" class="hover:text-white transition">More ${homeTeam.nickname} Games &rarr;</a>`);
+  renderedHtml = renderedHtml.replace(/\{\{PREV_GAME_LINK\}\}/g, `<a href="https://hockeyblackouts.ca/${primaryCanadian.dir}/" class="hover:text-white transition">&larr; ${primaryCanadian.nickname} Schedule</a>`);
+  renderedHtml = renderedHtml.replace(/\{\{NEXT_GAME_LINK\}\}/g, `<a href="https://hockeyblackouts.ca/${primaryCanadian.dir}/" class="hover:text-white transition">More ${primaryCanadian.nickname} Games &rarr;</a>`);
 
   fs.writeFileSync(path.join(gameDirPath, 'index.html'), renderedHtml);
   builtGameUrls.push(canonicalUrl);

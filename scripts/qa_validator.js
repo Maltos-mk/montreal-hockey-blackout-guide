@@ -88,6 +88,19 @@ function validateHtml(filePath) {
         errors.push(`Game page REGION_DATA is missing canonical region key: "${reg}"`);
       }
     });
+
+    // Ensure header link and CTA link only to valid Canadian team directories
+    const nonCanadianTeams = ['Columbus Blue Jackets Schedule', 'Buffalo Sabres Schedule', 'Boston Bruins Schedule', 'Detroit Red Wings Schedule', 'Florida Panthers Schedule', 'Tampa Bay Lightning Schedule'];
+    nonCanadianTeams.forEach(badName => {
+      if (content.includes(badName)) {
+        errors.push(`Game page contains invalid non-Canadian team schedule link: "${badName}". Links must point to Canadian teams only.`);
+      }
+    });
+
+    // Front door CTA check: game page must have a dedicated season schedule CTA leading to a team page
+    if (!content.includes('data-cta="team-schedule"')) {
+      errors.push('Game page is missing season schedule call to action (data-cta="team-schedule").');
+    }
   }
 
   // Monetization / Tracking Checks
