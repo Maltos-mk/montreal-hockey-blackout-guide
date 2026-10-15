@@ -90,8 +90,13 @@ function validateHtml(filePath) {
       errors.push('Found Amazon affiliate link missing Google-compliant rel="sponsored" attribute.');
     }
   }
-  if (content.includes('ko-fi.com') && !content.includes('data-umami-event="kofi-click"')) {
-    errors.push('Found Ko-fi link but missing data-umami-event="kofi-click" tracking attribute.');
+  if (content.includes('ko-fi.com')) {
+    if (!content.includes('data-umami-event="kofi-click"')) {
+      errors.push('Found Ko-fi link but missing data-umami-event="kofi-click" tracking attribute.');
+    }
+    if (/<a[^>]*ko-fi\.com[^>]*noreferrer/i.test(content) || /<a[^>]*noreferrer[^>]*ko-fi\.com/i.test(content)) {
+      errors.push('Ko-fi link contains rel="noreferrer" which strips HTTP Referer header from reaching Ko-fi analytics.');
+    }
   }
   if (isGamePage && !isRedirect) {
     if (!content.includes('data-umami-event="radio-click"')) {
