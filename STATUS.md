@@ -15,6 +15,7 @@ This suite sequentially runs:
 1. `check_privacy.sh`: Ensures no PII (like real names) are in the codebase.
 2. `matrix_test.js`: Validates 1,000+ permutations of the boolean blackout engine.
 3. `qa_validator.js`: Validates SEO, canonical links (must be `https://hockeyblackouts.ca`), and schema structure on generated HTML.
+4. `playwright test`: Launches headless browser to simulate user clicks on streamers/regions, verifies reactive DOM updates, and catches any unhandled runtime exceptions in the browser console.
 
 ## Domain Logic Quirks
 *   **84-Game Schedule:** The NHL schedule is 84 games.
