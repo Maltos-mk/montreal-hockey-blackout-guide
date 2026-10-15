@@ -85,7 +85,7 @@ Stabilize core site architecture, internal linking mesh, and search authority be
   - Dedicated landing pages for high-volume evergreen queries: *"Sportsnet+ blackout rules explained"*, *"Prime Monday Night Hockey schedule"*, *"TVA Sports vs RDS"*.
 - [ ] **3.5 Trust & E-E-A-T signals:**
   - Methodology page explaining Canadian broadcast boundary contracts, source citation per verdict, and corrections contact link.
-- [ ] **3.6 IndexNow protocol integration:**
+- [x] **3.6 IndexNow protocol integration:**
   - Auto-ping IndexNow API on daily builds for instant discovery by Bing, Yahoo, and Microsoft Copilot.
 - [ ] **3.7 Core Web Vitals (CWV) & Performance:**
   - Ensure Largest Contentful Paint (LCP) on verdict card text stays well under 1.2s on mobile.

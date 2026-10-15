@@ -15,6 +15,8 @@ execSync(`cp LICENSE ${BUILD_DIR}/`);
 execSync(`cp README.md ${BUILD_DIR}/`);
 if (fs.existsSync("robots.txt")) fs.copyFileSync("robots.txt", path.join(BUILD_DIR, "robots.txt"));
 if (fs.existsSync("shared/favicon-48x48.png")) fs.copyFileSync("shared/favicon-48x48.png", path.join(BUILD_DIR, "favicon.ico"));
+const indexNowKeyFile = "0e7615e8d257218fdc00d074f25a4247.txt";
+if (fs.existsSync(indexNowKeyFile)) fs.copyFileSync(indexNowKeyFile, path.join(BUILD_DIR, indexNowKeyFile));
 
 const teams = [
   { id: 'mtl', dir: 'montreal' },

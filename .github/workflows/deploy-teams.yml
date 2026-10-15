@@ -28,3 +28,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           cname: hockeyblackouts.ca
+
+      - name: Notify Search Engines via IndexNow
+        run: node scripts/ping_indexnow.js

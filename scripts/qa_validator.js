@@ -226,4 +226,18 @@ rootEntries.forEach(file => {
   }
 });
 
+// Validate IndexNow verification file
+const indexNowKey = '0e7615e8d257218fdc00d074f25a4247';
+const indexNowPath = path.join(buildDir, `${indexNowKey}.txt`);
+if (!fs.existsSync(indexNowPath)) {
+  console.error(`\n❌ QA FAILED: IndexNow verification key file missing at ${indexNowPath}`);
+  process.exit(1);
+} else {
+  const keyContent = fs.readFileSync(indexNowPath, 'utf-8').trim();
+  if (keyContent !== indexNowKey) {
+    console.error(`\n❌ QA FAILED: IndexNow key file content does not match expected key.`);
+    process.exit(1);
+  }
+}
+
 console.log('✅ All pages passed SEO QA validation.');
