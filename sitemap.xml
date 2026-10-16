@@ -41,31 +41,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-10-08/anaheim-vs-edmonton/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hockeyblackouts.ca/game/2026-10-08/carolina-vs-vancouver/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hockeyblackouts.ca/game/2026-10-08/montreal-vs-nashville/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hockeyblackouts.ca/game/2026-10-08/ottawa-vs-philadelphia/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hockeyblackouts.ca/game/2026-10-08/vegas-vs-toronto/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://hockeyblackouts.ca/game/2026-10-09/calgary-vs-colorado/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
