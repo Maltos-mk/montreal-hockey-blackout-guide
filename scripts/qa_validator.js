@@ -64,6 +64,12 @@ function validateHtml(filePath) {
     if (!content.includes('data-spotlight="prerendered"')) {
       errors.push('Team page is missing prerendered static upcoming game spotlight (data-spotlight="prerendered").');
     }
+    if (!content.includes('"dateModified":')) {
+      errors.push('Team page schema is missing "dateModified" freshness signal.');
+    }
+    if (!content.includes('data-freshness="verified-date"')) {
+      errors.push('Team page is missing visible schedule verification date stamp (data-freshness="verified-date").');
+    }
   }
 
   if (isSplash) {

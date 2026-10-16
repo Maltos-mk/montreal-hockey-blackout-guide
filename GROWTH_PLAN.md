@@ -77,8 +77,8 @@ Stabilize core site architecture, internal linking mesh, and search authority be
 - [x] **3.1 Hub-and-Spoke Internal Mesh (Team Pages as Primary Destination):**
   - Game pages channel all navigation and equity into the primary Canadian team hub(s) (no distracting horizontal game pagination).
   - Clear "View Full 84-Game [Team] Guide & Blackout Matrix" primary CTA on every game page.
-- [ ] **3.2 "Today's Situation" freshness summary:**
-  - Dynamic game-day broadcast status paragraph rendered at build time with visible "Updated {date}" stamp and matching `dateModified` in schema for freshness signals.
+- [x] **3.2 "Today's Situation" freshness summary:**
+  - Dynamic game-day broadcast status rendered at build time with visible "Schedule verified: {date}" stamp and matching `dateModified` in schema for freshness signals.
 - [x] **3.3 Game-Night Discovery & Upcoming Spotlights:**
   - Splash page (`/`): Dynamic "Tonight's Canadian Matchups" / "Next Up" spotlight section linking directly to team guides.
   - Team hubs: Quick "Next 3 Games" spotlight banner at the top of the schedule so mobile users get tonight's verdict instantly without scrolling the full 84-game table.

@@ -50,6 +50,7 @@
     "@type": "WebApplication",
     "name": "{{TEAM_NAME}} Hockey Broadcast & Blackout Guide",
     "url": "https://hockeyblackouts.ca/{{TEAM_DIR}}/",
+    "dateModified": "{{BUILD_DATE_ISO}}",
     "applicationCategory": "SportsApplication",
     "operatingSystem": "All",
     "browserRequirements": "Requires JavaScript",
@@ -518,7 +519,7 @@
       <!-- Footer count -->
       <div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
         <span id="renderedCountLabel">Showing upcoming {{TEAM_NAME}} games</span>
-        <span class="text-[11px] italic text-center sm:text-right">Automatically synchronized with client device clock</span>
+        <span class="text-[11px] italic text-center sm:text-right" data-freshness="verified-date">Schedule verified: {{BUILD_DATE_DISPLAY}} • Auto-synced with local clock</span>
       </div>
 
     </section>

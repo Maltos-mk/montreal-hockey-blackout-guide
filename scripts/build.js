@@ -247,6 +247,11 @@ dataFiles.forEach(file => {
 
   // Find next upcoming game and generate static spotlight hero
   const now = new Date();
+  const buildDateIso = now.toISOString().split('T')[0];
+  const buildDateDisplay = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/Toronto' });
+  html = html.replace(/\{\{BUILD_DATE_ISO\}\}/g, buildDateIso);
+  html = html.replace(/\{\{BUILD_DATE_DISPLAY\}\}/g, buildDateDisplay);
+
   const threeHoursThirtyMs = 3.5 * 60 * 60 * 1000;
   const upcomingGames = data.schedule.filter(g => {
     const gDate = new Date(g.iso);
