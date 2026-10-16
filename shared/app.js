@@ -548,6 +548,33 @@ function render() {
         }
 
         const isGameToday = nextGame.isToday;
+        const upcomingGamesList = gamesWithTime.filter(g => !g.isPast);
+        const upcoming3 = upcomingGamesList.slice(0, 3);
+        const upcomingStripHtml = upcoming3.length > 1 ? `
+          <div class="mt-4 pt-4 border-t border-white/10">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1.5">
+              <i class="fa-solid fa-calendar-days text-rose-400"></i>
+              <span>Upcoming Schedule Snapshot:</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              ${upcoming3.map(ug => `
+                <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between gap-3 text-xs">
+                  <div>
+                    <div class="font-bold text-white text-sm flex items-center gap-1.5">
+                      <span class="text-rose-400 font-teko text-base">#${games.findIndex(orig => orig.id === ug.id) + 1}</span>
+                      <a href="${getGameUrl(ug)}" class="hover:underline hover:text-rose-400">${ug.vs}</a>
+                    </div>
+                    <div class="text-[11px] text-slate-300 mt-0.5">${ug.date} • ${formatLocalTime(ug.iso, ug.time)}</div>
+                  </div>
+                  <div class="text-right shrink-0">
+                    <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-white/10 text-white border border-white/10">${ug.netEN || 'Sportsnet'}</span>
+                    <a href="${getGameUrl(ug)}" class="block text-[10px] text-rose-400 font-semibold hover:underline mt-1">Breakdown &rarr;</a>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : '';
 
         spotlightEl.innerHTML = `
           <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-teamSecondary via-slate-900 to-teamDark p-5 sm:p-6 text-white shadow-md border border-slate-700/50">
@@ -591,6 +618,7 @@ function render() {
               </div>
 
             </div>
+            ${upcomingStripHtml}
           </div>
         `;
       }
