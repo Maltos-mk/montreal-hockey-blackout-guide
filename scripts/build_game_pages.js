@@ -26,7 +26,7 @@ const TEAMS_MAP = {
   'TBL': { city: 'Tampa Bay', name: 'Tampa Bay Lightning', nickname: 'Lightning' },
   'CAR': { city: 'Carolina', name: 'Carolina Hurricanes', nickname: 'Hurricanes' },
   'NJD': { city: 'New Jersey', name: 'New Jersey Devils', nickname: 'Devils' },
-  'NYI': { city: 'Elmont', name: 'New York Islanders', nickname: 'Islanders' },
+  'NYI': { city: 'New York', name: 'New York Islanders', nickname: 'Islanders' },
   'NYR': { city: 'New York', name: 'New York Rangers', nickname: 'Rangers' },
   'PHI': { city: 'Philadelphia', name: 'Philadelphia Flyers', nickname: 'Flyers' },
   'PIT': { city: 'Pittsburgh', name: 'Pittsburgh Penguins', nickname: 'Penguins' },
@@ -124,6 +124,33 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
     fs.mkdirSync(gameDirPath, { recursive: true });
   }
 
+  // Legacy redirect for NYI games previously built under 'elmont' slug
+  if (homeTeamId === 'NYI' || awayTeamId === 'NYI') {
+    const legacyHomeSlug = homeTeamId === 'NYI' ? 'elmont' : homeCitySlug;
+    const legacyAwaySlug = awayTeamId === 'NYI' ? 'elmont' : awayCitySlug;
+    const legacySlug = `${legacyHomeSlug}-vs-${legacyAwaySlug}`;
+    const legacyDirPath = path.join(GAMES_DIR, datePrefix, legacySlug);
+    if (!fs.existsSync(legacyDirPath)) {
+      fs.mkdirSync(legacyDirPath, { recursive: true });
+    }
+    const legacyRedirectHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting to ${awayTeam.city} vs ${homeTeam.city} Broadcast Guide</title>
+  <meta http-equiv="refresh" content="0; url=${canonicalUrl}">
+  <link rel="canonical" href="${canonicalUrl}">
+  <meta name="robots" content="noindex, follow">
+  <meta property="og:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
+  <meta property="twitter:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
+</head>
+<body class="bg-slate-950 text-white font-sans p-8 text-center">
+  <p class="text-slate-400">Redirecting to <a href="${canonicalUrl}" class="text-rose-400 underline font-bold">${awayTeam.city} vs ${homeTeam.city} Broadcast Guide</a>...</p>
+</body>
+</html>`;
+    fs.writeFileSync(path.join(legacyDirPath, 'index.html'), legacyRedirectHtml);
+  }
+
   // Decision D2: If game concluded more than 21 days ago, issue permanent 301-equivalent redirect to Canadian team schedule
   const gameDate = new Date(g.iso);
   const now = new Date();
@@ -138,6 +165,8 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
   <meta http-equiv="refresh" content="0; url=https://hockeyblackouts.ca/${primaryCanadian.dir}/">
   <link rel="canonical" href="https://hockeyblackouts.ca/${primaryCanadian.dir}/">
   <meta name="robots" content="noindex, follow">
+  <meta property="og:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
+  <meta property="twitter:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
 </head>
 <body class="bg-slate-950 text-white font-sans p-8 text-center">
   <p class="text-slate-400">This game has concluded. Redirecting to <a href="https://hockeyblackouts.ca/${primaryCanadian.dir}/" class="text-rose-400 underline font-bold">${primaryCanadian.name} TV Schedule</a>...</p>
