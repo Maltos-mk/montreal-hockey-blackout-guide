@@ -32,7 +32,11 @@
     }
     </script>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8" data-exclude-hash="true"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
     <style>
         :root {
             --bg-page: #f8fafc;
@@ -272,18 +276,20 @@
         }
       }
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body>
     <div class="container">
         <header>
             <div style="display: flex; justify-content: flex-end; margin-bottom: 0.5rem;">
-                <button onclick="toggleTheme()" style="background: none; border: none; cursor: pointer; font-size: 1.25rem; color: var(--text-muted); transition: color 0.2s; padding: 0;" onmouseover="this.style.color='var(--text-main)'" onmouseout="this.style.color='var(--text-muted)'" title="Toggle Night Mode"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                <button onclick="toggleTheme()" aria-label="Toggle Night Mode" style="background: none; border: none; cursor: pointer; font-size: 1.25rem; color: var(--text-muted); transition: color 0.2s; padding: 0;" onmouseover="this.style.color='var(--text-main)'" onmouseout="this.style.color='var(--text-muted)'" title="Toggle Night Mode"><i class="fa-solid fa-circle-half-stroke"></i></button>
             </div>
             <h1 style="font-size: clamp(1.8rem, 8vw, 2.75rem); word-break: break-word;"><span style="color:#AF1E2D;">Hockey</span>Blackouts.ca</h1>
             <p class="subtitle">Select your team below to instantly calculate which NHL games are blacked out in your region, and view the complete TV schedule for exactly where and how to watch the games tonight.</p>
         </header>
         
+        <main>
         <div class="grid">
             <a href="/montreal/" class="card mtl">Montreal Canadiens</a>
             <a href="/ottawa/" class="card ott">Ottawa Senators</a>
@@ -305,66 +311,6 @@
             </div>
             <div class="matchup-grid">
                 
-  <div class="matchup-card">
-    <div>
-      <div class="matchup-card-header">
-        <span>Thu, Oct 15, 2026 • 7:00 PM</span>
-        <span class="matchup-badge">TSN4</span>
-      </div>
-      <h3 class="matchup-card-title">Buffalo Sabres @ Toronto Maple Leafs</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Scotiabank Arena</div>
-    </div>
-    <div class="matchup-card-footer">
-      <a href="/toronto/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Toronto Maple Leafs
-      </a>
-      <a href="/game/2026-10-15/toronto-vs-buffalo/" class="matchup-link">
-        <span>Can I Watch? &rarr;</span>
-      </a>
-    </div>
-  </div>
-
-
-  <div class="matchup-card">
-    <div>
-      <div class="matchup-card-header">
-        <span>Thu Oct 15 2026 • 7:00 PM</span>
-        <span class="matchup-badge">TSN5</span>
-      </div>
-      <h3 class="matchup-card-title">New York Islanders @ Ottawa Senators</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Canadian Tire Centre</div>
-    </div>
-    <div class="matchup-card-footer">
-      <a href="/ottawa/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Ottawa Senators
-      </a>
-      <a href="/game/2026-10-15/ottawa-vs-elmont/" class="matchup-link">
-        <span>Can I Watch? &rarr;</span>
-      </a>
-    </div>
-  </div>
-
-
-  <div class="matchup-card">
-    <div>
-      <div class="matchup-card-header">
-        <span>Thu Oct 15 2026 • 7:00 PM</span>
-        <span class="matchup-badge">Sportsnet Pacific</span>
-      </div>
-      <h3 class="matchup-card-title">Vancouver Canucks @ Florida Panthers</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Amerant Bank Arena</div>
-    </div>
-    <div class="matchup-card-footer">
-      <a href="/vancouver/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Vancouver Canucks
-      </a>
-      <a href="/game/2026-10-15/florida-vs-vancouver/" class="matchup-link">
-        <span>Can I Watch? &rarr;</span>
-      </a>
-    </div>
-  </div>
-
-
   <div class="matchup-card">
     <div>
       <div class="matchup-card-header">
@@ -424,14 +370,74 @@
     </div>
   </div>
 
+
+  <div class="matchup-card">
+    <div>
+      <div class="matchup-card-header">
+        <span>Sat Oct 17 2026 • 3:30 PM</span>
+        <span class="matchup-badge">Sportsnet</span>
+      </div>
+      <h3 class="matchup-card-title">Carolina Hurricanes @ Winnipeg Jets</h3>
+      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Canada Life Centre</div>
+    </div>
+    <div class="matchup-card-footer">
+      <a href="/winnipeg/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
+        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Winnipeg Jets
+      </a>
+      <a href="/game/2026-10-17/winnipeg-vs-carolina/" class="matchup-link">
+        <span>Can I Watch? &rarr;</span>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="matchup-card">
+    <div>
+      <div class="matchup-card-header">
+        <span>Sat Oct 17 2026 • 4:00 PM</span>
+        <span class="matchup-badge">Sportsnet Pacific</span>
+      </div>
+      <h3 class="matchup-card-title">Vancouver Canucks @ Tampa Bay Lightning</h3>
+      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Benchmark International Arena</div>
+    </div>
+    <div class="matchup-card-footer">
+      <a href="/vancouver/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
+        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Vancouver Canucks
+      </a>
+      <a href="/game/2026-10-17/tampa-bay-vs-vancouver/" class="matchup-link">
+        <span>Can I Watch? &rarr;</span>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="matchup-card">
+    <div>
+      <div class="matchup-card-header">
+        <span>Sat, Oct 17, 2026 • 7:00 PM</span>
+        <span class="matchup-badge">Sportsnet East</span>
+      </div>
+      <h3 class="matchup-card-title">Buffalo Sabres @ Montreal Canadiens</h3>
+      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Centre Bell</div>
+    </div>
+    <div class="matchup-card-footer">
+      <a href="/montreal/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
+        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Montreal Canadiens
+      </a>
+      <a href="/game/2026-10-17/montreal-vs-buffalo/" class="matchup-link">
+        <span>Can I Watch? &rarr;</span>
+      </a>
+    </div>
+  </div>
+
             </div>
         </section>
 
         <div class="content-section">
             <h2>Why are NHL games blacked out in Canada?</h2>
             <p>If you've ever tuned in to watch your team tonight only to be met with a blank screen and a Sportsnet blackout or NHL regional blackout message, you aren't alone. The NHL's broadcasting rights in Canada are governed by a complex set of regional television boundaries.</p>
-            <p>The 82-game schedule is split into two categories: <strong>National Games</strong> and <strong>Regional Games</strong>.</p>
-            <p>National games (like Hockey Night in Canada, or the new Amazon Prime Monday Night Hockey broadcasts) are available to everyone coast-to-coast without restriction. However, Regional games are strictly geofenced. For example, if a network like TSN5 owns the regional rights to the Ottawa Senators, only people physically located within the Senators' designated territory (Eastern Ontario, Quebec, Maritimes) are allowed to watch that channel.</p>
+            <p>The 84-game schedule is split into two categories: <strong>National Games</strong> and <strong>Regional Games</strong>.</p>
+            <p>National games (like Hockey Night in Canada, or the new Amazon Prime broadcasts) are available to everyone coast-to-coast without restriction. However, Regional games are strictly geofenced. For example, if a network like TSN5 owns the regional rights to the Ottawa Senators, only people physically located within the Senators' designated territory (Eastern Ontario, Quebec, Maritimes) are allowed to watch that channel.</p>
         </div>
 
         <div class="content-section">
@@ -439,6 +445,29 @@
             <p>Figuring out exactly which channel carries the game tonight—and whether your specific TV package or streaming service (like Sportsnet+ Premium) will actually let you watch it—requires cross-referencing your physical location with the NHL's territory map.</p>
             <p>That is exactly what these calculators do. Simply select your team above, input your province and your current subscriptions, and the algorithm will parse the entire 2026-2027 NHL broadcast schedule to mathematically calculate exactly which games you can watch, and which ones will be blacked out.</p>
         </div>
+
+        <div class="content-section">
+            <h2>Canadian Broadcast &amp; Blackout Deep Dives</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin-top: 1rem;">
+                <a href="/sportsnet-plus-blackout-rules/" class="matchup-card" style="text-decoration: none;">
+                    <div class="matchup-card-title" style="margin: 0 0 0.25rem 0;">Sportsnet+ Blackout Rules &rarr;</div>
+                    <div class="matchup-card-venue">Standard vs. Premium &amp; regional territory walls explained.</div>
+                </a>
+                <a href="/prime-hockey-schedule-canada/" class="matchup-card" style="text-decoration: none;">
+                    <div class="matchup-card-title" style="margin: 0 0 0.25rem 0;">Prime Video Hockey Schedule &rarr;</div>
+                    <div class="matchup-card-venue">Every Canadian game streaming coast-to-coast on Prime.</div>
+                </a>
+                <a href="/rds-vs-tva-sports-blackouts/" class="matchup-card" style="text-decoration: none;">
+                    <div class="matchup-card-title" style="margin: 0 0 0.25rem 0;">RDS vs. TVA Sports &rarr;</div>
+                    <div class="matchup-card-venue">French regional vs. national rights across Canada.</div>
+                </a>
+                <a href="/how-blackouts-work/" class="matchup-card" style="text-decoration: none;">
+                    <div class="matchup-card-title" style="margin: 0 0 0.25rem 0;">Territory Map &amp; Methodology &rarr;</div>
+                    <div class="matchup-card-venue">Official broadcast boundaries, overlap zones &amp; data sources.</div>
+                </a>
+            </div>
+        </div>
+        </main>
 
         <footer>
             <p>&copy; 2026 HockeyBlackouts.ca. All Rights Reserved. Not affiliated with the NHL, Rogers Media, Bell Media, or Amazon.</p>

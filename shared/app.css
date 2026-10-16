@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-
 .font-teko { 
-  font-family: 'Teko', sans-serif; 
+  font-family: 'Teko', Impact, 'Arial Narrow', sans-serif; 
 }
 
 body { 
-  font-family: 'Inter', sans-serif; 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
 }
 
 /* Print / PDF Export Styles */

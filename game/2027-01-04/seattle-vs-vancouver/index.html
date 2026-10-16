@@ -118,10 +118,17 @@
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8" data-exclude-hash="true"></script>
 
-  <!-- Tailwind CSS & Font Awesome -->
+  <!-- Tailwind CSS & Non-Blocking Fonts/Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  </noscript>
 
   <style>
     .font-teko { font-family: 'Teko', sans-serif; }
@@ -137,8 +144,8 @@
     <div class="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
       <div class="flex items-center space-x-2">
         <a href="https://hockeyblackouts.ca/" class="flex items-center space-x-2 text-white font-bold tracking-tight hover:opacity-90 transition">
-          <span class="w-7 h-7 rounded-lg bg-[#AF1E2D]/20 text-[#AF1E2D] border border-[#AF1E2D]/30 flex items-center justify-center text-sm font-teko">HB</span>
-          <span class="text-base"><span class="text-[#AF1E2D] font-bold">Hockey</span>Blackouts.ca</span>
+          <span class="w-7 h-7 rounded-lg bg-[#AF1E2D]/20 text-rose-400 border border-[#AF1E2D]/30 flex items-center justify-center text-sm font-teko">HB</span>
+          <span class="text-base"><span class="text-rose-400 font-bold">Hockey</span>Blackouts.ca</span>
         </a>
       <div class="flex items-center space-x-2 text-xs">
         <a href="https://hockeyblackouts.ca/vancouver/" class="hidden sm:inline-flex items-center space-x-1 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition font-medium"><span>Vancouver Canucks Schedule</span><i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></a>
@@ -226,7 +233,7 @@
     
     <section class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-5 relative overflow-hidden" data-cta="team-schedule">
       <div class="space-y-1.5 text-center sm:text-left z-10">
-        <div class="text-[11px] font-bold uppercase tracking-wider text-[#AF1E2D] flex items-center justify-center sm:justify-start gap-1.5">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-rose-400 flex items-center justify-center sm:justify-start gap-1.5">
           <i class="fa-solid fa-calendar-days"></i> Full 84-Game Season Guide
         </div>
         <h2 class="text-base sm:text-lg font-bold text-white tracking-tight">
@@ -417,16 +424,23 @@
   </main>
 
   <!-- Footer with Disclaimer -->
-  <footer class="border-t border-white/10 bg-slate-900 py-8 text-center text-xs text-slate-500 mt-12">
+  <footer class="border-t border-white/10 bg-slate-900 py-8 text-center text-xs text-slate-400 mt-12">
     <div class="max-w-4xl mx-auto px-4 space-y-4">
+      <div class="flex flex-wrap items-center justify-center gap-2 text-xs pb-1">
+        <a href="https://hockeyblackouts.ca/sportsnet-plus-blackout-rules/" class="px-2.5 py-1 rounded-full bg-slate-950 text-slate-300 hover:text-white border border-white/10 transition">Sportsnet+ Blackout Rules</a>
+        <a href="https://hockeyblackouts.ca/prime-hockey-schedule-canada/" class="px-2.5 py-1 rounded-full bg-slate-950 text-slate-300 hover:text-white border border-white/10 transition">Prime Video Hockey Schedule</a>
+        <a href="https://hockeyblackouts.ca/rds-vs-tva-sports-blackouts/" class="px-2.5 py-1 rounded-full bg-slate-950 text-slate-300 hover:text-white border border-white/10 transition">RDS vs. TVA Sports</a>
+        <a href="https://hockeyblackouts.ca/how-blackouts-work/" class="px-2.5 py-1 rounded-full bg-slate-950 text-slate-300 hover:text-white border border-white/10 transition">How Blackouts Work &amp; Methodology</a>
+      </div>
+
       <div class="text-[11px] leading-relaxed text-slate-400 max-w-2xl mx-auto text-left bg-slate-950 p-4 rounded-xl border border-white/10">
         <strong class="text-slate-300">About This Broadcast Guide:</strong> This independent guide calculates TV blackout restrictions in real-time by analyzing official league broadcast assignments against Canadian telecom boundary lines.
       </div>
 
-      <p class="font-semibold text-slate-400 uppercase tracking-wider text-[11px] pt-2">
+      <p class="font-semibold text-slate-300 uppercase tracking-wider text-[11px] pt-2">
         Non-Affiliation & Nominative Fair Use Disclaimer
       </p>
-      <p class="text-[11px] leading-relaxed text-slate-500">
+      <p class="text-[11px] leading-relaxed text-slate-400">
         This website is an independent fan resource created exclusively for public informational purposes. This service is <strong>not affiliated with, maintained by, endorsed by, or in any way associated with</strong> the National Hockey League (NHL) or any of its member clubs. All team names, schedules, network titles (Sportsnet, TSN, RDS, TVA Sports, Amazon Prime Video), and trademarks referenced herein are used strictly for descriptive and nominative identification under applicable intellectual property laws.
       </p>
     </div>
