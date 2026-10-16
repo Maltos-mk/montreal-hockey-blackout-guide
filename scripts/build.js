@@ -114,8 +114,8 @@ dataFiles.forEach(file => {
     };
   }).sort((a, b) => eastToWest.indexOf(a.id) - eastToWest.indexOf(b.id));
 
-  let topNavLinks = '<a href="https://hockeyblackouts.ca/" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent mr-2"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span style="color:#AF1E2D;">Hockey</span>Blackouts.ca</a><div class="w-px h-4 bg-slate-700 mx-2"></div>';
-  let footerNavLinks = '<a href="https://hockeyblackouts.ca/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span style="color:#AF1E2D;">Hockey</span>Blackouts.ca</a>\n';
+  let topNavLinks = '<a href="https://hockeyblackouts.ca/" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent mr-2"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span class="text-rose-400">Hockey</span>Blackouts.ca</a><div class="w-px h-4 bg-slate-700 mx-2"></div>';
+  let footerNavLinks = '<a href="https://hockeyblackouts.ca/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span class="text-[#AF1E2D] dark:text-rose-400">Hockey</span>Blackouts.ca</a>\n';
   allTeams.forEach(t => {
     if (t.id === team.id) {
       topNavLinks += `<span class="px-3 py-1 rounded-md text-white font-bold bg-white/20 shadow-sm border border-white/10">${t.id}</span>`;
@@ -185,20 +185,20 @@ dataFiles.forEach(file => {
 
     desktopRows += `
       <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60">
-        <td class="py-3 px-4 font-bold text-slate-400 dark:text-slate-400 font-teko text-base text-center">${idx + 1}</td>
+        <td class="py-3 px-4 font-bold text-slate-600 dark:text-slate-300 font-teko text-base text-center">${idx + 1}</td>
         <td class="py-3 px-4 whitespace-nowrap">
           <div class="font-semibold text-slate-800 dark:text-slate-200">${g.date}</div>
-          <div class="text-[11px] text-slate-400">${g.time || '7:00 PM ET'}</div>
+          <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.time || '7:00 PM ET'}</div>
         </td>
         <td class="py-3 px-4">
           <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
             <a href="${gameUrl}" class="hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline transition flex items-center gap-1.5" title="View TV broadcast and blackout breakdown">
               <span>${g.vs}</span>
-              <i class="fa-solid fa-chevron-right text-[9px] text-slate-400 opacity-60"></i>
+              <i class="fa-solid fa-chevron-right text-[9px] text-slate-500 opacity-75"></i>
             </a>
             ${g.phase === 'preseason' ? '<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">Preseason</span>' : ''}
           </div>
-          <div class="text-[11px] text-slate-500">${g.venue}</div>
+          <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.venue}</div>
         </td>
         <td class="py-3 px-4">
           <div class="flex items-center space-x-1.5">
@@ -207,11 +207,11 @@ dataFiles.forEach(file => {
           </div>
         </td>
         <td class="py-3 px-4">
-          <span class="text-[11px] font-medium uppercase tracking-wider text-slate-500">${coverageLabel}</span>
+          <span class="text-[11px] font-medium uppercase tracking-wider text-slate-600 dark:text-slate-300">${coverageLabel}</span>
         </td>
         <td class="py-3 px-4 text-right">
           <div>${statusBadge}</div>
-          <div class="text-[11px] text-slate-500 dark:text-slate-300 mt-1 leading-snug">${accessDesc}</div>
+          <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-1 leading-snug">${accessDesc}</div>
         </td>
       </tr>`;
 
@@ -220,13 +220,13 @@ dataFiles.forEach(file => {
         <div class="flex items-start justify-between gap-2">
           <div>
             <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="font-teko text-base font-bold text-slate-400">#${idx + 1}</span>
+              <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#${idx + 1}</span>
               <a href="${gameUrl}" class="font-bold text-sm text-slate-900 dark:text-white hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline flex items-center gap-1">
                 <span>${g.vs}</span>
-                <i class="fa-solid fa-chevron-right text-[8px] text-slate-400"></i>
+                <i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i>
               </a>
             </div>
-            <div class="text-[11px] text-slate-500">${g.date} • ${g.time || '7:00 PM ET'}</div>
+            <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.date} • ${g.time || '7:00 PM ET'}</div>
           </div>
           <div>${statusBadge}</div>
         </div>
@@ -268,7 +268,7 @@ dataFiles.forEach(file => {
       <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between gap-3 text-xs">
         <div>
           <div class="font-bold text-white text-sm flex items-center gap-1.5">
-            <span class="text-[#AF1E2D] font-teko text-base">#${data.schedule.findIndex(s => s.id === ug.id) + 1}</span>
+            <span class="text-rose-400 font-teko text-base">#${data.schedule.findIndex(s => s.id === ug.id) + 1}</span>
             <a href="${ugUrl}" class="hover:underline hover:text-rose-400">${ug.vs}</a>
           </div>
           <div class="text-[11px] text-slate-300 mt-0.5">${ug.date} • ${ug.time || '7:00 PM ET'}</div>

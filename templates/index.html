@@ -43,23 +43,15 @@
   <meta property="twitter:description" content="Check live broadcast channels and regional blackouts for all 84 {{TEAM_NAME}} regular season games.">
   <meta property="twitter:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
 
-  <!-- Schema.org WebApplication Markup -->
+  <!-- Schema.org WebPage Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
+    "@type": "WebPage",
     "name": "{{TEAM_NAME}} Hockey Broadcast & Blackout Guide",
     "url": "https://hockeyblackouts.ca/{{TEAM_DIR}}/",
     "dateModified": "{{BUILD_DATE_ISO}}",
-    "applicationCategory": "SportsApplication",
-    "operatingSystem": "All",
-    "browserRequirements": "Requires JavaScript",
-    "description": "Interactive broadcast schedule and regional blackout calculator for {{TEAM_NAME}}  hockey games across Sportsnet, TSN, {{REGIONAL_FR}}, TVA Sports, and Prime Video.",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "CAD"
-    }
+    "description": "Interactive broadcast schedule and regional blackout calculator for {{TEAM_NAME}} hockey games across Sportsnet, TSN, {{REGIONAL_FR}}, TVA Sports, and Prime Video."
   }
   </script>
 
@@ -143,12 +135,22 @@
   }
   </script>
 
+  <!-- Preconnect Hints & Non-Blocking Fonts/Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </noscript>
+
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8" data-exclude-hash="true"></script>
 
-  <!-- Tailwind CSS & Font Awesome Icons -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <script>
     tailwind.config = {
@@ -248,15 +250,15 @@
             <span class="w-2.5 h-6 bg-teamPrimary rounded-full inline-block"></span>
             <h2 class="text-base sm:text-lg font-bold">1. Location & Subscriptions</h2>
           </div>
-          <span class="text-xs text-slate-500 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-full font-medium">Official Rules</span>
+          <span class="text-xs text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-full font-medium">Official Rules</span>
         </div>
 
         <!-- Region Selector -->
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-300 mb-2">
+          <label for="regionSelect" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">
             Where do you live?
           </label>
-          <select id="regionSelect" class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 px-4 py-3 rounded-xl shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teamSecondary">
+          <select id="regionSelect" aria-label="Where do you live?" class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 px-4 py-3 rounded-xl shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teamSecondary">
             <option value="on_east_qc_atl">Quebec, Eastern Ontario, Atlantic Canada</option>
             <option value="on_overlap">Ontario Overlap (Belleville, Kingston, Pembroke)</option>
             <option value="on_west">Ontario West (Toronto, London)</option>
@@ -271,16 +273,16 @@
 
         <!-- Subscriptions Checklist -->
         <div>
-          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-300 mb-2">
+          <span class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">
             Your Active Subscriptions & Channels:
-          </label>
+          </span>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="subsList">
             
             <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
               <input type="checkbox" id="sub_sn_cable" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">Sportsnet (Linear TV Cable)</p>
-                <p class="text-[10px] text-slate-500 font-medium">Bell, Telus, Shaw (Excludes SN+ app exclusives)</p>
+                <p class="text-[10px] text-slate-600 dark:text-slate-300 font-medium">Bell, Telus, Shaw (Excludes SN+ app exclusives)</p>
               </div>
             </label>
 
@@ -288,7 +290,7 @@
               <input type="checkbox" id="sub_sn_plus" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">Sportsnet+ Standard (Streaming)</p>
-                <p class="text-[10px] text-slate-500 font-medium">Or Rogers Cable subscribers</p>
+                <p class="text-[10px] text-slate-600 dark:text-slate-300 font-medium">Or Rogers Cable subscribers</p>
               </div>
             </label>
 
@@ -296,7 +298,7 @@
               <input type="checkbox" id="sub_sn_prem" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">Sportsnet+ PREMIUM / NHL Centre Ice</p>
-                <p class="text-[10px] text-slate-500 font-medium">Out-of-market regional package</p>
+                <p class="text-[10px] text-slate-600 dark:text-slate-300 font-medium">Out-of-market regional package</p>
               </div>
             </label>
 
@@ -304,7 +306,7 @@
               <input type="checkbox" id="sub_centre_ice_fr" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">NHL Centre Ice French</p>
-                <p class="text-[11px] text-slate-500">French-only out-of-market package</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-300">French-only out-of-market package</p>
               </div>
             </label>
 
@@ -312,7 +314,7 @@
               <input type="checkbox" id="sub_regional_en" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">My Local Sports Channel ({{REGIONAL_EN}})</p>
-                <p class="text-[11px] text-slate-500">{{REGIONAL_EN_COUNT}} Regional {{TEAM_NICKNAME}} games (in-market only)</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-300">{{REGIONAL_EN_COUNT}} Regional {{TEAM_NICKNAME}} games (in-market only)</p>
               </div>
             </label>
 
@@ -322,7 +324,7 @@
                 <input type="checkbox" id="sub_prime" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
                 <div class="flex-1">
                   <p class="text-sm font-semibold">Amazon Prime Video</p>
-                  <p class="text-[11px] text-slate-500">National Wednesday Night Hockey feeds</p>
+                  <p class="text-[11px] text-slate-600 dark:text-slate-300">National Wednesday Night Hockey feeds</p>
                 </div>
               </label>
               <div class="text-[11px] pl-7 pt-1">
@@ -337,7 +339,7 @@
               <input type="checkbox" id="sub_regional_fr" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">{{REGIONAL_FR}} / {{REGIONAL_FR}} Direct</p>
-                <p class="text-[11px] text-slate-500">{{REGIONAL_FR_COUNT}} Regional French {{TEAM_NICKNAME}} games</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-300">{{REGIONAL_FR_COUNT}} Regional French {{TEAM_NICKNAME}} games</p>
               </div>
             </label>
 
@@ -345,7 +347,7 @@
               <input type="checkbox" id="sub_national_fr" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">TVA Sports</p>
-                <p class="text-[11px] text-slate-500">National French broadcasts (zero blackouts)</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-300">National French broadcasts (zero blackouts)</p>
               </div>
             </label>
 
@@ -353,7 +355,7 @@
               <input type="checkbox" id="sub_espn" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
                 <p class="text-sm font-semibold">ESPN+ / NHL.tv (US / International)</p>
-                <p class="text-[11px] text-slate-500">Official out-of-market {{TEAM_NICKNAME}} streaming outside Canada</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-300">Official out-of-market {{TEAM_NICKNAME}} streaming outside Canada</p>
               </div>
             </label>
 
@@ -362,10 +364,10 @@
 
         <!-- Language Preference -->
         <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
-          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-300">Language Feeds You Watch:</span>
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">Language Feeds You Watch:</span>
           <div class="inline-flex rounded-lg p-1 bg-slate-100 dark:bg-slate-800 text-xs font-semibold">
-            <button id="lang_en" onclick="setLang('en')" class="px-3 py-1.5 rounded-md text-slate-500 hover:text-slate-800 dark:hover:text-white transition">English Only</button>
-            <button id="lang_fr" onclick="setLang('fr')" class="px-3 py-1.5 rounded-md text-slate-500">French Only</button>
+            <button id="lang_en" onclick="setLang('en')" class="px-3 py-1.5 rounded-md text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-white transition">English Only</button>
+            <button id="lang_fr" onclick="setLang('fr')" class="px-3 py-1.5 rounded-md text-slate-600 dark:text-slate-300">French Only</button>
             <button id="lang_any" onclick="setLang('any')" class="px-3 py-1.5 rounded-md bg-white dark:bg-slate-700 shadow-sm text-teamPrimary font-bold transition">Either (Any)</button>
           </div>
         </div>
@@ -426,9 +428,16 @@
           </div>
         </div>
 
-        <!-- Official Advice Card -->
-        <div id="adviceCard" class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs sm:text-sm">
-          <!-- Populated by JS -->
+        <!-- Official Advice Card (Prerendered to prevent Mobile CLS) -->
+        <div id="adviceCard" class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs sm:text-sm min-h-[96px]">
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white">In-Market Full Season Setup</h3>
+              <p class="text-slate-600 dark:text-slate-300 mt-1">
+                To receive all {{TEAM_NAME}} games locally, you generally need Sportsnet (Saturdays), your local regional channel, and Amazon Prime.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Post-Value Support Callout -->
@@ -456,31 +465,31 @@
         <!-- View Timing Toggle -->
         <div class="inline-flex rounded-xl p-1 bg-slate-100 dark:bg-slate-800 text-xs font-semibold self-start">
           <button onclick="setTimeFilter('upcoming')" id="time_upcoming" class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 shadow-sm text-teamPrimary font-bold transition">Upcoming Games</button>
-          <button onclick="setTimeFilter('all')" id="time_all" class="px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white transition">All Games</button>
-          <button onclick="setTimeFilter('past')" id="time_past" class="px-3 py-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:hover:text-white transition">Past Games</button>
+          <button onclick="setTimeFilter('all')" id="time_all" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">All Games</button>
+          <button onclick="setTimeFilter('past')" id="time_past" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">Past Games</button>
         </div>
 
         <!-- Filter Controls -->
         <div class="flex flex-wrap items-center gap-2">
           
           <div class="relative flex-1 sm:flex-initial">
-            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
-            <input type="text" id="opponentSearch" placeholder="Search opponent, venue..." class="pl-8 pr-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary w-full sm:w-44">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-500 text-xs"></i>
+            <input type="text" id="opponentSearch" aria-label="Search opponent or venue" placeholder="Search opponent, venue..." class="pl-8 pr-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary w-full sm:w-44">
           </div>
 
-          <select id="statusFilter" class="px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary">
+          <select id="statusFilter" aria-label="Filter games by watchability status" class="px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary">
             <option value="all">Status: All</option>
             <option value="watchable">Watchable</option>
             <option value="blacked_out">Blacked Out</option>
             <option value="missing_sub">Need Sub</option>
           </select>
 
-          <button id="btnExportPDF" onclick="exportPDF()" data-umami-event="export-pdf-click" class="print-hidden px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-700 hover:bg-slate-50 dark:hover:bg-slate-600 transition flex items-center gap-1.5 text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap" aria-label="Print or Save Schedule as PDF">
+          <button id="btnExportPDF" onclick="exportPDF()" data-umami-event="export-pdf-click" class="print-hidden px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-700 hover:bg-slate-50 dark:hover:bg-slate-600 transition flex items-center gap-1.5 text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap" aria-label="Export PDF Schedule">
             <i class="fa-solid fa-print"></i>
             <span class="hidden sm:inline">Export PDF</span>
           </button>
 
-          <select id="channelFilter" class="px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary">
+          <select id="channelFilter" aria-label="Filter games by broadcast channel" class="px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary">
             <option value="all">Channel: All</option>
             <option value="Sportsnet">Sportsnet</option>
             <option value="{{REGIONAL_EN}}">{{REGIONAL_EN}}</option>
@@ -709,7 +718,7 @@
   <script>
   window.TEAM_DATA_URL = "../../data/{{JSON_FILENAME}}?v=2";
 </script>
-<script src="../../shared/app.js?v=1790776244"></script>
+<script defer src="../../shared/app.js?v=1790776245"></script>
 
 </body>
 </html>

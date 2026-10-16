@@ -72,11 +72,23 @@ function validateHtml(filePath) {
     if (!content.includes('data-freshness="verified-date"')) {
       errors.push('Team page is missing visible schedule verification date stamp (data-freshness="verified-date").');
     }
+    if (content.includes('"@type": "WebApplication"')) {
+      errors.push('Team page contains WebApplication schema with $0 Offer that triggers Rich Results aggregateRating warning; use WebPage instead.');
+    }
+    if (!content.includes('<script defer src="../shared/app.js')) {
+      errors.push('Team page shared/app.js script tag is missing defer attribute (causes render blocking on mobile).');
+    }
+    if (!content.includes('id="regionSelect" aria-label=')) {
+      errors.push('Team page #regionSelect is missing aria-label (fails Lighthouse select-name & Agentic Browsing checks).');
+    }
   }
 
   if (isSplash) {
     if (!content.includes('data-section="upcoming-matchups"')) {
       errors.push('Splash page is missing upcoming matchups spotlight section (data-section="upcoming-matchups").');
+    }
+    if (!content.includes('<main>')) {
+      errors.push('Splash page is missing <main> landmark.');
     }
   }
 

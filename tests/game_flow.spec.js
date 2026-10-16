@@ -22,13 +22,13 @@ test('User flow: Toronto -> Alberta + SN+ Premium -> Buffalo game page', async (
   const torontoRegion = await page.evaluate(() => localStorage.getItem('hockeyblackouts_region'));
   expect(torontoRegion).toBe('ab');
   
-  // Click Buffalo game link in the desktop schedule table
-  const buffaloLink = page.locator('#scheduleTableBody a[href*="toronto-vs-buffalo"]').first();
-  await expect(buffaloLink).toBeVisible();
-  await buffaloLink.click();
+  // Click the first upcoming Regional Territory game link in the desktop schedule table
+  const regionalGameLink = page.locator('#scheduleTableBody tr', { hasText: 'Regional Territory' }).locator('a[href*="/game/"]').first();
+  await expect(regionalGameLink).toBeVisible();
+  await regionalGameLink.click();
   
   // Wait for game page to load
-  await page.waitForURL(/.*toronto-vs-buffalo.*/);
+  await page.waitForURL(/.*\/game\/.*/);
   
   // Verify active pill on game page is Alberta
   const activePill = page.locator('.region-pill.bg-\\[\\#AF1E2D\\]');

@@ -402,7 +402,7 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
   const seasonScheduleCta = `
     <section class="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-5 relative overflow-hidden" data-cta="team-schedule">
       <div class="space-y-1.5 text-center sm:text-left z-10">
-        <div class="text-[11px] font-bold uppercase tracking-wider text-[#AF1E2D] flex items-center justify-center sm:justify-start gap-1.5">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-rose-400 flex items-center justify-center sm:justify-start gap-1.5">
           <i class="fa-solid fa-calendar-days"></i> Full 84-Game Season Guide
         </div>
         <h2 class="text-base sm:text-lg font-bold text-white tracking-tight">
