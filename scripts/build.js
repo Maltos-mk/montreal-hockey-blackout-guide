@@ -167,25 +167,73 @@ dataFiles.forEach(file => {
     return `/game/${datePrefix}/${homeSlug}-vs-${awaySlug}/`;
   }
 
+  // Pre-select team's home market region in dropdown
+  const regionOptionsHtml = [
+    { val: 'on_east_qc_atl', label: 'Quebec, Eastern Ontario, Atlantic Canada' },
+    { val: 'on_overlap', label: 'Ontario Overlap (Belleville, Kingston, Pembroke)' },
+    { val: 'on_west', label: 'Ontario West (Toronto, London)' },
+    { val: 'nw_on', label: 'Northwestern Ontario (Thunder Bay)' },
+    { val: 'mb', label: 'Manitoba' },
+    { val: 'sk', label: 'Saskatchewan, NWT & Nunavut' },
+    { val: 'ab', label: 'Alberta' },
+    { val: 'bc', label: 'British Columbia & Yukon' },
+    { val: 'us_intl', label: 'USA & International' },
+  ].map(opt => `<option value="${opt.val}"${opt.val === team.marketRegion.regionCode ? ' selected="selected"' : ''}>${opt.label}</option>`).join('\n            ');
+  html = html.replace(/\{\{REGION_OPTIONS\}\}/g, regionOptionsHtml);
+
+  // Time & Upcoming Games Filtering (default view is upcoming games)
+  const now = new Date();
+  const buildDateIso = now.toISOString().split('T')[0];
+  const buildDateDisplay = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/Toronto' });
+  html = html.replace(/\{\{BUILD_DATE_ISO\}\}/g, buildDateIso);
+  html = html.replace(/\{\{BUILD_DATE_DISPLAY\}\}/g, buildDateDisplay);
+
+  const threeHoursThirtyMs = 3.5 * 60 * 60 * 1000;
+  const upcomingGames = data.schedule.filter(g => {
+    const gDate = new Date(g.iso);
+    return (now.getTime() - gDate.getTime()) < threeHoursThirtyMs;
+  });
+
+  html = html.replace(/\{\{PRERENDERED_COUNT_LABEL\}\}/g, `Showing the ${upcomingGames.length}-game ${team.name} TV broadcast schedule`);
+
+  const NHL_TEAMS = {
+    'ANA': 'Anaheim Ducks', 'BOS': 'Boston Bruins', 'BUF': 'Buffalo Sabres', 'CAR': 'Carolina Hurricanes',
+    'CBJ': 'Columbus Blue Jackets', 'CGY': 'Calgary Flames', 'CHI': 'Chicago Blackhawks', 'COL': 'Colorado Avalanche',
+    'DAL': 'Dallas Stars', 'DET': 'Detroit Red Wings', 'EDM': 'Edmonton Oilers', 'FLA': 'Florida Panthers',
+    'LAK': 'Los Angeles Kings', 'MIN': 'Minnesota Wild', 'MTL': 'Montreal Canadiens', 'NJD': 'New Jersey Devils',
+    'NSH': 'Nashville Predators', 'NYI': 'New York Islanders', 'NYR': 'New York Rangers', 'OTT': 'Ottawa Senators',
+    'PHI': 'Philadelphia Flyers', 'PIT': 'Pittsburgh Penguins', 'SJS': 'San Jose Sharks', 'SEA': 'Seattle Kraken',
+    'STL': 'St. Louis Blues', 'TBL': 'Tampa Bay Lightning', 'TOR': 'Toronto Maple Leafs', 'UTA': 'Utah Hockey Club',
+    'VAN': 'Vancouver Canucks', 'VGK': 'Vegas Golden Knights', 'WSH': 'Washington Capitals', 'WPG': 'Winnipeg Jets'
+  };
+  function getFullMatchup(teamName, vsStr, oppCode) {
+    const oppName = NHL_TEAMS[oppCode] || oppCode;
+    const isAway = vsStr.startsWith('@');
+    return isAway ? `${teamName} at ${oppName}` : `${teamName} vs ${oppName}`;
+  }
+
   let desktopRows = '';
   let mobileCards = '';
   
-  data.schedule.forEach((g, idx) => {
+  upcomingGames.forEach((g) => {
+    const origIdx = data.schedule.findIndex(orig => orig.id === g.id);
+    const gameNum = origIdx + 1;
     const isNational = g.typeEN === 'national' || g.typeEN === 'prime_wednesday';
     const coverageLabel = g.typeEN === 'national' ? 'National (Coast-to-Coast)' : g.typeEN === 'prime_wednesday' ? 'Prime Wednesday Exclusive' : 'Regional Territory';
     const broadcastEN = g.netEN || 'TBD';
     const broadcastFR = g.netFR || 'None';
     const statusBadge = isNational 
-      ? '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>Watchable Nationally</span>'
-      : '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 whitespace-nowrap"><i class="fa-solid fa-ban mr-1 text-[10px]"></i>Regional Broadcast</span>';
+      ? '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>Watchable</span>'
+      : '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 whitespace-nowrap"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>Need Sub</span>';
     const accessDesc = isNational 
       ? 'Coast-to-coast national broadcast. Watch anywhere in Canada without blackouts.'
-      : `Regional broadcast on ${broadcastEN}. In-market fans can watch on cable; out-of-market viewers require Sportsnet+ Premium or Centre Ice.`;
+      : `Requires ${broadcastEN} (Cable or Stream)`;
     const gameUrl = getGamePath(g, team.id);
+    const fullMatchup = getFullMatchup(team.name, g.vs, g.opp);
 
     desktopRows += `
       <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60">
-        <td class="py-3 px-4 font-bold text-slate-600 dark:text-slate-300 font-teko text-base text-center">${idx + 1}</td>
+        <td class="py-3 px-4 font-bold text-slate-600 dark:text-slate-300 font-teko text-base text-center">${gameNum}</td>
         <td class="py-3 px-4 whitespace-nowrap">
           <div class="font-semibold text-slate-800 dark:text-slate-200">${g.date}</div>
           <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.time || '7:00 PM ET'}</div>
@@ -197,6 +245,7 @@ dataFiles.forEach(file => {
               <i class="fa-solid fa-chevron-right text-[9px] text-slate-500 opacity-75"></i>
             </a>
             ${g.phase === 'preseason' ? '<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">Preseason</span>' : ''}
+            ${g.note ? `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-teamPrimary/10 text-teamPrimary">${g.note}</span>` : ''}
           </div>
           <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.venue}</div>
         </td>
@@ -220,18 +269,22 @@ dataFiles.forEach(file => {
         <div class="flex items-start justify-between gap-2">
           <div>
             <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#${idx + 1}</span>
+              <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#${gameNum}</span>
               <a href="${gameUrl}" class="font-bold text-sm text-slate-900 dark:text-white hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline flex items-center gap-1">
                 <span>${g.vs}</span>
                 <i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i>
               </a>
             </div>
+            <div class="text-[10px] text-slate-600 dark:text-slate-300 font-medium leading-tight mt-0.5">${fullMatchup}</div>
             <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.date} • ${g.time || '7:00 PM ET'}</div>
           </div>
           <div>${statusBadge}</div>
         </div>
         <div class="flex items-center justify-between text-xs pt-1 border-t border-slate-200/60 dark:border-slate-700/60">
-          <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${broadcastEN}</span>
+          <div class="flex items-center gap-1">
+            <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${broadcastEN}</span>
+            ${broadcastFR !== 'None' ? `<span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${broadcastFR}</span>` : ''}
+          </div>
           <a href="${gameUrl}" class="text-[11px] font-semibold text-[#AF1E2D] dark:text-rose-400 hover:underline flex items-center gap-1">
             <span>TV & Blackout Breakdown &rarr;</span>
           </a>
@@ -246,17 +299,6 @@ dataFiles.forEach(file => {
   html = html.replace(/\{\{PRERENDERED_MOBILE_SCHEDULE\}\}/g, mobileCards);
 
   // Find next upcoming game and generate static spotlight hero
-  const now = new Date();
-  const buildDateIso = now.toISOString().split('T')[0];
-  const buildDateDisplay = now.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/Toronto' });
-  html = html.replace(/\{\{BUILD_DATE_ISO\}\}/g, buildDateIso);
-  html = html.replace(/\{\{BUILD_DATE_DISPLAY\}\}/g, buildDateDisplay);
-
-  const threeHoursThirtyMs = 3.5 * 60 * 60 * 1000;
-  const upcomingGames = data.schedule.filter(g => {
-    const gDate = new Date(g.iso);
-    return (now.getTime() - gDate.getTime()) < threeHoursThirtyMs;
-  });
   const nextGame = upcomingGames[0] || data.schedule[data.schedule.length - 1];
   const nextGameUrl = getGamePath(nextGame, team.id);
   const nextGameIdx = data.schedule.findIndex(orig => orig.id === nextGame.id) + 1;

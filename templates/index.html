@@ -249,16 +249,23 @@
             Where do you live?
           </label>
           <select id="regionSelect" aria-label="Where do you live?" class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 px-4 py-3 rounded-xl shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teamSecondary">
-            <option value="on_east_qc_atl">Quebec, Eastern Ontario, Atlantic Canada</option>
-            <option value="on_overlap">Ontario Overlap (Belleville, Kingston, Pembroke)</option>
-            <option value="on_west">Ontario West (Toronto, London)</option>
-            <option value="nw_on">Northwestern Ontario (Thunder Bay)</option>
-            <option value="mb">Manitoba</option>
-            <option value="sk">Saskatchewan, NWT & Nunavut</option>
-            <option value="ab">Alberta</option>
-            <option value="bc">British Columbia & Yukon</option>
-            <option value="us_intl">USA & International</option>
+            {{REGION_OPTIONS}}
           </select>
+          <script>
+            (function() {
+              try {
+                var r = localStorage.getItem('hockeyblackouts_region');
+                if (!r && location.hash) {
+                  var m = location.hash.match(/[#&]region=([^&]+)/);
+                  if (m) r = decodeURIComponent(m[1]);
+                }
+                if (r) {
+                  var s = document.getElementById('regionSelect');
+                  if (s) s.value = r;
+                }
+              } catch(e) {}
+            })();
+          </script>
         </div>
 
         <!-- Subscriptions Checklist -->
@@ -350,6 +357,22 @@
             </label>
 
           </div>
+          <script>
+            (function() {
+              try {
+                var savedSubs = localStorage.getItem('hockeyblackouts_subs');
+                if (savedSubs) {
+                  var parsed = JSON.parse(savedSubs);
+                  if (parsed && typeof parsed === 'object') {
+                    for (var k in parsed) {
+                      var cb = document.getElementById('sub_' + k);
+                      if (cb) cb.checked = Boolean(parsed[k]);
+                    }
+                  }
+                }
+              } catch(e) {}
+            })();
+          </script>
         </div>
 
         <!-- Language Preference -->
@@ -517,7 +540,7 @@
 
       <!-- Footer count -->
       <div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
-        <span id="renderedCountLabel">Showing upcoming {{TEAM_NAME}} games</span>
+        <span id="renderedCountLabel">{{PRERENDERED_COUNT_LABEL}}</span>
         <span class="text-[11px] italic text-center sm:text-right" data-freshness="verified-date">Schedule verified: {{BUILD_DATE_DISPLAY}} • Auto-synced with local clock</span>
       </div>
 
