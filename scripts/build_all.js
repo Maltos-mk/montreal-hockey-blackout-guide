@@ -2,6 +2,9 @@ const { execSync } = require("child_process");
 const fs = require('fs');
 const path = require('path');
 
+console.log('Compiling static Tailwind CSS...');
+execSync('npx tailwindcss -i shared/input.css -o shared/tailwind.min.css --minify', { stdio: 'inherit' });
+
 execSync('node scripts/build.js');
 const BUILD_DIR = 'build';
 
@@ -41,6 +44,7 @@ teams.forEach(team => {
   html = html.replace(/\.\.\/\.\.\/shared\//g, '../shared/');
   html = html.replace(/\.\.\/\.\.\/data\/[a-z]{3}\.json/g, 'data.json');
   
+  html = html.replace(/shared\/tailwind\.min\.css(\?v=[0-9]+)?/g, `shared/tailwind.min.css?v=${timestamp}`);
   html = html.replace(/shared\/app\.css(\?v=[0-9]+)?/g, `shared/app.css?v=${timestamp}`);
   html = html.replace(/shared\/app\.js(\?v=[0-9]+)?/g, `shared/app.js?v=${timestamp}`);
   html = html.replace(/shared\/i18n\.js(\?v=[0-9]+)?/g, `shared/i18n.js?v=${timestamp}`);

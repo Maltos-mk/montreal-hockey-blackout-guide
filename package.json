@@ -7,6 +7,7 @@
     "test": "tests"
   },
   "scripts": {
+    "build:css": "tailwindcss -i shared/input.css -o shared/tailwind.min.css --minify",
     "test": "playwright test",
     "test:all": "bash tests/check_privacy.sh && node scripts/matrix_test.js && node scripts/qa_validator.js && npx playwright test tests/ui.spec.js tests/game_flow.spec.js"
   },
@@ -23,7 +24,8 @@
   },
   "homepage": "https://github.com/maltos-mk/montreal-hockey-blackout-guide#readme",
   "devDependencies": {
-    "@playwright/test": "^1.63.0"
+    "@playwright/test": "^1.63.0",
+    "tailwindcss": "^3.4.17"
   },
   "dependencies": {
     "puppeteer": "^25.12.0"

@@ -149,23 +149,17 @@
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8" data-exclude-hash="true"></script>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            teamPrimary: '#00205B',
-            teamSecondary: '#00843D',
-            teamDark: '#00133A',
-          }
-        }
-      }
+  <!-- Dynamic Team Color Tokens -->
+  <style>
+    :root {
+      --color-team-primary: #00205B;
+      --color-team-secondary: #00843D;
+      --color-team-dark: #00133A;
     }
-  </script>
+  </style>
+
+  <!-- Precompiled Tailwind CSS & Application CSS -->
+  <link rel="stylesheet" href="../../shared/tailwind.min.css">
   <link rel="stylesheet" href="../../shared/app.css">
 
 
