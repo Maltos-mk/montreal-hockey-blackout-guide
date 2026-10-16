@@ -111,12 +111,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-10-13/elmont-vs-vancouver/</loc>
+    <loc>https://hockeyblackouts.ca/game/2026-10-13/montreal-vs-buffalo/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-10-13/montreal-vs-buffalo/</loc>
+    <loc>https://hockeyblackouts.ca/game/2026-10-13/new-york-vs-vancouver/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -156,7 +156,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-10-15/ottawa-vs-elmont/</loc>
+    <loc>https://hockeyblackouts.ca/game/2026-10-15/ottawa-vs-new-york/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -196,7 +196,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-10-17/toronto-vs-elmont/</loc>
+    <loc>https://hockeyblackouts.ca/game/2026-10-17/toronto-vs-new-york/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -386,12 +386,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-10-31/elmont-vs-edmonton/</loc>
+    <loc>https://hockeyblackouts.ca/game/2026-10-31/montreal-vs-pittsburgh/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-10-31/montreal-vs-pittsburgh/</loc>
+    <loc>https://hockeyblackouts.ca/game/2026-10-31/new-york-vs-edmonton/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -691,7 +691,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-11-20/winnipeg-vs-elmont/</loc>
+    <loc>https://hockeyblackouts.ca/game/2026-11-20/winnipeg-vs-new-york/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -731,12 +731,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-11-23/elmont-vs-toronto/</loc>
+    <loc>https://hockeyblackouts.ca/game/2026-11-23/montreal-vs-los-angeles/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-11-23/montreal-vs-los-angeles/</loc>
+    <loc>https://hockeyblackouts.ca/game/2026-11-23/new-york-vs-toronto/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -816,7 +816,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-11-28/elmont-vs-winnipeg/</loc>
+    <loc>https://hockeyblackouts.ca/game/2026-11-28/new-york-vs-winnipeg/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1021,7 +1021,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-12-11/elmont-vs-calgary/</loc>
+    <loc>https://hockeyblackouts.ca/game/2026-12-11/new-york-vs-calgary/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1236,7 +1236,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-12-28/elmont-vs-ottawa/</loc>
+    <loc>https://hockeyblackouts.ca/game/2026-12-28/new-york-vs-ottawa/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1386,7 +1386,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2027-01-06/vancouver-vs-elmont/</loc>
+    <loc>https://hockeyblackouts.ca/game/2027-01-06/vancouver-vs-new-york/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1401,7 +1401,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2027-01-08/calgary-vs-elmont/</loc>
+    <loc>https://hockeyblackouts.ca/game/2027-01-08/calgary-vs-new-york/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1426,7 +1426,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2027-01-09/edmonton-vs-elmont/</loc>
+    <loc>https://hockeyblackouts.ca/game/2027-01-09/edmonton-vs-new-york/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -1951,7 +1951,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2027-02-20/montreal-vs-elmont/</loc>
+    <loc>https://hockeyblackouts.ca/game/2027-02-20/montreal-vs-new-york/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2181,7 +2181,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2027-03-09/elmont-vs-montreal/</loc>
+    <loc>https://hockeyblackouts.ca/game/2027-03-09/new-york-vs-montreal/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2551,7 +2551,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2027-04-02/elmont-vs-ottawa/</loc>
+    <loc>https://hockeyblackouts.ca/game/2027-04-02/new-york-vs-ottawa/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -2586,7 +2586,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2027-04-04/elmont-vs-montreal/</loc>
+    <loc>https://hockeyblackouts.ca/game/2027-04-04/new-york-vs-montreal/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
