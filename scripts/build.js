@@ -259,6 +259,14 @@ dataFiles.forEach(file => {
   });
   const nextGame = upcomingGames[0] || data.schedule[data.schedule.length - 1];
   const nextGameUrl = getGamePath(nextGame, team.id);
+  const nextGameIdx = data.schedule.findIndex(orig => orig.id === nextGame.id) + 1;
+  const nextGameIsNational = nextGame.typeEN === 'national' || nextGame.typeEN === 'prime_wednesday';
+  const nextGameStatusBadge = nextGameIsNational 
+    ? '<span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-700 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Watchable On Your Setup</span>'
+    : '<span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-700 text-white shadow-sm flex items-center gap-1.5 border border-white/20"><i class="fa-solid fa-tv"></i> In-Market Regional Feed</span>';
+  const nextGameAccessDesc = nextGameIsNational 
+    ? 'National broadcast. Watch anywhere in Canada without blackouts.'
+    : `Regional broadcast on ${nextGame.netEN || 'Sportsnet'}. In-market fans can watch on regional cable.`;
 
   // Format top 3 upcoming games mini-strip
   const upcoming3 = upcomingGames.slice(0, 3);
@@ -290,6 +298,7 @@ dataFiles.forEach(file => {
               Next ${team.nickname} Game
             </span>
             <span class="text-xs text-slate-300 font-medium">${nextGame.date} • ${nextGame.time || '7:00 PM ET'}</span>
+            <span class="text-xs text-slate-400 font-teko text-sm tracking-wide">Game ${nextGameIdx} of ${data.schedule.length}</span>
           </div>
           <h3 class="text-xl sm:text-2xl font-black font-teko uppercase tracking-wide flex items-center gap-2">
             <span>${nextGame.vs}</span>
@@ -305,8 +314,12 @@ dataFiles.forEach(file => {
             <span class="px-2 py-0.5 rounded text-xs font-bold bg-white text-teamSecondary shadow-sm">${nextGame.netEN || 'Sportsnet'}</span>
             ${nextGame.netFR && nextGame.netFR !== 'None' ? `<span class="px-2 py-0.5 rounded text-xs font-bold bg-white/20 text-white">${nextGame.netFR}</span>` : ''}
           </div>
-          <a href="${nextGameUrl}" class="px-4 py-2 rounded-xl bg-[#AF1E2D] hover:bg-[#901824] text-white font-bold text-xs shadow-md transition flex items-center gap-1.5 whitespace-nowrap mt-1">
-            <span>View Tonight's Blackout Breakdown &rarr;</span>
+          <div>${nextGameStatusBadge}</div>
+          <div class="text-[11px] text-slate-300 md:text-right max-w-sm">
+            ${nextGameAccessDesc}
+          </div>
+          <a href="${nextGameUrl}" class="mt-1 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/10 transition">
+            <span>View Blackout Breakdown &rarr;</span>
           </a>
         </div>
       </div>

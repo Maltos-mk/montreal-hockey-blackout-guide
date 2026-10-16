@@ -135,16 +135,12 @@
   }
   </script>
 
-  <!-- Preconnect Hints & Non-Blocking Fonts/Icons -->
+  <!-- Preconnect Hints & Fonts/Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  </noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8" data-exclude-hash="true"></script>
@@ -159,8 +155,8 @@
   </style>
 
   <!-- Precompiled Tailwind CSS & Application CSS -->
-  <link rel="stylesheet" href="../../shared/tailwind.min.css">
-  <link rel="stylesheet" href="../../shared/app.css">
+  <link rel="stylesheet" href="/shared/tailwind.min.css">
+  <link rel="stylesheet" href="/shared/app.css">
 
 
   <script>
@@ -376,7 +372,7 @@
 
           <div>
             <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-bold uppercase tracking-wider text-slate-300" id="kpiSeasonTitle">Current Coverage Score</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-300" id="kpiSeasonTitle">Full Season Coverage (84 Games)</span>
               <span id="pctBadge" class="text-xs font-bold px-2.5 py-1 rounded-full bg-teamPrimary text-white">0% Watchable</span>
             </div>
 
@@ -457,6 +453,7 @@
               Next Sens Game
             </span>
             <span class="text-xs text-slate-300 font-medium">Sat Oct 17 2026 • 7:00 PM</span>
+            <span class="text-xs text-slate-400 font-teko text-sm tracking-wide">Game 9 of 84</span>
           </div>
           <h3 class="text-xl sm:text-2xl font-black font-teko uppercase tracking-wide flex items-center gap-2">
             <span>@ Flyers</span>
@@ -472,8 +469,12 @@
             <span class="px-2 py-0.5 rounded text-xs font-bold bg-white text-teamSecondary shadow-sm">Sportsnet One</span>
             <span class="px-2 py-0.5 rounded text-xs font-bold bg-white/20 text-white">RDS</span>
           </div>
-          <a href="/game/2026-10-17/philadelphia-vs-ottawa/" class="px-4 py-2 rounded-xl bg-[#AF1E2D] hover:bg-[#901824] text-white font-bold text-xs shadow-md transition flex items-center gap-1.5 whitespace-nowrap mt-1">
-            <span>View Tonight's Blackout Breakdown &rarr;</span>
+          <div><span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-700 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Watchable On Your Setup</span></div>
+          <div class="text-[11px] text-slate-300 md:text-right max-w-sm">
+            National broadcast. Watch anywhere in Canada without blackouts.
+          </div>
+          <a href="/game/2026-10-17/philadelphia-vs-ottawa/" class="mt-1 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/10 transition">
+            <span>View Blackout Breakdown &rarr;</span>
           </a>
         </div>
       </div>

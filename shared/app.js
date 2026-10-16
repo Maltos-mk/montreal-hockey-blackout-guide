@@ -658,7 +658,7 @@ function render() {
       document.getElementById('watchableCount').textContent = watchableCount;
       document.getElementById('totalGameLabel').textContent = `/ ${total} GAMES`;
       document.getElementById('pctBadge').textContent = `${pct}% Watchable`;
-      document.getElementById('kpiSeasonTitle').textContent = `Full Season Coverage (All ${total} Games)`;
+      document.getElementById('kpiSeasonTitle').textContent = `Full Season Coverage (${total} Games)`;
 
       document.getElementById('watchableBreakdown').textContent = `${watchableCount} games (${pct}%)`;
       document.getElementById('blackoutBreakdown').textContent = `${blackedOutCount} games (${Math.round((blackedOutCount/total)*100)||0}%)`;
@@ -670,8 +670,8 @@ function render() {
 
       const tbody = document.getElementById('scheduleTableBody');
       const mobileContainer = document.getElementById('scheduleCardsMobile');
-      tbody.innerHTML = '';
-      mobileContainer.innerHTML = '';
+      let newTbodyHtml = '';
+      let newMobileHtml = '';
 
       let displayedCount = 0;
 
@@ -806,7 +806,7 @@ function render() {
             ${evalRes.summaryReason}
           </div>
         `;
-        mobileContainer.appendChild(card);
+        newMobileHtml += card.outerHTML;
 
         const tr = document.createElement('tr');
         tr.className = `hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60 ${g.isPast ? 'opacity-60 bg-slate-50/40 dark:bg-slate-900/20' : ''}`;
@@ -845,8 +845,11 @@ function render() {
             </div>
           </td>
         `;
-        tbody.appendChild(tr);
+        newTbodyHtml += tr.outerHTML;
       });
+
+      tbody.innerHTML = newTbodyHtml;
+      mobileContainer.innerHTML = newMobileHtml;
 
       document.getElementById('renderedCountLabel').textContent = 
         state.timeFilter === 'upcoming' ? `Showing the ${displayedCount}-game ${window.TEAM_DATA.team.name} TV broadcast schedule` :
