@@ -155,6 +155,9 @@ fs.writeFileSync(path.join(BUILD_DIR, 'index.html'), splashHtml);
 // Build Phase 2 Per-Game Matchup Pages
 execSync('node scripts/build_game_pages.js', { stdio: 'inherit' });
 
+// Build Phase 3 Evergreen Explainer & Methodology Pages
+execSync('node scripts/build_explainers.js', { stdio: 'inherit' });
+
 console.log('Build complete.');
 
 let masterSitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -170,6 +173,20 @@ teams.forEach(team => {
     <loc>https://hockeyblackouts.ca/${team.dir}/</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
+  </url>\n`;
+});
+
+const explainerSlugs = [
+  'sportsnet-plus-blackout-rules',
+  'prime-hockey-schedule-canada',
+  'rds-vs-tva-sports-blackouts',
+  'how-blackouts-work'
+];
+explainerSlugs.forEach(slug => {
+  masterSitemap += `  <url>
+    <loc>https://hockeyblackouts.ca/${slug}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>\n`;
 });
 

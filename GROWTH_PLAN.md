@@ -82,10 +82,10 @@ Stabilize core site architecture, internal linking mesh, and search authority be
 - [x] **3.3 Game-Night Discovery & Upcoming Spotlights:**
   - Splash page (`/`): Dynamic "Tonight's Canadian Matchups" / "Next Up" spotlight section linking directly to team guides.
   - Team hubs: Quick "Next 3 Games" spotlight banner at the top of the schedule so mobile users get tonight's verdict instantly without scrolling the full 84-game table.
-- [ ] **3.4 Evergreen explainer hubs:**
-  - Dedicated landing pages for high-volume evergreen queries: *"Sportsnet+ blackout rules explained"*, *"Prime Monday Night Hockey schedule"*, *"TVA Sports vs RDS"*.
-- [ ] **3.5 Trust & E-E-A-T signals:**
-  - Methodology page explaining Canadian broadcast boundary contracts, source citation per verdict, and corrections contact link.
+- [x] **3.4 Evergreen explainer hubs:**
+  - Dedicated programmatic landing pages for high-volume evergreen queries: `/sportsnet-plus-blackout-rules/`, `/prime-hockey-schedule-canada/` (with all 28 Canadian Prime matchups + free trial CTA), and `/rds-vs-tva-sports-blackouts/`.
+- [x] **3.5 Trust & E-E-A-T signals:**
+  - Dedicated `/how-blackouts-work/` territory map & methodology page explaining Canadian broadcast boundary contracts, Belleville–Kingston & Prairie overlap zones, automated data verification, and corrections contact link.
 - [x] **3.6 IndexNow protocol integration:**
   - Auto-ping IndexNow API on daily builds for instant discovery by Bing, Yahoo, and Microsoft Copilot.
 - [ ] **3.7 Core Web Vitals (CWV) & Performance:**

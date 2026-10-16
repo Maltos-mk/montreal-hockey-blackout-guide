@@ -20,10 +20,12 @@ function validateHtml(filePath) {
     }
   }
 
+  const EXPLAINER_SLUGS = ['sportsnet-plus-blackout-rules', 'prime-hockey-schedule-canada', 'rds-vs-tva-sports-blackouts', 'how-blackouts-work'];
   const isRedirect = content.includes('http-equiv="refresh"');
   const isSplash = filePath.endsWith('build/index.html');
   const isGamePage = filePath.includes('/game/');
-  const isTeamPage = !isSplash && !isGamePage && !isRedirect;
+  const isExplainerPage = EXPLAINER_SLUGS.some(slug => filePath.includes(`/${slug}/`));
+  const isTeamPage = !isSplash && !isGamePage && !isExplainerPage && !isRedirect;
 
   // H1 Tag Validation (Crucial for SEO & Bing/Google accessibility audits)
   if (!isRedirect) {
@@ -282,6 +284,47 @@ if (fs.existsSync(appJsPath)) {
     console.error('\n❌ QA FAILED: shared/app.js references undefined function "getGamePath". Function in app.js is "getGameUrl".');
     process.exit(1);
   }
+}
+
+// Validate Evergreen Explainer & Methodology Pages (Items 3.4 & 3.5)
+const requiredExplainers = [
+  'sportsnet-plus-blackout-rules',
+  'prime-hockey-schedule-canada',
+  'rds-vs-tva-sports-blackouts',
+  'how-blackouts-work'
+];
+const masterSitemapPath = path.join(buildDir, 'sitemap.xml');
+const masterSitemapContent = fs.existsSync(masterSitemapPath) ? fs.readFileSync(masterSitemapPath, 'utf-8') : '';
+
+requiredExplainers.forEach(slug => {
+  const expPath = path.join(buildDir, slug, 'index.html');
+  if (!fs.existsSync(expPath)) {
+    console.error(`\n❌ QA FAILED: Required explainer page missing at ${expPath}`);
+    process.exit(1);
+  }
+  const expHtml = fs.readFileSync(expPath, 'utf-8');
+  if (!expHtml.includes('"@type": "FAQPage"')) {
+    console.error(`\n❌ QA FAILED: Explainer page ${slug} is missing FAQPage schema.`);
+    process.exit(1);
+  }
+  if (!expHtml.includes('"dateModified":')) {
+    console.error(`\n❌ QA FAILED: Explainer page ${slug} is missing dateModified schema.`);
+    process.exit(1);
+  }
+  if (!expHtml.includes('data-cta="team-hub-nav"')) {
+    console.error(`\n❌ QA FAILED: Explainer page ${slug} is missing team hub navigation bar.`);
+    process.exit(1);
+  }
+  if (!masterSitemapContent.includes(`https://hockeyblackouts.ca/${slug}/`)) {
+    console.error(`\n❌ QA FAILED: Master sitemap.xml is missing explainer URL https://hockeyblackouts.ca/${slug}/`);
+    process.exit(1);
+  }
+});
+
+const primePageHtml = fs.readFileSync(path.join(buildDir, 'prime-hockey-schedule-canada', 'index.html'), 'utf-8');
+if (!primePageHtml.includes('/game/202')) {
+  console.error('\n❌ QA FAILED: prime-hockey-schedule-canada page is missing dynamically rendered game links.');
+  process.exit(1);
 }
 
 console.log('✅ All pages passed SEO QA validation.');
