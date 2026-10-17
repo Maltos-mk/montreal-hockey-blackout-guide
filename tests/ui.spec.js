@@ -84,3 +84,34 @@ test('Subscriptions persistence: checked channels survive page reload', async ({
   expect(parseInt(count.trim(), 10)).toBe(55);
 });
 
+test('Ko-fi multivariate testing: assigns variant, persists in localStorage, and updates UI copy', async ({ page }) => {
+  await page.goto('/toronto/');
+  await page.waitForSelector('#kofiCalloutBox');
+
+  // Verify variant was assigned and stored
+  const assignedVariant = await page.evaluate(() => localStorage.getItem('hb_kofi_variant'));
+  expect(['control', 'anti_gambling', 'telecom_spite', 'swear_jar']).toContain(assignedVariant);
+
+  const btnVariant = await page.locator('#kofiCalloutBtn').getAttribute('data-umami-event-variant');
+  expect(btnVariant).toBe(assignedVariant);
+
+  // Test deterministic override for anti-gambling variant
+  await page.evaluate(() => localStorage.setItem('hb_kofi_variant', 'anti_gambling'));
+  await page.reload();
+  await page.waitForSelector('#kofiCalloutBox');
+
+  const btnText = await page.locator('#kofiCalloutBtnText').textContent();
+  expect(btnText.trim()).toBe('Buy the Dev a $3 Beer');
+  const copyText = await page.locator('#kofiCalloutText').textContent();
+  expect(copyText).toContain('Zero gambling ads');
+
+  // Navigate to game page and confirm variant consistency
+  await page.goto('/game/2026-10-15/toronto-vs-buffalo/');
+  await page.waitForSelector('#gameKofiCard');
+  const gameBtnVariant = await page.locator('#gameKofiBtn').getAttribute('data-umami-event-variant');
+  expect(gameBtnVariant).toBe('anti_gambling');
+  const gameBtnText = await page.locator('#gameKofiBtnText').textContent();
+  expect(gameBtnText).toContain('Buy the Dev a $3 Beer');
+});
+
+

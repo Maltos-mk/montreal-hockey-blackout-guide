@@ -472,9 +472,9 @@
         </div>
 
         <!-- Post-Value Support Callout -->
-        <div class="mt-4 p-4 bg-amber-50 dark:bg-amber-500/10 rounded-2xl border border-amber-100 dark:border-amber-500/20 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-3 text-sm text-amber-900 dark:text-amber-200/80">
-          <span>Did this save you a headache tonight? Buy me a coffee to help keep it running.</span>
-          <a href="https://ko-fi.com/maltosmk" data-umami-event="kofi-click" target="_blank" rel="noopener" class="font-bold px-4 py-2 bg-amber-400 hover:bg-amber-300 text-slate-900 rounded-xl shadow-sm transition flex items-center gap-1.5 whitespace-nowrap"><i class="fa-solid fa-mug-hot"></i> Tip $3</a>
+        <div id="kofiCalloutBox" class="mt-4 p-4 bg-amber-50 dark:bg-amber-500/10 rounded-2xl border border-amber-100 dark:border-amber-500/20 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-3 text-sm text-amber-900 dark:text-amber-200/80">
+          <span id="kofiCalloutText">Did this save you a headache tonight? Buy me a coffee to help keep it running.</span>
+          <a href="https://ko-fi.com/maltosmk" id="kofiCalloutBtn" data-umami-event="kofi-click" data-umami-event-variant="control" target="_blank" rel="noopener" class="font-bold px-4 py-2 bg-amber-400 hover:bg-amber-300 text-slate-900 rounded-xl shadow-sm transition flex items-center gap-1.5 whitespace-nowrap"><i id="kofiCalloutIcon" class="fa-solid fa-mug-hot"></i> <span id="kofiCalloutBtnText">Tip $3</span></a>
         </div>
 
       </div>
@@ -5248,7 +5248,7 @@
       <div class="inline-flex items-center gap-2 p-2 px-4 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
         <i class="fa-solid fa-mug-hot text-amber-500"></i>
         <span>Found this Toronto Maple Leafs guide helpful?</span>
-        <a href="https://ko-fi.com/maltosmk" data-umami-event="kofi-click" target="_blank" rel="noopener" class="font-bold text-blue-600 dark:text-blue-400 hover:underline ml-1">
+        <a href="https://ko-fi.com/maltosmk" id="kofiFooterBtn" data-umami-event="kofi-click" data-umami-event-variant="control" target="_blank" rel="noopener" class="font-bold text-blue-600 dark:text-blue-400 hover:underline ml-1">
           Support HockeyBlackouts.ca on Ko-fi &rarr;
         </a>
       </div>
