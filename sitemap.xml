@@ -61,11 +61,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-10-09/calgary-vs-colorado/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://hockeyblackouts.ca/game/2026-10-10/colorado-vs-toronto/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>

@@ -71,7 +71,15 @@ async function initApp() {
     const hashParams = window.location.hash ? new URLSearchParams(window.location.hash.substring(1)) : null;
     const subKeysList = ['sn_cable', 'sn_plus', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
     const hasHashSubs = hashParams && subKeysList.some(k => hashParams.has(k));
-    if (!hasHashSubs) {
+    if (hasHashSubs) {
+      subKeysList.forEach(k => {
+        if (hashParams.has(k)) {
+          state.subs[k] = hashParams.get(k) === 'true';
+          const cb = document.getElementById(`sub_${k}`);
+          if (cb) cb.checked = state.subs[k];
+        }
+      });
+    } else {
       try {
         const savedSubs = localStorage.getItem('hockeyblackouts_subs');
         if (savedSubs) {
@@ -181,11 +189,13 @@ function trackUmamiEvent(name, data) {
 function updateHash() {
   const params = new URLSearchParams();
   params.set('region', state.region);
-  params.set('timeFilter', state.timeFilter);
-  params.set('statusFilter', state.statusFilter);
-  params.set('channelFilter', state.channelFilter);
+  if (state.timeFilter !== 'upcoming') params.set('timeFilter', state.timeFilter);
+  if (state.statusFilter !== 'all') params.set('statusFilter', state.statusFilter);
+  if (state.channelFilter !== 'all') params.set('channelFilter', state.channelFilter);
   Object.keys(state.subs).forEach(k => {
-    params.set(k, state.subs[k]);
+    if (state.subs[k]) {
+      params.set(k, 'true');
+    }
   });
   window.history.replaceState(null, null, '#' + params.toString());
 }
@@ -548,6 +558,33 @@ function render() {
         }
 
         const isGameToday = nextGame.isToday;
+        const upcomingGamesList = gamesWithTime.filter(g => !g.isPast);
+        const upcoming3 = upcomingGamesList.slice(0, 3);
+        const upcomingStripHtml = upcoming3.length > 1 ? `
+          <div class="mt-4 pt-4 border-t border-white/10">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1.5">
+              <i class="fa-solid fa-calendar-days text-rose-400"></i>
+              <span>Upcoming Schedule Snapshot:</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              ${upcoming3.map(ug => `
+                <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between gap-3 text-xs">
+                  <div>
+                    <div class="font-bold text-white text-sm flex items-center gap-1.5">
+                      <span class="text-rose-400 font-teko text-base">#${games.findIndex(orig => orig.id === ug.id) + 1}</span>
+                      <a href="${getGameUrl(ug)}" class="hover:underline hover:text-rose-400">${ug.vs}</a>
+                    </div>
+                    <div class="text-[11px] text-slate-300 mt-0.5">${ug.date} • ${formatLocalTime(ug.iso, ug.time)}</div>
+                  </div>
+                  <div class="text-right shrink-0">
+                    <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-white/10 text-white border border-white/10">${ug.netEN || 'Sportsnet'}</span>
+                    <a href="${getGameUrl(ug)}" class="block text-[10px] text-rose-400 font-semibold hover:underline mt-1">Breakdown &rarr;</a>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : '';
 
         spotlightEl.innerHTML = `
           <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-teamSecondary via-slate-900 to-teamDark p-5 sm:p-6 text-white shadow-md border border-slate-700/50">
@@ -591,6 +628,7 @@ function render() {
               </div>
 
             </div>
+            ${upcomingStripHtml}
           </div>
         `;
       }
@@ -630,7 +668,7 @@ function render() {
       document.getElementById('watchableCount').textContent = watchableCount;
       document.getElementById('totalGameLabel').textContent = `/ ${total} GAMES`;
       document.getElementById('pctBadge').textContent = `${pct}% Watchable`;
-      document.getElementById('kpiSeasonTitle').textContent = `Full Season Coverage (All ${total} Games)`;
+      document.getElementById('kpiSeasonTitle').textContent = `Full Season Coverage (${total} Games)`;
 
       document.getElementById('watchableBreakdown').textContent = `${watchableCount} games (${pct}%)`;
       document.getElementById('blackoutBreakdown').textContent = `${blackedOutCount} games (${Math.round((blackedOutCount/total)*100)||0}%)`;
@@ -642,8 +680,8 @@ function render() {
 
       const tbody = document.getElementById('scheduleTableBody');
       const mobileContainer = document.getElementById('scheduleCardsMobile');
-      tbody.innerHTML = '';
-      mobileContainer.innerHTML = '';
+      let newTbodyHtml = '';
+      let newMobileHtml = '';
 
       let displayedCount = 0;
 
@@ -739,46 +777,48 @@ function render() {
 
         let badge = '';
         if (g.isPast) {
-          badge = '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300 whitespace-nowrap"><i class="fa-solid fa-clock-rotate-left mr-1 text-[10px]"></i>Final</span>';
+          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300 whitespace-nowrap"><i class="fa-solid fa-clock-rotate-left mr-1 text-[10px]"></i>Final</span>';
         } else if (evalRes.status === 'watchable') {
-          badge = '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>Watchable</span>';
+          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>Watchable</span>';
         } else if (evalRes.status === 'blacked_out') {
-          badge = '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 whitespace-nowrap"><i class="fa-solid fa-ban mr-1 text-[10px]"></i>Blacked Out</span>';
+          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 whitespace-nowrap"><i class="fa-solid fa-ban mr-1 text-[10px]"></i>Blacked Out</span>';
         } else {
-          badge = '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 whitespace-nowrap"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>Need Sub</span>';
+          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 whitespace-nowrap"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>Need Sub</span>';
         }
 
         const card = document.createElement('div');
-        card.className = `p-3 rounded-xl border transition ${g.isPast ? 'bg-slate-100/60 dark:bg-slate-900/40 opacity-75 border-slate-200 dark:border-slate-800' : 'bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-800'}`;
+        card.className = `p-3 rounded-xl border border-slate-200 dark:border-slate-800 ${g.isPast ? 'bg-slate-100/60 dark:bg-slate-900/40 opacity-75' : 'bg-slate-50 dark:bg-slate-800/60'}`;
         card.innerHTML = `
           <div class="flex items-start justify-between gap-2">
             <div>
               <div class="flex items-center gap-1.5 flex-wrap">
                 <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#${games.findIndex(orig => orig.id === g.id) + 1}</span>
-                <span class="font-bold text-sm text-slate-900 dark:text-white">${getVs(g.vs)}</span>
-   </div>
-   <div class="text-[10px] text-slate-600 dark:text-slate-300 font-medium leading-tight mt-0.5">${getFullMatchup(window.TEAM_DATA.team.name, g.vs, g.opp)}</div>
+                <a href="${getGameUrl(g)}" class="font-bold text-sm text-slate-900 dark:text-white hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline flex items-center gap-1">
+                  <span>${getVs(g.vs)}</span>
+                  <i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i>
+                </a>
               </div>
+              <div class="text-[10px] text-slate-600 dark:text-slate-300 font-medium leading-tight mt-0.5 truncate">${getFullMatchup(window.TEAM_DATA.team.name, g.vs, g.opp)}</div>
               <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.date} • ${formatLocalTime(g.iso, g.time)}</div>
             </div>
-            <div>${badge}</div>
+            ${badge}
           </div>
 
           <div class="flex items-center justify-between text-xs pt-1 border-t border-slate-200/60 dark:border-slate-700/60">
             <div class="flex items-center gap-1">
               <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${evalRes.displayNetEN || g.netEN}</span>
-              <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${g.netFR}</span>
+              ${g.netFR && g.netFR !== 'None' ? `<span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${g.netFR}</span>` : ''}
             </div>
             <a href="${getGameUrl(g)}" class="text-[11px] font-semibold text-[#AF1E2D] dark:text-rose-400 hover:underline flex items-center gap-1">
               <span>TV & Blackout Breakdown &rarr;</span>
             </a>
           </div>
 
-          <div class="text-[11px] font-medium text-slate-600 dark:text-slate-300 bg-white/70 dark:bg-slate-900/50 p-2 rounded-lg border border-slate-200/50 dark:border-slate-700/50">
+          <div class="text-[11px] font-medium text-slate-600 dark:text-slate-300 bg-white/70 dark:bg-slate-900/50 p-2 rounded-lg border border-slate-200/50 dark:border-slate-700/50 mt-1">
             ${evalRes.summaryReason}
           </div>
         `;
-        mobileContainer.appendChild(card);
+        newMobileHtml += card.outerHTML;
 
         const tr = document.createElement('tr');
         tr.className = `hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60 ${g.isPast ? 'opacity-60 bg-slate-50/40 dark:bg-slate-900/20' : ''}`;
@@ -817,8 +857,11 @@ function render() {
             </div>
           </td>
         `;
-        tbody.appendChild(tr);
+        newTbodyHtml += tr.outerHTML;
       });
+
+      tbody.innerHTML = newTbodyHtml;
+      mobileContainer.innerHTML = newMobileHtml;
 
       document.getElementById('renderedCountLabel').textContent = 
         state.timeFilter === 'upcoming' ? `Showing the ${displayedCount}-game ${window.TEAM_DATA.team.name} TV broadcast schedule` :
@@ -833,10 +876,20 @@ function render() {
       if (window.i18n) { window.i18n.translateNode(adviceCard);  window.i18n.translateNode(mobileContainer); window.i18n.apply(); }
     }
 
+    function enableBarTransitions() {
+      ['watchBar', 'blackoutBar', 'missingBar'].forEach(id => {
+        const bar = document.getElementById(id);
+        if (bar && !bar.classList.contains('transition-all')) {
+          bar.classList.add('transition-all', 'duration-300');
+        }
+      });
+    }
+
     const regionSelect = document.getElementById('regionSelect');
     if (regionSelect) {
       regionSelect.value = state.region;
       regionSelect.addEventListener('change', (e) => {
+        enableBarTransitions();
         state.region = e.target.value;
         try { localStorage.setItem('hockeyblackouts_region', state.region); } catch(err) {}
         render();
@@ -847,6 +900,7 @@ function render() {
         if (el) {
           el.checked = state.subs[key];
           el.addEventListener('change', () => {
+            enableBarTransitions();
             state.subs[key] = el.checked;
             try { localStorage.setItem('hockeyblackouts_subs', JSON.stringify(state.subs)); } catch(err) {}
             render();
