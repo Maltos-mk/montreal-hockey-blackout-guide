@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  schedule:
+    - cron: '0 9 * * *' # Daily 9am UTC (5am ET) rebuild to keep upcoming matchups fresh
+  workflow_dispatch:
 
 permissions:
   contents: write

@@ -129,10 +129,10 @@ teams.forEach(team => {
 
 const sortedUpcoming = Array.from(allUniqueUpcoming.values())
   .sort((a, b) => a.timestamp - b.timestamp)
-  .slice(0, 6);
+  .slice(0, 10);
 
 const splashUpcomingHtml = sortedUpcoming.map(item => `
-  <div class="matchup-card">
+  <div class="matchup-card" data-timestamp="${item.timestamp}">
     <div>
       <div class="matchup-card-header">
         <span>${item.game.date} • ${item.game.time || '7:00 PM ET'}</span>
