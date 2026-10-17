@@ -111,7 +111,7 @@ Deferred until English feature set and site architecture are fully stabilized. R
 Reality check: True traffic is ~15k visits/month (single-page utility usage). Display ads are effectively pointless right now (~$30/mo) and would ruin the clean PWA experience. Focus strictly on contextual, high-value monetization and audience ownership.
 
 - [x] **5.1 Amazon Prime Affiliate (`maltos-20`):** Free 30-day trial referral for Prime Monday Night Hockey games. Already compliant with `rel="sponsored noopener noreferrer"`.
-- [ ] **5.2 "Kept Free Out of Spite" Ko-fi Tip Jar:** Canadian fans hate telecom blackout monopolies. Position the tip jar not as charity, but as supporting an ad-free indie alternative ("Built out of spite for Canadian regional blackouts. Kept fast, private, and ad-free. Buy the dev a beer"). *Expectation: ~$50-$150/mo.*
+- [x] **5.2 Multivariate Ko-fi Tip Jar Testing:** Deployed 4-variant client-side test (Control, Anti-Gambling, Telecom Spite, Swear Jar) with deterministic localStorage assignment, zero CLS, and Umami click/impression event breakdown.
 - [ ] **5.3 Personalized "Blackout-Proof" Calendar Feed ($5/season Micro-SaaS):**
   - Dynamic .ics / Google Calendar link that only syncs games viewable in the user's specific postal code/region with exact TV channels attached to calendar alerts.
   - One-time $5 season pass via Stripe checkout.
