@@ -293,6 +293,7 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
         "startDate": g.iso,
         "endDate": endIso,
         "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "location": {
           "@type": "Place",
           "name": g.venue || "NHL Arena",
@@ -351,6 +352,30 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
                 ? "No. As a national broadcast, regional blackouts do not apply anywhere in Canada."
                 : `Yes, for fans outside the home broadcast territory, regional games on ${g.netEN} are subject to regional blackouts unless subscribed to an out-of-market package.`
             }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${canonicalUrl}#breadcrumb`,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://hockeyblackouts.ca/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": primaryCanadian.name,
+            "item": `https://hockeyblackouts.ca/${primaryCanadian.dir}/`
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": `${awayTeam.city} vs ${homeTeam.city}`,
+            "item": canonicalUrl
           }
         ]
       }

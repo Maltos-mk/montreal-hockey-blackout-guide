@@ -90,6 +90,23 @@ function buildSchema(title, description, url, faqs) {
             "text": f.aPlain
           }
         }))
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://hockeyblackouts.ca/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": title,
+            "item": url
+          }
+        ]
       }
     ]
   }, null, 2);
