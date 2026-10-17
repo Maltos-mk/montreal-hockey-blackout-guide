@@ -390,16 +390,16 @@
       </div>
 
       <!-- Card 3: Support Independent Tool -->
-      <div class="bg-slate-900 border border-white/10 rounded-xl p-4 flex flex-col justify-between space-y-3">
+      <div id="gameKofiCard" class="bg-slate-900 border border-white/10 rounded-xl p-4 flex flex-col justify-between space-y-3">
         <div class="space-y-1">
           <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center gap-1">
             <i class="fa-solid fa-shield-halved"></i> Independent Fan Tool
           </div>
-          <p class="text-sm font-bold text-white">Fast & Ad-Free</p>
-          <p class="text-xs text-slate-400 leading-snug">Built out of frustration with regional blackouts. No ads, no tracking bloat, zero sponsor popups.</p>
+          <p id="gameKofiTitle" class="text-sm font-bold text-white">Fast & Ad-Free</p>
+          <p id="gameKofiDesc" class="text-xs text-slate-400 leading-snug">Built out of frustration with regional blackouts. No ads, no tracking bloat, zero sponsor popups.</p>
         </div>
-        <a href="https://ko-fi.com/maltosmk" data-umami-event="kofi-click" target="_blank" rel="noopener" class="w-fit text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 transition">
-          <span>Support HockeyBlackouts.ca on Ko-fi &rarr;</span>
+        <a href="https://ko-fi.com/maltosmk" id="gameKofiBtn" data-umami-event="kofi-click" data-umami-event-variant="control" target="_blank" rel="noopener" class="w-fit text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 transition">
+          <span id="gameKofiBtnText">Support HockeyBlackouts.ca on Ko-fi &rarr;</span>
         </a>
       </div>
     </section>
@@ -564,6 +564,36 @@
         else if (tz.includes('Halifax') || tz.includes('St_Johns')) setGameRegion('on_east_qc_atl');
         else setGameRegion('on_west');
       }
+
+      // Apply Ko-fi multivariate variant
+      try {
+        const variantKeys = ['control', 'anti_gambling', 'telecom_spite', 'swear_jar'];
+        let vKey = localStorage.getItem('hb_kofi_variant');
+        if (!vKey || !variantKeys.includes(vKey)) {
+          vKey = variantKeys[Math.floor(Math.random() * variantKeys.length)];
+          localStorage.setItem('hb_kofi_variant', vKey);
+        }
+        const gBtn = document.getElementById('gameKofiBtn');
+        const gTitle = document.getElementById('gameKofiTitle');
+        const gDesc = document.getElementById('gameKofiDesc');
+        const gBtnText = document.getElementById('gameKofiBtnText');
+        if (gBtn && gBtnText) {
+          gBtn.setAttribute('data-umami-event-variant', vKey);
+          if (vKey === 'anti_gambling') {
+            if (gTitle) gTitle.textContent = 'Zero Gambling Ads';
+            if (gDesc) gDesc.textContent = 'Zero sports betting banners, zero auto-play video popups. Help keep this site independent.';
+            gBtnText.innerHTML = 'Buy the Dev a $3 Beer &rarr;';
+          } else if (vKey === 'telecom_spite') {
+            if (gTitle) gTitle.textContent = 'Telecom Sanity Check';
+            if (gDesc) gDesc.textContent = 'Built by one fan because four streaming subscriptions still shouldn’t leave you blacked out.';
+            gBtnText.innerHTML = 'Chip in $3 on Ko-fi &rarr;';
+          } else if (vKey === 'swear_jar') {
+            if (gTitle) gTitle.textContent = 'The Blackout Swear Jar';
+            if (gDesc) gDesc.textContent = 'Saved you ten minutes of yelling at your TV remote? Help fund another season of blackout tracking.';
+            gBtnText.innerHTML = 'Pay the $3 Fine &rarr;';
+          }
+        }
+      } catch(e) {}
     });
   </script>
 </body>

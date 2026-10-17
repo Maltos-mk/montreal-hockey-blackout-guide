@@ -106,9 +106,89 @@ async function initApp() {
     
 
     render();
+    initKofiMultivariate();
   } catch (err) {
     console.error('Failed to load team data:', err);
   }
+}
+
+const KOFI_VARIANTS = {
+  control: {
+    id: 'control',
+    teamCopy: 'Did this save you a headache tonight? Buy me a coffee to help keep it running.',
+    teamCta: 'Tip $3',
+    teamIcon: 'fa-mug-hot'
+  },
+  anti_gambling: {
+    id: 'anti_gambling',
+    teamCopy: 'Zero popups. Zero auto-play video. Zero gambling ads before puck drop. Help keep this site independent.',
+    teamCta: 'Buy the Dev a $3 Beer',
+    teamIcon: 'fa-shield-halved'
+  },
+  telecom_spite: {
+    id: 'telecom_spite',
+    teamCopy: 'Finding the game shouldn’t require a law degree and four streaming packages. Help keep the lights on.',
+    teamCta: 'Chip in $3',
+    teamIcon: 'fa-tv'
+  },
+  swear_jar: {
+    id: 'swear_jar',
+    teamCopy: 'Saved you ten minutes of yelling at your TV remote? Drop $3 in the swear jar to keep this running.',
+    teamCta: 'Pay the $3 Fine',
+    teamIcon: 'fa-mug-hot'
+  }
+};
+
+function initKofiMultivariate() {
+  const variantKeys = ['control', 'anti_gambling', 'telecom_spite', 'swear_jar'];
+  let variantKey = 'control';
+  try {
+    const saved = localStorage.getItem('hb_kofi_variant');
+    if (saved && KOFI_VARIANTS[saved]) {
+      variantKey = saved;
+    } else {
+      variantKey = variantKeys[Math.floor(Math.random() * variantKeys.length)];
+      localStorage.setItem('hb_kofi_variant', variantKey);
+    }
+  } catch (e) {
+    variantKey = 'control';
+  }
+
+  const v = KOFI_VARIANTS[variantKey] || KOFI_VARIANTS.control;
+
+  const calloutText = document.getElementById('kofiCalloutText');
+  const calloutBtn = document.getElementById('kofiCalloutBtn');
+  const calloutBtnText = document.getElementById('kofiCalloutBtnText');
+  const calloutIcon = document.getElementById('kofiCalloutIcon');
+  if (calloutText && calloutBtn && calloutBtnText) {
+    calloutText.textContent = v.teamCopy;
+    calloutBtnText.textContent = v.teamCta;
+    calloutBtn.setAttribute('data-umami-event-variant', v.id);
+    if (calloutIcon && v.teamIcon) {
+      calloutIcon.className = `fa-solid ${v.teamIcon}`;
+    }
+  }
+
+  const footerBtn = document.getElementById('kofiFooterBtn');
+  if (footerBtn) {
+    footerBtn.setAttribute('data-umami-event-variant', v.id);
+  }
+
+  try {
+    if (!sessionStorage.getItem('hb_kofi_imp_' + v.id)) {
+      sessionStorage.setItem('hb_kofi_imp_' + v.id, 'true');
+      const trackImp = () => {
+        if (window.umami && typeof window.umami.track === 'function') {
+          window.umami.track('kofi-impression', { variant: v.id });
+        }
+      };
+      if (window.umami) {
+        trackImp();
+      } else {
+        window.addEventListener('load', trackImp, { once: true });
+      }
+    }
+  } catch (e) {}
 }
 
 const NHL_TEAMS = {
