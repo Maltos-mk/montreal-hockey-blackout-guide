@@ -181,6 +181,9 @@ function validateHtml(filePath) {
   if (content.includes('cloud.umami.is/script.js') && !content.includes('data-exclude-hash="true"')) {
     errors.push('Umami script tag is missing data-exclude-hash="true" (hash updates artificially inflate pageviews).');
   }
+  if (content.includes('cloud.umami.is/script.js') && !content.includes('data-domains="hockeyblackouts.ca"')) {
+    errors.push('Umami script tag is missing data-domains="hockeyblackouts.ca" (prevents test and localhost pollution).');
+  }
   if (content.includes('amazon.ca')) {
     if (!content.includes('data-umami-event="amazon-prime-click"')) {
       errors.push('Found Amazon link but missing data-umami-event="amazon-prime-click" tracking attribute.');
