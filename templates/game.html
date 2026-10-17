@@ -35,16 +35,13 @@
   <!-- Umami Analytics -->
   <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8" data-exclude-hash="true"></script>
 
-  <!-- Tailwind CSS & Non-Blocking Fonts/Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Tailwind CSS & Fonts/Icons -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="/shared/fonts/teko-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/shared/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/shared/tailwind.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  </noscript>
+  <link rel="stylesheet" href="/shared/app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     .font-teko { font-family: 'Teko', sans-serif; }

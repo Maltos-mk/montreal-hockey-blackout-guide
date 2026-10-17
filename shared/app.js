@@ -767,42 +767,44 @@ function render() {
 
         let badge = '';
         if (g.isPast) {
-          badge = '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300 whitespace-nowrap"><i class="fa-solid fa-clock-rotate-left mr-1 text-[10px]"></i>Final</span>';
+          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300 whitespace-nowrap"><i class="fa-solid fa-clock-rotate-left mr-1 text-[10px]"></i>Final</span>';
         } else if (evalRes.status === 'watchable') {
-          badge = '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>Watchable</span>';
+          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>Watchable</span>';
         } else if (evalRes.status === 'blacked_out') {
-          badge = '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 whitespace-nowrap"><i class="fa-solid fa-ban mr-1 text-[10px]"></i>Blacked Out</span>';
+          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 whitespace-nowrap"><i class="fa-solid fa-ban mr-1 text-[10px]"></i>Blacked Out</span>';
         } else {
-          badge = '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 whitespace-nowrap"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>Need Sub</span>';
+          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 whitespace-nowrap"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>Need Sub</span>';
         }
 
         const card = document.createElement('div');
-        card.className = `p-3 rounded-xl border transition ${g.isPast ? 'bg-slate-100/60 dark:bg-slate-900/40 opacity-75 border-slate-200 dark:border-slate-800' : 'bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-800'}`;
+        card.className = `p-3 rounded-xl border border-slate-200 dark:border-slate-800 ${g.isPast ? 'bg-slate-100/60 dark:bg-slate-900/40 opacity-75' : 'bg-slate-50 dark:bg-slate-800/60'}`;
         card.innerHTML = `
           <div class="flex items-start justify-between gap-2">
             <div>
               <div class="flex items-center gap-1.5 flex-wrap">
                 <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#${games.findIndex(orig => orig.id === g.id) + 1}</span>
-                <span class="font-bold text-sm text-slate-900 dark:text-white">${getVs(g.vs)}</span>
-   </div>
-   <div class="text-[10px] text-slate-600 dark:text-slate-300 font-medium leading-tight mt-0.5">${getFullMatchup(window.TEAM_DATA.team.name, g.vs, g.opp)}</div>
+                <a href="${getGameUrl(g)}" class="font-bold text-sm text-slate-900 dark:text-white hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline flex items-center gap-1">
+                  <span>${getVs(g.vs)}</span>
+                  <i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i>
+                </a>
               </div>
+              <div class="text-[10px] text-slate-600 dark:text-slate-300 font-medium leading-tight mt-0.5 truncate">${getFullMatchup(window.TEAM_DATA.team.name, g.vs, g.opp)}</div>
               <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.date} • ${formatLocalTime(g.iso, g.time)}</div>
             </div>
-            <div>${badge}</div>
+            ${badge}
           </div>
 
           <div class="flex items-center justify-between text-xs pt-1 border-t border-slate-200/60 dark:border-slate-700/60">
             <div class="flex items-center gap-1">
               <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${evalRes.displayNetEN || g.netEN}</span>
-              <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${g.netFR}</span>
+              ${g.netFR && g.netFR !== 'None' ? `<span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${g.netFR}</span>` : ''}
             </div>
             <a href="${getGameUrl(g)}" class="text-[11px] font-semibold text-[#AF1E2D] dark:text-rose-400 hover:underline flex items-center gap-1">
               <span>TV & Blackout Breakdown &rarr;</span>
             </a>
           </div>
 
-          <div class="text-[11px] font-medium text-slate-600 dark:text-slate-300 bg-white/70 dark:bg-slate-900/50 p-2 rounded-lg border border-slate-200/50 dark:border-slate-700/50">
+          <div class="text-[11px] font-medium text-slate-600 dark:text-slate-300 bg-white/70 dark:bg-slate-900/50 p-2 rounded-lg border border-slate-200/50 dark:border-slate-700/50 mt-1">
             ${evalRes.summaryReason}
           </div>
         `;
@@ -864,10 +866,20 @@ function render() {
       if (window.i18n) { window.i18n.translateNode(adviceCard);  window.i18n.translateNode(mobileContainer); window.i18n.apply(); }
     }
 
+    function enableBarTransitions() {
+      ['watchBar', 'blackoutBar', 'missingBar'].forEach(id => {
+        const bar = document.getElementById(id);
+        if (bar && !bar.classList.contains('transition-all')) {
+          bar.classList.add('transition-all', 'duration-300');
+        }
+      });
+    }
+
     const regionSelect = document.getElementById('regionSelect');
     if (regionSelect) {
       regionSelect.value = state.region;
       regionSelect.addEventListener('change', (e) => {
+        enableBarTransitions();
         state.region = e.target.value;
         try { localStorage.setItem('hockeyblackouts_region', state.region); } catch(err) {}
         render();
@@ -878,6 +890,7 @@ function render() {
         if (el) {
           el.checked = state.subs[key];
           el.addEventListener('change', () => {
+            enableBarTransitions();
             state.subs[key] = el.checked;
             try { localStorage.setItem('hockeyblackouts_subs', JSON.stringify(state.subs)); } catch(err) {}
             render();

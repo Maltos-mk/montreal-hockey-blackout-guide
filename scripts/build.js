@@ -223,11 +223,17 @@ dataFiles.forEach(file => {
     const broadcastEN = g.netEN || 'TBD';
     const broadcastFR = g.netFR || 'None';
     const statusBadge = isNational 
-      ? '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>Watchable</span>'
-      : '<span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 whitespace-nowrap"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>Need Sub</span>';
-    const accessDesc = isNational 
-      ? 'Coast-to-coast national broadcast. Watch anywhere in Canada without blackouts.'
-      : `Requires ${broadcastEN} (Cable or Stream)`;
+      ? '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>Watchable</span>'
+      : '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 whitespace-nowrap"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>Need Sub</span>';
+    const accessDesc = g.netEN === 'Prime Video'
+      ? 'Requires Amazon Prime Video'
+      : g.netEN === 'SN+'
+      ? 'Requires Sportsnet+ (Streaming)'
+      : g.netEN && g.netEN.includes('TSN')
+      ? 'Requires TSN'
+      : g.netEN && g.netEN.includes('Sportsnet')
+      ? 'Requires Sportsnet (Cable or Stream)'
+      : `Requires ${g.netEN || 'channel subscription'}`;
     const gameUrl = getGamePath(g, team.id);
     const fullMatchup = getFullMatchup(team.name, g.vs, g.opp);
 
@@ -275,10 +281,10 @@ dataFiles.forEach(file => {
                 <i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i>
               </a>
             </div>
-            <div class="text-[10px] text-slate-600 dark:text-slate-300 font-medium leading-tight mt-0.5">${fullMatchup}</div>
+            <div class="text-[10px] text-slate-600 dark:text-slate-300 font-medium leading-tight mt-0.5 truncate">${fullMatchup}</div>
             <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.date} • ${g.time || '7:00 PM ET'}</div>
           </div>
-          <div>${statusBadge}</div>
+          ${statusBadge}
         </div>
         <div class="flex items-center justify-between text-xs pt-1 border-t border-slate-200/60 dark:border-slate-700/60">
           <div class="flex items-center gap-1">
@@ -302,13 +308,16 @@ dataFiles.forEach(file => {
   const nextGame = upcomingGames[0] || data.schedule[data.schedule.length - 1];
   const nextGameUrl = getGamePath(nextGame, team.id);
   const nextGameIdx = data.schedule.findIndex(orig => orig.id === nextGame.id) + 1;
-  const nextGameIsNational = nextGame.typeEN === 'national' || nextGame.typeEN === 'prime_wednesday';
-  const nextGameStatusBadge = nextGameIsNational 
-    ? '<span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-700 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Watchable On Your Setup</span>'
-    : '<span class="px-3 py-1 rounded-full text-xs font-bold bg-slate-700 text-white shadow-sm flex items-center gap-1.5 border border-white/20"><i class="fa-solid fa-tv"></i> In-Market Regional Feed</span>';
-  const nextGameAccessDesc = nextGameIsNational 
-    ? 'National broadcast. Watch anywhere in Canada without blackouts.'
-    : `Regional broadcast on ${nextGame.netEN || 'Sportsnet'}. In-market fans can watch on regional cable.`;
+  const nextGameStatusBadge = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-700 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-lock"></i> Subscription Needed</span>';
+  const nextGameAccessDesc = nextGame.netEN === 'Prime Video'
+    ? 'Requires Amazon Prime Video'
+    : nextGame.netEN === 'SN+'
+    ? 'Requires Sportsnet+ (Streaming)'
+    : nextGame.netEN && nextGame.netEN.includes('TSN')
+    ? 'Requires TSN'
+    : nextGame.netEN && nextGame.netEN.includes('Sportsnet')
+    ? 'Requires Sportsnet (Cable or Stream)'
+    : `Requires ${nextGame.netEN || 'channel subscription'}`;
 
   // Format top 3 upcoming games mini-strip
   const upcoming3 = upcomingGames.slice(0, 3);

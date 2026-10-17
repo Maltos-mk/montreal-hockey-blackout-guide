@@ -135,11 +135,10 @@
   }
   </script>
 
-  <!-- Preconnect Hints & Fonts/Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Preload Local Fonts & Icons -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="preload" href="/shared/fonts/teko-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/shared/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <!-- Umami Analytics -->
@@ -412,30 +411,30 @@
             <div>
               <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
                 <span>Watchable Without Blackout</span>
-                <span id="watchableBreakdown">0 games</span>
+                <span id="watchableBreakdown">0 games (0%)</span>
               </div>
               <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
-                <div id="watchBar" class="bg-emerald-500 transition-all duration-300" style="width: 0%"></div>
+                <div id="watchBar" class="bg-emerald-500" style="width: 0%"></div>
               </div>
             </div>
 
             <div>
               <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
                 <span>Blacked Out Regionally</span>
-                <span id="blackoutBreakdown">0 games</span>
+                <span id="blackoutBreakdown">0 games (0%)</span>
               </div>
               <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
-                <div id="blackoutBar" class="bg-amber-500 transition-all duration-300" style="width: 0%"></div>
+                <div id="blackoutBar" class="bg-amber-500" style="width: 0%"></div>
               </div>
             </div>
 
             <div>
               <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
                 <span>Missing Required Subscription</span>
-                <span id="missingBreakdown">0 games</span>
+                <span id="missingBreakdown">84 games (100%)</span>
               </div>
               <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
-                <div id="missingBar" class="bg-rose-500 transition-all duration-300" style="width: 0%"></div>
+                <div id="missingBar" class="bg-rose-500" style="width: 100%"></div>
               </div>
             </div>
           </div>
