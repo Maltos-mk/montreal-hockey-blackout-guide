@@ -71,7 +71,15 @@ async function initApp() {
     const hashParams = window.location.hash ? new URLSearchParams(window.location.hash.substring(1)) : null;
     const subKeysList = ['sn_cable', 'sn_plus', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
     const hasHashSubs = hashParams && subKeysList.some(k => hashParams.has(k));
-    if (!hasHashSubs) {
+    if (hasHashSubs) {
+      subKeysList.forEach(k => {
+        if (hashParams.has(k)) {
+          state.subs[k] = hashParams.get(k) === 'true';
+          const cb = document.getElementById(`sub_${k}`);
+          if (cb) cb.checked = state.subs[k];
+        }
+      });
+    } else {
       try {
         const savedSubs = localStorage.getItem('hockeyblackouts_subs');
         if (savedSubs) {
@@ -181,11 +189,13 @@ function trackUmamiEvent(name, data) {
 function updateHash() {
   const params = new URLSearchParams();
   params.set('region', state.region);
-  params.set('timeFilter', state.timeFilter);
-  params.set('statusFilter', state.statusFilter);
-  params.set('channelFilter', state.channelFilter);
+  if (state.timeFilter !== 'upcoming') params.set('timeFilter', state.timeFilter);
+  if (state.statusFilter !== 'all') params.set('statusFilter', state.statusFilter);
+  if (state.channelFilter !== 'all') params.set('channelFilter', state.channelFilter);
   Object.keys(state.subs).forEach(k => {
-    params.set(k, state.subs[k]);
+    if (state.subs[k]) {
+      params.set(k, 'true');
+    }
   });
   window.history.replaceState(null, null, '#' + params.toString());
 }

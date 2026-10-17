@@ -62,3 +62,25 @@ test('Montreal: Status filtering works correctly', async ({ page }) => {
   const allCards = await page.locator('#scheduleTableBody > tr').count();
   expect(allCards).toBeGreaterThan(watchableCards);
 });
+
+test('Subscriptions persistence: checked channels survive page reload', async ({ page }) => {
+  await page.goto('/toronto/');
+  await page.waitForSelector('#scheduleTableBody');
+
+  // Check Prime Video and Sportsnet+ Premium
+  await page.locator('#sub_prime').check();
+  await page.locator('#sub_sn_prem').check();
+  expect(await page.locator('#sub_prime').isChecked()).toBe(true);
+  expect(await page.locator('#sub_sn_prem').isChecked()).toBe(true);
+
+  // Reload the page
+  await page.reload();
+  await page.waitForSelector('#scheduleTableBody');
+
+  // Verify selections are remembered
+  expect(await page.locator('#sub_prime').isChecked()).toBe(true);
+  expect(await page.locator('#sub_sn_prem').isChecked()).toBe(true);
+  const count = await page.locator('#watchableCount').textContent();
+  expect(parseInt(count.trim(), 10)).toBe(55);
+});
+
