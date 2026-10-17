@@ -1,0 +1,22 @@
+{
+  "name": "Guide de diffusion : Canadiens de Montréal",
+  "short_name": "Guide MTL",
+  "description": "Horaire télé et calculateur de blackouts régionaux pour les matchs des Canadiens de Montréal.",
+  "lang": "fr-CA",
+  "start_url": "/fr/montreal/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#192168",
+  "icons": [
+    {
+      "src": "/shared/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/shared/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
