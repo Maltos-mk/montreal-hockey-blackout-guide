@@ -75,11 +75,37 @@ function validateHtml(filePath) {
     if (content.includes('"@type": "WebApplication"')) {
       errors.push('Team page contains WebApplication schema with $0 Offer that triggers Rich Results aggregateRating warning; use WebPage instead.');
     }
-    if (!content.includes('<script defer src="../shared/app.js')) {
+    if (!/<script\s+defer\s+src="[^"]*shared\/app\.js/.test(content)) {
       errors.push('Team page shared/app.js script tag is missing defer attribute (causes render blocking on mobile).');
     }
     if (!content.includes('id="regionSelect" aria-label=')) {
       errors.push('Team page #regionSelect is missing aria-label (fails Lighthouse select-name & Agentic Browsing checks).');
+    }
+    if (filePath.includes('/fr/')) {
+      if (!content.includes('<html lang="fr">')) {
+        errors.push('French page is missing <html lang="fr">.');
+      }
+      if (!/<script\s+defer\s+src="[^"]*shared\/lang-fr\.js/.test(content)) {
+        errors.push('French page is missing shared/lang-fr.js script tag.');
+      }
+      if (!content.includes('hreflang="fr-CA"') || !content.includes('hreflang="en-CA"')) {
+        errors.push('French page is missing reciprocal hreflang="fr-CA" / hreflang="en-CA" links.');
+      }
+      const forbiddenEnglishLeaks = [
+        'Where do you live?',
+        'Your Active Subscriptions & Channels:',
+        'Watchable On Your Setup',
+        'Subscription Needed',
+        'Upcoming Schedule Snapshot:',
+        'TV & Blackout Breakdown',
+        'Showing the 84-game',
+        'Blackout Rules & FAQ'
+      ];
+      forbiddenEnglishLeaks.forEach(phrase => {
+        if (content.includes(phrase)) {
+          errors.push(`French page contains untranslated English UI string: "${phrase}"`);
+        }
+      });
     }
   }
 

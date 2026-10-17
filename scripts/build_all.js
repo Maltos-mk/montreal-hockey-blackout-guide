@@ -162,6 +162,9 @@ execSync('node scripts/build_game_pages.js', { stdio: 'inherit' });
 // Build Phase 3 Evergreen Explainer & Methodology Pages
 execSync('node scripts/build_explainers.js', { stdio: 'inherit' });
 
+// Build French Montreal Hub (/fr/montreal/)
+execSync('node scripts/build_fr.js', { stdio: 'inherit' });
+
 console.log('Build complete.');
 
 let masterSitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -179,6 +182,11 @@ teams.forEach(team => {
     <priority>0.9</priority>
   </url>\n`;
 });
+masterSitemap += `  <url>
+    <loc>https://hockeyblackouts.ca/fr/montreal/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>\n`;
 
 const explainerSlugs = [
   'sportsnet-plus-blackout-rules',
@@ -226,4 +234,5 @@ if (fs.existsSync(gamesBaseDir)) {
 
 masterSitemap += '</urlset>';
 fs.writeFileSync(path.join(BUILD_DIR, 'sitemap.xml'), masterSitemap);
+execSync('node scripts/i18n_check.js', { stdio: 'inherit' });
 execSync('node scripts/qa_validator.js', { stdio: 'inherit' });

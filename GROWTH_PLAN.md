@@ -95,12 +95,12 @@ Stabilize core site architecture, internal linking mesh, and search authority be
 
 ## Phase 4 — French Market (Quebec / Francophone Broadcasts)
 
-Deferred until English feature set and site architecture are fully stabilized. Requires authentic Quebec hockey terminology rather than mechanical machine translation.
+Requires authentic Quebec hockey terminology rather than mechanical client-side translation.
 
-- [ ] **4.1 Native French Hubs:**
-  - Ship `/fr/montreal/` and `/fr/ottawa/` with tailored copy respecting RDS/TVA Sports rights and regional broadcast nuances.
-- [ ] **4.2 Reciprocal `hreflang` tags:**
-  - Correct bidirectional `hreflang` markup (`en-CA`, `fr-CA`, `x-default`) across corresponding team hubs.
+- [x] **4.1 Native French Hub (`/fr/montreal/`):**
+  - Shipped build-time `/fr/montreal/` hub (`templates/index-fr.html`, `scripts/build_fr.js`, `shared/lang-fr.js`, `scripts/i18n_check.js`) with tailored Quebec French copy respecting RDS/TVA Sports rights, regional broadcast nuances, and localized Ko-fi variants. (`/fr/ottawa/` can follow once Montreal performance is validated.)
+- [x] **4.2 Reciprocal `hreflang` tags:**
+  - Bidirectional `hreflang` markup (`fr-CA`, `fr`, `en-CA`, `en`, `x-default`) and header `EN | FR` language switcher across `/montreal/` and `/fr/montreal/`.
 - [ ] **4.3 French Matchup Pages:**
   - Programmatic French matchup pages for Canadiens and Senators games once hub stability is proven.
 

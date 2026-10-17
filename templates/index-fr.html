@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta name="google-site-verification" content="9xDuDaZ6t2VaHECBLicoF274o-jsjOjxz9Shb9P7TYQ">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags (Québec French) -->
+  <title>Où regarder les {{TEAM_NAME_FR}} ce soir? | Horaire télé</title>
+  <meta name="title" content="Où regarder les {{TEAM_NAME_FR}} ce soir? | Horaire télé">
+  <meta name="description" content="Sur quelle chaîne passe le match des {{TEAM_NAME_FR}} ce soir? Vérifiez l’horaire télé (RDS, TVA Sports, TSN2, Sportsnet, Prime Video) et les blackouts.">
+  <meta name="keywords" content="match {{TEAM_NAME_FR}} ce soir, quelle chaîne {{TEAM_NICKNAME_FR}}, blackout {{TEAM_NAME_FR}}, horaire télé {{TEAM_NAME_FR}}, RDS blackout, TVA Sports {{TEAM_NICKNAME_FR}}, TSN2 blackout">
+  <meta name="author" content="HockeyBlackouts.ca">
+  <link rel="canonical" href="https://hockeyblackouts.ca/fr/{{TEAM_DIR}}/">
+  <link rel="alternate" hreflang="fr-CA" href="https://hockeyblackouts.ca/fr/{{TEAM_DIR}}/">
+  <link rel="alternate" hreflang="fr" href="https://hockeyblackouts.ca/fr/{{TEAM_DIR}}/">
+  <link rel="alternate" hreflang="en-CA" href="https://hockeyblackouts.ca/{{TEAM_DIR}}/">
+  <link rel="alternate" hreflang="en" href="https://hockeyblackouts.ca/{{TEAM_DIR}}/">
+  <link rel="alternate" hreflang="x-default" href="https://hockeyblackouts.ca/{{TEAM_DIR}}/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="https://hockeyblackouts.ca/shared/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="https://hockeyblackouts.ca/shared/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://hockeyblackouts.ca/shared/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hockeyblackouts.ca/shared/favicon-180x180.png">
+
+  <!-- Progressive Web App (PWA) / Mobile Standalone Tags -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="{{COLOR_SECONDARY}}">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Guide {{CITY_NAME_FR}}">
+
+  <!-- OpenGraph / Facebook / Discord -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:locale:alternate" content="en_CA">
+  <meta property="og:site_name" content="HockeyBlackouts.ca">
+  <meta property="og:url" content="https://hockeyblackouts.ca/fr/{{TEAM_DIR}}/">
+  <meta property="og:title" content="Où regarder les {{TEAM_NAME_FR}} ce soir? | Horaire télé">
+  <meta property="og:description" content="Sur quelle chaîne passe le match des {{TEAM_NAME_FR}} ce soir? Vérifiez l’horaire télé (RDS, TVA Sports, TSN2, Sportsnet, Prime Video) et les blackouts.">
+  <meta property="og:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
+
+  <!-- Twitter / X Cards -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:url" content="https://hockeyblackouts.ca/fr/{{TEAM_DIR}}/">
+  <meta property="twitter:title" content="Guide télé et blackouts : {{TEAM_NAME_FR}}">
+  <meta property="twitter:description" content="Vérifiez la chaîne télé et les blackouts régionaux pour les 84 matchs de la saison des {{TEAM_NAME_FR}}.">
+  <meta property="twitter:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
+
+  <!-- Schema.org Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "inLanguage": "fr-CA",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Accueil",
+        "item": "https://hockeyblackouts.ca/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{TEAM_NAME_FR}}",
+        "item": "https://hockeyblackouts.ca/fr/{{TEAM_DIR}}/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org WebPage Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Guide de diffusion et des blackouts des {{TEAM_NAME_FR}}",
+    "inLanguage": "fr-CA",
+    "url": "https://hockeyblackouts.ca/fr/{{TEAM_DIR}}/",
+    "dateModified": "{{BUILD_DATE_ISO}}",
+    "description": "Horaire télé interactif et calculateur de blackouts régionaux pour les matchs des {{TEAM_NAME_FR}} sur RDS, TVA Sports, TSN2, Sportsnet et Prime Video."
+  }
+  </script>
+
+  <!-- Schema.org WebSite & Publisher Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "HockeyBlackouts.ca",
+    "alternateName": "Guide de diffusion des {{TEAM_NAME_FR}}",
+    "inLanguage": "fr-CA",
+    "url": "https://hockeyblackouts.ca/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "HockeyBlackouts.ca",
+      "url": "https://hockeyblackouts.ca/",
+      "description": "Outil indépendant aidant les amateurs de hockey au Canada à vérifier les chaînes de diffusion et les blackouts régionaux.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://hockeyblackouts.ca/shared/favicon-192x192.png"
+      }
+    }
+  }
+  </script>
+
+  <!-- Schema.org FAQ Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "fr-CA",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Pourquoi les matchs des {{TEAM_NAME_FR}} sont-ils en blackout sur RDS ou TSN2 dans l’ouest de l’Ontario?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La frontière de diffusion de la LNH en Ontario passe entre Belleville et Kingston. Si vous habitez dans l’est de l’Ontario (Ottawa, Cornwall), au Québec ou au Canada atlantique, vous êtes dans le territoire des {{TEAM_NAME_FR}} et vous pouvez voir les matchs régionaux sur RDS et TSN2. À l’ouest de Belleville (Toronto et le Grand Toronto), vous êtes dans le territoire des Maple Leafs : les matchs régionaux des {{TEAM_NAME_FR}} y sont en blackout à moins d’avoir Sportsnet+ Premium ou Centre Ice de la LNH."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pourquoi ai-je un message de blackout régional sur RDS, TSN ou Sportsnet ce soir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Si l’écran devient noir avec un avis de restriction régionale sur RDS, TSN2 ou Sportsnet, c’est qu’il s’agit d’une diffusion régionale et que vous vous trouvez à l’extérieur du territoire officiel de l’équipe défini par la LNH. Pour regarder les matchs régionaux hors marché, il faut Sportsnet+ Premium ou Centre Ice de la LNH."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment regarder tous les matchs des {{TEAM_NAME_FR}} au Canada sans blackout régional?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les partisans qui habitent à l’extérieur du territoire des {{TEAM_NAME_FR}} peuvent regarder les matchs régionaux en s’abonnant à Sportsnet+ Premium (diffusion en continu) ou à Centre Ice de la LNH (câble, forfait francophone ou complet)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Les matchs du samedi soir des {{TEAM_NAME_FR}} sur TVA Sports et Sportsnet sont-ils en blackout?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. Les matchs du samedi soir diffusés sur TVA Sports et Sportsnet font partie des diffusions nationales de la LNH. Ils sont accessibles d’un océan à l’autre au Canada sans aucun blackout régional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quels matchs des {{TEAM_NAME_FR}} sont diffusés en exclusivité sur Amazon Prime Video?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Certains matchs nationaux en semaine mettant en vedette les {{TEAM_NAME_FR}} sont diffusés sur Amazon Prime Video au Canada sans aucun blackout régional pour les abonnés Prime."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preload Local Fonts & Icons -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="/shared/fonts/teko-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/shared/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8" data-exclude-hash="true"></script>
+
+  <!-- Dynamic Team Color Tokens -->
+  <style>
+    :root {
+      --color-team-primary: {{COLOR_PRIMARY}};
+      --color-team-secondary: {{COLOR_SECONDARY}};
+      --color-team-dark: {{COLOR_DARK}};
+    }
+  </style>
+
+  <!-- Precompiled Tailwind CSS & Application CSS -->
+  <link rel="stylesheet" href="/shared/tailwind.min.css?v={{BUILD_TIMESTAMP}}">
+  <link rel="stylesheet" href="/shared/app.css?v={{BUILD_TIMESTAMP}}">
+
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
+
+  <!-- Global Network Bar -->
+  <nav class="bg-slate-900 text-slate-400 text-xs border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between overflow-x-auto whitespace-nowrap hide-scrollbar">
+      <div class="flex items-center space-x-1 py-2 font-semibold">
+        {{NETWORK_LINKS}}
+      </div>
+      <div class="flex items-center space-x-1 py-2 font-bold text-xs">
+        <a href="/{{TEAM_DIR}}/" lang="en" hreflang="en-CA" class="px-2 py-0.5 rounded text-slate-400 hover:text-white hover:bg-white/10 transition" title="English version">EN</a>
+        <span class="text-slate-600">|</span>
+        <span class="px-2 py-0.5 rounded bg-white/15 text-white border border-white/10" aria-current="page">FR</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Banner -->
+  <header class="bg-gradient-to-r from-teamSecondary via-teamDark to-teamPrimary text-white shadow-lg border-b-4 border-white/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-4 text-center md:text-left">
+        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-md p-1 border-2 border-teamSecondary flex-shrink-0">
+          <span class="font-teko text-3xl font-bold text-teamSecondary tracking-tighter">{{TEAM_ID}}</span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 flex-wrap justify-center md:justify-start">
+            <h1 class="text-2xl sm:text-3xl font-black tracking-tight font-teko uppercase text-white">Sur quelle chaîne passe le match des {{TEAM_NAME_FR}} ce soir? (Télé et diffusion en continu)</h1>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-white/15 text-slate-200 border border-white/20">Outil indépendant • Version française (bêta)</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-200 font-medium">Calculateur en temps réel des chaînes télé et des blackouts régionaux pour suivre les {{TEAM_NICKNAME_FR}}.</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-2.5 flex-wrap justify-center">
+        <a href="/{{TEAM_DIR}}/" lang="en" hreflang="en-CA" data-lang-switcher="en" class="px-3 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="View in English">
+          <i class="fa-solid fa-globe text-sky-200"></i>
+          <span>EN</span>
+        </a>
+        <a href="#faq" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="Foire aux questions sur les blackouts">
+          <i class="fa-solid fa-circle-question text-sky-300"></i>
+          <span class="hidden sm:inline">FAQ</span>
+        </a>
+        <button onclick="shareApp()" data-umami-event="share-click" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="Partager ce guide">
+          <i class="fa-solid fa-share-nodes text-emerald-300"></i>
+          <span class="hidden sm:inline">Partager</span>
+        </button>
+        <button onclick="toggleTheme()" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/20 shadow-sm flex items-center justify-center transition" title="Mode sombre / clair" id="themeToggleBtn">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+        <button onclick="openDirectInstallModal()" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="Ajouter à l’écran d’accueil">
+          <i class="fa-solid fa-mobile-screen-button text-amber-300"></i>
+          <span>Installer</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-8 flex-1 w-full">
+    
+    <!-- Top Configuration Grid -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      
+      <!-- User Input Card -->
+      <div class="lg:col-span-7 bg-white dark:bg-slate-900 p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-6">
+        <div class="border-b border-slate-100 dark:border-slate-800 pb-4 flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="w-2.5 h-6 bg-teamPrimary rounded-full inline-block"></span>
+            <h2 class="text-base sm:text-lg font-bold">1. Votre région et vos abonnements</h2>
+          </div>
+          <span class="text-xs text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-full font-medium">Règles officielles</span>
+        </div>
+
+        <!-- Region Selector -->
+        <div>
+          <label for="regionSelect" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">
+            Où habitez-vous?
+          </label>
+          <select id="regionSelect" aria-label="Où habitez-vous?" class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 px-4 py-3 rounded-xl shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teamSecondary">
+            {{REGION_OPTIONS}}
+          </select>
+          <script>
+            (function() {
+              try {
+                var r = localStorage.getItem('hockeyblackouts_region');
+                if (!r && location.hash) {
+                  var m = location.hash.match(/[#&]region=([^&]+)/);
+                  if (m) r = decodeURIComponent(m[1]);
+                }
+                if (r) {
+                  var s = document.getElementById('regionSelect');
+                  if (s) s.value = r;
+                }
+              } catch(e) {}
+            })();
+          </script>
+        </div>
+
+        <!-- Subscriptions Checklist -->
+        <div>
+          <span class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">
+            Vos chaînes et abonnements actifs :
+          </span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="subsList">
+            
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_sn_cable" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">Sportsnet (câble télé)</p>
+                <p class="text-[10px] text-slate-600 dark:text-slate-300 font-medium">Bell, Vidéotron, Telus (exclut les exclusivités de l’appli SN+)</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_sn_plus" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">Sportsnet+ Standard (diffusion en continu)</p>
+                <p class="text-[10px] text-slate-600 dark:text-slate-300 font-medium">Ou abonnés au câble Rogers</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition sm:col-span-2">
+              <input type="checkbox" id="sub_sn_prem" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">Sportsnet+ PREMIUM / Centre Ice de la LNH</p>
+                <p class="text-[10px] text-slate-600 dark:text-slate-300 font-medium">Forfait hors marché pour les matchs régionaux</p>
+              </div>
+            </label>
+
+            <label id="container_centre_ice_fr" class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_centre_ice_fr" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">Centre Ice de la LNH (forfait francophone)</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-300">Forfait hors marché pour les diffusions en français</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_regional_en" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">Chaîne sportive locale en anglais ({{REGIONAL_EN}})</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-300">{{REGIONAL_EN_COUNT}} matchs régionaux des {{TEAM_NICKNAME_FR}} (dans le marché)</p>
+              </div>
+            </label>
+
+            <!-- Amazon Prime Video with Affiliate Tracking Link -->
+            <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition flex flex-col justify-between gap-1">
+              <label class="flex items-center space-x-3 cursor-pointer">
+                <input type="checkbox" id="sub_prime" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+                <div class="flex-1">
+                  <p class="text-sm font-semibold">Amazon Prime Video</p>
+                  <p class="text-[11px] text-slate-600 dark:text-slate-300">Diffusions nationales de hockey sur Prime</p>
+                </div>
+              </label>
+              <div class="text-[11px] pl-7 pt-1">
+                <a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" data-umami-event="amazon-prime-click" target="_blank" rel="sponsored noopener noreferrer" class="font-bold text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1 w-fit">
+                  <span>Pas abonné à Prime? Essai gratuit de 30 jours</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_regional_fr" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">{{REGIONAL_FR}} / {{REGIONAL_FR}} Direct</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-300">{{REGIONAL_FR_COUNT}} matchs régionaux en français des {{TEAM_NICKNAME_FR}}</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_national_fr" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">TVA Sports</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-300">Diffusions nationales en français (aucun blackout)</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition sm:col-span-2">
+              <input type="checkbox" id="sub_espn" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">ESPN+ / NHL.tv (États-Unis et international)</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-300">Diffusion officielle hors Canada des matchs des {{TEAM_NICKNAME_FR}}</p>
+              </div>
+            </label>
+
+          </div>
+          <script>
+            (function() {
+              try {
+                var savedSubs = localStorage.getItem('hockeyblackouts_subs');
+                if (savedSubs) {
+                  var parsed = JSON.parse(savedSubs);
+                  if (parsed && typeof parsed === 'object') {
+                    for (var k in parsed) {
+                      var cb = document.getElementById('sub_' + k);
+                      if (cb) cb.checked = Boolean(parsed[k]);
+                    }
+                  }
+                }
+              } catch(e) {}
+            })();
+          </script>
+        </div>
+
+        <!-- Language Preference -->
+        <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300">Langue de diffusion souhaitée :</span>
+          <div class="inline-flex rounded-lg p-1 bg-slate-100 dark:bg-slate-800 text-xs font-semibold">
+            <button id="lang_en" onclick="setLang('en')" class="px-3 py-1.5 rounded-md text-slate-600 dark:text-slate-300 hover:text-slate-800 dark:hover:text-white transition">Anglais seulement</button>
+            <button id="lang_fr" onclick="setLang('fr')" class="px-3 py-1.5 rounded-md text-slate-600 dark:text-slate-300">Français seulement</button>
+            <button id="lang_any" onclick="setLang('any')" class="px-3 py-1.5 rounded-md bg-white dark:bg-slate-700 shadow-sm text-teamPrimary font-bold transition">Peu importe</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="lg:col-span-5 flex flex-col gap-4">
+        
+        <!-- Score Box -->
+        <div class="bg-gradient-to-br from-teamSecondary to-slate-900 text-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-800 relative overflow-hidden flex-1 flex flex-col justify-between">
+          <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-teamPrimary/10 rounded-full blur-2xl pointer-events-none"></div>
+
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-300" id="kpiSeasonTitle">Couverture de la saison complète (84 matchs)</span>
+              <span id="pctBadge" class="text-xs font-bold px-2.5 py-1 rounded-full bg-teamPrimary text-white">0 % disponibles</span>
+            </div>
+
+            <div class="flex items-baseline space-x-2">
+              <span id="watchableCount" class="font-teko text-6xl sm:text-7xl font-bold leading-none text-white">0</span>
+              <span id="totalGameLabel" class="text-slate-300 font-teko text-2xl font-medium">/ 84 MATCHS</span>
+            </div>
+          </div>
+
+          <!-- Progress Bars Breakdown -->
+          <div class="space-y-3 pt-6 border-t border-white/10 mt-4">
+            <div>
+              <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
+                <span>Disponibles sans blackout</span>
+                <span id="watchableBreakdown">0 matchs (0 %)</span>
+              </div>
+              <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div id="watchBar" class="bg-emerald-500" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
+                <span>En blackout régional</span>
+                <span id="blackoutBreakdown">0 matchs (0 %)</span>
+              </div>
+              <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div id="blackoutBar" class="bg-amber-500" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
+                <span>Abonnement requis manquant</span>
+                <span id="missingBreakdown">84 matchs (100 %)</span>
+              </div>
+              <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div id="missingBar" class="bg-rose-500" style="width: 100%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Official Advice Card (Prerendered to prevent Mobile CLS) -->
+        <div id="adviceCard" class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs sm:text-sm min-h-[96px]">
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white">Tous les matchs dans votre marché</h3>
+              <p class="text-slate-600 dark:text-slate-300 mt-1">
+                Pour recevoir tous les matchs des {{TEAM_NAME_FR}} chez vous, il faut généralement Sportsnet (le samedi), votre chaîne régionale et Amazon Prime.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post-Value Support Callout -->
+        <div id="kofiCalloutBox" class="mt-4 p-4 bg-amber-50 dark:bg-amber-500/10 rounded-2xl border border-amber-100 dark:border-amber-500/20 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-3 text-sm text-amber-900 dark:text-amber-200/80">
+          <span id="kofiCalloutText">Cette page vous a évité un mal de tête ce soir? Offrez-moi un café pour la garder en ligne.</span>
+          <a href="https://ko-fi.com/maltosmk" id="kofiCalloutBtn" data-umami-event="kofi-click" data-umami-event-variant="control" target="_blank" rel="noopener" class="font-bold px-4 py-2 bg-amber-400 hover:bg-amber-300 text-slate-900 rounded-xl shadow-sm transition flex items-center gap-1.5 whitespace-nowrap"><i id="kofiCalloutIcon" class="fa-solid fa-mug-hot"></i> <span id="kofiCalloutBtnText">Un café, 3 $</span></a>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- AUTOMATIC NEXT UPCOMING GAME SPOTLIGHT HERO -->
+    <section id="nextGameSpotlight" class="transition-all duration-300">
+      {{PRERENDERED_SPOTLIGHT_HERO}}
+    </section>
+
+    <section class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+      
+      <!-- Top Bar Filters -->
+      <div class="print-hidden p-4 sm:p-6 border-b border-slate-100 dark:border-slate-800 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+        
+        <!-- View Timing Toggle -->
+        <div class="inline-flex rounded-xl p-1 bg-slate-100 dark:bg-slate-800 text-xs font-semibold self-start">
+          <button onclick="setTimeFilter('upcoming')" id="time_upcoming" class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 shadow-sm text-teamPrimary font-bold transition">Prochains matchs</button>
+          <button onclick="setTimeFilter('all')" id="time_all" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">Tous les matchs</button>
+          <button onclick="setTimeFilter('past')" id="time_past" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">Matchs terminés</button>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap items-center gap-2">
+          
+          <div class="relative flex-1 sm:flex-initial">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-500 text-xs"></i>
+            <input type="text" id="opponentSearch" aria-label="Rechercher un adversaire ou un aréna" placeholder="Adversaire, aréna…" class="pl-8 pr-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary w-full sm:w-44">
+          </div>
+
+          <select id="statusFilter" aria-label="Filtrer les matchs par statut de disponibilité" class="px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary">
+            <option value="all">Statut : Tous</option>
+            <option value="watchable">Disponible</option>
+            <option value="blacked_out">Blackout</option>
+            <option value="missing_sub">Abonnement requis</option>
+          </select>
+
+          <button id="btnExportPDF" onclick="exportPDF()" data-umami-event="export-pdf-click" class="print-hidden px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-700 hover:bg-slate-50 dark:hover:bg-slate-600 transition flex items-center gap-1.5 text-slate-700 dark:text-slate-200 shadow-sm whitespace-nowrap" aria-label="Exporter l’horaire en PDF">
+            <i class="fa-solid fa-print"></i>
+            <span class="hidden sm:inline">Exporter PDF</span>
+          </button>
+
+          <select id="channelFilter" aria-label="Filtrer les matchs par chaîne de diffusion" class="px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary">
+            <option value="all">Chaîne : Toutes</option>
+            <option value="Sportsnet">Sportsnet</option>
+            <option value="{{REGIONAL_EN}}">{{REGIONAL_EN}}</option>
+            <option value="Prime Video">Prime Video</option>
+            <option value="{{REGIONAL_FR}}">{{REGIONAL_FR}}</option>
+            <option value="TVA Sports">TVA Sports</option>
+          </select>
+
+        </div>
+      </div>
+
+      <!-- Mobile Cards View -->
+      <div id="scheduleCardsMobile" class="block md:hidden divide-y divide-slate-100 dark:divide-slate-800 p-3 space-y-3" data-prerendered="true">
+        {{PRERENDERED_MOBILE_SCHEDULE}}
+      </div>
+
+      <!-- Desktop Table View -->
+      <div class="hidden md:block overflow-x-auto max-h-[680px]">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse">
+          <thead class="sticky top-0 bg-slate-100/95 dark:bg-slate-800/95 backdrop-blur z-10 text-slate-600 dark:text-slate-300 uppercase tracking-wider text-[11px]">
+            <tr>
+              <th class="py-3 px-4 font-semibold w-12 text-center">#</th>
+              <th class="py-3 px-4 font-semibold whitespace-nowrap w-36">Date et heure</th>
+              <th class="py-3 px-4 font-semibold min-w-[200px]">Match / Aréna</th>
+              <th class="py-3 px-4 font-semibold w-36">Chaîne</th>
+              <th class="py-3 px-4 font-semibold w-40">Type de diffusion</th>
+              <th class="py-3 px-4 font-semibold min-w-[240px] text-right">Accès</th>
+            </tr>
+          </thead>
+          <tbody id="scheduleTableBody" class="divide-y divide-slate-100 dark:divide-slate-800" data-prerendered="true">
+            {{PRERENDERED_DESKTOP_SCHEDULE}}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Footer count -->
+      <div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <span id="renderedCountLabel">{{PRERENDERED_COUNT_LABEL}}</span>
+        <span class="text-[11px] italic text-center sm:text-right" data-freshness="verified-date">Horaire vérifié le {{BUILD_DATE_DISPLAY_FR}} • Synchronisé avec votre fuseau horaire</span>
+      </div>
+
+    </section>
+
+    <article class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-xs sm:text-sm space-y-4 shadow-sm">
+      <h2 class="text-base font-bold text-slate-900 dark:text-white uppercase font-teko text-2xl tracking-wider text-teamPrimary">
+        Droits de diffusion télé et guide des blackouts régionaux des {{TEAM_NAME_FR}} (saison 2026-2027)
+      </h2>
+      <p class="leading-relaxed">
+        Pour suivre tous les matchs préparatoires et de saison régulière des <strong>{{TEAM_NAME_FR}}</strong> au Canada, il faut distinguer les diffusions régionales des diffusions nationales de la LNH. Les matchs des {{TEAM_NAME_FR}} sont répartis sur cinq chaînes et plateformes : <strong>{{REGIONAL_FR}}, {{REGIONAL_EN}}, TVA Sports, Sportsnet et Amazon Prime Video</strong>.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Matchs régionaux des {{TEAM_NAME_FR}} ({{REGIONAL_FR}} et {{REGIONAL_EN}})</h3>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300">
+            <strong>{{REGIONAL_FR}}</strong> ({{REGIONAL_FR_COUNT}} matchs en français) et <strong>{{REGIONAL_EN}}</strong> ({{REGIONAL_EN_COUNT}} matchs en anglais) détiennent les droits régionaux officiels des {{TEAM_NAME_FR}}. Selon les règles de la LNH, ce territoire de diffusion couvre exclusivement <strong>{{REGION_DESCRIPTION_FR}}</strong>.
+          </p>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300 mt-2">
+            Si vous habitez à l’extérieur de ce territoire (par exemple à Toronto ou dans l’Ouest canadien), un abonnement de base à {{REGIONAL_FR}} ou à {{REGIONAL_EN}} affichera un <strong>écran de blackout régional</strong> pendant les matchs en direct des {{TEAM_NAME_FR}}. Les partisans hors marché doivent passer par <strong>Sportsnet+ Premium (diffusion en continu)</strong> ou <strong>Centre Ice de la LNH (câble ou satellite)</strong> pour regarder légalement les diffusions régionales.
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Matchs nationaux des {{TEAM_NICKNAME_FR}} (TVA Sports, Sportsnet et Prime)</h3>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300">
+            Lorsque les {{TEAM_NAME_FR}} jouent le samedi soir, <strong>TVA Sports</strong> (en français) et <strong>Sportsnet</strong> (en anglais) diffusent le match d’un océan à l’autre avec <strong>aucun blackout régional au Canada</strong>. Tous les téléspectateurs canadiens abonnés à ces chaînes peuvent regarder le match peu importe leur province.
+          </p>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300 mt-2">
+            Certains matchs de saison régulière des {{TEAM_NAME_FR}} sont également diffusés à l’échelle nationale sur <strong>Amazon Prime Video</strong> sans aucun blackout régional au pays.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/40 text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
+        <strong>En résumé pour les partisans des {{TEAM_NICKNAME_FR}} hors Québec :</strong> Si le match de ce soir des {{TEAM_NAME_FR}} est diffusé sur TVA Sports, Sportsnet ou Prime Video, vous pouvez le regarder partout au Canada sans blackout. Si le match est sur {{REGIONAL_FR}} ou {{REGIONAL_EN}}, il sera en blackout à l’ouest de Belleville (Toronto, Ontario ouest et l’Ouest canadien) à moins d’être abonné à Sportsnet+ Premium ou à Centre Ice de la LNH.
+      </div>
+    </article>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+      <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-teamPrimary border-b border-slate-100 dark:border-slate-800 pb-3">Règles de blackout et foire aux questions (FAQ)</h2>
+      
+      <!-- SEO Summary Table -->
+      <div class="overflow-x-auto my-4">
+        <table class="w-full text-sm text-left text-slate-600 dark:text-slate-300 border-collapse border border-slate-200 dark:border-slate-700">
+          <thead class="bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+            <tr>
+              <th class="border border-slate-200 dark:border-slate-700 px-4 py-2">Type de match</th>
+              <th class="border border-slate-200 dark:border-slate-700 px-4 py-2">Chaîne</th>
+              <th class="border border-slate-200 dark:border-slate-700 px-4 py-2">Statut de blackout</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">Régional</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">{{REGIONAL_FR}} / {{REGIONAL_EN}}</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Sujet aux blackouts régionaux hors territoire</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">National (samedi)</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">TVA Sports / Sportsnet</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Aucun blackout</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">National (Prime)</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Amazon Prime Video</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Aucun blackout</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1" itemprop="name">Pourquoi les matchs des {{TEAM_NAME_FR}} sont-ils en blackout sur RDS ou TSN2 dans l’ouest de l’Ontario?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">La frontière de diffusion de la LNH en Ontario passe entre Belleville et Kingston. Si vous habitez dans l’est de l’Ontario (Ottawa, Cornwall), au Québec ou au Canada atlantique, vous êtes dans le territoire des {{TEAM_NAME_FR}} et vous pouvez voir les matchs régionaux sur RDS et TSN2. À l’ouest de Belleville (Toronto et le Grand Toronto), vous êtes dans le territoire des Maple Leafs : les matchs régionaux des {{TEAM_NAME_FR}} y sont en blackout à moins d’avoir Sportsnet+ Premium ou Centre Ice de la LNH.</p>
+          </div>
+          <p class="mt-2 text-xs text-slate-500"><em>Remarque : Le corridor entre Belleville et Kingston est une zone de chevauchement où les câblodistributeurs offrent les deux régions. Choisissez « Zone de chevauchement en Ontario » dans le menu déroulant ci-dessus si vous y habitez.</em></p>
+        </div>
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1" itemprop="name">Pourquoi ai-je un message de blackout régional sur RDS, TSN ou Sportsnet ce soir?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Si l’écran devient noir avec un avis de restriction régionale sur RDS, TSN2 ou Sportsnet, c’est qu’il s’agit d’une diffusion régionale et que vous vous trouvez à l’extérieur du territoire officiel de l’équipe défini par la LNH. Pour regarder les matchs régionaux hors marché, il faut Sportsnet+ Premium ou Centre Ice de la LNH.</p>
+          </div>
+        </div>
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1" itemprop="name">Comment regarder tous les matchs des {{TEAM_NAME_FR}} au Canada sans blackout régional?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Les partisans qui habitent à l’extérieur du territoire des {{TEAM_NAME_FR}} peuvent regarder les matchs régionaux en s’abonnant à Sportsnet+ Premium (diffusion en continu) ou à Centre Ice de la LNH (câble, forfait francophone ou complet).</p>
+          </div>
+        </div>
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1" itemprop="name">Les matchs du samedi soir des {{TEAM_NAME_FR}} sur TVA Sports et Sportsnet sont-ils en blackout?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Non. Les matchs du samedi soir diffusés sur TVA Sports et Sportsnet font partie des diffusions nationales de la LNH. Ils sont accessibles d’un océan à l’autre au Canada sans aucun blackout régional.</p>
+          </div>
+        </div>
+
+        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1" itemprop="name">Quels matchs des {{TEAM_NAME_FR}} sont diffusés en exclusivité sur Amazon Prime Video?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Certains matchs nationaux en semaine mettant en vedette les {{TEAM_NAME_FR}} sont diffusés sur Amazon Prime Video au Canada sans aucun blackout régional pour les abonnés Prime.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      
+      <!-- Community Support Link -->
+      <div class="inline-flex items-center gap-2 p-2 px-4 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+        <i class="fa-solid fa-mug-hot text-amber-500"></i>
+        <span>Ce guide des {{TEAM_NAME_FR}} vous a été utile?</span>
+        <a href="https://ko-fi.com/maltosmk" id="kofiFooterBtn" data-umami-event="kofi-click" data-umami-event-variant="control" target="_blank" rel="noopener" class="font-bold text-blue-600 dark:text-blue-400 hover:underline ml-1">
+          Soutenir HockeyBlackouts.ca sur Ko-fi &rarr;
+        </a>
+      </div>
+
+      <div class="py-2 flex flex-wrap items-center justify-center gap-3 text-sm">
+        <span class="font-semibold text-slate-600 dark:text-slate-300"><i class="fa-solid fa-map-location-dot mr-1"></i> Autres guides régionaux :</span>
+        {{FOOTER_LINKS}}
+      </div>
+
+      <div class="py-1 flex flex-wrap items-center justify-center gap-2 text-xs">
+        <span class="font-semibold text-slate-600 dark:text-slate-400">Guides détaillés (EN) :</span>
+        <a href="https://hockeyblackouts.ca/rds-vs-tva-sports-blackouts/" lang="en" hreflang="en-CA" class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-medium">RDS vs TVA Sports</a>
+        <a href="https://hockeyblackouts.ca/sportsnet-plus-blackout-rules/" lang="en" hreflang="en-CA" class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-medium">Règles de Sportsnet+</a>
+        <a href="https://hockeyblackouts.ca/prime-hockey-schedule-canada/" lang="en" hreflang="en-CA" class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-medium">Horaire Prime Video</a>
+        <a href="https://hockeyblackouts.ca/how-blackouts-work/" lang="en" hreflang="en-CA" class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-medium">Fonctionnement des blackouts</a>
+      </div>
+
+      <!-- About the Data -->
+      <div class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-300 max-w-2xl mx-auto text-left bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mb-6 space-y-2">
+        <p><strong class="text-slate-700 dark:text-slate-300">À propos des données :</strong> Ce guide indépendant calcule la disponibilité des matchs en temps réel en croisant votre région et vos abonnements télé avec l’horaire officiel de la LNH. En comparant les territoires de diffusion aux chaînes ({{REGIONAL_FR}}, {{REGIONAL_EN}}, TVA Sports, Sportsnet, Prime Video), l’outil détermine si le match des {{TEAM_NAME_FR}} est diffusé dans votre marché ou s’il nécessite un forfait hors marché.</p>
+        <p><strong class="text-slate-700 dark:text-slate-300">Note linguistique :</strong> Cette version française (bêta) est adaptée à partir du guide original en anglais. Les données de diffusion et de blackout sont identiques à la <a href="/{{TEAM_DIR}}/" lang="en" hreflang="en-CA" class="underline hover:text-slate-800 dark:hover:text-white">version anglaise</a>.</p>
+      </div>
+
+      <p class="font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider text-[11px] pt-2">
+        Avis de non-affiliation et d’utilisation équitable
+      </p>
+      <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-300">
+        Ce site est une ressource indépendante créée uniquement à des fins d’information publique. Ce service n’est <strong>ni affilié, ni exploité, ni approuvé par</strong> {{OWNERSHIP_GROUP}}, les {{TEAM_NAME_FR}}, la Ligue nationale de hockey (LNH) ou l’un de ses clubs membres.
+      </p>
+      <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-300">
+        Tous les noms d’équipes ({{TEAM_NAME_FR}}), horaires, noms de chaînes ({{REGIONAL_FR}}, {{REGIONAL_EN}}, TVA Sports, Sportsnet, Amazon Prime Video) et marques de commerce mentionnés ici sont utilisés uniquement à titre descriptif et informatif.
+      </p>
+    </div>
+  </footer>
+
+  <!-- DIRECT ADD TO HOME SCREEN MODAL -->
+  <div id="directInstallModal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-slate-200 dark:border-slate-800 text-center space-y-4">
+      
+      <div class="w-16 h-16 rounded-2xl bg-teamSecondary border-2 border-teamPrimary flex items-center justify-center font-teko text-3xl font-bold text-white mx-auto shadow-md">
+        {{TEAM_ID}}
+      </div>
+
+      <div>
+        <h3 class="text-lg font-bold font-teko uppercase tracking-wide text-slate-900 dark:text-white">Ajouter le guide des {{TEAM_NICKNAME_FR}} à l’écran d’accueil</h3>
+        <p class="text-xs text-slate-500 dark:text-slate-300 mt-1">Accédez en un clic à l’horaire télé et aux blackouts des {{TEAM_NAME_FR}} en plein écran.</p>
+      </div>
+
+      <!-- Dynamic Action Area -->
+      <div id="directInstallBody" class="text-left bg-slate-50 dark:bg-slate-800/80 p-4 rounded-2xl border border-slate-200 dark:border-slate-700 text-xs space-y-2.5">
+      </div>
+
+      <div class="flex items-center gap-2 pt-1">
+        <button onclick="dismissDirectInstallModal(true)" class="flex-1 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-semibold text-xs hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+          Ne plus afficher
+        </button>
+        <button onclick="dismissDirectInstallModal(false)" class="flex-1 py-2.5 rounded-xl bg-teamSecondary text-white font-semibold text-xs hover:bg-slate-800 transition">
+          Compris
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    window.TEAM_DATA_URL = "/{{TEAM_DIR}}/data.json?v={{BUILD_TIMESTAMP}}";
+  </script>
+  <script defer src="../../shared/lang-fr.js?v={{BUILD_TIMESTAMP}}"></script>
+  <script defer src="../../shared/app.js?v={{BUILD_TIMESTAMP}}"></script>
+
+</body>
+</html>

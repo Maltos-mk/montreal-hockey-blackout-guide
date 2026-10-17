@@ -1,16 +1,67 @@
+function isFr() {
+  return typeof document !== 'undefined' &&
+    document.documentElement &&
+    document.documentElement.lang === 'fr' &&
+    typeof window !== 'undefined' &&
+    Boolean(window.HB_FR);
+}
 
+function tx(str) {
+  var args = Array.prototype.slice.call(arguments, 1);
+  var tpl = (isFr() && window.HB_FR.strings && window.HB_FR.strings[str]) ? window.HB_FR.strings[str] : str;
+  return tpl.replace(/\{(\d+)\}/g, function (m, i) {
+    return args[i] === undefined ? m : args[i];
+  });
+}
+
+function trSummary(reason) {
+  if (!reason) return reason;
+  if (isFr() && window.HB_FR && typeof window.HB_FR.translateSummary === 'function') {
+    return window.HB_FR.translateSummary(reason);
+  }
+  return reason;
+}
+
+function teamFullName(id, fallback) {
+  if (isFr() && window.HB_FR && window.HB_FR.teams && window.HB_FR.teams[id]) {
+    return window.HB_FR.teams[id][0];
+  }
+  return fallback || NHL_TEAMS[id] || id;
+}
+
+function teamNick(id, fallback) {
+  if (isFr() && window.HB_FR && window.HB_FR.teams && window.HB_FR.teams[id]) {
+    return window.HB_FR.teams[id][1];
+  }
+  return fallback || id;
+}
+
+function formatGameDate(g) {
+  if (!isFr() || !g || !g.iso) return g ? g.date : '';
+  try {
+    const d = new Date(g.iso);
+    return new Intl.DateTimeFormat('fr-CA', {
+      weekday: 'short',
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    }).format(d);
+  } catch (e) {
+    return g.date;
+  }
+}
 
 function formatLocalTime(isoStr, fallbackTime) {
-  if (!isoStr) return fallbackTime + ' ET';
+  if (!isoStr) return fallbackTime + (isFr() ? ' HE' : ' ET');
   try {
     const d = new Date(isoStr);
-    return new Intl.DateTimeFormat('en-US', {
+    return new Intl.DateTimeFormat(isFr() ? 'fr-CA' : 'en-US', {
       hour: 'numeric',
       minute: '2-digit',
       timeZoneName: 'short'
     }).format(d);
   } catch(e) {
-    return fallbackTime + ' ET';
+    return fallbackTime + (isFr() ? ' HE' : ' ET');
   }
 }
 
@@ -19,7 +70,7 @@ window.shareApp = async function() {
   if (navigator.share) {
     try {
       await navigator.share({
-        title: window.TEAM_DATA ? window.TEAM_DATA.team.name + ' Broadcast Guide' : 'Hockey Broadcast Guide',
+        title: window.TEAM_DATA ? tx('{0} Broadcast Guide', teamFullName(window.TEAM_DATA.team.id, window.TEAM_DATA.team.name)) : tx('Hockey Broadcast Guide'),
         url: window.location.href,
       });
       // Umami tracking for share
@@ -29,10 +80,10 @@ window.shareApp = async function() {
     }
   } else {
     navigator.clipboard.writeText(window.location.href).then(() => {
-      alert("Link copied to clipboard!");
+      alert(tx("Link copied to clipboard!"));
       try { umami.track('copy-link'); } catch(e) {}
     }).catch(() => {
-      alert('Sharing not supported on this browser. Copy the URL from your address bar to share!');
+      alert(tx('Sharing not supported on this browser. Copy the URL from your address bar to share!'));
     });
   }
 };
@@ -99,8 +150,8 @@ async function initApp() {
 
     
     // Update basic UI elements that might have team name
-    document.querySelectorAll('.team-nickname-text').forEach(el => el.textContent = window.TEAM_DATA.team.nickname);
-    document.querySelectorAll('.team-name-text').forEach(el => el.textContent = window.TEAM_DATA.team.name);
+    document.querySelectorAll('.team-nickname-text').forEach(el => el.textContent = teamNick(window.TEAM_DATA.team.id, window.TEAM_DATA.team.nickname));
+    document.querySelectorAll('.team-name-text').forEach(el => el.textContent = teamFullName(window.TEAM_DATA.team.id, window.TEAM_DATA.team.name));
     
     // Auto-display direct install after 3s on mobile
     
@@ -155,14 +206,15 @@ function initKofiMultivariate() {
   }
 
   const v = KOFI_VARIANTS[variantKey] || KOFI_VARIANTS.control;
+  const frKofi = (isFr() && window.HB_FR.kofi && window.HB_FR.kofi[v.id]) ? window.HB_FR.kofi[v.id] : null;
 
   const calloutText = document.getElementById('kofiCalloutText');
   const calloutBtn = document.getElementById('kofiCalloutBtn');
   const calloutBtnText = document.getElementById('kofiCalloutBtnText');
   const calloutIcon = document.getElementById('kofiCalloutIcon');
   if (calloutText && calloutBtn && calloutBtnText) {
-    calloutText.textContent = v.teamCopy;
-    calloutBtnText.textContent = v.teamCta;
+    calloutText.textContent = frKofi ? frKofi.copy : v.teamCopy;
+    calloutBtnText.textContent = frKofi ? frKofi.cta : v.teamCta;
     calloutBtn.setAttribute('data-umami-event-variant', v.id);
     if (calloutIcon && v.teamIcon) {
       calloutIcon.className = `fa-solid ${v.teamIcon}`;
@@ -232,9 +284,10 @@ function getGameUrl(g) {
 }
 
 function getFullMatchup(teamName, vsStr, oppCode) {
-  const oppName = NHL_TEAMS[oppCode] || oppCode;
+  const dispTeam = window.TEAM_DATA && window.TEAM_DATA.team ? teamFullName(window.TEAM_DATA.team.id, teamName) : teamName;
+  const oppName = teamFullName(oppCode, NHL_TEAMS[oppCode] || oppCode);
   const isAway = vsStr.startsWith('@');
-  return isAway ? `${teamName} at ${oppName}` : `${teamName} vs ${oppName}`;
+  return isAway ? tx('{0} at {1}', dispTeam, oppName) : tx('{0} vs {1}', dispTeam, oppName);
 }
 
 const state = {
@@ -489,15 +542,14 @@ function evaluateGame(g, state) {
 
 function renderAdviceCards(state) {
   const team = window.TEAM_DATA ? window.TEAM_DATA.team : { name: 'Your Team' };
-  const t = (str) => window.i18n ? window.i18n.t(str) : str;
   const localTeams = broadcastZones[state.region] || [];
   if (localTeams.includes(team.id)) {
     return `
       <div class="space-y-4">
         <div>
-          <h3 class="font-bold text-slate-900 dark:text-white">${t('In-Market Full Season Setup')}</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white">${tx('In-Market Full Season Setup')}</h3>
           <p class="text-slate-600 dark:text-slate-300 mt-1">
-            ${t('To receive all')} ${window.TEAM_DATA ? window.TEAM_DATA.team.name : 'Team'} ${t('games locally, you generally need Sportsnet (Saturdays), your local regional channel, and Amazon Prime.')}
+            ${tx('To receive all {0} games locally, you generally need Sportsnet (Saturdays), your local regional channel, and Amazon Prime.', window.TEAM_DATA ? teamFullName(window.TEAM_DATA.team.id, window.TEAM_DATA.team.name) : 'Team')}
           </p>
         </div>
       </div>
@@ -506,9 +558,9 @@ function renderAdviceCards(state) {
     return `
       <div class="space-y-4">
         <div>
-          <h3 class="font-bold text-slate-900 dark:text-white">${t('Official Out-of-Market Options')}</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white">${tx('Official Out-of-Market Options')}</h3>
           <p class="text-slate-600 dark:text-slate-300 mt-1 leading-relaxed">
-            ${t('Subscribing to a regional channel from another province does <strong>not</strong> bypass NHL blackouts. To watch out-of-market regional games, you need <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable).')}
+            ${tx('Subscribing to a regional channel from another province does <strong>not</strong> bypass NHL blackouts. To watch out-of-market regional games, you need <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable).')}
           </p>
         </div>
       </div>
@@ -517,9 +569,9 @@ function renderAdviceCards(state) {
     return `
       <div class="space-y-4">
         <div>
-          <h3 class="font-bold text-slate-900 dark:text-white">${t('International & US Viewing')}</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white">${tx('International & US Viewing')}</h3>
           <p class="text-slate-600 dark:text-slate-300 mt-1">
-            ${t('ESPN+ carries out-of-market NHL games for US viewers. National US broadcasts on ESPN, TNT, or simulcast on NHL Network follow local US availability rules and will be blacked out on ESPN+.')}
+            ${tx('ESPN+ carries out-of-market NHL games for US viewers. National US broadcasts on ESPN, TNT, or simulcast on NHL Network follow local US availability rules and will be blacked out on ESPN+.')}
           </p>
         </div>
       </div>
@@ -550,7 +602,7 @@ function syncRegionalCheckbox() {
       regCb.disabled = true;
       if (regText) {
         if (!regText.dataset.orig) regText.dataset.orig = regText.innerText;
-        regText.innerText = regText.dataset.orig + " (Included)";
+        regText.innerText = regText.dataset.orig + tx(" (Included)");
         regText.classList.add('text-emerald-600');
       }
     } else {
@@ -571,12 +623,12 @@ function syncRegionalCheckbox() {
 
 function render() {
   syncRegionalCheckbox();
-      const t = (str) => window.i18n ? window.i18n.t(str) : str;
-      const getVs = (vs) => {
+      const getVs = (vs, opp) => {
         let clean = vs.replace('vs ', '').replace('@ ', '').replace(' (Split Squad)', '');
         let prefix = vs.startsWith('vs ') ? 'vs ' : '@ ';
-        let suffix = vs.includes('Split Squad') ? ' (' + t('Split Squad') + ')' : '';
-        return prefix + t(clean) + suffix;
+        let suffix = vs.includes('Split Squad') ? ' (' + tx('Split Squad') + ')' : '';
+        let name = (isFr() && opp) ? teamNick(opp, clean) : tx(clean);
+        return prefix + name + suffix;
       };
       updateHash();
       const now = new Date();
@@ -630,11 +682,11 @@ function render() {
         const nextEval = Object.assign({}, rawNextRes, { status: nextStatus, summaryReason: nextSummaryReason });
         let badgeHtml = '';
         if (nextEval.status === 'watchable') {
-          badgeHtml = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-700 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Watchable On Your Setup</span>';
+          badgeHtml = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-700 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> ' + tx('Watchable On Your Setup') + '</span>';
         } else if (nextEval.status === 'blacked_out') {
-          badgeHtml = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-ban"></i> Regionally Blacked Out</span>';
+          badgeHtml = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-ban"></i> ' + tx('Regionally Blacked Out') + '</span>';
         } else {
-          badgeHtml = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-700 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-lock"></i> Subscription Needed</span>';
+          badgeHtml = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-700 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-lock"></i> ' + tx('Subscription Needed') + '</span>';
         }
 
         const isGameToday = nextGame.isToday;
@@ -644,7 +696,7 @@ function render() {
           <div class="mt-4 pt-4 border-t border-white/10">
             <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1.5">
               <i class="fa-solid fa-calendar-days text-rose-400"></i>
-              <span>Upcoming Schedule Snapshot:</span>
+              <span>${tx('Upcoming Schedule Snapshot:')}</span>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
               ${upcoming3.map(ug => `
@@ -652,13 +704,13 @@ function render() {
                   <div>
                     <div class="font-bold text-white text-sm flex items-center gap-1.5">
                       <span class="text-rose-400 font-teko text-base">#${games.findIndex(orig => orig.id === ug.id) + 1}</span>
-                      <a href="${getGameUrl(ug)}" class="hover:underline hover:text-rose-400">${ug.vs}</a>
+                      <a href="${getGameUrl(ug)}" class="hover:underline hover:text-rose-400">${getVs(ug.vs, ug.opp)}</a>
                     </div>
-                    <div class="text-[11px] text-slate-300 mt-0.5">${ug.date} • ${formatLocalTime(ug.iso, ug.time)}</div>
+                    <div class="text-[11px] text-slate-300 mt-0.5">${formatGameDate(ug)} • ${formatLocalTime(ug.iso, ug.time)}</div>
                   </div>
                   <div class="text-right shrink-0">
                     <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-white/10 text-white border border-white/10">${ug.netEN || 'Sportsnet'}</span>
-                    <a href="${getGameUrl(ug)}" class="block text-[10px] text-rose-400 font-semibold hover:underline mt-1">Breakdown &rarr;</a>
+                    <a href="${getGameUrl(ug)}" class="block text-[10px] text-rose-400 font-semibold hover:underline mt-1">${tx('Breakdown &rarr;')}</a>
                   </div>
                 </div>
               `).join('')}
@@ -673,15 +725,15 @@ function render() {
               <div class="space-y-1.5">
                 <div class="flex items-center gap-2">
                   <span class="px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider ${isGameToday ? 'bg-amber-400 text-slate-950 animate-pulse' : 'bg-white/20 text-white'}">
-                    ${isGameToday ? '★ Game Today' : 'Next ' + window.TEAM_DATA.team.nickname + ' Game'}
+                    ${isGameToday ? tx('★ Game Today') : tx('Next {0} Game', teamNick(window.TEAM_DATA.team.id, window.TEAM_DATA.team.nickname))}
                   </span>
-                  <span class="text-xs text-slate-300 font-medium">${nextGame.date} • ${formatLocalTime(nextGame.iso, nextGame.time)}</span>
-                  <span class="text-xs text-slate-400 font-teko text-sm tracking-wide">Game ${games.findIndex(orig => orig.id === nextGame.id) + 1} of ${games.length}</span>
+                  <span class="text-xs text-slate-300 font-medium">${formatGameDate(nextGame)} • ${formatLocalTime(nextGame.iso, nextGame.time)}</span>
+                  <span class="text-xs text-slate-400 font-teko text-sm tracking-wide">${tx('Game {0} of {1}', games.findIndex(orig => orig.id === nextGame.id) + 1, games.length)}</span>
                 </div>
                 
                 <h3 class="text-xl sm:text-2xl font-black font-teko uppercase tracking-wide flex items-center gap-2">
-                  <span>${nextGame.vs}</span>
-                  ${nextGame.note ? `<span class="text-xs font-sans font-semibold px-2 py-0.5 rounded bg-white/10 text-white border border-white/20">${nextGame.note}</span>` : ''}
+                  <span>${getVs(nextGame.vs, nextGame.opp)}</span>
+                  ${nextGame.note ? `<span class="text-xs font-sans font-semibold px-2 py-0.5 rounded bg-white/10 text-white border border-white/20">${tx(nextGame.note)}</span>` : ''}
                 </h3>
                 
                 <p class="text-xs text-slate-300 flex items-center gap-2">
@@ -691,7 +743,7 @@ function render() {
 
               <div class="flex flex-col md:items-end gap-2 w-full md:w-auto pt-3 md:pt-0 border-t md:border-t-0 border-white/10">
                 <div class="flex items-center gap-2">
-                  <span class="text-xs text-slate-300 font-medium">Broadcast:</span>
+                  <span class="text-xs text-slate-300 font-medium">${tx('Broadcast:')}</span>
                   <span class="px-2 py-0.5 rounded text-xs font-bold bg-white text-teamSecondary shadow-sm">${nextGame.netEN}</span>
                   <span class="px-2 py-0.5 rounded text-xs font-bold bg-white/20 text-white">${nextGame.netFR}</span>
                 </div>
@@ -699,11 +751,11 @@ function render() {
                 <div>${badgeHtml}</div>
                 
                 <div class="text-[11px] text-slate-300 md:text-right max-w-sm">
-                  ${nextEval.summaryReason}
+                  ${trSummary(nextEval.summaryReason)}
                 </div>
 
                 <a href="${getGameUrl(nextGame)}" class="mt-1 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/10 transition">
-                  <span>View Blackout Breakdown &rarr;</span>
+                  <span>${tx('View Blackout Breakdown &rarr;')}</span>
                 </a>
               </div>
 
@@ -746,13 +798,13 @@ function render() {
       const pct = Math.round((watchableCount / total) * 100) || 0;
 
       document.getElementById('watchableCount').textContent = watchableCount;
-      document.getElementById('totalGameLabel').textContent = `/ ${total} GAMES`;
-      document.getElementById('pctBadge').textContent = `${pct}% Watchable`;
-      document.getElementById('kpiSeasonTitle').textContent = `Full Season Coverage (${total} Games)`;
+      document.getElementById('totalGameLabel').textContent = tx('/ {0} GAMES', total);
+      document.getElementById('pctBadge').textContent = tx('{0}% Watchable', pct);
+      document.getElementById('kpiSeasonTitle').textContent = tx('Full Season Coverage ({0} Games)', total);
 
-      document.getElementById('watchableBreakdown').textContent = `${watchableCount} games (${pct}%)`;
-      document.getElementById('blackoutBreakdown').textContent = `${blackedOutCount} games (${Math.round((blackedOutCount/total)*100)||0}%)`;
-      document.getElementById('missingBreakdown').textContent = `${missingSubCount} games (${Math.round((missingSubCount/total)*100)||0}%)`;
+      document.getElementById('watchableBreakdown').textContent = tx('{0} games ({1}%)', watchableCount, pct);
+      document.getElementById('blackoutBreakdown').textContent = tx('{0} games ({1}%)', blackedOutCount, Math.round((blackedOutCount/total)*100)||0);
+      document.getElementById('missingBreakdown').textContent = tx('{0} games ({1}%)', missingSubCount, Math.round((missingSubCount/total)*100)||0);
 
       document.getElementById('watchBar').style.width = `${pct}%`;
       document.getElementById('blackoutBar').style.width = `${(blackedOutCount/total)*100}%`;
@@ -857,13 +909,13 @@ function render() {
 
         let badge = '';
         if (g.isPast) {
-          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300 whitespace-nowrap"><i class="fa-solid fa-clock-rotate-left mr-1 text-[10px]"></i>Final</span>';
+          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300 whitespace-nowrap"><i class="fa-solid fa-clock-rotate-left mr-1 text-[10px]"></i>' + tx('Final') + '</span>';
         } else if (evalRes.status === 'watchable') {
-          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>Watchable</span>';
+          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>' + tx('Watchable') + '</span>';
         } else if (evalRes.status === 'blacked_out') {
-          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 whitespace-nowrap"><i class="fa-solid fa-ban mr-1 text-[10px]"></i>Blacked Out</span>';
+          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 whitespace-nowrap"><i class="fa-solid fa-ban mr-1 text-[10px]"></i>' + tx('Blacked Out') + '</span>';
         } else {
-          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 whitespace-nowrap"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>Need Sub</span>';
+          badge = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 whitespace-nowrap"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>' + tx('Need Sub') + '</span>';
         }
 
         const card = document.createElement('div');
@@ -874,12 +926,12 @@ function render() {
               <div class="flex items-center gap-1.5 flex-wrap">
                 <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#${games.findIndex(orig => orig.id === g.id) + 1}</span>
                 <a href="${getGameUrl(g)}" class="font-bold text-sm text-slate-900 dark:text-white hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline flex items-center gap-1">
-                  <span>${getVs(g.vs)}</span>
+                  <span>${getVs(g.vs, g.opp)}</span>
                   <i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i>
                 </a>
               </div>
               <div class="text-[10px] text-slate-600 dark:text-slate-300 font-medium leading-tight mt-0.5 truncate">${getFullMatchup(window.TEAM_DATA.team.name, g.vs, g.opp)}</div>
-              <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.date} • ${formatLocalTime(g.iso, g.time)}</div>
+              <div class="text-[11px] text-slate-600 dark:text-slate-300">${formatGameDate(g)} • ${formatLocalTime(g.iso, g.time)}</div>
             </div>
             ${badge}
           </div>
@@ -890,12 +942,12 @@ function render() {
               ${g.netFR && g.netFR !== 'None' ? `<span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">${g.netFR}</span>` : ''}
             </div>
             <a href="${getGameUrl(g)}" class="text-[11px] font-semibold text-[#AF1E2D] dark:text-rose-400 hover:underline flex items-center gap-1">
-              <span>TV & Blackout Breakdown &rarr;</span>
+              <span>${tx('TV & Blackout Breakdown &rarr;')}</span>
             </a>
           </div>
 
           <div class="text-[11px] font-medium text-slate-600 dark:text-slate-300 bg-white/70 dark:bg-slate-900/50 p-2 rounded-lg border border-slate-200/50 dark:border-slate-700/50 mt-1">
-            ${evalRes.summaryReason}
+            ${trSummary(evalRes.summaryReason)}
           </div>
         `;
         newMobileHtml += card.outerHTML;
@@ -905,17 +957,17 @@ function render() {
         tr.innerHTML = `
           <td class="py-3 px-4 font-bold text-slate-600 dark:text-slate-300 font-teko text-base text-center">${games.findIndex(orig => orig.id === g.id) + 1}</td>
           <td class="py-3 px-4 whitespace-nowrap">
-            <div class="font-semibold text-slate-800 dark:text-slate-200">${g.date}</div>
+            <div class="font-semibold text-slate-800 dark:text-slate-200">${formatGameDate(g)}</div>
             <div class="text-[11px] text-slate-600 dark:text-slate-300">${formatLocalTime(g.iso, g.time)}</div>
           </td>
           <td class="py-3 px-4">
             <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
-              <a href="${getGameUrl(g)}" class="hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline transition flex items-center gap-1.5" title="View TV broadcast and blackout breakdown">
-                <span>${getVs(g.vs)}</span>
+              <a href="${getGameUrl(g)}" class="hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline transition flex items-center gap-1.5" title="${tx('View TV broadcast and blackout breakdown')}">
+                <span>${getVs(g.vs, g.opp)}</span>
                 <i class="fa-solid fa-chevron-right text-[9px] text-slate-500 opacity-75"></i>
               </a>
-              ${g.phase === 'preseason' ? `<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">${t('Preseason')}</span>` : ''}
-              ${g.note ? `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-teamPrimary/10 text-teamPrimary">${g.note ? t(g.note) : ""}</span>` : ''}
+              ${g.phase === 'preseason' ? `<span class="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-600 dark:text-amber-300">${tx('Preseason')}</span>` : ''}
+              ${g.note ? `<span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-teamPrimary/10 text-teamPrimary">${g.note ? tx(g.note) : ""}</span>` : ''}
             </div>
             <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.venue}</div>
           </td>
@@ -927,13 +979,13 @@ function render() {
           </td>
           <td class="py-3 px-4">
             <span class="text-[11px] font-medium uppercase tracking-wider text-slate-600 dark:text-slate-300">
-              ${g.typeEN === 'national' ? 'National (Coast-to-Coast)' : g.typeEN === 'prime_wednesday' ? 'Prime Wednesday Exclusive' : 'Regional Territory'}
+              ${g.typeEN === 'national' ? tx('National (Coast-to-Coast)') : g.typeEN === 'prime_wednesday' ? tx('Prime Wednesday Exclusive') : tx('Regional Territory')}
             </span>
           </td>
           <td class="py-3 px-4 text-right">
             <div>${badge}</div>
             <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-1 leading-snug">
-              ${evalRes.summaryReason}
+              ${trSummary(evalRes.summaryReason)}
             </div>
           </td>
         `;
@@ -944,16 +996,14 @@ function render() {
       mobileContainer.innerHTML = newMobileHtml;
 
       document.getElementById('renderedCountLabel').textContent = 
-        state.timeFilter === 'upcoming' ? `Showing the ${displayedCount}-game ${window.TEAM_DATA.team.name} TV broadcast schedule` :
-        state.timeFilter === 'past' ? `Showing ${displayedCount} completed games` : `Showing ${displayedCount} total games`;
+        state.timeFilter === 'upcoming' ? tx('Showing the {0}-game {1} TV broadcast schedule', displayedCount, teamFullName(window.TEAM_DATA.team.id, window.TEAM_DATA.team.name)) :
+        state.timeFilter === 'past' ? tx('Showing {0} completed games', displayedCount) : tx('Showing {0} total games', displayedCount);
 
             const adviceCard = document.getElementById('adviceCard');
 
       if (window.renderAdviceCards) {
           adviceCard.innerHTML = window.renderAdviceCards(state);
       }
-
-      if (window.i18n) { window.i18n.translateNode(adviceCard);  window.i18n.translateNode(mobileContainer); window.i18n.apply(); }
     }
 
     function enableBarTransitions() {
@@ -1080,24 +1130,24 @@ function render() {
           <div class="space-y-2">
             <div class="flex items-center gap-2">
               <span class="w-5 h-5 rounded-full bg-teamSecondary text-white font-bold text-[10px] flex items-center justify-center flex-shrink-0">1</span>
-              <span>Tap the <strong class="text-blue-500 font-semibold"><i class="fa-solid fa-arrow-up-from-bracket"></i> Share icon</strong> at the bottom of Safari.</span>
+              <span>${tx('Tap the <strong class="text-blue-500 font-semibold"><i class="fa-solid fa-arrow-up-from-bracket"></i> Share icon</strong> at the bottom of Safari.')}</span>
             </div>
             <div class="flex items-center gap-2">
               <span class="w-5 h-5 rounded-full bg-teamSecondary text-white font-bold text-[10px] flex items-center justify-center flex-shrink-0">2</span>
-              <span>Scroll down & select <strong class="text-slate-900 dark:text-white font-semibold">"Add to Home Screen" <i class="fa-regular fa-square-plus ml-1"></i></strong></span>
+              <span>${tx('Scroll down & select <strong class="text-slate-900 dark:text-white font-semibold">"Add to Home Screen" <i class="fa-regular fa-square-plus ml-1"></i></strong>')}</span>
             </div>
             <div class="flex items-center gap-2">
               <span class="w-5 h-5 rounded-full bg-teamSecondary text-white font-bold text-[10px] flex items-center justify-center flex-shrink-0">3</span>
-              <span>Tap <strong class="text-amber-500 font-semibold">"Add"</strong> in the top right.</span>
+              <span>${tx('Tap <strong class="text-amber-500 font-semibold">"Add"</strong> in the top right.')}</span>
             </div>
           </div>
         `;
       } else if (deferredPrompt) {
         body.innerHTML = `
-          <p class="text-slate-600 dark:text-slate-300 mb-2 leading-relaxed">Install directly to your device for instant launch and offline access.</p>
+          <p class="text-slate-600 dark:text-slate-300 mb-2 leading-relaxed">${tx('Install directly to your device for instant launch and offline access.')}</p>
           <button onclick="triggerDirectInstall()" class="w-full py-2.5 bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold rounded-xl shadow transition flex items-center justify-center gap-2">
             <i class="fa-solid fa-download"></i>
-            <span>Install Now</span>
+            <span>${tx('Install Now')}</span>
           </button>
         `;
       } else {
@@ -1105,11 +1155,11 @@ function render() {
           <div class="space-y-2">
             <div class="flex items-center gap-2">
               <span class="w-5 h-5 rounded-full bg-teamSecondary text-white font-bold text-[10px] flex items-center justify-center flex-shrink-0">1</span>
-              <span>Tap the browser menu <strong class="text-slate-900 dark:text-white font-semibold">(three dots <i class="fa-solid fa-ellipsis-vertical"></i>)</strong>.</span>
+              <span>${tx('Tap the browser menu <strong class="text-slate-900 dark:text-white font-semibold">(three dots <i class="fa-solid fa-ellipsis-vertical"></i>)</strong>.')}</span>
             </div>
             <div class="flex items-center gap-2">
               <span class="w-5 h-5 rounded-full bg-teamSecondary text-white font-bold text-[10px] flex items-center justify-center flex-shrink-0">2</span>
-              <span>Select <strong class="text-slate-900 dark:text-white font-semibold">"Install App"</strong> or <strong class="text-slate-900 dark:text-white font-semibold">"Add to Home screen"</strong>.</span>
+              <span>${tx('Select <strong class="text-slate-900 dark:text-white font-semibold">"Install App"</strong> or <strong class="text-slate-900 dark:text-white font-semibold">"Add to Home screen"</strong>.')}</span>
             </div>
           </div>
         `;
@@ -1201,7 +1251,7 @@ if (document.readyState === 'loading') {
 window.exportPDF = function() {
   const btn = document.getElementById('btnExportPDF');
   const originalText = btn.innerHTML;
-  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span class="hidden sm:inline">Generating...</span>';
+  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span class="hidden sm:inline">' + tx('Generating...') + '</span>';
   btn.disabled = true;
 
   const ensureLogoAndBuild = () => {
@@ -1238,7 +1288,7 @@ function buildAndDownloadPDF(btn, originalText) {
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF('p', 'pt', 'letter');
   
-  const teamName = window.TEAM_DATA ? window.TEAM_DATA.team.name : 'Team';
+  const teamName = window.TEAM_DATA ? teamFullName(window.TEAM_DATA.team.id, window.TEAM_DATA.team.name) : 'Team';
 
   // 1. Branding Header
   const logoB64 = window.PDF_LOGO_B64;
@@ -1250,7 +1300,7 @@ function buildAndDownloadPDF(btn, originalText) {
   // Title
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(22);
-  doc.text(`${teamName} - 2026-27 TV Schedule`, 40, 50);
+  doc.text(tx('{0} - 2026-27 TV Schedule', teamName), 40, 50);
 
   // URL
   doc.setFont('helvetica', 'normal');
@@ -1283,14 +1333,14 @@ function buildAndDownloadPDF(btn, originalText) {
 
   doc.setFontSize(11);
   doc.setTextColor(71, 85, 105); // slate-600
-  const contextStr = `Configured Region: ${regionText}  |  Active Subscriptions: ${subLabels.length > 0 ? subLabels.join(', ') : 'None'}`;
+  const contextStr = tx('Configured Region: {0}  |  Active Subscriptions: {1}', regionText, subLabels.length > 0 ? subLabels.join(', ') : tx('None'));
   const contextLines = doc.splitTextToSize(contextStr, pageWidth - 80);
   doc.text(contextLines, 40, 105);
   
   const dynamicStartY = 105 + (contextLines.length * 14);
 
   // 3. Table Data
-  const head = [['Date & Time', 'Matchup', 'Network', 'Access Status']];
+  const head = [[tx('Date & Time'), tx('Matchup'), tx('Network'), tx('Access Status')]];
   const body = [];
 
   const sourceRows = document.getElementById('scheduleTableBody').querySelectorAll('tr');
@@ -1321,11 +1371,11 @@ function buildAndDownloadPDF(btn, originalText) {
     didParseCell: function (data) {
       // Colorize the Access Status column
       if (data.section === 'body' && data.column.index === 3) {
-        if (data.cell.raw.includes('Watchable')) {
+        if (data.cell.raw.includes(tx('Watchable'))) {
           data.cell.styles.textColor = [5, 150, 105]; // emerald-600
-        } else if (data.cell.raw.includes('Blacked Out')) {
+        } else if (data.cell.raw.includes(tx('Blacked Out'))) {
           data.cell.styles.textColor = [220, 38, 38]; // red-600
-        } else if (data.cell.raw.includes('Out-of-Market')) {
+        } else if (data.cell.raw.includes(tx('Out-of-Market'))) {
           data.cell.styles.textColor = [217, 119, 6]; // amber-600
         }
       }
@@ -1333,7 +1383,7 @@ function buildAndDownloadPDF(btn, originalText) {
   });
 
   // 5. Save
-  doc.save(`${teamName.replace(/\s+/g, '_')}_Schedule.pdf`);
+  doc.save(tx('{0}_Schedule.pdf', teamName.replace(/\s+/g, '_')));
 
   // Reset button
   btn.innerHTML = originalText;
@@ -1341,7 +1391,7 @@ function buildAndDownloadPDF(btn, originalText) {
 }
 // --- Node.js Exports for Testing ---
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { evaluateGame, broadcastZones };
+  module.exports = { evaluateGame, broadcastZones, tx, trSummary };
 }
 
 

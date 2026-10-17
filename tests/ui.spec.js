@@ -114,4 +114,41 @@ test('Ko-fi multivariate testing: assigns variant, persists in localStorage, and
   expect(gameBtnText).toContain('Buy the Dev a $3 Beer');
 });
 
+test('French Montreal Hub (/fr/montreal/): renders 100% French UI, schedule, reasons, and Ko-fi variants with zero English leaks', async ({ page }) => {
+  await page.goto('/fr/montreal/');
+  await page.waitForSelector('#scheduleTableBody');
+
+  expect(await page.locator('html').getAttribute('lang')).toBe('fr');
+  expect(await page.locator('#totalGameLabel').textContent()).toContain('MATCHS');
+  expect(await page.locator('#pctBadge').textContent()).toContain('disponibles');
+  expect(await page.locator('#adviceCard').textContent()).toContain('Tous les matchs dans votre marché');
+
+  // Check RDS and TVA Sports -> verify French watchable badges and reasons
+  await page.locator('#sub_regional_fr').check();
+  await page.locator('#sub_national_fr').check();
+  const watchableCount = parseInt((await page.locator('#watchableCount').textContent()).trim(), 10);
+  expect(watchableCount).toBeGreaterThan(50);
+
+  const tableText = await page.locator('#scheduleTableBody').textContent();
+  expect(tableText).toContain('Disponible');
+  expect(tableText).toContain('À voir sur');
+  expect(tableText).not.toContain('Watchable');
+  expect(tableText).not.toContain('Need Sub');
+  expect(tableText).not.toContain('Requires ');
+
+  // Switch region to Ontario West (out-of-market) -> verify French blackout message and advice card
+  await page.selectOption('#regionSelect', 'on_west');
+  expect(await page.locator('#adviceCard').textContent()).toContain('Options officielles hors marché');
+  const oomTableText = await page.locator('#scheduleTableBody').textContent();
+  expect(oomTableText).toContain('Blackout');
+  expect(oomTableText).not.toContain('Blacked Out');
+
+  // Verify French Ko-fi variant copy
+  await page.evaluate(() => localStorage.setItem('hb_kofi_variant', 'anti_gambling'));
+  await page.reload();
+  await page.waitForSelector('#kofiCalloutBox');
+  expect((await page.locator('#kofiCalloutBtnText').textContent()).trim()).toBe('Payer une bière au dev (3 $)');
+});
+
+
 
