@@ -36,6 +36,12 @@ dataFiles.forEach(file => {
   
   const regionalFrDisclaimer = team.networks.regionalFR ? ', ' + team.networks.regionalFR : '';
   html = html.replace(/\{\{REGIONAL_FR_DISCLAIMER\}\}/g, regionalFrDisclaimer);
+  const regionalFrAnd = team.networks.regionalFR ? ' and ' + team.networks.regionalFR : '';
+  html = html.replace(/\{\{REGIONAL_FR_AND\}\}/g, regionalFrAnd);
+  const regionalFrAmp = team.networks.regionalFR ? ' & ' + team.networks.regionalFR : '';
+  html = html.replace(/\{\{REGIONAL_FR_AMP\}\}/g, regionalFrAmp);
+  const regionalFrSlash = team.networks.regionalFR ? ' / ' + team.networks.regionalFR : '';
+  html = html.replace(/\{\{REGIONAL_FR_SLASH\}\}/g, regionalFrSlash);
 
 
   
@@ -215,7 +221,10 @@ dataFiles.forEach(file => {
   let desktopRows = '';
   let mobileCards = '';
   
-  upcomingGames.forEach((g) => {
+  // Prerender next 10 upcoming games in static HTML (~3 weeks) so total HTML stays <110KB
+  // (under Bing's ~125-150KB HTML truncation limit) while keeping #faq in the indexed window
+  // and preventing above-the-fold CLS. Client JS (shared/app.js) hydrates all 84 games immediately.
+  upcomingGames.slice(0, 10).forEach((g) => {
     const origIdx = data.schedule.findIndex(orig => orig.id === g.id);
     const gameNum = origIdx + 1;
     const isNational = g.typeEN === 'national' || g.typeEN === 'prime_wednesday';

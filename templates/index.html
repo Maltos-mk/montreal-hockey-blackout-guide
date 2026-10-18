@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary SEO Meta Tags with Natural Canadiens & {{TEAM_NICKNAME}} Keywords -->
-  <title>Where to watch &amp; stream the {{TEAM_NAME}} | Live TV Schedule</title>
-  <meta name="title" content="Where to watch &amp; stream the {{TEAM_NAME}} | Live TV Schedule">
+  <title>Where to Watch &amp; Stream {{TEAM_NAME}} Tonight | TV &amp; Blackouts</title>
+  <meta name="title" content="Where to Watch &amp; Stream {{TEAM_NAME}} Tonight | TV &amp; Blackouts">
   <meta name="description" content="What channel is the {{CITY_NAME}} game on tonight? Find the exact TV channel, live stream, or Prime Video broadcast for the {{TEAM_NAME}} without blackouts.">
-  <meta name="keywords" content="{{TEAM_NAME}} game tonight, {{TEAM_NICKNAME}} blackout rules, {{TEAM_NAME}} broadcast schedule, {{REGIONAL_EN}} blackout Ontario, watch {{TEAM_NICKNAME}} online, Sportsnet {{TEAM_NAME}}, {{REGIONAL_FR}} blackout Ontario, {{CITY_NAME}} hockey live stream">
+  <meta name="keywords" content="{{TEAM_NAME}} game tonight, {{TEAM_NICKNAME}} blackout rules, {{TEAM_NAME}} broadcast schedule, {{REGIONAL_EN}} blackout, watch {{TEAM_NICKNAME}} online, Sportsnet {{TEAM_NAME}}, {{CITY_NAME}} hockey live stream">
   <meta name="author" content="HockeyBlackouts.ca">
   <link rel="canonical" href="https://hockeyblackouts.ca/{{TEAM_DIR}}/">
 
@@ -32,7 +32,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="HockeyBlackouts.ca">
   <meta property="og:url" content="https://hockeyblackouts.ca/{{TEAM_DIR}}/">
-  <meta property="og:title" content="Where to watch &amp; stream the {{TEAM_NAME}} | Live TV Schedule">
+  <meta property="og:title" content="Where to Watch &amp; Stream {{TEAM_NAME}} Tonight | TV &amp; Blackouts">
   <meta property="og:description" content="What channel is the {{CITY_NAME}} game on tonight? Find the exact TV channel, live stream, or Prime Video broadcast for the {{TEAM_NAME}} without blackouts.">
   <meta property="og:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
 
@@ -73,7 +73,7 @@
     "name": "{{TEAM_NAME}} Hockey Broadcast & Blackout Guide",
     "url": "https://hockeyblackouts.ca/{{TEAM_DIR}}/",
     "dateModified": "{{BUILD_DATE_ISO}}",
-    "description": "Interactive broadcast schedule and regional blackout calculator for {{TEAM_NAME}} hockey games across Sportsnet, TSN, {{REGIONAL_FR}}, TVA Sports, and Prime Video."
+    "description": "Interactive broadcast schedule and regional blackout calculator for {{TEAM_NAME}} hockey games across Sportsnet, TSN{{REGIONAL_FR_DISCLAIMER}}, TVA Sports, and Prime Video."
   }
   </script>
 
@@ -134,7 +134,7 @@
         "name": "How do I watch {{TEAM_NAME}} games in Canada without regional blackouts?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Out-of-market fans living outside the team's regional territory can watch all regional {{TEAM_NAME}} games on {{REGIONAL_EN}} and {{REGIONAL_FR}} by subscribing to Sportsnet+ Premium or NHL Centre Ice. This bypasses the standard blackout restrictions for standard cable subscribers."
+          "text": "Out-of-market fans living outside the team's regional territory can watch all regional {{TEAM_NAME}} games on {{REGIONAL_EN}}{{REGIONAL_FR_AND}} by subscribing to Sportsnet+ Premium or NHL Centre Ice. This bypasses the standard blackout restrictions for standard cable subscribers."
         }
       },
       {
@@ -573,12 +573,12 @@
         {{TEAM_NAME}} Hockey Broadcast Rights & Regional Blackout Guide (2026–27 {{TEAM_NICKNAME}} Season)
       </h2>
       <p class="leading-relaxed">
-        Following the <strong>{{TEAM_NAME}} </strong> regular season and preseason broadcasts across Canada requires understanding how NHL broadcast territory rights are allocated between national networks and regional partners. For {{TEAM_NAME}} fans, games are split across five distinct television and streaming networks: <strong>{{REGIONAL_EN}}, {{REGIONAL_FR}}, Sportsnet, Amazon Prime Video, and TVA Sports</strong>.
+        Following the <strong>{{TEAM_NAME}} </strong> regular season and preseason broadcasts across Canada requires understanding how NHL broadcast territory rights are allocated between national networks and regional partners. For {{TEAM_NAME}} fans, games are split across distinct television and streaming networks: <strong>{{REGIONAL_EN}}{{REGIONAL_FR_DISCLAIMER}}, Sportsnet, Amazon Prime Video, and TVA Sports</strong>.
       </p>
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
         <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
-          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Regional {{TEAM_NAME}} Games ({{REGIONAL_EN}} & {{REGIONAL_FR}})</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Regional {{TEAM_NAME}} Games ({{REGIONAL_EN}}{{REGIONAL_FR_AMP}})</h3>
           <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300">
             {{REGIONAL_RIGHTS_TEXT}} hold the official regional rights for the {{TEAM_NAME}}. Their broadcast boundary is restricted by NHL carriage rules strictly to <strong>{{REGION_DESCRIPTION}}</strong>.
           </p>
@@ -621,7 +621,7 @@
           <tbody>
             <tr>
               <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">Regional</td>
-              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">{{REGIONAL_EN}} / {{REGIONAL_FR}}</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">{{REGIONAL_EN}}{{REGIONAL_FR_SLASH}}</td>
               <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Subject to Regional Blackouts</td>
             </tr>
             <tr>
@@ -652,7 +652,7 @@
         <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
           <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1" itemprop="name">How do I watch {{TEAM_NAME}} games in Canada without regional blackouts?</h3>
           <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Out-of-market fans living outside the team's regional territory can watch all regional {{TEAM_NAME}} games on {{REGIONAL_EN}} and {{REGIONAL_FR}} by subscribing to Sportsnet+ Premium or NHL Centre Ice. This bypasses the standard blackout restrictions for standard cable subscribers.</p>
+            <p itemprop="text">Out-of-market fans living outside the team's regional territory can watch all regional {{TEAM_NAME}} games on {{REGIONAL_EN}}{{REGIONAL_FR_AND}} by subscribing to Sportsnet+ Premium or NHL Centre Ice. This bypasses the standard blackout restrictions for standard cable subscribers.</p>
           </div>
         </div>
 

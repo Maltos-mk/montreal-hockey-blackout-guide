@@ -397,4 +397,44 @@ if (!primePageHtml.includes('/game/202')) {
   process.exit(1);
 }
 
+// Validate master sitemap.xml is pruned to rolling window (<= 80 URLs) with <lastmod>
+const sitemapLocMatches = masterSitemapContent.match(/<loc>/g) || [];
+if (sitemapLocMatches.length > 80) {
+  console.error(`\n❌ QA FAILED: build/sitemap.xml contains ${sitemapLocMatches.length} URLs (max 80 allowed for rolling 14-day window to prevent crawl-budget dilution).`);
+  process.exit(1);
+}
+if (!masterSitemapContent.includes('<lastmod>')) {
+  console.error('\n❌ QA FAILED: build/sitemap.xml is missing <lastmod> tags.');
+  process.exit(1);
+}
+
+// Validate no build/README.md with legacy maltos-mk.github.io links
+if (fs.existsSync(path.join(buildDir, 'README.md'))) {
+  console.error('\n❌ QA FAILED: build/README.md should not be deployed to production root.');
+  process.exit(1);
+}
+
+// Validate English team hubs have <120KB HTML size (under Bing's 125KB truncation cliff), high-intent title ("tonight" + "blackouts"), and zero blank token artifacts
+['montreal', 'toronto', 'ottawa', 'vancouver', 'calgary', 'edmonton', 'winnipeg'].forEach(teamSlug => {
+  const teamHtmlPath = path.join(buildDir, teamSlug, 'index.html');
+  if (fs.existsSync(teamHtmlPath)) {
+    const rawHtml = fs.readFileSync(teamHtmlPath, 'utf-8');
+    const byteSize = Buffer.byteLength(rawHtml, 'utf-8');
+    if (byteSize > 120000) {
+      console.error(`\n❌ QA FAILED: build/${teamSlug}/index.html is ${byteSize} bytes (>120KB), which exceeds Bingbot's HTML truncation cliff above #faq.`);
+      process.exit(1);
+    }
+    const tMatch = rawHtml.match(/<title>([^<]+)<\/title>/i);
+    const tStr = tMatch ? tMatch[1].toLowerCase() : '';
+    if (!tStr.includes('tonight') || !tStr.includes('blackout') || !tStr.includes('stream')) {
+      console.error(`\n❌ QA FAILED: build/${teamSlug}/index.html <title> ("${tMatch ? tMatch[1] : ''}") is missing high-intent "stream", "tonight", or "blackout" keywords.`);
+      process.exit(1);
+    }
+    if (rawHtml.includes(', , TVA Sports') || rawHtml.includes('and  by subscribing')) {
+      console.error(`\n❌ QA FAILED: build/${teamSlug}/index.html contains blank French broadcaster token artifacts (", , TVA Sports" or "and  by subscribing").`);
+      process.exit(1);
+    }
+  }
+});
+
 console.log('✅ All pages passed SEO QA validation.');

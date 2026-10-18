@@ -172,7 +172,7 @@ function getAccessDescFr(g) {
 let desktopRows = '';
 let mobileCards = '';
 
-upcomingGames.forEach(g => {
+upcomingGames.slice(0, 10).forEach(g => {
   const origIdx = data.schedule.findIndex(orig => orig.id === g.id);
   const gameNum = origIdx + 1;
   const coverageLabel = g.typeEN === 'national'

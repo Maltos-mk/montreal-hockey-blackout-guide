@@ -15,7 +15,6 @@ fs.mkdirSync(BUILD_DIR);
 
 execSync(`cp -r shared ${BUILD_DIR}/`);
 execSync(`cp LICENSE ${BUILD_DIR}/`);
-execSync(`cp README.md ${BUILD_DIR}/`);
 if (fs.existsSync("robots.txt")) fs.copyFileSync("robots.txt", path.join(BUILD_DIR, "robots.txt"));
 if (fs.existsSync("shared/favicon-48x48.png")) fs.copyFileSync("shared/favicon-48x48.png", path.join(BUILD_DIR, "favicon.ico"));
 const indexNowKeyFile = "0e7615e8d257218fdc00d074f25a4247.txt";
@@ -167,10 +166,13 @@ execSync('node scripts/build_fr.js', { stdio: 'inherit' });
 
 console.log('Build complete.');
 
+const buildDateIso = now.toISOString().split('T')[0];
+
 let masterSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://hockeyblackouts.ca/</loc>
+    <lastmod>${buildDateIso}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -178,12 +180,14 @@ let masterSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 teams.forEach(team => {
   masterSitemap += `  <url>
     <loc>https://hockeyblackouts.ca/${team.dir}/</loc>
+    <lastmod>${buildDateIso}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>\n`;
 });
 masterSitemap += `  <url>
     <loc>https://hockeyblackouts.ca/fr/montreal/</loc>
+    <lastmod>${buildDateIso}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>\n`;
@@ -197,21 +201,20 @@ const explainerSlugs = [
 explainerSlugs.forEach(slug => {
   masterSitemap += `  <url>
     <loc>https://hockeyblackouts.ca/${slug}/</loc>
+    <lastmod>${buildDateIso}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>\n`;
 });
 
-// Add active game URLs to master sitemap (Decision D2: drop games older than 7 days)
+// Add active game URLs to master sitemap (rolling window: past 7 days through next 14 days to preserve crawl budget)
 const gamesBaseDir = path.join(BUILD_DIR, 'game');
 if (fs.existsSync(gamesBaseDir)) {
   const dates = fs.readdirSync(gamesBaseDir);
-  const now = new Date();
   dates.forEach(date => {
-    // If the game date is more than 7 days in the past, drop from sitemap to preserve crawl budget
     const gameDate = new Date(date + 'T23:59:59Z');
     const daysDiff = (now - gameDate) / (1000 * 60 * 60 * 24);
-    if (daysDiff > 7) return;
+    if (daysDiff > 7 || daysDiff < -14) return;
 
     const datePath = path.join(gamesBaseDir, date);
     if (fs.statSync(datePath).isDirectory()) {
@@ -224,6 +227,7 @@ if (fs.existsSync(gamesBaseDir)) {
         }
         masterSitemap += `  <url>
     <loc>https://hockeyblackouts.ca/game/${date}/${matchup}/</loc>
+    <lastmod>${buildDateIso}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>\n`;
