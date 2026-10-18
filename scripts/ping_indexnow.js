@@ -17,10 +17,22 @@ async function main() {
 
   const sitemapXml = fs.readFileSync(SITEMAP_PATH, 'utf-8');
   const locRegex = /<loc>(https:\/\/hockeyblackouts\.ca\/[^<]*)<\/loc>/g;
+  const now = new Date();
   const urls = [];
   let match;
   while ((match = locRegex.exec(sitemapXml)) !== null) {
-    urls.push(match[1]);
+    const url = match[1];
+    const gameDateMatch = url.match(/\/game\/(\d{4}-\d{2}-\d{2})\//);
+    if (gameDateMatch) {
+      const gameDate = new Date(gameDateMatch[1] + 'T12:00:00Z');
+      const diffDays = (gameDate - now) / (1000 * 60 * 60 * 24);
+      // Only ping games occurring today or within the next 48 hours to avoid IndexNow bulk-spam throttling
+      if (diffDays >= -1 && diffDays <= 2) {
+        urls.push(url);
+      }
+    } else {
+      urls.push(url);
+    }
   }
 
   if (urls.length === 0) {
@@ -28,7 +40,7 @@ async function main() {
     process.exit(0);
   }
 
-  console.log(`📡 IndexNow: Discovered ${urls.length} URLs in sitemap to submit.`);
+  console.log(`📡 IndexNow: Selected ${urls.length} active/core URLs to submit.`);
 
   const payload = {
     host: INDEXNOW_HOST,

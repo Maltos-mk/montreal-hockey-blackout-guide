@@ -317,6 +317,23 @@ if (!fs.existsSync(indexNowPath)) {
   }
 }
 
+// Validate IndexNow anti-spam guardrails (must not fire on every git push or dump 500+ URLs)
+const deployWorkflowPath = path.join(__dirname, '../.github/workflows/deploy-teams.yml');
+if (fs.existsSync(deployWorkflowPath)) {
+  const workflowYaml = fs.readFileSync(deployWorkflowPath, 'utf-8');
+  if (!workflowYaml.includes("github.event_name == 'schedule'")) {
+    console.error('\n❌ QA FAILED: .github/workflows/deploy-teams.yml must restrict IndexNow pings to scheduled runs (github.event_name == \'schedule\') to prevent Bing rate-limiting on git pushes.');
+    process.exit(1);
+  }
+}
+const { execSync } = require('child_process');
+const dryRunOut = execSync('node scripts/ping_indexnow.js --dry-run', { encoding: 'utf-8' });
+const urlCountMatch = dryRunOut.match(/URL Count:\s*(\d+)/);
+if (!urlCountMatch || parseInt(urlCountMatch[1], 10) > 50) {
+  console.error(`\n❌ QA FAILED: scripts/ping_indexnow.js submitted ${urlCountMatch ? urlCountMatch[1] : 'unknown'} URLs (max 50 allowed per daily ping to avoid IndexNow spam throttling).`);
+  process.exit(1);
+}
+
 // Validate shared/app.js for runtime integrity
 const appJsPath = path.join(__dirname, '../shared/app.js');
 if (fs.existsSync(appJsPath)) {
