@@ -225,22 +225,6 @@ function initKofiMultivariate() {
   if (footerBtn) {
     footerBtn.setAttribute('data-umami-event-variant', v.id);
   }
-
-  try {
-    if (!sessionStorage.getItem('hb_kofi_imp_' + v.id)) {
-      sessionStorage.setItem('hb_kofi_imp_' + v.id, 'true');
-      const trackImp = () => {
-        if (window.umami && typeof window.umami.track === 'function') {
-          window.umami.track('kofi-impression', { variant: v.id });
-        }
-      };
-      if (window.umami) {
-        trackImp();
-      } else {
-        window.addEventListener('load', trackImp, { once: true });
-      }
-    }
-  } catch (e) {}
 }
 
 const NHL_TEAMS = {
@@ -1220,27 +1204,6 @@ function render() {
     
 
     initApp();
-
-// Manual fallback for Umami events (sometimes data-umami-event fails on outbound links)
-function bindUmamiEvents() {
-  document.querySelectorAll('[data-umami-event]').forEach(el => {
-    // Avoid double-binding
-    if (el.dataset.umamiBound) return;
-    el.dataset.umamiBound = 'true';
-    el.addEventListener('click', () => {
-      const eventName = el.getAttribute('data-umami-event');
-      if (window.umami) {
-        try { umami.track(eventName); } catch(e) {}
-      }
-    });
-  });
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', bindUmamiEvents);
-} else {
-  bindUmamiEvents();
-}
 
 
 

@@ -325,6 +325,14 @@ if (fs.existsSync(appJsPath)) {
     console.error('\n❌ QA FAILED: shared/app.js references undefined function "getGamePath". Function in app.js is "getGameUrl".');
     process.exit(1);
   }
+  if (appJsCode.includes('kofi-impression')) {
+    console.error('\n❌ QA FAILED: shared/app.js contains automatic "kofi-impression" tracking on page load, which inflates Ko-fi event counts.');
+    process.exit(1);
+  }
+  if (appJsCode.includes('bindUmamiEvents')) {
+    console.error('\n❌ QA FAILED: shared/app.js contains "bindUmamiEvents", which double-fires [data-umami-event] clicks and strips variant attributes.');
+    process.exit(1);
+  }
 }
 
 // Validate Evergreen Explainer & Methodology Pages (Items 3.4 & 3.5)

@@ -84,9 +84,26 @@ test('Subscriptions persistence: checked channels survive page reload', async ({
   expect(parseInt(count.trim(), 10)).toBe(55);
 });
 
-test('Ko-fi multivariate testing: assigns variant, persists in localStorage, and updates UI copy', async ({ page }) => {
+test('Ko-fi multivariate testing: assigns variant, persists in localStorage, updates UI copy, and does not misfire Umami events on load', async ({ page }) => {
+  await page.addInitScript(() => {
+    window.__umamiCalls = [];
+    window.umami = {
+      track: (name, data) => {
+        window.__umamiCalls.push({ name, data });
+      }
+    };
+  });
+
   await page.goto('/toronto/');
   await page.waitForSelector('#kofiCalloutBox');
+
+  // Verify no automatic kofi-impression or kofi-click events fired on page load
+  const loadCalls = await page.evaluate(() => window.__umamiCalls);
+  expect(loadCalls).toEqual([]);
+
+  // Verify no duplicate manual click binding is attached to [data-umami-event] elements
+  const isManualBound = await page.locator('#kofiCalloutBtn').evaluate(el => el.dataset.umamiBound);
+  expect(isManualBound).toBeUndefined();
 
   // Verify variant was assigned and stored
   const assignedVariant = await page.evaluate(() => localStorage.getItem('hb_kofi_variant'));
