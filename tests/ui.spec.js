@@ -63,15 +63,23 @@ test('Montreal: Status filtering works correctly', async ({ page }) => {
   expect(allCards).toBeGreaterThan(watchableCards);
 });
 
-test('Subscriptions persistence: checked channels survive page reload', async ({ page }) => {
+test('Subscriptions persistence: clean URL on default load for SEO, updates hash on user selection, and survives page reload', async ({ page }) => {
   await page.goto('/toronto/');
   await page.waitForSelector('#scheduleTableBody');
+
+  // On initial default load, URL hash must remain completely empty so crawlers see clean canonical URL
+  expect(await page.evaluate(() => window.location.hash)).toBe('');
 
   // Check Prime Video and Sportsnet+ Premium
   await page.locator('#sub_prime').check();
   await page.locator('#sub_sn_prem').check();
   expect(await page.locator('#sub_prime').isChecked()).toBe(true);
   expect(await page.locator('#sub_sn_prem').isChecked()).toBe(true);
+
+  // Hash must now reflect user selections for sharing/bookmarking
+  const activeHash = await page.evaluate(() => window.location.hash);
+  expect(activeHash).toContain('prime=true');
+  expect(activeHash).toContain('sn_prem=true');
 
   // Reload the page
   await page.reload();

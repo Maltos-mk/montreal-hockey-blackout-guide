@@ -304,6 +304,20 @@ function trackUmamiEvent(name, data) {
 }
 
 function updateHash() {
+  const defaultRegion = (window.TEAM_DATA && window.TEAM_DATA.team && window.TEAM_DATA.team.marketRegion)
+    ? window.TEAM_DATA.team.marketRegion.regionCode
+    : '';
+  const hasNonDefaultFilter = state.timeFilter !== 'upcoming' || state.statusFilter !== 'all' || state.channelFilter !== 'all';
+  const hasActiveSubs = Object.keys(state.subs).some(k => state.subs[k]);
+  const hasCustomRegion = Boolean(state.region && state.region !== defaultRegion);
+
+  if (!hasCustomRegion && !hasNonDefaultFilter && !hasActiveSubs) {
+    if (window.location.hash) {
+      window.history.replaceState(null, null, window.location.pathname + window.location.search);
+    }
+    return;
+  }
+
   const params = new URLSearchParams();
   params.set('region', state.region);
   if (state.timeFilter !== 'upcoming') params.set('timeFilter', state.timeFilter);

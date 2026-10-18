@@ -350,6 +350,10 @@ if (fs.existsSync(appJsPath)) {
     console.error('\n❌ QA FAILED: shared/app.js contains "bindUmamiEvents", which double-fires [data-umami-event] clicks and strips variant attributes.');
     process.exit(1);
   }
+  if (/function updateHash\(\)\s*\{\s*const params = new URLSearchParams\(\);\s*params\.set\('region',\s*state\.region\);/.test(appJsCode)) {
+    console.error('\n❌ QA FAILED: shared/app.js unconditionally sets #region=... hash on initial page load, polluting canonical URLs for Bing/search crawlers.');
+    process.exit(1);
+  }
 }
 
 // Validate Evergreen Explainer & Methodology Pages (Items 3.4 & 3.5)
