@@ -138,13 +138,18 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
 <head>
   <meta charset="utf-8">
   <title>Redirecting to ${awayTeam.city} vs ${homeTeam.city} Broadcast Guide</title>
+  <meta name="description" content="Redirecting to official broadcast and blackout schedule for ${awayTeam.city} vs ${homeTeam.city}.">
   <meta http-equiv="refresh" content="0; url=${canonicalUrl}">
   <link rel="canonical" href="${canonicalUrl}">
   <meta name="robots" content="noindex, follow">
   <meta property="og:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
   <meta property="twitter:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
+  <script>
+    window.location.replace("${canonicalUrl}" + window.location.search + window.location.hash);
+  </script>
 </head>
 <body class="bg-slate-950 text-white font-sans p-8 text-center">
+  <h1 class="text-xl font-bold mb-2">Redirecting to ${awayTeam.city} vs ${homeTeam.city} Broadcast Guide</h1>
   <p class="text-slate-400">Redirecting to <a href="${canonicalUrl}" class="text-rose-400 underline font-bold">${awayTeam.city} vs ${homeTeam.city} Broadcast Guide</a>...</p>
 </body>
 </html>`;
@@ -162,13 +167,18 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
 <head>
   <meta charset="utf-8">
   <title>Redirecting to ${primaryCanadian.name} TV Schedule</title>
+  <meta name="description" content="This game has concluded. Redirecting to official ${primaryCanadian.name} TV broadcast and blackout schedule.">
   <meta http-equiv="refresh" content="0; url=https://hockeyblackouts.ca/${primaryCanadian.dir}/">
   <link rel="canonical" href="https://hockeyblackouts.ca/${primaryCanadian.dir}/">
   <meta name="robots" content="noindex, follow">
   <meta property="og:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
   <meta property="twitter:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
+  <script>
+    window.location.replace("https://hockeyblackouts.ca/${primaryCanadian.dir}/" + window.location.search + window.location.hash);
+  </script>
 </head>
 <body class="bg-slate-950 text-white font-sans p-8 text-center">
+  <h1 class="text-xl font-bold mb-2">Redirecting to ${primaryCanadian.name} TV Schedule</h1>
   <p class="text-slate-400">This game has concluded. Redirecting to <a href="https://hockeyblackouts.ca/${primaryCanadian.dir}/" class="text-rose-400 underline font-bold">${primaryCanadian.name} TV Schedule</a>...</p>
 </body>
 </html>`;

@@ -27,24 +27,27 @@ function validateHtml(filePath) {
   const isExplainerPage = EXPLAINER_SLUGS.some(slug => filePath.includes(`/${slug}/`));
   const isTeamPage = !isSplash && !isGamePage && !isExplainerPage && !isRedirect;
 
-  // H1 Tag Validation (Crucial for SEO & Bing/Google accessibility audits)
-  if (!isRedirect) {
-    const h1Matches = content.match(/<h1[^>]*>([\s\S]*?)<\/h1>/gi);
-    if (!h1Matches || h1Matches.length === 0) {
-      errors.push('Missing <h1> tag (required for search engine ranking and accessibility)');
-    } else if (h1Matches.length > 1) {
-      errors.push(`Multiple <h1> tags found (${h1Matches.length}). Expected exactly 1 per page.`);
-    }
+  // H1 Tag Validation (Crucial for SEO & Bing/Google accessibility audits - required on all pages including redirects)
+  const h1Matches = content.match(/<h1[^>]*>([\s\S]*?)<\/h1>/gi);
+  if (!h1Matches || h1Matches.length === 0) {
+    errors.push('Missing <h1> tag (required for search engine ranking and accessibility)');
+  } else if (h1Matches.length > 1) {
+    errors.push(`Multiple <h1> tags found (${h1Matches.length}). Expected exactly 1 per page.`);
   }
 
   const descMatch = content.match(/<meta\s+name=["']description["']\s+content=["']([^"']+)["']/i);
-  if (!descMatch && !isRedirect) {
+  if (!descMatch) {
     errors.push('Missing <meta name="description"> tag');
   } else if (descMatch && descMatch[1]) {
     const descText = descMatch[1].replace(/&amp;/g, '&').trim();
     if (descText.length > 160) {
       errors.push(`Meta description exceeds 160 characters (${descText.length} chars)`);
     }
+  }
+
+  // Prevent linking to legacy slug aliases (e.g. elmont instead of new-york)
+  if (content.includes('href="/game/') && content.includes('-elmont/')) {
+    errors.push('Contains internal link pointing to legacy "elmont" slug instead of canonical "new-york" slug.');
   }
 
   if (content.includes('display: none') && content.toLowerCase().includes('seo')) {
