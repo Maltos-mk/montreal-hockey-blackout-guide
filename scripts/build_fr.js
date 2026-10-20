@@ -342,7 +342,7 @@ const frManifest = {
   short_name: 'Guide MTL',
   description: `Horaire télé et calculateur de blackouts régionaux pour les matchs des ${teamNameFr}.`,
   lang: 'fr-CA',
-  start_url: '/fr/montreal/',
+  start_url: '/fr/montreal/?utm_source=pwa&utm_medium=homescreen',
   display: 'standalone',
   background_color: '#0f172a',
   theme_color: team.colors.secondary,

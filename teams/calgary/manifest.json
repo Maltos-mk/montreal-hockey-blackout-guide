@@ -1,7 +1,7 @@
 {
   "name": "Calgary Flames Blackout Guide",
   "short_name": "CGY",
-  "start_url": ".",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
   "display": "standalone",
   "background_color": "#8A0B20",
   "theme_color": "#C8102E",

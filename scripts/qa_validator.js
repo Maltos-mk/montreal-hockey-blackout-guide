@@ -359,6 +359,18 @@ if (fs.existsSync(appJsPath)) {
   }
 }
 
+// Validate PWA manifests have start_url containing utm_source=pwa
+['montreal', 'toronto', 'ottawa', 'vancouver', 'calgary', 'edmonton', 'winnipeg', 'fr/montreal'].forEach(subPath => {
+  const mPath = path.join(buildDir, subPath, 'manifest.json');
+  if (fs.existsSync(mPath)) {
+    const manifestJson = JSON.parse(fs.readFileSync(mPath, 'utf-8'));
+    if (!manifestJson.start_url || !manifestJson.start_url.includes('utm_source=pwa')) {
+      console.error(`\n❌ QA FAILED: ${mPath} start_url is missing "utm_source=pwa" for PWA analytics tracking.`);
+      process.exit(1);
+    }
+  }
+});
+
 // Validate Evergreen Explainer & Methodology Pages (Items 3.4 & 3.5)
 const requiredExplainers = [
   'sportsnet-plus-blackout-rules',

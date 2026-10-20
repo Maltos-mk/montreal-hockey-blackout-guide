@@ -411,7 +411,7 @@ dataFiles.forEach(file => {
   const manifest = {
     "name": `${team.name} Blackout Guide`,
     "short_name": team.id,
-    "start_url": ".",
+    "start_url": "./?utm_source=pwa&utm_medium=homescreen",
     "display": "standalone",
     "background_color": team.colors.dark,
     "theme_color": team.colors.primary,

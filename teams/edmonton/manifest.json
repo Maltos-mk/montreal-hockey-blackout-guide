@@ -1,7 +1,7 @@
 {
   "name": "Edmonton Oilers Blackout Guide",
   "short_name": "EDM",
-  "start_url": ".",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
   "display": "standalone",
   "background_color": "#02122A",
   "theme_color": "#041E42",
