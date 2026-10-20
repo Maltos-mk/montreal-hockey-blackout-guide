@@ -1,7 +1,7 @@
 {
   "name": "Montreal Canadiens Blackout Guide",
   "short_name": "MTL",
-  "start_url": ".",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
   "display": "standalone",
   "background_color": "#871420",
   "theme_color": "#AF1E2D",

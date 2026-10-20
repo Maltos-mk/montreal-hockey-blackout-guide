@@ -1,7 +1,7 @@
 {
   "name": "Ottawa Senators Blackout Guide",
   "short_name": "OTT",
-  "start_url": ".",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
   "display": "standalone",
   "background_color": "#8b1623",
   "theme_color": "#c52032",

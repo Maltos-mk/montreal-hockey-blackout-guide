@@ -1,7 +1,7 @@
 {
   "name": "Toronto Maple Leafs Blackout Guide",
   "short_name": "TOR",
-  "start_url": ".",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
   "display": "standalone",
   "background_color": "#00133A",
   "theme_color": "#00205B",

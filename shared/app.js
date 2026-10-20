@@ -329,7 +329,7 @@ function updateHash() {
       params.set(k, 'true');
     }
   });
-  window.history.replaceState(null, null, '#' + params.toString());
+  window.history.replaceState(null, null, window.location.pathname + window.location.search + '#' + params.toString());
 }
 
 function loadStateFromHash() {
@@ -1137,6 +1137,16 @@ function render() {
     const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
+    // Attribute existing installed PWA launches that lack start_url parameters
+    if (isStandalone && !window.location.search.includes('utm_source')) {
+      try {
+        const currentUrl = new URL(window.location.href);
+        currentUrl.searchParams.set('utm_source', 'pwa');
+        currentUrl.searchParams.set('utm_medium', 'homescreen');
+        window.history.replaceState(null, null, currentUrl.pathname + currentUrl.search + currentUrl.hash);
+      } catch (e) {}
+    }
+
     window.addEventListener('beforeinstallprompt', (e) => {
       e.preventDefault();
       deferredPrompt = e;
@@ -1187,6 +1197,7 @@ function render() {
         `;
       }
 
+      trackUmamiEvent('pwa_prompt_viewed', { os: isIOS ? 'ios' : 'android_desktop' });
       modal.classList.remove('hidden');
       modal.classList.add('flex');
     }
@@ -1197,6 +1208,7 @@ function render() {
         const { outcome } = await deferredPrompt.userChoice;
         if (outcome === 'accepted') {
           localStorage.setItem('pwa_prompt_dismissed', 'installed');
+          trackUmamiEvent('pwa_install_accepted');
         }
         deferredPrompt = null;
         dismissDirectInstallModal(false);
@@ -1209,6 +1221,7 @@ function render() {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
       }
+      trackUmamiEvent('pwa_prompt_dismissed', { permanent: Boolean(neverShowAgain) });
       if (neverShowAgain) {
         localStorage.setItem('pwa_prompt_dismissed', 'permanent');
       } else {
@@ -1219,6 +1232,7 @@ function render() {
 
     window.addEventListener('appinstalled', () => {
       localStorage.setItem('pwa_prompt_dismissed', 'installed');
+      trackUmamiEvent('pwa_install_success');
       dismissDirectInstallModal(false);
     });
 

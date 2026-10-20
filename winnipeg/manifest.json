@@ -1,7 +1,7 @@
 {
   "name": "Winnipeg Jets Blackout Guide",
   "short_name": "WPG",
-  "start_url": ".",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
   "display": "standalone",
   "background_color": "#02122A",
   "theme_color": "#041E42",
