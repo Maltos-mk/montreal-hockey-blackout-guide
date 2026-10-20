@@ -7,7 +7,7 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('User flow: Toronto -> Alberta + SN+ Premium -> Buffalo game page', async ({ page }) => {
-  await page.goto('http://localhost:8080/toronto/');
+  await page.goto('/toronto/');
   
   // Select Alberta
   await page.selectOption('#regionSelect', 'ab');
@@ -56,7 +56,7 @@ test('User flow: Toronto -> Alberta + SN+ Premium -> Buffalo game page', async (
 
 test('Mobile user flow: Toronto mobile card -> game page carries state', async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 812 });
-  await page.goto('http://localhost:8080/toronto/');
+  await page.goto('/toronto/');
   
   // Select Manitoba
   await page.selectOption('#regionSelect', 'mb');

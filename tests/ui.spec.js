@@ -24,11 +24,11 @@ test('Toronto: Checking streamers updates watchable score without errors', async
   const primeCount = parseInt(primeText.trim(), 10);
   expect(primeCount).toBeGreaterThan(0);
 
-  // Toggle Sportsnet+ Premium -> in-market gives 55 Sportsnet games
+  // Toggle Sportsnet+ Premium -> in-market gives 58 Sportsnet games (55 national + 3 Sportsnet Ontario regional)
   const snPrem = page.locator('#sub_sn_prem');
   await snPrem.check();
   const premText = await countEl.textContent();
-  expect(parseInt(premText.trim(), 10)).toBe(55);
+  expect(parseInt(premText.trim(), 10)).toBe(58);
 
   // Toggle Regional Sports Package (TSN4 in Ontario) -> reaches 84
   const regionalEn = page.locator('#sub_regional_en');
@@ -36,10 +36,10 @@ test('Toronto: Checking streamers updates watchable score without errors', async
   const fullText = await countEl.textContent();
   expect(fullText.trim()).toBe('84');
 
-  // Uncheck Regional Sports Package -> drops back to 55
+  // Uncheck Regional Sports Package -> drops back to 58
   await regionalEn.uncheck();
   const afterUncheckText = await countEl.textContent();
-  expect(afterUncheckText.trim()).toBe('55');
+  expect(afterUncheckText.trim()).toBe('58');
 });
 
 test('Montreal: Status filtering works correctly', async ({ page }) => {
@@ -89,7 +89,39 @@ test('Subscriptions persistence: clean URL on default load for SEO, updates hash
   expect(await page.locator('#sub_prime').isChecked()).toBe(true);
   expect(await page.locator('#sub_sn_prem').isChecked()).toBe(true);
   const count = await page.locator('#watchableCount').textContent();
-  expect(parseInt(count.trim(), 10)).toBe(55);
+  expect(parseInt(count.trim(), 10)).toBe(58);
+});
+
+test('Edmonton: Sportsnet+ Premium + Prime yields 84/84 in Alberta and auto-includes Standard', async ({ page }) => {
+  await page.goto('/edmonton/');
+  await page.waitForSelector('#scheduleTableBody');
+
+  const countEl = page.locator('#watchableCount');
+  const snPlus = page.locator('#sub_sn_plus');
+  const snPrem = page.locator('#sub_sn_prem');
+  const prime = page.locator('#sub_prime');
+  const centreIce = page.locator('#sub_centre_ice');
+
+  // Check Prime and Sportsnet+ Premium
+  await prime.check();
+  await snPrem.check();
+
+  // Sportsnet+ Standard must now be disabled and marked included
+  expect(await snPlus.isChecked()).toBe(true);
+  expect(await snPlus.isDisabled()).toBe(true);
+
+  // In Alberta, Oilers with SN+ Premium + Prime yields 84/84 games
+  const fullCount = await countEl.textContent();
+  expect(fullCount.trim()).toBe('84');
+
+  // Unchecking SN+ Premium re-enables Standard
+  await snPrem.uncheck();
+  expect(await snPlus.isDisabled()).toBe(false);
+
+  // Selecting Centre Ice alone in-market does NOT unlock in-market regional games
+  await centreIce.check();
+  const centreIceCount = await countEl.textContent();
+  expect(parseInt(centreIceCount.trim(), 10)).toBeLessThan(84);
 });
 
 test('Ko-fi multivariate testing: assigns variant, persists in localStorage, updates UI copy, and does not misfire Umami events on load', async ({ page }) => {

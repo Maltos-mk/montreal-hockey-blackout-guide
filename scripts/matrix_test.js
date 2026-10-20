@@ -85,6 +85,54 @@ teams.forEach(teamDir => {
   } else {
     console.log(`✅ OOM-STANDARD PASS: ${teamId} yielded ${oomStdCount}/84 games (Properly blacked out regional games).`);
   }
+
+  // Test 5: In-Market Sportsnet+ Premium Guarantee for Sportsnet teams (EDM, CGY, VAN)
+  const isSnRegionalTeam = data.team.networks.regionalEN && data.team.networks.regionalEN.includes('Sportsnet');
+  if (isSnRegionalTeam) {
+    let inMarketPremCount = 0;
+    data.schedule.forEach(g => {
+      const state = { region: inMarketRegion, lang: 'en', subs: { sn_prem: true, prime: true, sn_cable: false, regional_en: false, sn_plus: false, centre_ice: false } };
+      const res = evaluateGame(g, state, teamId);
+      if (res.canEN) inMarketPremCount++;
+    });
+    if (inMarketPremCount !== 84) {
+      console.error(`❌ IN-MARKET SN+ PREMIUM FAIL: ${teamId} in-market (${inMarketRegion}) with SN+ Premium + Prime yielded ${inMarketPremCount}/84 games (expected 84).`);
+      allPassed = false;
+    } else {
+      console.log(`✅ IN-MARKET SN+ PREMIUM PASS: ${teamId} in-market (${inMarketRegion}) with SN+ Premium + Prime yielded 84/84 games.`);
+    }
+  }
+
+  // Test 6: In-Market Centre Ice Blackout Check (Centre Ice alone does NOT unlock in-market games)
+  let inMarketCentreIceCount = 0;
+  data.schedule.forEach(g => {
+    const state = { region: inMarketRegion, lang: 'en', subs: { centre_ice: true, prime: true, sn_cable: false, regional_en: false, sn_plus: false, sn_prem: false } };
+    const res = evaluateGame(g, state, teamId);
+    if (res.canEN) inMarketCentreIceCount++;
+  });
+  if (inMarketCentreIceCount === 84) {
+    console.error(`❌ IN-MARKET CENTRE ICE FAIL: ${teamId} in-market (${inMarketRegion}) with Centre Ice alone yielded ${inMarketCentreIceCount}/84 games (Should NOT unlock in-market games!).`);
+    allPassed = false;
+  } else {
+    console.log(`✅ IN-MARKET CENTRE ICE PASS: ${teamId} in-market (${inMarketRegion}) with Centre Ice alone properly blacked out regional games (${inMarketCentreIceCount}/84).`);
+  }
+
+  // Test 7: Out-of-Market Centre Ice Guarantee (Cable SN + Centre Ice + Prime = 84 games)
+  let oomCentreIceCount = 0;
+  data.schedule.forEach(g => {
+    const state = { region: outMarketRegion, lang: 'en', subs: { centre_ice: true, sn_cable: true, prime: true, sn_prem: false, sn_plus: false, regional_en: false } };
+    const res = evaluateGame(g, state, teamId);
+    if (res.canEN) oomCentreIceCount++;
+  });
+  // Note: linear cable does not carry SN+ streaming app exclusives, but Centre Ice unlocks all out-of-market regional games
+  const snPlusExclusives = data.schedule.filter(g => g.netEN === 'SN+').length;
+  const expectedOomCableCount = 84 - snPlusExclusives;
+  if (oomCentreIceCount !== expectedOomCableCount) {
+    console.error(`❌ OOM-CENTRE-ICE FAIL: ${teamId} out-of-market (${outMarketRegion}) with Centre Ice + Cable SN + Prime yielded ${oomCentreIceCount}/${expectedOomCableCount} games.`);
+    allPassed = false;
+  } else {
+    console.log(`✅ OOM-CENTRE-ICE PASS: ${teamId} out-of-market (${outMarketRegion}) with Centre Ice + Cable SN + Prime yielded ${oomCentreIceCount}/${expectedOomCableCount} games.`);
+  }
   
   // Test 4: CBC & CityTV 2026 contract check (STATUS.md domain logic quirk: no longer free national broadcasters)
   const nationalEN = data.team.networks.nationalEN || [];

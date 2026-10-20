@@ -120,7 +120,7 @@ async function initApp() {
 
     // Load subscriptions from hash, or fall back to localStorage
     const hashParams = window.location.hash ? new URLSearchParams(window.location.hash.substring(1)) : null;
-    const subKeysList = ['sn_cable', 'sn_plus', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
+    const subKeysList = ['sn_cable', 'sn_plus', 'sn_prem', 'centre_ice', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
     const hasHashSubs = hashParams && subKeysList.some(k => hashParams.has(k));
     if (hasHashSubs) {
       subKeysList.forEach(k => {
@@ -285,6 +285,7 @@ const state = {
         sn_cable: false,
         sn_plus: false,
         sn_prem: false,
+        centre_ice: false,
         centre_ice_fr: false,
         regional_en: false,
         prime: false,
@@ -340,7 +341,7 @@ function loadStateFromHash() {
       if (params.has('statusFilter')) state.statusFilter = params.get('statusFilter');
       if (params.has('channelFilter')) state.channelFilter = params.get('channelFilter');
       
-      const subKeys = ['sn_cable', 'sn_plus', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
+      const subKeys = ['sn_cable', 'sn_plus', 'sn_prem', 'centre_ice', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'];
       subKeys.forEach(k => {
         if (params.has(k)) state.subs[k] = params.get(k) === 'true';
       });
@@ -401,17 +402,18 @@ function evaluateGame(g, state) {
         if (state.subs.espn) { canReg = true; reasonReg = 'Watch on ESPN+ / NHL.tv'; }
         else { reasonReg = 'Requires ESPN+ / NHL.tv'; }
       } else if (isPrimaryInMarket) {
-        if (state.subs.regional_en || ((g.netEN.includes('Sportsnet') || g.netEN.includes('SNW') || g.netEN.includes('SNP')) && (state.subs.sn_cable || state.subs.sn_plus))) { canReg = true; reasonReg = `Watch on ${g.netEN}`; }
+        if (state.subs.regional_en || ((g.netEN.includes('Sportsnet') || g.netEN.includes('SNW') || g.netEN.includes('SNP')) && (state.subs.sn_cable || state.subs.sn_plus || state.subs.sn_prem))) { canReg = true; reasonReg = `Watch on ${g.netEN}`; }
         else { reasonReg = `Requires ${g.netEN}`; }
       } else if (isOpponentInMarket) {
-        if (state.subs.regional_en || state.subs.sn_cable || state.subs.sn_plus || state.subs.sn_prem) {
+        if (state.subs.regional_en || state.subs.sn_cable || state.subs.sn_plus || state.subs.sn_prem || state.subs.centre_ice) {
           canReg = true; reasonReg = "Watch on local opponent feed";
         } else {
           reasonReg = "Requires Sportsnet/TSN for opponent feed";
         }
       } else {
         isBlackedOutEN = true;
-        if (state.subs.sn_prem) { canReg = true; reasonReg = 'Watch on Sportsnet+ PREMIUM (or Centre Ice)'; isBlackedOutEN = false; }
+        if (state.subs.sn_prem) { canReg = true; reasonReg = 'Watch on Sportsnet+ Premium'; isBlackedOutEN = false; }
+        else if (state.subs.centre_ice) { canReg = true; reasonReg = 'Watch on NHL Centre Ice'; isBlackedOutEN = false; }
         else { reasonReg = 'BLACKED OUT outside territory. Requires Sportsnet (Cable or Stream) Premium or Centre Ice.'; }
       }
     }
@@ -586,6 +588,28 @@ function renderAdviceCards(state) {
 function syncRegionalCheckbox() {
   const regCb = document.getElementById('sub_regional_en');
   const regText = regCb ? regCb.nextElementSibling.querySelector('p.text-sm') : null;
+  const snPlusCb = document.getElementById('sub_sn_plus');
+  const snPlusText = snPlusCb ? snPlusCb.nextElementSibling.querySelector('p.text-sm') : null;
+
+  if (snPlusCb) {
+    if (state.subs.sn_prem) {
+      snPlusCb.checked = true;
+      snPlusCb.disabled = true;
+      if (snPlusText) {
+        if (!snPlusText.dataset.orig) snPlusText.dataset.orig = snPlusText.innerText;
+        snPlusText.innerText = snPlusText.dataset.orig + tx(" (Included)");
+        snPlusText.classList.add('text-emerald-600');
+      }
+    } else {
+      snPlusCb.disabled = false;
+      snPlusCb.checked = Boolean(state.subs.sn_plus);
+      if (snPlusText && snPlusText.dataset.orig) {
+        snPlusText.innerText = snPlusText.dataset.orig;
+        snPlusText.classList.remove('text-emerald-600');
+      }
+    }
+  }
+
   if (!regCb || !window.TEAM_DATA) return;
   
   const primaryTeamId = window.TEAM_DATA.team.id;
@@ -594,7 +618,7 @@ function syncRegionalCheckbox() {
   const isSnRegional = window.TEAM_DATA.team.networks.regionalEN.includes('Sportsnet');
   
   if (isPrimaryInMarket && isSnRegional) {
-    if (state.subs.sn_cable || state.subs.sn_plus) {
+    if (state.subs.sn_cable || state.subs.sn_plus || state.subs.sn_prem) {
       regCb.checked = true;
       state.subs.regional_en = true;
       regCb.disabled = true;
@@ -1023,7 +1047,7 @@ function render() {
         render();
       });
     }
-    ['sn_cable', 'sn_plus', 'sn_prem', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'].forEach(key => {
+    ['sn_cable', 'sn_plus', 'sn_prem', 'centre_ice', 'centre_ice_fr', 'regional_en', 'prime', 'regional_fr', 'national_fr', 'espn'].forEach(key => {
         const el = document.getElementById(`sub_${key}`);
         if (el) {
           el.checked = state.subs[key];
