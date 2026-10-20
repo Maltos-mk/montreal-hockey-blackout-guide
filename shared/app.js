@@ -1236,7 +1236,7 @@ function render() {
       dismissDirectInstallModal(false);
     });
 
-    // Auto-display modal once after 3 seconds on mobile devices only
+    // Auto-display modal once after 25 seconds on mobile devices only
 
     setTimeout(() => {
       const isMobile = window.innerWidth <= 768 || /Mobi|Android/i.test(navigator.userAgent);
@@ -1251,7 +1251,12 @@ function render() {
           }
         }
       }
-    }, 3000);
+    }, 25000);
+
+    const pwaBanner = document.getElementById('pwaInstallBanner');
+    if (pwaBanner && isStandalone) {
+      pwaBanner.style.display = 'none';
+    }
 
     
 

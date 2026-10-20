@@ -58,6 +58,9 @@ async function main() {
     process.exit(0);
   }
 
+  console.log('❄️ IndexNow is temporarily frozen for Bing rate-limit cooldown. Skipping live network submission.');
+  process.exit(0);
+
   const postData = JSON.stringify(payload);
 
   const options = {

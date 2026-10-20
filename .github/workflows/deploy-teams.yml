@@ -41,6 +41,6 @@ jobs:
           publish_dir: ./build
           cname: hockeyblackouts.ca
 
-      - name: Notify Search Engines via IndexNow (Daily Cron Only)
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-        run: node scripts/ping_indexnow.js
+      # - name: Notify Search Engines via IndexNow (Daily Cron Only)
+      #   if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+      #   run: node scripts/ping_indexnow.js

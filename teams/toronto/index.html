@@ -485,6 +485,22 @@
           <a href="https://ko-fi.com/maltosmk" id="kofiCalloutBtn" data-umami-event="kofi-click" data-umami-event-variant="control" target="_blank" rel="noopener" class="font-bold px-4 py-2 bg-amber-400 hover:bg-amber-300 text-slate-900 rounded-xl shadow-sm transition flex items-center gap-1.5 whitespace-nowrap"><i id="kofiCalloutIcon" class="fa-solid fa-mug-hot"></i> <span id="kofiCalloutBtnText">Tip $3</span></a>
         </div>
 
+        <!-- Persistent PWA Install Banner -->
+        <div id="pwaInstallBanner" class="mt-3 p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700/60 flex items-center justify-between gap-3 text-xs">
+          <div class="flex items-center gap-2.5 text-slate-700 dark:text-slate-200">
+            <div class="w-8 h-8 rounded-xl bg-amber-400/20 text-amber-500 dark:text-amber-400 flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-mobile-screen-button text-sm"></i>
+            </div>
+            <div>
+              <span class="font-bold block text-slate-900 dark:text-white">Add Leafs Guide to Home Screen</span>
+              <span class="text-slate-500 dark:text-slate-400 text-[11px]">Instant 1-tap blackout check before game time.</span>
+            </div>
+          </div>
+          <button onclick="openDirectInstallModal()" class="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-900 font-bold rounded-xl text-xs shadow-sm transition whitespace-nowrap">
+            Install
+          </button>
+        </div>
+
       </div>
 
     </section>
@@ -501,28 +517,28 @@
             <span class="px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider bg-white/20 text-white">
               Next Leafs Game
             </span>
-            <span class="text-xs text-slate-300 font-medium">Mon, Oct 19, 2026 • 7:30 PM</span>
-            <span class="text-xs text-slate-400 font-teko text-sm tracking-wide">Game 10 of 84</span>
+            <span class="text-xs text-slate-300 font-medium">Tue, Oct 20, 2026 • 7:00 PM</span>
+            <span class="text-xs text-slate-400 font-teko text-sm tracking-wide">Game 11 of 84</span>
           </div>
           <h3 class="text-xl sm:text-2xl font-black font-teko uppercase tracking-wide flex items-center gap-2">
-            <span>vs Sharks</span>
+            <span>@ Blue Jackets</span>
             
           </h3>
           <p class="text-xs text-slate-300 flex items-center gap-2">
-            <i class="fa-solid fa-location-dot text-slate-400"></i> Scotiabank Arena
+            <i class="fa-solid fa-location-dot text-slate-400"></i> Nationwide Arena
           </p>
         </div>
         <div class="flex flex-col md:items-end gap-2 w-full md:w-auto pt-3 md:pt-0 border-t md:border-t-0 border-white/10">
           <div class="flex items-center gap-2">
             <span class="text-xs text-slate-300 font-medium">Broadcast:</span>
-            <span class="px-2 py-0.5 rounded text-xs font-bold bg-white text-teamSecondary shadow-sm">SN+</span>
-            <span class="px-2 py-0.5 rounded text-xs font-bold bg-white/20 text-white">TVA Sports</span>
+            <span class="px-2 py-0.5 rounded text-xs font-bold bg-white text-teamSecondary shadow-sm">Sportsnet, Sportsnet 360</span>
+            
           </div>
           <div><span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-700 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-lock"></i> Subscription Needed</span></div>
           <div class="text-[11px] text-slate-300 md:text-right max-w-sm">
-            Requires Sportsnet+ (Streaming)
+            Requires Sportsnet (Cable or Stream)
           </div>
-          <a href="/game/2026-10-19/toronto-vs-san-jose/" class="mt-1 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/10 transition">
+          <a href="/game/2026-10-20/columbus-vs-toronto/" class="mt-1 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/10 transition">
             <span>View Blackout Breakdown &rarr;</span>
           </a>
         </div>
@@ -535,20 +551,6 @@
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
           
-      <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between gap-3 text-xs">
-        <div>
-          <div class="font-bold text-white text-sm flex items-center gap-1.5">
-            <span class="text-rose-400 font-teko text-base">#10</span>
-            <a href="/game/2026-10-19/toronto-vs-san-jose/" class="hover:underline hover:text-rose-400">vs Sharks</a>
-          </div>
-          <div class="text-[11px] text-slate-300 mt-0.5">Mon, Oct 19, 2026 • 7:30 PM</div>
-        </div>
-        <div class="text-right shrink-0">
-          <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-white/10 text-white border border-white/10">SN+</span>
-          <a href="/game/2026-10-19/toronto-vs-san-jose/" class="block text-[10px] text-rose-400 font-semibold hover:underline mt-1">Breakdown &rarr;</a>
-        </div>
-      </div>
-    
       <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between gap-3 text-xs">
         <div>
           <div class="font-bold text-white text-sm flex items-center gap-1.5">
@@ -574,6 +576,20 @@
         <div class="text-right shrink-0">
           <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-white/10 text-white border border-white/10">TSN4</span>
           <a href="/game/2026-10-22/toronto-vs-new-york/" class="block text-[10px] text-rose-400 font-semibold hover:underline mt-1">Breakdown &rarr;</a>
+        </div>
+      </div>
+    
+      <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between gap-3 text-xs">
+        <div>
+          <div class="font-bold text-white text-sm flex items-center gap-1.5">
+            <span class="text-rose-400 font-teko text-base">#13</span>
+            <a href="/game/2026-10-24/edmonton-vs-toronto/" class="hover:underline hover:text-rose-400">@ Oilers</a>
+          </div>
+          <div class="text-[11px] text-slate-300 mt-0.5">Sat, Oct 24, 2026 • 7:00 PM</div>
+        </div>
+        <div class="text-right shrink-0">
+          <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-white/10 text-white border border-white/10">Sportsnet</span>
+          <a href="/game/2026-10-24/edmonton-vs-toronto/" class="block text-[10px] text-rose-400 font-semibold hover:underline mt-1">Breakdown &rarr;</a>
         </div>
       </div>
     
@@ -630,34 +646,6 @@
       <!-- Mobile Cards View -->
       <div id="scheduleCardsMobile" class="block md:hidden divide-y divide-slate-100 dark:divide-slate-800 p-3 space-y-3" data-prerendered="true">
         
-      <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/60">
-        <div class="flex items-start justify-between gap-2">
-          <div>
-            <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#10</span>
-              <a href="/game/2026-10-19/toronto-vs-san-jose/" class="font-bold text-sm text-slate-900 dark:text-white hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline flex items-center gap-1">
-                <span>vs Sharks</span>
-                <i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i>
-              </a>
-            </div>
-            <div class="text-[10px] text-slate-600 dark:text-slate-300 font-medium leading-tight mt-0.5 truncate">Toronto Maple Leafs vs San Jose Sharks</div>
-            <div class="text-[11px] text-slate-600 dark:text-slate-300">Mon, Oct 19, 2026 • 7:30 PM</div>
-          </div>
-          <span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>Watchable</span>
-        </div>
-        <div class="flex items-center justify-between text-xs pt-1 border-t border-slate-200/60 dark:border-slate-700/60">
-          <div class="flex items-center gap-1">
-            <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">SN+</span>
-            <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">TVA Sports</span>
-          </div>
-          <a href="/game/2026-10-19/toronto-vs-san-jose/" class="text-[11px] font-semibold text-[#AF1E2D] dark:text-rose-400 hover:underline flex items-center gap-1">
-            <span>TV & Blackout Breakdown &rarr;</span>
-          </a>
-        </div>
-        <div class="text-[11px] font-medium text-slate-600 dark:text-slate-300 bg-white/70 dark:bg-slate-900/50 p-2 rounded-lg border border-slate-200/50 dark:border-slate-700/50 mt-1">
-          Requires Sportsnet+ (Streaming)
-        </div>
-      </div>
       <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/60">
         <div class="flex items-start justify-between gap-2">
           <div>
@@ -910,6 +898,34 @@
           Requires TSN
         </div>
       </div>
+      <div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/60">
+        <div class="flex items-start justify-between gap-2">
+          <div>
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#20</span>
+              <a href="/game/2026-11-10/toronto-vs-colorado/" class="font-bold text-sm text-slate-900 dark:text-white hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline flex items-center gap-1">
+                <span>vs Avalanche</span>
+                <i class="fa-solid fa-chevron-right text-[8px] text-slate-500"></i>
+              </a>
+            </div>
+            <div class="text-[10px] text-slate-600 dark:text-slate-300 font-medium leading-tight mt-0.5 truncate">Toronto Maple Leafs vs Colorado Avalanche</div>
+            <div class="text-[11px] text-slate-600 dark:text-slate-300">Tue, Nov 10, 2026 • 8:00 PM</div>
+          </div>
+          <span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 whitespace-nowrap"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>Need Sub</span>
+        </div>
+        <div class="flex items-center justify-between text-xs pt-1 border-t border-slate-200/60 dark:border-slate-700/60">
+          <div class="flex items-center gap-1">
+            <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">TSN4</span>
+            <span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">TVA Sports</span>
+          </div>
+          <a href="/game/2026-11-10/toronto-vs-colorado/" class="text-[11px] font-semibold text-[#AF1E2D] dark:text-rose-400 hover:underline flex items-center gap-1">
+            <span>TV & Blackout Breakdown &rarr;</span>
+          </a>
+        </div>
+        <div class="text-[11px] font-medium text-slate-600 dark:text-slate-300 bg-white/70 dark:bg-slate-900/50 p-2 rounded-lg border border-slate-200/50 dark:border-slate-700/50 mt-1">
+          Requires TSN
+        </div>
+      </div>
       </div>
 
       <!-- Desktop Table View: Clean Balanced Column Layout (No text cut off) -->
@@ -927,37 +943,6 @@
           </thead>
           <tbody id="scheduleTableBody" class="divide-y divide-slate-100 dark:divide-slate-800" data-prerendered="true">
             
-      <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60">
-        <td class="py-3 px-4 font-bold text-slate-600 dark:text-slate-300 font-teko text-base text-center">10</td>
-        <td class="py-3 px-4 whitespace-nowrap">
-          <div class="font-semibold text-slate-800 dark:text-slate-200">Mon, Oct 19, 2026</div>
-          <div class="text-[11px] text-slate-600 dark:text-slate-300">7:30 PM</div>
-        </td>
-        <td class="py-3 px-4">
-          <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
-            <a href="/game/2026-10-19/toronto-vs-san-jose/" class="hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline transition flex items-center gap-1.5" title="View TV broadcast and blackout breakdown">
-              <span>vs Sharks</span>
-              <i class="fa-solid fa-chevron-right text-[9px] text-slate-500 opacity-75"></i>
-            </a>
-            
-            
-          </div>
-          <div class="text-[11px] text-slate-600 dark:text-slate-300">Scotiabank Arena</div>
-        </td>
-        <td class="py-3 px-4">
-          <div class="flex items-center space-x-1.5">
-            <span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">SN+</span>
-            <span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">TVA Sports</span>
-          </div>
-        </td>
-        <td class="py-3 px-4">
-          <span class="text-[11px] font-medium uppercase tracking-wider text-slate-600 dark:text-slate-300">National (Coast-to-Coast)</span>
-        </td>
-        <td class="py-3 px-4 text-right">
-          <div><span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>Watchable</span></div>
-          <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-1 leading-snug">Requires Sportsnet+ (Streaming)</div>
-        </td>
-      </tr>
       <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60">
         <td class="py-3 px-4 font-bold text-slate-600 dark:text-slate-300 font-teko text-base text-center">11</td>
         <td class="py-3 px-4 whitespace-nowrap">
@@ -1237,14 +1222,45 @@
           <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-1 leading-snug">Requires TSN</div>
         </td>
       </tr>
+      <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60">
+        <td class="py-3 px-4 font-bold text-slate-600 dark:text-slate-300 font-teko text-base text-center">20</td>
+        <td class="py-3 px-4 whitespace-nowrap">
+          <div class="font-semibold text-slate-800 dark:text-slate-200">Tue, Nov 10, 2026</div>
+          <div class="text-[11px] text-slate-600 dark:text-slate-300">8:00 PM</div>
+        </td>
+        <td class="py-3 px-4">
+          <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
+            <a href="/game/2026-11-10/toronto-vs-colorado/" class="hover:text-[#AF1E2D] dark:hover:text-rose-400 hover:underline transition flex items-center gap-1.5" title="View TV broadcast and blackout breakdown">
+              <span>vs Avalanche</span>
+              <i class="fa-solid fa-chevron-right text-[9px] text-slate-500 opacity-75"></i>
+            </a>
+            
+            
+          </div>
+          <div class="text-[11px] text-slate-600 dark:text-slate-300">Scotiabank Arena</div>
+        </td>
+        <td class="py-3 px-4">
+          <div class="flex items-center space-x-1.5">
+            <span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">TSN4</span>
+            <span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">TVA Sports</span>
+          </div>
+        </td>
+        <td class="py-3 px-4">
+          <span class="text-[11px] font-medium uppercase tracking-wider text-slate-600 dark:text-slate-300">Regional Territory</span>
+        </td>
+        <td class="py-3 px-4 text-right">
+          <div><span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 whitespace-nowrap"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>Need Sub</span></div>
+          <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-1 leading-snug">Requires TSN</div>
+        </td>
+      </tr>
           </tbody>
         </table>
       </div>
 
       <!-- Footer count -->
       <div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
-        <span id="renderedCountLabel">Showing the 75-game Toronto Maple Leafs TV broadcast schedule</span>
-        <span class="text-[11px] italic text-center sm:text-right" data-freshness="verified-date">Schedule verified: Oct 19, 2026 • Auto-synced with local clock</span>
+        <span id="renderedCountLabel">Showing the 74-game Toronto Maple Leafs TV broadcast schedule</span>
+        <span class="text-[11px] italic text-center sm:text-right" data-freshness="verified-date">Schedule verified: Oct 20, 2026 • Auto-synced with local clock</span>
       </div>
 
     </section>
