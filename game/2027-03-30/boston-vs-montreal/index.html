@@ -519,10 +519,12 @@
             personalNote = '<div class="mt-2 text-xs font-semibold text-emerald-400 flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Unlocked with your saved Amazon Prime subscription.</div>';
           } else if (d.isNational && (userSubs.sn_cable || userSubs.sn_plus || userSubs.sn_prem)) {
             personalNote = '<div class="mt-2 text-xs font-semibold text-emerald-400 flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Included with your saved Sportsnet subscription.</div>';
-          } else if (d.inMarket && (userSubs.regional_en || userSubs.sn_cable || userSubs.sn_plus)) {
+          } else if (d.inMarket && (userSubs.regional_en || userSubs.sn_cable || userSubs.sn_plus || userSubs.sn_prem)) {
             personalNote = '<div class="mt-2 text-xs font-semibold text-emerald-400 flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Watchable on your in-market regional sports package.</div>';
-          } else if (!d.inMarket && !d.isNational && !d.isPrime && userSubs.sn_prem) {
-            personalNote = '<div class="mt-2 text-xs font-semibold text-emerald-400 flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Unlocked out-of-market with your Sportsnet+ Premium subscription!</div>';
+          } else if (!d.inMarket && !d.isNational && !d.isPrime && (userSubs.sn_prem || userSubs.centre_ice)) {
+            personalNote = userSubs.sn_prem
+              ? '<div class="mt-2 text-xs font-semibold text-emerald-400 flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Unlocked out-of-market with your Sportsnet+ Premium subscription!</div>'
+              : '<div class="mt-2 text-xs font-semibold text-emerald-400 flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Unlocked out-of-market with your NHL Centre Ice subscription!</div>';
           }
         }
 

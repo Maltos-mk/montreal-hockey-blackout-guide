@@ -173,6 +173,8 @@
     [/^BLACKED OUT outside territory\. Requires Sportsnet \(Cable or Stream\) Premium or Centre Ice\.$/, function () { return 'Blackout hors de votre territoire. Sportsnet+ Premium ou Centre Ice requis.'; }],
     [/^No English Broadcast$/, function () { return 'Aucune diffusion en anglais'; }],
     [/^No French Broadcast$/, function () { return 'Aucune diffusion en français'; }],
+    [/^Watch on Sportsnet\+ Premium$/, function () { return 'À voir avec Sportsnet+ Premium'; }],
+    [/^Watch on Sportsnet\+ PREMIUM$/, function () { return 'À voir avec Sportsnet+ PREMIUM'; }],
     [/^Watch on Sportsnet\+ PREMIUM \(or Centre Ice\)$/, function () { return 'À voir avec Sportsnet+ PREMIUM (ou Centre Ice)'; }],
     [/^Watch on NHL Centre Ice$/, function () { return 'À voir avec Centre Ice de la LNH'; }],
     [/^Watch on local opponent feed(?: \((.+)\))?$/, function (m, net) { return 'À voir sur la diffusion locale de l’adversaire' + (net ? ' (' + net + ')' : ''); }],
