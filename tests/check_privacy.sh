@@ -1,5 +1,5 @@
 #!/bin/bash
-if grep -iR "keithrobinson" . --exclude-dir=".git" --exclude-dir="node_modules" --exclude-dir="tests"; then
+if grep -iR "keithrobinson" . --exclude-dir=".git" --exclude-dir="node_modules" --exclude-dir="tests" --exclude-dir="test-results"; then
   echo "❌ PRIVACY BREACH DETECTED: Found real name in codebase."
   exit 1
 else

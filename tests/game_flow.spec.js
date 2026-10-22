@@ -1,6 +1,8 @@
 const { test, expect } = require('@playwright/test');
 
 test.beforeEach(async ({ page }) => {
+  // Prevent tests from sending real telemetry to live Umami servers
+  await page.route('**/*umami*', route => route.abort());
   page.on('pageerror', exception => {
     throw new Error(`[BROWSER UNCAUGHT EXCEPTION] ${exception.message}`);
   });

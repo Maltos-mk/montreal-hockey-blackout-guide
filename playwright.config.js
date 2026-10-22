@@ -9,7 +9,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'list',
   use: {
-    baseURL: 'http://localhost:8088',
+    baseURL: 'http://localhost:8099',
     trace: 'on-first-retry',
   },
   projects: [
@@ -19,8 +19,8 @@ module.exports = defineConfig({
     },
   ],
   webServer: {
-    command: 'python3 -m http.server 8088 --directory build',
-    port: 8088,
+    command: 'python3 -m http.server 8099 --directory build',
+    url: 'http://localhost:8099',
     reuseExistingServer: true,
   },
 });

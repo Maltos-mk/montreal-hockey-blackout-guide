@@ -1,6 +1,8 @@
 const { test, expect } = require('@playwright/test');
 
 test.beforeEach(async ({ page }) => {
+  // Prevent tests from sending real telemetry to live Umami servers
+  await page.route('**/*umami*', route => route.abort());
   page.on('pageerror', exception => {
     throw new Error(`[BROWSER UNCAUGHT EXCEPTION] ${exception.message}`);
   });
@@ -9,6 +11,12 @@ test.beforeEach(async ({ page }) => {
 test('Toronto: Checking streamers updates watchable score without errors', async ({ page }) => {
   await page.goto('/toronto/');
   await page.waitForSelector('#scheduleTableBody');
+
+  await expect(page).toHaveTitle(/Toronto Maple Leafs/);
+  // Toronto has TSN4 (regional EN) but NO regional FR (RDS)
+  await expect(page.locator('#sub_regional_en')).toBeVisible();
+  await expect(page.locator('#sub_regional_fr')).toHaveCount(0);
+  await expect(page.locator('#totalGameLabel')).toHaveText('/ 84 GAMES');
 
   const countEl = page.locator('#watchableCount');
 
@@ -42,9 +50,15 @@ test('Toronto: Checking streamers updates watchable score without errors', async
   expect(afterUncheckText.trim()).toBe('58');
 });
 
-test('Montreal: Status filtering works correctly', async ({ page }) => {
+test('Montreal: Regional channels (TSN2, RDS) and status filtering', async ({ page }) => {
   await page.goto('/montreal/');
   await page.waitForSelector('#scheduleTableBody');
+
+  await expect(page).toHaveTitle(/Montreal Canadiens/);
+  // Montreal has TSN2 (regional EN) and RDS (regional FR)
+  await expect(page.locator('#sub_regional_en')).toBeVisible();
+  await expect(page.locator('#sub_regional_fr')).toBeVisible();
+  await expect(page.locator('#totalGameLabel')).toHaveText('/ 84 GAMES');
 
   // Verify Sportsnet is checked by default or check it
   const snCheckbox = page.locator('#sub_sn_cable');
@@ -61,6 +75,36 @@ test('Montreal: Status filtering works correctly', async ({ page }) => {
   await page.selectOption('#statusFilter', 'all');
   const allCards = await page.locator('#scheduleTableBody > tr').count();
   expect(allCards).toBeGreaterThan(watchableCards);
+});
+
+test('Ottawa: Regional feeds (TSN5, RDS) and watchable score updates', async ({ page }) => {
+  await page.goto('/ottawa/');
+  await page.waitForSelector('#scheduleTableBody');
+
+  await expect(page).toHaveTitle(/Ottawa Senators/);
+  // Ottawa has TSN5 (regional EN) and RDS (regional FR)
+  await expect(page.locator('#sub_regional_en')).toBeVisible();
+  await expect(page.locator('#sub_regional_fr')).toBeVisible();
+  await expect(page.locator('#totalGameLabel')).toHaveText('/ 84 GAMES');
+
+  const countEl = page.locator('#watchableCount');
+  const initialCount = parseInt((await countEl.textContent()).trim(), 10);
+
+  // Toggle TSN5 and verify watchable score adjusts reactively
+  const tsn5 = page.locator('#sub_regional_en');
+  if (await tsn5.isChecked()) {
+    await tsn5.uncheck();
+    const updatedCount = parseInt((await countEl.textContent()).trim(), 10);
+    expect(updatedCount).toBeLessThan(initialCount);
+    await tsn5.check();
+    expect(parseInt((await countEl.textContent()).trim(), 10)).toBe(initialCount);
+  } else {
+    await tsn5.check();
+    const updatedCount = parseInt((await countEl.textContent()).trim(), 10);
+    expect(updatedCount).toBeGreaterThan(initialCount);
+    await tsn5.uncheck();
+    expect(parseInt((await countEl.textContent()).trim(), 10)).toBe(initialCount);
+  }
 });
 
 test('Subscriptions persistence: clean URL on default load for SEO, updates hash on user selection, and survives page reload', async ({ page }) => {
