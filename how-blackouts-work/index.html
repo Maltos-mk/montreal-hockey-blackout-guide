@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>How Canadian Hockey Blackouts Work: Territory Map & Methodology</title>
-  <meta name="title" content="How Canadian Hockey Blackouts Work: Territory Map & Methodology">
-  <meta name="description" content="How regional hockey blackouts work in Canada. Official broadcast territory boundaries, the Belleville-Kingston overlap zone, and our data methodology.">
+  <title>Why Is My NHL Game Blacked Out? Canadian Diagnostic & Fixes</title>
+  <meta name="title" content="Why Is My NHL Game Blacked Out? Canadian Diagnostic & Fixes">
+  <meta name="description" content="Why is your NHL game blacked out tonight? Run our instant diagnostic to detect false ISP glitches vs. regional broadcast walls across all Canadian teams.">
   <meta name="author" content="HockeyBlackouts.ca">
   <link rel="canonical" href="https://hockeyblackouts.ca/how-blackouts-work/">
 
@@ -21,15 +21,15 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="HockeyBlackouts.ca">
   <meta property="og:url" content="https://hockeyblackouts.ca/how-blackouts-work/">
-  <meta property="og:title" content="How Canadian Hockey Blackouts Work: Territory Map & Methodology">
-  <meta property="og:description" content="How regional hockey blackouts work in Canada. Official broadcast territory boundaries, the Belleville-Kingston overlap zone, and our data methodology.">
+  <meta property="og:title" content="Why Is My NHL Game Blacked Out? Canadian Diagnostic & Fixes">
+  <meta property="og:description" content="Why is your NHL game blacked out tonight? Run our instant diagnostic to detect false ISP glitches vs. regional broadcast walls across all Canadian teams.">
   <meta property="og:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
 
   <!-- Twitter Cards -->
   <meta property="twitter:card" content="summary">
   <meta property="twitter:url" content="https://hockeyblackouts.ca/how-blackouts-work/">
-  <meta property="twitter:title" content="How Canadian Hockey Blackouts Work: Territory Map & Methodology">
-  <meta property="twitter:description" content="How regional hockey blackouts work in Canada. Official broadcast territory boundaries, the Belleville-Kingston overlap zone, and our data methodology.">
+  <meta property="twitter:title" content="Why Is My NHL Game Blacked Out? Canadian Diagnostic & Fixes">
+  <meta property="twitter:description" content="Why is your NHL game blacked out tonight? Run our instant diagnostic to detect false ISP glitches vs. regional broadcast walls across all Canadian teams.">
   <meta property="twitter:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
 
   <!-- Structured Data JSON-LD (Article + FAQPage) -->
@@ -39,8 +39,8 @@
   "@graph": [
     {
       "@type": "Article",
-      "headline": "How Canadian Hockey Blackouts Work: Territory Map & Methodology",
-      "description": "How regional hockey blackouts work in Canada. Official broadcast territory boundaries, the Belleville-Kingston overlap zone, and our data methodology.",
+      "headline": "Why Is My NHL Game Blacked Out? Canadian Diagnostic & Fixes",
+      "description": "Why is your NHL game blacked out tonight? Run our instant diagnostic to detect false ISP glitches vs. regional broadcast walls across all Canadian teams.",
       "url": "https://hockeyblackouts.ca/how-blackouts-work/",
       "datePublished": "2026-10-01",
       "dateModified": "2026-10-23",
@@ -64,26 +64,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Why do regional hockey blackouts still exist in Canada?",
+          "name": "Why is my NHL game blacked out in my area tonight?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Broadcast rights are split into two separate contracts: National rights (Saturday night Hockey Night in Canada on Sportsnet/TVA Sports and Wednesday/Monday nights on Amazon Prime Video) and Regional rights sold by individual teams to TSN, RDS, or regional Sportsnet feeds. Regional contracts require networks to geofence live games strictly to viewers physically inside that team's local territory."
+            "text": "Blackouts happen for two reasons: a contractual broadcast wall (85–90% of cases) or a technical ISP geolocation glitch (10–15% of cases). Contractual blackouts occur when a regional game is owned by a different network (such as TSN instead of Sportsnet), requires a premium out-of-market tier, or is exclusive to Amazon Prime Video. Technical glitches occur when satellite (Starlink) or wireless internet routes through an out-of-province ground station."
           }
         },
         {
           "@type": "Question",
-          "name": "Where is the Ontario blackout boundary line drawn between Toronto and Ottawa/Montreal?",
+          "name": "Why does Sportsnet+ or TSN say I am out of market when I live in the city?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The dividing line in Ontario runs between Belleville and Kingston. Viewers west of Belleville (including the GTA and Southwestern Ontario) are in the Maple Leafs territory. Viewers east of Kingston (including Ottawa and Cornwall) are in the Senators and Canadiens territory. The corridor between Belleville and Kingston is an official overlap zone with access to both."
+            "text": "If you use Starlink, Xplore, or 5G home internet, your connection uses Carrier-Grade NAT (CGNAT) that may route through ground stations in Montreal or Toronto. Streaming apps on Smart TVs and Apple TVs have no internal GPS and rely purely on your IP address. If the IP points out of province, you are falsely blacked out. To fix it, open the app on a smartphone with GPS turned on and AirPlay/Cast to your TV."
           }
         },
         {
           "@type": "Question",
-          "name": "Are CBC or Citytv broadcasting free over-the-air hockey games in 2026–27?",
+          "name": "If I upgrade to Sportsnet+ Premium, will it unblock my local home team?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Under the 2026–27 broadcast agreements, regular-season games require a cable subscription or streaming service (Sportsnet, TSN, RDS, TVA Sports, or Amazon Prime Video) rather than free over-the-air antenna broadcasts."
+            "text": "No. If you live inside the home market for the Winnipeg Jets, Ottawa Senators, Montreal Canadiens, or the 26 regional Toronto Maple Leafs games owned by TSN, upgrading to Sportsnet+ Premium will not unlock the game. Sportsnet legally cannot broadcast those regional games in your territory. You must subscribe to TSN."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is the Ontario blackout dividing line between Toronto and Ottawa/Montreal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The dividing line in Ontario runs between Belleville and Kingston. Viewers west of Belleville are in the Maple Leafs regional territory. Viewers east of Kingston are in the Senators and Canadiens regional territory. The corridor between Belleville and Kingston is an official overlap zone with regional access to all three teams."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do Rogers Ignite TV error codes XRE-07004 and XRE-07006 mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rogers Ignite TV and Comcast X1 set-top boxes display error codes XRE-07004, XRE-07006, and XRE-07007 (\"Sports programming is subject to certain restrictions\") when you tune to a regional sports channel outside your registered billing address territory. Out-of-market regional games on cable require the NHL Centre Ice digital package."
           }
         }
       ]
@@ -100,7 +116,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "How Canadian Hockey Blackouts Work: Territory Map & Methodology",
+          "name": "Why Is My NHL Game Blacked Out? Canadian Diagnostic & Fixes",
           "item": "https://hockeyblackouts.ca/how-blackouts-work/"
         }
       ]
@@ -152,9 +168,9 @@
     <div class="flex items-center space-x-2">
       <a href="https://hockeyblackouts.ca/" class="hover:text-white transition">Home</a>
       <span>/</span>
-      <span class="text-slate-200 font-semibold">How Blackouts Work & Methodology</span>
+      <span class="text-slate-200 font-semibold">Blackout Diagnostic & Rules</span>
     </div>
-    <span class="text-[11px] text-slate-400" data-freshness="verified-date">Verified for 2026–27 Season • Updated Oct 22, 2026</span>
+    <span class="text-[11px] text-slate-400" data-freshness="verified-date">Verified for 2026–27 Season • Updated Oct 23, 2026</span>
   </nav>
 
   <!-- Main Content -->
@@ -164,15 +180,207 @@
     <section class="bg-slate-900 border border-white/10 rounded-2xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
       <div class="absolute -top-16 -right-16 w-48 h-48 bg-[#AF1E2D]/10 rounded-full blur-3xl pointer-events-none"></div>
       <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#AF1E2D]/20 text-rose-300 border border-[#AF1E2D]/30 text-[11px] font-bold uppercase tracking-wider mb-3">
-        <i class="fa-solid fa-map-location-dot"></i>
-        <span>Territory Rules & Methodology</span>
+        <i class="fa-solid fa-satellite-dish"></i>
+        <span>Game-Night Triage & Fixes</span>
       </div>
-      <h1 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">How Canadian Hockey Blackouts Work: Territory Map & Methodology</h1>
-      <p class="text-sm sm:text-base text-slate-300 mt-3 leading-relaxed max-w-3xl">A plain-English breakdown of why regional hockey blackouts exist in Canada, where the provincial boundary lines are drawn, and how HockeyBlackouts.ca verifies every broadcast.</p>
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">Why Is Your NHL Game Blacked Out? (And Can You Fix It Tonight?)</h1>
+      <p class="text-sm sm:text-base text-slate-300 mt-3 leading-relaxed max-w-3xl">At 7:05 PM with a black screen, it feels like your streaming app is broken. In 30 seconds, find out whether your internet provider is misrouting your location or if an NHL regional contract just locked you out.</p>
     </section>
 
     <!-- Primary Explainer Body -->
     
+  <!-- 1. Interactive Blackout Diagnostic Tool (Hero Triage) -->
+  <section id="blackout-triage" class="bg-slate-900 border border-sky-500/30 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-4">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30">Live Connection Inspector</span>
+          <span class="text-xs text-slate-400">ISP Mismatch Detector</span>
+        </div>
+        <h2 class="text-base sm:text-lg font-bold text-white mt-1">Blackout IP Inspector: Check for Location Mismatches</h2>
+      </div>
+      <button id="runIpDiagnosticBtn" data-umami-event="ip-inspector-check" class="px-4 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs shadow-md transition whitespace-nowrap flex items-center justify-center gap-2">
+        <i class="fa-solid fa-satellite-dish"></i>
+        <span>Scan My Connection</span>
+      </button>
+    </div>
+
+    <!-- Step 1: Select Team to Watch -->
+    <div class="p-4 rounded-xl bg-slate-950 border border-white/10 space-y-1.5">
+      <label for="userTeamSelect" class="block text-xs font-bold text-white">
+        Which team are you trying to watch right now?
+      </label>
+      <select id="userTeamSelect" class="w-full bg-slate-900 border border-white/20 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-sky-500">
+        <option value="MTL" selected>Montreal Canadiens (TSN2 / RDS)</option>
+        <option value="OTT">Ottawa Senators (TSN5 / RDS)</option>
+        <option value="TOR">Toronto Maple Leafs (TSN4 / Sportsnet Ontario)</option>
+        <option value="WPG">Winnipeg Jets (TSN3)</option>
+        <option value="EDM">Edmonton Oilers (Sportsnet West)</option>
+        <option value="CGY">Calgary Flames (Sportsnet West)</option>
+        <option value="VAN">Vancouver Canucks (Sportsnet Pacific)</option>
+      </select>
+    </div>
+
+    <!-- Step 2: Side-by-Side Connection vs. Broadcast Territory Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <!-- Left: Detected Connection -->
+      <div class="p-4 rounded-xl bg-slate-950 border border-white/10 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-slate-400 font-bold text-[11px] uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-network-wired text-sky-400"></i>
+            <span>Your Detected Connection</span>
+          </span>
+          <span id="connectionBadge" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-white/10 font-medium">Awaiting Scan</span>
+        </div>
+        <div class="space-y-1 text-xs">
+          <div><span class="text-slate-400">IP Location:</span> <strong id="detectedLocation" class="text-slate-300">Click &quot;Scan My Connection&quot;</strong></div>
+          <div><span class="text-slate-400">Provider (ISP):</span> <strong id="detectedIsp" class="text-slate-400">—</strong></div>
+          <div><span class="text-slate-400">Public IP:</span> <span id="detectedIp" class="text-slate-500 font-mono text-[11px]">—</span></div>
+        </div>
+      </div>
+
+      <!-- Right: Team's Official Broadcast Territory -->
+      <div class="p-4 rounded-xl bg-slate-950 border border-white/10 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-slate-400 font-bold text-[11px] uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-map-location-dot text-[#AF1E2D]"></i>
+            <span>Designated Broadcast Territory</span>
+          </span>
+          <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-white/10">CRTC Geofence</span>
+        </div>
+        <div class="space-y-1 text-xs">
+          <div><span class="text-slate-400">Official Home Zone:</span> <strong id="teamMarketText" class="text-white">Quebec, Atlantic Canada, Eastern Ontario</strong></div>
+          <div><span class="text-slate-400">Home Regional Networks:</span> <strong id="teamCarrierText" class="text-rose-400">TSN2 / RDS</strong></div>
+          <div class="text-[11px] text-slate-400">Games restricted to viewers inside this zone.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3: Prominent Verdict & Mismatch Callout -->
+    <div id="diagnosticVerdictBox" class="p-4 rounded-xl border border-white/10 bg-slate-950/70 text-xs leading-relaxed space-y-2 text-slate-300">
+      <div class="flex items-center gap-2 font-bold text-white text-sm">
+        <i class="fa-solid fa-satellite-dish text-sky-400"></i>
+        <span>Ready to Test Your Geolocation</span>
+      </div>
+      <p>
+        Select the team you want to watch above, then click <strong>&quot;Scan My Connection&quot;</strong>. The tool will check your public IP address and compare it against the team&apos;s designated home broadcast territory to detect whether you are out of market, facing an ISP glitch, or hitting a broadcast rights split.
+      </p>
+    </div>
+  </section>
+
+  <!-- 2. The Two Ways Fans Get Blacked Out (Real Wall vs. False Glitch) -->
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="bg-slate-900 border border-amber-500/30 rounded-2xl p-5 sm:p-6 space-y-3">
+      <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <span>The 10% Glitch: False Blackouts (Fixable)</span>
+      </div>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        A <strong>false blackout</strong> happens when you physically live in a team's broadcast zone, but your streaming device reports an out-of-market IP address.
+      </p>
+      <ul class="text-xs text-slate-400 space-y-1.5 list-disc pl-4 leading-relaxed">
+        <li><strong>Starlink & 5G Home Internet:</strong> Carrier-Grade NAT (CGNAT) frequently routes rural Ontario, Manitoba, or Alberta traffic through ground stations in Montreal or Toronto.</li>
+        <li><strong>Living Room Devices:</strong> Smart TVs, Apple TVs, Rokus, and Fire Sticks have no internal GPS chip. They rely entirely on third-party IP tables that are often weeks out of date.</li>
+      </ul>
+      <p class="text-xs text-amber-300 font-semibold pt-1">
+        &rarr; Fix: Cast from a phone with GPS turned on, or reboot your dish/modem for 20 minutes to pull a new regional IP pool.
+      </p>
+    </div>
+
+    <div class="bg-slate-900 border border-sky-500/30 rounded-2xl p-5 sm:p-6 space-y-3">
+      <div class="flex items-center gap-2 text-sky-400 font-bold text-sm">
+        <i class="fa-solid fa-lock"></i>
+        <span>The 90% Reality: Contract Rights Walls (Unfixable)</span>
+      </div>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        Most blackouts are not technical bugs—they are rigid contractual restrictions enforced by the NHL, Rogers, and Bell.
+      </p>
+      <ul class="text-xs text-slate-400 space-y-1.5 list-disc pl-4 leading-relaxed">
+        <li><strong>The Wrong Broadcaster:</strong> Sportsnet does not own regional games for Ottawa, Montreal, or Winnipeg (and only half of Toronto's). Those games are exclusive to TSN and RDS.</li>
+        <li><strong>The Predatory Upsell:</strong> Sportsnet+ often tells in-market fans to "Upgrade to Premium". If TSN owns the game, paying $35 for Premium will still leave you blacked out.</li>
+        <li><strong>Monday Prime Exclusives:</strong> Monday night games air exclusively on Amazon Prime Video nationwide—not on cable or Sportsnet+.</li>
+      </ul>
+      <p class="text-xs text-sky-300 font-semibold pt-1">
+        &rarr; Fix: No router trick will help. You need the specific network holding tonight's rights.
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. Starlink, 5G Wireless & Rural ISP Troubleshooting Guide -->
+  <section class="bg-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+    <div class="flex items-center justify-between border-b border-white/10 pb-3">
+      <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+        <i class="fa-solid fa-wrench text-sky-400"></i>
+        <span>Troubleshooting False Blackouts on Starlink, Xplore & 5G Wireless</span>
+      </h2>
+      <span class="text-xs text-slate-400">Rural Internet Triage</span>
+    </div>
+
+    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+      If our diagnostic tool showed an IP mismatch, here is how to get around the geofence before puck drop:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-slate-300">
+      <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5 space-y-2">
+        <div class="font-bold text-white flex items-center gap-2">
+          <span class="w-5 h-5 rounded-full bg-sky-500 text-slate-950 flex items-center justify-center text-[11px] font-black">1</span>
+          <span>The Mobile GPS Cast (Recommended)</span>
+        </div>
+        <p class="text-slate-400 leading-relaxed">
+          Smart TVs don't have GPS chips; phones do. Open the Sportsnet or TSN app on your phone with Location Services enabled. The app reads your genuine GPS coordinates instead of your Starlink IP. Tap the native Cast or AirPlay icon inside the video player to stream to your TV. (Avoid OS-level screen mirroring or HDMI cables, which trigger DRM blackouts).
+        </p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5 space-y-2">
+        <div class="font-bold text-white flex items-center gap-2">
+          <span class="w-5 h-5 rounded-full bg-sky-500 text-slate-950 flex items-center justify-center text-[11px] font-black">2</span>
+          <span>20-Minute Power Cycle (Last Resort)</span>
+        </div>
+        <p class="text-slate-400 leading-relaxed">
+          Only do this if you have no mobile device, so you don't burn 20 minutes of game time. Unplug your Starlink dish or wireless modem for a full 20 minutes (a 10-second reboot won't release your CGNAT lease). When it reconnects, the ground station will frequently assign a fresh IP from a closer regional subnet.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5 space-y-2">
+        <div class="font-bold text-white flex items-center gap-2">
+          <span class="w-5 h-5 rounded-full bg-sky-500 text-slate-950 flex items-center justify-center text-[11px] font-black">3</span>
+          <span>Beware the "Call Your ISP" Dodge</span>
+        </div>
+        <p class="text-slate-400 leading-relaxed">
+          Broadcaster support reps love telling fans to call their ISP when their own MaxMind or Neustar GeoIP feed is out of date. If phone GPS works but your TV is blocked, your ISP is fine—the broadcaster's TV app database is simply lagging behind.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Cable TV Set-Top Box Blackout Error Codes -->
+  <section class="bg-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+    <div class="flex items-center justify-between border-b border-white/10 pb-3">
+      <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+        <i class="fa-solid fa-tv text-[#AF1E2D]"></i>
+        <span>Cable TV Set-Top Box Blackout Error Codes (Rogers Ignite & Comcast X1)</span>
+      </h2>
+      <span class="text-xs text-slate-400">Cable Hardware</span>
+    </div>
+    <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5 space-y-2">
+      <div class="flex items-center justify-between">
+        <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 text-[10px] font-mono font-bold">Cable Box Error Code</span>
+        <span class="text-[10px] text-slate-400">Rogers Ignite TV / Shaw BlueCurve</span>
+      </div>
+      <h3 class="text-white font-bold text-sm">Rogers Ignite TV: Error Codes XRE-07004, XRE-07006 & XRE-07007</h3>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        <strong>On-Screen Message:</strong> <em>"Sports programming is subject to certain restrictions. This program is blacked out in your area."</em>
+      </p>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        <strong>The Cause:</strong> Rogers Ignite set-top boxes use Comcast's syndicated X1 software. These error codes trigger automatically when your cable account's physical registered billing address is located outside a team's home regional boundary (for example, tuning to Sportsnet Pacific in Toronto, or TSN2 in Alberta).
+      </p>
+      <p class="text-xs text-emerald-400 leading-relaxed">
+        <strong>The Fix:</strong> Check your local regional channels for your local home market game. Out-of-market regional games on linear cable cannot be unlocked on standard regional channels; they require the <strong>NHL Centre Ice</strong> digital cable package or Sportsnet+ Premium online.
+      </p>
+    </div>
+  </section>
+
+  <!-- 5. Official Canadian Broadcast Territory Map -->
   <section class="bg-slate-900 border border-white/10 rounded-2xl overflow-hidden shadow-xl">
     <div class="p-5 sm:p-6 border-b border-white/10">
       <h2 class="text-base sm:text-lg font-bold text-white">Official Canadian Broadcast Territory Map (All 7 Teams)</h2>
@@ -274,7 +482,7 @@
         In Ontario, the broadcast dividing line between the <strong>Toronto Maple Leafs</strong> (West) and the <strong>Ottawa Senators / Montreal Canadiens</strong> (East) runs between Belleville and Kingston.
       </p>
       <p class="text-xs text-slate-400 leading-relaxed">
-        Wait—what if you live right inside the Belleville-to-Kingston corridor? Cable and streaming providers treat this strip as an official <strong>Shared Overlap Zone</strong> where viewers are granted in-market access to regional feeds for all three teams (TOR, OTT, and MTL). Our calculator includes a dedicated <em>Ontario Overlap</em> region option to model this exact boundary.
+        Viewers living in the Belleville-to-Kingston corridor are in an official <strong>Shared Overlap Zone</strong> with in-market access to regional feeds for all three teams (TOR, OTT, and MTL).
       </p>
     </div>
 
@@ -292,6 +500,7 @@
     </div>
   </section>
 
+  <!-- 6. Verification Methodology & Corrections Policy -->
   <section class="bg-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-4">
     <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
       <i class="fa-solid fa-code-branch text-emerald-400"></i>
@@ -313,6 +522,292 @@
     </div>
   </section>
 
+  <script>
+  (function() {
+    var btn = document.getElementById('runIpDiagnosticBtn');
+    if (!btn) return;
+
+    var detectedData = null;
+
+    var TEAM_DATA = {
+      'MTL': {
+        name: 'Montreal Canadiens',
+        dir: 'montreal',
+        marketHint: 'Home Zone: QC, Atlantic Canada, Eastern ON',
+        marketDescription: 'Quebec, Atlantic Canada, and Eastern Ontario',
+        inMarketRegions: ['qc', 'atl', 'on_east', 'on_overlap'],
+        primaryCarrier: 'TSN2 / RDS',
+        tsnRegional: true
+      },
+      'OTT': {
+        name: 'Ottawa Senators',
+        dir: 'ottawa',
+        marketHint: 'Home Zone: Eastern ON, Outaouais, QC, Atlantic',
+        marketDescription: 'Eastern Ontario, the Outaouais, Quebec, and Atlantic Canada',
+        inMarketRegions: ['on_east', 'on_overlap', 'qc', 'atl'],
+        primaryCarrier: 'TSN5 / RDS',
+        tsnRegional: true
+      },
+      'TOR': {
+        name: 'Toronto Maple Leafs',
+        dir: 'toronto',
+        marketHint: 'Home Zone: Ontario West of Belleville',
+        marketDescription: 'Ontario (West of Belleville)',
+        inMarketRegions: ['on_west', 'on_overlap', 'nw_on'],
+        primaryCarrier: 'TSN4 (26 games) / Sportsnet Ontario',
+        tsnRegional: true
+      },
+      'WPG': {
+        name: 'Winnipeg Jets',
+        dir: 'winnipeg',
+        marketHint: 'Home Zone: Manitoba, Saskatchewan, NW Ontario',
+        marketDescription: 'Manitoba, Saskatchewan, and Northwestern Ontario',
+        inMarketRegions: ['mb', 'sk', 'nw_on'],
+        primaryCarrier: 'TSN3',
+        tsnRegional: true
+      },
+      'EDM': {
+        name: 'Edmonton Oilers',
+        dir: 'edmonton',
+        marketHint: 'Home Zone: Alberta, Saskatchewan, NWT',
+        marketDescription: 'Alberta, Saskatchewan, and the Northwest Territories',
+        inMarketRegions: ['ab', 'sk'],
+        primaryCarrier: 'Sportsnet West',
+        tsnRegional: false
+      },
+      'CGY': {
+        name: 'Calgary Flames',
+        dir: 'calgary',
+        marketHint: 'Home Zone: Alberta, Saskatchewan, NWT',
+        marketDescription: 'Alberta, Saskatchewan, and the Northwest Territories',
+        inMarketRegions: ['ab', 'sk'],
+        primaryCarrier: 'Sportsnet West',
+        tsnRegional: false
+      },
+      'VAN': {
+        name: 'Vancouver Canucks',
+        dir: 'vancouver',
+        marketHint: 'Home Zone: British Columbia & Yukon',
+        marketDescription: 'British Columbia and Yukon',
+        inMarketRegions: ['bc'],
+        primaryCarrier: 'Sportsnet Pacific',
+        tsnRegional: false
+      }
+    };
+
+    var REGION_NAMES = {
+      'on_west': 'Ontario (Toronto, GTA & Western ON)',
+      'on_east': 'Ontario (Ottawa & Eastern ON)',
+      'on_overlap': 'Ontario Overlap (Belleville–Kingston)',
+      'qc': 'Quebec',
+      'atl': 'Atlantic Canada (NB, NS, PEI, NL)',
+      'mb': 'Manitoba',
+      'sk': 'Saskatchewan',
+      'ab': 'Alberta, NWT & Nunavut',
+      'bc': 'British Columbia & Yukon',
+      'nw_on': 'Northwestern Ontario (Thunder Bay / Kenora)'
+    };
+
+    function mapIpToRegionCode(data) {
+      if (!data) return null;
+      var r = (data.region || data.region_code || '').toLowerCase();
+      var c = (data.city || '').toLowerCase();
+      if (r.indexOf('british columbia') !== -1 || r === 'bc') return 'bc';
+      if (r.indexOf('alberta') !== -1 || r === 'ab') return 'ab';
+      if (r.indexOf('saskatchewan') !== -1 || r === 'sk') return 'sk';
+      if (r.indexOf('manitoba') !== -1 || r === 'mb') return 'mb';
+      if (r.indexOf('quebec') !== -1 || r === 'qc') return 'qc';
+      if (r.indexOf('new brunswick') !== -1 || r.indexOf('nova scotia') !== -1 || r.indexOf('prince edward') !== -1 || r.indexOf('newfoundland') !== -1 || r === 'nb' || r === 'ns' || r === 'pe' || r === 'nl') return 'atl';
+      if (r.indexOf('ontario') !== -1 || r === 'on') {
+        if (c.indexOf('ottawa') !== -1 || c.indexOf('cornwall') !== -1 || c.indexOf('kingston') !== -1) return 'on_east';
+        if (c.indexOf('thunder bay') !== -1 || c.indexOf('kenora') !== -1) return 'nw_on';
+        return 'on_west';
+      }
+      return null;
+    }
+
+    function scanConnection(isManual) {
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Scanning...</span>';
+
+      fetch('https://ipwho.is/')
+        .then(function(r) {
+          if (!r.ok) throw new Error('ipwho HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function(data) {
+          if (!data || data.success === false || !data.ip) throw new Error('ipwho failed');
+          return data;
+        })
+        .catch(function() {
+          return fetch('https://ipapi.co/json/')
+            .then(function(r2) {
+              if (!r2.ok) throw new Error('ipapi HTTP ' + r2.status);
+              return r2.json();
+            })
+            .then(function(data2) {
+              if (!data2 || !data2.ip) throw new Error('ipapi failed');
+              return {
+                ip: data2.ip,
+                connection: { isp: data2.org },
+                city: data2.city,
+                region: data2.region,
+                region_code: data2.region_code
+              };
+            });
+        })
+        .then(function(data) {
+          detectedData = data;
+          document.getElementById('detectedIp').textContent = data.ip || 'Unknown';
+          document.getElementById('detectedIsp').textContent = (data.connection && data.connection.isp) || data.isp || 'Detected Provider';
+          document.getElementById('detectedLocation').textContent = (data.city ? data.city + ', ' : '') + (data.region || data.country || 'Canada');
+          var badge = document.getElementById('connectionBadge');
+          if (badge) {
+            badge.textContent = 'Active IP Verified';
+            badge.className = 'text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-medium';
+          }
+          renderVerdict(isManual);
+        })
+        .catch(function(err) {
+          document.getElementById('detectedLocation').textContent = 'Location Blocked (Ad-Blocker Active)';
+          document.getElementById('detectedIsp').textContent = 'Unable to query IP';
+          renderVerdict(isManual);
+        })
+        .finally(function() {
+          btn.disabled = false;
+          btn.innerHTML = '<i class="fa-solid fa-satellite-dish"></i><span>Re-scan Connection</span>';
+        });
+    }
+
+    btn.addEventListener('click', function() {
+      scanConnection(true);
+    });
+
+    var teamSelect = document.getElementById('userTeamSelect');
+    if (teamSelect) {
+      teamSelect.addEventListener('change', function() {
+        renderVerdict(true);
+      });
+    }
+
+    function renderVerdict(isManualAction) {
+      var teamId = teamSelect ? teamSelect.value : 'MTL';
+      var team = TEAM_DATA[teamId] || TEAM_DATA['MTL'];
+      var verdictBox = document.getElementById('diagnosticVerdictBox');
+      if (!verdictBox) return;
+
+      // Update right-hand territory card
+      var marketEl = document.getElementById('teamMarketText');
+      var carrierEl = document.getElementById('teamCarrierText');
+      if (marketEl) marketEl.textContent = team.marketDescription;
+      if (carrierEl) carrierEl.textContent = team.primaryCarrier;
+
+      if (!detectedData) {
+        verdictBox.className = 'p-4 rounded-xl border border-white/10 bg-slate-950/70 text-xs leading-relaxed space-y-2 text-slate-300';
+        verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-white text-sm">' +
+          '<i class="fa-solid fa-satellite-dish text-sky-400"></i>' +
+          '<span>Ready to Test Your Geolocation for the ' + team.name + '</span>' +
+        '</div>' +
+        '<p>' +
+          'Selected: <strong>' + team.name + '</strong> (Territory: ' + team.marketDescription + '). Click <strong>"Scan My Connection"</strong> above to test your public IP against this zone and detect any false ISP blackouts.' +
+        '</p>';
+        return;
+      }
+
+      var ipRegionCode = mapIpToRegionCode(detectedData);
+      var ispName = (detectedData.connection && detectedData.connection.isp) || detectedData.isp || 'your internet provider';
+      var isStarlinkOrCellular = /starlink|spacex|xplor|cellular|telus mobility|rogers wireless|bell mobility/i.test(ispName);
+      var ipLocationStr = (detectedData.city ? detectedData.city + ', ' : '') + (detectedData.region || 'your area');
+
+      var isMatch = ipRegionCode ? (team.inMarketRegions.indexOf(ipRegionCode) !== -1) : false;
+
+      if (isManualAction && window.umami && typeof window.umami.track === 'function') {
+        window.umami.track('ip-inspector-verdict', {
+          status: isMatch ? 'match' : 'mismatch',
+          team: teamId,
+          detected_region: ipRegionCode || 'unknown'
+        });
+      }
+
+      if (!isMatch) {
+        // LOCATION MISMATCH OCCURRING
+        verdictBox.className = 'p-4 sm:p-5 rounded-xl border border-rose-500/40 bg-rose-500/10 text-xs leading-relaxed space-y-3';
+        verdictBox.innerHTML = '<div class="flex items-center justify-between gap-2 border-b border-rose-500/20 pb-2.5">' +
+          '<div class="flex items-center gap-2 font-bold text-rose-300 text-sm sm:text-base">' +
+            '<i class="fa-solid fa-triangle-exclamation text-rose-400"></i>' +
+            '<span>LOCATION MISMATCH: Your IP (' + ipLocationStr + ') is OUTSIDE the ' + team.name + ' Territory</span>' +
+          '</div>' +
+        '</div>' +
+        '<p class="text-slate-200 leading-relaxed">' +
+          'Streaming services see your public IP as <strong>' + ipLocationStr + '</strong>. Because this connection is located outside the ' + team.name + ' home broadcast market (' + team.marketDescription + '), local regional broadcasts are geofenced and blacked out.' +
+        '</p>' +
+        '<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">' +
+          '<div class="p-3.5 rounded-lg bg-slate-950/80 border border-white/10 space-y-1.5">' +
+            '<div class="font-bold text-white flex items-center gap-1.5">' +
+              '<i class="fa-solid fa-house text-sky-400"></i>' +
+              '<span>If you actually live in ' + ipLocationStr + ':</span>' +
+            '</div>' +
+            '<p class="text-slate-300 text-[11px] leading-relaxed">' +
+              'Your connection is accurate—you are an <strong>out-of-market fan</strong>. Local cable feeds (' + team.primaryCarrier + ') are legally blacked out in your area.' +
+            '</p>' +
+            '<p class="text-sky-300 text-[11px] font-semibold pt-1">' +
+              '&rarr; To watch: You need <strong>Sportsnet+ Premium</strong> ($34.99/mo) or <strong>NHL Centre Ice</strong> on cable. (Sportsnet+ Standard will NOT work).' +
+            '</p>' +
+          '</div>' +
+          '<div class="p-3.5 rounded-lg bg-slate-950/80 border border-amber-500/30 space-y-1.5">' +
+            '<div class="font-bold text-amber-300 flex items-center gap-1.5">' +
+              '<i class="fa-solid fa-satellite-dish"></i>' +
+              '<span>If you physically live inside ' + team.name + ' territory:</span>' +
+            '</div>' +
+            '<p class="text-slate-300 text-[11px] leading-relaxed">' +
+              '<strong>You have a False Blackout!</strong> ' + (isStarlinkOrCellular ? 'Because you are on <strong>' + ispName + '</strong>, your traffic routes through an out-of-province ground station.' : 'Your internet provider is routing your IP outside your province.') + ' Broadcasters think you are in ' + ipLocationStr + ' and mistakenly block your home team!' +
+            '</p>' +
+            '<p class="text-amber-200 text-[11px] font-semibold pt-1">' +
+              '&rarr; 7:05 PM Fix: Open Sportsnet or TSN on a phone with GPS turned on, then tap the Cast/AirPlay icon in the player to stream to your TV.' +
+            '</p>' +
+          '</div>' +
+        '</div>' +
+        '<p class="text-slate-300 pt-1 text-[11px]">' +
+          'Check the full broadcast schedule on our <a href="https://hockeyblackouts.ca/' + team.dir + '/" class="text-sky-400 font-bold hover:underline">' + team.name + ' Broadcast & Schedule Guide &rarr;</a>' +
+        '</p>';
+      } else {
+        // LOCATION MATCH
+        verdictBox.className = 'p-4 sm:p-5 rounded-xl border border-emerald-500/40 bg-emerald-500/10 text-xs leading-relaxed space-y-3';
+        var rightsWarning = '';
+        if (team.tsnRegional && ['MTL', 'OTT', 'WPG'].indexOf(teamId) !== -1) {
+          rightsWarning = '<div class="p-3 rounded-lg bg-slate-950/80 border border-rose-500/30 text-rose-200 space-y-1">' +
+            '<div class="font-bold flex items-center gap-1.5 text-xs text-rose-300"><i class="fa-solid fa-triangle-exclamation"></i>The Sportsnet+ Regional Trap:</div>' +
+            '<p class="text-[11px] text-slate-200 leading-normal">If you have Sportsnet+ open, this game is blacked out because <strong>' + team.primaryCarrier + '</strong> holds 100% of regional rights in your market. <strong>Do NOT click "Upgrade to Premium"</strong>—you will still be blacked out because TSN holds the rights!</p>' +
+          '</div>';
+        } else if (teamId === 'TOR') {
+          rightsWarning = '<div class="p-3 rounded-lg bg-slate-950/80 border border-rose-500/30 text-rose-200 space-y-1">' +
+            '<div class="font-bold flex items-center gap-1.5 text-xs text-rose-300"><i class="fa-solid fa-triangle-exclamation"></i>Toronto Split Rights:</div>' +
+            '<p class="text-[11px] text-slate-200 leading-normal">26 Maple Leafs games are exclusive to <strong>TSN4</strong> in Ontario. If tonight is a TSN game, Sportsnet+ will black you out, and upgrading to Premium will not unlock it.</p>' +
+          '</div>';
+        } else {
+          rightsWarning = '<p class="text-slate-300">If your game is blacked out on Sportsnet+, check if you are on basic Sportsnet without regional access, or if tonight is exclusive to <strong>Amazon Prime Video</strong> (Monday Night Hockey).</p>';
+        }
+
+        verdictBox.innerHTML = '<div class="flex items-center justify-between gap-2 border-b border-emerald-500/20 pb-2.5">' +
+          '<div class="flex items-center gap-2 font-bold text-emerald-300 text-sm sm:text-base">' +
+            '<i class="fa-solid fa-circle-check text-emerald-400"></i>' +
+            '<span>LOCATION MATCH: Your IP (' + ipLocationStr + ') is INSIDE the ' + team.name + ' Territory</span>' +
+          '</div>' +
+        '</div>' +
+        '<p class="text-slate-200 leading-relaxed">' +
+          'Your connection is located inside the official designated home broadcast territory for the ' + team.name + '. <strong>This is not an ISP routing error.</strong>' +
+        '</p>' +
+        rightsWarning +
+        '<p class="text-slate-300 pt-1 text-[11px]">' +
+          'Check the broadcast schedule and channel lineup on our <a href="https://hockeyblackouts.ca/' + team.dir + '/" class="text-emerald-400 font-bold hover:underline">' + team.name + ' Schedule & Channel Guide &rarr;</a>' +
+        '</p>';
+      }
+    }
+
+    // Do not auto-scan on page load: user must explicitly click "Scan My Connection"
+  })();
+  </script>
+
 
     <!-- Structured FAQ Section (Matches JSON-LD) -->
     <section class="bg-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 shadow-xl space-y-4" id="faq">
@@ -323,20 +818,32 @@
       <div class="space-y-4 text-xs sm:text-sm leading-relaxed text-slate-300">
         
     <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5">
-      <h3 class="font-bold text-white text-sm mb-1.5">Why do regional hockey blackouts still exist in Canada?</h3>
-      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Broadcast rights are split into two separate contracts: National rights (Saturday night Hockey Night in Canada on Sportsnet/TVA Sports and Wednesday/Monday nights on Amazon Prime Video) and Regional rights sold by individual teams to TSN, RDS, or regional Sportsnet feeds. Regional contracts require networks to geofence live games strictly to viewers physically inside that team's local territory.</p>
+      <h3 class="font-bold text-white text-sm mb-1.5">Why is my NHL game blacked out in my area tonight?</h3>
+      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Blackouts happen for two reasons: a contractual broadcast wall (85–90% of cases) or a technical ISP geolocation glitch (10–15% of cases). Contractual blackouts occur when a regional game is owned by a different network (such as TSN instead of Sportsnet), requires a premium out-of-market tier, or is exclusive to Amazon Prime Video. Technical glitches occur when satellite (Starlink) or wireless internet routes through an out-of-province ground station.</p>
     </div>
   
 
     <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5">
-      <h3 class="font-bold text-white text-sm mb-1.5">Where is the Ontario blackout boundary line drawn between Toronto and Ottawa/Montreal?</h3>
-      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">The dividing line in Ontario runs between Belleville and Kingston. Viewers west of Belleville (including the GTA and Southwestern Ontario) are in the Maple Leafs territory. Viewers east of Kingston (including Ottawa and Cornwall) are in the Senators and Canadiens territory. The corridor between Belleville and Kingston is an official overlap zone with access to both.</p>
+      <h3 class="font-bold text-white text-sm mb-1.5">Why does Sportsnet+ or TSN say I am out of market when I live in the city?</h3>
+      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">If you use Starlink, Xplore, or 5G home internet, your connection uses Carrier-Grade NAT (CGNAT) that may route through ground stations in Montreal or Toronto. Streaming apps on Smart TVs and Apple TVs have no internal GPS and rely purely on your IP address. If the IP points out of province, you are falsely blacked out. To fix it, open the app on a smartphone with GPS turned on and AirPlay/Cast to your TV.</p>
     </div>
   
 
     <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5">
-      <h3 class="font-bold text-white text-sm mb-1.5">Are CBC or Citytv broadcasting free over-the-air hockey games in 2026–27?</h3>
-      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Under the 2026–27 broadcast agreements, regular-season games require a cable subscription or streaming service (Sportsnet, TSN, RDS, TVA Sports, or Amazon Prime Video) rather than free over-the-air antenna broadcasts.</p>
+      <h3 class="font-bold text-white text-sm mb-1.5">If I upgrade to Sportsnet+ Premium, will it unblock my local home team?</h3>
+      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">No. If you live inside the home market for the Winnipeg Jets, Ottawa Senators, Montreal Canadiens, or the 26 regional Toronto Maple Leafs games owned by TSN, upgrading to Sportsnet+ Premium will not unlock the game. Sportsnet legally cannot broadcast those regional games in your territory. You must subscribe to TSN.</p>
+    </div>
+  
+
+    <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5">
+      <h3 class="font-bold text-white text-sm mb-1.5">Where is the Ontario blackout dividing line between Toronto and Ottawa/Montreal?</h3>
+      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">The dividing line in Ontario runs between Belleville and Kingston. Viewers west of Belleville are in the Maple Leafs regional territory. Viewers east of Kingston are in the Senators and Canadiens regional territory. The corridor between Belleville and Kingston is an official overlap zone with regional access to all three teams.</p>
+    </div>
+  
+
+    <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5">
+      <h3 class="font-bold text-white text-sm mb-1.5">What do Rogers Ignite TV error codes XRE-07004 and XRE-07006 mean?</h3>
+      <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">Rogers Ignite TV and Comcast X1 set-top boxes display error codes XRE-07004, XRE-07006, and XRE-07007 ("Sports programming is subject to certain restrictions") when you tune to a regional sports channel outside your registered billing address territory. Out-of-market regional games on cable require the NHL Centre Ice digital package.</p>
     </div>
   
       </div>
