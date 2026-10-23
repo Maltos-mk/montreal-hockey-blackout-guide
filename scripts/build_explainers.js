@@ -638,6 +638,35 @@ const territoryRowsHtml = teamDatasets.map(d => {
   `;
 }).join('\n');
 
+const upcomingMatchesByTeam = {};
+const nowTime = new Date().getTime();
+
+TEAM_ORDER.forEach(id => {
+  const data = JSON.parse(fs.readFileSync(path.join(DATA_DIR, `${id}.json`), 'utf-8'));
+  const teamUpper = id.toUpperCase();
+  const upcoming = data.schedule.filter(g => new Date(g.iso).getTime() >= (nowTime - 4 * 3600 * 1000));
+  const nextGame = upcoming[0] || data.schedule[data.schedule.length - 1];
+  const isToday = nextGame.iso.slice(0, 10) === buildDateIso;
+
+  upcomingMatchesByTeam[teamUpper] = {
+    id: teamUpper,
+    name: data.team.name,
+    nickname: data.team.nickname || data.team.name.split(' ').pop(),
+    dir: TEAM_DIRS[teamUpper],
+    primaryColor: data.team.colors.primary || '#0284c7',
+    date: nextGame.date,
+    time: nextGame.time,
+    vs: nextGame.vs,
+    opp: nextGame.opp,
+    oppName: TEAM_NAMES[nextGame.opp] || nextGame.opp,
+    venue: nextGame.venue,
+    netEN: nextGame.netEN,
+    netFR: nextGame.netFR || '—',
+    typeEN: nextGame.typeEN,
+    isToday: isToday
+  };
+});
+
 const methodologyBodyHtml = `
   <!-- 1. Interactive Blackout Diagnostic Tool (Hero Triage) -->
   <section id="blackout-triage" class="bg-slate-900 border border-sky-500/30 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
@@ -715,6 +744,93 @@ const methodologyBodyHtml = `
       <p>
         Select the team you want to watch above, then click <strong>&quot;Scan My Connection&quot;</strong>. The tool will check your public IP address and compare it against the team&apos;s designated home broadcast territory to detect whether you are out of market, facing an ISP glitch, or hitting a broadcast rights split.
       </p>
+    </div>
+
+    <!-- Step 4: Game-Night Command Center (Sideways Traffic Gateway) -->
+    <div id="teamCommandCenter" class="p-4 sm:p-5 rounded-xl border border-white/10 bg-slate-950/90 space-y-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-3">
+        <div class="flex items-center gap-3">
+          <div id="ctaTeamColorBar" class="w-2.5 h-10 rounded-full bg-[#AF1E2D] transition-colors"></div>
+          <div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-bold flex items-center gap-1.5">
+              <i class="fa-solid fa-hockey-puck text-amber-400"></i>
+              <span>Upcoming Matchup &amp; Broadcast Hub</span>
+            </div>
+            <h3 id="ctaTeamName" class="text-base sm:text-lg font-bold text-white">Montreal Canadiens Broadcast Guide</h3>
+          </div>
+        </div>
+        <div id="ctaGameStatusBadge" class="self-start sm:self-auto text-[11px] px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-semibold flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span id="ctaGameDateBadge">Tonight &bull; 8:00 PM ET</span>
+        </div>
+      </div>
+
+      <!-- Matchup Details Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+        <div class="p-3 rounded-lg bg-slate-900 border border-white/5 space-y-1">
+          <span class="text-slate-400 text-[11px] block">Next Scheduled Matchup</span>
+          <div id="ctaMatchupText" class="font-bold text-white text-sm truncate">@ Blackhawks (Chicago Blackhawks)</div>
+          <div id="ctaMatchupTime" class="text-slate-400 text-[11px] truncate">Fri, Oct 23 &bull; United Center</div>
+        </div>
+
+        <div class="p-3 rounded-lg bg-slate-900 border border-white/5 space-y-1">
+          <span class="text-slate-400 text-[11px] block">TV / Streaming Networks</span>
+          <div id="ctaNetworkText" class="font-bold text-rose-400 text-sm truncate">TSN2 (English)</div>
+          <div id="ctaNetworkFrText" class="text-slate-400 text-[11px] truncate">RDS (French)</div>
+        </div>
+
+        <div class="p-3 rounded-lg bg-slate-900 border border-white/5 space-y-1">
+          <span class="text-slate-400 text-[11px] block">Broadcast Rights Type</span>
+          <div id="ctaRightsTypeText" class="font-bold text-amber-300 text-sm truncate">Regional Broadcast (Geofenced)</div>
+          <div id="ctaRightsDetailText" class="text-slate-400 text-[11px] truncate">Restricted to Montreal Canadiens home territory</div>
+        </div>
+      </div>
+
+      <!-- Prominent Primary Action Button -->
+      <div class="pt-1">
+        <a id="ctaTeamPrimaryBtn" href="/montreal/" data-umami-event="sideways-team-cta-click" data-umami-event-team="montreal" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs sm:text-sm shadow-lg transition flex items-center justify-center gap-2 group">
+          <span id="ctaPrimaryBtnLabel">Open Montreal Canadiens Live Guide &amp; Blackout Schedule</span>
+          <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-0.5"></i>
+        </a>
+      </div>
+
+      <!-- Quick 7-Team Switcher Bar -->
+      <div class="pt-2 border-t border-white/10">
+        <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-2 flex items-center justify-between">
+          <span>Jump directly to another Canadian team guide:</span>
+          <span class="text-[10px] text-slate-400 lowercase font-normal">all 7 canadian teams</span>
+        </div>
+        <div class="flex flex-wrap gap-1.5" id="quickTeamPillBar">
+          <a href="/montreal/" data-team="MTL" class="team-quick-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition flex items-center gap-1.5 bg-sky-500/20 text-sky-200 border-sky-400 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#AF1E2D]"></span>
+            <span>Canadiens (MTL)</span>
+          </a>
+          <a href="/toronto/" data-team="TOR" class="team-quick-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition flex items-center gap-1.5 bg-slate-900 text-slate-300 border-white/10 hover:border-white/30">
+            <span class="w-2 h-2 rounded-full bg-[#00205B]"></span>
+            <span>Maple Leafs (TOR)</span>
+          </a>
+          <a href="/ottawa/" data-team="OTT" class="team-quick-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition flex items-center gap-1.5 bg-slate-900 text-slate-300 border-white/10 hover:border-white/30">
+            <span class="w-2 h-2 rounded-full bg-[#C8102E]"></span>
+            <span>Senators (OTT)</span>
+          </a>
+          <a href="/winnipeg/" data-team="WPG" class="team-quick-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition flex items-center gap-1.5 bg-slate-900 text-slate-300 border-white/10 hover:border-white/30">
+            <span class="w-2 h-2 rounded-full bg-[#041E42]"></span>
+            <span>Jets (WPG)</span>
+          </a>
+          <a href="/edmonton/" data-team="EDM" class="team-quick-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition flex items-center gap-1.5 bg-slate-900 text-slate-300 border-white/10 hover:border-white/30">
+            <span class="w-2 h-2 rounded-full bg-[#FF4C00]"></span>
+            <span>Oilers (EDM)</span>
+          </a>
+          <a href="/calgary/" data-team="CGY" class="team-quick-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition flex items-center gap-1.5 bg-slate-900 text-slate-300 border-white/10 hover:border-white/30">
+            <span class="w-2 h-2 rounded-full bg-[#C8102E]"></span>
+            <span>Flames (CGY)</span>
+          </a>
+          <a href="/vancouver/" data-team="VAN" class="team-quick-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition flex items-center gap-1.5 bg-slate-900 text-slate-300 border-white/10 hover:border-white/30">
+            <span class="w-2 h-2 rounded-full bg-[#00843D]"></span>
+            <span>Canucks (VAN)</span>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -909,6 +1025,7 @@ const methodologyBodyHtml = `
     if (!btn) return;
 
     var detectedData = null;
+    var UPCOMING_MATCHES = ${JSON.stringify(upcomingMatchesByTeam)};
 
     var TEAM_DATA = {
       'MTL': {
@@ -1067,6 +1184,7 @@ const methodologyBodyHtml = `
     var teamSelect = document.getElementById('userTeamSelect');
     if (teamSelect) {
       teamSelect.addEventListener('change', function() {
+        updateTeamCta(teamSelect.value);
         renderVerdict(true);
       });
     }
@@ -1184,6 +1302,85 @@ const methodologyBodyHtml = `
         '</p>';
       }
     }
+
+    function updateTeamCta(teamId) {
+      var match = UPCOMING_MATCHES[teamId] || UPCOMING_MATCHES['MTL'];
+      var team = TEAM_DATA[teamId] || TEAM_DATA['MTL'];
+      if (!match || !team) return;
+
+      var nameEl = document.getElementById('ctaTeamName');
+      var badgeEl = document.getElementById('ctaGameDateBadge');
+      var matchupEl = document.getElementById('ctaMatchupText');
+      var venueEl = document.getElementById('ctaMatchupTime');
+      var netEl = document.getElementById('ctaNetworkText');
+      var netFrEl = document.getElementById('ctaNetworkFrText');
+      var rightsEl = document.getElementById('ctaRightsTypeText');
+      var rightsDetailEl = document.getElementById('ctaRightsDetailText');
+      var btnEl = document.getElementById('ctaTeamPrimaryBtn');
+      var btnLabelEl = document.getElementById('ctaPrimaryBtnLabel');
+      var barEl = document.getElementById('ctaTeamColorBar');
+
+      if (nameEl) nameEl.textContent = team.name + ' Broadcast Guide';
+      if (badgeEl) {
+        badgeEl.textContent = (match.isToday ? 'Tonight • ' : 'Next: ') + match.date + ' • ' + match.time + ' ET';
+      }
+      if (matchupEl) matchupEl.textContent = match.vs + ' (' + match.oppName + ')';
+      if (venueEl) venueEl.textContent = match.date + ' • ' + match.venue;
+      if (netEl) netEl.textContent = match.netEN + ' (English)';
+      if (netFrEl) netFrEl.textContent = match.netFR !== '—' ? match.netFR + ' (French)' : 'No French regional broadcast';
+
+      if (rightsEl) {
+        rightsEl.textContent = match.typeEN === 'regional' ? 'Regional Broadcast (Geofenced)' : 'National Broadcast (No Blackout)';
+        rightsEl.className = 'font-bold text-sm truncate ' + (match.typeEN === 'regional' ? 'text-amber-400' : 'text-emerald-400');
+      }
+      if (rightsDetailEl) {
+        rightsDetailEl.textContent = match.typeEN === 'regional' ?
+          ('Restricted to ' + team.name + ' home broadcast territory') :
+          'Airs nationwide across Canada on ' + match.netEN;
+      }
+
+      if (btnEl) {
+        btnEl.href = '/' + team.dir + '/';
+        btnEl.setAttribute('data-umami-event-team', team.dir);
+      }
+      if (btnLabelEl) {
+        btnLabelEl.textContent = 'Open ' + team.name + ' Live Guide & Blackout Schedule';
+      }
+      if (barEl) {
+        barEl.style.backgroundColor = match.primaryColor;
+      }
+
+      var pills = document.querySelectorAll('.team-quick-pill');
+      for (var pIdx = 0; pIdx < pills.length; pIdx++) {
+        var p = pills[pIdx];
+        var pTeam = p.getAttribute('data-team');
+        if (pTeam === teamId) {
+          p.className = 'team-quick-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition flex items-center gap-1.5 bg-sky-500/20 text-sky-200 border-sky-400 shadow-sm';
+        } else {
+          p.className = 'team-quick-pill px-3 py-1.5 rounded-lg text-xs font-semibold border transition flex items-center gap-1.5 bg-slate-900 text-slate-300 border-white/10 hover:border-white/30';
+        }
+      }
+    }
+
+    var pills = document.querySelectorAll('.team-quick-pill');
+    for (var i = 0; i < pills.length; i++) {
+      (function(pill) {
+        pill.addEventListener('click', function(e) {
+          if (!e.ctrlKey && !e.metaKey && !e.shiftKey) {
+            e.preventDefault();
+            var tId = pill.getAttribute('data-team');
+            if (teamSelect) {
+              teamSelect.value = tId;
+            }
+            updateTeamCta(tId);
+            renderVerdict(true);
+          }
+        });
+      })(pills[i]);
+    }
+
+    // Initialize team CTA on load
+    updateTeamCta(teamSelect ? teamSelect.value : 'MTL');
 
     // Do not auto-scan on page load: user must explicitly click "Scan My Connection"
   })();

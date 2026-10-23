@@ -299,6 +299,21 @@ test('How Blackouts Work: Diagnostic tool awaits user click, updates territory o
   const verdictText = await page.locator('#diagnosticVerdictBox').textContent();
   expect(verdictText).toContain('LOCATION MISMATCH: Your IP (Toronto, Ontario) is OUTSIDE the Montreal Canadiens Territory');
   expect(verdictText).toContain('Sportsnet+ Premium');
+
+  // Verify Team Command Center CTA card updates and links directly to team guide
+  expect(await page.locator('#ctaTeamName').textContent()).toContain('Montreal Canadiens');
+  expect(await page.locator('#ctaTeamPrimaryBtn').getAttribute('href')).toBe('/montreal/');
+  expect(await page.locator('#ctaMatchupText').textContent()).toContain('Blackhawks');
+
+  // Clicking a quick-switcher pill updates team card without page reload
+  await page.locator('.team-quick-pill[data-team="TOR"]').click();
+  expect(await page.locator('#userTeamSelect').inputValue()).toBe('TOR');
+  expect(await page.locator('#ctaTeamName').textContent()).toContain('Toronto Maple Leafs');
+  expect(await page.locator('#ctaTeamPrimaryBtn').getAttribute('href')).toBe('/toronto/');
+  expect(await page.locator('#ctaPrimaryBtnLabel').textContent()).toContain('Toronto Maple Leafs');
+  expect(await page.locator('#teamMarketText').textContent()).toContain('Ontario (West of Belleville)');
+  // Verdict updates to match
+  expect(await page.locator('#diagnosticVerdictBox').textContent()).toContain('LOCATION MATCH: Your IP (Toronto, Ontario) is INSIDE the Toronto Maple Leafs Territory');
 });
 
 
