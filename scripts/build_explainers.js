@@ -121,10 +121,30 @@ function renderFaqHtml(faqs) {
   `).join('\n');
 }
 
+const ALL_GUIDES = [
+  { slug: 'sportsnet-plus-blackout-rules', title: 'Sportsnet+ Blackout Rules' },
+  { slug: 'tsn-hockey-blackout-rules', title: 'TSN Blackout Rules' },
+  { slug: 'prime-hockey-schedule-canada', title: 'Prime Video Hockey Schedule' },
+  { slug: 'rds-vs-tva-sports-blackouts', title: 'RDS vs. TVA Sports Rules' },
+  { slug: 'how-blackouts-work', title: 'Territory Map & Methodology' }
+];
+
+function renderRelatedGuidesHtml(currentSlug) {
+  return ALL_GUIDES
+    .filter(g => g.slug !== currentSlug)
+    .map(g => `
+      <a href="https://hockeyblackouts.ca/${g.slug}/" class="p-3 rounded-xl bg-slate-900 border border-white/10 hover:border-[#AF1E2D]/60 transition flex items-center justify-between text-slate-200 font-semibold">
+        <span>${g.title}</span>
+        <i class="fa-solid fa-chevron-right text-[10px] text-slate-500"></i>
+      </a>
+    `).join('\n');
+}
+
 function writeExplainerPage(config) {
   const canonicalUrl = `https://hockeyblackouts.ca/${config.slug}/`;
   const schemaJson = buildSchema(config.title, config.description, canonicalUrl, config.faqs);
   const faqHtml = renderFaqHtml(config.faqs);
+  const relatedGuidesHtml = renderRelatedGuidesHtml(config.slug);
 
   let html = templateHtml;
   html = html.replace(/\{\{PAGE_TITLE\}\}/g, config.title);
@@ -139,6 +159,7 @@ function writeExplainerPage(config) {
   html = html.replace(/\{\{HERO_SUBTITLE\}\}/g, config.subtitle);
   html = html.replace(/\{\{MAIN_BODY_HTML\}\}/g, config.bodyHtml);
   html = html.replace(/\{\{FAQ_CONTENT_HTML\}\}/g, faqHtml);
+  html = html.replace(/\{\{RELATED_GUIDES_HTML\}\}/g, relatedGuidesHtml);
 
   const outDir = path.join(BUILD_DIR, config.slug);
   fs.mkdirSync(outDir, { recursive: true });
@@ -613,4 +634,156 @@ writeExplainerPage({
   ]
 });
 
-console.log('✅ Generated 4 evergreen explainer & methodology pages.');
+// ============================================================================
+// 5. TSN HOCKEY BLACKOUT RULES EXPLAINED
+// ============================================================================
+const tsnTeamRows = teamDatasets.map(d => {
+  const t = d.team;
+  const dir = TEAM_DIRS[t.id];
+  const hasTsnRights = ['MTL', 'OTT', 'TOR', 'WPG'].includes(t.id);
+  const tsnChannel = t.id === 'MTL' ? 'TSN2' : t.id === 'OTT' ? 'TSN5' : t.id === 'TOR' ? 'TSN4' : t.id === 'WPG' ? 'TSN3' : 'None';
+
+  // Only calculate TSN regional count if team actually uses TSN as their home regional carrier
+  const tsnRegGames = hasTsnRights ? d.schedule.filter(g => g.typeEN === 'regional' && g.netEN && g.netEN.includes(tsnChannel)).length : 0;
+  const snRegGames = d.schedule.filter(g => g.typeEN === 'regional' && g.netEN && g.netEN.includes('Sportsnet')).length;
+
+  let inMarketCell = '';
+  let oomCell = '';
+
+  if (hasTsnRights) {
+    inMarketCell = `<span class="font-semibold text-emerald-400">${tsnRegGames} games</span> on <span class="font-bold text-white">${tsnChannel}</span>`;
+    oomCell = `<span class="text-rose-400 font-semibold">Blacked Out</span> <span class="text-slate-400 text-[11px] block sm:inline">(Watch via Sportsnet+ Premium)</span>`;
+  } else {
+    inMarketCell = `<span class="text-slate-400">0 (Sportsnet holds 100%)</span>`;
+    oomCell = `<span class="text-slate-500">—</span>`;
+  }
+
+  return `
+    <tr class="border-b border-white/5 hover:bg-white/[0.02] transition">
+      <td class="py-3 px-4 font-bold text-white">
+        <a href="https://hockeyblackouts.ca/${dir}/" class="hover:text-rose-400 hover:underline flex items-center gap-1.5">
+          <span>${t.name}</span>
+          <i class="fa-solid fa-chevron-right text-[9px] text-slate-500"></i>
+        </a>
+      </td>
+      <td class="py-3 px-4 text-center font-medium">${tsnChannel !== 'None' ? `<span class="px-2 py-0.5 rounded bg-red-500/10 text-red-400 border border-red-500/20 font-bold">${tsnChannel}</span>` : '<span class="text-slate-500">—</span>'}</td>
+      <td class="py-3 px-4 text-center">${inMarketCell}</td>
+      <td class="py-3 px-4 text-slate-300 text-xs">${t.marketRegion.description}</td>
+      <td class="py-3 px-4 text-center">${oomCell}</td>
+    </tr>
+  `;
+}).join('\n');
+
+const tsnBodyHtml = `
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="bg-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-3">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-bold text-white">TSN Feeds (TSN1–TSN5) & Cable</h2>
+        <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">Regional Rights Only</span>
+      </div>
+      <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+        Every NHL game shown on TSN is a <strong>regional broadcast</strong>. TSN holds zero English national rights in Canada (no Saturday night games, no Stanley Cup Playoffs). Broadcast rights are strictly geofenced to individual team markets:
+      </p>
+      <ul class="space-y-2 text-xs text-slate-300">
+        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i><span><strong>TSN2 (Montreal Canadiens):</strong> 50 regional games. Unlocked ONLY in Quebec, Atlantic Canada, and Eastern Ontario (east of Belleville).</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i><span><strong>TSN5 (Ottawa Senators):</strong> 50 regional games. Unlocked ONLY in Eastern Ontario, Quebec, and Atlantic Canada.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i><span><strong>TSN4 (Toronto Maple Leafs):</strong> 27 regional games. Unlocked ONLY in Ontario west of Belleville. (Sportsnet Ontario carries the other half of Toronto's regional slate).</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i><span><strong>TSN3 (Winnipeg Jets):</strong> 50 regional games. Unlocked ONLY in Manitoba, Saskatchewan, Northwest Ontario, Nunavut, and NWT.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-ban text-rose-400 mt-1"></i><span><strong>Out-of-Market Blackout Wall:</strong> If you are outside a team's official territory, that TSN regional channel is blacked out on cable and TSN streaming feeds.</span></li>
+      </ul>
+    </div>
+
+    <div class="bg-slate-900 border border-rose-500/30 rounded-2xl p-5 sm:p-6 space-y-3">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-bold text-white">The "TSN+" Trap & Out-of-Market Reality</h2>
+        <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30">No Out-of-Market NHL</span>
+      </div>
+      <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+        Many cord-cutters subscribe to TSN or the TSN+ streaming add-on hoping to stream their out-of-market team. That setup does not work:
+      </p>
+      <ul class="space-y-2 text-xs text-slate-300">
+        <li class="flex items-start gap-2"><i class="fa-solid fa-ban text-rose-400 mt-1"></i><span><strong>TSN+ Has Zero Out-of-Market NHL:</strong> TSN+ carries bonus streams for PGA Tour golf, tennis courts, and NCAA sports. It does not carry out-of-market NHL games and does not remove blackouts.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-ban text-rose-400 mt-1"></i><span><strong>TSN Direct Geofencing:</strong> Subscribing to TSN directly online checks your device's physical IP address. A subscriber in Toronto gets the exact same TSN2 blackout as a cable customer.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i><span><strong>The Real Fix (Sportsnet+ Premium):</strong> Rogers owns national out-of-market streaming rights in Canada. If you want to watch the Canadiens in Toronto, the Jets in Calgary, or the Sens in Vancouver, you need <strong>Sportsnet+ Premium</strong> (or NHL Centre Ice), which carries TSN's regional broadcast out-of-market.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bg-slate-900 border border-amber-500/30 rounded-2xl p-5 sm:p-6 space-y-3 shadow-xl">
+    <h2 class="text-base sm:text-lg font-bold text-amber-400 flex items-center gap-2.5">
+      <i class="fa-solid fa-circle-exclamation text-lg"></i>
+      <span>The Toronto Habs Fan Dilemma: "I have TSN, so why is the game blacked out?"</span>
+    </h2>
+    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+      It is one of the most common frustrations in Canadian sports: you buy a TSN subscription, see the Montreal Canadiens playing on TSN2, click the channel, and run straight into a blackout screen.
+    </p>
+    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+      Why does the game appear on your TV guide in the first place? TSN is sold across Canada as a five-feed bundle (TSN1 through TSN5). Because cable providers and the TSN app distribute all five channel guides nationwide, Habs games on TSN2 appear right in your electronic program guide in Toronto, Calgary, or Vancouver. But the moment you click play, postal code and IP geofences verify your location and block the video feed.
+    </p>
+    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+      Under NHL territorial broadcast bylaws, TSN only purchased the regional rights to show Canadiens games to fans living inside Montreal's home market (Quebec, Atlantic Canada, and Eastern Ontario). When you tune in from Toronto, you are physically inside Maple Leafs territory. TSN is legally prohibited from transmitting the Montreal feed to your screen.
+    </p>
+    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+      To watch those 50 Habs games in Toronto, you do not need TSN—you need <strong>Sportsnet+ Premium</strong> (or digital cable NHL Centre Ice). Rogers pays the NHL for national out-of-market redistribution rights. In one of Canadian media's great ironies, Rogers takes Bell's regional TSN2 feed—complete with TSN's own broadcast crew of Bryan Mudryk and Craig Button—and streams it directly through the Sportsnet+ app to out-of-market subscribers.
+    </p>
+  </section>
+
+  <section class="bg-slate-900 border border-white/10 rounded-2xl overflow-hidden shadow-xl">
+    <div class="p-5 sm:p-6 border-b border-white/10">
+      <h2 class="text-base sm:text-lg font-bold text-white">2026–27 Canadian Team Breakdown on TSN (84-Game Schedule)</h2>
+      <p class="text-xs text-slate-400 mt-1">Programmatically calculated across all 7 Canadian franchises:</p>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left text-xs border-collapse">
+        <thead class="bg-slate-950/90 text-slate-400 uppercase tracking-wider text-[11px] border-b border-white/10">
+          <tr>
+            <th class="py-3 px-4">Team</th>
+            <th class="py-3 px-4 text-center">TSN Channel</th>
+            <th class="py-3 px-4 text-center">Regional Games</th>
+            <th class="py-3 px-4">Designated In-Market Territory</th>
+            <th class="py-3 px-4 text-center">Out-of-Market Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${tsnTeamRows}
+        </tbody>
+      </table>
+    </div>
+  </section>
+`;
+
+writeExplainerPage({
+  slug: 'tsn-hockey-blackout-rules',
+  title: 'TSN Hockey Blackout Rules Explained: Channels & Regions (2026–27)',
+  description: 'Why is your hockey game blacked out on TSN? Territory rules for TSN2, TSN3, TSN4, TSN5, the TSN+ trap, and how to watch out-of-market.',
+  breadcrumb: 'TSN Blackout Rules',
+  badgeIcon: 'fa-tv',
+  badgeLabel: 'Regional Channel Breakdown',
+  h1: 'TSN Hockey Blackout Rules Explained: Channels, Regions & TSN+ (2026–27)',
+  subtitle: 'Why regional hockey games get blacked out on TSN feeds, how territory rules divide TSN2, TSN3, TSN4, and TSN5, and why TSN+ will not unlock out-of-market games.',
+  bodyHtml: tsnBodyHtml,
+  faqs: [
+    {
+      q: 'Why is the Montreal Canadiens game blacked out on TSN if I live in Toronto?',
+      aPlain: 'TSN only holds regional broadcast rights for the Canadiens on TSN2, which are legally restricted to Quebec, Atlantic Canada, and Eastern Ontario (east of Belleville). Toronto is in the Maple Leafs broadcast zone. Under NHL agreements, TSN must black out TSN2 Canadiens broadcasts to viewers in Toronto and Western Canada. To watch in Toronto, you need Sportsnet+ Premium or NHL Centre Ice.'
+    },
+    {
+      q: 'Does a TSN+ streaming subscription bypass NHL regional blackouts?',
+      aPlain: 'No. TSN+ is an add-on streaming product that carries bonus coverage for golf, tennis, and auto racing. It does not carry out-of-market NHL games or remove regional blackouts. A direct TSN digital subscription only provides standard linear TSN feeds, which remain geofenced to each team\'s local territory.'
+    },
+    {
+      q: 'Does TSN broadcast any national NHL games or Stanley Cup Playoff games?',
+      aPlain: 'No. In English, national broadcast rights (including Saturday night Hockey Night in Canada and the entire Stanley Cup Playoffs) belong exclusively to Rogers Sportsnet, while Monday and Wednesday national regular-season games stream on Amazon Prime Video. Every single NHL game shown on TSN is a regional broadcast.'
+    },
+    {
+      q: 'Why are Winnipeg Jets games blacked out on TSN3 in Ontario and Western Canada?',
+      aPlain: 'TSN3\'s regional feed for the Jets is geofenced to Manitoba, Saskatchewan, Northwest Ontario, Nunavut, and the Northwest Territories. Viewers in Ontario (outside Thunder Bay and Kenora), Alberta, BC, Quebec, and Atlantic Canada will find TSN3 blacked out during Jets games and need Sportsnet+ Premium to watch.'
+    },
+    {
+      q: 'Can I watch Toronto Maple Leafs games on TSN4 if I live in Ottawa or Montreal?',
+      aPlain: 'No. TSN4 only holds regional rights to 27 Maple Leafs games within Ontario west of Belleville. Viewers in Ottawa, Quebec, and Eastern Canada fall into the Senators and Canadiens broadcast zone, so Leafs games on TSN4 are blacked out. You can watch them using Sportsnet+ Premium.'
+    }
+  ]
+});
+
+console.log('✅ Generated 5 evergreen explainer & methodology pages.');

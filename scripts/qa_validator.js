@@ -20,7 +20,7 @@ function validateHtml(filePath) {
     }
   }
 
-  const EXPLAINER_SLUGS = ['sportsnet-plus-blackout-rules', 'prime-hockey-schedule-canada', 'rds-vs-tva-sports-blackouts', 'how-blackouts-work'];
+  const EXPLAINER_SLUGS = ['sportsnet-plus-blackout-rules', 'prime-hockey-schedule-canada', 'rds-vs-tva-sports-blackouts', 'how-blackouts-work', 'tsn-hockey-blackout-rules'];
   const isRedirect = content.includes('http-equiv="refresh"');
   const isSplash = filePath.endsWith('build/index.html');
   const isGamePage = filePath.includes('/game/');
@@ -376,7 +376,8 @@ const requiredExplainers = [
   'sportsnet-plus-blackout-rules',
   'prime-hockey-schedule-canada',
   'rds-vs-tva-sports-blackouts',
-  'how-blackouts-work'
+  'how-blackouts-work',
+  'tsn-hockey-blackout-rules'
 ];
 const masterSitemapPath = path.join(buildDir, 'sitemap.xml');
 const masterSitemapContent = fs.existsSync(masterSitemapPath) ? fs.readFileSync(masterSitemapPath, 'utf-8') : '';

@@ -196,7 +196,8 @@ const explainerSlugs = [
   'sportsnet-plus-blackout-rules',
   'prime-hockey-schedule-canada',
   'rds-vs-tva-sports-blackouts',
-  'how-blackouts-work'
+  'how-blackouts-work',
+  'tsn-hockey-blackout-rules'
 ];
 explainerSlugs.forEach(slug => {
   masterSitemap += `  <url>
