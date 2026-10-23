@@ -726,7 +726,7 @@ const methodologyBodyHtml = `
         </div>
         <h2 class="text-base sm:text-lg font-bold text-white mt-1">Blackout IP Inspector: Test Your Streaming Geolocation</h2>
       </div>
-      <button id="runIpDiagnosticBtn" class="px-4 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs shadow-md transition whitespace-nowrap flex items-center justify-center gap-2">
+      <button id="runIpDiagnosticBtn" data-umami-event="ip-inspector-check" class="px-4 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs shadow-md transition whitespace-nowrap flex items-center justify-center gap-2">
         <i class="fa-solid fa-satellite-dish"></i>
         <span>Check My Connection</span>
       </button>
@@ -868,6 +868,13 @@ const methodologyBodyHtml = `
         return userRegion.toLowerCase().indexOf(r.toLowerCase()) !== -1 ||
                userRegionCode.toLowerCase() === r.toLowerCase();
       });
+
+      if (window.umami && typeof window.umami.track === 'function') {
+        window.umami.track('ip-inspector-verdict', {
+          status: isMatch ? 'match' : 'mismatch',
+          team: teamId
+        });
+      }
 
       var verdictBox = document.getElementById('diagnosticVerdictBox');
 
