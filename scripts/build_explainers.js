@@ -644,82 +644,71 @@ const methodologyBodyHtml = `
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-4">
       <div>
         <div class="flex items-center gap-2">
-          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30">Instant Diagnostic Tool</span>
-          <span class="text-xs text-slate-400">Game-Night Triage</span>
+          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30">Live Connection Inspector</span>
+          <span class="text-xs text-slate-400">ISP Mismatch Detector</span>
         </div>
-        <h2 class="text-base sm:text-lg font-bold text-white mt-1">Blackout Triage: Test Your Connection & Rights</h2>
+        <h2 class="text-base sm:text-lg font-bold text-white mt-1">Blackout IP Inspector: Check for Location Mismatches</h2>
       </div>
       <button id="runIpDiagnosticBtn" data-umami-event="ip-inspector-check" class="px-4 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs shadow-md transition whitespace-nowrap flex items-center justify-center gap-2">
         <i class="fa-solid fa-satellite-dish"></i>
-        <span>Check My Connection</span>
+        <span>Scan My Connection</span>
       </button>
     </div>
 
-    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-      Sitting down at 7:05 PM with a black screen? Select who you are trying to watch and where you are watching from to instantly diagnose whether you hit an NHL contract wall or an ISP geolocation glitch.
-    </p>
+    <!-- Step 1: Select Team to Watch -->
+    <div class="p-4 rounded-xl bg-slate-950 border border-white/10 space-y-1.5">
+      <label for="userTeamSelect" class="block text-xs font-bold text-white">
+        Which team are you trying to watch right now?
+      </label>
+      <select id="userTeamSelect" class="w-full bg-slate-900 border border-white/20 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-sky-500">
+        <option value="MTL" selected>Montreal Canadiens (TSN2 / RDS)</option>
+        <option value="OTT">Ottawa Senators (TSN5 / RDS)</option>
+        <option value="TOR">Toronto Maple Leafs (TSN4 / Sportsnet Ontario)</option>
+        <option value="WPG">Winnipeg Jets (TSN3)</option>
+        <option value="EDM">Edmonton Oilers (Sportsnet West)</option>
+        <option value="CGY">Calgary Flames (Sportsnet West)</option>
+        <option value="VAN">Vancouver Canucks (Sportsnet Pacific)</option>
+      </select>
+    </div>
 
-    <!-- Team & Physical Location Selectors (Always Visible) -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-xl bg-slate-950 border border-white/10">
-      <div class="space-y-1.5">
-        <label for="userTeamSelect" class="block text-xs font-bold text-slate-200">
-          1. Team You Want to Watch:
-        </label>
-        <select id="userTeamSelect" class="w-full bg-slate-900 border border-white/20 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-sky-500">
-          <option value="MTL" selected>Montreal Canadiens</option>
-          <option value="OTT">Ottawa Senators</option>
-          <option value="TOR">Toronto Maple Leafs</option>
-          <option value="WPG">Winnipeg Jets</option>
-          <option value="EDM">Edmonton Oilers</option>
-          <option value="CGY">Calgary Flames</option>
-          <option value="VAN">Vancouver Canucks</option>
-        </select>
-        <span id="teamTerritoryHint" class="text-[10px] text-slate-400 block">Home Zone: QC, Atlantic Canada, Eastern ON</span>
+    <!-- Step 2: Side-by-Side Connection vs. Broadcast Territory Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <!-- Left: Detected Connection -->
+      <div class="p-4 rounded-xl bg-slate-950 border border-white/10 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-slate-400 font-bold text-[11px] uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-network-wired text-sky-400"></i>
+            <span>Your Detected Connection</span>
+          </span>
+          <span id="connectionBadge" class="text-[10px] px-2 py-0.5 rounded bg-sky-500/10 text-sky-300 border border-sky-500/20 font-medium">Live Telemetry</span>
+        </div>
+        <div class="space-y-1 text-xs">
+          <div><span class="text-slate-400">IP Location:</span> <strong id="detectedLocation" class="text-white">Scanning...</strong></div>
+          <div><span class="text-slate-400">Provider (ISP):</span> <strong id="detectedIsp" class="text-sky-300">Scanning...</strong></div>
+          <div><span class="text-slate-400">Public IP:</span> <span id="detectedIp" class="text-slate-400 font-mono text-[11px]">—</span></div>
+        </div>
       </div>
 
-      <div class="space-y-1.5">
-        <label for="userLocationSelect" class="block text-xs font-bold text-slate-200">
-          2. Where You Physically Live:
-        </label>
-        <select id="userLocationSelect" class="w-full bg-slate-900 border border-white/20 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-sky-500">
-          <option value="on_west" selected>Ontario (Toronto, GTA & Western ON)</option>
-          <option value="on_east">Ontario (Ottawa & Eastern ON)</option>
-          <option value="on_overlap">Ontario Overlap (Belleville–Kingston)</option>
-          <option value="qc">Quebec</option>
-          <option value="atl">Atlantic Canada (NB, NS, PEI, NL)</option>
-          <option value="mb">Manitoba</option>
-          <option value="sk">Saskatchewan</option>
-          <option value="ab">Alberta, NWT & Nunavut</option>
-          <option value="bc">British Columbia & Yukon</option>
-          <option value="nw_on">Northwestern Ontario (Thunder Bay / Kenora)</option>
-        </select>
-        <span class="text-[10px] text-slate-400 block">Your physical living room location</span>
+      <!-- Right: Team's Official Broadcast Territory -->
+      <div class="p-4 rounded-xl bg-slate-950 border border-white/10 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-slate-400 font-bold text-[11px] uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-solid fa-map-location-dot text-[#AF1E2D]"></i>
+            <span>Designated Broadcast Territory</span>
+          </span>
+          <span class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-white/10">CRTC Geofence</span>
+        </div>
+        <div class="space-y-1 text-xs">
+          <div><span class="text-slate-400">Official Home Zone:</span> <strong id="teamMarketText" class="text-white">Quebec, Atlantic Canada, Eastern Ontario</strong></div>
+          <div><span class="text-slate-400">Home Regional Networks:</span> <strong id="teamCarrierText" class="text-rose-400">TSN2 / RDS</strong></div>
+          <div class="text-[11px] text-slate-400">Games restricted to viewers inside this zone.</div>
+        </div>
       </div>
     </div>
 
-    <!-- Diagnostic Verdict Box (Always visible, live updating) -->
-    <div id="diagnosticVerdictBox" class="p-4 rounded-xl border text-xs leading-relaxed">
+    <!-- Step 3: Prominent Verdict & Mismatch Callout -->
+    <div id="diagnosticVerdictBox" class="p-4 sm:p-5 rounded-xl border text-xs leading-relaxed space-y-3">
       <!-- Dynamically filled by script -->
-    </div>
-
-    <!-- Detected IP telemetry cards (Revealed upon clicking "Check My Connection") -->
-    <div id="ipDiagnosticInitial" class="p-3 rounded-xl bg-slate-950/50 border border-white/5 text-center text-xs text-slate-400">
-      Click <strong>"Check My Connection"</strong> above to verify if your internet provider (Starlink, 5G, or cable) is misrouting your public IP address.
-    </div>
-
-    <div id="ipDiagnosticResult" class="hidden grid grid-cols-1 sm:grid-cols-3 gap-3">
-      <div class="p-3 rounded-xl bg-slate-950/80 border border-white/5">
-        <span class="text-[11px] text-slate-400 block">Detected Public IP</span>
-        <span id="detectedIp" class="text-sm font-mono font-bold text-white">—</span>
-      </div>
-      <div class="p-3 rounded-xl bg-slate-950/80 border border-white/5">
-        <span class="text-[11px] text-slate-400 block">Internet Provider (ISP)</span>
-        <span id="detectedIsp" class="text-sm font-bold text-sky-400">—</span>
-      </div>
-      <div class="p-3 rounded-xl bg-slate-950/80 border border-white/5">
-        <span class="text-[11px] text-slate-400 block">Detected Location</span>
-        <span id="detectedLocation" class="text-sm font-bold text-emerald-400">—</span>
-      </div>
     </div>
   </section>
 
@@ -1012,9 +1001,9 @@ const methodologyBodyHtml = `
       return null;
     }
 
-    btn.addEventListener('click', function() {
+    function scanConnection(isManual) {
       btn.disabled = true;
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Analyzing...</span>';
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Scanning...</span>';
 
       fetch('https://ipwho.is/')
         .then(function(r) {
@@ -1047,126 +1036,146 @@ const methodologyBodyHtml = `
           document.getElementById('detectedIp').textContent = data.ip || 'Unknown';
           document.getElementById('detectedIsp').textContent = (data.connection && data.connection.isp) || data.isp || 'Detected Provider';
           document.getElementById('detectedLocation').textContent = (data.city ? data.city + ', ' : '') + (data.region || data.country || 'Canada');
-          document.getElementById('ipDiagnosticInitial').classList.add('hidden');
-          document.getElementById('ipDiagnosticResult').classList.remove('hidden');
-
-          // Auto-sync physical location dropdown if user hasn't explicitly customized it yet
-          var ipReg = mapIpToRegionCode(data);
-          if (ipReg && !userExplicitlyChangedLocation) {
-            var locSelect = document.getElementById('userLocationSelect');
-            if (locSelect) locSelect.value = ipReg;
+          var badge = document.getElementById('connectionBadge');
+          if (badge) {
+            badge.textContent = 'Active IP Verified';
+            badge.className = 'text-[10px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 font-medium';
           }
-
-          updateVerdict();
+          renderVerdict(isManual);
         })
         .catch(function(err) {
-          document.getElementById('ipDiagnosticInitial').innerHTML = '<div class="p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-300">Unable to query your IP automatically (an ad-blocker or privacy extension may be blocking IP lookup requests). Select your living room location above to see your diagnostic verdict manually.</div>';
-          document.getElementById('ipDiagnosticResult').classList.remove('hidden');
-          updateVerdict();
+          document.getElementById('detectedLocation').textContent = 'Location Blocked (Ad-Blocker Active)';
+          document.getElementById('detectedIsp').textContent = 'Unable to query IP';
+          renderVerdict(isManual);
         })
         .finally(function() {
           btn.disabled = false;
-          btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i><span>Re-test Connection</span>';
+          btn.innerHTML = '<i class="fa-solid fa-satellite-dish"></i><span>Re-scan Connection</span>';
         });
+    }
+
+    btn.addEventListener('click', function() {
+      scanConnection(true);
     });
 
     var teamSelect = document.getElementById('userTeamSelect');
-    var locSelect = document.getElementById('userLocationSelect');
-    var userExplicitlyChangedLocation = false;
-
     if (teamSelect) {
       teamSelect.addEventListener('change', function() {
-        var teamId = teamSelect.value;
-        var hintEl = document.getElementById('teamTerritoryHint');
-        if (hintEl && TEAM_DATA[teamId]) {
-          hintEl.textContent = TEAM_DATA[teamId].marketHint;
-        }
-        updateVerdict();
+        renderVerdict(true);
       });
     }
 
-    if (locSelect) {
-      locSelect.addEventListener('change', function() {
-        userExplicitlyChangedLocation = true;
-        updateVerdict();
-      });
-    }
-
-    function updateVerdict() {
+    function renderVerdict(isManualAction) {
       var teamId = teamSelect ? teamSelect.value : 'MTL';
-      var userLoc = locSelect ? locSelect.value : 'on_west';
       var team = TEAM_DATA[teamId] || TEAM_DATA['MTL'];
       var verdictBox = document.getElementById('diagnosticVerdictBox');
       if (!verdictBox) return;
 
-      var isInMarket = team.inMarketRegions.indexOf(userLoc) !== -1;
-      var ipRegionCode = detectedData ? mapIpToRegionCode(detectedData) : null;
-      var ispName = (detectedData && detectedData.connection && detectedData.connection.isp) || (detectedData && detectedData.isp) || '';
+      // Update right-hand territory card
+      var marketEl = document.getElementById('teamMarketText');
+      var carrierEl = document.getElementById('teamCarrierText');
+      if (marketEl) marketEl.textContent = team.marketDescription;
+      if (carrierEl) carrierEl.textContent = team.primaryCarrier;
+
+      if (!detectedData) {
+        verdictBox.className = 'p-4 rounded-xl border border-sky-500/30 bg-sky-500/10 text-xs leading-relaxed space-y-2';
+        verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-sky-300"><i class="fa-solid fa-spinner fa-spin"></i><span>Scanning your connection to detect your public IP and location...</span></div>' +
+          '<p class="text-slate-300">If scanning does not complete automatically, click <strong>"Scan My Connection"</strong> above.</p>';
+        return;
+      }
+
+      var ipRegionCode = mapIpToRegionCode(detectedData);
+      var ispName = (detectedData.connection && detectedData.connection.isp) || detectedData.isp || 'your internet provider';
       var isStarlinkOrCellular = /starlink|spacex|xplor|cellular|telus mobility|rogers wireless|bell mobility/i.test(ispName);
+      var ipLocationStr = (detectedData.city ? detectedData.city + ', ' : '') + (detectedData.region || 'your area');
 
-      // Check if IP is causing a false blackout (e.g. user is physically in-market, but IP is routed out-of-market)
-      var ipMatchesInMarket = ipRegionCode ? (team.inMarketRegions.indexOf(ipRegionCode) !== -1) : isInMarket;
-      var isFalseBlackout = (isInMarket && !ipMatchesInMarket);
+      var isMatch = ipRegionCode ? (team.inMarketRegions.indexOf(ipRegionCode) !== -1) : false;
 
-      if (window.umami && typeof window.umami.track === 'function') {
+      if (isManualAction && window.umami && typeof window.umami.track === 'function') {
         window.umami.track('ip-inspector-verdict', {
-          status: isFalseBlackout ? 'false-blackout' : (isInMarket ? 'in-market' : 'out-of-market'),
+          status: isMatch ? 'match' : 'mismatch',
           team: teamId,
-          user_loc: userLoc
+          detected_region: ipRegionCode || 'unknown'
         });
       }
 
-      if (isFalseBlackout) {
-        // SCENARIO 1: False Blackout (ISP Geolocation Mismatch)
-        verdictBox.className = 'p-4 rounded-xl border border-amber-500/40 bg-amber-500/10 text-xs leading-relaxed space-y-2';
-        verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-amber-300 text-sm"><i class="fa-solid fa-triangle-exclamation"></i><span>Verdict A: False Blackout (ISP Geolocation Mismatch Detected)</span></div>' +
-          '<p class="text-slate-200">You physically live in <strong>' + REGION_NAMES[userLoc] + '</strong> (which is inside the ' + team.name + ' home broadcast territory), but your internet provider is routing your public IP to <strong>' + (detectedData.city ? detectedData.city + ', ' : '') + detectedData.region + '</strong>.</p>' +
-          '<p class="text-slate-300">' + (isStarlinkOrCellular ? 'Because you are on <strong>' + ispName + '</strong>, your traffic routes through an out-of-province ground station. Broadcasters read this out-of-market IP address and falsely lock you out of your home team feed!' : 'Broadcasters see this out-of-market IP address and mistakenly treat you as outside the team territory.') + '</p>' +
-          '<div class="pt-1 border-t border-amber-500/20 text-amber-200 space-y-1">' +
-            '<div class="font-bold">Fastest 7:05 PM Workarounds:</div>' +
-            '<ul class="list-disc pl-4 space-y-0.5 text-slate-200">' +
-              '<li><strong>Phone GPS + Cast:</strong> Open Sportsnet or TSN on your phone (which has real GPS) and AirPlay/Cast to your TV.</li>' +
-              '<li><strong>20-Minute Power Cycle:</strong> Power-cycle your satellite dish or 5G modem for 20 minutes to pull a new IP lease.</li>' +
-            '</ul>' +
-          '</div>';
-      } else if (!isInMarket) {
-        // SCENARIO 2: Out-of-Market Fan (e.g. Habs fan in Toronto)
-        verdictBox.className = 'p-4 rounded-xl border border-indigo-500/40 bg-indigo-500/10 text-xs leading-relaxed space-y-2';
-        verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-indigo-300 text-sm"><i class="fa-solid fa-globe"></i><span>Verdict B: You Are Out-of-Market for the ' + team.name + '</span></div>' +
-          '<p class="text-slate-200">You are watching from <strong>' + REGION_NAMES[userLoc] + '</strong>, which is outside the ' + team.name + ' designated home regional territory (' + team.marketDescription + ').</p>' +
-          '<p class="text-slate-300">Your connection is working accurately. <strong>This is not a technical glitch:</strong> local regional feeds on cable (' + team.primaryCarrier + ') are legally blacked out in your area to protect the local home team territory.</p>' +
-          '<div class="p-2.5 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-200 space-y-1">' +
-            '<div class="font-bold flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-sky-400"></i>How to Watch Out-of-Market:</div>' +
-            '<p class="text-[11px] text-slate-200 leading-normal">To watch out-of-market games across Canada, you need <strong>Sportsnet+ Premium</strong> ($34.99/mo) or <strong>NHL Centre Ice</strong> on digital cable. Sportsnet+ <em>Standard</em> will NOT unlock regional games outside your home market.</p>' +
+      if (!isMatch) {
+        // LOCATION MISMATCH OCCURRING
+        verdictBox.className = 'p-4 sm:p-5 rounded-xl border border-rose-500/40 bg-rose-500/10 text-xs leading-relaxed space-y-3';
+        verdictBox.innerHTML = '<div class="flex items-center justify-between gap-2 border-b border-rose-500/20 pb-2.5">' +
+          '<div class="flex items-center gap-2 font-bold text-rose-300 text-sm sm:text-base">' +
+            '<i class="fa-solid fa-triangle-exclamation text-rose-400"></i>' +
+            '<span>LOCATION MISMATCH: Your IP (' + ipLocationStr + ') is OUTSIDE the ' + team.name + ' Territory</span>' +
           '</div>' +
-          '<p class="text-slate-300 pt-1">Check the full season schedule and channel guide on our <a href="https://hockeyblackouts.ca/' + team.dir + '/" class="text-sky-400 font-bold hover:underline">' + team.name + ' Broadcast & Schedule Guide &rarr;</a></p>';
+        '</div>' +
+        '<p class="text-slate-200 leading-relaxed">' +
+          'Streaming services see your public IP as <strong>' + ipLocationStr + '</strong>. Because this connection is located outside the ' + team.name + ' home broadcast market (' + team.marketDescription + '), local regional broadcasts are geofenced and blacked out.' +
+        '</p>' +
+        '<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">' +
+          '<div class="p-3.5 rounded-lg bg-slate-950/80 border border-white/10 space-y-1.5">' +
+            '<div class="font-bold text-white flex items-center gap-1.5">' +
+              '<i class="fa-solid fa-house text-sky-400"></i>' +
+              '<span>If you actually live in ' + ipLocationStr + ':</span>' +
+            '</div>' +
+            '<p class="text-slate-300 text-[11px] leading-relaxed">' +
+              'Your connection is accurate—you are an <strong>out-of-market fan</strong>. Local cable feeds (' + team.primaryCarrier + ') are legally blacked out in your area.' +
+            '</p>' +
+            '<p class="text-sky-300 text-[11px] font-semibold pt-1">' +
+              '&rarr; To watch: You need <strong>Sportsnet+ Premium</strong> ($34.99/mo) or <strong>NHL Centre Ice</strong> on cable. (Sportsnet+ Standard will NOT work).' +
+            '</p>' +
+          '</div>' +
+          '<div class="p-3.5 rounded-lg bg-slate-950/80 border border-amber-500/30 space-y-1.5">' +
+            '<div class="font-bold text-amber-300 flex items-center gap-1.5">' +
+              '<i class="fa-solid fa-satellite-dish"></i>' +
+              '<span>If you physically live inside ' + team.name + ' territory:</span>' +
+            '</div>' +
+            '<p class="text-slate-300 text-[11px] leading-relaxed">' +
+              '<strong>You have a False Blackout!</strong> ' + (isStarlinkOrCellular ? 'Because you are on <strong>' + ispName + '</strong>, your traffic routes through an out-of-province ground station.' : 'Your internet provider is routing your IP outside your province.') + ' Broadcasters think you are in ' + ipLocationStr + ' and mistakenly block your home team!' +
+            '</p>' +
+            '<p class="text-amber-200 text-[11px] font-semibold pt-1">' +
+              '&rarr; 7:05 PM Fix: Open Sportsnet or TSN on a phone with GPS turned on, then Cast/AirPlay to your TV. Or reboot your dish/modem for 20 minutes.' +
+            '</p>' +
+          '</div>' +
+        '</div>' +
+        '<p class="text-slate-300 pt-1 text-[11px]">' +
+          'Check the full broadcast schedule on our <a href="https://hockeyblackouts.ca/' + team.dir + '/" class="text-sky-400 font-bold hover:underline">' + team.name + ' Broadcast & Schedule Guide &rarr;</a>' +
+        '</p>';
       } else {
-        // SCENARIO 3: In-Market Fan (Contract Rights Wall)
-        verdictBox.className = 'p-4 rounded-xl border border-emerald-500/40 bg-emerald-500/10 text-xs leading-relaxed space-y-2';
+        // LOCATION MATCH
+        verdictBox.className = 'p-4 sm:p-5 rounded-xl border border-emerald-500/40 bg-emerald-500/10 text-xs leading-relaxed space-y-3';
         var rightsWarning = '';
         if (team.tsnRegional && ['MTL', 'OTT', 'WPG'].indexOf(teamId) !== -1) {
-          rightsWarning = '<div class="p-2.5 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-200 space-y-1">' +
-            '<div class="font-bold flex items-center gap-1.5"><i class="fa-solid fa-triangle-exclamation"></i>The Sportsnet+ Regional Trap:</div>' +
+          rightsWarning = '<div class="p-3 rounded-lg bg-slate-950/80 border border-rose-500/30 text-rose-200 space-y-1">' +
+            '<div class="font-bold flex items-center gap-1.5 text-xs text-rose-300"><i class="fa-solid fa-triangle-exclamation"></i>The Sportsnet+ Regional Trap:</div>' +
             '<p class="text-[11px] text-slate-200 leading-normal">If you have Sportsnet+ open, this game is blacked out because <strong>' + team.primaryCarrier + '</strong> holds 100% of regional rights in your market. <strong>Do NOT click "Upgrade to Premium"</strong>—you will still be blacked out because TSN holds the rights!</p>' +
           '</div>';
         } else if (teamId === 'TOR') {
-          rightsWarning = '<div class="p-2.5 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-200 space-y-1">' +
-            '<div class="font-bold flex items-center gap-1.5"><i class="fa-solid fa-triangle-exclamation"></i>Toronto Split Rights:</div>' +
+          rightsWarning = '<div class="p-3 rounded-lg bg-slate-950/80 border border-rose-500/30 text-rose-200 space-y-1">' +
+            '<div class="font-bold flex items-center gap-1.5 text-xs text-rose-300"><i class="fa-solid fa-triangle-exclamation"></i>Toronto Split Rights:</div>' +
             '<p class="text-[11px] text-slate-200 leading-normal">26 Maple Leafs games are exclusive to <strong>TSN4</strong> in Ontario. If tonight is a TSN game, Sportsnet+ will black you out, and upgrading to Premium will not unlock it.</p>' +
           '</div>';
         } else {
           rightsWarning = '<p class="text-slate-300">If your game is blacked out on Sportsnet+, check if you are on basic Sportsnet without regional access, or if tonight is exclusive to <strong>Amazon Prime Video</strong> (Monday Night Hockey).</p>';
         }
 
-        verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-emerald-300 text-sm"><i class="fa-solid fa-circle-check"></i><span>Verdict C: You Are In-Market for the ' + team.name + '</span></div>' +
-          '<p class="text-slate-200">Your location (<strong>' + REGION_NAMES[userLoc] + '</strong>) is inside the official regional broadcast territory for the ' + team.name + '. Your connection is working properly.</p>' +
-          rightsWarning +
-          '<p class="text-slate-300 pt-1">Check the broadcast schedule and channel lineup on our <a href="https://hockeyblackouts.ca/' + team.dir + '/" class="text-sky-400 font-bold hover:underline">' + team.name + ' Schedule & Channel Guide &rarr;</a></p>';
+        verdictBox.innerHTML = '<div class="flex items-center justify-between gap-2 border-b border-emerald-500/20 pb-2.5">' +
+          '<div class="flex items-center gap-2 font-bold text-emerald-300 text-sm sm:text-base">' +
+            '<i class="fa-solid fa-circle-check text-emerald-400"></i>' +
+            '<span>LOCATION MATCH: Your IP (' + ipLocationStr + ') is INSIDE the ' + team.name + ' Territory</span>' +
+          '</div>' +
+        '</div>' +
+        '<p class="text-slate-200 leading-relaxed">' +
+          'Your connection is located inside the official designated home broadcast territory for the ' + team.name + '. <strong>This is not an ISP routing error.</strong>' +
+        '</p>' +
+        rightsWarning +
+        '<p class="text-slate-300 pt-1 text-[11px]">' +
+          'Check the broadcast schedule and channel lineup on our <a href="https://hockeyblackouts.ca/' + team.dir + '/" class="text-emerald-400 font-bold hover:underline">' + team.name + ' Schedule & Channel Guide &rarr;</a>' +
+        '</p>';
       }
     }
 
-    // Initialize initial verdict state on load
-    updateVerdict();
+    // Auto-scan on page load
+    scanConnection(false);
   })();
   </script>
 `;

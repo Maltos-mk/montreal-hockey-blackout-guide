@@ -9,7 +9,7 @@
   "scripts": {
     "build:css": "tailwindcss -i shared/input.css -o shared/tailwind.min.css --minify",
     "test": "playwright test",
-    "test:all": "bash tests/check_privacy.sh && node scripts/matrix_test.js && node scripts/qa_validator.js && npx playwright test tests/ui.spec.js tests/game_flow.spec.js"
+    "test:all": "bash tests/check_privacy.sh && node scripts/matrix_test.js && node scripts/qa_validator.js && npx playwright test tests/ui.spec.js tests/game_flow.spec.js --workers=2"
   },
   "repository": {
     "type": "git",
