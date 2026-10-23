@@ -680,12 +680,12 @@ const methodologyBodyHtml = `
             <i class="fa-solid fa-network-wired text-sky-400"></i>
             <span>Your Detected Connection</span>
           </span>
-          <span id="connectionBadge" class="text-[10px] px-2 py-0.5 rounded bg-sky-500/10 text-sky-300 border border-sky-500/20 font-medium">Live Telemetry</span>
+          <span id="connectionBadge" class="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-white/10 font-medium">Awaiting Scan</span>
         </div>
         <div class="space-y-1 text-xs">
-          <div><span class="text-slate-400">IP Location:</span> <strong id="detectedLocation" class="text-white">Scanning...</strong></div>
-          <div><span class="text-slate-400">Provider (ISP):</span> <strong id="detectedIsp" class="text-sky-300">Scanning...</strong></div>
-          <div><span class="text-slate-400">Public IP:</span> <span id="detectedIp" class="text-slate-400 font-mono text-[11px]">—</span></div>
+          <div><span class="text-slate-400">IP Location:</span> <strong id="detectedLocation" class="text-slate-300">Click &quot;Scan My Connection&quot;</strong></div>
+          <div><span class="text-slate-400">Provider (ISP):</span> <strong id="detectedIsp" class="text-slate-400">—</strong></div>
+          <div><span class="text-slate-400">Public IP:</span> <span id="detectedIp" class="text-slate-500 font-mono text-[11px]">—</span></div>
         </div>
       </div>
 
@@ -707,8 +707,14 @@ const methodologyBodyHtml = `
     </div>
 
     <!-- Step 3: Prominent Verdict & Mismatch Callout -->
-    <div id="diagnosticVerdictBox" class="p-4 sm:p-5 rounded-xl border text-xs leading-relaxed space-y-3">
-      <!-- Dynamically filled by script -->
+    <div id="diagnosticVerdictBox" class="p-4 rounded-xl border border-white/10 bg-slate-950/70 text-xs leading-relaxed space-y-2 text-slate-300">
+      <div class="flex items-center gap-2 font-bold text-white text-sm">
+        <i class="fa-solid fa-satellite-dish text-sky-400"></i>
+        <span>Ready to Test Your Geolocation</span>
+      </div>
+      <p>
+        Select the team you want to watch above, then click <strong>&quot;Scan My Connection&quot;</strong>. The tool will check your public IP address and compare it against the team&apos;s designated home broadcast territory to detect whether you are out of market, facing an ISP glitch, or hitting a broadcast rights split.
+      </p>
     </div>
   </section>
 
@@ -1078,9 +1084,14 @@ const methodologyBodyHtml = `
       if (carrierEl) carrierEl.textContent = team.primaryCarrier;
 
       if (!detectedData) {
-        verdictBox.className = 'p-4 rounded-xl border border-sky-500/30 bg-sky-500/10 text-xs leading-relaxed space-y-2';
-        verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-sky-300"><i class="fa-solid fa-spinner fa-spin"></i><span>Scanning your connection to detect your public IP and location...</span></div>' +
-          '<p class="text-slate-300">If scanning does not complete automatically, click <strong>"Scan My Connection"</strong> above.</p>';
+        verdictBox.className = 'p-4 rounded-xl border border-white/10 bg-slate-950/70 text-xs leading-relaxed space-y-2 text-slate-300';
+        verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-white text-sm">' +
+          '<i class="fa-solid fa-satellite-dish text-sky-400"></i>' +
+          '<span>Ready to Test Your Geolocation for the ' + team.name + '</span>' +
+        '</div>' +
+        '<p>' +
+          'Selected: <strong>' + team.name + '</strong> (Territory: ' + team.marketDescription + '). Click <strong>"Scan My Connection"</strong> above to test your public IP against this zone and detect any false ISP blackouts.' +
+        '</p>';
         return;
       }
 
@@ -1174,8 +1185,7 @@ const methodologyBodyHtml = `
       }
     }
 
-    // Auto-scan on page load
-    scanConnection(false);
+    // Do not auto-scan on page load: user must explicitly click "Scan My Connection"
   })();
   </script>
 `;

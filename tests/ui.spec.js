@@ -251,5 +251,56 @@ test('French Montreal Hub (/fr/montreal/): renders 100% French UI, schedule, rea
   expect((await page.locator('#kofiCalloutBtnText').textContent()).trim()).toBe('Payer une bière au dev (3 $)');
 });
 
+test('How Blackouts Work: Diagnostic tool awaits user click, updates territory on change, and detects match/mismatch', async ({ page }) => {
+  let ipFetchTriggered = false;
+  await page.route('https://ipwho.is/**', async (route) => {
+    ipFetchTriggered = true;
+    await route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      body: JSON.stringify({
+        success: true,
+        ip: '198.51.100.1',
+        city: 'Toronto',
+        region: 'Ontario',
+        region_code: 'ON',
+        connection: { isp: 'Rogers Cable' }
+      })
+    });
+  });
+
+  await page.goto('/how-blackouts-work/');
+  await page.waitForSelector('#blackout-triage');
+
+  // Verify that connection is NOT scanned automatically on load
+  expect(ipFetchTriggered).toBe(false);
+  expect(await page.locator('#connectionBadge').textContent()).toBe('Awaiting Scan');
+  expect(await page.locator('#detectedLocation').textContent()).toContain('Click "Scan My Connection"');
+
+  // Changing team dropdown updates right-hand card without scanning
+  await page.selectOption('#userTeamSelect', 'TOR');
+  expect(await page.locator('#teamMarketText').textContent()).toContain('Ontario (West of Belleville)');
+  expect(await page.locator('#diagnosticVerdictBox').textContent()).toContain('Ready to Test Your Geolocation for the Toronto Maple Leafs');
+  expect(ipFetchTriggered).toBe(false);
+
+  // User explicitly clicks "Scan My Connection"
+  await page.locator('#runIpDiagnosticBtn').click();
+  await page.waitForSelector('#diagnosticVerdictBox:has-text("LOCATION MATCH")');
+
+  expect(ipFetchTriggered).toBe(true);
+  expect(await page.locator('#connectionBadge').textContent()).toBe('Active IP Verified');
+  expect(await page.locator('#detectedLocation').textContent()).toBe('Toronto, Ontario');
+  expect(await page.locator('#detectedIsp').textContent()).toBe('Rogers Cable');
+  expect(await page.locator('#diagnosticVerdictBox').textContent()).toContain('LOCATION MATCH: Your IP (Toronto, Ontario) is INSIDE the Toronto Maple Leafs Territory');
+
+  // Changing team to Montreal Canadiens immediately flags the mismatch
+  await page.selectOption('#userTeamSelect', 'MTL');
+  await page.waitForSelector('#diagnosticVerdictBox:has-text("LOCATION MISMATCH")');
+  const verdictText = await page.locator('#diagnosticVerdictBox').textContent();
+  expect(verdictText).toContain('LOCATION MISMATCH: Your IP (Toronto, Ontario) is OUTSIDE the Montreal Canadiens Territory');
+  expect(verdictText).toContain('Sportsnet+ Premium');
+});
+
+
 
 
