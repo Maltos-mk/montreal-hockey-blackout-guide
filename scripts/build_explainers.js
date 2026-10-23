@@ -656,47 +656,69 @@ const methodologyBodyHtml = `
     </div>
 
     <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-      Sitting down at 7:05 PM with a black screen? In 5 seconds, find out whether your internet provider is routing your location incorrectly (a false blackout), or if an NHL regional broadcast contract locked you out.
+      Sitting down at 7:05 PM with a black screen? Select who you are trying to watch and where you are watching from to instantly diagnose whether you hit an NHL contract wall or an ISP geolocation glitch.
     </p>
 
-    <!-- Initial / Results State -->
-    <div id="ipDiagnosticInitial" class="p-4 rounded-xl bg-slate-950/70 border border-white/5 text-center text-xs text-slate-400">
-      Click <strong>"Check My Connection"</strong> above to detect your public IP, internet provider, and whether streaming apps can see your real location.
-    </div>
-
-    <div id="ipDiagnosticResult" class="hidden space-y-4">
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-        <div class="p-3 rounded-xl bg-slate-950/80 border border-white/5">
-          <span class="text-[11px] text-slate-400 block">Detected Public IP</span>
-          <span id="detectedIp" class="text-sm font-mono font-bold text-white">—</span>
-        </div>
-        <div class="p-3 rounded-xl bg-slate-950/80 border border-white/5">
-          <span class="text-[11px] text-slate-400 block">Internet Provider (ISP)</span>
-          <span id="detectedIsp" class="text-sm font-bold text-sky-400">—</span>
-        </div>
-        <div class="p-3 rounded-xl bg-slate-950/80 border border-white/5">
-          <span class="text-[11px] text-slate-400 block">Detected Location</span>
-          <span id="detectedLocation" class="text-sm font-bold text-emerald-400">—</span>
-        </div>
-      </div>
-
-      <div class="p-4 rounded-xl bg-slate-950 border border-white/10 space-y-3">
+    <!-- Team & Physical Location Selectors (Always Visible) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 rounded-xl bg-slate-950 border border-white/10">
+      <div class="space-y-1.5">
         <label for="userTeamSelect" class="block text-xs font-bold text-slate-200">
-          Compare With Your Actual Home Team / Market:
+          1. Team You Want to Watch:
         </label>
         <select id="userTeamSelect" class="w-full bg-slate-900 border border-white/20 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-sky-500">
-          <option value="VAN">Vancouver Canucks (British Columbia)</option>
-          <option value="CGY">Calgary Flames (Alberta)</option>
-          <option value="EDM">Edmonton Oilers (Alberta)</option>
-          <option value="WPG">Winnipeg Jets (Manitoba / Saskatchewan)</option>
-          <option value="TOR">Toronto Maple Leafs (Ontario - West of Belleville)</option>
-          <option value="OTT" selected>Ottawa Senators (Eastern Ontario / Outaouais)</option>
-          <option value="MTL">Montreal Canadiens (Quebec / Atlantic Canada)</option>
+          <option value="MTL" selected>Montreal Canadiens</option>
+          <option value="OTT">Ottawa Senators</option>
+          <option value="TOR">Toronto Maple Leafs</option>
+          <option value="WPG">Winnipeg Jets</option>
+          <option value="EDM">Edmonton Oilers</option>
+          <option value="CGY">Calgary Flames</option>
+          <option value="VAN">Vancouver Canucks</option>
         </select>
+        <span id="teamTerritoryHint" class="text-[10px] text-slate-400 block">Home Zone: QC, Atlantic Canada, Eastern ON</span>
+      </div>
 
-        <div id="diagnosticVerdictBox" class="p-3.5 rounded-xl border text-xs leading-relaxed">
-          <!-- Dynamically filled by script -->
-        </div>
+      <div class="space-y-1.5">
+        <label for="userLocationSelect" class="block text-xs font-bold text-slate-200">
+          2. Where You Physically Live:
+        </label>
+        <select id="userLocationSelect" class="w-full bg-slate-900 border border-white/20 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-sky-500">
+          <option value="on_west" selected>Ontario (Toronto, GTA & Western ON)</option>
+          <option value="on_east">Ontario (Ottawa & Eastern ON)</option>
+          <option value="on_overlap">Ontario Overlap (Belleville–Kingston)</option>
+          <option value="qc">Quebec</option>
+          <option value="atl">Atlantic Canada (NB, NS, PEI, NL)</option>
+          <option value="mb">Manitoba</option>
+          <option value="sk">Saskatchewan</option>
+          <option value="ab">Alberta, NWT & Nunavut</option>
+          <option value="bc">British Columbia & Yukon</option>
+          <option value="nw_on">Northwestern Ontario (Thunder Bay / Kenora)</option>
+        </select>
+        <span class="text-[10px] text-slate-400 block">Your physical living room location</span>
+      </div>
+    </div>
+
+    <!-- Diagnostic Verdict Box (Always visible, live updating) -->
+    <div id="diagnosticVerdictBox" class="p-4 rounded-xl border text-xs leading-relaxed">
+      <!-- Dynamically filled by script -->
+    </div>
+
+    <!-- Detected IP telemetry cards (Revealed upon clicking "Check My Connection") -->
+    <div id="ipDiagnosticInitial" class="p-3 rounded-xl bg-slate-950/50 border border-white/5 text-center text-xs text-slate-400">
+      Click <strong>"Check My Connection"</strong> above to verify if your internet provider (Starlink, 5G, or cable) is misrouting your public IP address.
+    </div>
+
+    <div id="ipDiagnosticResult" class="hidden grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div class="p-3 rounded-xl bg-slate-950/80 border border-white/5">
+        <span class="text-[11px] text-slate-400 block">Detected Public IP</span>
+        <span id="detectedIp" class="text-sm font-mono font-bold text-white">—</span>
+      </div>
+      <div class="p-3 rounded-xl bg-slate-950/80 border border-white/5">
+        <span class="text-[11px] text-slate-400 block">Internet Provider (ISP)</span>
+        <span id="detectedIsp" class="text-sm font-bold text-sky-400">—</span>
+      </div>
+      <div class="p-3 rounded-xl bg-slate-950/80 border border-white/5">
+        <span class="text-[11px] text-slate-400 block">Detected Location</span>
+        <span id="detectedLocation" class="text-sm font-bold text-emerald-400">—</span>
       </div>
     </div>
   </section>
@@ -893,32 +915,133 @@ const methodologyBodyHtml = `
 
     var detectedData = null;
 
-    var REGION_MAP = {
-      'VAN': ['BC', 'British Columbia'],
-      'CGY': ['AB', 'Alberta', 'SK', 'Saskatchewan'],
-      'EDM': ['AB', 'Alberta', 'SK', 'Saskatchewan'],
-      'WPG': ['MB', 'Manitoba', 'SK', 'Saskatchewan', 'Northwestern Ontario'],
-      'TOR': ['ON', 'Ontario'],
-      'OTT': ['ON', 'Ontario', 'QC', 'Quebec'],
-      'MTL': ['QC', 'Quebec', 'NB', 'New Brunswick', 'NS', 'Nova Scotia', 'PE', 'Prince Edward Island', 'NL', 'Newfoundland and Labrador']
+    var TEAM_DATA = {
+      'MTL': {
+        name: 'Montreal Canadiens',
+        dir: 'montreal',
+        marketHint: 'Home Zone: QC, Atlantic Canada, Eastern ON',
+        marketDescription: 'Quebec, Atlantic Canada, and Eastern Ontario',
+        inMarketRegions: ['qc', 'atl', 'on_east', 'on_overlap'],
+        primaryCarrier: 'TSN2 / RDS',
+        tsnRegional: true
+      },
+      'OTT': {
+        name: 'Ottawa Senators',
+        dir: 'ottawa',
+        marketHint: 'Home Zone: Eastern ON, Outaouais, QC, Atlantic',
+        marketDescription: 'Eastern Ontario, the Outaouais, Quebec, and Atlantic Canada',
+        inMarketRegions: ['on_east', 'on_overlap', 'qc', 'atl'],
+        primaryCarrier: 'TSN5 / RDS',
+        tsnRegional: true
+      },
+      'TOR': {
+        name: 'Toronto Maple Leafs',
+        dir: 'toronto',
+        marketHint: 'Home Zone: Ontario West of Belleville',
+        marketDescription: 'Ontario (West of Belleville)',
+        inMarketRegions: ['on_west', 'on_overlap', 'nw_on'],
+        primaryCarrier: 'TSN4 (26 games) / Sportsnet Ontario',
+        tsnRegional: true
+      },
+      'WPG': {
+        name: 'Winnipeg Jets',
+        dir: 'winnipeg',
+        marketHint: 'Home Zone: Manitoba, Saskatchewan, NW Ontario',
+        marketDescription: 'Manitoba, Saskatchewan, and Northwestern Ontario',
+        inMarketRegions: ['mb', 'sk', 'nw_on'],
+        primaryCarrier: 'TSN3',
+        tsnRegional: true
+      },
+      'EDM': {
+        name: 'Edmonton Oilers',
+        dir: 'edmonton',
+        marketHint: 'Home Zone: Alberta, Saskatchewan, NWT',
+        marketDescription: 'Alberta, Saskatchewan, and the Northwest Territories',
+        inMarketRegions: ['ab', 'sk'],
+        primaryCarrier: 'Sportsnet West',
+        tsnRegional: false
+      },
+      'CGY': {
+        name: 'Calgary Flames',
+        dir: 'calgary',
+        marketHint: 'Home Zone: Alberta, Saskatchewan, NWT',
+        marketDescription: 'Alberta, Saskatchewan, and the Northwest Territories',
+        inMarketRegions: ['ab', 'sk'],
+        primaryCarrier: 'Sportsnet West',
+        tsnRegional: false
+      },
+      'VAN': {
+        name: 'Vancouver Canucks',
+        dir: 'vancouver',
+        marketHint: 'Home Zone: British Columbia & Yukon',
+        marketDescription: 'British Columbia and Yukon',
+        inMarketRegions: ['bc'],
+        primaryCarrier: 'Sportsnet Pacific',
+        tsnRegional: false
+      }
     };
 
-    var TEAM_DIRS = {
-      'VAN': 'vancouver',
-      'CGY': 'calgary',
-      'EDM': 'edmonton',
-      'WPG': 'winnipeg',
-      'TOR': 'toronto',
-      'OTT': 'ottawa',
-      'MTL': 'montreal'
+    var REGION_NAMES = {
+      'on_west': 'Ontario (Toronto, GTA & Western ON)',
+      'on_east': 'Ontario (Ottawa & Eastern ON)',
+      'on_overlap': 'Ontario Overlap (Belleville–Kingston)',
+      'qc': 'Quebec',
+      'atl': 'Atlantic Canada (NB, NS, PEI, NL)',
+      'mb': 'Manitoba',
+      'sk': 'Saskatchewan',
+      'ab': 'Alberta, NWT & Nunavut',
+      'bc': 'British Columbia & Yukon',
+      'nw_on': 'Northwestern Ontario (Thunder Bay / Kenora)'
     };
+
+    function mapIpToRegionCode(data) {
+      if (!data) return null;
+      var r = (data.region || data.region_code || '').toLowerCase();
+      var c = (data.city || '').toLowerCase();
+      if (r.indexOf('british columbia') !== -1 || r === 'bc') return 'bc';
+      if (r.indexOf('alberta') !== -1 || r === 'ab') return 'ab';
+      if (r.indexOf('saskatchewan') !== -1 || r === 'sk') return 'sk';
+      if (r.indexOf('manitoba') !== -1 || r === 'mb') return 'mb';
+      if (r.indexOf('quebec') !== -1 || r === 'qc') return 'qc';
+      if (r.indexOf('new brunswick') !== -1 || r.indexOf('nova scotia') !== -1 || r.indexOf('prince edward') !== -1 || r.indexOf('newfoundland') !== -1 || r === 'nb' || r === 'ns' || r === 'pe' || r === 'nl') return 'atl';
+      if (r.indexOf('ontario') !== -1 || r === 'on') {
+        if (c.indexOf('ottawa') !== -1 || c.indexOf('cornwall') !== -1 || c.indexOf('kingston') !== -1) return 'on_east';
+        if (c.indexOf('thunder bay') !== -1 || c.indexOf('kenora') !== -1) return 'nw_on';
+        return 'on_west';
+      }
+      return null;
+    }
 
     btn.addEventListener('click', function() {
       btn.disabled = true;
       btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Analyzing...</span>';
 
       fetch('https://ipwho.is/')
-        .then(function(r) { return r.json(); })
+        .then(function(r) {
+          if (!r.ok) throw new Error('ipwho HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function(data) {
+          if (!data || data.success === false || !data.ip) throw new Error('ipwho failed');
+          return data;
+        })
+        .catch(function() {
+          return fetch('https://ipapi.co/json/')
+            .then(function(r2) {
+              if (!r2.ok) throw new Error('ipapi HTTP ' + r2.status);
+              return r2.json();
+            })
+            .then(function(data2) {
+              if (!data2 || !data2.ip) throw new Error('ipapi failed');
+              return {
+                ip: data2.ip,
+                connection: { isp: data2.org },
+                city: data2.city,
+                region: data2.region,
+                region_code: data2.region_code
+              };
+            });
+        })
         .then(function(data) {
           detectedData = data;
           document.getElementById('detectedIp').textContent = data.ip || 'Unknown';
@@ -926,29 +1049,20 @@ const methodologyBodyHtml = `
           document.getElementById('detectedLocation').textContent = (data.city ? data.city + ', ' : '') + (data.region || data.country || 'Canada');
           document.getElementById('ipDiagnosticInitial').classList.add('hidden');
           document.getElementById('ipDiagnosticResult').classList.remove('hidden');
+
+          // Auto-sync physical location dropdown if user hasn't explicitly customized it yet
+          var ipReg = mapIpToRegionCode(data);
+          if (ipReg && !userExplicitlyChangedLocation) {
+            var locSelect = document.getElementById('userLocationSelect');
+            if (locSelect) locSelect.value = ipReg;
+          }
+
           updateVerdict();
         })
-        .catch(function() {
-          return fetch('https://ipapi.co/json/')
-            .then(function(r2) { return r2.json(); })
-            .then(function(data2) {
-              detectedData = {
-                ip: data2.ip,
-                connection: { isp: data2.org },
-                city: data2.city,
-                region: data2.region,
-                region_code: data2.region_code
-              };
-              document.getElementById('detectedIp').textContent = data2.ip || 'Unknown';
-              document.getElementById('detectedIsp').textContent = data2.org || 'Detected Provider';
-              document.getElementById('detectedLocation').textContent = (data2.city ? data2.city + ', ' : '') + (data2.region || 'Canada');
-              document.getElementById('ipDiagnosticInitial').classList.add('hidden');
-              document.getElementById('ipDiagnosticResult').classList.remove('hidden');
-              updateVerdict();
-            });
-        })
         .catch(function(err) {
-          document.getElementById('ipDiagnosticInitial').innerHTML = '<span class="text-rose-400">Unable to query IP automatically (an ad-blocker may be active). Please check your IP manually.</span>';
+          document.getElementById('ipDiagnosticInitial').innerHTML = '<div class="p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-300">Unable to query your IP automatically (an ad-blocker or privacy extension may be blocking IP lookup requests). Select your living room location above to see your diagnostic verdict manually.</div>';
+          document.getElementById('ipDiagnosticResult').classList.remove('hidden');
+          updateVerdict();
         })
         .finally(function() {
           btn.disabled = false;
@@ -957,38 +1071,57 @@ const methodologyBodyHtml = `
     });
 
     var teamSelect = document.getElementById('userTeamSelect');
+    var locSelect = document.getElementById('userLocationSelect');
+    var userExplicitlyChangedLocation = false;
+
     if (teamSelect) {
-      teamSelect.addEventListener('change', updateVerdict);
+      teamSelect.addEventListener('change', function() {
+        var teamId = teamSelect.value;
+        var hintEl = document.getElementById('teamTerritoryHint');
+        if (hintEl && TEAM_DATA[teamId]) {
+          hintEl.textContent = TEAM_DATA[teamId].marketHint;
+        }
+        updateVerdict();
+      });
+    }
+
+    if (locSelect) {
+      locSelect.addEventListener('change', function() {
+        userExplicitlyChangedLocation = true;
+        updateVerdict();
+      });
     }
 
     function updateVerdict() {
-      if (!detectedData) return;
-      var teamId = teamSelect.value;
-      var allowedRegions = REGION_MAP[teamId] || [];
-      var userRegion = detectedData.region || '';
-      var userRegionCode = detectedData.region_code || '';
-      var ispName = (detectedData.connection && detectedData.connection.isp) || detectedData.isp || '';
+      var teamId = teamSelect ? teamSelect.value : 'MTL';
+      var userLoc = locSelect ? locSelect.value : 'on_west';
+      var team = TEAM_DATA[teamId] || TEAM_DATA['MTL'];
+      var verdictBox = document.getElementById('diagnosticVerdictBox');
+      if (!verdictBox) return;
+
+      var isInMarket = team.inMarketRegions.indexOf(userLoc) !== -1;
+      var ipRegionCode = detectedData ? mapIpToRegionCode(detectedData) : null;
+      var ispName = (detectedData && detectedData.connection && detectedData.connection.isp) || (detectedData && detectedData.isp) || '';
       var isStarlinkOrCellular = /starlink|spacex|xplor|cellular|telus mobility|rogers wireless|bell mobility/i.test(ispName);
 
-      var isMatch = allowedRegions.some(function(r) {
-        return userRegion.toLowerCase().indexOf(r.toLowerCase()) !== -1 ||
-               userRegionCode.toLowerCase() === r.toLowerCase();
-      });
+      // Check if IP is causing a false blackout (e.g. user is physically in-market, but IP is routed out-of-market)
+      var ipMatchesInMarket = ipRegionCode ? (team.inMarketRegions.indexOf(ipRegionCode) !== -1) : isInMarket;
+      var isFalseBlackout = (isInMarket && !ipMatchesInMarket);
 
       if (window.umami && typeof window.umami.track === 'function') {
         window.umami.track('ip-inspector-verdict', {
-          status: isMatch ? 'match' : 'mismatch',
-          team: teamId
+          status: isFalseBlackout ? 'false-blackout' : (isInMarket ? 'in-market' : 'out-of-market'),
+          team: teamId,
+          user_loc: userLoc
         });
       }
 
-      var verdictBox = document.getElementById('diagnosticVerdictBox');
-
-      if (!isMatch) {
+      if (isFalseBlackout) {
+        // SCENARIO 1: False Blackout (ISP Geolocation Mismatch)
         verdictBox.className = 'p-4 rounded-xl border border-amber-500/40 bg-amber-500/10 text-xs leading-relaxed space-y-2';
         verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-amber-300 text-sm"><i class="fa-solid fa-triangle-exclamation"></i><span>Verdict A: False Blackout (ISP Geolocation Mismatch Detected)</span></div>' +
-          '<p class="text-slate-200">Your connection resolves to <strong>' + (detectedData.city || 'another city') + ', ' + (detectedData.region || 'another province') + '</strong>, but your selected team requires being in <strong>' + allowedRegions.join(' or ') + '</strong>.</p>' +
-          '<p class="text-slate-300">' + (isStarlinkOrCellular ? 'Because you are on <strong>' + ispName + '</strong>, your traffic is routing through an out-of-province ground station. Streaming apps think you are out of market and block your home broadcast!' : 'Broadcasters will treat you as out-of-market based on this IP.') + '</p>' +
+          '<p class="text-slate-200">You physically live in <strong>' + REGION_NAMES[userLoc] + '</strong> (which is inside the ' + team.name + ' home broadcast territory), but your internet provider is routing your public IP to <strong>' + (detectedData.city ? detectedData.city + ', ' : '') + detectedData.region + '</strong>.</p>' +
+          '<p class="text-slate-300">' + (isStarlinkOrCellular ? 'Because you are on <strong>' + ispName + '</strong>, your traffic routes through an out-of-province ground station. Broadcasters read this out-of-market IP address and falsely lock you out of your home team feed!' : 'Broadcasters see this out-of-market IP address and mistakenly treat you as outside the team territory.') + '</p>' +
           '<div class="pt-1 border-t border-amber-500/20 text-amber-200 space-y-1">' +
             '<div class="font-bold">Fastest 7:05 PM Workarounds:</div>' +
             '<ul class="list-disc pl-4 space-y-0.5 text-slate-200">' +
@@ -996,30 +1129,44 @@ const methodologyBodyHtml = `
               '<li><strong>20-Minute Power Cycle:</strong> Power-cycle your satellite dish or 5G modem for 20 minutes to pull a new IP lease.</li>' +
             '</ul>' +
           '</div>';
+      } else if (!isInMarket) {
+        // SCENARIO 2: Out-of-Market Fan (e.g. Habs fan in Toronto)
+        verdictBox.className = 'p-4 rounded-xl border border-indigo-500/40 bg-indigo-500/10 text-xs leading-relaxed space-y-2';
+        verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-indigo-300 text-sm"><i class="fa-solid fa-globe"></i><span>Verdict B: You Are Out-of-Market for the ' + team.name + '</span></div>' +
+          '<p class="text-slate-200">You are watching from <strong>' + REGION_NAMES[userLoc] + '</strong>, which is outside the ' + team.name + ' designated home regional territory (' + team.marketDescription + ').</p>' +
+          '<p class="text-slate-300">Your connection is working accurately. <strong>This is not a technical glitch:</strong> local regional feeds on cable (' + team.primaryCarrier + ') are legally blacked out in your area to protect the local home team territory.</p>' +
+          '<div class="p-2.5 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-200 space-y-1">' +
+            '<div class="font-bold flex items-center gap-1.5"><i class="fa-solid fa-circle-check text-sky-400"></i>How to Watch Out-of-Market:</div>' +
+            '<p class="text-[11px] text-slate-200 leading-normal">To watch out-of-market games across Canada, you need <strong>Sportsnet+ Premium</strong> ($34.99/mo) or <strong>NHL Centre Ice</strong> on digital cable. Sportsnet+ <em>Standard</em> will NOT unlock regional games outside your home market.</p>' +
+          '</div>' +
+          '<p class="text-slate-300 pt-1">Check the full season schedule and channel guide on our <a href="https://hockeyblackouts.ca/' + team.dir + '/" class="text-sky-400 font-bold hover:underline">' + team.name + ' Broadcast & Schedule Guide &rarr;</a></p>';
       } else {
-        verdictBox.className = 'p-4 rounded-xl border border-sky-500/40 bg-sky-500/10 text-xs leading-relaxed space-y-2';
-        var rightsNote = '';
-        if (['OTT', 'MTL', 'WPG'].includes(teamId)) {
-          var tsnChan = teamId === 'OTT' ? 'TSN5' : teamId === 'MTL' ? 'TSN2 (or RDS)' : 'TSN3';
-          rightsNote = '<div class="p-2.5 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-200 space-y-1">' +
+        // SCENARIO 3: In-Market Fan (Contract Rights Wall)
+        verdictBox.className = 'p-4 rounded-xl border border-emerald-500/40 bg-emerald-500/10 text-xs leading-relaxed space-y-2';
+        var rightsWarning = '';
+        if (team.tsnRegional && ['MTL', 'OTT', 'WPG'].indexOf(teamId) !== -1) {
+          rightsWarning = '<div class="p-2.5 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-200 space-y-1">' +
             '<div class="font-bold flex items-center gap-1.5"><i class="fa-solid fa-triangle-exclamation"></i>The Sportsnet+ Regional Trap:</div>' +
-            '<p class="text-[11px] text-slate-200 leading-normal">If you have Sportsnet+ open, this game will be blacked out because <strong>' + tsnChan + '</strong> holds 100% of regional rights in your market. <strong>Do NOT click "Upgrade to Premium"</strong>—you will still be blacked out!</p>' +
+            '<p class="text-[11px] text-slate-200 leading-normal">If you have Sportsnet+ open, this game is blacked out because <strong>' + team.primaryCarrier + '</strong> holds 100% of regional rights in your market. <strong>Do NOT click "Upgrade to Premium"</strong>—you will still be blacked out because TSN holds the rights!</p>' +
           '</div>';
         } else if (teamId === 'TOR') {
-          rightsNote = '<div class="p-2.5 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-200 space-y-1">' +
+          rightsWarning = '<div class="p-2.5 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-200 space-y-1">' +
             '<div class="font-bold flex items-center gap-1.5"><i class="fa-solid fa-triangle-exclamation"></i>Toronto Split Rights:</div>' +
             '<p class="text-[11px] text-slate-200 leading-normal">26 Maple Leafs games are exclusive to <strong>TSN4</strong> in Ontario. If tonight is a TSN game, Sportsnet+ will black you out, and upgrading to Premium will not unlock it.</p>' +
           '</div>';
         } else {
-          rightsNote = '<p class="text-slate-300">If your game is blacked out on Sportsnet+, check if you are on basic Sportsnet without regional access, or if tonight is exclusive to <strong>Amazon Prime Video</strong> (Monday Night Hockey).</p>';
+          rightsWarning = '<p class="text-slate-300">If your game is blacked out on Sportsnet+, check if you are on basic Sportsnet without regional access, or if tonight is exclusive to <strong>Amazon Prime Video</strong> (Monday Night Hockey).</p>';
         }
 
-        verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-sky-300 text-sm"><i class="fa-solid fa-circle-check"></i><span>Verdict B: Broadcast Rights Wall (Your IP & Location Are Correct)</span></div>' +
-          '<p class="text-slate-200">Your detected location (<strong>' + (detectedData.city ? detectedData.city + ', ' : '') + detectedData.region + '</strong>) properly matches the official in-market broadcast zone for this team. Your connection is working properly.</p>' +
-          rightsNote +
-          '<p class="text-slate-300 pt-1">Check the broadcast schedule and channel lineup on our <a href="https://hockeyblackouts.ca/' + (TEAM_DIRS[teamId] || '') + '/" class="text-sky-400 font-bold hover:underline">Official ' + teamId + ' Schedule & Channel Guide &rarr;</a></p>';
+        verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-emerald-300 text-sm"><i class="fa-solid fa-circle-check"></i><span>Verdict C: You Are In-Market for the ' + team.name + '</span></div>' +
+          '<p class="text-slate-200">Your location (<strong>' + REGION_NAMES[userLoc] + '</strong>) is inside the official regional broadcast territory for the ' + team.name + '. Your connection is working properly.</p>' +
+          rightsWarning +
+          '<p class="text-slate-300 pt-1">Check the broadcast schedule and channel lineup on our <a href="https://hockeyblackouts.ca/' + team.dir + '/" class="text-sky-400 font-bold hover:underline">' + team.name + ' Schedule & Channel Guide &rarr;</a></p>';
       }
     }
+
+    // Initialize initial verdict state on load
+    updateVerdict();
   })();
   </script>
 `;
