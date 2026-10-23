@@ -169,6 +169,54 @@ function writeExplainerPage(config) {
 // ============================================================================
 // 1. SPORTSNET+ BLACKOUT RULES EXPLAINED
 // ============================================================================
+const snDecisionCardsHtml = teamDatasets.map(d => {
+  const t = d.team;
+  const dir = TEAM_DIRS[t.id];
+  const isPureTsn = ['WPG', 'OTT', 'MTL'].includes(t.id);
+  const isSplit = t.id === 'TOR';
+
+  let inMarketBadge = '';
+  let inMarketVerdict = '';
+  if (isPureTsn) {
+    inMarketBadge = '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30">DO NOT BUY SN+ IN-MARKET</span>';
+    inMarketVerdict = `<p class="text-xs text-rose-300 font-semibold mt-1">Sportsnet owns ZERO regional games for the ${t.name}. Regional games air exclusively on TSN. Buying Sportsnet+ in-market leaves you blacked out for ~50 games.</p>`;
+  } else if (isSplit) {
+    inMarketBadge = '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">STANDARD GETS ~58 GAMES</span>';
+    inMarketVerdict = `<p class="text-xs text-slate-300 mt-1">Standard includes 31 regional Sportsnet Ontario games plus 27 national games. The remaining 26 regional games air on TSN4 and are blacked out on Sportsnet.</p>`;
+  } else {
+    inMarketBadge = '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">STANDARD SUFFICIENT</span>';
+    inMarketVerdict = `<p class="text-xs text-slate-300 mt-1">Standard includes all in-market regional games on Sportsnet Pacific/West plus all national games.</p>`;
+  }
+
+  return `
+    <div class="p-4 rounded-xl bg-slate-950/70 border border-white/10 space-y-2.5">
+      <div class="flex items-center justify-between">
+        <h3 class="font-bold text-white text-sm">${t.name}</h3>
+        <span class="text-[11px] text-slate-400 font-mono">${t.networks.regionalEN}</span>
+      </div>
+      <div class="space-y-1.5 border-t border-white/5 pt-2">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-slate-300">If You Live In-Market:</span>
+          ${inMarketBadge}
+        </div>
+        ${inMarketVerdict}
+      </div>
+      <div class="space-y-1 border-t border-white/5 pt-2">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-slate-300">If You Live Out-of-Market:</span>
+          <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">PREMIUM REQUIRED</span>
+        </div>
+        <p class="text-xs text-emerald-400">Premium unlocks all regional games coast-to-coast.</p>
+      </div>
+      <div class="pt-1 text-right">
+        <a href="https://hockeyblackouts.ca/${dir}/" class="text-xs font-bold text-sky-400 hover:text-sky-300 hover:underline inline-flex items-center gap-1">
+          <span>View ${t.name} 84-Game Schedule &rarr;</span>
+        </a>
+      </div>
+    </div>
+  `;
+}).join('\n');
+
 const snTeamRows = teamDatasets.map(d => {
   const t = d.team;
   const dir = TEAM_DIRS[t.id];
@@ -181,16 +229,16 @@ const snTeamRows = teamDatasets.map(d => {
 
   return `
     <tr class="border-b border-white/5 hover:bg-white/[0.02] transition">
-      <td class="py-3 px-4 font-bold text-white">
+      <th scope="row" class="py-3 px-4 font-bold text-white text-left">
         <a href="https://hockeyblackouts.ca/${dir}/" class="hover:text-rose-400 hover:underline flex items-center gap-1.5">
           <span>${t.name}</span>
           <i class="fa-solid fa-chevron-right text-[9px] text-slate-500"></i>
         </a>
-      </td>
+      </th>
       <td class="py-3 px-4 text-slate-300">${t.networks.regionalEN}</td>
       <td class="py-3 px-4 text-center font-semibold text-emerald-400">${natSatGames} games</td>
       <td class="py-3 px-4 text-center font-semibold text-sky-400">${snPlusExclusives} games</td>
-      <td class="py-3 px-4 text-center text-slate-300">${snRegGames > 0 ? `${snRegGames} games (In-Market)` : `<span class="text-amber-400">0 (TSN holds ${tsnRegGames})</span>`}</td>
+      <td class="py-3 px-4 text-center text-slate-300">${snRegGames > 0 ? `${snRegGames} games (In-Market)` : `<span class="text-rose-400 font-semibold">0 (TSN holds ${tsnRegGames})</span>`}</td>
       <td class="py-3 px-4 text-center font-bold text-emerald-400">All ${regCount} Regional Unlocked</td>
     </tr>
   `;
@@ -204,13 +252,13 @@ const snBodyHtml = `
         <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">Regional Blackouts Apply</span>
       </div>
       <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-        <strong>Sportsnet+ Standard</strong> is a digital replacement for a basic Sportsnet cable channel package. It strictly enforces local broadcast territory walls:
+        <strong>Sportsnet+ Standard</strong> ($19.99/mo) is a digital streaming alternative to a basic Sportsnet cable channel package. It strictly enforces local broadcast territory walls:
       </p>
       <ul class="space-y-2 text-xs text-slate-300">
         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i><span><strong>National Broadcasts:</strong> Unlocks all Saturday night national games and Sportsnet+ national streaming exclusives coast-to-coast.</span></li>
         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i><span><strong>In-Market Sportsnet Teams:</strong> Unlocks regional games ONLY if you live inside the home territory of a Sportsnet-carried team (Vancouver, Calgary, Edmonton, or Toronto's Sportsnet Ontario half).</span></li>
         <li class="flex items-start gap-2"><i class="fa-solid fa-ban text-amber-400 mt-1"></i><span><strong>Out-of-Market Blackouts:</strong> Locks you out of regional games for teams outside your physical province.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-ban text-rose-400 mt-1"></i><span><strong>No TSN Regional Games:</strong> Does NOT include in-market regional games carried by TSN (Montreal TSN2, Ottawa TSN5, Winnipeg TSN3, or Toronto's 26 TSN4 games).</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-ban text-rose-400 mt-1"></i><span><strong>The In-Market TSN Trap:</strong> Does NOT include in-market regional games carried by TSN (Montreal TSN2, Ottawa TSN5, Winnipeg TSN3, or Toronto's 26 TSN4 games).</span></li>
       </ul>
     </div>
 
@@ -220,32 +268,83 @@ const snBodyHtml = `
         <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Out-of-Market Key</span>
       </div>
       <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-        <strong>Sportsnet+ Premium</strong> absorbs the old NHL Live out-of-market streaming package in Canada. It is built specifically for fans cheering for a team outside their local broadcast territory:
+        <strong>Sportsnet+ Premium</strong> ($34.99/mo) absorbs the old NHL Live out-of-market streaming package in Canada. It is built specifically for fans cheering for a team outside their local broadcast territory:
       </p>
       <ul class="space-y-2 text-xs text-slate-300">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i><span><strong>Bypasses Out-of-Market Blackouts:</strong> Streams over 1,000 out-of-market regional games across Canada—even when the game is carried on TSN or RDS in its home market (e.g., watching Habs/Sens/Leafs TSN games from Alberta or BC).</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i><span><strong>Bypasses Out-of-Market Blackouts:</strong> Streams over 1,000 out-of-market regional games across Canada—even when the game is carried on TSN or RDS in its home market (e.g., watching Habs, Sens, or regional Leafs games from Alberta or BC).</span></li>
         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i><span><strong>Includes All Standard Content:</strong> Includes every national Sportsnet broadcast and all Stanley Cup Playoff games.</span></li>
         <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-amber-400 mt-1"></i><span><strong>The In-Market TSN Catch:</strong> If you live <em>inside</em> the home territory of a TSN team (like living in Ottawa for the Senators or Winnipeg for the Jets), local TSN regional games are still blacked out on Sportsnet+ Premium to protect TSN's local territory rights.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-amber-400 mt-1"></i><span><strong>Prime Exclusives Excluded:</strong> National Wednesday/Monday games exclusive to Amazon Prime Video require a Prime membership.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-amber-400 mt-1"></i><span><strong>Prime Exclusives Excluded:</strong> National Wednesday/Monday games exclusive to Amazon Prime Video require a separate Prime membership.</span></li>
       </ul>
     </div>
   </section>
 
-  <section class="bg-slate-900 border border-white/10 rounded-2xl overflow-hidden shadow-xl">
-    <div class="p-5 sm:p-6 border-b border-white/10">
-      <h2 class="text-base sm:text-lg font-bold text-white">2026–27 Canadian Team Breakdown on Sportsnet+ (84-Game Schedule)</h2>
-      <p class="text-xs text-slate-400 mt-1">Programmatically calculated from the official 2026–27 broadcast schedule across all 7 Canadian franchises:</p>
+  <!-- Sportsnet Common Error Messages Section -->
+  <section class="bg-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+    <div class="flex items-center justify-between border-b border-white/10 pb-3">
+      <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+        <i class="fa-solid fa-triangle-exclamation text-amber-400"></i>
+        <span>Sportsnet+ On-Screen Blackout Error Messages Explained</span>
+      </h2>
+      <span class="text-xs text-slate-400">Troubleshooting</span>
     </div>
-    <div class="overflow-x-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 text-[10px] font-mono font-bold">Standard Error</span>
+          <span class="text-[10px] text-slate-400">Sportsnet+ App</span>
+        </div>
+        <h3 class="text-white font-bold text-sm">"This broadcast is subject to regional blackouts"</h3>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          <strong>The Cause:</strong> You have Sportsnet+ Standard and clicked on an out-of-market regional feed, or you are physically located in an in-market city where regional rights belong to TSN (Sens, Jets, Habs).
+        </p>
+        <p class="text-xs text-emerald-400 leading-relaxed">
+          <strong>The Fix:</strong> If you are out-of-market, upgrade to <strong>Sportsnet+ Premium</strong>. If you live in Ottawa, Winnipeg, or Montreal, Sportsnet is legally blocked from airing these regional games—you must watch on TSN.
+        </p>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[10px] font-mono font-bold">Upgrade Prompt</span>
+          <span class="text-[10px] text-slate-400">Apple TV / Roku / Fire TV</span>
+        </div>
+        <h3 class="text-white font-bold text-sm">"Out-of-market game: An upgrade to Sportsnet+ Premium is required"</h3>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          <strong>The Cause:</strong> You clicked a live game taking place outside your home broadcast territory. Standard tier only covers local in-market Sportsnet feeds.
+        </p>
+        <p class="text-xs text-emerald-400 leading-relaxed">
+          <strong>The Fix:</strong> Upgrading to Premium ($34.99/mo) immediately unlocks over 1,000 out-of-market NHL games across Canada.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7-Team Decision Guide: Sportsnet+ Standard vs Premium -->
+  <section class="bg-slate-900 border border-white/10 rounded-2xl overflow-hidden shadow-xl">
+    <div class="p-5 sm:p-6 border-b border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+      <div>
+        <h2 class="text-base sm:text-lg font-bold text-white">Sportsnet+ Standard vs. Premium: Team-by-Team Decision Guide</h2>
+        <p class="text-xs text-slate-400 mt-0.5">Which tier do you actually need based on where you live and which team you cheer for?</p>
+      </div>
+      <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30 w-fit">2026–27 Broadcast Matrix</span>
+    </div>
+
+    <!-- Mobile View: Segmented Decision Cards (< 640px) -->
+    <div class="block sm:hidden p-4 space-y-3">
+      ${snDecisionCardsHtml}
+    </div>
+
+    <!-- Desktop View: Semantic Table (>= 640px) -->
+    <div class="hidden sm:block overflow-x-auto">
       <table class="w-full text-left text-xs border-collapse">
         <thead class="bg-slate-950/90 text-slate-400 uppercase tracking-wider text-[11px] border-b border-white/10">
           <tr>
-            <th class="py-3 px-4">Team</th>
-            <th class="py-3 px-4">Regional Carrier</th>
-            <th class="py-3 px-4 text-center">National (SN)</th>
-            <th class="py-3 px-4 text-center">SN+ Exclusive</th>
-            <th class="py-3 px-4 text-center">SN+ Standard (In-Market)</th>
-            <th class="py-3 px-4 text-center">SN+ Premium (Out-of-Market)</th>
+            <th scope="col" class="py-3 px-4">Canadian Team</th>
+            <th scope="col" class="py-3 px-4">Regional Rights</th>
+            <th scope="col" class="py-3 px-4 text-center">National (SN)</th>
+            <th scope="col" class="py-3 px-4 text-center">SN+ Exclusive</th>
+            <th scope="col" class="py-3 px-4 text-center">SN+ Standard (In-Market)</th>
+            <th scope="col" class="py-3 px-4 text-center">SN+ Premium (Out-of-Market)</th>
           </tr>
         </thead>
         <tbody>
@@ -267,6 +366,10 @@ writeExplainerPage({
   subtitle: 'Find out why regional hockey games still get blacked out on Sportsnet+, the difference between Standard and Premium, and when TSN or Amazon Prime Video holds the broadcast.',
   bodyHtml: snBodyHtml,
   faqs: [
+    {
+      q: 'What is the difference between Sportsnet+ Standard and Premium for NHL games?',
+      aPlain: 'Sportsnet+ Standard ($19.99/mo) unlocks all Saturday national games and in-market regional games for Sportsnet teams (Canucks, Oilers, Flames, and half the Leafs). Sportsnet+ Premium ($34.99/mo) is the out-of-market package: it unlocks over 1,000 out-of-market regional games across Canada, including regional feeds produced by TSN.'
+    },
     {
       q: 'Why is my hockey game blacked out on Sportsnet+ Standard?',
       aPlain: 'Sportsnet+ Standard only unlocks regional games if you are physically located inside that team\'s official broadcast territory and Sportsnet holds those regional rights (Vancouver, Calgary, Edmonton, and half of Toronto\'s regional schedule). If you live outside the team\'s territory, you need Sportsnet+ Premium to stream out-of-market regional games.'
@@ -586,6 +689,204 @@ const methodologyBodyHtml = `
     </div>
   </section>
 
+  <!-- Cable TV Set-Top Box Blackout Error Codes -->
+  <section class="bg-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+    <div class="flex items-center justify-between border-b border-white/10 pb-3">
+      <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+        <i class="fa-solid fa-tv text-[#AF1E2D]"></i>
+        <span>Cable TV Set-Top Box Blackout Error Codes (Rogers Ignite & Comcast X1)</span>
+      </h2>
+      <span class="text-xs text-slate-400">Cable Hardware</span>
+    </div>
+    <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5 space-y-2">
+      <div class="flex items-center justify-between">
+        <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 text-[10px] font-mono font-bold">Cable Box Error Code</span>
+        <span class="text-[10px] text-slate-400">Rogers Ignite TV / Shaw BlueCurve</span>
+      </div>
+      <h3 class="text-white font-bold text-sm">Rogers Ignite TV: Error Codes XRE-07004, XRE-07006 & XRE-07007</h3>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        <strong>On-Screen Message:</strong> <em>"Sports programming is subject to certain restrictions. This program is blacked out in your area."</em>
+      </p>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        <strong>The Cause:</strong> Rogers Ignite set-top boxes use Comcast\'s syndicated X1 software. These error codes trigger automatically when your cable account\'s physical registered billing address is located outside a team\'s home regional boundary (for example, tuning to Sportsnet Pacific in Toronto, or TSN2 in Alberta).
+      </p>
+      <p class="text-xs text-emerald-400 leading-relaxed">
+        <strong>The Fix:</strong> Check your local regional channels for your local home market game. Out-of-market regional games on linear cable cannot be unlocked on standard regional channels; they require the <strong>NHL Centre Ice</strong> digital cable package or Sportsnet+ Premium online.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Blackout IP Inspector & Starlink Glitches -->
+  <section id="ip-inspector" class="bg-slate-900 border border-sky-500/30 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-4">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-sky-500/20 text-sky-300 border border-sky-500/30">Interactive Diagnostic Tool</span>
+          <span class="text-xs text-slate-400">Client-Side Only</span>
+        </div>
+        <h2 class="text-base sm:text-lg font-bold text-white mt-1">Blackout IP Inspector: Test Your Streaming Geolocation</h2>
+      </div>
+      <button id="runIpDiagnosticBtn" class="px-4 py-2.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs shadow-md transition whitespace-nowrap flex items-center justify-center gap-2">
+        <i class="fa-solid fa-satellite-dish"></i>
+        <span>Check My Connection</span>
+      </button>
+    </div>
+
+    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+      Live in rural Canada on <strong>Starlink, Xplore, or 5G home internet</strong>? Satellite and wireless internet providers use Carrier-Grade NAT (CGNAT) that routes your connection through centralized ground stations (POPs) in Montreal, Toronto, or Calgary. If your IP resolves to the wrong province, streaming apps will falsely black out your local home team!
+    </p>
+
+    <!-- Initial / Results State -->
+    <div id="ipDiagnosticInitial" class="p-4 rounded-xl bg-slate-950/70 border border-white/5 text-center text-xs text-slate-400">
+      Click <strong>"Check My Connection"</strong> above to detect your public IP, internet provider, and where streaming apps think you are located.
+    </div>
+
+    <div id="ipDiagnosticResult" class="hidden space-y-4">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div class="p-3 rounded-xl bg-slate-950/80 border border-white/5">
+          <span class="text-[11px] text-slate-400 block">Detected Public IP</span>
+          <span id="detectedIp" class="text-sm font-mono font-bold text-white">—</span>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-950/80 border border-white/5">
+          <span class="text-[11px] text-slate-400 block">Internet Provider (ISP)</span>
+          <span id="detectedIsp" class="text-sm font-bold text-sky-400">—</span>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-950/80 border border-white/5">
+          <span class="text-[11px] text-slate-400 block">Detected Location</span>
+          <span id="detectedLocation" class="text-sm font-bold text-emerald-400">—</span>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-slate-950 border border-white/10 space-y-3">
+        <label for="userTeamSelect" class="block text-xs font-bold text-slate-200">
+          Compare With Your Actual Home Team / Market:
+        </label>
+        <select id="userTeamSelect" class="w-full bg-slate-900 border border-white/20 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-sky-500">
+          <option value="VAN">Vancouver Canucks (British Columbia)</option>
+          <option value="CGY">Calgary Flames (Alberta)</option>
+          <option value="EDM">Edmonton Oilers (Alberta)</option>
+          <option value="WPG">Winnipeg Jets (Manitoba / Saskatchewan)</option>
+          <option value="TOR">Toronto Maple Leafs (Ontario - West of Belleville)</option>
+          <option value="OTT" selected>Ottawa Senators (Eastern Ontario / Outaouais)</option>
+          <option value="MTL">Montreal Canadiens (Quebec / Atlantic Canada)</option>
+        </select>
+
+        <div id="diagnosticVerdictBox" class="p-3.5 rounded-xl border text-xs leading-relaxed">
+          <!-- Dynamically filled by script -->
+        </div>
+      </div>
+    </div>
+
+    <div class="space-y-3 pt-2">
+      <h3 class="text-sm font-bold text-white flex items-center gap-2">
+        <i class="fa-solid fa-wrench text-sky-400"></i>
+        <span>How to Fix a False Starlink or Rural ISP Blackout</span>
+      </h3>
+      <ol class="space-y-2 text-xs text-slate-300 list-decimal pl-4 leading-relaxed">
+        <li><strong>Use Hardware GPS on Mobile (Fastest 7:05 PM Workaround):</strong> Open the Sportsnet or TSN app on an iPhone or Android device with Location Services enabled. Hardware GPS overrides misrouted ISP IP addresses. Cast or AirPlay the stream directly to your TV.</li>
+        <li><strong>20-Minute Starlink Dish Reboot:</strong> Power-cycle your Starlink router and dish for a full 20 minutes (or stow and unplug). This forces your terminal to drop its current CGNAT lease and frequently negotiates an IP in a closer regional pool.</li>
+        <li><strong>Permanent GeoIP Whitelisting:</strong> Starlink self-publishes dynamic geofeeds. If your IP permanently misidentifies your province, submit an IP correction ticket on MaxMind\'s public GeoIP correction portal with your Starlink terminal debug details.</li>
+      </ol>
+    </div>
+  </section>
+
+  <script>
+  (function() {
+    var btn = document.getElementById('runIpDiagnosticBtn');
+    if (!btn) return;
+
+    var detectedData = null;
+
+    var REGION_MAP = {
+      'VAN': ['BC', 'British Columbia'],
+      'CGY': ['AB', 'Alberta', 'SK', 'Saskatchewan'],
+      'EDM': ['AB', 'Alberta', 'SK', 'Saskatchewan'],
+      'WPG': ['MB', 'Manitoba', 'SK', 'Saskatchewan', 'Northwestern Ontario'],
+      'TOR': ['ON', 'Ontario'],
+      'OTT': ['ON', 'Ontario', 'QC', 'Quebec'],
+      'MTL': ['QC', 'Quebec', 'NB', 'New Brunswick', 'NS', 'Nova Scotia', 'PE', 'Prince Edward Island', 'NL', 'Newfoundland and Labrador']
+    };
+
+    btn.addEventListener('click', function() {
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Analyzing...</span>';
+
+      fetch('https://ipwho.is/')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+          detectedData = data;
+          document.getElementById('detectedIp').textContent = data.ip || 'Unknown';
+          document.getElementById('detectedIsp').textContent = (data.connection && data.connection.isp) || data.isp || 'Detected Provider';
+          document.getElementById('detectedLocation').textContent = (data.city ? data.city + ', ' : '') + (data.region || data.country || 'Canada');
+          document.getElementById('ipDiagnosticInitial').classList.add('hidden');
+          document.getElementById('ipDiagnosticResult').classList.remove('hidden');
+          updateVerdict();
+        })
+        .catch(function() {
+          return fetch('https://ipapi.co/json/')
+            .then(function(r2) { return r2.json(); })
+            .then(function(data2) {
+              detectedData = {
+                ip: data2.ip,
+                connection: { isp: data2.org },
+                city: data2.city,
+                region: data2.region,
+                region_code: data2.region_code
+              };
+              document.getElementById('detectedIp').textContent = data2.ip || 'Unknown';
+              document.getElementById('detectedIsp').textContent = data2.org || 'Detected Provider';
+              document.getElementById('detectedLocation').textContent = (data2.city ? data2.city + ', ' : '') + (data2.region || 'Canada');
+              document.getElementById('ipDiagnosticInitial').classList.add('hidden');
+              document.getElementById('ipDiagnosticResult').classList.remove('hidden');
+              updateVerdict();
+            });
+        })
+        .catch(function(err) {
+          document.getElementById('ipDiagnosticInitial').innerHTML = '<span class="text-rose-400">Unable to query IP automatically (an ad-blocker may be active). Please check your IP manually.</span>';
+        })
+        .finally(function() {
+          btn.disabled = false;
+          btn.innerHTML = '<i class="fa-solid fa-rotate-right"></i><span>Re-test Connection</span>';
+        });
+    });
+
+    var teamSelect = document.getElementById('userTeamSelect');
+    if (teamSelect) {
+      teamSelect.addEventListener('change', updateVerdict);
+    }
+
+    function updateVerdict() {
+      if (!detectedData) return;
+      var teamId = teamSelect.value;
+      var allowedRegions = REGION_MAP[teamId] || [];
+      var userRegion = detectedData.region || '';
+      var userRegionCode = detectedData.region_code || '';
+      var ispName = (detectedData.connection && detectedData.connection.isp) || detectedData.isp || '';
+      var isStarlinkOrCellular = /starlink|spacex|xplor|cellular|telus mobility|rogers wireless|bell mobility/i.test(ispName);
+
+      var isMatch = allowedRegions.some(function(r) {
+        return userRegion.toLowerCase().indexOf(r.toLowerCase()) !== -1 ||
+               userRegionCode.toLowerCase() === r.toLowerCase();
+      });
+
+      var verdictBox = document.getElementById('diagnosticVerdictBox');
+
+      if (!isMatch) {
+        verdictBox.className = 'p-3.5 rounded-xl border border-amber-500/40 bg-amber-500/10 text-xs leading-relaxed space-y-1.5';
+        verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-amber-300"><i class="fa-solid fa-triangle-exclamation"></i><span>Warning: Potential False Blackout Mismatch</span></div>' +
+          '<p class="text-slate-200">Your connection is resolving to <strong>' + (detectedData.city || 'another city') + ', ' + (detectedData.region || 'another province') + '</strong>, but your selected team requires being in <strong>' + allowedRegions.join(' or ') + '</strong>.</p>' +
+          '<p class="text-slate-300">' + (isStarlinkOrCellular ? 'Because you are on <strong>' + ispName + '</strong>, your traffic is likely routing through an out-of-province ground station. Streaming apps will see you as out-of-market and block your home broadcast!' : 'Broadcasters will treat you as out-of-market based on this IP.') + '</p>' +
+          '<p class="text-amber-200 font-semibold pt-1"><strong>Quick Workaround:</strong> Open the Sportsnet or TSN app on a smartphone with GPS turned on, then Cast/AirPlay to your TV.</p>';
+      } else {
+        verdictBox.className = 'p-3.5 rounded-xl border border-emerald-500/40 bg-emerald-500/10 text-xs leading-relaxed space-y-1.5';
+        verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-emerald-300"><i class="fa-solid fa-circle-check"></i><span>IP Location Matches Your Home Regional Broadcast Territory</span></div>' +
+          '<p class="text-slate-200">Your detected location (<strong>' + (detectedData.city ? detectedData.city + ', ' : '') + detectedData.region + '</strong>) properly matches the official in-market broadcast zone for this team.</p>' +
+          '<p class="text-slate-300">If your game is blacked out tonight, it is <strong>not</strong> an ISP routing glitch. It is an official broadcast rights split (e.g. the game is carried on TSN instead of Sportsnet, or exclusive to Amazon Prime Video).</p>';
+      }
+    }
+  })();
+  </script>
+
   <section class="bg-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-4">
     <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
       <i class="fa-solid fa-code-branch text-emerald-400"></i>
@@ -626,6 +927,14 @@ writeExplainerPage({
     {
       q: 'Where is the Ontario blackout boundary line drawn between Toronto and Ottawa/Montreal?',
       aPlain: 'The dividing line in Ontario runs between Belleville and Kingston. Viewers west of Belleville (including the GTA and Southwestern Ontario) are in the Maple Leafs territory. Viewers east of Kingston (including Ottawa and Cornwall) are in the Senators and Canadiens territory. The corridor between Belleville and Kingston is an official overlap zone with access to both.'
+    },
+    {
+      q: 'Why does Rogers Ignite TV show error code XRE-07004 or XRE-07006 during hockey games?',
+      aPlain: 'Rogers Ignite TV and Comcast X1 cable boxes display error codes XRE-07004, XRE-07006, and XRE-07007 ("Sports programming is subject to certain restrictions") when a customer tunes to an out-of-market regional sports channel outside their registered billing address territory. Out-of-market games on cable require the NHL Centre Ice digital package.'
+    },
+    {
+      q: 'Why is my hockey game falsely blacked out on Starlink in rural Canada?',
+      aPlain: 'Starlink and wireless 5G home internet use Carrier-Grade NAT (CGNAT) that routes traffic through ground stations (POPs) in Montreal, Toronto, or Calgary. If your dish routes through a ground station in another province, streaming apps misread your location and falsely black out your local team. To fix this, open the app on a smartphone with GPS enabled and Cast/AirPlay to your TV, or reboot your Starlink router for 20 minutes to pull a new IP lease.'
     },
     {
       q: 'Are CBC or Citytv broadcasting free over-the-air hockey games in 2026–27?',
@@ -728,6 +1037,29 @@ const tsnBodyHtml = `
     </p>
   </section>
 
+  <section class="bg-slate-900 border border-white/10 rounded-2xl p-5 sm:p-6 space-y-4 shadow-xl">
+    <div class="flex items-center justify-between border-b border-white/10 pb-3">
+      <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+        <i class="fa-solid fa-triangle-exclamation text-amber-400"></i>
+        <span>TSN On-Screen Blackout Error Explained</span>
+      </h2>
+      <span class="text-xs text-slate-400">Troubleshooting</span>
+    </div>
+    <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5 space-y-2">
+      <div class="flex items-center justify-between">
+        <span class="px-2 py-0.5 rounded bg-rose-500/20 text-rose-300 text-[10px] font-mono font-bold">TSN App / TSN.ca</span>
+        <span class="text-[10px] text-slate-400">Live Video Player Error</span>
+      </div>
+      <h3 class="text-white font-bold text-sm">"Regional Restriction: This live event is not available in your current area"</h3>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        <strong>The Cause:</strong> You are physically outside that team's designated broadcast territory (for example, trying to stream a Montreal Canadiens game on TSN2 from Toronto, or a Winnipeg Jets game on TSN3 from Alberta). Under NHL bylaws, TSN is legally prohibited from broadcasting regional games to out-of-market viewers.
+      </p>
+      <p class="text-xs text-emerald-400 leading-relaxed">
+        <strong>The Fix:</strong> Out-of-market regional games cannot be unlocked through a TSN or TSN+ digital subscription. Out-of-market games can only be streamed legally in Canada via <strong>Sportsnet+ Premium</strong> (which re-distributes TSN's regional feeds nationwide) or through the <strong>NHL Centre Ice</strong> digital cable package.
+      </p>
+    </div>
+  </section>
+
   <section class="bg-slate-900 border border-white/10 rounded-2xl overflow-hidden shadow-xl">
     <div class="p-5 sm:p-6 border-b border-white/10">
       <h2 class="text-base sm:text-lg font-bold text-white">2026–27 Canadian Team Breakdown on TSN (84-Game Schedule)</h2>
@@ -763,6 +1095,10 @@ writeExplainerPage({
   subtitle: 'Why regional hockey games get blacked out on TSN feeds, how territory rules divide TSN2, TSN3, TSN4, and TSN5, and why TSN+ will not unlock out-of-market games.',
   bodyHtml: tsnBodyHtml,
   faqs: [
+    {
+      q: 'What does "Regional Restriction: This live event is not available in your current area" mean on TSN?',
+      aPlain: 'TSN regional broadcasts (Canadiens on TSN2, Jets on TSN3, Leafs on TSN4, Senators on TSN5) are legally geofenced to each club\'s designated home broadcast territory. If you are physically located outside that territory, the NHL requires TSN to block the stream. Out-of-market games can only be streamed via Sportsnet+ Premium or NHL Centre Ice.'
+    },
     {
       q: 'Why is the Montreal Canadiens game blacked out on TSN if I live in Toronto?',
       aPlain: 'TSN only holds regional broadcast rights for the Canadiens on TSN2, which are legally restricted to Quebec, Atlantic Canada, and Eastern Ontario (east of Belleville). Toronto is in the Maple Leafs broadcast zone. Under NHL agreements, TSN must black out TSN2 Canadiens broadcasts to viewers in Toronto and Western Canada. To watch in Toronto, you need Sportsnet+ Premium or NHL Centre Ice.'
