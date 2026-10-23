@@ -1017,7 +1017,7 @@ const methodologyBodyHtml = `
         verdictBox.innerHTML = '<div class="flex items-center gap-2 font-bold text-sky-300 text-sm"><i class="fa-solid fa-circle-check"></i><span>Verdict B: Broadcast Rights Wall (Your IP & Location Are Correct)</span></div>' +
           '<p class="text-slate-200">Your detected location (<strong>' + (detectedData.city ? detectedData.city + ', ' : '') + detectedData.region + '</strong>) properly matches the official in-market broadcast zone for this team. Your connection is working properly.</p>' +
           rightsNote +
-          '<p class="text-slate-300 pt-1">Check tonight\'s exact channel and broadcast status on our <a href="https://hockeyblackouts.ca/' + (TEAM_DIRS[teamId] || '') + '/" class="text-sky-400 font-bold hover:underline">Official ' + teamId + ' Schedule & Channel Guide &rarr;</a></p>';
+          '<p class="text-slate-300 pt-1">Check the broadcast schedule and channel lineup on our <a href="https://hockeyblackouts.ca/' + (TEAM_DIRS[teamId] || '') + '/" class="text-sky-400 font-bold hover:underline">Official ' + teamId + ' Schedule & Channel Guide &rarr;</a></p>';
       }
     }
   })();
