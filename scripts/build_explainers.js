@@ -774,20 +774,20 @@ const methodologyBodyHtml = `
       <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5 space-y-2">
         <div class="font-bold text-white flex items-center gap-2">
           <span class="w-5 h-5 rounded-full bg-sky-500 text-slate-950 flex items-center justify-center text-[11px] font-black">1</span>
-          <span>The Mobile GPS Cast (Immediate)</span>
+          <span>The Mobile GPS Cast (Recommended)</span>
         </div>
         <p class="text-slate-400 leading-relaxed">
-          Smart TVs don't have GPS chips. iPhones and Android devices do. Open the Sportsnet or TSN app on your phone with Location Services enabled. The app reads your genuine GPS coordinates instead of your Starlink IP. Then AirPlay or Chromecast the stream to your TV.
+          Smart TVs don't have GPS chips; phones do. Open the Sportsnet or TSN app on your phone with Location Services enabled. The app reads your genuine GPS coordinates instead of your Starlink IP. Tap the native Cast or AirPlay icon inside the video player to stream to your TV. (Avoid OS-level screen mirroring or HDMI cables, which trigger DRM blackouts).
         </p>
       </div>
 
       <div class="p-4 rounded-xl bg-slate-950/70 border border-white/5 space-y-2">
         <div class="font-bold text-white flex items-center gap-2">
           <span class="w-5 h-5 rounded-full bg-sky-500 text-slate-950 flex items-center justify-center text-[11px] font-black">2</span>
-          <span>20-Minute Power Cycle (Reset IP)</span>
+          <span>20-Minute Power Cycle (Last Resort)</span>
         </div>
         <p class="text-slate-400 leading-relaxed">
-          Unplug your Starlink dish or wireless modem for a full 20 minutes (a quick 10-second reboot won't release your CGNAT lease). When it reconnects, the ground station will frequently assign a fresh IP from a closer regional block.
+          Only do this if you have no mobile device, so you don't burn 20 minutes of game time. Unplug your Starlink dish or wireless modem for a full 20 minutes (a 10-second reboot won't release your CGNAT lease). When it reconnects, the ground station will frequently assign a fresh IP from a closer regional subnet.
         </p>
       </div>
 
@@ -1144,7 +1144,7 @@ const methodologyBodyHtml = `
               '<strong>You have a False Blackout!</strong> ' + (isStarlinkOrCellular ? 'Because you are on <strong>' + ispName + '</strong>, your traffic routes through an out-of-province ground station.' : 'Your internet provider is routing your IP outside your province.') + ' Broadcasters think you are in ' + ipLocationStr + ' and mistakenly block your home team!' +
             '</p>' +
             '<p class="text-amber-200 text-[11px] font-semibold pt-1">' +
-              '&rarr; 7:05 PM Fix: Open Sportsnet or TSN on a phone with GPS turned on, then Cast/AirPlay to your TV. Or reboot your dish/modem for 20 minutes.' +
+              '&rarr; 7:05 PM Fix: Open Sportsnet or TSN on a phone with GPS turned on, then tap the Cast/AirPlay icon in the player to stream to your TV.' +
             '</p>' +
           '</div>' +
         '</div>' +
