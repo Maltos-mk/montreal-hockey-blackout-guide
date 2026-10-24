@@ -73,15 +73,15 @@ window.shareApp = async function() {
         title: window.TEAM_DATA ? tx('{0} Broadcast Guide', teamFullName(window.TEAM_DATA.team.id, window.TEAM_DATA.team.name)) : tx('Hockey Broadcast Guide'),
         url: window.location.href,
       });
-      // Umami tracking for share
-      try { umami.track('share-click'); } catch(e) {}
+      // Umami tracking for native share sheet
+      try { trackUmamiEvent('share-native'); } catch(e) {}
     } catch (err) {
       console.log('Error sharing', err);
     }
   } else {
     navigator.clipboard.writeText(window.location.href).then(() => {
       alert(tx("Link copied to clipboard!"));
-      try { umami.track('copy-link'); } catch(e) {}
+      try { trackUmamiEvent('share-copy-link'); } catch(e) {}
     }).catch(() => {
       alert(tx('Sharing not supported on this browser. Copy the URL from your address bar to share!'));
     });
@@ -1197,7 +1197,7 @@ function render() {
         `;
       }
 
-      trackUmamiEvent('pwa_prompt_viewed', { os: isIOS ? 'ios' : 'android_desktop' });
+      trackUmamiEvent('pwa-prompt-viewed', { os: isIOS ? 'ios' : 'android_desktop' });
       modal.classList.remove('hidden');
       modal.classList.add('flex');
     }
@@ -1208,7 +1208,7 @@ function render() {
         const { outcome } = await deferredPrompt.userChoice;
         if (outcome === 'accepted') {
           localStorage.setItem('pwa_prompt_dismissed', 'installed');
-          trackUmamiEvent('pwa_install_accepted');
+          trackUmamiEvent('pwa-install-accepted');
         }
         deferredPrompt = null;
         dismissDirectInstallModal(false);
@@ -1221,7 +1221,7 @@ function render() {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
       }
-      trackUmamiEvent('pwa_prompt_dismissed', { permanent: Boolean(neverShowAgain) });
+      trackUmamiEvent('pwa-prompt-dismissed', { permanent: Boolean(neverShowAgain) });
       if (neverShowAgain) {
         localStorage.setItem('pwa_prompt_dismissed', 'permanent');
       } else {
@@ -1232,7 +1232,7 @@ function render() {
 
     window.addEventListener('appinstalled', () => {
       localStorage.setItem('pwa_prompt_dismissed', 'installed');
-      trackUmamiEvent('pwa_install_success');
+      trackUmamiEvent('pwa-install-success');
       dismissDirectInstallModal(false);
     });
 

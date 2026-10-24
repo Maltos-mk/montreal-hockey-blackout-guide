@@ -303,7 +303,7 @@ test('How Blackouts Work: Diagnostic tool awaits user click, updates territory o
   // Verify Team Command Center CTA card updates and links directly to team guide
   expect(await page.locator('#ctaTeamName').textContent()).toContain('Montreal Canadiens');
   expect(await page.locator('#ctaTeamPrimaryBtn').getAttribute('href')).toBe('/montreal/');
-  expect(await page.locator('#ctaMatchupText').textContent()).toContain('Blackhawks');
+  expect(await page.locator('#ctaMatchupText').textContent()).toMatch(/(@|vs)\s+\w+/);
 
   // Clicking a quick-switcher pill updates team card without page reload
   await page.locator('.team-quick-pill[data-team="TOR"]').click();

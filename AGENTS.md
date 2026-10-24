@@ -37,7 +37,37 @@ node scripts/utm.js <team|page> [source] [content] [campaign]
 
 ---
 
-## 2. SEO & Technical Architecture Guardrails
+## 2. Umami Event Taxonomy & Rules
+
+All custom events in Umami MUST follow strict lowercase `kebab-case` naming to ensure clean dashboard sorting.
+
+### Event Registry by Category
+
+| Category | Event Name | Trigger Type | Payload Properties | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **Monetization & Outbound** | `kofi-click` | Declarative | `variant` (`anti_gambling`, `control`, etc.) | Ko-fi tip button clicks |
+| | `amazon-prime-click` | Declarative | None | Outbound Amazon Prime affiliate link clicks |
+| | `stream-referral-click` | Declarative | `provider` (`sportsnet`, `tsn`) | Outbound streaming provider referral links |
+| | `radio-click` | Declarative | None | Audio radio broadcast fallback clicks |
+| **App Utility & Sharing** | `export-pdf-click` | Declarative | None | Schedule PDF print/download |
+| | `share-native` | Programmatic | `team` | Native OS mobile share sheet successfully opened |
+| | `share-copy-link` | Programmatic | `team` | Link copied to clipboard (desktop fallback) |
+| **PWA Install Funnel** | `pwa-prompt-viewed` | Programmatic | `os` (`ios`, `android_desktop`), `team` | Install modal rendered |
+| | `pwa-install-accepted` | Programmatic | `team` | User clicked "Install Now" in modal |
+| | `pwa-prompt-dismissed` | Programmatic | `permanent` (`true`, `false`), `team` | User dismissed install modal |
+| | `pwa-install-success` | Programmatic | `team` | Native browser `appinstalled` event fired |
+| **Diagnostic & Navigation** | `ip-inspector-check` | Declarative | None | User clicked "Scan My Connection" |
+| | `ip-inspector-verdict` | Programmatic | `status` (`match`, `mismatch`), `team`, `detected_region` | IP lookup result evaluated |
+| | `sideways-team-cta-click` | Declarative | `team` | Primary team card button clicked on explainer page |
+
+### Event Rules & Invariants
+1. **Strict Kebab-Case:** Never use `snake_case` or `Title Case` for event names or attribute keys.
+2. **Zero Double-Firing:** Never attach `data-umami-event` to an element that also triggers an `umami.track()` call in an `onclick` listener.
+3. **No Synthetic Page-Load Events:** Never fire impression or conversion events automatically on untouched page loads.
+
+---
+
+## 3. SEO & Technical Architecture Guardrails
 
 1. **Clean Canonicals:** Every page MUST declare `<link rel="canonical" href="https://hockeyblackouts.ca/{path}/">`. Client-side scripts MUST NEVER mutate `window.location.hash` or query parameters on untouched default page loads.
 2. **HTML Byte Ceiling (< 120 KB):** Prerendered HTML payloads must stay strictly under 120 KB to prevent Bingbot truncation before `<section id="faq">`.
@@ -45,7 +75,7 @@ node scripts/utm.js <team|page> [source] [content] [campaign]
 
 ---
 
-## 3. Deployment & Security Invariants
+## 4. Deployment & Security Invariants
 
 1. **Push Permission:** Never execute `git push` without presenting the proposed commits and receiving an explicit "Proceed" from the user.
 2. **Identity & Privacy:** Commits must use author `Maltos <1071443+Maltos-mk@users.noreply.github.com>`. The user is anonymous. Never include PII.

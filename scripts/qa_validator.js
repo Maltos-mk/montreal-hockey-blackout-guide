@@ -353,6 +353,14 @@ if (fs.existsSync(appJsPath)) {
     console.error('\n❌ QA FAILED: shared/app.js contains "bindUmamiEvents", which double-fires [data-umami-event] clicks and strips variant attributes.');
     process.exit(1);
   }
+  if (appJsCode.includes("'share-click'") || appJsCode.includes('"share-click"')) {
+    console.error('\n❌ QA FAILED: shared/app.js contains "share-click", which conflicts with native sharing and causes double-firing. Use share-native or share-copy-link.');
+    process.exit(1);
+  }
+  if (appJsCode.includes('trackUmamiEvent(\'pwa_prompt_viewed\'') || appJsCode.includes('trackUmamiEvent(\'pwa_install_accepted\'')) {
+    console.error('\n❌ QA FAILED: shared/app.js contains legacy snake_case PWA events. All Umami events must use kebab-case.');
+    process.exit(1);
+  }
   if (/function updateHash\(\)\s*\{\s*const params = new URLSearchParams\(\);\s*params\.set\('region',\s*state\.region\);/.test(appJsCode)) {
     console.error('\n❌ QA FAILED: shared/app.js unconditionally sets #region=... hash on initial page load, polluting canonical URLs for Bing/search crawlers.');
     process.exit(1);
