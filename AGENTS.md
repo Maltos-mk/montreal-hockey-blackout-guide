@@ -46,6 +46,22 @@ To prevent dashboard fragmentation in Umami and Google Analytics, all promotiona
 * **Legacy Satellite Repo Redirect:**  
   `?utm_source=[upstream_host]&utm_medium=legacy_redirect`
 
+### Canonical Campaign Inventory & Historical Replacements
+
+| Original / Legacy URL Pattern | Destination Team / Page | Community / Placement Context | Standardized Replacement URL |
+| :--- | :--- | :--- | :--- |
+| `/?utm_campaign=frozen_frenzy&utm_content=r_canucks` | Vancouver Hub (`/vancouver/`) | `r/canucks` post (Frozen Frenzy) | `https://hockeyblackouts.ca/vancouver/?utm_source=reddit&utm_medium=social&utm_campaign=blackout_guide&utm_content=r_canucks` |
+| `/?utm_campaign=amazon_prime&utm_content=r_habs` | Montreal Hub (`/montreal/`) | `r/habs` post (Amazon Prime) | `https://hockeyblackouts.ca/montreal/?utm_source=reddit&utm_medium=social&utm_campaign=blackout_guide&utm_content=r_habs` |
+| `/?utm_source=facebook&utm_campaign=amazon_prime` | Montreal Hub (`/montreal/`) | Facebook Habs Fan Group | `https://hockeyblackouts.ca/montreal/?utm_source=facebook&utm_medium=social&utm_campaign=blackout_guide&utm_content=habs_fan_group` |
+| `/?utm_source=facebook&utm_campaign=sens_devils` | Ottawa Hub (`/ottawa/`) | Facebook Sens Fan Group | `https://hockeyblackouts.ca/ottawa/?utm_source=facebook&utm_medium=social&utm_campaign=blackout_guide&utm_content=sens_fan_group` |
+| `/?utm_campaign=frozen_frenzy&utm_content=r_hockey` | Main Hub (`/`) | `r/hockey` Frozen Frenzy thread | `https://hockeyblackouts.ca/?utm_source=reddit&utm_medium=social&utm_campaign=blackout_guide&utm_content=r_canadahockey` |
+| `/?utm_campaign=frozen_frenzy&utm_content=r_habs` | Montreal Hub (`/montreal/`) | `r/habs` Game Day Thread | `https://hockeyblackouts.ca/montreal/?utm_source=reddit&utm_medium=social&utm_campaign=blackout_guide&utm_content=r_habs` |
+| `/?utm_campaign=frozen_frenzy&utm_content=r_leafs` | Toronto Hub (`/toronto/`) | `r/leafs` Game Day Thread | `https://hockeyblackouts.ca/toronto/?utm_source=reddit&utm_medium=social&utm_campaign=blackout_guide&utm_content=r_leafs` |
+| `/?utm_campaign=cordcutters&utm_content=r_cordcutters` | Explainer Tool (`/how-blackouts-work/`) | `r/canadacordcutters` / `r/cordcutters` | `https://hockeyblackouts.ca/how-blackouts-work/?utm_source=reddit&utm_medium=social&utm_campaign=blackout_inspector&utm_content=r_canadacordcutters` |
+| `/toronto/?utm_source=x&utm_campaign=sn_plus_exclusive` | Toronto Hub (`/toronto/`) | Twitter / X replies to Leafs fans | `https://hockeyblackouts.ca/toronto/?utm_source=twitter&utm_medium=social&utm_campaign=sn_exclusive&utm_content=comment_reply` |
+| `/toronto/?utm_campaign=sn_plus_exclusive&utm_content=r_leafs` | Toronto Hub (`/toronto/`) | `r/leafs` Game Day Thread (SN+ exclusive) | `https://hockeyblackouts.ca/toronto/?utm_source=reddit&utm_medium=social&utm_campaign=sn_exclusive&utm_content=r_leafs` |
+| `maltos-mk.github.io` *(Referral hop)* | Main Hub (`/`) | Legacy satellite GitHub Pages redirects | `https://hockeyblackouts.ca/?utm_source=maltos-mk.github.io&utm_medium=legacy_redirect&utm_campaign=blackout_guide` |
+
 ---
 
 ## 2. SEO & Technical Architecture Guardrails
