@@ -43,7 +43,7 @@
       "description": "Why is your NHL game blacked out tonight? Run our instant diagnostic to detect false ISP glitches vs. regional broadcast walls across all Canadian teams.",
       "url": "https://hockeyblackouts.ca/how-blackouts-work/",
       "datePublished": "2026-10-01",
-      "dateModified": "2026-11-01",
+      "dateModified": "2026-11-02",
       "author": {
         "@type": "Organization",
         "name": "HockeyBlackouts.ca",
@@ -170,7 +170,7 @@
       <span>/</span>
       <span class="text-slate-200 font-semibold">Blackout Diagnostic & Rules</span>
     </div>
-    <span class="text-[11px] text-slate-400" data-freshness="verified-date">Verified for 2026–27 Season • Updated Nov 1, 2026</span>
+    <span class="text-[11px] text-slate-400" data-freshness="verified-date">Verified for 2026–27 Season • Updated Nov 2, 2026</span>
   </nav>
 
   <!-- Main Content -->
@@ -615,7 +615,7 @@
     if (!btn) return;
 
     var detectedData = null;
-    var UPCOMING_MATCHES = {"MTL":{"id":"MTL","name":"Montreal Canadiens","nickname":"Habs","dir":"montreal","primaryColor":"#AF1E2D","date":"Tue, Nov 3, 2026","time":"8:00 PM","vs":"vs Jets","opp":"WPG","oppName":"Winnipeg Jets","venue":"Centre Bell","netEN":"TSN2, TSN3","netFR":"RDS","typeEN":"regional","isToday":false},"OTT":{"id":"OTT","name":"Ottawa Senators","nickname":"Sens","dir":"ottawa","primaryColor":"#c52032","date":"Sun Nov 1 2026","time":"8:00 PM","vs":"@ Ducks","opp":"ANA","oppName":"Anaheim Ducks","venue":"Honda Center","netEN":"TSN5","netFR":"RDS","typeEN":"regional","isToday":false},"TOR":{"id":"TOR","name":"Toronto Maple Leafs","nickname":"Leafs","dir":"toronto","primaryColor":"#00205B","date":"Tue, Nov 3, 2026","time":"8:00 PM","vs":"vs Mammoth","opp":"UTA","oppName":"Utah Mammoth","venue":"Scotiabank Arena","netEN":"TSN4","netFR":"—","typeEN":"regional","isToday":false},"WPG":{"id":"WPG","name":"Winnipeg Jets","nickname":"Jets","dir":"winnipeg","primaryColor":"#041E42","date":"Sun Nov 1 2026","time":"1:00 PM","vs":"@ Hurricanes","opp":"CAR","oppName":"Carolina Hurricanes","venue":"Lenovo Center","netEN":"TSN3","netFR":"TVA Sports","typeEN":"regional","isToday":true},"EDM":{"id":"EDM","name":"Edmonton Oilers","nickname":"Oilers","dir":"edmonton","primaryColor":"#041E42","date":"Sun Nov 1 2026","time":"6:00 PM","vs":"@ Rangers","opp":"NYR","oppName":"New York Rangers","venue":"Madison Square Garden","netEN":"Sportsnet","netFR":"TVA Sports","typeEN":"national","isToday":true},"CGY":{"id":"CGY","name":"Calgary Flames","nickname":"Flames","dir":"calgary","primaryColor":"#C8102E","date":"Mon Nov 2 2026","time":"9:00 PM","vs":"@ Sharks","opp":"SJS","oppName":"San Jose Sharks","venue":"SAP Center at San Jose","netEN":"SN+","netFR":"TVA Sports","typeEN":"national","isToday":false},"VAN":{"id":"VAN","name":"Vancouver Canucks","nickname":"Canucks","dir":"vancouver","primaryColor":"#00205B","date":"Tue Nov 3 2026","time":"9:00 PM","vs":"vs Ducks","opp":"ANA","oppName":"Anaheim Ducks","venue":"Rogers Arena","netEN":"Sportsnet Pacific","netFR":"—","typeEN":"regional","isToday":false}};
+    var UPCOMING_MATCHES = {"MTL":{"id":"MTL","name":"Montreal Canadiens","nickname":"Habs","dir":"montreal","primaryColor":"#AF1E2D","date":"Tue, Nov 3, 2026","time":"8:00 PM","vs":"vs Jets","opp":"WPG","oppName":"Winnipeg Jets","venue":"Centre Bell","netEN":"TSN2, TSN3","netFR":"RDS","typeEN":"regional","isToday":false},"OTT":{"id":"OTT","name":"Ottawa Senators","nickname":"Sens","dir":"ottawa","primaryColor":"#c52032","date":"Wed Nov 4 2026","time":"7:30 PM","vs":"@ Sabres","opp":"BUF","oppName":"Buffalo Sabres","venue":"KeyBank Center","netEN":"Prime Video","netFR":"Prime Video","typeEN":"national","isToday":false},"TOR":{"id":"TOR","name":"Toronto Maple Leafs","nickname":"Leafs","dir":"toronto","primaryColor":"#00205B","date":"Tue, Nov 3, 2026","time":"8:00 PM","vs":"vs Mammoth","opp":"UTA","oppName":"Utah Mammoth","venue":"Scotiabank Arena","netEN":"TSN4","netFR":"—","typeEN":"regional","isToday":false},"WPG":{"id":"WPG","name":"Winnipeg Jets","nickname":"Jets","dir":"winnipeg","primaryColor":"#041E42","date":"Tue Nov 3 2026","time":"7:00 PM","vs":"@ Canadiens","opp":"MTL","oppName":"Montreal Canadiens","venue":"Centre Bell","netEN":"TSN3, TSN2","netFR":"RDS","typeEN":"regional","isToday":false},"EDM":{"id":"EDM","name":"Edmonton Oilers","nickname":"Oilers","dir":"edmonton","primaryColor":"#041E42","date":"Tue Nov 3 2026","time":"7:30 PM","vs":"@ Devils","opp":"NJD","oppName":"New Jersey Devils","venue":"Prudential Center","netEN":"Sportsnet","netFR":"—","typeEN":"national","isToday":false},"CGY":{"id":"CGY","name":"Calgary Flames","nickname":"Flames","dir":"calgary","primaryColor":"#C8102E","date":"Mon Nov 2 2026","time":"9:00 PM","vs":"@ Sharks","opp":"SJS","oppName":"San Jose Sharks","venue":"SAP Center at San Jose","netEN":"SN+","netFR":"TVA Sports","typeEN":"national","isToday":false},"VAN":{"id":"VAN","name":"Vancouver Canucks","nickname":"Canucks","dir":"vancouver","primaryColor":"#00205B","date":"Tue Nov 3 2026","time":"9:00 PM","vs":"vs Ducks","opp":"ANA","oppName":"Anaheim Ducks","venue":"Rogers Arena","netEN":"Sportsnet Pacific","netFR":"—","typeEN":"regional","isToday":false}};
 
     var TEAM_DATA = {
       'MTL': {
