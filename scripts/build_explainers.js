@@ -1094,7 +1094,7 @@ const methodologyBodyHtml = `
     };
 
     var REGION_NAMES = {
-      'on_west': 'Ontario (Toronto, GTA & Western ON)',
+      'on_west': 'Ontario (Toronto, GTA, Niagara & Western ON)',
       'on_east': 'Ontario (Ottawa & Eastern ON)',
       'on_overlap': 'Ontario Overlap (Belleville–Kingston)',
       'qc': 'Quebec',

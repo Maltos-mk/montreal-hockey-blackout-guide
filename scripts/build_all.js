@@ -209,13 +209,15 @@ explainerSlugs.forEach(slug => {
 });
 
 // Add active game URLs to master sitemap (rolling window: past 7 days through next 14 days to preserve crawl budget)
+// Synchronized with scripts/build_game_pages.js POST_GAME_RETENTION_DAYS = 7
+const POST_GAME_RETENTION_DAYS = 7;
 const gamesBaseDir = path.join(BUILD_DIR, 'game');
 if (fs.existsSync(gamesBaseDir)) {
   const dates = fs.readdirSync(gamesBaseDir);
   dates.forEach(date => {
     const gameDate = new Date(date + 'T23:59:59Z');
     const daysDiff = (now - gameDate) / (1000 * 60 * 60 * 24);
-    if (daysDiff > 7 || daysDiff < -14) return;
+    if (daysDiff > POST_GAME_RETENTION_DAYS || daysDiff < -14) return;
 
     const datePath = path.join(gamesBaseDir, date);
     if (fs.statSync(datePath).isDirectory()) {

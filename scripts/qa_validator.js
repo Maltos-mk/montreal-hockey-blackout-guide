@@ -432,13 +432,32 @@ if (!masterSitemapContent.includes('<lastmod>')) {
   process.exit(1);
 }
 
+// Item 3: Validate every URL in master sitemap.xml strictly exists on disk (200 OK) and contains no meta-refresh tags
+const sitemapUrls = [...masterSitemapContent.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
+sitemapUrls.forEach(url => {
+  const relPath = url.replace('https://hockeyblackouts.ca', '');
+  let targetFile = path.join(buildDir, relPath);
+  if (targetFile.endsWith('/') || !path.extname(targetFile)) {
+    targetFile = path.join(targetFile, 'index.html');
+  }
+  if (!fs.existsSync(targetFile)) {
+    console.error(`\n❌ QA FAILED: Sitemap URL ${url} does not exist on disk at ${targetFile} (would return 404).`);
+    process.exit(1);
+  }
+  const fileHtml = fs.readFileSync(targetFile, 'utf-8');
+  if (fileHtml.includes('http-equiv="refresh"')) {
+    console.error(`\n❌ QA FAILED: Sitemap URL ${url} contains a meta-refresh redirect tag. All sitemap URLs must strictly return 200 OK non-redirecting content.`);
+    process.exit(1);
+  }
+});
+
 // Validate no build/README.md with legacy maltos-mk.github.io links
 if (fs.existsSync(path.join(buildDir, 'README.md'))) {
   console.error('\n❌ QA FAILED: build/README.md should not be deployed to production root.');
   process.exit(1);
 }
 
-// Validate English team hubs have <120KB HTML size (under Bing's 125KB truncation cliff), high-intent title ("tonight" + "blackouts"), and zero blank token artifacts
+// Validate English team hubs have <120KB HTML size (under Bing's 125KB truncation cliff), high-intent title ("tonight" + "blackouts"), zero blank token artifacts, and recent games archive
 ['montreal', 'toronto', 'ottawa', 'vancouver', 'calgary', 'edmonton', 'winnipeg'].forEach(teamSlug => {
   const teamHtmlPath = path.join(buildDir, teamSlug, 'index.html');
   if (fs.existsSync(teamHtmlPath)) {
@@ -456,6 +475,10 @@ if (fs.existsSync(path.join(buildDir, 'README.md'))) {
     }
     if (rawHtml.includes(', , TVA Sports') || rawHtml.includes('and  by subscribing')) {
       console.error(`\n❌ QA FAILED: build/${teamSlug}/index.html contains blank French broadcaster token artifacts (", , TVA Sports" or "and  by subscribing").`);
+      process.exit(1);
+    }
+    if (!rawHtml.includes('id="recentGamesArchive"')) {
+      console.error(`\n❌ QA FAILED: build/${teamSlug}/index.html is missing recent games archive section (#recentGamesArchive).`);
       process.exit(1);
     }
   }

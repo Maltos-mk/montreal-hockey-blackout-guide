@@ -175,9 +175,9 @@ dataFiles.forEach(file => {
 
   // Pre-select team's home market region in dropdown
   const regionOptionsHtml = [
-    { val: 'on_east_qc_atl', label: 'Quebec, Eastern Ontario, Atlantic Canada' },
+    { val: 'on_east_qc_atl', label: 'Quebec, Eastern Ontario (Ottawa), Atlantic Canada' },
     { val: 'on_overlap', label: 'Ontario Overlap (Belleville, Kingston, Pembroke)' },
-    { val: 'on_west', label: 'Ontario West (Toronto, London)' },
+    { val: 'on_west', label: 'Ontario West (Toronto, London, Niagara)' },
     { val: 'nw_on', label: 'Northwestern Ontario (Thunder Bay)' },
     { val: 'mb', label: 'Manitoba' },
     { val: 'sk', label: 'Saskatchewan, NWT & Nunavut' },
@@ -397,6 +397,77 @@ dataFiles.forEach(file => {
   `;
 
   html = html.replace(/\{\{PRERENDERED_SPOTLIGHT_HERO\}\}/g, spotlightHeroHtml);
+
+  // Recent Results & Past Blackouts Archive (Concluded games within the last 14 days)
+  const recentGames = data.schedule.filter(g => {
+    const gDate = new Date(g.iso);
+    const diffDays = (now.getTime() - gDate.getTime()) / (1000 * 60 * 60 * 24);
+    return diffDays > 0 && diffDays <= 14;
+  }).reverse();
+
+  let recentResultsHtml = '';
+  if (recentGames.length > 0) {
+    const recentCardsHtml = recentGames.map(rg => {
+      const origIdx = data.schedule.findIndex(orig => orig.id === rg.id);
+      const gameNum = origIdx + 1;
+      const gameUrl = getGamePath(rg, team.id);
+      const fullMatchup = getFullMatchup(team.name, rg.vs, rg.opp);
+      const isNational = rg.typeEN === 'national' || rg.typeEN === 'prime_wednesday';
+      const coverageLabel = isNational ? 'National' : 'Regional';
+      const coverageClass = isNational
+        ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300'
+        : 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300';
+      const broadcastEN = rg.netEN || 'Sportsnet';
+      const broadcastFR = rg.netFR && rg.netFR !== 'None' ? ` / ${rg.netFR}` : '';
+
+      return `
+        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between gap-2 text-xs">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-1">
+              <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#${gameNum}</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded ${coverageClass}">${coverageLabel}</span>
+            </div>
+            <a href="${gameUrl}" class="font-bold text-sm text-slate-900 dark:text-white hover:text-teamPrimary transition flex items-center gap-1 group">
+              <span class="group-hover:underline">${rg.vs}</span>
+              <i class="fa-solid fa-chevron-right text-[8px] text-slate-400 group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+            <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 truncate" title="${fullMatchup}">${rg.date}</div>
+          </div>
+          <div class="pt-2 border-t border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between">
+            <span class="text-[11px] font-medium text-slate-700 dark:text-slate-300">${broadcastEN}${broadcastFR}</span>
+            <a href="${gameUrl}" class="text-[11px] font-semibold text-teamPrimary hover:underline flex items-center gap-1">
+              <span>Breakdown &rarr;</span>
+            </a>
+          </div>
+        </div>`;
+    }).join('');
+
+    recentResultsHtml = `
+    <section id="recentGamesArchive" class="bg-white dark:bg-slate-900 rounded-2xl p-4 sm:p-5 border border-slate-200 dark:border-slate-800 shadow-sm" data-section="recent-archive">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3 mb-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-teamPrimary/10 text-teamPrimary flex items-center justify-center text-sm shrink-0">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white uppercase font-teko tracking-wide leading-tight">
+              Recent Results & Past Blackouts
+            </h3>
+            <p class="text-[11px] text-slate-600 dark:text-slate-300">
+              Verified Canadian broadcast feeds and regional territory rules from the last 14 days
+            </p>
+          </div>
+        </div>
+        <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 self-start sm:self-auto">
+          ${recentGames.length} Recent Games
+        </span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5">
+        ${recentCardsHtml}
+      </div>
+    </section>`;
+  }
+  html = html.replace(/\{\{PRERENDERED_RECENT_RESULTS\}\}/g, recentResultsHtml);
 
   const teamDir = `teams/${team.name.split(' ')[0].toLowerCase()}`;
   if (!fs.existsSync(teamDir)) fs.mkdirSync(teamDir, { recursive: true });

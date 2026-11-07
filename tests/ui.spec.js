@@ -206,8 +206,8 @@ test('Ko-fi multivariate testing: assigns variant, persists in localStorage, upd
   const copyText = await page.locator('#kofiCalloutText').textContent();
   expect(copyText).toContain('Zero gambling ads');
 
-  // Navigate to game page and confirm variant consistency
-  await page.goto('/game/2026-10-15/toronto-vs-buffalo/');
+  // Navigate to active game page and confirm variant consistency
+  await page.goto('/game/2026-11-07/toronto-vs-montreal/');
   await page.waitForSelector('#gameKofiCard');
   const gameBtnVariant = await page.locator('#gameKofiBtn').getAttribute('data-umami-event-variant');
   expect(gameBtnVariant).toBe('anti_gambling');

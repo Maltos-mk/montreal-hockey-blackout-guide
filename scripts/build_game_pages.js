@@ -47,8 +47,8 @@ const TEAMS_MAP = {
 };
 
 const REGIONS_CONFIG = [
-  { key: 'on_west', name: 'Ontario (West / GTA / Hamilton)', inMarket: ['TOR'] },
-  { key: 'on_east_qc_atl', name: 'Eastern Ontario, Quebec & Atlantic', inMarket: ['MTL', 'OTT'] },
+  { key: 'on_west', name: 'Ontario (West / GTA / Hamilton / Niagara)', inMarket: ['TOR'] },
+  { key: 'on_east_qc_atl', name: 'Eastern Ontario (Ottawa), Quebec & Atlantic', inMarket: ['MTL', 'OTT'] },
   { key: 'on_overlap', name: 'Ontario Overlap (Belleville / Kingston)', inMarket: ['TOR', 'OTT', 'MTL'] },
   { key: 'ab', name: 'Alberta', inMarket: ['CGY', 'EDM'] },
   { key: 'sk', name: 'Saskatchewan, NWT & Nunavut', inMarket: ['CGY', 'EDM', 'WPG'] },
@@ -156,12 +156,16 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
     fs.writeFileSync(path.join(legacyDirPath, 'index.html'), legacyRedirectHtml);
   }
 
-  // Decision D2: If game concluded more than 21 days ago, issue permanent 301-equivalent redirect to Canadian team schedule
+  // Synchronized Post-Game Lifecycle:
+  // Concluded games stay active (200 OK) and in sitemap.xml for 7 days post-game.
+  // The moment they exceed the 7-day retention window, they immediately convert into permanent 301-equivalent redirect stubs
+  // pointing to the primary Canadian team hub to eliminate lingering orphan pages.
+  const POST_GAME_RETENTION_DAYS = 7;
   const gameDate = new Date(g.iso);
   const now = new Date();
   const daysDiff = (now - gameDate) / (1000 * 60 * 60 * 24);
 
-  if (daysDiff > 21) {
+  if (daysDiff > POST_GAME_RETENTION_DAYS) {
     const redirectHtml = `<!DOCTYPE html>
 <html lang="en">
 <head>

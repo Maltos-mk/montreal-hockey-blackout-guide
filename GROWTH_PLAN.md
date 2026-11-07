@@ -9,7 +9,7 @@ Working doc. Source: competitor review of whereisthegame.com plus feedback from 
 ## Open Decisions (Resolved)
 
 - [x] **D1. Trademark rule scope.** **LOCKED IN:** Descriptive team names are permitted in page titles, meta descriptions, and content to capture organic search traffic ("Canadiens game tonight"). Trademarks remain strictly banned from **domains, brand names, and URL slugs**. A visible non-affiliation disclaimer is required in the footer.
-- [x] **D2. Past-game page policy.** **LOCKED IN (Option A):** Keep game pages indexed with the final broadcast result for 14–21 days post-game. Drop from `sitemap.xml` after day 7. At day 21, issue a permanent **301 redirect to the home team's hub page** (e.g. `/toronto/`). This funnels all earned backlink equity into the main page, prevents index bloat/crawl waste, and stops cannibalization.
+- [x] **D2. Past-game page policy.** **LOCKED IN (Synchronized):** Keep game pages indexed with the final broadcast result for 7 days post-game in `sitemap.xml`. The moment they leave the sitemap after day 7, immediately convert them into permanent 301-equivalent redirect stubs to the primary Canadian team hub page (e.g. `/toronto/`). To ensure past games are never orphaned while indexed, team hubs maintain a 'Recent Results & Past Blackouts' section referencing recent games for 14 days post-game. This funnels all earned backlink equity into the main page, prevents index bloat/crawl waste, stops cannibalization, and eliminates the lingering orphan page window.
 - [x] **D3. Analytics & Ad Networks.** **LOCKED IN:** Remain Umami-only for the current phase (preserves the fast, privacy-first brand). Postpone GA4 and display ad networks until per-game programmatic pages scale real visits to 25k–50k/mo.
 
 ---
