@@ -72,7 +72,7 @@
     "@type": "WebPage",
     "name": "Ottawa Senators Hockey Broadcast & Blackout Guide",
     "url": "https://hockeyblackouts.ca/ottawa/",
-    "dateModified": "2026-11-05",
+    "dateModified": "2026-11-07",
     "description": "Interactive broadcast schedule and regional blackout calculator for Ottawa Senators hockey games across Sportsnet, TSN, RDS, TVA Sports, and Prime Video."
   }
   </script>
@@ -177,8 +177,8 @@
   </style>
 
   <!-- Precompiled Tailwind CSS & Application CSS -->
-  <link rel="stylesheet" href="/shared/tailwind.min.css?v=1793897677594">
-  <link rel="stylesheet" href="/shared/app.css?v=1793897677594">
+  <link rel="stylesheet" href="/shared/tailwind.min.css?v=1794087455557">
+  <link rel="stylesheet" href="/shared/app.css?v=1794087455557">
 
 
   <script>
@@ -271,9 +271,9 @@
             Where do you live?
           </label>
           <select id="regionSelect" aria-label="Where do you live?" class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 px-4 py-3 rounded-xl shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teamSecondary">
-            <option value="on_east_qc_atl" selected="selected">Quebec, Eastern Ontario, Atlantic Canada</option>
+            <option value="on_east_qc_atl" selected="selected">Quebec, Eastern Ontario (Ottawa), Atlantic Canada</option>
             <option value="on_overlap">Ontario Overlap (Belleville, Kingston, Pembroke)</option>
-            <option value="on_west">Ontario West (Toronto, London)</option>
+            <option value="on_west">Ontario West (Toronto, London, Niagara)</option>
             <option value="nw_on">Northwestern Ontario (Thunder Bay)</option>
             <option value="mb">Manitoba</option>
             <option value="sk">Saskatchewan, NWT & Nunavut</option>
@@ -609,6 +609,146 @@
       </div>
     </div>
   
+    </section>
+
+    <!-- RECENT RESULTS & PAST BLACKOUTS ARCHIVE -->
+    
+    <section id="recentGamesArchive" class="bg-white dark:bg-slate-900 rounded-2xl p-4 sm:p-5 border border-slate-200 dark:border-slate-800 shadow-sm" data-section="recent-archive">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3 mb-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-teamPrimary/10 text-teamPrimary flex items-center justify-center text-sm shrink-0">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+          </div>
+          <div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white uppercase font-teko tracking-wide leading-tight">
+              Recent Results & Past Blackouts
+            </h3>
+            <p class="text-[11px] text-slate-600 dark:text-slate-300">
+              Verified Canadian broadcast feeds and regional territory rules from the last 14 days
+            </p>
+          </div>
+        </div>
+        <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 self-start sm:self-auto">
+          6 Recent Games
+        </span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5">
+        
+        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between gap-2 text-xs">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-1">
+              <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#17</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">National</span>
+            </div>
+            <a href="/game/2026-11-05/buffalo-vs-ottawa/" class="font-bold text-sm text-slate-900 dark:text-white hover:text-teamPrimary transition flex items-center gap-1 group">
+              <span class="group-hover:underline">@ Sabres</span>
+              <i class="fa-solid fa-chevron-right text-[8px] text-slate-400 group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+            <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 truncate" title="Ottawa Senators at Buffalo Sabres">Wed Nov 4 2026</div>
+          </div>
+          <div class="pt-2 border-t border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between">
+            <span class="text-[11px] font-medium text-slate-700 dark:text-slate-300">Prime Video / Prime Video</span>
+            <a href="/game/2026-11-05/buffalo-vs-ottawa/" class="text-[11px] font-semibold text-teamPrimary hover:underline flex items-center gap-1">
+              <span>Breakdown &rarr;</span>
+            </a>
+          </div>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between gap-2 text-xs">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-1">
+              <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#16</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Regional</span>
+            </div>
+            <a href="/game/2026-11-02/anaheim-vs-ottawa/" class="font-bold text-sm text-slate-900 dark:text-white hover:text-teamPrimary transition flex items-center gap-1 group">
+              <span class="group-hover:underline">@ Ducks</span>
+              <i class="fa-solid fa-chevron-right text-[8px] text-slate-400 group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+            <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 truncate" title="Ottawa Senators at Anaheim Ducks">Sun Nov 1 2026</div>
+          </div>
+          <div class="pt-2 border-t border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between">
+            <span class="text-[11px] font-medium text-slate-700 dark:text-slate-300">TSN5 / RDS</span>
+            <a href="/game/2026-11-02/anaheim-vs-ottawa/" class="text-[11px] font-semibold text-teamPrimary hover:underline flex items-center gap-1">
+              <span>Breakdown &rarr;</span>
+            </a>
+          </div>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between gap-2 text-xs">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-1">
+              <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#15</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Regional</span>
+            </div>
+            <a href="/game/2026-10-31/san-jose-vs-ottawa/" class="font-bold text-sm text-slate-900 dark:text-white hover:text-teamPrimary transition flex items-center gap-1 group">
+              <span class="group-hover:underline">@ Sharks</span>
+              <i class="fa-solid fa-chevron-right text-[8px] text-slate-400 group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+            <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 truncate" title="Ottawa Senators at San Jose Sharks">Sat Oct 31 2026</div>
+          </div>
+          <div class="pt-2 border-t border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between">
+            <span class="text-[11px] font-medium text-slate-700 dark:text-slate-300">TSN5 / RDSI</span>
+            <a href="/game/2026-10-31/san-jose-vs-ottawa/" class="text-[11px] font-semibold text-teamPrimary hover:underline flex items-center gap-1">
+              <span>Breakdown &rarr;</span>
+            </a>
+          </div>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between gap-2 text-xs">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-1">
+              <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#14</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Regional</span>
+            </div>
+            <a href="/game/2026-10-30/los-angeles-vs-ottawa/" class="font-bold text-sm text-slate-900 dark:text-white hover:text-teamPrimary transition flex items-center gap-1 group">
+              <span class="group-hover:underline">@ Kings</span>
+              <i class="fa-solid fa-chevron-right text-[8px] text-slate-400 group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+            <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 truncate" title="Ottawa Senators at Los Angeles Kings">Thu Oct 29 2026</div>
+          </div>
+          <div class="pt-2 border-t border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between">
+            <span class="text-[11px] font-medium text-slate-700 dark:text-slate-300">TSN5 / RDSI</span>
+            <a href="/game/2026-10-30/los-angeles-vs-ottawa/" class="text-[11px] font-semibold text-teamPrimary hover:underline flex items-center gap-1">
+              <span>Breakdown &rarr;</span>
+            </a>
+          </div>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between gap-2 text-xs">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-1">
+              <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#13</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Regional</span>
+            </div>
+            <a href="/game/2026-10-28/vegas-vs-ottawa/" class="font-bold text-sm text-slate-900 dark:text-white hover:text-teamPrimary transition flex items-center gap-1 group">
+              <span class="group-hover:underline">@ Golden Knights</span>
+              <i class="fa-solid fa-chevron-right text-[8px] text-slate-400 group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+            <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 truncate" title="Ottawa Senators at Vegas Golden Knights">Tue Oct 27 2026</div>
+          </div>
+          <div class="pt-2 border-t border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between">
+            <span class="text-[11px] font-medium text-slate-700 dark:text-slate-300">TSN5 / RDSI</span>
+            <a href="/game/2026-10-28/vegas-vs-ottawa/" class="text-[11px] font-semibold text-teamPrimary hover:underline flex items-center gap-1">
+              <span>Breakdown &rarr;</span>
+            </a>
+          </div>
+        </div>
+        <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between gap-2 text-xs">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-1">
+              <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#12</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">National</span>
+            </div>
+            <a href="/game/2026-10-24/ottawa-vs-new-york/" class="font-bold text-sm text-slate-900 dark:text-white hover:text-teamPrimary transition flex items-center gap-1 group">
+              <span class="group-hover:underline">vs Rangers</span>
+              <i class="fa-solid fa-chevron-right text-[8px] text-slate-400 group-hover:translate-x-0.5 transition-transform"></i>
+            </a>
+            <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 truncate" title="Ottawa Senators vs New York Rangers">Sat Oct 24 2026</div>
+          </div>
+          <div class="pt-2 border-t border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between">
+            <span class="text-[11px] font-medium text-slate-700 dark:text-slate-300">Sportsnet East / TVA Sports</span>
+            <a href="/game/2026-10-24/ottawa-vs-new-york/" class="text-[11px] font-semibold text-teamPrimary hover:underline flex items-center gap-1">
+              <span>Breakdown &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
@@ -1272,7 +1412,7 @@
       <!-- Footer count -->
       <div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
         <span id="renderedCountLabel">Showing the 67-game Ottawa Senators TV broadcast schedule</span>
-        <span class="text-[11px] italic text-center sm:text-right" data-freshness="verified-date">Schedule verified: Nov 5, 2026 • Auto-synced with local clock</span>
+        <span class="text-[11px] italic text-center sm:text-right" data-freshness="verified-date">Schedule verified: Nov 7, 2026 • Auto-synced with local clock</span>
       </div>
 
     </section>
@@ -1468,9 +1608,9 @@
   </div>
 
   <script>
-  window.TEAM_DATA_URL = "data.json?v=1793897677594";
+  window.TEAM_DATA_URL = "data.json?v=1794087455557";
 </script>
-<script defer src="../shared/app.js?v=1793897677594"></script>
+<script defer src="../shared/app.js?v=1794087455557"></script>
 
 </body>
 </html>

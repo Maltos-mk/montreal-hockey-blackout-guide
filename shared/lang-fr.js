@@ -60,9 +60,9 @@
   };
 
   var REGION_OPTIONS = [
-    ['on_east_qc_atl', 'Québec, est de l’Ontario, Canada atlantique'],
+    ['on_east_qc_atl', 'Québec, est de l’Ontario (Ottawa), Canada atlantique'],
     ['on_overlap', 'Zone de chevauchement en Ontario (Belleville, Kingston, Pembroke)'],
-    ['on_west', 'Ontario ouest (Toronto, London)'],
+    ['on_west', 'Ontario ouest (Toronto, London, Niagara)'],
     ['nw_on', 'Nord-ouest de l’Ontario (Thunder Bay)'],
     ['mb', 'Manitoba'],
     ['sk', 'Saskatchewan, T.N.-O. et Nunavut'],
