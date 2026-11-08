@@ -1,0 +1,61 @@
+name: Bluesky Game-Day Publisher
+
+on:
+  schedule:
+    - cron: '0 15 * * *' # Daily at 15:00 UTC (10:00 AM EST / 11:00 AM EDT)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Simulate publication without calling Bluesky XRPC APIs'
+        required: true
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Generate OG Social Cards
+        run: node scripts/generate_og_cards.js
+
+      - name: Publish Game-Day Posts to Bluesky
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+              echo "Executing manual workflow run in DRY-RUN mode..."
+              node scripts/post_bluesky.js --dry-run
+            else
+              echo "Executing manual workflow run in LIVE mode..."
+              node scripts/post_bluesky.js
+            fi
+          else
+            echo "Executing daily scheduled LIVE run..."
+            node scripts/post_bluesky.js
+          fi
+        env:
+          BSKY_MAIN_IDENTIFIER: ${{ secrets.BSKY_MAIN_IDENTIFIER }}
+          BSKY_MAIN_PASSWORD: ${{ secrets.BSKY_MAIN_PASSWORD }}
+          BSKY_TOR_IDENTIFIER: ${{ secrets.BSKY_TOR_IDENTIFIER }}
+          BSKY_TOR_PASSWORD: ${{ secrets.BSKY_TOR_PASSWORD }}
+          BSKY_MTL_IDENTIFIER: ${{ secrets.BSKY_MTL_IDENTIFIER }}
+          BSKY_MTL_PASSWORD: ${{ secrets.BSKY_MTL_PASSWORD }}
+          BSKY_FR_IDENTIFIER: ${{ secrets.BSKY_FR_IDENTIFIER }}
+          BSKY_FR_PASSWORD: ${{ secrets.BSKY_FR_PASSWORD }}
+          CONCIERGE_WEBHOOK_URL: ${{ secrets.CONCIERGE_WEBHOOK_URL }}

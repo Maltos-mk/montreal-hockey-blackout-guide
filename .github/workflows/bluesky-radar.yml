@@ -1,0 +1,46 @@
+name: Bluesky Concierge Radar
+
+on:
+  schedule:
+    # Prime-time puck-drop windows:
+    # 23:30 UTC = 6:30 PM EST / 7:30 PM EDT (Pre-game & 7:00 PM puck-drop inquiries)
+    # 01:00 UTC = 8:00 PM EST / 9:00 PM EDT (First intermission & late games)
+    - cron: '30 23 * * *'
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Simulate scan without sending Discord webhook alerts'
+        required: true
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  radar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Bluesky Concierge Radar
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            echo "Running radar in DRY-RUN mode..."
+            node scripts/bluesky_concierge_radar.js --dry-run
+          else
+            echo "Running live radar scan..."
+            node scripts/bluesky_concierge_radar.js
+          fi
+        env:
+          BSKY_MAIN_IDENTIFIER: ${{ secrets.BSKY_MAIN_IDENTIFIER }}
+          BSKY_MAIN_PASSWORD: ${{ secrets.BSKY_MAIN_PASSWORD }}
+          CONCIERGE_WEBHOOK_URL: ${{ secrets.CONCIERGE_WEBHOOK_URL }}
+          GITHUB_STEP_SUMMARY: ${{ github.step_summary }}
