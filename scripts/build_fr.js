@@ -83,7 +83,16 @@ const timestamp = Date.now();
 const [teamNameFr, teamNicknameFr] = HB_FR.teams[team.id];
 const teamDirSlug = 'montreal';
 
+const ogTitle = 'Où regarder les Canadiens | Guide télé et blackouts';
+const ogDescription = 'Vérifiez les postes télé (RDS, TVA Sports, Sportsnet) et les blackouts régionaux pour les Canadiens de Montréal.';
+const ogImageUrl = 'https://hockeyblackouts.ca/og/teams/fr-montreal.png';
+const ogImageAlt = 'Guide télé et blackouts pour les Canadiens de Montréal';
+
 let html = templateHtml;
+html = html.replace(/\{\{OG_TITLE\}\}/g, ogTitle);
+html = html.replace(/\{\{OG_DESCRIPTION\}\}/g, ogDescription);
+html = html.replace(/\{\{OG_IMAGE_URL\}\}/g, ogImageUrl);
+html = html.replace(/\{\{OG_IMAGE_ALT\}\}/g, ogImageAlt);
 html = html.replace(/\{\{TEAM_NAME_FR\}\}/g, teamNameFr);
 html = html.replace(/\{\{TEAM_NICKNAME_FR\}\}/g, teamNicknameFr);
 html = html.replace(/\{\{CITY_NAME_FR\}\}/g, 'Montréal');

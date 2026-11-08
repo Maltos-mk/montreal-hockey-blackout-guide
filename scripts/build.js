@@ -19,6 +19,16 @@ dataFiles.forEach(file => {
   const teamDirSlug = team.name.split(' ')[0].toLowerCase();
   html = html.replace(/\{\{TEAM_DIR\}\}/g, teamDirSlug);
 
+  const ogTitle = `Where to Watch ${team.name} Tonight | TV & Streams`;
+  const ogDescription = `Check live TV channels, streaming options, and regional blackouts for ${team.name} games across Canada.`;
+  const ogImageUrl = `https://hockeyblackouts.ca/og/teams/${teamDirSlug}.png`;
+  const ogImageAlt = `${team.name} Canadian TV channels and regional blackout guide`;
+
+  html = html.replace(/\{\{OG_TITLE\}\}/g, ogTitle);
+  html = html.replace(/\{\{OG_DESCRIPTION\}\}/g, ogDescription);
+  html = html.replace(/\{\{OG_IMAGE_URL\}\}/g, ogImageUrl);
+  html = html.replace(/\{\{OG_IMAGE_ALT\}\}/g, ogImageAlt);
+
   const city = team.name.split(' ')[0];
   html = html.replace(/\{\{CITY_NAME\}\}/g, city); html = html.replace(/\{\{TEAM_ID\}\}/g, team.id);
   html = html.replace(/\{\{REGION_CODE\}\}/g, team.marketRegion.regionCode);

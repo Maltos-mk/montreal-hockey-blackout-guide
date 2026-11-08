@@ -164,6 +164,9 @@ execSync('node scripts/build_explainers.js', { stdio: 'inherit' });
 // Build French Montreal Hub (/fr/montreal/)
 execSync('node scripts/build_fr.js', { stdio: 'inherit' });
 
+// Build Phase 4 OpenGraph 1200x630 Social Preview Cards
+execSync('node scripts/generate_og_cards.js', { stdio: 'inherit' });
+
 console.log('Build complete.');
 
 const buildDateIso = now.toISOString().split('T')[0];

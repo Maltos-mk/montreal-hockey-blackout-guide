@@ -140,15 +140,54 @@ function renderRelatedGuidesHtml(currentSlug) {
     `).join('\n');
 }
 
+const EXPLAINER_OG_META = {
+  'sportsnet-plus-blackout-rules': {
+    title: 'Sportsnet+ Blackout Rules Explained | HockeyBlackouts.ca',
+    description: 'Learn how Sportsnet+ regional blackouts and Standard vs Premium tiers work for Canadian NHL games.',
+    alt: 'Sportsnet+ NHL blackout rules and streaming tiers guide'
+  },
+  'tsn-hockey-blackout-rules': {
+    title: 'TSN Hockey Blackout Rules Explained | HockeyBlackouts.ca',
+    description: 'How regional NHL blackouts work on TSN across Canada for Leafs, Sens, Canadiens, and Jets.',
+    alt: 'TSN regional NHL blackout rules guide'
+  },
+  'prime-hockey-schedule-canada': {
+    title: 'Prime Video NHL Hockey Schedule | HockeyBlackouts.ca',
+    description: 'Prime Monday Night Hockey schedule and streaming rules in Canada. Coast-to-coast games with no blackouts.',
+    alt: 'Amazon Prime Video NHL Monday Night Hockey schedule guide'
+  },
+  'rds-vs-tva-sports-blackouts': {
+    title: 'RDS vs TVA Sports Blackouts Explained | HockeyBlackouts',
+    description: 'Understand French NHL broadcast rights and regional blackouts for RDS and TVA Sports across Canada.',
+    alt: 'RDS vs TVA Sports NHL blackout and broadcast guide'
+  },
+  'how-blackouts-work': {
+    title: 'How NHL Blackouts Work in Canada | HockeyBlackouts.ca',
+    description: 'Complete guide to Canadian NHL broadcast territories, regional blackout boundaries, and streaming rights.',
+    alt: 'How NHL regional blackouts work across Canadian broadcast zones'
+  }
+};
+
 function writeExplainerPage(config) {
   const canonicalUrl = `https://hockeyblackouts.ca/${config.slug}/`;
   const schemaJson = buildSchema(config.title, config.description, canonicalUrl, config.faqs);
   const faqHtml = renderFaqHtml(config.faqs);
   const relatedGuidesHtml = renderRelatedGuidesHtml(config.slug);
 
+  const ogMeta = EXPLAINER_OG_META[config.slug] || {
+    title: config.title.slice(0, 58),
+    description: config.description.slice(0, 120),
+    alt: config.title
+  };
+  const ogImageUrl = `https://hockeyblackouts.ca/og/explainers/${config.slug}.png`;
+
   let html = templateHtml;
   html = html.replace(/\{\{PAGE_TITLE\}\}/g, config.title);
   html = html.replace(/\{\{META_DESCRIPTION\}\}/g, config.description);
+  html = html.replace(/\{\{OG_TITLE\}\}/g, ogMeta.title);
+  html = html.replace(/\{\{OG_DESCRIPTION\}\}/g, ogMeta.description);
+  html = html.replace(/\{\{OG_IMAGE_URL\}\}/g, ogImageUrl);
+  html = html.replace(/\{\{OG_IMAGE_ALT\}\}/g, ogMeta.alt);
   html = html.replace(/\{\{CANONICAL_URL\}\}/g, canonicalUrl);
   html = html.replace(/\{\{SCHEMA_JSON\}\}/g, schemaJson);
   html = html.replace(/\{\{BREADCRUMB_LABEL\}\}/g, config.breadcrumb);

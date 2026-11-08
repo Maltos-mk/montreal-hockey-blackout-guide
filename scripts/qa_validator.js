@@ -213,11 +213,62 @@ function validateHtml(filePath) {
   }
   
   
+  // Social Meta Tags & OpenGraph Validation
+  if (!isRedirect) {
+    const twCardMatch = content.match(/<meta\s+(?:name|property)=["']twitter:card["']\s+content=["']([^"']+)["']/i);
+    if (!twCardMatch) {
+      errors.push('Missing twitter:card meta tag');
+    } else if (twCardMatch[1] !== 'summary_large_image') {
+      errors.push(`Invalid twitter:card "${twCardMatch[1]}" (must be "summary_large_image")`);
+    }
+
+    const ogTitleMatch = content.match(/<meta\s+property=["']og:title["']\s+content=["']([^"']+)["']/i);
+    if (!ogTitleMatch) {
+      errors.push('Missing og:title tag');
+    } else if (ogTitleMatch[1].replace(/&amp;/g, '&').length > 60) {
+      errors.push(`og:title exceeds 60 characters (${ogTitleMatch[1].length} chars): "${ogTitleMatch[1]}"`);
+    }
+
+    const twTitleMatch = content.match(/<meta\s+(?:name|property)=["']twitter:title["']\s+content=["']([^"']+)["']/i);
+    if (!twTitleMatch) {
+      errors.push('Missing twitter:title tag');
+    } else if (twTitleMatch[1].replace(/&amp;/g, '&').length > 60) {
+      errors.push(`twitter:title exceeds 60 characters (${twTitleMatch[1].length} chars): "${twTitleMatch[1]}"`);
+    }
+
+    const ogDescMatch = content.match(/<meta\s+property=["']og:description["']\s+content=["']([^"']+)["']/i);
+    if (!ogDescMatch) {
+      errors.push('Missing og:description tag');
+    } else if (ogDescMatch[1].replace(/&amp;/g, '&').length > 125) {
+      errors.push(`og:description exceeds 125 characters (${ogDescMatch[1].length} chars): "${ogDescMatch[1]}"`);
+    }
+
+    const twDescMatch = content.match(/<meta\s+(?:name|property)=["']twitter:description["']\s+content=["']([^"']+)["']/i);
+    if (!twDescMatch) {
+      errors.push('Missing twitter:description tag');
+    } else if (twDescMatch[1].replace(/&amp;/g, '&').length > 125) {
+      errors.push(`twitter:description exceeds 125 characters (${twDescMatch[1].length} chars): "${twDescMatch[1]}"`);
+    }
+
+    if (!content.includes('<meta property="og:image:width" content="1200">')) {
+      errors.push('Missing explicit <meta property="og:image:width" content="1200"> tag');
+    }
+    if (!content.includes('<meta property="og:image:height" content="630">')) {
+      errors.push('Missing explicit <meta property="og:image:height" content="630"> tag');
+    }
+    if (!content.match(/<meta\s+property=["']og:image:alt["']\s+content=["'][^"']+["']/i)) {
+      errors.push('Missing <meta property="og:image:alt" ...> tag');
+    }
+  }
+
   // Image & Meta Validation
   const ogImageMatch = content.match(/<meta\s+property=["']og:image["']\s+content=["'](https:\/\/hockeyblackouts\.ca\/[^"']+)["']/i);
   if (!ogImageMatch) {
     errors.push('Missing or invalid og:image tag (must be absolute https://hockeyblackouts.ca/...)');
   } else {
+    if (!isRedirect && !ogImageMatch[1].startsWith('https://hockeyblackouts.ca/og/')) {
+      errors.push(`og:image does not point to 1200x630 /og/ asset: ${ogImageMatch[1]}`);
+    }
     // Check if the physical file exists in the build dir
     const imagePath = ogImageMatch[1].replace('https://hockeyblackouts.ca/', '');
     const physicalPath = path.join(__dirname, '../build', imagePath);
@@ -226,7 +277,7 @@ function validateHtml(filePath) {
     }
   }
 
-  const twImageMatch = content.match(/<meta\s+property=["']twitter:image["']\s+content=["'](https:\/\/hockeyblackouts\.ca\/[^"']+)["']/i);
+  const twImageMatch = content.match(/<meta\s+(?:property|name)=["']twitter:image["']\s+content=["'](https:\/\/hockeyblackouts\.ca\/[^"']+)["']/i);
   if (!twImageMatch) {
     errors.push('Missing or invalid twitter:image tag');
   } else {

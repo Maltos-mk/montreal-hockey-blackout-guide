@@ -142,8 +142,8 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
   <meta http-equiv="refresh" content="0; url=${canonicalUrl}">
   <link rel="canonical" href="${canonicalUrl}">
   <meta name="robots" content="noindex, follow">
-  <meta property="og:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
-  <meta property="twitter:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
+  <meta property="og:image" content="https://hockeyblackouts.ca/og/teams/${primaryCanadian.dir}.png">
+  <meta property="twitter:image" content="https://hockeyblackouts.ca/og/teams/${primaryCanadian.dir}.png">
   <script>
     window.location.replace("${canonicalUrl}" + window.location.search + window.location.hash);
   </script>
@@ -175,8 +175,8 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
   <meta http-equiv="refresh" content="0; url=https://hockeyblackouts.ca/${primaryCanadian.dir}/">
   <link rel="canonical" href="https://hockeyblackouts.ca/${primaryCanadian.dir}/">
   <meta name="robots" content="noindex, follow">
-  <meta property="og:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
-  <meta property="twitter:image" content="https://hockeyblackouts.ca/shared/favicon-192x192.png">
+  <meta property="og:image" content="https://hockeyblackouts.ca/og/teams/${primaryCanadian.dir}.png">
+  <meta property="twitter:image" content="https://hockeyblackouts.ca/og/teams/${primaryCanadian.dir}.png">
   <script>
     window.location.replace("https://hockeyblackouts.ca/${primaryCanadian.dir}/" + window.location.search + window.location.hash);
   </script>
@@ -196,7 +196,18 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
   
   const pageTitle = `Where to Watch ${awayTeam.city} vs ${homeTeam.city} Tonight: TV & Stream Guide`;
   const metaDescription = `Watch ${awayTeam.city} vs ${homeTeam.city} on ${g.date}. Find live TV channels, streaming options, and blackout rules across Canada.`;
-  const ogImageUrl = `https://hockeyblackouts.ca/shared/favicon-192x192.png`;
+  
+  // Social meta tags (<= 58 chars for title, <= 120 chars for description)
+  const ogTitle = `${awayTeam.city} vs ${homeTeam.city} TV & Blackout Guide`.slice(0, 58);
+  const rawOgDesc = `Watch ${awayTeam.city} vs ${homeTeam.city} live on ${g.date}. TV channels, streams, and regional blackout rules in Canada.`;
+  const ogDescription = (rawOgDesc.length <= 120 ? rawOgDesc : `Watch ${awayTeam.city} vs ${homeTeam.city} live on ${g.date}. TV channels, streaming, and blackout rules.`).slice(0, 120);
+  const ogImageAlt = `${awayTeam.city} vs ${homeTeam.city} Canadian broadcast and blackout guide`;
+
+  // Rolling active window check for individual game OG card: yesterday through +14 days
+  const isInActiveWindow = daysDiff >= -14 && daysDiff <= 1;
+  const ogImageUrl = isInActiveWindow 
+    ? `https://hockeyblackouts.ca/og/games/${datePrefix}-${gameSlug}.png` 
+    : `https://hockeyblackouts.ca/og/teams/${primaryCanadian.dir}.png`;
 
   // Pre-calculate regional breakdown
   const regionBreakdown = {};
@@ -490,7 +501,10 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
   renderedHtml = renderedHtml.replace(/\{\{PAGE_TITLE\}\}/g, pageTitle);
   renderedHtml = renderedHtml.replace(/\{\{CANONICAL_URL\}\}/g, canonicalUrl);
   renderedHtml = renderedHtml.replace(/\{\{META_DESCRIPTION\}\}/g, metaDescription);
+  renderedHtml = renderedHtml.replace(/\{\{OG_TITLE\}\}/g, ogTitle);
+  renderedHtml = renderedHtml.replace(/\{\{OG_DESCRIPTION\}\}/g, ogDescription);
   renderedHtml = renderedHtml.replace(/\{\{OG_IMAGE_URL\}\}/g, ogImageUrl);
+  renderedHtml = renderedHtml.replace(/\{\{OG_IMAGE_ALT\}\}/g, ogImageAlt);
   renderedHtml = renderedHtml.replace(/\{\{SCHEMA_JSON\}\}/g, JSON.stringify(schemaObj, null, 2));
   renderedHtml = renderedHtml.replace(/\{\{HEADER_SCHEDULE_LINKS\}\}/g, headerScheduleLinks);
   renderedHtml = renderedHtml.replace(/\{\{BREADCRUMB_LINKS\}\}/g, breadcrumbLinks);
