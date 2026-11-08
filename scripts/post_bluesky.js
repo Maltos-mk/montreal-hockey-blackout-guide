@@ -29,7 +29,10 @@ const CANADIAN_TEAMS = {
     hashtag: '#LeafsForever',
     territory: 'Ontario',
     territoryShort: 'Ontario',
-    accountPrefix: 'BSKY_TOR'
+    accountPrefix: 'BSKY_TOR',
+    timezone: 'America/Toronto',
+    timeZoneAbbr: 'ET',
+    timeZoneAbbrFr: 'HE'
   },
   'MTL': {
     city: 'Montreal',
@@ -43,7 +46,10 @@ const CANADIAN_TEAMS = {
     territoryShort: 'QC & Atlantic Canada',
     territoryFr: 'au Québec et dans l’Est canadien',
     accountPrefix: 'BSKY_MTL',
-    frAccountPrefix: 'BSKY_FR'
+    frAccountPrefix: 'BSKY_FR',
+    timezone: 'America/Toronto',
+    timeZoneAbbr: 'ET',
+    timeZoneAbbrFr: 'HE'
   },
   'OTT': {
     city: 'Ottawa',
@@ -53,7 +59,10 @@ const CANADIAN_TEAMS = {
     hashtag: '#GoSensGo',
     territory: 'Eastern Ontario, Quebec & Atlantic Canada',
     territoryShort: 'Eastern ON, QC & Atlantic',
-    accountPrefix: 'BSKY_OTT'
+    accountPrefix: 'BSKY_OTT',
+    timezone: 'America/Toronto',
+    timeZoneAbbr: 'ET',
+    timeZoneAbbrFr: 'HE'
   },
   'VAN': {
     city: 'Vancouver',
@@ -63,7 +72,10 @@ const CANADIAN_TEAMS = {
     hashtag: '#Canucks',
     territory: 'BC & Yukon',
     territoryShort: 'BC & Yukon',
-    accountPrefix: 'BSKY_VAN'
+    accountPrefix: 'BSKY_VAN',
+    timezone: 'America/Vancouver',
+    timeZoneAbbr: 'PT',
+    timeZoneAbbrFr: 'HP'
   },
   'CGY': {
     city: 'Calgary',
@@ -73,7 +85,10 @@ const CANADIAN_TEAMS = {
     hashtag: '#Flames',
     territory: 'Alberta, Saskatchewan & NWT',
     territoryShort: 'AB & SK',
-    accountPrefix: 'BSKY_CGY'
+    accountPrefix: 'BSKY_CGY',
+    timezone: 'America/Edmonton',
+    timeZoneAbbr: 'MT',
+    timeZoneAbbrFr: 'HR'
   },
   'EDM': {
     city: 'Edmonton',
@@ -83,7 +98,10 @@ const CANADIAN_TEAMS = {
     hashtag: '#LetsGoOilers',
     territory: 'Alberta, Saskatchewan & NWT',
     territoryShort: 'AB & SK',
-    accountPrefix: 'BSKY_EDM'
+    accountPrefix: 'BSKY_EDM',
+    timezone: 'America/Edmonton',
+    timeZoneAbbr: 'MT',
+    timeZoneAbbrFr: 'HR'
   },
   'WPG': {
     city: 'Winnipeg',
@@ -93,8 +111,52 @@ const CANADIAN_TEAMS = {
     hashtag: '#GoJetsGo',
     territory: 'Manitoba, Saskatchewan & NW Ontario',
     territoryShort: 'MB & SK',
-    accountPrefix: 'BSKY_WPG'
+    accountPrefix: 'BSKY_WPG',
+    timezone: 'America/Winnipeg',
+    timeZoneAbbr: 'CT',
+    timeZoneAbbrFr: 'HC'
   }
+};
+
+// All 32 NHL Teams Timezone Metadata
+const TEAM_TIMEZONES = {
+  // Canadian Teams
+  'VAN': { timeZone: 'America/Vancouver', abbr: 'PT', abbrFr: 'HP' },
+  'CGY': { timeZone: 'America/Edmonton', abbr: 'MT', abbrFr: 'HR' },
+  'EDM': { timeZone: 'America/Edmonton', abbr: 'MT', abbrFr: 'HR' },
+  'WPG': { timeZone: 'America/Winnipeg', abbr: 'CT', abbrFr: 'HC' },
+  'TOR': { timeZone: 'America/Toronto', abbr: 'ET', abbrFr: 'HE' },
+  'OTT': { timeZone: 'America/Toronto', abbr: 'ET', abbrFr: 'HE' },
+  'MTL': { timeZone: 'America/Toronto', abbr: 'ET', abbrFr: 'HE' },
+  // US Eastern Teams
+  'BOS': { timeZone: 'America/New_York', abbr: 'ET' },
+  'BUF': { timeZone: 'America/New_York', abbr: 'ET' },
+  'DET': { timeZone: 'America/New_York', abbr: 'ET' },
+  'FLA': { timeZone: 'America/New_York', abbr: 'ET' },
+  'TBL': { timeZone: 'America/New_York', abbr: 'ET' },
+  'CAR': { timeZone: 'America/New_York', abbr: 'ET' },
+  'NJD': { timeZone: 'America/New_York', abbr: 'ET' },
+  'NYI': { timeZone: 'America/New_York', abbr: 'ET' },
+  'NYR': { timeZone: 'America/New_York', abbr: 'ET' },
+  'PHI': { timeZone: 'America/New_York', abbr: 'ET' },
+  'PIT': { timeZone: 'America/New_York', abbr: 'ET' },
+  'WSH': { timeZone: 'America/New_York', abbr: 'ET' },
+  'CBJ': { timeZone: 'America/New_York', abbr: 'ET' },
+  // US Central Teams
+  'CHI': { timeZone: 'America/Chicago', abbr: 'CT' },
+  'DAL': { timeZone: 'America/Chicago', abbr: 'CT' },
+  'MIN': { timeZone: 'America/Chicago', abbr: 'CT' },
+  'NSH': { timeZone: 'America/Chicago', abbr: 'CT' },
+  'STL': { timeZone: 'America/Chicago', abbr: 'CT' },
+  // US Mountain Teams
+  'COL': { timeZone: 'America/Denver', abbr: 'MT' },
+  'UTA': { timeZone: 'America/Denver', abbr: 'MT' },
+  // US Pacific Teams
+  'ANA': { timeZone: 'America/Los_Angeles', abbr: 'PT' },
+  'LAK': { timeZone: 'America/Los_Angeles', abbr: 'PT' },
+  'SJS': { timeZone: 'America/Los_Angeles', abbr: 'PT' },
+  'SEA': { timeZone: 'America/Los_Angeles', abbr: 'PT' },
+  'VGK': { timeZone: 'America/Los_Angeles', abbr: 'PT' }
 };
 
 const ALL_CITIES = {
@@ -274,11 +336,69 @@ function resolveCardImage(datePrefix, homeSlug, awaySlug, primaryTeamSlug) {
   return null;
 }
 
+// Format game times in specific team timezones
+function formatGameTime(iso, teamId) {
+  const tzConfig = TEAM_TIMEZONES[teamId] || { timeZone: 'America/Toronto', abbr: 'ET' };
+  if (iso) {
+    const dt = new Date(iso);
+    if (!isNaN(dt.getTime())) {
+      const formatted = new Intl.DateTimeFormat('en-US', {
+        timeZone: tzConfig.timeZone,
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+      }).format(dt);
+      return `${formatted} ${tzConfig.abbr}`;
+    }
+  }
+  return `7:00 PM ${tzConfig.abbr}`;
+}
+
+function formatGameTimeFr(iso, teamId = 'MTL') {
+  const tzConfig = TEAM_TIMEZONES[teamId] || { timeZone: 'America/Toronto', abbrFr: 'HE' };
+  const abbr = tzConfig.abbrFr || 'HE';
+  if (iso) {
+    const dt = new Date(iso);
+    if (!isNaN(dt.getTime())) {
+      const parts = new Intl.DateTimeFormat('fr-CA', {
+        timeZone: tzConfig.timeZone,
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: false
+      }).formatToParts(dt);
+      const hour = parts.find(p => p.type === 'hour')?.value || '19';
+      const minute = parts.find(p => p.type === 'minute')?.value || '00';
+      return `${hour} h ${minute} ${abbr}`;
+    }
+  }
+  return `19 h 00 ${abbr}`;
+}
+
+function getMatchupTimeString(game, homeId, awayId) {
+  const homeTime = formatGameTime(game.iso, homeId);
+  const homeTz = TEAM_TIMEZONES[homeId] || { abbr: 'ET' };
+  const awayTz = TEAM_TIMEZONES[awayId] || { abbr: 'ET' };
+  const homeIsCanadian = Boolean(CANADIAN_TEAMS[homeId]);
+  const awayIsCanadian = Boolean(CANADIAN_TEAMS[awayId]);
+
+  if (homeTz.abbr === awayTz.abbr) {
+    return homeTime;
+  }
+  const awayTime = formatGameTime(game.iso, awayId);
+  if (homeIsCanadian && awayIsCanadian) {
+    return `${homeTime} / ${awayTime}`;
+  }
+  if (!homeIsCanadian && awayIsCanadian) {
+    return `${homeTime} / ${awayTime}`;
+  }
+  return homeTime;
+}
+
 // Compose Main Account Copy
 function composeMainPost(game, homeId, awayId, gameUrl) {
   const homeCity = ALL_CITIES[homeId] || homeId;
   const awayCity = ALL_CITIES[awayId] || awayId;
-  const timeStr = game.time || '7:00 PM ET';
+  const timeStr = getMatchupTimeString(game, homeId, awayId);
   const isPrime = game.typeEN === 'prime_wednesday' || game.netEN === 'Prime Video';
   const isSnExclusive = game.netEN === 'SN+' || (game.netEN && game.netEN.includes('SN+') && game.typeEN === 'national');
   const isNational = game.typeEN === 'national' && !isSnExclusive;
@@ -325,7 +445,7 @@ function composeTeamPost(teamKey, game, homeId, awayId, gameUrl) {
   const isHome = homeId === teamKey;
   const oppId = isHome ? awayId : homeId;
   const oppCity = ALL_CITIES[oppId] || oppId;
-  const timeStr = game.time || '7:00 PM ET';
+  const timeStr = formatGameTime(game.iso, teamKey);
   const isPrime = game.typeEN === 'prime_wednesday' || game.netEN === 'Prime Video';
   const isSnExclusive = game.netEN === 'SN+' || (game.netEN && game.netEN.includes('SN+') && game.typeEN === 'national');
   const isNational = game.typeEN === 'national' && !isSnExclusive;
@@ -359,7 +479,7 @@ function composeFrenchPost(game, homeId, awayId, gameUrl) {
   const oppCity = ALL_CITIES[oppId] || oppId;
   const isPrime = game.typeEN === 'prime_wednesday' || game.netEN === 'Prime Video';
   const isNational = game.typeEN === 'national';
-  const timeFr = (game.time || '19 h 00').replace(' PM', ' h 00 HE').replace('7:00', '19');
+  const timeFr = formatGameTimeFr(game.iso, 'MTL');
 
   let broadcastFr = '';
   if (isPrime) {
@@ -584,6 +704,10 @@ if (require.main === module) {
 
 module.exports = {
   CANADIAN_TEAMS,
+  TEAM_TIMEZONES,
+  formatGameTime,
+  formatGameTimeFr,
+  getMatchupTimeString,
   extractFacets,
   getGraphemeCount,
   composeMainPost,
