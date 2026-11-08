@@ -85,18 +85,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-11-01/carolina-vs-winnipeg/</loc>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hockeyblackouts.ca/game/2026-11-01/new-york-vs-edmonton/</loc>
-    <lastmod>2026-11-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://hockeyblackouts.ca/game/2026-11-02/anaheim-vs-ottawa/</loc>
     <lastmod>2026-11-08</lastmod>
     <changefreq>daily</changefreq>
