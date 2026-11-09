@@ -2,7 +2,7 @@ name: Bluesky Game-Day Publisher
 
 on:
   schedule:
-    - cron: '0 15 * * *' # Daily at 15:00 UTC (10:00 AM EST / 11:00 AM EDT)
+    - cron: '17 15 * * *' # Daily at 15:17 UTC (10:17 AM EST / 11:17 AM EDT)
   workflow_dispatch:
     inputs:
       dry_run:
