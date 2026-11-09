@@ -189,23 +189,34 @@ function getGraphemeCount(str) {
   return Array.from(segmenter.segment(str)).length;
 }
 
+// Build canonical UTM URLs adhering to AGENTS.md taxonomy
+function buildUtmUrl(baseUrl, campaign = 'blackout_guide', content = 'post_link') {
+  const url = new URL(baseUrl);
+  url.searchParams.set('utm_source', 'bluesky');
+  url.searchParams.set('utm_medium', 'social');
+  url.searchParams.set('utm_campaign', campaign);
+  url.searchParams.set('utm_content', content);
+  return url.toString();
+}
+
 // Compute accurate UTF-8 byte-offset facets for links and tags in AT Protocol
-function extractFacets(text) {
+function extractFacets(text, linkMap = {}) {
   const facets = [];
 
   // Match full URLs
   const urlRegex = /https?:\/\/[^\s]+/g;
   let match;
   while ((match = urlRegex.exec(text)) !== null) {
-    const url = match[0];
+    const rawUrl = match[0];
+    const targetUri = linkMap[rawUrl] || rawUrl;
     const prefix = text.slice(0, match.index);
     const byteStart = Buffer.byteLength(prefix, 'utf-8');
-    const byteEnd = byteStart + Buffer.byteLength(url, 'utf-8');
+    const byteEnd = byteStart + Buffer.byteLength(rawUrl, 'utf-8');
     facets.push({
       index: { byteStart, byteEnd },
       features: [{
         $type: 'app.bsky.richtext.facet#link',
-        uri: url
+        uri: targetUri
       }]
     });
   }
@@ -552,7 +563,10 @@ async function main() {
     const gameUrl = `https://hockeyblackouts.ca/game/${today}/${homeSlug}-vs-${awaySlug}/`;
     const cardImagePath = resolveCardImage(today, homeSlug, awaySlug, CANADIAN_TEAMS[primaryTeamCode]?.slug || 'toronto');
 
+    const campaign = (game.netEN === 'SN+' && game.typeEN === 'national') ? 'sn_exclusive' : 'blackout_guide';
+
     // 1. Master Account Post
+    const mainUtmUrl = buildUtmUrl(gameUrl, campaign, 'post_link');
     const mainPost = composeMainPost(game, homeId, awayId, gameUrl);
     postTasks.push({
       accountName: 'Master (@hockeyblackouts.ca)',
@@ -561,7 +575,8 @@ async function main() {
       text: mainPost.text,
       altText: mainPost.altText,
       cardImagePath,
-      gameTitle: `${awayCity} @ ${homeCity}`
+      gameTitle: `${awayCity} @ ${homeCity}`,
+      linkMap: { [gameUrl]: mainUtmUrl }
     });
 
     // 2. Team Accounts (e.g. TOR, MTL)
@@ -572,6 +587,7 @@ async function main() {
       const teamIdent = process.env[`${teamCfg.accountPrefix}_IDENTIFIER`];
       const teamPass = process.env[`${teamCfg.accountPrefix}_PASSWORD`];
       if (teamIdent && teamPass) {
+        const teamUtmUrl = buildUtmUrl(gameUrl, campaign, `${teamCfg.slug}_post`);
         const teamPost = composeTeamPost(teamId, game, homeId, awayId, gameUrl);
         postTasks.push({
           accountName: `Team ${teamId} (@${teamIdent})`,
@@ -580,7 +596,8 @@ async function main() {
           text: teamPost.text,
           altText: teamPost.altText,
           cardImagePath,
-          gameTitle: `${awayCity} @ ${homeCity} (${teamId})`
+          gameTitle: `${awayCity} @ ${homeCity} (${teamId})`,
+          linkMap: { [gameUrl]: teamUtmUrl }
         });
       }
 
@@ -589,6 +606,7 @@ async function main() {
         const frIdent = process.env.BSKY_FR_IDENTIFIER;
         const frPass = process.env.BSKY_FR_PASSWORD;
         if (frIdent && frPass) {
+          const frUtmUrl = buildUtmUrl(gameUrl, campaign, 'montreal_fr_post');
           const frPost = composeFrenchPost(game, homeId, awayId, gameUrl);
           postTasks.push({
             accountName: `French MTL (@${frIdent})`,
@@ -597,7 +615,8 @@ async function main() {
             text: frPost.text,
             altText: frPost.altText,
             cardImagePath,
-            gameTitle: `${awayCity} @ ${homeCity} (FR)`
+            gameTitle: `${awayCity} @ ${homeCity} (FR)`,
+            linkMap: { [gameUrl]: frUtmUrl }
           });
         }
       }
@@ -608,7 +627,7 @@ async function main() {
 
   for (const task of postTasks) {
     const graphemeCount = getGraphemeCount(task.text);
-    const facets = extractFacets(task.text);
+    const facets = extractFacets(task.text, task.linkMap);
 
     console.log(`------------------------------------------------------------`);
     console.log(`Target: ${task.accountName}`);

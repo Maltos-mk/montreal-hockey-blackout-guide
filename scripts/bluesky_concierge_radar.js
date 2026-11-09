@@ -38,25 +38,25 @@ const SEARCH_CATEGORIES = [
     id: 'A',
     name: 'Regional Blackout (TSN / Sportsnet)',
     query: '("blacked out" OR "blackout") (TSN OR TSN2 OR TSN3 OR TSN4 OR TSN5 OR Sportsnet OR RDS OR Leafs OR Habs OR Sens OR Canucks OR Oilers OR Flames OR Jets)',
-    defaultUrl: 'https://hockeyblackouts.ca/tsn-hockey-blackout-rules/'
+    defaultUrl: 'https://hockeyblackouts.ca/tsn-hockey-blackout-rules/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_guide&utm_content=comment_reply'
   },
   {
     id: 'B',
     name: 'Cable vs. Sportsnet+ / Monday Exclusive',
     query: '("Sportsnet+" OR "Sportsnet Plus" OR "Monday") (cable OR Bell OR Telus OR channel OR blackout)',
-    defaultUrl: 'https://hockeyblackouts.ca/sportsnet-plus-blackout-rules/'
+    defaultUrl: 'https://hockeyblackouts.ca/sportsnet-plus-blackout-rules/?utm_source=bluesky&utm_medium=social&utm_campaign=sn_exclusive&utm_content=comment_reply'
   },
   {
     id: 'C',
     name: 'Amazon Prime Video Hockey Exclusive',
     query: '(Prime OR Amazon) (Leafs OR Habs OR Sens OR Canucks OR Oilers OR Flames OR Jets OR hockey)',
-    defaultUrl: 'https://hockeyblackouts.ca/prime-hockey-schedule-canada/'
+    defaultUrl: 'https://hockeyblackouts.ca/prime-hockey-schedule-canada/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_guide&utm_content=comment_reply'
   },
   {
     id: 'D',
     name: 'IP Geolocation & ISP Technical Glitch',
     query: '("in market" OR "live in" OR Starlink OR Bell OR Rogers) ("blacked out" OR region OR location) (Sportsnet OR TSN)',
-    defaultUrl: 'https://hockeyblackouts.ca/how-blackouts-work/'
+    defaultUrl: 'https://hockeyblackouts.ca/how-blackouts-work/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_inspector&utm_content=comment_reply'
   }
 ];
 
@@ -108,7 +108,7 @@ function findTodayGameForTeam(teamId) {
 
     return {
       game,
-      url: `https://hockeyblackouts.ca/game/${today}/${homeSlug}-vs-${awaySlug}/`,
+      url: `https://hockeyblackouts.ca/game/${today}/${homeSlug}-vs-${awaySlug}/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_guide&utm_content=comment_reply`,
       homeCity,
       awayCity
     };
@@ -172,18 +172,18 @@ function draftReply(category, postText) {
 
   if (category.id === 'A') {
     if (todayGame) {
-      replyText = `Regional games on TSN/Sportsnet are locked to local broadcast zones on standard cable. Fans outside ${detectedTeam.territory} are blacked out tonight. Here are your channel & stream options: ${todayGame.url}`;
+      replyText = `Regional NHL games are locked to local zones on cable. Fans outside ${detectedTeam.territory} are blacked out tonight. Channel options: ${todayGame.url}`;
     } else if (detectedTeam) {
-      replyText = `Regional NHL games for the ${detectedTeam.name} are locked to ${detectedTeam.territory} on standard cable/TSN/SN+. Here is a breakdown of regional boundaries in Canada: ${category.defaultUrl}`;
+      replyText = `Regional NHL games for the ${detectedTeam.name} are locked to ${detectedTeam.territory} on cable/TSN/SN+. Full boundary breakdown: ${category.defaultUrl}`;
     } else {
-      replyText = `Regional NHL games on TSN & Sportsnet are locked to local broadcast zones on standard cable/TSN/SN+ feeds. Here is a breakdown of how regional blackout boundaries work: ${category.defaultUrl}`;
+      replyText = `Regional NHL games on TSN & Sportsnet are locked to local broadcast zones on cable. Full breakdown of blackout boundaries: ${category.defaultUrl}`;
     }
   } else if (category.id === 'B') {
-    replyText = `Under the NHL broadcast deal, Monday night games stream exclusively on Sportsnet+ (the app), so they aren't on linear cable channels. Here is a breakdown of how it works: ${category.defaultUrl}`;
+    replyText = `Monday games stream exclusively on Sportsnet+ (app only) and are not on linear cable. Full breakdown of the rules: ${category.defaultUrl}`;
   } else if (category.id === 'C') {
-    replyText = `Amazon Prime has exclusive Canadian rights to Monday Night Hockey this season, so linear cable doesn't carry it. All Prime subscribers across Canada can stream it here: ${category.defaultUrl}`;
+    replyText = `Amazon Prime has exclusive Canadian rights to Monday Night Hockey, so cable cannot carry it. Full Prime schedule: ${category.defaultUrl}`;
   } else if (category.id === 'D') {
-    replyText = `ISP routing (especially Starlink, mobile cellular, or border nodes) often misidentifies your province and triggers false blackouts. You can test your IP with our free tool: ${category.defaultUrl}`;
+    replyText = `ISP routing (Starlink or mobile cell data) often misidentifies your province and causes blackouts. Free IP scan: ${category.defaultUrl}`;
   }
 
   return {
