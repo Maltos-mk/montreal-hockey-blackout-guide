@@ -446,8 +446,10 @@ function composeMainPost(game, homeId, awayId, gameUrl) {
 
   const text = `🏒 Game Day: ${awayCity} at ${homeCity} (${timeStr})\n\n${scenarioLine}\n\nBroadcast Guide: ${gameUrl}\n\n${tagLine}`;
   const altText = `Broadcast verdict for ${awayCity} vs ${homeCity} on ${game.date}. ${blackoutSummary}`;
+  const cardTitle = `${awayCity} vs. ${homeCity} — TV & Blackout Status`;
+  const cardDescription = `${blackoutSummary} Check Canadian regional channels and streaming options.`;
 
-  return { text, altText };
+  return { text, altText, cardTitle, cardDescription };
 }
 
 // Compose Team-Specific Account Copy
@@ -479,8 +481,10 @@ function composeTeamPost(teamKey, game, homeId, awayId, gameUrl) {
   const vsText = isHome ? `vs ${oppCity}` : `@ ${oppCity}`;
   const text = `🏒 Game Day: ${team.nickname} ${vsText} (${timeStr})\n\n${broadcastDetail}\n\nBlackout Guide: ${gameUrl}\n\n${team.hashtag} #NHL`;
   const altText = `${team.name} broadcast and blackout guide for ${game.date}. ${broadcastDetail}`;
+  const cardTitle = `${team.name} vs. ${oppCity} — Blackout Guide`;
+  const cardDescription = `${broadcastDetail} Check regional channels and streaming options.`;
 
-  return { text, altText };
+  return { text, altText, cardTitle, cardDescription };
 }
 
 // Compose French Montreal Copy
@@ -506,8 +510,10 @@ function composeFrenchPost(game, homeId, awayId, gameUrl) {
   const matchTitle = isHome ? `c. ${oppCity}` : `@ ${oppCity}`;
   const text = `🏒 Jour de match : Canadiens ${matchTitle} (${timeFr})\n\n${broadcastFr}\n\nGuide télé & blackouts : ${gameUrl}\n\n#GoHabsGo #LNH`;
   const altText = `Guide de diffusion et règles de blackout pour les Canadiens de Montréal le ${game.date}. ${broadcastFr}`;
+  const cardTitle = `Canadiens de Montréal ${matchTitle} — Guide télé`;
+  const cardDescription = `${broadcastFr} Vérifiez vos chaînes et restrictions régionales.`;
 
-  return { text, altText };
+  return { text, altText, cardTitle, cardDescription };
 }
 
 async function main() {
@@ -573,7 +579,9 @@ async function main() {
       identifier: masterIdentifier,
       password: masterPassword,
       text: mainPost.text,
-      altText: mainPost.altText,
+      cardTitle: mainPost.cardTitle,
+      cardDescription: mainPost.cardDescription,
+      targetUrl: mainUtmUrl,
       cardImagePath,
       gameTitle: `${awayCity} @ ${homeCity}`,
       linkMap: { [gameUrl]: mainUtmUrl }
@@ -594,7 +602,9 @@ async function main() {
           identifier: teamIdent,
           password: teamPass,
           text: teamPost.text,
-          altText: teamPost.altText,
+          cardTitle: teamPost.cardTitle,
+          cardDescription: teamPost.cardDescription,
+          targetUrl: teamUtmUrl,
           cardImagePath,
           gameTitle: `${awayCity} @ ${homeCity} (${teamId})`,
           linkMap: { [gameUrl]: teamUtmUrl }
@@ -613,7 +623,9 @@ async function main() {
             identifier: frIdent,
             password: frPass,
             text: frPost.text,
-            altText: frPost.altText,
+            cardTitle: frPost.cardTitle,
+            cardDescription: frPost.cardDescription,
+            targetUrl: frUtmUrl,
             cardImagePath,
             gameTitle: `${awayCity} @ ${homeCity} (FR)`,
             linkMap: { [gameUrl]: frUtmUrl }
@@ -633,10 +645,12 @@ async function main() {
     console.log(`Target: ${task.accountName}`);
     console.log(`Game:   ${task.gameTitle}`);
     console.log(`Length: ${graphemeCount} graphemes (Limit < 280)`);
-    console.log(`Image:  ${task.cardImagePath || 'None'}`);
+    console.log(`Card:   "${task.cardTitle}"`);
+    console.log(`Desc:   "${task.cardDescription}"`);
+    console.log(`URI:    ${task.targetUrl}`);
+    console.log(`Thumb:  ${task.cardImagePath || 'None'}`);
     console.log(`Facets: ${facets.length} rich text facets detected`);
     console.log(`\nContent:\n${task.text}`);
-    console.log(`\nAlt Text:\n${task.altText}`);
     console.log(`------------------------------------------------------------\n`);
 
     if (graphemeCount > 280) {
@@ -648,7 +662,7 @@ async function main() {
       console.log(`[DRY RUN] Skipping network calls for ${task.accountName}.\n`);
       discordEmbeds.push({
         title: `[DRY RUN] ${task.gameTitle} → ${task.accountName}`,
-        description: task.text,
+        description: `${task.text}\n\n**External Link Card:** [${task.cardTitle}](${task.targetUrl})\n${task.cardDescription}`,
         color: 3447003,
         footer: { text: `HockeyBlackouts.ca • ${graphemeCount} graphemes` },
         timestamp: new Date().toISOString()
@@ -666,20 +680,24 @@ async function main() {
       const session = await createSession(task.identifier, task.password);
 
       let embed = undefined;
+      let thumb = undefined;
       if (task.cardImagePath && fs.existsSync(task.cardImagePath)) {
         console.log(`Uploading card image ${task.cardImagePath}...`);
         const imgBuffer = fs.readFileSync(task.cardImagePath);
-        const blob = await uploadBlob(session.accessJwt, imgBuffer, 'image/png');
-        embed = {
-          $type: 'app.bsky.embed.images',
-          images: [{
-            alt: task.altText,
-            image: blob
-          }]
-        };
+        thumb = await uploadBlob(session.accessJwt, imgBuffer, 'image/png');
       }
 
-      console.log(`Publishing post to ${session.handle} (${session.did})...`);
+      embed = {
+        $type: 'app.bsky.embed.external',
+        external: {
+          uri: task.targetUrl,
+          title: task.cardTitle,
+          description: task.cardDescription,
+          ...(thumb ? { thumb } : {})
+        }
+      };
+
+      console.log(`Publishing post with external link card to ${session.handle} (${session.did})...`);
       const result = await createPostRecord(session.accessJwt, session.did, {
         text: task.text,
         facets,
@@ -689,7 +707,7 @@ async function main() {
 
       discordEmbeds.push({
         title: `✅ Published: ${task.gameTitle} → ${task.accountName}`,
-        description: `${task.text}\n\n**Post URI:** \`${result.uri}\``,
+        description: `${task.text}\n\n**External Link Card:** [${task.cardTitle}](${task.targetUrl})\n**Post URI:** \`${result.uri}\``,
         color: 5763719,
         footer: { text: `HockeyBlackouts.ca • ${graphemeCount} graphemes` },
         timestamp: new Date().toISOString()

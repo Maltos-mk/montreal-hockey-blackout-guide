@@ -31,26 +31,14 @@ function renderCardHtml({
   body {
     width: 1200px;
     height: 630px;
-    background: #0f172a;
+    background: radial-gradient(circle at 85% 15%, #1e293b 0%, #0f172a 75%);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: #ffffff;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 32px;
-  }
-  .card {
-    width: 1136px;
-    height: 566px;
-    background: radial-gradient(circle at 80% 20%, #1e293b 0%, #0f172a 70%);
-    border: 2px solid rgba(255, 255, 255, 0.12);
-    border-radius: 24px;
-    padding: 44px 50px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    padding: 56px 64px;
+    overflow: hidden;
   }
   .header {
     display: flex;
@@ -60,13 +48,13 @@ function renderCardHtml({
   .brand {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
   }
   .brand-icon {
-    font-size: 28px;
+    font-size: 32px;
   }
   .brand-name {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -76,9 +64,9 @@ function renderCardHtml({
     background: rgba(16, 185, 129, 0.15);
     border: 1px solid rgba(16, 185, 129, 0.4);
     color: #34d399;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
-    padding: 6px 16px;
+    padding: 8px 18px;
     border-radius: 9999px;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -88,13 +76,13 @@ function renderCardHtml({
   }
   .status-tag {
     display: inline-block;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 6px 14px;
     border-radius: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
   .status-regional {
     background: rgba(245, 158, 11, 0.2);
@@ -117,39 +105,39 @@ function renderCardHtml({
     color: #e2e8f0;
   }
   .headline {
-    font-size: 48px;
+    font-size: 52px;
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -0.02em;
     color: #ffffff;
-    margin-bottom: 14px;
-    max-width: 1000px;
+    margin-bottom: 16px;
+    max-width: 1060px;
   }
   .subheadline {
-    font-size: 21px;
+    font-size: 24px;
     font-weight: 500;
     line-height: 1.4;
     color: #94a3b8;
-    max-width: 960px;
+    max-width: 1020px;
   }
   .footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 24px;
   }
   .footer-meta {
-    font-size: 15px;
+    font-size: 16px;
     color: #64748b;
     font-weight: 600;
   }
   .cta-btn {
     background: #10b981;
     color: #022c22;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 800;
-    padding: 13px 26px;
+    padding: 14px 28px;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -159,23 +147,21 @@ function renderCardHtml({
 </style>
 </head>
 <body>
-  <div class="card">
-    <div class="header">
-      <div class="brand">
-        <span class="brand-icon">🏒</span>
-        <span class="brand-name">HockeyBlackouts.ca</span>
-      </div>
-      <div class="badge">${brandBadge}</div>
+  <div class="header">
+    <div class="brand">
+      <span class="brand-icon">🏒</span>
+      <span class="brand-name">HockeyBlackouts.ca</span>
     </div>
-    <div class="content">
-      ${statusTag ? `<div class="status-tag ${statusClass}">${statusTag}</div>` : ''}
-      <h1 class="headline">${headline}</h1>
-      <p class="subheadline">${subheadline}</p>
-    </div>
-    <div class="footer">
-      <div class="footer-meta">${footerMeta}</div>
-      <div class="cta-btn">${ctaText}</div>
-    </div>
+    <div class="badge">${brandBadge}</div>
+  </div>
+  <div class="content">
+    ${statusTag ? `<div class="status-tag ${statusClass}">${statusTag}</div>` : ''}
+    <h1 class="headline">${headline}</h1>
+    <p class="subheadline">${subheadline}</p>
+  </div>
+  <div class="footer">
+    <div class="footer-meta">${footerMeta}</div>
+    <div class="cta-btn">${ctaText}</div>
   </div>
 </body>
 </html>`;
