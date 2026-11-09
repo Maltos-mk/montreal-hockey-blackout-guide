@@ -216,6 +216,53 @@ async function sendDiscordWebhook(webhookUrl, embeds) {
   }
 }
 
+// Check whether today's Canadian games have been published to Bluesky
+async function checkTodaysGamePostsPublished(mainIdentifier) {
+  const targetActor = mainIdentifier || 'hockeyblackouts.ca';
+  const missingGames = [];
+
+  // Find all games today for Canadian teams
+  const seenGames = new Set();
+  const todaysGames = [];
+  ['tor', 'mtl', 'ott', 'van', 'cgy', 'edm', 'wpg'].forEach(code => {
+    const info = findTodayGameForTeam(code);
+    if (info) {
+      const matchKey = `${info.awayCity} @ ${info.homeCity}`;
+      if (!seenGames.has(matchKey)) {
+        seenGames.add(matchKey);
+        todaysGames.push(info);
+      }
+    }
+  });
+
+  if (todaysGames.length === 0) return missingGames;
+
+  try {
+    const res = await fetch(`https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${encodeURIComponent(targetActor)}&limit=25`);
+    if (!res.ok) return missingGames;
+    const data = await res.json();
+    const feed = data.feed || [];
+
+    for (const g of todaysGames) {
+      const cleanUrl = g.url.split('?')[0];
+      const isPosted = feed.some(item => {
+        const record = item.post?.record;
+        if (!record) return false;
+        const embedUri = record.embed?.external?.uri || '';
+        const text = record.text || '';
+        return embedUri.includes(cleanUrl) || text.includes(cleanUrl);
+      });
+      if (!isPosted) {
+        missingGames.push(g);
+      }
+    }
+  } catch (err) {
+    console.warn('Could not query Bluesky public feed for publication check:', err.message);
+  }
+
+  return missingGames;
+}
+
 async function main() {
   console.log('🚨 HockeyBlackouts.ca - Bluesky Concierge Radar');
   console.log(`Scanning Bluesky posts from the last ${LOOKBACK_MINUTES} minutes (since ${sinceIso})...\n`);
@@ -224,6 +271,26 @@ async function main() {
   const password = process.env.BSKY_MAIN_PASSWORD;
   const discordWebhook = process.env.CONCIERGE_WEBHOOK_URL;
   const githubStepSummary = process.env.GITHUB_STEP_SUMMARY;
+  const discordEmbeds = [];
+
+  // Watchdog: check if today's game-day posts were published to Bluesky
+  console.log('Checking game-day broadcast publication status on Bluesky...');
+  const missingPosts = await checkTodaysGamePostsPublished(identifier);
+  if (missingPosts.length > 0) {
+    console.warn(`⚠️ Warning: ${missingPosts.length} game-day post(s) are NOT yet live on Bluesky:`);
+    missingPosts.forEach(g => {
+      console.warn(`   - ${g.awayCity} @ ${g.homeCity} (${g.url.split('?')[0]})`);
+      discordEmbeds.push({
+        title: '⚠️ Alert: Missing Game-Day Post on Bluesky',
+        description: `Today's broadcast post for **${g.awayCity} @ ${g.homeCity}** has not yet been published to [@${identifier || 'hockeyblackouts.ca'}](https://bsky.app/profile/${identifier || 'hockeyblackouts.ca'}).\n\nRun the \`Bluesky Game-Day Publisher\` workflow to publish.`,
+        color: 16744272,
+        footer: { text: 'HockeyBlackouts.ca Concierge Watchdog' },
+        timestamp: new Date().toISOString()
+      });
+    });
+  } else {
+    console.log('✅ All active Canadian games for today are published on Bluesky.\n');
+  }
 
   let session = null;
   if (!isDryRun && identifier && password) {
@@ -310,7 +377,6 @@ async function main() {
   console.log(`Radar Scan Results: ${matchedPosts.length} fan pain-point match(es)`);
   console.log(`============================================================\n`);
 
-  const discordEmbeds = [];
   let summaryMarkdown = `## 🏒 Bluesky Concierge Radar Summary\n\n`;
   summaryMarkdown += `Found **${matchedPosts.length}** fan broadcast inquiry/pain-point match(es) in the last ${LOOKBACK_MINUTES} minutes.\n\n`;
   summaryMarkdown += `| Category | Author | Post Excerpt | Suggested Quick Reply | Direct Link |\n`;

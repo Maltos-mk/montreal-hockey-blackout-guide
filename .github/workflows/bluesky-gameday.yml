@@ -2,7 +2,9 @@ name: Bluesky Game-Day Publisher
 
 on:
   schedule:
-    - cron: '17 15 * * *' # Daily at 15:17 UTC (10:17 AM EST / 11:17 AM EDT)
+    - cron: '17 15 * * *' # Daily at 15:17 UTC (10:17 AM EST / 11:17 AM EDT) - Primary
+    - cron: '23 16 * * *' # Daily at 16:23 UTC (11:23 AM EST / 12:23 PM EDT) - Morning Catch-Up
+    - cron: '23 21 * * *' # Daily at 21:23 UTC (4:23 PM EST / 5:23 PM EDT) - Afternoon Safety Net
   workflow_dispatch:
     inputs:
       dry_run:

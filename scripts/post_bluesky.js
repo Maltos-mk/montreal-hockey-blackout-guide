@@ -18,6 +18,7 @@ const { execSync } = require('child_process');
 
 const BSKY_SERVICE = 'https://bsky.social';
 const isDryRun = process.argv.includes('--dry-run');
+const isForce = process.argv.includes('--force');
 
 // Canadian Teams Metadata
 const CANADIAN_TEAMS = {
@@ -299,6 +300,27 @@ async function createPostRecord(accessJwt, did, { text, facets, embed }) {
     throw new Error(`Failed to create post record for ${did}: ${res.status} ${errText}`);
   }
   return await res.json();
+}
+
+// Check public Bluesky feed to prevent duplicate posts for the same game
+async function hasAlreadyPostedGame(actor, targetUrl) {
+  if (!actor || !targetUrl) return false;
+  try {
+    const cleanUrl = targetUrl.split('?')[0];
+    const res = await fetch(`https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${encodeURIComponent(actor)}&limit=25`);
+    if (!res.ok) return false;
+    const data = await res.json();
+    if (!data.feed || !Array.isArray(data.feed)) return false;
+    return data.feed.some(item => {
+      const record = item.post?.record;
+      if (!record) return false;
+      const embedUri = record.embed?.external?.uri || '';
+      const text = record.text || '';
+      return embedUri.includes(cleanUrl) || text.includes(cleanUrl);
+    });
+  } catch (e) {
+    return false;
+  }
 }
 
 // Discord Webhook Notification
@@ -637,6 +659,9 @@ async function main() {
 
   console.log(`Prepared ${postTasks.length} publication task(s):\n`);
 
+  let postedCount = 0;
+  let skippedCount = 0;
+
   for (const task of postTasks) {
     const graphemeCount = getGraphemeCount(task.text);
     const facets = extractFacets(task.text, task.linkMap);
@@ -656,6 +681,15 @@ async function main() {
     if (graphemeCount > 280) {
       console.error(`❌ Post exceeds 280 graphemes (${graphemeCount}). Aborting.`);
       process.exit(1);
+    }
+
+    if (!isForce && task.identifier) {
+      const alreadyPosted = await hasAlreadyPostedGame(task.identifier, task.targetUrl);
+      if (alreadyPosted) {
+        console.log(`⏩ [ALREADY POSTED] Skipping duplicate post on ${task.accountName} for ${task.gameTitle} (${task.targetUrl.split('?')[0]})\n`);
+        skippedCount++;
+        continue;
+      }
     }
 
     if (isDryRun) {
@@ -704,6 +738,7 @@ async function main() {
         embed
       });
       console.log(`✅ Published! URI: ${result.uri}\n`);
+      postedCount++;
 
       discordEmbeds.push({
         title: `✅ Published: ${task.gameTitle} → ${task.accountName}`,
@@ -722,6 +757,10 @@ async function main() {
         timestamp: new Date().toISOString()
       });
     }
+  }
+
+  if (skippedCount > 0 && postedCount === 0) {
+    console.log(`ℹ️ All scheduled posts for today have already been published. No action needed.`);
   }
 
   if (discordWebhook && discordEmbeds.length > 0) {
@@ -749,5 +788,6 @@ module.exports = {
   getGraphemeCount,
   composeMainPost,
   composeTeamPost,
-  composeFrenchPost
+  composeFrenchPost,
+  hasAlreadyPostedGame
 };

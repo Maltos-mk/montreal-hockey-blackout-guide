@@ -2,11 +2,13 @@ name: Bluesky Concierge Radar
 
 on:
   schedule:
-    # Prime-time puck-drop windows:
-    # 23:30 UTC = 6:30 PM EST / 7:30 PM EDT (Pre-game & 7:00 PM puck-drop inquiries)
-    # 01:00 UTC = 8:00 PM EST / 9:00 PM EDT (First intermission & late games)
-    - cron: '30 23 * * *'
-    - cron: '0 1 * * *'
+    # Off-peak prime-time puck-drop windows (90-min lookback windows):
+    # 22:23 UTC = 5:23 PM EST / 6:23 PM EDT (Early pre-game inquiries)
+    # 00:23 UTC = 7:23 PM EST / 8:23 PM EDT (Puck-drop & 1st intermission)
+    # 02:23 UTC = 9:23 PM EST / 10:23 PM EDT (West Coast & late games)
+    - cron: '23 22 * * *'
+    - cron: '23 0 * * *'
+    - cron: '23 2 * * *'
   workflow_dispatch:
     inputs:
       dry_run:
