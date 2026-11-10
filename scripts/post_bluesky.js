@@ -185,6 +185,12 @@ function getTodayIsoDate() {
   return formatter.format(new Date());
 }
 
+function getGameLocalDate(isoString) {
+  if (!isoString) return '';
+  const d = new Date(isoString);
+  return d.toLocaleDateString('en-CA', { timeZone: 'America/Toronto' });
+}
+
 function getGraphemeCount(str) {
   const segmenter = new Intl.Segmenter('en', { granularity: 'grapheme' });
   return Array.from(segmenter.segment(str)).length;
@@ -448,7 +454,7 @@ function composeMainPost(game, homeId, awayId, gameUrl) {
     scenarioLine = `Streams exclusively on Amazon Prime Video in Canada. Coast-to-coast broadcast with zero regional blackouts.`;
     blackoutSummary = `Amazon Prime Video national broadcast. No regional blackouts across Canada.`;
   } else if (isSnExclusive) {
-    scenarioLine = `Tonight is a Monday Night Sportsnet+ streaming exclusive. Streams on the Sportsnet app across Canada (not on linear cable). No blackouts.`;
+    scenarioLine = `Sportsnet+ streaming exclusive in Canada (not on linear cable). Available nationwide with zero blackouts.`;
     blackoutSummary = `Sportsnet+ streaming exclusive. No linear cable broadcast; no regional blackouts.`;
   } else if (isNational) {
     const nets = [game.netEN || 'Sportsnet'];
@@ -550,16 +556,19 @@ async function main() {
     if (!fs.existsSync(dataPath)) return;
     const teamData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
     teamData.schedule.forEach(g => {
-      if (g.iso.startsWith(today)) {
+      const gameDate = getGameLocalDate(g.iso);
+      if (gameDate === today) {
         const isHome = g.vs.startsWith('vs ');
         const homeId = isHome ? teamData.team.id : g.opp;
         const awayId = isHome ? g.opp : teamData.team.id;
-        const matchKey = `${today}_${homeId}_${awayId}`;
+        const datePrefix = g.iso.split('T')[0];
+        const matchKey = `${datePrefix}_${homeId}_${awayId}`;
         if (!activeGames.has(matchKey)) {
           activeGames.set(matchKey, {
             game: g,
             homeId,
             awayId,
+            datePrefix,
             primaryTeamCode: teamCode
           });
         }
@@ -583,13 +592,13 @@ async function main() {
 
   const postTasks = [];
 
-  activeGames.forEach(({ game, homeId, awayId, primaryTeamCode }) => {
+  activeGames.forEach(({ game, homeId, awayId, datePrefix, primaryTeamCode }) => {
     const homeCity = ALL_CITIES[homeId] || homeId;
     const awayCity = ALL_CITIES[awayId] || awayId;
     const homeSlug = slugify(homeCity);
     const awaySlug = slugify(awayCity);
-    const gameUrl = `https://hockeyblackouts.ca/game/${today}/${homeSlug}-vs-${awaySlug}/`;
-    const cardImagePath = resolveCardImage(today, homeSlug, awaySlug, CANADIAN_TEAMS[primaryTeamCode]?.slug || 'toronto');
+    const gameUrl = `https://hockeyblackouts.ca/game/${datePrefix}/${homeSlug}-vs-${awaySlug}/`;
+    const cardImagePath = resolveCardImage(datePrefix, homeSlug, awaySlug, CANADIAN_TEAMS[primaryTeamCode]?.slug || 'toronto');
 
     const campaign = (game.netEN === 'SN+' && game.typeEN === 'national') ? 'sn_exclusive' : 'blackout_guide';
 

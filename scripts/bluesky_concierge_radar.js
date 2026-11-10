@@ -70,6 +70,12 @@ function getTodayIsoDate() {
   return formatter.format(new Date());
 }
 
+function getGameLocalDate(isoString) {
+  if (!isoString) return '';
+  const d = new Date(isoString);
+  return d.toLocaleDateString('en-CA', { timeZone: 'America/Toronto' });
+}
+
 function slugify(text) {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
@@ -83,7 +89,7 @@ function findTodayGameForTeam(teamId) {
 
   try {
     const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
-    const game = data.schedule.find(g => g.iso && g.iso.startsWith(today));
+    const game = data.schedule.find(g => getGameLocalDate(g.iso) === today);
     if (!game) return null;
 
     const isHome = game.vs.startsWith('vs ');
@@ -105,10 +111,11 @@ function findTodayGameForTeam(teamId) {
     const awayCity = ALL_CITIES[awayId] || awayId;
     const homeSlug = slugify(homeCity);
     const awaySlug = slugify(awayCity);
+    const datePrefix = game.iso.split('T')[0];
 
     return {
       game,
-      url: `https://hockeyblackouts.ca/game/${today}/${homeSlug}-vs-${awaySlug}/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_guide&utm_content=comment_reply`,
+      url: `https://hockeyblackouts.ca/game/${datePrefix}/${homeSlug}-vs-${awaySlug}/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_guide&utm_content=comment_reply`,
       homeCity,
       awayCity
     };
