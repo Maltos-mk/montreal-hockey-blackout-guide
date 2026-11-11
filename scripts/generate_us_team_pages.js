@@ -11,15 +11,8 @@ const BUILD_COM_DIR = path.join(__dirname, '../build_com');
 const SITE_ORIGIN = 'https://hockeyblackouts.com';
 const CA_ORIGIN = 'https://hockeyblackouts.ca';
 
-// Umami: the .com site uses its own website ID (never reuse the .ca ID, it would mix the data).
-// Without UMAMI_WEBSITE_ID_US the tracking script is simply omitted and a warning is printed.
-const UMAMI_WEBSITE_ID_US = (process.env.UMAMI_WEBSITE_ID_US || '').trim();
-const UMAMI_SNIPPET = UMAMI_WEBSITE_ID_US
-  ? `<script defer src="https://cloud.umami.is/script.js" data-website-id="${UMAMI_WEBSITE_ID_US}" data-domains="hockeyblackouts.com" data-exclude-hash="true"></script>`
-  : '<!-- Umami disabled: UMAMI_WEBSITE_ID_US not set at build time -->';
-if (!UMAMI_WEBSITE_ID_US) {
-  console.warn('⚠️  UMAMI_WEBSITE_ID_US is not set: the .com build will have NO analytics.');
-}
+// Umami: the .com site has its own Umami website (separate from the .ca one), hardcoded on purpose.
+const UMAMI_SNIPPET = '<script defer src="https://cloud.umami.is/script.js" data-website-id="de005e6e-2c1b-4ecb-8158-7ec341b15192"></script>';
 
 if (!fs.existsSync(DATA_PATH)) {
   console.error(`Missing US teams data file at: ${DATA_PATH}`);

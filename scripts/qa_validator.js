@@ -230,10 +230,13 @@ function validateHtml(filePath, site = 'ca') {
   }
 
   // Monetization / Tracking Checks
-  if (content.includes('cloud.umami.is/script.js') && !content.includes('data-exclude-hash="true"')) {
+  if (site === 'com' && content.includes('cloud.umami.is/script.js') && !content.includes('data-website-id="de005e6e-2c1b-4ecb-8158-7ec341b15192"')) {
+    errors.push('.com Umami script tag must use the .com website ID (de005e6e-2c1b-4ecb-8158-7ec341b15192).');
+  }
+  if (site === 'ca' && content.includes('cloud.umami.is/script.js') && !content.includes('data-exclude-hash="true"')) {
     errors.push('Umami script tag is missing data-exclude-hash="true" (hash updates artificially inflate pageviews).');
   }
-  if (content.includes('cloud.umami.is/script.js') && !content.includes(`data-domains="${host}"`)) {
+  if (site === 'ca' && content.includes('cloud.umami.is/script.js') && !content.includes(`data-domains="${host}"`)) {
     errors.push(`Umami script tag is missing data-domains="${host}" (prevents test and localhost pollution).`);
   }
   if (content.includes('amazon.ca')) {
@@ -399,8 +402,8 @@ comHtmlFiles.forEach(file => {
     process.exit(1);
   }
 });
-if (process.env.CI && !comHtmlFiles.every(f => fs.readFileSync(f, 'utf-8').includes('cloud.umami.is/script.js'))) {
-  console.error('\n❌ QA FAILED: CI build for hockeyblackouts.com has pages without the Umami script. Set the UMAMI_WEBSITE_ID_US secret.');
+if (!comHtmlFiles.every(f => fs.readFileSync(f, 'utf-8').includes('data-website-id="de005e6e-2c1b-4ecb-8158-7ec341b15192"'))) {
+  console.error('\n❌ QA FAILED: every build_com/ page must include the .com Umami script.');
   process.exit(1);
 }
 if (fs.existsSync(path.join(buildDir, 'us'))) {

@@ -30,8 +30,6 @@ jobs:
 
       - name: Build Unified Package (build/ = hockeyblackouts.ca, build_com/ = hockeyblackouts.com)
         run: node scripts/build_all.js
-        env:
-          UMAMI_WEBSITE_ID_US: ${{ secrets.UMAMI_WEBSITE_ID_US }}
 
       - name: Run Automated QA Suite
         run: npm run test:all
