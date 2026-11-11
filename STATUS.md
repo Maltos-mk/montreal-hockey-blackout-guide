@@ -24,7 +24,7 @@ This suite sequentially runs:
 
 ## UX, SEO & Analytics Invariants
 *   **AI Overviews (SGE):** The `FAQPage` JSON-LD schema must exactly match the visible HTML in the FAQ section. The FAQ section must contain a structured `<table>` summary.
-*   **HTML Byte Ceiling (< 120 KB):** Team hub HTML (`build/{team}/index.html`) must stay under 120 KB (prerender only the next 10 upcoming games in static HTML while `shared/app.js` hydrates all 84 games on the client) so Bingbot does not truncate the document before `<section id="faq">`.
+*   **HTML Byte Ceiling:** In team hub HTML (`build/{team}/index.html`) `<section id="faq">` must end before byte 120,000 and the whole document must stay under 125 KB (prerender only the next 10 upcoming games in static HTML while `shared/app.js` hydrates all 84 games on the client; the Recent Results archive sits last above the footer, capped at 3 games) so Bingbot does not truncate the FAQ.
 *   **Protected `<title>` Keywords:** English team hub `<title>` tags must stay `<= 70` chars while preserving all four core query tokens: `Watch`, `Stream`, `Tonight`, and `Blackouts`.
 *   **Rolling Sitemap & Cron-Only IndexNow:** `build/sitemap.xml` must stay `<= 80` URLs (core hubs/explainers + rolling `-7d` to `+14d` `/game/` window) with `<lastmod>`. IndexNow (`scripts/ping_indexnow.js`) must only run on daily cron (`schedule`), never on code `push`.
 *   **Clean Initial-Load Canonical URL:** `updateHash()` in `shared/app.js` must leave `window.location.hash` empty (`""`) on untouched default page loads so crawlers only index the clean canonical URL.

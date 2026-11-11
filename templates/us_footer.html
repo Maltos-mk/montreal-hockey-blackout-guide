@@ -1,0 +1,40 @@
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      
+      <!-- Community Support Link -->
+      <div class="inline-flex items-center gap-2 p-2 px-4 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+        <i class="fa-solid fa-mug-hot text-amber-500"></i>
+        <span>Found this {{FOOTER_TEAM_LABEL}} guide helpful?</span>
+        <a href="https://ko-fi.com/maltosmk" id="kofiFooterBtn" data-umami-event="kofi-click" data-umami-event-variant="control" target="_blank" rel="noopener" class="font-bold text-blue-600 dark:text-blue-400 hover:underline ml-1">
+          Support HockeyBlackouts on Ko-fi &rarr;
+        </a>
+      </div>
+
+      <div class="py-2 flex flex-wrap items-center justify-center gap-2 text-xs">
+        <span class="font-semibold text-slate-600 dark:text-slate-300"><i class="fa-solid fa-map-location-dot mr-1"></i> US Team Guides:</span>
+        {{US_FOOTER_LINKS}}
+      </div>
+
+      <div class="py-1 flex flex-wrap items-center justify-center gap-2 text-xs">
+        <span class="font-semibold text-slate-600 dark:text-slate-400">Cross-Border &amp; Methodology Guides:</span>
+        <a href="/" class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold">🇺🇸 US ZIP Code Lookup Hub</a>
+        <a href="https://hockeyblackouts.ca/" class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold">🇨🇦 Switch to Canada Hub</a>
+        <a href="https://hockeyblackouts.ca/how-blackouts-work/" class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-medium">How Blackouts Work &amp; Methodology</a>
+      </div>
+
+      <!-- About the Data -->
+      <div class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-300 max-w-2xl mx-auto text-left bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mb-6">
+        <strong class="text-slate-700 dark:text-slate-300">About the Data Source:</strong> This independent blackout guide calculates watchability by cross-referencing your US ZIP code and streaming/TV subscriptions against the official NHL broadcast schedule. By analyzing local RSN territory boundaries against national network assignments ({{FOOTER_NETWORK_SUMMARY}}), this tool determines whether a game is in-market (requires your local RSN) or out-of-market (streams on ESPN+).
+      </div>
+
+      <p class="font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider text-[11px] pt-2">
+        Non-Affiliation &amp; Nominative Fair Use Disclaimer
+      </p>
+      <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-300">
+        This website is an independent fan resource created exclusively for public informational purposes. This service is <strong>not affiliated with, maintained by, endorsed by, or in any way associated with</strong> the National Hockey League (NHL), ESPN, TNT, Regional Sports Networks, or any of their member clubs.
+      </p>
+      <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-300">
+        All team names, schedules, network titles ({{FOOTER_NETWORK_SUMMARY}}), and trademarks referenced herein are used strictly for descriptive and nominative identification under applicable intellectual property laws.
+      </p>
+    </div>
+  </footer>

@@ -70,7 +70,7 @@ All custom events in Umami MUST follow strict lowercase `kebab-case` naming to e
 ## 3. SEO & Technical Architecture Guardrails
 
 1. **Clean Canonicals:** Every page MUST declare `<link rel="canonical" href="https://hockeyblackouts.ca/{path}/">`. Client-side scripts MUST NEVER mutate `window.location.hash` or query parameters on untouched default page loads.
-2. **HTML Byte Ceiling (< 120 KB):** Prerendered HTML payloads must stay strictly under 120 KB to prevent Bingbot truncation before `<section id="faq">`.
+2. **HTML Byte Ceiling:** `<section id="faq">` must END before byte 120,000 of the document so Bingbot never truncates it, and the full document must stay under 125 KB. Content placed after the FAQ (e.g. the 3-game Recent Results archive) counts toward the 125 KB total only.
 3. **Declarative vs. Imperative Analytics:** Never combine `data-umami-event` HTML attributes with manual `.track()` click listeners on the same element, and never fire conversion/click events on initial page load.
 
 ---

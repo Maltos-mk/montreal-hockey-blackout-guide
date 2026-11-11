@@ -2,26 +2,34 @@ const fs = require('fs');
 const path = require('path');
 
 const templateHtml = fs.readFileSync('templates/index.html', 'utf8');
-const dataFiles = fs.readdirSync('data').filter(f => f.endsWith('.json')).map(f => 'data/' + f);
+const caTeamsMeta = JSON.parse(fs.readFileSync('data/ca_teams.json', 'utf8'));
+const CA_7_IDS = new Set(['MTL', 'TOR', 'OTT', 'VAN', 'CGY', 'EDM', 'WPG']);
 
-dataFiles.forEach(file => {
+const dataFiles = caTeamsMeta.map(t => {
+  if (CA_7_IDS.has(t.id)) {
+    return { meta: t, file: `data/${t.id.toLowerCase()}.json` };
+  }
+  return { meta: t, file: `data/ca/${t.slug}.json` };
+});
+
+dataFiles.forEach(({ meta, file }) => {
   const data = JSON.parse(fs.readFileSync(file, 'utf8'));
-  const team = data.team;
+  const team = Object.assign({}, meta, data.team, { slug: meta.slug });
   
   let html = templateHtml;
   html = html.replace(/\{\{TEAM_NAME\}\}/g, team.name);
   html = html.replace(/\{\{TEAM_NICKNAME\}\}/g, team.nickname);
   
-  
-  const repoName = `${team.name.split(' ')[0].toLowerCase()}-hockey-blackout-guide`;
+  const teamDirSlug = team.slug || team.name.split(' ')[0].toLowerCase();
+  const repoName = `${teamDirSlug}-hockey-blackout-guide`;
   html = html.replace(/\{\{REPO_NAME\}\}/g, repoName);
-  
-  const teamDirSlug = team.name.split(' ')[0].toLowerCase();
   html = html.replace(/\{\{TEAM_DIR\}\}/g, teamDirSlug);
 
   const ogTitle = `Where to Watch ${team.name} Tonight | TV & Streams`;
   const ogDescription = `Check live TV channels, streaming options, and regional blackouts for ${team.name} games across Canada.`;
-  const ogImageUrl = `https://hockeyblackouts.ca/og/teams/${teamDirSlug}.png`;
+  const ogImageUrl = CA_7_IDS.has(team.id)
+    ? `https://hockeyblackouts.ca/og/teams/${teamDirSlug}.png`
+    : 'https://hockeyblackouts.ca/og/default.png';
   const ogImageAlt = `${team.name} Canadian TV channels and regional blackout guide`;
 
   html = html.replace(/\{\{OG_TITLE\}\}/g, ogTitle);
@@ -29,7 +37,7 @@ dataFiles.forEach(file => {
   html = html.replace(/\{\{OG_IMAGE_URL\}\}/g, ogImageUrl);
   html = html.replace(/\{\{OG_IMAGE_ALT\}\}/g, ogImageAlt);
 
-  const city = team.name.split(' ')[0];
+  const city = meta.city || team.name.split(' ')[0];
   html = html.replace(/\{\{CITY_NAME\}\}/g, city); html = html.replace(/\{\{TEAM_ID\}\}/g, team.id);
   html = html.replace(/\{\{REGION_CODE\}\}/g, team.marketRegion.regionCode);
   html = html.replace(/\{\{REGION_DESCRIPTION\}\}/g, team.marketRegion.description);
@@ -56,8 +64,12 @@ dataFiles.forEach(file => {
 
   
   
+  const isCanadianTeam = CA_7_IDS.has(team.id);
+
   let quickSummary = '';
-  if (team.id === 'TOR') {
+  if (!isCanadianTeam) {
+    quickSummary = `<strong>Quick Summary for ${team.nickname} Fans in Canada:</strong> Because the ${team.name} are based in the US, their games are out-of-market in Canada. Watch them using <strong>Sportsnet+ Premium</strong> or <strong>NHL Centre Ice</strong>, or tune in coast-to-coast without blackouts whenever the ${team.name} air nationally in Canada on <strong>Sportsnet</strong>, <strong>Amazon Prime Video</strong>, or <strong>TVA Sports</strong>.`;
+  } else if (team.id === 'TOR') {
     quickSummary = "<strong>Quick Summary for Leafs Fans Living Outside the Toronto Region:</strong> If tonight's Toronto Maple Leafs game is scheduled on Sportsnet or Prime Video, you can watch anywhere in Canada without blackouts. If the game is on TSN4 or Sportsnet Ontario, you will be blacked out in Eastern Ontario, Quebec, and the rest of Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
   } else if (team.id === 'OTT') {
     quickSummary = "<strong>Quick Summary for Sens Fans Living Outside the Ottawa Region:</strong> If tonight's Ottawa Senators game is scheduled on Sportsnet or Prime Video, you can watch anywhere in Canada without blackouts. If the game is on TSN5 or RDS, you will be blacked out in Western Ontario and the rest of Canada unless you have Sportsnet+ Premium or NHL Centre Ice.";
@@ -78,7 +90,10 @@ dataFiles.forEach(file => {
   
   let faqHtml = '';
   let schemaText = '';
-  if (team.id === 'TOR') {
+  if (!isCanadianTeam) {
+    faqHtml = `<p><strong>Why are ${team.name} games considered out-of-market across Canada?</strong><br>Because the ${team.name} are based in the US, their games are out-of-market in Canada and do not have a local Canadian regional TV territory. Watch them using <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable/satellite), unless the matchup is selected for a coast-to-coast Canadian national broadcast on <strong>Sportsnet</strong>, <strong>Amazon Prime Video</strong>, or <strong>TVA Sports</strong>, or played against a Canadian team inside that Canadian team's home broadcast region.</p>`;
+    schemaText = `Because the ${team.name} are based in the US, their games are out-of-market in Canada. Watch them using Sportsnet+ Premium or NHL Centre Ice, unless the game is broadcast nationally in Canada on Sportsnet, Amazon Prime Video, or TVA Sports.`;
+  } else if (team.id === 'TOR') {
     faqHtml = `<p><strong>Why are Toronto Maple Leafs games blacked out on TSN4 or Sportsnet Ontario in Eastern Ontario?</strong><br>The NHL broadcast boundary line in Ontario is drawn near Belleville. If you live west of Belleville (including Toronto and the GTA), you are in the Leafs' home territory and can watch regional games on standard cable. If you live strictly in Eastern Ontario (Ottawa, Cornwall, Brockville), you are in the Senators/Canadiens home territory. In that zone, regional Leafs games are blacked out to protect local Sens/Habs rights unless you subscribe to <strong>Sportsnet+ Premium</strong> or <strong>NHL Centre Ice</strong>. <em>(Note: The Belleville to Kingston corridor is a designated "Overlap" zone where providers offer feeds for both regions. Use the "Ontario Overlap" region in the dropdown above to accurately see your games).</em></p>`;
     schemaText = "The broadcast boundary line in Ontario is drawn between Belleville and Kingston. If you live in the Eastern Ontario (Kingston, Ottawa, etc) or further east, you are in the Senators/Canadiens territory. Regional Leafs games are blacked out there unless you subscribe to Sportsnet+ Premium or NHL Centre Ice.";
   } else if (team.id === 'VAN') {
@@ -119,25 +134,61 @@ dataFiles.forEach(file => {
   }
   html = html.replace(/\{\{REGIONAL_RIGHTS_TEXT\}\}/g, regionalRightsText);
 
+  if (!isCanadianTeam) {
+    const usTeamCaDesc = `Because the ${team.name} are based in the US, their games are out-of-market in Canada. Watch on Sportsnet+ Premium, Centre Ice, Sportsnet, or Prime.`;
+    html = html.replace(
+      /<meta name="description" content="[^"]*">/,
+      `<meta name="description" content="${usTeamCaDesc}">`
+    );
+    html = html.replace(
+      `"name": "Why are ${team.name} games blacked out on ${team.networks.regionalEN} in Ontario?"`,
+      `"name": "Why are ${team.name} games considered out-of-market across Canada?"`
+    );
+    const oldOomAnswer = `Out-of-market fans living outside the team's regional territory can watch all regional ${team.name} games on ${team.networks.regionalEN} by subscribing to Sportsnet+ Premium or NHL Centre Ice. This bypasses the standard blackout restrictions for standard cable subscribers.`;
+    const newOomAnswer = `Because the ${team.name} are based in the US, their games are out-of-market in Canada. Watch them using Sportsnet+ Premium (for online streaming) or NHL Centre Ice (for cable/satellite), plus Sportsnet and Amazon Prime Video for national Canadian broadcasts.`;
+    html = html.split(oldOomAnswer).join(newOomAnswer);
+    html = html.replace(
+      `<h3 class="font-bold text-slate-900 dark:text-white">In-Market Full Season Setup</h3>`,
+      `<h3 class="font-bold text-slate-900 dark:text-white">Official Out-of-Market Options</h3>`
+    );
+    html = html.replace(
+      `To receive all ${team.name} games locally, you generally need Sportsnet (Saturdays), your local regional channel, and Amazon Prime.`,
+      `Because the ${team.name} are based in the US, their games are out-of-market in Canada. Watch them using <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable), plus Sportsnet and Amazon Prime Video for national broadcasts.`
+    );
+    html = html.replace(
+      `<h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Regional ${team.name} Games (${team.networks.regionalEN})</h3>`,
+      `<h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Out-of-Market ${team.name} Games in Canada (Sportsnet+ Premium)</h3>`
+    );
+    html = html.replace(
+      `<p class="text-sm font-semibold">My Local Sports Channel (${team.networks.regionalEN})</p>\n                <p class="text-[11px] text-slate-600 dark:text-slate-300">${regEnCount} Regional ${team.nickname} games (in-market only)</p>`,
+      `<p class="text-sm font-semibold">My Local Canadian Regional Channel (TSN / SN)</p>\n                <p class="text-[11px] text-slate-600 dark:text-slate-300">Unlocks ${team.nickname} games vs. your local Canadian team</p>`
+    );
+  }
+
   
   const eastToWest = ['MTL', 'OTT', 'TOR', 'WPG', 'EDM', 'CGY', 'VAN'];
-  const allTeams = dataFiles.map(f => {
-    const d = JSON.parse(fs.readFileSync(f, 'utf8'));
-    return {
-      id: d.team.id,
-      name: d.team.name,
-      repoName: `${d.team.name.split(' ')[0].toLowerCase()}-hockey-blackout-guide`
-    };
-  }).sort((a, b) => eastToWest.indexOf(a.id) - eastToWest.indexOf(b.id));
+  const allTeams = caTeamsMeta.map(t => ({
+    id: t.id,
+    name: t.name,
+    slug: t.slug,
+    country: t.country
+  })).sort((a, b) => {
+    const ia = eastToWest.indexOf(a.id);
+    const ib = eastToWest.indexOf(b.id);
+    if (ia !== -1 && ib !== -1) return ia - ib;
+    if (ia !== -1) return -1;
+    if (ib !== -1) return 1;
+    return a.name.localeCompare(b.name);
+  });
 
-  let topNavLinks = '<a href="https://hockeyblackouts.ca/" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent mr-2"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span class="text-rose-400">Hockey</span>Blackouts.ca</a><div class="w-px h-4 bg-slate-700 mx-2"></div>';
+  let topNavLinks = '<span class="px-2.5 py-1 rounded-md text-white font-bold bg-white/15 border border-white/10">🇨🇦 Canada View</span><span class="text-slate-600 px-1">|</span><a href="https://hockeyblackouts.com/" class="px-2.5 py-1 rounded-md text-slate-300 hover:text-white hover:bg-white/10 transition border border-transparent">🇺🇸 Switch to US</a><div class="w-px h-4 bg-slate-700 mx-2"></div><a href="https://hockeyblackouts.ca/" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent mr-2"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span class="text-rose-400">Hockey</span>Blackouts.ca</a><div class="w-px h-4 bg-slate-700 mx-2"></div>';
   let footerNavLinks = '<a href="https://hockeyblackouts.ca/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span class="text-[#AF1E2D] dark:text-rose-400">Hockey</span>Blackouts.ca</a>\n';
   allTeams.forEach(t => {
     if (t.id === team.id) {
       topNavLinks += `<span class="px-3 py-1 rounded-md text-white font-bold bg-white/20 shadow-sm border border-white/10">${t.id}</span>`;
     } else {
-      topNavLinks += `<a href="https://hockeyblackouts.ca/${t.name.split(' ')[0].toLowerCase()}/" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">${t.id}</a>`;
-      footerNavLinks += `<a href="https://hockeyblackouts.ca/${t.name.split(' ')[0].toLowerCase()}/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold">${t.name}</a>\n`;
+      topNavLinks += `<a href="https://hockeyblackouts.ca/${t.slug}/" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">${t.id}</a>`;
+      footerNavLinks += `<a href="https://hockeyblackouts.ca/${t.slug}/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold">${t.name}</a>\n`;
     }
   });
   html = html.replace(/\{\{NETWORK_LINKS\}\}/g, topNavLinks);
@@ -172,6 +223,9 @@ dataFiles.forEach(file => {
     return cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   }
   function getGamePath(g, currentTeamId) {
+    if (!CA_7_IDS.has(currentTeamId) && !CA_7_IDS.has(g.opp)) {
+      return '#scheduleTableBody';
+    }
     const isHome = g.vs.startsWith('vs ');
     const homeId = isHome ? currentTeamId : g.opp;
     const awayId = isHome ? g.opp : currentTeamId;
@@ -413,7 +467,7 @@ dataFiles.forEach(file => {
     const gDate = new Date(g.iso);
     const diffDays = (now.getTime() - gDate.getTime()) / (1000 * 60 * 60 * 24);
     return diffDays > 0 && diffDays <= 14;
-  }).reverse();
+  }).reverse().slice(0, 3); // newest 3 only: keeps HTML under the byte budget
 
   let recentResultsHtml = '';
   if (recentGames.length > 0) {
@@ -485,7 +539,7 @@ dataFiles.forEach(file => {
   fs.writeFileSync(path.join(teamDir, 'index.html'), html);
 
   // SEO: Generate sitemap.xml
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>https://hockeyblackouts.ca/${team.name.split(' ')[0].toLowerCase()}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n</urlset>`;
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>https://hockeyblackouts.ca/${teamDirSlug}/</loc>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n</urlset>`;
   fs.writeFileSync(path.join(teamDir, 'sitemap.xml'), sitemap);
 
   

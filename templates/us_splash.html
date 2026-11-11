@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="9xDuDaZ6t2VaHECBLicoF274o-jsjOjxz9Shb9P7TYQ">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Where &amp; How to Watch NHL Games in the US | RSN &amp; ESPN+ Blackouts</title>
+  <meta name="title" content="Where &amp; How to Watch NHL Games in the US | RSN &amp; ESPN+ Blackouts">
+  <meta name="description" content="Tired of NHL regional blackouts on ESPN+? Enter your US ZIP code or select your team to check local RSN coverage, ESPN+ availability, and national TV schedules.">
+  <meta name="author" content="HockeyBlackouts.ca">
+  <link rel="canonical" href="https://hockeyblackouts.com/">
+  <link rel="alternate" hreflang="en-US" href="https://hockeyblackouts.com/" />
+  <link rel="alternate" hreflang="en-CA" href="https://hockeyblackouts.ca/" />
+  <link rel="alternate" hreflang="x-default" href="https://hockeyblackouts.com/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="https://hockeyblackouts.com/shared/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="https://hockeyblackouts.com/shared/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://hockeyblackouts.com/shared/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hockeyblackouts.com/shared/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HockeyBlackouts.ca">
+  <meta property="og:url" content="https://hockeyblackouts.com/">
+  <meta property="og:title" content="US NHL Blackout &amp; RSN Tracker | ESPN+ &amp; Local TV Guide">
+  <meta property="og:description" content="Check US NHL TV channels, Regional Sports Networks (RSNs), and ESPN+ ZIP code blackouts for all 32 NHL teams.">
+  <meta property="og:image" content="https://hockeyblackouts.com/og/default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="US NHL TV channels, RSNs, and ESPN+ blackout lookup tool">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://hockeyblackouts.com/">
+  <meta name="twitter:title" content="US NHL Blackout &amp; RSN Tracker | ESPN+ &amp; Local TV Guide">
+  <meta name="twitter:description" content="Check US NHL TV channels, Regional Sports Networks (RSNs), and ESPN+ ZIP code blackouts for all 32 NHL teams.">
+  <meta name="twitter:image" content="https://hockeyblackouts.com/og/default.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "HockeyBlackouts",
+        "url": "https://hockeyblackouts.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hockeyblackouts.com/shared/favicon-192x192.png"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "HockeyBlackouts US Guide",
+        "url": "https://hockeyblackouts.com/",
+        "description": "An independent tool helping US hockey fans navigate Regional Sports Network (RSN), ESPN+, and national TV broadcast blackouts.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "HockeyBlackouts",
+          "url": "https://hockeyblackouts.com/"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preload Local Fonts & Icons -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="/shared/fonts/teko-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/shared/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  <!-- Umami Analytics -->
+  {{UMAMI_SNIPPET}}
+
+  <!-- Dynamic Team Color Tokens (Default NHL/US Accent) -->
+  <style>
+    :root {
+      --color-team-primary: #AF1E2D;
+      --color-team-secondary: #0F172A;
+      --color-team-dark: #020617;
+    }
+  </style>
+
+  <!-- Precompiled Tailwind CSS & Application CSS -->
+  <link rel="stylesheet" href="/shared/tailwind.min.css">
+  <link rel="stylesheet" href="/shared/app.css">
+
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (e) {}
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
+
+{{US_HEADER}}
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-8 flex-1 w-full">
+
+    <!-- Hero ZIP Code Lookup Card -->
+    <section id="us-zip-lookup" data-component="us-zip-blackout-lookup" class="bg-white dark:bg-slate-900 p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+      <div class="border-b border-slate-100 dark:border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div class="flex items-center space-x-2">
+          <span class="w-2.5 h-6 bg-teamPrimary rounded-full inline-block"></span>
+          <h2 class="text-base sm:text-lg font-bold">US ZIP Code Blackout Lookup</h2>
+        </div>
+        <span class="text-xs text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-full font-medium self-start sm:self-auto">RSN &amp; ESPN+ Territory Checker</span>
+      </div>
+
+      <div>
+        <label for="zipCodeInput" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">
+          Where do you live? (Enter 5-Digit US ZIP Code):
+        </label>
+        <form id="usZipLookupForm" class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault();">
+          <input
+            type="text"
+            id="zipCodeInput"
+            name="zip"
+            inputmode="numeric"
+            pattern="[0-9]{5}"
+            maxlength="5"
+            placeholder="Enter 5-digit US ZIP code (e.g., 10001)"
+            aria-label="Enter 5-digit US ZIP code"
+            class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 px-4 py-3 rounded-xl shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teamSecondary"
+          >
+          <button
+            type="submit"
+            id="zipLookupBtn"
+            class="px-5 py-3 rounded-xl bg-teamSecondary hover:bg-teamDark text-white font-bold text-sm border border-white/20 shadow-sm flex items-center justify-center gap-2 transition whitespace-nowrap"
+          >
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <span>Check Local Blackouts</span>
+          </button>
+        </form>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
+          Enter your ZIP code to see which NHL teams claim your local broadcast territory (blacked out on ESPN+) and which Regional Sports Network (RSN) carries their games.
+        </p>
+        <div id="zipLookupStatus" class="hidden mt-4 p-4 rounded-xl border text-xs sm:text-sm space-y-2"></div>
+      </div>
+    </section>
+
+    <!-- 32 NHL Teams Grid -->
+    <section class="space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+        <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-slate-900 dark:text-white">Select Your NHL Team (32 Teams)</h2>
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">RSN + ESPN+ Coverage</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {{US_TEAM_CARDS_HTML}}
+      </div>
+    </section>
+
+    <!-- Explainer Section -->
+    <section id="faq" class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+      <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-teamPrimary border-b border-slate-100 dark:border-slate-800 pb-3">Why Are NHL Games Blacked Out on ESPN+ in the US?</h2>
+      <p>
+        In the United States, NHL broadcast rights are split between <strong>local Regional Sports Networks (RSNs)</strong>—such as MSG Network, NESN, FanDuel Sports Network, Altitude Sports, Victory+, and Scripps Sports—and <strong>national broadcasters</strong> (ESPN, ABC, TNT, and NHL Network).
+      </p>
+      <p>
+        <strong>ESPN+</strong> is the official out-of-market streaming service in the US. If you live inside a team's designated local broadcast territory (determined by your 5-digit US ZIP code), that team's regional games are blacked out on ESPN+ to protect the local RSN's exclusivity. Additionally, games selected for exclusive national television broadcasts on ESPN, TNT, or NHL Network are blacked out on ESPN+ nationwide unless simulcast on ABC/ESPN+.
+      </p>
+    </section>
+
+  </main>
+
+{{US_FOOTER}}
+
+  <script>
+    window.US_TERRITORIES = {{US_TERRITORIES_JSON}};
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const zipInput = document.getElementById('zipCodeInput');
+      const zipForm = document.getElementById('usZipLookupForm');
+      const statusBox = document.getElementById('zipLookupStatus');
+      const territories = window.US_TERRITORIES || {};
+
+      function isZipInTeamTerritory(zipStr, teamAbbrev) {
+        if (!zipStr || !/^\d{5}$/.test(zipStr)) return false;
+        const prefix = parseInt(zipStr.slice(0, 3), 10);
+        const entry = territories[teamAbbrev];
+        if (!entry || !Array.isArray(entry.zipRanges)) return false;
+        return entry.zipRanges.some(range => prefix >= range[0] && prefix <= range[1]);
+      }
+
+      function evaluateZip(rawVal, showInvalid) {
+        const clean = (rawVal || '').replace(/\D/g, '').slice(0, 5);
+        if (zipInput && zipInput.value !== clean) zipInput.value = clean;
+
+        if (clean.length === 0) {
+          try { localStorage.removeItem('hockeyblackouts_us_zip'); } catch (e) {}
+          statusBox.className = 'hidden mt-4 p-4 rounded-xl border text-xs sm:text-sm space-y-2';
+          statusBox.innerHTML = '';
+          return;
+        }
+
+        if (clean.length < 5) {
+          if (showInvalid) {
+            statusBox.className = 'mt-4 p-4 rounded-xl border text-xs sm:text-sm space-y-1 bg-rose-50 dark:bg-rose-950/30 border-rose-200 dark:border-rose-800/50 text-rose-800 dark:text-rose-300';
+            statusBox.innerHTML = '<strong>Invalid ZIP Code:</strong> Please enter a full 5-digit US ZIP code (e.g., 10001).';
+          }
+          return;
+        }
+
+        try { localStorage.setItem('hockeyblackouts_us_zip', clean); } catch (e) {}
+
+        const localTeams = Object.keys(territories)
+          .filter(code => isZipInTeamTerritory(clean, code))
+          .map(code => ({ code, ...territories[code] }));
+
+        if (localTeams.length > 0) {
+          const teamCards = localTeams.map(t => `
+            <a href="/${t.slug}/" class="flex items-center justify-between gap-2 p-2.5 rounded-lg bg-white dark:bg-slate-900 border border-amber-200 dark:border-amber-800/60 hover:border-amber-400 transition">
+              <div>
+                <span class="font-bold text-slate-900 dark:text-white">${t.name}</span>
+                <span class="block text-[11px] text-slate-600 dark:text-slate-300">Blacked out on ESPN+ • Watch on <strong>${t.rsn}</strong></span>
+              </div>
+              <span class="text-xs font-bold text-teamPrimary whitespace-nowrap">View Schedule &rarr;</span>
+            </a>
+          `).join('');
+
+          statusBox.className = 'mt-4 p-4 rounded-xl border text-xs sm:text-sm space-y-3 bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800/50 text-amber-950 dark:text-amber-200';
+          statusBox.innerHTML = `
+            <div class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-amber-600 dark:text-amber-400 mt-0.5"></i>
+              <div>
+                <strong>ZIP ${clean} Broadcast Territory Verdict:</strong> You are inside the local broadcast market for <strong>${localTeams.length} NHL team${localTeams.length > 1 ? 's' : ''}</strong>. Their regional games are <strong>blacked out on ESPN+</strong> and require their local RSN:
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">${teamCards}</div>
+            <div class="text-[11px] text-amber-900/80 dark:text-amber-300/80 pt-1">
+              <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400 mr-1"></i>All other out-of-market NHL teams stream live in ZIP <strong>${clean}</strong> on <strong>ESPN+</strong> (except national exclusives on ESPN, TNT, or NHL Network).
+            </div>
+          `;
+        } else {
+          statusBox.className = 'mt-4 p-4 rounded-xl border text-xs sm:text-sm space-y-1 bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800/50 text-emerald-900 dark:text-emerald-200';
+          statusBox.innerHTML = `
+            <div class="flex items-start gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400 mt-0.5"></i>
+              <div>
+                <strong>ZIP ${clean} Broadcast Territory Verdict:</strong> No US NHL team claims this ZIP code as an exclusive local RSN territory. Regional games for all 25 US NHL teams are available out-of-market on <strong>ESPN+</strong>!
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      try {
+        const savedZip = localStorage.getItem('hockeyblackouts_us_zip') || '';
+        if (/^\d{5}$/.test(savedZip) && zipInput) {
+          zipInput.value = savedZip;
+          evaluateZip(savedZip, false);
+        }
+      } catch (e) {}
+
+      if (zipForm) {
+        zipForm.addEventListener('submit', e => {
+          e.preventDefault();
+          evaluateZip(zipInput ? zipInput.value : '', true);
+        });
+      }
+      if (zipInput) {
+        zipInput.addEventListener('input', () => {
+          const clean = (zipInput.value || '').replace(/\D/g, '').slice(0, 5);
+          if (zipInput.value !== clean) zipInput.value = clean;
+          if (clean.length === 5 || clean.length === 0) {
+            evaluateZip(clean, false);
+          }
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

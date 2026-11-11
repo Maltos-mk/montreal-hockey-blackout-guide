@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="9xDuDaZ6t2VaHECBLicoF274o-jsjOjxz9Shb9P7TYQ">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{PAGE_TITLE}}</title>
+  <meta name="title" content="{{PAGE_TITLE}}">
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="keywords" content="{{TEAM_NAME}} game tonight, {{TEAM_NICKNAME}} blackout rules, {{TEAM_NAME}} broadcast schedule, {{TEAM_RSN}} blackout, watch {{TEAM_NICKNAME}} on ESPN+, {{CITY_NAME}} hockey live stream">
+  <meta name="author" content="HockeyBlackouts.ca">
+  <link rel="canonical" href="{{CANONICAL_URL}}">
+  <link rel="alternate" hreflang="en-US" href="https://hockeyblackouts.com/{{TEAM_SLUG}}/" />
+  <link rel="alternate" hreflang="en-CA" href="https://hockeyblackouts.ca/{{TEAM_SLUG}}/" />
+  <link rel="alternate" hreflang="x-default" href="https://hockeyblackouts.com/{{TEAM_SLUG}}/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="https://hockeyblackouts.com/shared/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="https://hockeyblackouts.com/shared/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://hockeyblackouts.com/shared/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hockeyblackouts.com/shared/apple-touch-icon.png">
+
+  <meta name="theme-color" content="{{COLOR_SECONDARY}}">
+
+  <!-- OpenGraph / Facebook / Discord -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HockeyBlackouts.ca">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
+  <meta property="og:title" content="{{OG_TITLE}}">
+  <meta property="og:description" content="{{OG_DESCRIPTION}}">
+  <meta property="og:image" content="{{OG_IMAGE_URL}}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{OG_IMAGE_ALT}}">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="{{CANONICAL_URL}}">
+  <meta name="twitter:title" content="{{OG_TITLE}}">
+  <meta name="twitter:description" content="{{OG_DESCRIPTION}}">
+  <meta name="twitter:image" content="{{OG_IMAGE_URL}}">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+{{SCHEMA_JSON}}
+  </script>
+
+  <!-- Preload Local Fonts & Icons -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="/shared/fonts/teko-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/shared/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  <!-- Umami Analytics -->
+  {{UMAMI_SNIPPET}}
+
+  <!-- Dynamic Team Color Tokens -->
+  <style>
+    :root {
+      --color-team-primary: {{COLOR_PRIMARY}};
+      --color-team-secondary: {{COLOR_SECONDARY}};
+      --color-team-dark: {{COLOR_DARK}};
+    }
+  </style>
+
+  <!-- Precompiled Tailwind CSS & Application CSS -->
+  <link rel="stylesheet" href="/shared/tailwind.min.css">
+  <link rel="stylesheet" href="/shared/app.css">
+
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (e) {}
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
+
+{{US_HEADER}}
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-8 flex-1 w-full">
+
+    <!-- Top Configuration Grid (Identical 12-Col Parity with Canadian Site) -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+      <!-- User Input Card (ZIP Code Lookup + US Subscriptions) -->
+      <div class="lg:col-span-7 bg-white dark:bg-slate-900 p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-6">
+        <div class="border-b border-slate-100 dark:border-slate-800 pb-4 flex items-center justify-between">
+          <div class="flex items-center space-x-2">
+            <span class="w-2.5 h-6 bg-teamPrimary rounded-full inline-block"></span>
+            <h2 class="text-base sm:text-lg font-bold">1. US ZIP Code &amp; Subscriptions</h2>
+          </div>
+          <span class="text-xs text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-full font-medium">Official US Rules</span>
+        </div>
+
+        <!-- US ZIP Code Lookup Form (Replacing Canadian Region Dropdown) -->
+        <div id="us-zip-lookup" data-component="us-zip-blackout-lookup">
+          <label for="zipCodeInput" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">
+            Where do you live? (Enter 5-Digit US ZIP Code):
+          </label>
+          <form id="usZipLookupForm" class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault();">
+            <input
+              type="text"
+              id="zipCodeInput"
+              name="zip"
+              inputmode="numeric"
+              pattern="[0-9]{5}"
+              maxlength="5"
+              placeholder="Enter 5-digit US ZIP code (e.g., {{SAMPLE_ZIP}})"
+              aria-label="Enter 5-digit US ZIP code"
+              class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 px-4 py-3 rounded-xl shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teamSecondary"
+            >
+            <button
+              type="submit"
+              id="zipLookupBtn"
+              class="px-5 py-3 rounded-xl bg-teamSecondary hover:bg-teamDark text-white font-bold text-sm border border-white/20 shadow-sm flex items-center justify-center gap-2 transition whitespace-nowrap"
+            >
+              <i class="fa-solid fa-location-crosshairs"></i>
+              <span>Check ZIP Code</span>
+            </button>
+          </form>
+          <div id="zipLookupStatus" class="text-xs text-slate-600 dark:text-slate-300 mt-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
+            📍 <strong>Default View: In-Market ({{TERRITORY_DESCRIPTION}})</strong>. Enter any 5-digit US ZIP code above to switch between in-market RSN (<strong>{{TEAM_RSN}}</strong>) and out-of-market (<strong>ESPN+</strong>) blackout rules.
+          </div>
+        </div>
+
+        <!-- US Subscriptions Checklist -->
+        <div>
+          <span class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">
+            Your Active Subscriptions &amp; Channels:
+          </span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="subsList">
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_us_rsn" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">My Local RSN ({{TEAM_RSN}})</p>
+                <p class="text-[10px] text-slate-600 dark:text-slate-300 font-medium">{{REGIONAL_COUNT}} Regional {{TEAM_NICKNAME}} games (in-market)</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_espn_plus" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">ESPN+ (Out-of-Market Streaming)</p>
+                <p class="text-[10px] text-slate-600 dark:text-slate-300 font-medium">{{ESPN_PLUS_COUNT}} Out-of-market &amp; simulcast games</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_espn_abc" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">ESPN &amp; ABC (Linear TV / Live Stream)</p>
+                <p class="text-[10px] text-slate-600 dark:text-slate-300 font-medium">National exclusive games on ESPN and ABC</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
+              <input type="checkbox" id="sub_tnt_max" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">TNT / Max (National Broadcasts)</p>
+                <p class="text-[10px] text-slate-600 dark:text-slate-300 font-medium">National exclusive games on TNT, truTV &amp; Max</p>
+              </div>
+            </label>
+
+            <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition sm:col-span-2">
+              <input type="checkbox" id="sub_nhl_network" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
+              <div class="flex-1">
+                <p class="text-sm font-semibold">NHL Network (Cable / vMVPD Add-on)</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-300">Unlocks national NHL Network showcase games (blacked out on ESPN+)</p>
+              </div>
+            </label>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Score Box + Advice Card + Ko-fi Box -->
+      <div class="lg:col-span-5 flex flex-col gap-4">
+
+        <!-- Score Box -->
+        <div class="bg-gradient-to-br from-teamSecondary to-slate-900 text-white p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-800 relative overflow-hidden flex-1 flex flex-col justify-between">
+          <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-teamPrimary/10 rounded-full blur-2xl pointer-events-none"></div>
+
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-bold uppercase tracking-wider text-slate-300" id="kpiSeasonTitle">Full Season Coverage ({{TOTAL_GAMES}} Games)</span>
+              <span id="pctBadge" class="text-xs font-bold px-2.5 py-1 rounded-full bg-teamPrimary text-white">0% Watchable</span>
+            </div>
+
+            <div class="flex items-baseline space-x-2">
+              <span id="watchableCount" class="font-teko text-6xl sm:text-7xl font-bold leading-none text-white">0</span>
+              <span id="totalGameLabel" class="text-slate-300 font-teko text-2xl font-medium">/ {{TOTAL_GAMES}} GAMES</span>
+            </div>
+          </div>
+
+          <!-- Progress Bars Breakdown -->
+          <div class="space-y-3 pt-6 border-t border-white/10 mt-4">
+            <div>
+              <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
+                <span>Watchable Without Blackout</span>
+                <span id="watchableBreakdown">0 games (0%)</span>
+              </div>
+              <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div id="watchBar" class="bg-emerald-500 transition-all duration-300" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
+                <span>Blacked Out in Your ZIP</span>
+                <span id="blackoutBreakdown">0 games (0%)</span>
+              </div>
+              <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div id="blackoutBar" class="bg-amber-500 transition-all duration-300" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium text-slate-300 mb-1">
+                <span>Missing Required Subscription</span>
+                <span id="missingBreakdown">{{TOTAL_GAMES}} games (100%)</span>
+              </div>
+              <div class="h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div id="missingBar" class="bg-rose-500 transition-all duration-300" style="width: 100%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Official Advice Card -->
+        <div id="adviceCard" class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs sm:text-sm min-h-[96px]">
+          <div class="space-y-4">
+            <div>
+              <h3 class="font-bold text-slate-900 dark:text-white">In-Market Full Season Setup</h3>
+              <p class="text-slate-600 dark:text-slate-300 mt-1">
+                In-market fans in <strong>{{TERRITORY_DESCRIPTION}}</strong> need <strong>{{TEAM_RSN}}</strong> ({{REGIONAL_COUNT}} regional games) plus ESPN/TNT for national exclusives. Out-of-market US fans can stream {{ESPN_PLUS_COUNT}} {{TEAM_NAME}} games on <strong>ESPN+</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post-Value Support Callout -->
+        <div id="kofiCalloutBox" class="mt-1 p-4 bg-amber-50 dark:bg-amber-500/10 rounded-2xl border border-amber-100 dark:border-amber-500/20 flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-3 text-sm text-amber-900 dark:text-amber-200/80">
+          <span id="kofiCalloutText">Did this save you a headache tonight? Buy me a coffee to help keep it running.</span>
+          <a href="https://ko-fi.com/maltosmk" id="kofiCalloutBtn" data-umami-event="kofi-click" data-umami-event-variant="control" target="_blank" rel="noopener" class="font-bold px-4 py-2 bg-amber-400 hover:bg-amber-300 text-slate-900 rounded-xl shadow-sm transition flex items-center gap-1.5 whitespace-nowrap"><i id="kofiCalloutIcon" class="fa-solid fa-mug-hot"></i> <span id="kofiCalloutBtnText">Tip $3</span></a>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- AUTOMATIC NEXT UPCOMING GAME SPOTLIGHT HERO -->
+    <section id="nextGameSpotlight" class="transition-all duration-300">
+      {{PRERENDERED_SPOTLIGHT_HERO}}
+    </section>
+
+    <!-- Schedule Container (Identical Structure to Canadian Site) -->
+    <section class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+
+      <!-- Top Bar Filters -->
+      <div class="print-hidden p-4 sm:p-6 border-b border-slate-100 dark:border-slate-800 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+
+        <!-- View Timing Toggle -->
+        <div class="inline-flex rounded-xl p-1 bg-slate-100 dark:bg-slate-800 text-xs font-semibold self-start">
+          <button type="button" onclick="setUsTimeFilter('upcoming')" id="time_upcoming" class="px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 shadow-sm text-teamPrimary font-bold transition">Upcoming Games</button>
+          <button type="button" onclick="setUsTimeFilter('all')" id="time_all" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">All Games</button>
+          <button type="button" onclick="setUsTimeFilter('past')" id="time_past" class="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition">Past Games</button>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap items-center gap-2">
+          <div class="relative flex-1 sm:flex-initial">
+            <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-500 text-xs"></i>
+            <input type="text" id="opponentSearch" aria-label="Search opponent or venue" placeholder="Search opponent, venue..." class="pl-8 pr-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary w-full sm:w-44">
+          </div>
+
+          <select id="statusFilter" aria-label="Filter games by watchability status" class="px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary">
+            <option value="all">Status: All</option>
+            <option value="watchable">Watchable</option>
+            <option value="blacked_out">Blacked Out</option>
+            <option value="missing_sub">Need Sub</option>
+          </select>
+
+          <select id="channelFilter" aria-label="Filter games by broadcast channel" class="px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary">
+            <option value="all">Channel: All</option>
+            <option value="{{TEAM_RSN}}">{{TEAM_RSN}}</option>
+            <option value="ESPN+">ESPN+</option>
+            <option value="ESPN">ESPN / ABC</option>
+            <option value="TNT">TNT / Max</option>
+            <option value="NHLN">NHL Network</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Mobile Cards View (Identical to Canadian Site) -->
+      <div id="scheduleCardsMobile" class="block md:hidden divide-y divide-slate-100 dark:divide-slate-800 p-3 space-y-3" data-prerendered="true">
+        {{PRERENDERED_MOBILE_SCHEDULE}}
+      </div>
+
+      <!-- Desktop Table View (Identical to Canadian Site) -->
+      <div class="hidden md:block overflow-x-auto max-h-[680px]">
+        <table class="w-full text-left text-xs sm:text-sm border-collapse">
+          <thead class="sticky top-0 bg-slate-100/95 dark:bg-slate-800/95 backdrop-blur z-10 text-slate-600 dark:text-slate-300 uppercase tracking-wider text-[11px]">
+            <tr>
+              <th class="py-3 px-4 font-semibold w-12 text-center">Gm</th>
+              <th class="py-3 px-4 font-semibold whitespace-nowrap w-36">Date &amp; Time</th>
+              <th class="py-3 px-4 font-semibold min-w-[200px]">Matchup / Venue</th>
+              <th class="py-3 px-4 font-semibold w-44">Broadcast</th>
+              <th class="py-3 px-4 font-semibold w-40">Coverage Type</th>
+              <th class="py-3 px-4 font-semibold min-w-[260px] text-right">Access Status</th>
+            </tr>
+          </thead>
+          <tbody id="scheduleTableBody" class="divide-y divide-slate-100 dark:divide-slate-800" data-prerendered="true">
+            {{PRERENDERED_DESKTOP_SCHEDULE}}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Footer count -->
+      <div class="p-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <span id="renderedCountLabel">{{PRERENDERED_COUNT_LABEL}}</span>
+        <span class="text-[11px] italic text-center sm:text-right" data-freshness="verified-date">Schedule verified: {{BUILD_DATE_DISPLAY}} • Auto-synced with local clock</span>
+      </div>
+
+    </section>
+
+    <!-- SEO Article Section (Identical Card & Typography to Canadian Site) -->
+    <article class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-xs sm:text-sm space-y-4 shadow-sm">
+      <h2 class="text-base font-bold text-slate-900 dark:text-white uppercase font-teko text-2xl tracking-wider text-teamPrimary">
+        {{TEAM_NAME}} Hockey Broadcast Rights &amp; Regional Blackout Guide (2026–27 {{TEAM_NICKNAME}} Season)
+      </h2>
+      <p class="leading-relaxed">
+        Following the <strong>{{TEAM_NAME}}</strong> regular season across the United States requires understanding how NHL broadcast territory rights are split between regional sports networks and national streaming partners. For {{TEAM_NAME}} fans, games are divided across <strong>{{TEAM_RSN}}, ESPN+, ESPN/ABC, TNT, and NHL Network</strong>.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Regional {{TEAM_NAME}} Games ({{TEAM_RSN}})</h3>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300">
+            <strong>{{TEAM_RSN}}</strong> holds the official in-market regional broadcast rights for the {{TEAM_NAME}} ({{REGIONAL_COUNT}} regular-season games) across <strong>{{TERRITORY_DESCRIPTION}}</strong>. If your US ZIP code falls inside the {{TEAM_NAME}} local broadcast territory, regional games are <strong>blacked out on ESPN+</strong> and must be watched via {{TEAM_RSN}}.
+          </p>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300 mt-2">
+            If you live outside the {{TEAM_NAME}} local broadcast territory in the US, regional {{TEAM_NICKNAME}} games stream live on <strong>ESPN+</strong> (unless the {{TEAM_NAME}} are playing an opponent whose local broadcast territory includes your ZIP code).
+          </p>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">National {{TEAM_NICKNAME}} Games (ESPN, ABC, TNT &amp; NHL Network)</h3>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300">
+            When the {{TEAM_NAME}} are selected for an exclusive national US broadcast on <strong>ESPN, TNT, or NHL Network</strong> ({{NATIONAL_COUNT}} games), the broadcast is blacked out on ESPN+ nationwide unless simulcast on ABC/ESPN+.
+          </p>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300 mt-2">
+            Viewers both in-market and out-of-market need access to the designated national television channel or streaming tier (such as Max for TNT simulcasts) to watch these national exclusives.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/40 text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
+        <strong>Quick Summary for {{TEAM_NICKNAME}} Fans:</strong> Use the US ZIP Code Lookup above to check your local market status. In-market ZIP codes ({{TERRITORY_DESCRIPTION}}) watch regional games on <strong>{{TEAM_RSN}}</strong>; out-of-market US ZIP codes stream regional games on <strong>ESPN+</strong>.
+      </div>
+    </article>
+
+    <!-- FAQ Section (Identical Card & Table Structure to Canadian Site) -->
+    <section id="faq" class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+      <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-teamPrimary border-b border-slate-100 dark:border-slate-800 pb-3">Blackout Rules &amp; FAQ</h2>
+
+      <!-- SEO Summary Table -->
+      <div class="overflow-x-auto my-4">
+        <table class="w-full text-sm text-left text-slate-600 dark:text-slate-300 border-collapse border border-slate-200 dark:border-slate-700">
+          <thead class="bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200">
+            <tr>
+              <th class="border border-slate-200 dark:border-slate-700 px-4 py-2">Game Type</th>
+              <th class="border border-slate-200 dark:border-slate-700 px-4 py-2">Network</th>
+              <th class="border border-slate-200 dark:border-slate-700 px-4 py-2">Blackout Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">Regional (In-Market ZIP)</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">{{TEAM_RSN}}</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Blacked Out on ESPN+ (Watch on {{TEAM_RSN}})</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">Regional (Out-of-Market ZIP)</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">ESPN+</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Stream on ESPN+ (Unless Opponent Is Local to Your ZIP)</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">US National Exclusive</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">ESPN / ABC / TNT / NHL Network</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Requires National Channel (Unless ABC/ESPN+ Simulcast)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+        {{FAQ_ITEMS_HTML}}
+      </div>
+    </section>
+
+  </main>
+
+{{US_FOOTER}}
+
+  <script>
+    window.US_TERRITORIES = {{US_TERRITORIES_JSON}};
+  </script>
+  <script>
+    (function() {
+      var state = {
+        zip: '',
+        timeFilter: 'upcoming',
+        statusFilter: 'all',
+        channelFilter: 'all',
+        search: '',
+        subs: {
+          us_rsn: false,
+          espn_plus: false,
+          espn_abc: false,
+          tnt_max: false,
+          nhl_network: false
+        }
+      };
+      var teamData = null;
+      var subKeys = ['us_rsn', 'espn_plus', 'espn_abc', 'tnt_max', 'nhl_network'];
+
+      function isZipInTeamTerritory(zipStr, teamAbbrev) {
+        if (!zipStr || zipStr.length < 3) return false;
+        var prefix = parseInt(zipStr.substring(0, 3), 10);
+        if (isNaN(prefix)) return false;
+        var tInfo = window.US_TERRITORIES && window.US_TERRITORIES[teamAbbrev];
+        if (!tInfo || !tInfo.zipRanges) return false;
+        for (var i = 0; i < tInfo.zipRanges.length; i++) {
+          var r = tInfo.zipRanges[i];
+          if (prefix >= r[0] && prefix <= r[1]) return true;
+        }
+        return false;
+      }
+
+      function getLocalTeamsForZip(zipStr) {
+        if (!zipStr || zipStr.length < 3 || !window.US_TERRITORIES) return [];
+        var matches = [];
+        for (var abbrev in window.US_TERRITORIES) {
+          if (isZipInTeamTerritory(zipStr, abbrev)) {
+            matches.push(window.US_TERRITORIES[abbrev]);
+          }
+        }
+        return matches;
+      }
+
+      function evaluateUsGame(g) {
+        var team = teamData.team;
+        var hasValidZip = /^\d{5}$/.test(state.zip);
+        var hasUsTerritory = Array.isArray(team.zipRanges) && team.zipRanges.length > 0;
+        var isPrimaryInMarket = hasUsTerritory ? (hasValidZip ? isZipInTeamTerritory(state.zip, team.id) : true) : false;
+        var isOpponentInMarket = hasValidZip && g.opp ? isZipInTeamTerritory(state.zip, g.opp) : false;
+        var oppInfo = (g.opp && window.US_TERRITORIES && window.US_TERRITORIES[g.opp]) ? window.US_TERRITORIES[g.opp] : null;
+        var rsnLabel = g.rsn || team.rsn;
+        var netUSNat = g.netUSNat || (g.typeUS === 'national' ? g.primaryNet : (g.typeUS === 'nhl_network' ? 'NHLN' : null));
+
+        // 1. National Exclusive (ESPN, ABC, TNT)
+        if (g.typeUS === 'national' || (netUSNat && netUSNat !== 'NHLN')) {
+          if (netUSNat === 'ABC' || g.primaryNet === 'ABC') {
+            if (state.subs.espn_abc) return { status: 'watchable', reason: 'Watch on ABC' };
+            if (state.subs.espn_plus) return { status: 'watchable', reason: 'Watch on ESPN+ (ABC Simulcast)' };
+            return { status: 'missing_sub', reason: 'Requires ABC or ESPN+' };
+          }
+          if (netUSNat === 'TNT' || g.primaryNet === 'TNT') {
+            if (state.subs.tnt_max) return { status: 'watchable', reason: 'Watch on TNT / HBO Max' };
+            if (state.subs.espn_plus || state.subs.us_rsn) {
+              return { status: 'blacked_out', reason: 'BLACKED OUT on ESPN+ & ' + team.rsn + ' (National TNT Exclusive). Requires TNT or Max.' };
+            }
+            return { status: 'missing_sub', reason: 'Requires TNT or HBO Max (National Exclusive)' };
+          }
+          // ESPN Linear
+          if (state.subs.espn_abc) return { status: 'watchable', reason: 'Watch on ESPN' };
+          if (g.espnPlus && state.subs.espn_plus) return { status: 'watchable', reason: 'Watch on ESPN+ (Simulcast)' };
+          if (state.subs.espn_plus || state.subs.us_rsn) {
+            return { status: 'blacked_out', reason: 'BLACKED OUT on ESPN+ & ' + team.rsn + ' (National ESPN Exclusive). Requires ESPN.' };
+          }
+          return { status: 'missing_sub', reason: 'Requires ESPN (Linear TV or Live Stream)' };
+        }
+
+        // 2. NHL Network Showcase (Local RSN in-market, NHL Network out-of-market)
+        if (g.typeUS === 'nhl_network' || netUSNat === 'NHLN') {
+          if (isPrimaryInMarket) {
+            if (state.subs.us_rsn) return { status: 'watchable', reason: 'Watch on ' + rsnLabel + ' (In-Market)' };
+            if (state.subs.nhl_network) return { status: 'watchable', reason: 'Watch on NHL Network' };
+            if (state.subs.espn_plus) {
+              return { status: 'blacked_out', reason: 'BLACKED OUT on ESPN+ in-market. Requires ' + rsnLabel + '.' };
+            }
+            return { status: 'missing_sub', reason: 'Requires ' + rsnLabel + ' (or NHL Network)' };
+          } else {
+            if (state.subs.nhl_network) return { status: 'watchable', reason: 'Watch on NHL Network' };
+            if (isOpponentInMarket && state.subs.us_rsn && oppInfo) {
+              return { status: 'watchable', reason: 'Watch on local opponent feed (' + oppInfo.rsn + ')' };
+            }
+            if (state.subs.espn_plus) {
+              return { status: 'blacked_out', reason: 'BLACKED OUT on ESPN+ (NHL Network Exclusive). Requires NHL Network.' };
+            }
+            return { status: 'missing_sub', reason: 'Requires NHL Network (Blacked out on ESPN+)' };
+          }
+        }
+
+        // 3. Standard Regional Game (Local RSN in-market, ESPN+ out-of-market)
+        if (isPrimaryInMarket) {
+          if (state.subs.us_rsn) {
+            return { status: 'watchable', reason: 'Watch on ' + rsnLabel + ' (In-Market)' };
+          }
+          if (state.subs.espn_plus) {
+            return {
+              status: 'blacked_out',
+              reason: 'BLACKED OUT on ESPN+ in ' + (hasValidZip ? 'ZIP ' + state.zip : 'home territory') + '. Requires ' + rsnLabel + '.'
+            };
+          }
+          return { status: 'missing_sub', reason: 'Requires ' + rsnLabel + ' (In-market regional broadcast)' };
+        }
+
+        if (isOpponentInMarket && oppInfo) {
+          if (state.subs.us_rsn) {
+            return { status: 'watchable', reason: 'Watch on local opponent feed (' + oppInfo.rsn + ')' };
+          }
+          return {
+            status: 'blacked_out',
+            reason: 'BLACKED OUT on ESPN+ in ZIP ' + state.zip + ' (Local ' + oppInfo.name + ' market). Requires ' + oppInfo.rsn + '.'
+          };
+        }
+
+        // Out-of-Market US Viewer
+        if (state.subs.espn_plus) {
+          return { status: 'watchable', reason: 'Watch on ESPN+ (Out-of-Market Stream)' };
+        }
+        if (state.subs.us_rsn) {
+          return {
+            status: 'blacked_out',
+            reason: 'BLACKED OUT outside ' + team.nickname + ' territory' + (hasValidZip ? ' (ZIP ' + state.zip + ')' : '') + '. Requires ESPN+.'
+          };
+        }
+        return { status: 'missing_sub', reason: 'Requires ESPN+ (Out-of-Market Stream)' };
+      }
+
+      function renderZipStatusAndAdvice() {
+        if (!teamData || !teamData.team) return;
+        var team = teamData.team;
+        var zipStatusEl = document.getElementById('zipLookupStatus');
+        var adviceEl = document.getElementById('adviceCard');
+        var hasValidZip = /^\d{5}$/.test(state.zip);
+        var hasUsTerritory = Array.isArray(team.zipRanges) && team.zipRanges.length > 0;
+        var isPrimaryInMarket = hasUsTerritory ? (hasValidZip ? isZipInTeamTerritory(state.zip, team.id) : true) : false;
+        var localTeams = hasValidZip ? getLocalTeamsForZip(state.zip) : [];
+
+        if (zipStatusEl) {
+          if (!hasUsTerritory && !hasValidZip) {
+            zipStatusEl.className = 'text-xs text-emerald-900 dark:text-emerald-200 mt-2.5 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-700/60';
+            zipStatusEl.innerHTML = '📍 <strong>Out-of-Market Across the US:</strong> As a Canadian NHL franchise, the ' + team.name + ' have no local US RSN blackout territory. Regional games stream live on <strong>ESPN+</strong> nationwide (enter your 5-digit US ZIP code above to check for local US opponent RSN blackouts).';
+          } else if (!hasValidZip) {
+            zipStatusEl.className = 'text-xs text-slate-600 dark:text-slate-300 mt-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80';
+            zipStatusEl.innerHTML = '📍 <strong>Default View: In-Market (' + (team.territoryDescription || team.city) + ')</strong>. Enter any 5-digit US ZIP code above to switch between in-market RSN (<strong>' + team.rsn + '</strong>) and out-of-market (<strong>ESPN+</strong>) blackout rules.';
+          } else if (isPrimaryInMarket) {
+            zipStatusEl.className = 'text-xs text-amber-900 dark:text-amber-200 mt-2.5 p-3 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-700/60';
+            zipStatusEl.innerHTML = '<i class="fa-solid fa-house-signal mr-1 text-amber-600 dark:text-amber-400"></i> <strong>ZIP ' + state.zip + ' is IN-MARKET for the ' + team.name + '.</strong> Regional games are <strong>blacked out on ESPN+</strong> in your ZIP code and require <strong>' + team.rsn + '</strong>.';
+          } else {
+            var overlapText = localTeams.length > 0
+              ? ' Note: ZIP ' + state.zip + ' is inside the local territory for <strong>' + localTeams.map(function(t) { return t.name + ' (' + t.rsn + ')'; }).join(', ') + '</strong>, so matchups against them will be blacked out on ESPN+.'
+              : ' No local NHL RSN claims ZIP ' + state.zip + ', so zero opponent regional blackouts apply!';
+            zipStatusEl.className = 'text-xs text-emerald-900 dark:text-emerald-200 mt-2.5 p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-700/60';
+            zipStatusEl.innerHTML = '<i class="fa-solid fa-circle-check mr-1 text-emerald-600 dark:text-emerald-400"></i> <strong>ZIP ' + state.zip + ' is OUT-OF-MARKET for the ' + team.name + '.</strong> Regional ' + team.nickname + ' games stream live on <strong>ESPN+</strong>!' + overlapText;
+          }
+        }
+
+        if (adviceEl) {
+          if (isPrimaryInMarket) {
+            adviceEl.innerHTML = '<div class="space-y-4"><div><h3 class="font-bold text-slate-900 dark:text-white">In-Market Full Season Setup' + (hasValidZip ? ' (ZIP ' + state.zip + ')' : '') + '</h3><p class="text-slate-600 dark:text-slate-300 mt-1">Because you are inside the <strong>' + team.name + '</strong> local broadcast territory, ESPN+ blacks out regional games. Check <strong>My Local RSN (' + team.rsn + ')</strong> plus ESPN/TNT above to unlock the full 84-game schedule.</p></div></div>';
+          } else {
+            adviceEl.innerHTML = '<div class="space-y-4"><div><h3 class="font-bold text-slate-900 dark:text-white">Out-of-Market US Setup' + (hasValidZip ? ' (ZIP ' + state.zip + ')' : '') + '</h3><p class="text-slate-600 dark:text-slate-300 mt-1">Because you are outside the ' + team.name + ' home market in the US, check <strong>ESPN+</strong> to unlock out-of-market regional games, plus ESPN, TNT, and NHL Network for national broadcasts.</p></div></div>';
+          }
+        }
+      }
+
+      function renderAll() {
+        if (!teamData || !teamData.schedule) return;
+        renderZipStatusAndAdvice();
+
+        var now = Date.now();
+        var cutoff = 3.5 * 60 * 60 * 1000;
+        var schedule = teamData.schedule;
+        var total = schedule.length || 84;
+
+        var watchableCount = 0;
+        var blackedOutCount = 0;
+        var missingSubCount = 0;
+
+        var evaluatedGames = schedule.map(function(g, idx) {
+          var gTime = new Date(g.iso).getTime();
+          var isPast = (now - gTime) > cutoff;
+          var isToday = new Date(now).toDateString() === new Date(g.iso).toDateString();
+          var ev = evaluateUsGame(g);
+          if (ev.status === 'watchable') watchableCount++;
+          else if (ev.status === 'blacked_out') blackedOutCount++;
+          else missingSubCount++;
+          return Object.assign({}, g, {
+            gameNum: idx + 1,
+            isPast: isPast,
+            isToday: isToday,
+            evalStatus: ev.status,
+            evalReason: ev.reason
+          });
+        });
+
+        // Update Score Box KPIs
+        var pct = Math.round((watchableCount / total) * 100) || 0;
+        var boPct = Math.round((blackedOutCount / total) * 100) || 0;
+        var missPct = Math.round((missingSubCount / total) * 100) || 0;
+
+        var wCountEl = document.getElementById('watchableCount');
+        var totalLabelEl = document.getElementById('totalGameLabel');
+        var pctBadgeEl = document.getElementById('pctBadge');
+        var wBreakEl = document.getElementById('watchableBreakdown');
+        var bBreakEl = document.getElementById('blackoutBreakdown');
+        var mBreakEl = document.getElementById('missingBreakdown');
+        var wBarEl = document.getElementById('watchBar');
+        var bBarEl = document.getElementById('blackoutBar');
+        var mBarEl = document.getElementById('missingBar');
+
+        if (wCountEl) wCountEl.textContent = watchableCount;
+        if (totalLabelEl) totalLabelEl.textContent = '/ ' + total + ' GAMES';
+        if (pctBadgeEl) pctBadgeEl.textContent = pct + '% Watchable';
+        if (wBreakEl) wBreakEl.textContent = watchableCount + ' games (' + pct + '%)';
+        if (bBreakEl) bBreakEl.textContent = blackedOutCount + ' games (' + boPct + '%)';
+        if (mBreakEl) mBreakEl.textContent = missingSubCount + ' games (' + missPct + '%)';
+        if (wBarEl) wBarEl.style.width = pct + '%';
+        if (bBarEl) bBarEl.style.width = boPct + '%';
+        if (mBarEl) mBarEl.style.width = missPct + '%';
+
+        // Update Next Game Spotlight Hero
+        var upcomingList = evaluatedGames.filter(function(g) { return !g.isPast; });
+        var nextGame = upcomingList[0] || evaluatedGames[evaluatedGames.length - 1];
+        var spotlightEl = document.getElementById('nextGameSpotlight');
+        if (spotlightEl && nextGame) {
+          var nextBadgeHtml = '';
+          if (nextGame.evalStatus === 'watchable') {
+            nextBadgeHtml = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-700 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Watchable On Your Setup</span>';
+          } else if (nextGame.evalStatus === 'blacked_out') {
+            nextBadgeHtml = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-ban"></i> Regionally Blacked Out</span>';
+          } else {
+            nextBadgeHtml = '<span class="px-3 py-1 rounded-full text-xs font-bold bg-rose-700 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-lock"></i> Subscription Needed</span>';
+          }
+
+          var upcoming3 = upcomingList.slice(0, 3);
+          var stripHtml = upcoming3.length > 1 ? (
+            '<div class="mt-4 pt-4 border-t border-white/10">' +
+              '<div class="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1.5">' +
+                '<i class="fa-solid fa-calendar-days text-rose-400"></i>' +
+                '<span>Upcoming Schedule Snapshot:</span>' +
+              '</div>' +
+              '<div class="grid grid-cols-1 sm:grid-cols-3 gap-2">' +
+                upcoming3.map(function(ug) {
+                  return '<div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between gap-3 text-xs">' +
+                    '<div>' +
+                      '<div class="font-bold text-white text-sm flex items-center gap-1.5">' +
+                        '<span class="text-rose-400 font-teko text-base">#' + ug.gameNum + '</span>' +
+                        '<span>' + ug.vs + '</span>' +
+                      '</div>' +
+                      '<div class="text-[11px] text-slate-300 mt-0.5">' + ug.date + ' • ' + ug.time + ' ET</div>' +
+                    '</div>' +
+                    '<div class="text-right shrink-0">' +
+                      '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-white/10 text-white border border-white/10">' + ug.primaryNet + '</span>' +
+                      (ug.secondaryNet ? '<span class="block text-[10px] text-emerald-300 font-semibold mt-1">' + ug.secondaryNet + '</span>' : '') +
+                    '</div>' +
+                  '</div>';
+                }).join('') +
+              '</div>' +
+            '</div>'
+          ) : '';
+
+          spotlightEl.innerHTML =
+            '<div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-teamSecondary via-slate-900 to-teamDark p-5 sm:p-6 text-white shadow-md border border-slate-700/50" data-spotlight="prerendered">' +
+              '<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">' +
+                '<div class="space-y-1.5">' +
+                  '<div class="flex items-center gap-2">' +
+                    '<span class="px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider ' + (nextGame.isToday ? 'bg-amber-400 text-slate-950 animate-pulse' : 'bg-white/20 text-white') + '">' +
+                      (nextGame.isToday ? '★ Game Today' : 'Next ' + teamData.team.nickname + ' Game') +
+                    '</span>' +
+                    '<span class="text-xs text-slate-300 font-medium">' + nextGame.date + ' • ' + nextGame.time + ' ET</span>' +
+                    '<span class="text-xs text-slate-400 font-teko text-sm tracking-wide">Game ' + nextGame.gameNum + ' of ' + total + '</span>' +
+                  '</div>' +
+                  '<h3 class="text-xl sm:text-2xl font-black font-teko uppercase tracking-wide flex items-center gap-2">' +
+                    '<span>' + nextGame.vs + '</span>' +
+                  '</h3>' +
+                  '<p class="text-xs text-slate-300 flex items-center gap-2">' +
+                    '<i class="fa-solid fa-location-dot text-slate-400"></i> ' + nextGame.venue +
+                  '</p>' +
+                '</div>' +
+                '<div class="flex flex-col md:items-end gap-2 w-full md:w-auto pt-3 md:pt-0 border-t md:border-t-0 border-white/10">' +
+                  '<div class="flex items-center gap-2">' +
+                    '<span class="text-xs text-slate-300 font-medium">Broadcast:</span>' +
+                    '<span class="px-2 py-0.5 rounded text-xs font-bold bg-white text-teamSecondary shadow-sm">' + nextGame.primaryNet + '</span>' +
+                    (nextGame.secondaryNet ? '<span class="px-2 py-0.5 rounded text-xs font-bold bg-white/20 text-white">' + nextGame.secondaryNet + '</span>' : '') +
+                  '</div>' +
+                  '<div>' + nextBadgeHtml + '</div>' +
+                  '<div class="text-[11px] text-slate-300 md:text-right max-w-sm">' +
+                    nextGame.evalReason +
+                  '</div>' +
+                '</div>' +
+              '</div>' +
+              stripHtml +
+            '</div>';
+        }
+
+        // Filter & Render Table + Mobile Cards
+        var tbody = document.getElementById('scheduleTableBody');
+        var mobile = document.getElementById('scheduleCardsMobile');
+        var countLabel = document.getElementById('renderedCountLabel');
+        if (!tbody || !mobile) return;
+
+        var rowsHtml = '';
+        var cardsHtml = '';
+        var shown = 0;
+
+        evaluatedGames.forEach(function(g) {
+          if (state.timeFilter === 'upcoming' && g.isPast) return;
+          if (state.timeFilter === 'past' && !g.isPast) return;
+
+          if (state.statusFilter !== 'all' && g.evalStatus !== state.statusFilter) return;
+
+          if (state.channelFilter !== 'all') {
+            var nets = (g.primaryNet || '') + ' ' + (g.secondaryNet || '') + ' ' + (g.rsn || '');
+            if (nets.toLowerCase().indexOf(state.channelFilter.toLowerCase()) === -1) return;
+          }
+
+          if (state.search) {
+            var hay = (g.vs + ' ' + g.fullMatchup + ' ' + g.venue + ' ' + g.date).toLowerCase();
+            if (hay.indexOf(state.search) === -1) return;
+          }
+
+          shown++;
+          var badgeHtml = '';
+          if (g.isPast) {
+            badgeHtml = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300 whitespace-nowrap"><i class="fa-solid fa-clock-rotate-left mr-1 text-[10px]"></i>Final</span>';
+          } else if (g.evalStatus === 'watchable') {
+            badgeHtml = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-check mr-1 text-[10px]"></i>Watchable</span>';
+          } else if (g.evalStatus === 'blacked_out') {
+            badgeHtml = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 whitespace-nowrap"><i class="fa-solid fa-ban mr-1 text-[10px]"></i>Blacked Out</span>';
+          } else {
+            badgeHtml = '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300 whitespace-nowrap"><i class="fa-solid fa-lock mr-1 text-[10px]"></i>Need Sub</span>';
+          }
+
+          rowsHtml += '<tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60 ' + (g.isPast ? 'opacity-60' : '') + '">' +
+            '<td class="py-3 px-4 font-bold text-slate-600 dark:text-slate-300 font-teko text-base text-center">' + g.gameNum + '</td>' +
+            '<td class="py-3 px-4 whitespace-nowrap"><div class="font-semibold text-slate-800 dark:text-slate-200">' + g.date + '</div><div class="text-[11px] text-slate-600 dark:text-slate-300">' + g.time + ' ET</div></td>' +
+            '<td class="py-3 px-4"><div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2"><span>' + g.vs + '</span></div><div class="text-[11px] text-slate-600 dark:text-slate-300">' + g.venue + '</div></td>' +
+            '<td class="py-3 px-4"><div class="flex items-center flex-wrap gap-1.5"><span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">' + g.primaryNet + '</span>' + (g.secondaryNet ? '<span class="px-2 py-0.5 rounded text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">' + g.secondaryNet + '</span>' : '') + '</div></td>' +
+            '<td class="py-3 px-4"><span class="text-[11px] font-medium uppercase tracking-wider text-slate-600 dark:text-slate-300">' + g.coverageLabel + '</span></td>' +
+            '<td class="py-3 px-4 text-right"><div>' + badgeHtml + '</div><div class="text-[11px] text-slate-600 dark:text-slate-300 mt-1 leading-snug">' + g.evalReason + '</div></td>' +
+          '</tr>';
+
+          cardsHtml += '<div class="p-3 rounded-xl border border-slate-200 dark:border-slate-800 ' + (g.isPast ? 'bg-slate-100/60 dark:bg-slate-900/40 opacity-75' : 'bg-slate-50 dark:bg-slate-800/60') + '">' +
+            '<div class="flex items-start justify-between gap-2"><div><div class="flex items-center gap-1.5 flex-wrap"><span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#' + g.gameNum + '</span><span class="font-bold text-sm text-slate-900 dark:text-white">' + g.vs + '</span></div><div class="text-[10px] text-slate-600 dark:text-slate-300 font-medium leading-tight mt-0.5 truncate">' + g.fullMatchup + ' • ' + g.venue + '</div><div class="text-[11px] text-slate-600 dark:text-slate-300">' + g.date + ' • ' + g.time + ' ET</div></div>' + badgeHtml + '</div>' +
+            '<div class="flex items-center justify-between text-xs pt-1 mt-1 border-t border-slate-200/60 dark:border-slate-700/60"><div class="flex items-center gap-1 flex-wrap"><span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">' + g.primaryNet + '</span>' + (g.secondaryNet ? '<span class="px-1.5 py-0.5 rounded text-[11px] font-medium bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600">' + g.secondaryNet + '</span>' : '') + '</div><span class="text-[11px] font-semibold text-[#AF1E2D] dark:text-rose-400">' + g.coverageLabel + '</span></div>' +
+            '<div class="text-[11px] font-medium text-slate-600 dark:text-slate-300 bg-white/70 dark:bg-slate-900/50 p-2 rounded-lg border border-slate-200/50 dark:border-slate-700/50 mt-1">' + g.evalReason + '</div>' +
+          '</div>';
+        });
+
+        tbody.innerHTML = rowsHtml;
+        mobile.innerHTML = cardsHtml;
+        if (countLabel) {
+          countLabel.textContent = state.timeFilter === 'upcoming'
+            ? 'Showing the ' + shown + '-game ' + teamData.team.name + ' upcoming broadcast schedule'
+            : state.timeFilter === 'past'
+            ? 'Showing ' + shown + ' completed games'
+            : 'Showing ' + shown + ' total games';
+        }
+      }
+
+      window.setUsTimeFilter = function(mode) {
+        state.timeFilter = mode;
+        ['upcoming', 'all', 'past'].forEach(function(k) {
+          var btn = document.getElementById('time_' + k);
+          if (!btn) return;
+          if (k === mode) {
+            btn.className = 'px-3 py-1.5 rounded-lg bg-white dark:bg-slate-700 shadow-sm text-teamPrimary font-bold transition';
+          } else {
+            btn.className = 'px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition';
+          }
+        });
+        renderAll();
+      };
+
+      document.addEventListener('DOMContentLoaded', function() {
+        // Restore saved ZIP and subscriptions from localStorage
+        try {
+          var savedZip = localStorage.getItem('hockeyblackouts_us_zip');
+          if (savedZip && /^\d{5}$/.test(savedZip)) {
+            state.zip = savedZip;
+            var zIn = document.getElementById('zipCodeInput');
+            if (zIn) zIn.value = savedZip;
+          }
+          var savedSubs = localStorage.getItem('hockeyblackouts_us_subs');
+          if (savedSubs) {
+            var parsed = JSON.parse(savedSubs);
+            if (parsed && typeof parsed === 'object') {
+              subKeys.forEach(function(k) {
+                if (k in parsed) {
+                  state.subs[k] = Boolean(parsed[k]);
+                  var cb = document.getElementById('sub_' + k);
+                  if (cb) cb.checked = state.subs[k];
+                }
+              });
+            }
+          }
+        } catch (e) {}
+
+        // Bind ZIP Code Form & Input
+        var zipForm = document.getElementById('usZipLookupForm');
+        var zipInput = document.getElementById('zipCodeInput');
+        function applyZipValue(val) {
+          var clean = (val || '').replace(/\D/g, '').substring(0, 5);
+          if (zipInput && zipInput.value !== clean) zipInput.value = clean;
+          if (clean.length === 5 || clean.length === 0) {
+            state.zip = clean;
+            try { localStorage.setItem('hockeyblackouts_us_zip', clean); } catch (e) {}
+            renderAll();
+          }
+        }
+        if (zipForm) {
+          zipForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (zipInput) applyZipValue(zipInput.value);
+          });
+        }
+        if (zipInput) {
+          zipInput.addEventListener('input', function(e) {
+            applyZipValue(e.target.value);
+          });
+        }
+
+        // Bind Subscription Checkboxes
+        subKeys.forEach(function(k) {
+          var cb = document.getElementById('sub_' + k);
+          if (cb) {
+            cb.addEventListener('change', function(e) {
+              state.subs[k] = Boolean(e.target.checked);
+              try { localStorage.setItem('hockeyblackouts_us_subs', JSON.stringify(state.subs)); } catch (err) {}
+              renderAll();
+            });
+          }
+        });
+
+        // Bind Search, Status & Channel Filters
+        var searchEl = document.getElementById('opponentSearch');
+        if (searchEl) searchEl.addEventListener('input', function(e) { state.search = (e.target.value || '').toLowerCase(); renderAll(); });
+        var statusEl = document.getElementById('statusFilter');
+        if (statusEl) statusEl.addEventListener('change', function(e) { state.statusFilter = e.target.value; renderAll(); });
+        var chanEl = document.getElementById('channelFilter');
+        if (chanEl) chanEl.addEventListener('change', function(e) { state.channelFilter = e.target.value; renderAll(); });
+
+        fetch('data.json')
+          .then(function(r) { return r.json(); })
+          .then(function(d) {
+            teamData = d;
+            renderAll();
+          })
+          .catch(function() {});
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -12,6 +12,9 @@
   <meta name="keywords" content="{{TEAM_NAME}} game tonight, {{TEAM_NICKNAME}} blackout rules, {{TEAM_NAME}} broadcast schedule, {{REGIONAL_EN}} blackout, watch {{TEAM_NICKNAME}} online, Sportsnet {{TEAM_NAME}}, {{CITY_NAME}} hockey live stream">
   <meta name="author" content="HockeyBlackouts.ca">
   <link rel="canonical" href="https://hockeyblackouts.ca/{{TEAM_DIR}}/">
+  <link rel="alternate" hreflang="en-US" href="https://hockeyblackouts.com/{{TEAM_DIR}}/" />
+  <link rel="alternate" hreflang="en-CA" href="https://hockeyblackouts.ca/{{TEAM_DIR}}/" />
+  <link rel="alternate" hreflang="x-default" href="https://hockeyblackouts.com/{{TEAM_DIR}}/" />
 
   <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="https://hockeyblackouts.ca/shared/favicon.svg">
@@ -516,11 +519,9 @@
 
     <!-- AUTOMATIC NEXT UPCOMING GAME SPOTLIGHT HERO -->
     <section id="nextGameSpotlight" class="transition-all duration-300">
+
       {{PRERENDERED_SPOTLIGHT_HERO}}
     </section>
-
-    <!-- RECENT RESULTS & PAST BLACKOUTS ARCHIVE -->
-    {{PRERENDERED_RECENT_RESULTS}}
 
     <section class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
       
@@ -702,6 +703,9 @@
 
       </div>
     </section>
+    <!-- RECENT RESULTS & PAST BLACKOUTS ARCHIVE -->
+    {{PRERENDERED_RECENT_RESULTS}}
+
   </main>
 
   <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500">
@@ -744,6 +748,9 @@
       </p>
       <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-300">
         All team names ({{TEAM_NAME}}, {{TEAM_NICKNAME}}), schedules, network titles ({{REGIONAL_EN}}{{REGIONAL_FR_DISCLAIMER}}, Sportsnet, TVA Sports, Amazon Prime Video), and trademarks referenced herein are used strictly for descriptive and nominative identification under applicable intellectual property laws.
+      </p>
+      <p class="text-xs text-slate-600 dark:text-slate-300 pt-2">
+        <i class="fa-regular fa-envelope mr-1"></i> Contact Us: <a href="mailto:info@hockeyblackouts.ca" class="font-bold text-blue-600 dark:text-blue-400 hover:underline">info@hockeyblackouts.ca</a>
       </p>
     </div>
   </footer>

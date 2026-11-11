@@ -13,12 +13,21 @@ if (fs.existsSync(BUILD_DIR)) {
 }
 fs.mkdirSync(BUILD_DIR);
 
+// The US site (hockeyblackouts.com) is built separately into build_com/ and deployed to Cloudflare Pages.
+const BUILD_COM_DIR = 'build_com';
+if (fs.existsSync(BUILD_COM_DIR)) {
+  fs.rmSync(BUILD_COM_DIR, { recursive: true, force: true });
+}
+
 execSync(`cp -r shared ${BUILD_DIR}/`);
 execSync(`cp LICENSE ${BUILD_DIR}/`);
 if (fs.existsSync("robots.txt")) fs.copyFileSync("robots.txt", path.join(BUILD_DIR, "robots.txt"));
 if (fs.existsSync("shared/favicon-48x48.png")) fs.copyFileSync("shared/favicon-48x48.png", path.join(BUILD_DIR, "favicon.ico"));
 const indexNowKeyFile = "0e7615e8d257218fdc00d074f25a4247.txt";
 if (fs.existsSync(indexNowKeyFile)) fs.copyFileSync(indexNowKeyFile, path.join(BUILD_DIR, indexNowKeyFile));
+
+const caTeamsMeta = JSON.parse(fs.readFileSync('data/ca_teams.json', 'utf-8'));
+const CA_7_IDS = new Set(['MTL', 'TOR', 'OTT', 'VAN', 'CGY', 'EDM', 'WPG']);
 
 const teams = [
   { id: 'mtl', dir: 'montreal' },
@@ -30,18 +39,28 @@ const teams = [
   { id: 'wpg', dir: 'winnipeg' }
 ];
 
+const all32CaTeams = caTeamsMeta.map(t => ({
+  id: t.id.toLowerCase(),
+  abbrev: t.id,
+  name: t.name,
+  dir: t.slug,
+  country: t.country,
+  colors: t.colors,
+  dataPath: CA_7_IDS.has(t.id) ? `data/${t.id.toLowerCase()}.json` : `data/ca/${t.slug}.json`
+}));
+
 const timestamp = Date.now();
 
-teams.forEach(team => {
+all32CaTeams.forEach(team => {
   const teamBuildDir = path.join(BUILD_DIR, team.dir);
-  fs.mkdirSync(teamBuildDir);
+  fs.mkdirSync(teamBuildDir, { recursive: true });
   
   execSync(`cp -r teams/${team.dir}/* ${teamBuildDir}/`);
-  execSync(`cp data/${team.id}.json ${teamBuildDir}/data.json`);
+  execSync(`cp ${team.dataPath} ${teamBuildDir}/data.json`);
   
   let html = fs.readFileSync(path.join(teamBuildDir, 'index.html'), 'utf-8');
   html = html.replace(/\.\.\/\.\.\/shared\//g, '../shared/');
-  html = html.replace(/\.\.\/\.\.\/data\/[a-z]{3}\.json/g, 'data.json');
+  html = html.replace(/\.\.\/\.\.\/data\/[a-z0-9_-]+\.json/g, 'data.json');
   
   html = html.replace(/shared\/tailwind\.min\.css(\?v=[0-9]+)?/g, `shared/tailwind.min.css?v=${timestamp}`);
   html = html.replace(/shared\/app\.css(\?v=[0-9]+)?/g, `shared/app.css?v=${timestamp}`);
@@ -49,9 +68,6 @@ teams.forEach(team => {
   html = html.replace(/shared\/i18n\.js(\?v=[0-9]+)?/g, `shared/i18n.js?v=${timestamp}`);
   html = html.replace(/data\.json(\?v=[0-9]+)?/g, `data.json?v=${timestamp}`);
   
-  
-  // Update canonicals and sitemap
-    
   if (fs.existsSync(path.join(teamBuildDir, 'sitemap.xml'))) {
     let sitemap = fs.readFileSync(path.join(teamBuildDir, 'sitemap.xml'), 'utf-8');
     sitemap = sitemap.replace(/https:\/\/maltos-mk\.github\.io\/[^</]+/g, `https://hockeyblackouts.ca/${team.dir}/`);
@@ -131,28 +147,44 @@ const sortedUpcoming = Array.from(allUniqueUpcoming.values())
   .slice(0, 10);
 
 const splashUpcomingHtml = sortedUpcoming.map(item => `
-  <div class="matchup-card" data-timestamp="${item.timestamp}">
+  <div class="matchup-card bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-3" data-timestamp="${item.timestamp}">
     <div>
-      <div class="matchup-card-header">
+      <div class="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
         <span>${item.game.date} • ${item.game.time || '7:00 PM ET'}</span>
-        <span class="matchup-badge">${item.game.netEN || 'Sportsnet'}</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-rose-50 dark:bg-rose-950/50 text-teamPrimary dark:text-rose-300 border border-rose-200/60 dark:border-rose-800/50">${item.game.netEN || 'Sportsnet'}</span>
       </div>
-      <h3 class="matchup-card-title">${item.awayName} @ ${item.homeName}</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>${item.game.venue}</div>
+      <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white leading-snug">${item.awayName} @ ${item.homeName}</h3>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-[11px] mr-1"></i>${item.game.venue}</div>
     </div>
-    <div class="matchup-card-footer">
-      <a href="/${item.primaryTeamDir}/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> ${item.primaryTeamName}
+    <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800 text-xs">
+      <a href="/${item.primaryTeamDir}/" class="font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+        <i class="fa-solid fa-shield-halved text-[11px]"></i> ${item.primaryTeamName}
       </a>
-      <a href="${item.gameUrl}" class="matchup-link">
+      <a href="${item.gameUrl}" class="font-bold text-teamPrimary dark:text-rose-400 hover:underline flex items-center gap-1">
         <span>Can I Watch? &rarr;</span>
       </a>
     </div>
   </div>
 `).join('\n');
 
+const splashUsTeamsInCaHtml = all32CaTeams
+  .filter(t => t.country === 'US')
+  .sort((a, b) => a.name.localeCompare(b.name))
+  .map(t => {
+    const borderColor = (t.colors && t.colors.primary) || '#AF1E2D';
+    return `          <a href="/${t.dir}/" style="border-left: 6px solid ${borderColor};" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">${t.name}</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>`;
+  })
+  .join('\n');
+
 let splashHtml = fs.readFileSync('templates/splash.html', 'utf-8');
 splashHtml = splashHtml.replace(/\{\{SPLASH_UPCOMING_MATCHUPS_HTML\}\}/g, splashUpcomingHtml);
+splashHtml = splashHtml.replace(/\{\{SPLASH_US_TEAMS_IN_CA_HTML\}\}/g, splashUsTeamsInCaHtml);
 fs.writeFileSync(path.join(BUILD_DIR, 'index.html'), splashHtml);
 
 // Build Phase 2 Per-Game Matchup Pages
@@ -166,6 +198,26 @@ execSync('node scripts/build_fr.js', { stdio: 'inherit' });
 
 // Build Phase 4 OpenGraph 1200x630 Social Preview Cards
 execSync('node scripts/generate_og_cards.js', { stdio: 'inherit' });
+
+// Build the US site (hockeyblackouts.com) into build_com/: homepage at / and one hub per team at /[slug]/.
+// Nothing US-built is written into build/, so hockeyblackouts.ca never serves /us/.
+execSync('node scripts/generate_us_team_pages.js', { stdio: 'inherit' });
+
+// Assemble the rest of the .com package: shared assets, OG image, robots.txt, sitemap.xml
+execSync(`cp -r shared ${BUILD_COM_DIR}/`);
+execSync(`cp LICENSE ${BUILD_COM_DIR}/`);
+if (fs.existsSync('shared/favicon-48x48.png')) fs.copyFileSync('shared/favicon-48x48.png', path.join(BUILD_COM_DIR, 'favicon.ico'));
+fs.mkdirSync(path.join(BUILD_COM_DIR, 'og'), { recursive: true });
+fs.copyFileSync(path.join(BUILD_DIR, 'og', 'default.png'), path.join(BUILD_COM_DIR, 'og', 'default.png'));
+fs.writeFileSync(path.join(BUILD_COM_DIR, 'robots.txt'), 'User-agent: *\nAllow: /\n\nSitemap: https://hockeyblackouts.com/sitemap.xml\n');
+const usTeamsMeta = JSON.parse(fs.readFileSync('data/us_teams.json', 'utf-8'));
+const comLastmod = new Date().toISOString().split('T')[0];
+let comSitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>https://hockeyblackouts.com/</loc>\n    <lastmod>${comLastmod}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>1.0</priority>\n  </url>\n`;
+usTeamsMeta.forEach(t => {
+  comSitemap += `  <url>\n    <loc>https://hockeyblackouts.com/${t.slug}/</loc>\n    <lastmod>${comLastmod}</lastmod>\n    <changefreq>daily</changefreq>\n    <priority>0.9</priority>\n  </url>\n`;
+});
+comSitemap += '</urlset>\n';
+fs.writeFileSync(path.join(BUILD_COM_DIR, 'sitemap.xml'), comSitemap);
 
 console.log('Build complete.');
 

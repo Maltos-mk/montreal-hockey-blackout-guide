@@ -346,7 +346,7 @@ const recentGames = data.schedule.filter(g => {
   const gDate = new Date(g.iso);
   const diffDays = (now.getTime() - gDate.getTime()) / (1000 * 60 * 60 * 24);
   return diffDays > 0 && diffDays <= 14;
-}).reverse();
+}).reverse().slice(0, 3); // newest 3 only: keeps HTML under the byte budget
 
 let recentResultsHtml = '';
 if (recentGames.length > 0) {
@@ -439,11 +439,8 @@ if (fs.existsSync(enMontrealPath)) {
   let enHtml = fs.readFileSync(enMontrealPath, 'utf8');
   if (!enHtml.includes('hreflang="fr-CA"')) {
     const hreflangBlock = `  <link rel="canonical" href="https://hockeyblackouts.ca/montreal/">
-  <link rel="alternate" hreflang="en-CA" href="https://hockeyblackouts.ca/montreal/">
-  <link rel="alternate" hreflang="en" href="https://hockeyblackouts.ca/montreal/">
   <link rel="alternate" hreflang="fr-CA" href="https://hockeyblackouts.ca/fr/montreal/">
-  <link rel="alternate" hreflang="fr" href="https://hockeyblackouts.ca/fr/montreal/">
-  <link rel="alternate" hreflang="x-default" href="https://hockeyblackouts.ca/montreal/">`;
+  <link rel="alternate" hreflang="fr" href="https://hockeyblackouts.ca/fr/montreal/">`;
     enHtml = enHtml.replace('  <link rel="canonical" href="https://hockeyblackouts.ca/montreal/">', hreflangBlock);
   }
 

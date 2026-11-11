@@ -18,9 +18,18 @@ module.exports = defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
   ],
-  webServer: {
-    command: 'python3 -m http.server 8099 --directory build',
-    url: 'http://localhost:8099',
-    reuseExistingServer: true,
-  },
+  webServer: [
+    {
+      // Canadian site (hockeyblackouts.ca)
+      command: 'python3 -m http.server 8099 --directory build',
+      url: 'http://localhost:8099',
+      reuseExistingServer: true,
+    },
+    {
+      // US site (hockeyblackouts.com), served from its own root like production
+      command: 'python3 -m http.server 8100 --directory build_com',
+      url: 'http://localhost:8100',
+      reuseExistingServer: true,
+    },
+  ],
 });

@@ -325,7 +325,7 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
           "address": {
             "@type": "PostalAddress",
             "addressLocality": homeTeam.city,
-            "addressCountry": "CA"
+            "addressCountry": homeIsCanadian ? "CA" : "US"
           }
         },
         "competitor": [
