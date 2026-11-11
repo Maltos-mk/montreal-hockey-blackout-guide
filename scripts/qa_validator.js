@@ -410,6 +410,12 @@ if (fs.existsSync(path.join(buildDir, 'us'))) {
   console.error('\n❌ QA FAILED: build/us exists. The US-built pages must only be served from build_com/ (hockeyblackouts.com).');
   process.exit(1);
 }
+const indexNowKeyCom = '68ca54b3a94f5825cf4f6ca859c94e8f';
+const indexNowComPath = path.join(comDir, `${indexNowKeyCom}.txt`);
+if (!fs.existsSync(indexNowComPath) || fs.readFileSync(indexNowComPath, 'utf-8').trim() !== indexNowKeyCom) {
+  console.error('\n❌ QA FAILED: build_com/ is missing the IndexNow key file or its content does not match the key.');
+  process.exit(1);
+}
 const comRobots = fs.existsSync(path.join(comDir, 'robots.txt')) ? fs.readFileSync(path.join(comDir, 'robots.txt'), 'utf-8') : '';
 if (!comRobots.includes('Sitemap: https://hockeyblackouts.com/sitemap.xml')) {
   console.error('\n❌ QA FAILED: build_com/robots.txt is missing or does not reference https://hockeyblackouts.com/sitemap.xml.');

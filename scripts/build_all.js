@@ -207,6 +207,9 @@ execSync('node scripts/generate_us_team_pages.js', { stdio: 'inherit' });
 execSync(`cp -r shared ${BUILD_COM_DIR}/`);
 execSync(`cp LICENSE ${BUILD_COM_DIR}/`);
 if (fs.existsSync('shared/favicon-48x48.png')) fs.copyFileSync('shared/favicon-48x48.png', path.join(BUILD_COM_DIR, 'favicon.ico'));
+// IndexNow ownership key for hockeyblackouts.com (separate from the .ca key above)
+const indexNowKeyFileCom = "68ca54b3a94f5825cf4f6ca859c94e8f.txt";
+fs.copyFileSync(indexNowKeyFileCom, path.join(BUILD_COM_DIR, indexNowKeyFileCom));
 fs.mkdirSync(path.join(BUILD_COM_DIR, 'og'), { recursive: true });
 fs.copyFileSync(path.join(BUILD_DIR, 'og', 'default.png'), path.join(BUILD_COM_DIR, 'og', 'default.png'));
 fs.writeFileSync(path.join(BUILD_COM_DIR, 'robots.txt'), 'User-agent: *\nAllow: /\n\nSitemap: https://hockeyblackouts.com/sitemap.xml\n');
