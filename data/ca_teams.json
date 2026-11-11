@@ -1,0 +1,951 @@
+[
+  {
+    "name": "Montreal Canadiens",
+    "nickname": "Habs",
+    "city": "Montreal",
+    "abbreviation": "MTL",
+    "id": "MTL",
+    "slug": "montreal",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#AF1E2D",
+      "secondary": "#192168",
+      "dark": "#871420"
+    },
+    "marketRegion": {
+      "description": "QC, Atlantic Canada, Eastern Ontario",
+      "regionCode": "on_east_qc_atl"
+    },
+    "networks": {
+      "regionalEN": "TSN2",
+      "regionalFR": "RDS",
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "name": "Ottawa Senators",
+    "nickname": "Sens",
+    "city": "Ottawa",
+    "abbreviation": "OTT",
+    "id": "OTT",
+    "slug": "ottawa",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#c52032",
+      "secondary": "#000000",
+      "dark": "#8b1623"
+    },
+    "marketRegion": {
+      "description": "QC, Atlantic Canada, Eastern Ontario",
+      "regionCode": "on_east_qc_atl"
+    },
+    "networks": {
+      "regionalEN": "TSN5",
+      "regionalFR": "RDS",
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "name": "Toronto Maple Leafs",
+    "nickname": "Leafs",
+    "city": "Toronto",
+    "abbreviation": "TOR",
+    "id": "TOR",
+    "slug": "toronto",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#00205B",
+      "secondary": "#003087",
+      "dark": "#00133A"
+    },
+    "marketRegion": {
+      "description": "Ontario (West of Belleville)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "TSN4",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "name": "Winnipeg Jets",
+    "nickname": "Jets",
+    "city": "Winnipeg",
+    "abbreviation": "WPG",
+    "id": "WPG",
+    "slug": "winnipeg",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#041E42",
+      "secondary": "#AC162C",
+      "dark": "#02122A"
+    },
+    "marketRegion": {
+      "description": "Manitoba, Saskatchewan, NW Ontario",
+      "regionCode": "mb"
+    },
+    "networks": {
+      "regionalEN": "TSN3",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "name": "Edmonton Oilers",
+    "nickname": "Oilers",
+    "city": "Edmonton",
+    "abbreviation": "EDM",
+    "id": "EDM",
+    "slug": "edmonton",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#041E42",
+      "secondary": "#FF4C00",
+      "dark": "#02122A"
+    },
+    "marketRegion": {
+      "description": "Alberta, Saskatchewan, NWT",
+      "regionCode": "ab"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet West",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "name": "Calgary Flames",
+    "nickname": "Flames",
+    "city": "Calgary",
+    "abbreviation": "CGY",
+    "id": "CGY",
+    "slug": "calgary",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#F15A24",
+      "dark": "#8A0B20"
+    },
+    "marketRegion": {
+      "description": "Alberta, Saskatchewan, NWT",
+      "regionCode": "ab"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet West",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "name": "Vancouver Canucks",
+    "nickname": "Canucks",
+    "city": "Vancouver",
+    "abbreviation": "VAN",
+    "id": "VAN",
+    "slug": "vancouver",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#00205B",
+      "secondary": "#00843D",
+      "dark": "#00133A"
+    },
+    "marketRegion": {
+      "description": "British Columbia and Yukon",
+      "regionCode": "bc"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet Pacific",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "ANA",
+    "abbreviation": "ANA",
+    "name": "Anaheim Ducks",
+    "nickname": "Ducks",
+    "city": "Anaheim",
+    "slug": "anaheim-ducks",
+    "country": "US",
+    "colors": {
+      "primary": "#CF4520",
+      "secondary": "#111111",
+      "dark": "#0A0A0A"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "BOS",
+    "abbreviation": "BOS",
+    "name": "Boston Bruins",
+    "nickname": "Bruins",
+    "city": "Boston",
+    "slug": "boston-bruins",
+    "country": "US",
+    "colors": {
+      "primary": "#FFB81C",
+      "secondary": "#111111",
+      "dark": "#000000"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "BUF",
+    "abbreviation": "BUF",
+    "name": "Buffalo Sabres",
+    "nickname": "Sabres",
+    "city": "Buffalo",
+    "slug": "buffalo-sabres",
+    "country": "US",
+    "colors": {
+      "primary": "#003087",
+      "secondary": "#00205B",
+      "dark": "#00133A"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "CAR",
+    "abbreviation": "CAR",
+    "name": "Carolina Hurricanes",
+    "nickname": "Hurricanes",
+    "city": "Carolina",
+    "slug": "carolina-hurricanes",
+    "country": "US",
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#111111",
+      "dark": "#0A0A0A"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "CHI",
+    "abbreviation": "CHI",
+    "name": "Chicago Blackhawks",
+    "nickname": "Blackhawks",
+    "city": "Chicago",
+    "slug": "chicago-blackhawks",
+    "country": "US",
+    "colors": {
+      "primary": "#CF0A2C",
+      "secondary": "#111111",
+      "dark": "#0A0A0A"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "COL",
+    "abbreviation": "COL",
+    "name": "Colorado Avalanche",
+    "nickname": "Avalanche",
+    "city": "Colorado",
+    "slug": "colorado-avalanche",
+    "country": "US",
+    "colors": {
+      "primary": "#6F263D",
+      "secondary": "#236192",
+      "dark": "#141E30"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "CBJ",
+    "abbreviation": "CBJ",
+    "name": "Columbus Blue Jackets",
+    "nickname": "Blue Jackets",
+    "city": "Columbus",
+    "slug": "columbus-blue-jackets",
+    "country": "US",
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#002654",
+      "dark": "#001530"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "DAL",
+    "abbreviation": "DAL",
+    "name": "Dallas Stars",
+    "nickname": "Stars",
+    "city": "Dallas",
+    "slug": "dallas-stars",
+    "country": "US",
+    "colors": {
+      "primary": "#006847",
+      "secondary": "#004B33",
+      "dark": "#111111"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "DET",
+    "abbreviation": "DET",
+    "name": "Detroit Red Wings",
+    "nickname": "Red Wings",
+    "city": "Detroit",
+    "slug": "detroit-red-wings",
+    "country": "US",
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#9E0B1C",
+      "dark": "#1A0508"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "FLA",
+    "abbreviation": "FLA",
+    "name": "Florida Panthers",
+    "nickname": "Panthers",
+    "city": "Florida",
+    "slug": "florida-panthers",
+    "country": "US",
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#041E42",
+      "dark": "#021126"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "LAK",
+    "abbreviation": "LAK",
+    "name": "Los Angeles Kings",
+    "nickname": "Kings",
+    "city": "Los Angeles",
+    "slug": "los-angeles-kings",
+    "country": "US",
+    "colors": {
+      "primary": "#111111",
+      "secondary": "#1F2937",
+      "dark": "#090D16"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "MIN",
+    "abbreviation": "MIN",
+    "name": "Minnesota Wild",
+    "nickname": "Wild",
+    "city": "Minnesota",
+    "slug": "minnesota-wild",
+    "country": "US",
+    "colors": {
+      "primary": "#A6192E",
+      "secondary": "#154734",
+      "dark": "#0B291E"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "NSH",
+    "abbreviation": "NSH",
+    "name": "Nashville Predators",
+    "nickname": "Predators",
+    "city": "Nashville",
+    "slug": "nashville-predators",
+    "country": "US",
+    "colors": {
+      "primary": "#FFB81C",
+      "secondary": "#041E42",
+      "dark": "#021126"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "NJD",
+    "abbreviation": "NJD",
+    "name": "New Jersey Devils",
+    "nickname": "Devils",
+    "city": "New Jersey",
+    "slug": "new-jersey-devils",
+    "country": "US",
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#111111",
+      "dark": "#000000"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "NYI",
+    "abbreviation": "NYI",
+    "name": "New York Islanders",
+    "nickname": "Islanders",
+    "city": "New York",
+    "slug": "new-york-islanders",
+    "country": "US",
+    "colors": {
+      "primary": "#F47D30",
+      "secondary": "#00539B",
+      "dark": "#002E56"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "NYR",
+    "abbreviation": "NYR",
+    "name": "New York Rangers",
+    "nickname": "Rangers",
+    "city": "New York",
+    "slug": "new-york-rangers",
+    "country": "US",
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#0038A8",
+      "dark": "#001F5C"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "PHI",
+    "abbreviation": "PHI",
+    "name": "Philadelphia Flyers",
+    "nickname": "Flyers",
+    "city": "Philadelphia",
+    "slug": "philadelphia-flyers",
+    "country": "US",
+    "colors": {
+      "primary": "#F74902",
+      "secondary": "#111111",
+      "dark": "#000000"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "PIT",
+    "abbreviation": "PIT",
+    "name": "Pittsburgh Penguins",
+    "nickname": "Penguins",
+    "city": "Pittsburgh",
+    "slug": "pittsburgh-penguins",
+    "country": "US",
+    "colors": {
+      "primary": "#FCB514",
+      "secondary": "#111111",
+      "dark": "#000000"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "SJS",
+    "abbreviation": "SJS",
+    "name": "San Jose Sharks",
+    "nickname": "Sharks",
+    "city": "San Jose",
+    "slug": "san-jose-sharks",
+    "country": "US",
+    "colors": {
+      "primary": "#006D75",
+      "secondary": "#00484E",
+      "dark": "#081C20"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "SEA",
+    "abbreviation": "SEA",
+    "name": "Seattle Kraken",
+    "nickname": "Kraken",
+    "city": "Seattle",
+    "slug": "seattle-kraken",
+    "country": "US",
+    "colors": {
+      "primary": "#68A2B9",
+      "secondary": "#001628",
+      "dark": "#000C17"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "STL",
+    "abbreviation": "STL",
+    "name": "St. Louis Blues",
+    "nickname": "Blues",
+    "city": "St. Louis",
+    "slug": "st-louis-blues",
+    "country": "US",
+    "colors": {
+      "primary": "#FCB514",
+      "secondary": "#002F87",
+      "dark": "#001B4E"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "TBL",
+    "abbreviation": "TBL",
+    "name": "Tampa Bay Lightning",
+    "nickname": "Lightning",
+    "city": "Tampa Bay",
+    "slug": "tampa-bay-lightning",
+    "country": "US",
+    "colors": {
+      "primary": "#002868",
+      "secondary": "#00205B",
+      "dark": "#001233"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "UTA",
+    "abbreviation": "UTA",
+    "name": "Utah Mammoth",
+    "nickname": "Mammoth",
+    "city": "Utah",
+    "slug": "utah-mammoth",
+    "country": "US",
+    "colors": {
+      "primary": "#69B3E7",
+      "secondary": "#09090B",
+      "dark": "#000000"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "VGK",
+    "abbreviation": "VGK",
+    "name": "Vegas Golden Knights",
+    "nickname": "Golden Knights",
+    "city": "Vegas",
+    "slug": "vegas-golden-knights",
+    "country": "US",
+    "colors": {
+      "primary": "#B4975A",
+      "secondary": "#333F42",
+      "dark": "#111618"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  },
+  {
+    "id": "WSH",
+    "abbreviation": "WSH",
+    "name": "Washington Capitals",
+    "nickname": "Capitals",
+    "city": "Washington",
+    "slug": "washington-capitals",
+    "country": "US",
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#041E42",
+      "dark": "#021126"
+    },
+    "marketRegion": {
+      "description": "United States (Out-of-Market Across Canada)",
+      "regionCode": "on_west"
+    },
+    "networks": {
+      "regionalEN": "Sportsnet+ Premium",
+      "regionalFR": null,
+      "nationalEN": [
+        "Sportsnet",
+        "Prime Video"
+      ],
+      "nationalFR": [
+        "TVA Sports"
+      ]
+    }
+  }
+]

@@ -1,0 +1,807 @@
+[
+  {
+    "name": "Anaheim Ducks",
+    "nickname": "Ducks",
+    "city": "Anaheim",
+    "abbreviation": "ANA",
+    "slug": "anaheim-ducks",
+    "rsn": "Victory+ / KCOP-13",
+    "territoryDescription": "Southern California (Orange County, Los Angeles, Inland Empire, San Diego) & Hawaii",
+    "zipRanges": [
+      [
+        900,
+        935
+      ],
+      [
+        967,
+        968
+      ]
+    ],
+    "colors": {
+      "primary": "#CF4520",
+      "secondary": "#111111",
+      "dark": "#0A0A0A"
+    },
+    "id": "ANA",
+    "country": "US"
+  },
+  {
+    "name": "Boston Bruins",
+    "nickname": "Bruins",
+    "city": "Boston",
+    "abbreviation": "BOS",
+    "slug": "boston-bruins",
+    "rsn": "NESN",
+    "territoryDescription": "New England (MA, RI, NH, ME, VT & Eastern/Central CT)",
+    "zipRanges": [
+      [
+        10,
+        63
+      ]
+    ],
+    "colors": {
+      "primary": "#FFB81C",
+      "secondary": "#111111",
+      "dark": "#000000"
+    },
+    "id": "BOS",
+    "country": "US"
+  },
+  {
+    "name": "Buffalo Sabres",
+    "nickname": "Sabres",
+    "city": "Buffalo",
+    "abbreviation": "BUF",
+    "slug": "buffalo-sabres",
+    "rsn": "MSG Western NY",
+    "territoryDescription": "Western & Central New York (Buffalo, Rochester, Syracuse) & Northwestern PA",
+    "zipRanges": [
+      [
+        130,
+        149
+      ],
+      [
+        163,
+        167
+      ]
+    ],
+    "colors": {
+      "primary": "#003087",
+      "secondary": "#00205B",
+      "dark": "#00133A"
+    },
+    "id": "BUF",
+    "country": "US"
+  },
+  {
+    "name": "Calgary Flames",
+    "nickname": "Flames",
+    "city": "Calgary",
+    "abbreviation": "CGY",
+    "id": "CGY",
+    "slug": "calgary",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#F15A24",
+      "dark": "#8A0B20"
+    }
+  },
+  {
+    "name": "Carolina Hurricanes",
+    "nickname": "Hurricanes",
+    "city": "Carolina",
+    "abbreviation": "CAR",
+    "slug": "carolina-hurricanes",
+    "rsn": "FanDuel Sports South",
+    "territoryDescription": "North Carolina & South Carolina",
+    "zipRanges": [
+      [
+        270,
+        299
+      ]
+    ],
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#111111",
+      "dark": "#0A0A0A"
+    },
+    "id": "CAR",
+    "country": "US"
+  },
+  {
+    "name": "Chicago Blackhawks",
+    "nickname": "Blackhawks",
+    "city": "Chicago",
+    "abbreviation": "CHI",
+    "slug": "chicago-blackhawks",
+    "rsn": "Chicago Sports Network",
+    "territoryDescription": "Illinois, Indiana & Iowa",
+    "zipRanges": [
+      [
+        460,
+        479
+      ],
+      [
+        500,
+        528
+      ],
+      [
+        600,
+        629
+      ]
+    ],
+    "colors": {
+      "primary": "#CF0A2C",
+      "secondary": "#111111",
+      "dark": "#0A0A0A"
+    },
+    "id": "CHI",
+    "country": "US"
+  },
+  {
+    "name": "Colorado Avalanche",
+    "nickname": "Avalanche",
+    "city": "Colorado",
+    "abbreviation": "COL",
+    "slug": "colorado-avalanche",
+    "rsn": "Altitude Sports",
+    "territoryDescription": "Colorado, Wyoming, Nebraska, Kansas & New Mexico",
+    "zipRanges": [
+      [
+        660,
+        693
+      ],
+      [
+        800,
+        831
+      ],
+      [
+        870,
+        884
+      ]
+    ],
+    "colors": {
+      "primary": "#6F263D",
+      "secondary": "#236192",
+      "dark": "#141E30"
+    },
+    "id": "COL",
+    "country": "US"
+  },
+  {
+    "name": "Columbus Blue Jackets",
+    "nickname": "Blue Jackets",
+    "city": "Columbus",
+    "abbreviation": "CBJ",
+    "slug": "columbus-blue-jackets",
+    "rsn": "FanDuel Sports Ohio",
+    "territoryDescription": "Ohio, Eastern/Central Kentucky & Southern West Virginia",
+    "zipRanges": [
+      [
+        250,
+        257
+      ],
+      [
+        400,
+        418
+      ],
+      [
+        430,
+        458
+      ]
+    ],
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#002654",
+      "dark": "#001530"
+    },
+    "id": "CBJ",
+    "country": "US"
+  },
+  {
+    "name": "Dallas Stars",
+    "nickname": "Stars",
+    "city": "Dallas",
+    "abbreviation": "DAL",
+    "slug": "dallas-stars",
+    "rsn": "Victory+",
+    "territoryDescription": "Texas, Oklahoma, Louisiana & Arkansas",
+    "zipRanges": [
+      [
+        700,
+        799
+      ]
+    ],
+    "colors": {
+      "primary": "#006847",
+      "secondary": "#004B33",
+      "dark": "#111111"
+    },
+    "id": "DAL",
+    "country": "US"
+  },
+  {
+    "name": "Detroit Red Wings",
+    "nickname": "Red Wings",
+    "city": "Detroit",
+    "abbreviation": "DET",
+    "slug": "detroit-red-wings",
+    "rsn": "FanDuel Sports Detroit",
+    "territoryDescription": "Michigan, Northwestern Ohio (Toledo) & Northeastern Indiana",
+    "zipRanges": [
+      [
+        434,
+        436
+      ],
+      [
+        467,
+        468
+      ],
+      [
+        480,
+        499
+      ]
+    ],
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#9E0B1C",
+      "dark": "#1A0508"
+    },
+    "id": "DET",
+    "country": "US"
+  },
+  {
+    "name": "Edmonton Oilers",
+    "nickname": "Oilers",
+    "city": "Edmonton",
+    "abbreviation": "EDM",
+    "id": "EDM",
+    "slug": "edmonton",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#041E42",
+      "secondary": "#FF4C00",
+      "dark": "#02122A"
+    }
+  },
+  {
+    "name": "Florida Panthers",
+    "nickname": "Panthers",
+    "city": "Florida",
+    "abbreviation": "FLA",
+    "slug": "florida-panthers",
+    "rsn": "Scripps Sports",
+    "territoryDescription": "South Florida (Miami, Fort Lauderdale, West Palm Beach, Fort Myers & Naples)",
+    "zipRanges": [
+      [
+        330,
+        334
+      ],
+      [
+        339,
+        339
+      ],
+      [
+        341,
+        341
+      ],
+      [
+        349,
+        349
+      ]
+    ],
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#041E42",
+      "dark": "#021126"
+    },
+    "id": "FLA",
+    "country": "US"
+  },
+  {
+    "name": "Los Angeles Kings",
+    "nickname": "Kings",
+    "city": "Los Angeles",
+    "abbreviation": "LAK",
+    "slug": "los-angeles-kings",
+    "rsn": "FanDuel Sports West",
+    "territoryDescription": "Southern California (Los Angeles, Orange County, Inland Empire, San Diego) & Hawaii",
+    "zipRanges": [
+      [
+        900,
+        935
+      ],
+      [
+        967,
+        968
+      ]
+    ],
+    "colors": {
+      "primary": "#111111",
+      "secondary": "#1F2937",
+      "dark": "#090D16"
+    },
+    "id": "LAK",
+    "country": "US"
+  },
+  {
+    "name": "Minnesota Wild",
+    "nickname": "Wild",
+    "city": "Minnesota",
+    "abbreviation": "MIN",
+    "slug": "minnesota-wild",
+    "rsn": "FanDuel Sports North",
+    "territoryDescription": "Minnesota, Wisconsin, North Dakota & South Dakota",
+    "zipRanges": [
+      [
+        530,
+        588
+      ]
+    ],
+    "colors": {
+      "primary": "#A6192E",
+      "secondary": "#154734",
+      "dark": "#0B291E"
+    },
+    "id": "MIN",
+    "country": "US"
+  },
+  {
+    "name": "Montreal Canadiens",
+    "nickname": "Habs",
+    "city": "Montreal",
+    "abbreviation": "MTL",
+    "id": "MTL",
+    "slug": "montreal",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#AF1E2D",
+      "secondary": "#192168",
+      "dark": "#871420"
+    }
+  },
+  {
+    "name": "Nashville Predators",
+    "nickname": "Predators",
+    "city": "Nashville",
+    "abbreviation": "NSH",
+    "slug": "nashville-predators",
+    "rsn": "FanDuel Sports South",
+    "territoryDescription": "Tennessee, Alabama, Mississippi, Georgia & Western Kentucky",
+    "zipRanges": [
+      [
+        300,
+        319
+      ],
+      [
+        350,
+        397
+      ],
+      [
+        420,
+        427
+      ]
+    ],
+    "colors": {
+      "primary": "#FFB81C",
+      "secondary": "#041E42",
+      "dark": "#021126"
+    },
+    "id": "NSH",
+    "country": "US"
+  },
+  {
+    "name": "New Jersey Devils",
+    "nickname": "Devils",
+    "city": "New Jersey",
+    "abbreviation": "NJD",
+    "slug": "new-jersey-devils",
+    "rsn": "MSG Sportsnet",
+    "territoryDescription": "Northern & Central New Jersey, NYC Metro & Hudson Valley",
+    "zipRanges": [
+      [
+        70,
+        88
+      ],
+      [
+        100,
+        119
+      ],
+      [
+        124,
+        127
+      ]
+    ],
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#111111",
+      "dark": "#000000"
+    },
+    "id": "NJD",
+    "country": "US"
+  },
+  {
+    "name": "New York Islanders",
+    "nickname": "Islanders",
+    "city": "New York",
+    "abbreviation": "NYI",
+    "slug": "new-york-islanders",
+    "rsn": "MSG Sportsnet",
+    "territoryDescription": "Long Island, New York City, Westchester, Hudson Valley, NJ & Connecticut",
+    "zipRanges": [
+      [
+        60,
+        79
+      ],
+      [
+        100,
+        129
+      ]
+    ],
+    "colors": {
+      "primary": "#F47D30",
+      "secondary": "#00539B",
+      "dark": "#002E56"
+    },
+    "id": "NYI",
+    "country": "US"
+  },
+  {
+    "name": "New York Rangers",
+    "nickname": "Rangers",
+    "city": "New York",
+    "abbreviation": "NYR",
+    "slug": "new-york-rangers",
+    "rsn": "MSG Network",
+    "territoryDescription": "New York State, New Jersey & Connecticut",
+    "zipRanges": [
+      [
+        60,
+        89
+      ],
+      [
+        100,
+        149
+      ]
+    ],
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#0038A8",
+      "dark": "#001F5C"
+    },
+    "id": "NYR",
+    "country": "US"
+  },
+  {
+    "name": "Ottawa Senators",
+    "nickname": "Sens",
+    "city": "Ottawa",
+    "abbreviation": "OTT",
+    "id": "OTT",
+    "slug": "ottawa",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#c52032",
+      "secondary": "#000000",
+      "dark": "#8b1623"
+    }
+  },
+  {
+    "name": "Philadelphia Flyers",
+    "nickname": "Flyers",
+    "city": "Philadelphia",
+    "abbreviation": "PHI",
+    "slug": "philadelphia-flyers",
+    "rsn": "NBC Sports Philadelphia",
+    "territoryDescription": "Eastern & Central Pennsylvania (Philadelphia, Lehigh Valley, Harrisburg), South Jersey & Delaware",
+    "zipRanges": [
+      [
+        80,
+        84
+      ],
+      [
+        170,
+        199
+      ]
+    ],
+    "colors": {
+      "primary": "#F74902",
+      "secondary": "#111111",
+      "dark": "#000000"
+    },
+    "id": "PHI",
+    "country": "US"
+  },
+  {
+    "name": "Pittsburgh Penguins",
+    "nickname": "Penguins",
+    "city": "Pittsburgh",
+    "abbreviation": "PIT",
+    "slug": "pittsburgh-penguins",
+    "rsn": "SportsNet Pittsburgh",
+    "territoryDescription": "Western & Central Pennsylvania, West Virginia & Eastern Ohio",
+    "zipRanges": [
+      [
+        150,
+        169
+      ],
+      [
+        260,
+        268
+      ],
+      [
+        439,
+        439
+      ]
+    ],
+    "colors": {
+      "primary": "#FCB514",
+      "secondary": "#111111",
+      "dark": "#000000"
+    },
+    "id": "PIT",
+    "country": "US"
+  },
+  {
+    "name": "San Jose Sharks",
+    "nickname": "Sharks",
+    "city": "San Jose",
+    "abbreviation": "SJS",
+    "slug": "san-jose-sharks",
+    "rsn": "NBC Sports California",
+    "territoryDescription": "Northern & Central California (Bay Area, Sacramento, Fresno) & Northern Nevada",
+    "zipRanges": [
+      [
+        894,
+        897
+      ],
+      [
+        936,
+        961
+      ]
+    ],
+    "colors": {
+      "primary": "#006D75",
+      "secondary": "#00484E",
+      "dark": "#081C20"
+    },
+    "id": "SJS",
+    "country": "US"
+  },
+  {
+    "name": "Seattle Kraken",
+    "nickname": "Kraken",
+    "city": "Seattle",
+    "abbreviation": "SEA",
+    "slug": "seattle-kraken",
+    "rsn": "Kraken Hockey Network",
+    "territoryDescription": "Washington, Oregon, Alaska & Northern Idaho",
+    "zipRanges": [
+      [
+        835,
+        838
+      ],
+      [
+        970,
+        999
+      ]
+    ],
+    "colors": {
+      "primary": "#68A2B9",
+      "secondary": "#001628",
+      "dark": "#000C17"
+    },
+    "id": "SEA",
+    "country": "US"
+  },
+  {
+    "name": "St. Louis Blues",
+    "nickname": "Blues",
+    "city": "St. Louis",
+    "abbreviation": "STL",
+    "slug": "st-louis-blues",
+    "rsn": "FanDuel Sports Midwest",
+    "territoryDescription": "Missouri, Southern Illinois, Eastern Kansas & Arkansas",
+    "zipRanges": [
+      [
+        620,
+        666
+      ],
+      [
+        716,
+        729
+      ]
+    ],
+    "colors": {
+      "primary": "#FCB514",
+      "secondary": "#002F87",
+      "dark": "#001B4E"
+    },
+    "id": "STL",
+    "country": "US"
+  },
+  {
+    "name": "Tampa Bay Lightning",
+    "nickname": "Lightning",
+    "city": "Tampa Bay",
+    "abbreviation": "TBL",
+    "slug": "tampa-bay-lightning",
+    "rsn": "FanDuel Sports Sun",
+    "territoryDescription": "Central & North Florida (Tampa Bay, Orlando, Jacksonville, Gainesville & Sarasota)",
+    "zipRanges": [
+      [
+        320,
+        329
+      ],
+      [
+        335,
+        338
+      ],
+      [
+        342,
+        347
+      ]
+    ],
+    "colors": {
+      "primary": "#002868",
+      "secondary": "#00205B",
+      "dark": "#001233"
+    },
+    "id": "TBL",
+    "country": "US"
+  },
+  {
+    "name": "Toronto Maple Leafs",
+    "nickname": "Leafs",
+    "city": "Toronto",
+    "abbreviation": "TOR",
+    "id": "TOR",
+    "slug": "toronto",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#00205B",
+      "secondary": "#003087",
+      "dark": "#00133A"
+    }
+  },
+  {
+    "name": "Utah Mammoth",
+    "nickname": "Mammoth",
+    "city": "Utah",
+    "abbreviation": "UTA",
+    "slug": "utah-mammoth",
+    "rsn": "Utah 16 / SEG+",
+    "territoryDescription": "Utah, Montana & Southeastern Idaho",
+    "zipRanges": [
+      [
+        590,
+        599
+      ],
+      [
+        832,
+        834
+      ],
+      [
+        840,
+        847
+      ]
+    ],
+    "colors": {
+      "primary": "#69B3E7",
+      "secondary": "#09090B",
+      "dark": "#000000"
+    },
+    "id": "UTA",
+    "country": "US"
+  },
+  {
+    "name": "Vancouver Canucks",
+    "nickname": "Canucks",
+    "city": "Vancouver",
+    "abbreviation": "VAN",
+    "id": "VAN",
+    "slug": "vancouver",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#00205B",
+      "secondary": "#00843D",
+      "dark": "#00133A"
+    }
+  },
+  {
+    "name": "Vegas Golden Knights",
+    "nickname": "Golden Knights",
+    "city": "Vegas",
+    "abbreviation": "VGK",
+    "slug": "vegas-golden-knights",
+    "rsn": "Scripps Sports",
+    "territoryDescription": "Nevada, Arizona & Idaho",
+    "zipRanges": [
+      [
+        832,
+        838
+      ],
+      [
+        850,
+        865
+      ],
+      [
+        889,
+        898
+      ]
+    ],
+    "colors": {
+      "primary": "#B4975A",
+      "secondary": "#333F42",
+      "dark": "#111618"
+    },
+    "id": "VGK",
+    "country": "US"
+  },
+  {
+    "name": "Washington Capitals",
+    "nickname": "Capitals",
+    "city": "Washington",
+    "abbreviation": "WSH",
+    "slug": "washington-capitals",
+    "rsn": "Monumental Sports",
+    "territoryDescription": "Washington D.C., Maryland, Virginia & Eastern West Virginia",
+    "zipRanges": [
+      [
+        200,
+        246
+      ],
+      [
+        254,
+        254
+      ],
+      [
+        267,
+        268
+      ]
+    ],
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#041E42",
+      "dark": "#021126"
+    },
+    "id": "WSH",
+    "country": "US"
+  },
+  {
+    "name": "Winnipeg Jets",
+    "nickname": "Jets",
+    "city": "Winnipeg",
+    "abbreviation": "WPG",
+    "id": "WPG",
+    "slug": "winnipeg",
+    "country": "CA",
+    "rsn": "ESPN+ (Out-of-Market)",
+    "territoryDescription": "Canada (Out-of-Market Across All US ZIP Codes — Streams on ESPN+)",
+    "zipRanges": [],
+    "colors": {
+      "primary": "#041E42",
+      "secondary": "#AC162C",
+      "dark": "#02122A"
+    }
+  }
+]
