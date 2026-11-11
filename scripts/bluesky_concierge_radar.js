@@ -280,23 +280,28 @@ async function main() {
   const githubStepSummary = process.env.GITHUB_STEP_SUMMARY;
   const discordEmbeds = [];
 
-  // Watchdog: check if today's game-day posts were published to Bluesky
-  console.log('Checking game-day broadcast publication status on Bluesky...');
-  const missingPosts = await checkTodaysGamePostsPublished(identifier);
-  if (missingPosts.length > 0) {
-    console.warn(`⚠️ Warning: ${missingPosts.length} game-day post(s) are NOT yet live on Bluesky:`);
-    missingPosts.forEach(g => {
-      console.warn(`   - ${g.awayCity} @ ${g.homeCity} (${g.url.split('?')[0]})`);
-      discordEmbeds.push({
-        title: '⚠️ Alert: Missing Game-Day Post on Bluesky',
-        description: `Today's broadcast post for **${g.awayCity} @ ${g.homeCity}** has not yet been published to [@${identifier || 'hockeyblackouts.ca'}](https://bsky.app/profile/${identifier || 'hockeyblackouts.ca'}).\n\nRun the \`Bluesky Game-Day Publisher\` workflow to publish.`,
-        color: 16744272,
-        footer: { text: 'HockeyBlackouts.ca Concierge Watchdog' },
-        timestamp: new Date().toISOString()
+  // Watchdog: only alert between 12:00 PM ET and 11:59 PM ET so delayed overnight radar runs don't false-alarm before morning publish
+  const currentEtHour = Number(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Toronto', hour: 'numeric', hourCycle: 'h23' }).format(new Date()));
+  if (currentEtHour >= 12) {
+    console.log('Checking game-day broadcast publication status on Bluesky...');
+    const missingPosts = await checkTodaysGamePostsPublished(identifier);
+    if (missingPosts.length > 0) {
+      console.warn(`⚠️ Warning: ${missingPosts.length} game-day post(s) are NOT yet live on Bluesky:`);
+      missingPosts.forEach(g => {
+        console.warn(`   - ${g.awayCity} @ ${g.homeCity} (${g.url.split('?')[0]})`);
+        discordEmbeds.push({
+          title: '⚠️ Alert: Missing Game-Day Post on Bluesky',
+          description: `Today's broadcast post for **${g.awayCity} @ ${g.homeCity}** has not yet been published to [@${identifier || 'hockeyblackouts.ca'}](https://bsky.app/profile/${identifier || 'hockeyblackouts.ca'}).\n\nRun the \`Bluesky Game-Day Publisher\` workflow to publish.`,
+          color: 16744272,
+          footer: { text: 'HockeyBlackouts.ca Concierge Watchdog' },
+          timestamp: new Date().toISOString()
+        });
       });
-    });
+    } else {
+      console.log('✅ All active Canadian games for today are published on Bluesky.\n');
+    }
   } else {
-    console.log('✅ All active Canadian games for today are published on Bluesky.\n');
+    console.log(`ℹ️ Skipping missing-post watchdog check (${currentEtHour}:00 ET is prior to afternoon window).\n`);
   }
 
   let session = null;
