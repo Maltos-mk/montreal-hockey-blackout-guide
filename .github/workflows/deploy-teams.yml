@@ -28,18 +28,30 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps chromium
 
-      - name: Build Unified Package
+      - name: Build Unified Package (build/ = hockeyblackouts.ca, build_com/ = hockeyblackouts.com)
         run: node scripts/build_all.js
+        env:
+          UMAMI_WEBSITE_ID_US: ${{ secrets.UMAMI_WEBSITE_ID_US }}
 
       - name: Run Automated QA Suite
         run: npm run test:all
           
-      - name: Deploy to GitHub Pages
+      - name: Deploy hockeyblackouts.ca to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           cname: hockeyblackouts.ca
+
+      # Needs repo secrets CLOUDFLARE_API_TOKEN (Cloudflare Pages: Edit) and CLOUDFLARE_ACCOUNT_ID.
+      # The Pages project must be a "Direct Upload" project; set repo variable CLOUDFLARE_PAGES_PROJECT
+      # if it is not named hockeyblackouts-com.
+      - name: Deploy hockeyblackouts.com to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy build_com --project-name=${{ vars.CLOUDFLARE_PAGES_PROJECT || 'hockeyblackouts-com' }} --branch=main --commit-dirty=true
 
       # - name: Notify Search Engines via IndexNow (Daily Cron Only)
       #   if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
