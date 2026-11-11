@@ -1,582 +1,895 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Where & How to Watch Hockey in Canada | TV Schedules & Blackouts</title>
-    <link rel="canonical" href="https://hockeyblackouts.ca/">
-    <meta name="description" content="Tired of hockey regional blackouts? Use our interactive calculators to figure out exactly which games are on Sportsnet, TSN, and Amazon Prime in your region.">
-      <link rel="icon" type="image/svg+xml" href="https://hockeyblackouts.ca/shared/favicon.svg">
+  <meta name="google-site-verification" content="9xDuDaZ6t2VaHECBLicoF274o-jsjOjxz9Shb9P7TYQ">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Where &amp; How to Watch Hockey in Canada | TV Schedules &amp; Blackouts</title>
+  <meta name="title" content="Where &amp; How to Watch Hockey in Canada | TV Schedules &amp; Blackouts">
+  <meta name="description" content="Tired of hockey regional blackouts? Use our interactive calculators to figure out exactly which games are on Sportsnet, TSN, and Amazon Prime in your region.">
+  <meta name="author" content="HockeyBlackouts.ca">
+  <link rel="canonical" href="https://hockeyblackouts.ca/">
+  <link rel="alternate" hreflang="en-US" href="https://hockeyblackouts.com/" />
+  <link rel="alternate" hreflang="en-CA" href="https://hockeyblackouts.ca/" />
+  <link rel="alternate" hreflang="x-default" href="https://hockeyblackouts.com/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="https://hockeyblackouts.ca/shared/favicon.svg">
   <link rel="icon" type="image/png" sizes="48x48" href="https://hockeyblackouts.ca/shared/favicon-48x48.png">
   <link rel="icon" type="image/png" sizes="192x192" href="https://hockeyblackouts.ca/shared/favicon-192x192.png">
   <link rel="apple-touch-icon" sizes="180x180" href="https://hockeyblackouts.ca/shared/apple-touch-icon.png">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="HockeyBlackouts.ca">
-    <meta property="og:url" content="https://hockeyblackouts.ca/">
-    <meta property="og:title" content="NHL Blackout &amp; TV Tracker Canada | HockeyBlackouts.ca">
-    <meta property="og:description" content="Instantly check Canadian NHL TV channels and regional streaming blackouts for all 7 Canadian teams by provider.">
-    <meta property="og:image" content="https://hockeyblackouts.ca/og/default.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="HockeyBlackouts.ca - Canadian NHL TV channels and blackout status tool">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://hockeyblackouts.ca/">
-    <meta name="twitter:title" content="NHL Blackout &amp; TV Tracker Canada | HockeyBlackouts.ca">
-    <meta name="twitter:description" content="Instantly check Canadian NHL TV channels and regional streaming blackouts for all 7 Canadian teams by provider.">
-    <meta name="twitter:image" content="https://hockeyblackouts.ca/og/default.png">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "HockeyBlackouts.ca",
-      "url": "https://hockeyblackouts.ca/",
-      "description": "An independent tool helping Canadian hockey fans navigate regional broadcast blackouts and hockey streaming schedules."
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HockeyBlackouts.ca">
+  <meta property="og:url" content="https://hockeyblackouts.ca/">
+  <meta property="og:title" content="NHL Blackout &amp; TV Tracker Canada | HockeyBlackouts.ca">
+  <meta property="og:description" content="Instantly check Canadian NHL TV channels and regional streaming blackouts for all 7 Canadian teams by provider.">
+  <meta property="og:image" content="https://hockeyblackouts.ca/og/default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="HockeyBlackouts.ca - Canadian NHL TV channels and blackout status tool">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://hockeyblackouts.ca/">
+  <meta name="twitter:title" content="NHL Blackout &amp; TV Tracker Canada | HockeyBlackouts.ca">
+  <meta name="twitter:description" content="Instantly check Canadian NHL TV channels and regional streaming blackouts for all 7 Canadian teams by provider.">
+  <meta name="twitter:image" content="https://hockeyblackouts.ca/og/default.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "HockeyBlackouts.ca",
+        "url": "https://hockeyblackouts.ca/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hockeyblackouts.ca/shared/favicon-192x192.png"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "HockeyBlackouts.ca",
+        "url": "https://hockeyblackouts.ca/",
+        "description": "An independent tool helping Canadian hockey fans navigate regional broadcast blackouts and hockey streaming schedules.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "HockeyBlackouts.ca",
+          "url": "https://hockeyblackouts.ca/"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preload Local Fonts & Icons -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="/shared/fonts/teko-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/shared/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  <!-- Umami Analytics -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8" data-domains="hockeyblackouts.ca" data-exclude-hash="true"></script>
+
+  <!-- Dynamic Team Color Tokens (Default Canadian Accent) -->
+  <style>
+    :root {
+      --color-team-primary: #AF1E2D;
+      --color-team-secondary: #0F172A;
+      --color-team-dark: #020617;
     }
-    </script>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="b68ec99c-ee81-4587-91dc-cd69b239def8" data-domains="hockeyblackouts.ca" data-exclude-hash="true"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-    <style>
-        :root {
-            --bg-page: #f8fafc;
-            --bg-card: #ffffff;
-            --text-main: #0f172a;
-            --text-muted: #475569;
-            --border: #e2e8f0;
-        }
-        body { 
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            background-color: var(--bg-page); 
-            color: var(--text-main); 
-            margin: 0; 
-            padding: 0;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        h1 { 
-            font-size: 2.75rem; 
-            margin-bottom: 1rem; 
-            font-weight: 800; 
-            letter-spacing: -0.025em; 
-            line-height: 1.1;
-        }
-        .subtitle { 
-            font-size: 1.25rem; 
-            color: var(--text-muted); 
-            max-width: 700px; 
-            margin: 0 auto; 
-        }
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 1.25rem; 
-            margin-bottom: 4rem;
-        }
-        .card { 
-            background: var(--bg-card); 
-            padding: 1.5rem; 
-            border-radius: 0.75rem; 
-            text-decoration: none; 
-            color: var(--text-main); 
-            font-weight: 700; 
-            font-size: 1.25rem; 
-            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-            transition: all 0.2s; 
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .card:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); 
-            border-color: #cbd5e1;
-        }
-        .card::after {
-            content: "→";
-            color: #94a3b8;
-            transition: transform 0.2s;
-        }
-        .card:hover::after {
-            transform: translateX(4px);
-            color: var(--text-main);
-        }
-        /* Team Colors */
-        .mtl { border-left: 6px solid #AF1E2D; }
-        .tor { border-left: 6px solid #00205B; }
-        .ott { border-left: 6px solid #C52032; }
-        .van { border-left: 6px solid #00205B; }
-        .cgy { border-left: 6px solid #C8102E; }
-        .edm { border-left: 6px solid #FF4C00; }
-        .wpg { border-left: 6px solid #041E42; }
+  </style>
 
-        /* Upcoming Matchups Section */
-        .upcoming-section {
-            margin-bottom: 3.5rem;
-        }
-        .section-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 1.25rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 1px solid var(--border);
-        }
-        .section-header h2 {
-            font-size: 1.35rem;
-            margin: 0;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .matchup-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-        }
-        .matchup-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 0.75rem;
-            padding: 1.25rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            gap: 0.75rem;
-            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
-            transition: all 0.2s;
-        }
-        .matchup-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px -4px rgb(0 0 0 / 0.1);
-            border-color: #cbd5e1;
-        }
-        .matchup-card-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-muted);
-        }
-        .matchup-card-title {
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: var(--text-main);
-            margin: 0;
-            line-height: 1.3;
-        }
-        .matchup-card-venue {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: 0.25rem;
-        }
-        .matchup-card-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 0.75rem;
-            border-top: 1px solid var(--border);
-            font-size: 0.8rem;
-        }
-        .matchup-badge {
-            background: rgba(175, 30, 45, 0.1);
-            color: #AF1E2D;
-            padding: 0.25rem 0.5rem;
-            border-radius: 0.375rem;
-            font-weight: 700;
-            font-size: 0.75rem;
-        }
-        .matchup-link {
-            font-weight: 700;
-            color: #AF1E2D;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-        .matchup-link:hover {
-            text-decoration: underline;
-        }
-        
-        .content-section {
-            background: var(--bg-card);
-            padding: 2.5rem;
-            border-radius: 1rem;
-            border: 1px solid var(--border);
-            margin-bottom: 2rem;
-            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-        }
-        .content-section h2 {
-            font-size: 1.75rem;
-            margin-top: 0;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            letter-spacing: -0.025em;
-        }
-        .content-section p {
-            margin-bottom: 1.25rem;
-            color: var(--text-muted);
-            font-size: 1.05rem;
-        }
-        .content-section p:last-child {
-            margin-bottom: 0;
-        }
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-            color: #64748b;
-            font-size: 0.875rem;
-        }
-    
-        :root.dark {
-            --bg-page: #0f172a;
-            --bg-card: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border: #334155;
-        }
-        :root.dark .card {
-            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.5);
-        }
-        :root.dark .card:hover {
-            border-color: #64748b;
-        }
-</style>
+  <!-- Precompiled Tailwind CSS & Application CSS -->
+  <link rel="stylesheet" href="/shared/tailwind.min.css">
+  <link rel="stylesheet" href="/shared/app.css">
 
-    <script>
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-      function toggleTheme() {
-        if (document.documentElement.classList.contains('dark')) {
-          document.documentElement.classList.remove('dark');
-          localStorage.theme = 'light';
-        } else {
-          document.documentElement.classList.add('dark');
-          localStorage.theme = 'dark';
-        }
-      }
-    </script>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (e) {}
+    }
+  </script>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <div style="display: flex; justify-content: flex-end; margin-bottom: 0.5rem;">
-                <button onclick="toggleTheme()" aria-label="Toggle Night Mode" style="background: none; border: none; cursor: pointer; font-size: 1.25rem; color: var(--text-muted); transition: color 0.2s; padding: 0;" onmouseover="this.style.color='var(--text-main)'" onmouseout="this.style.color='var(--text-muted)'" title="Toggle Night Mode"><i class="fa-solid fa-circle-half-stroke"></i></button>
-            </div>
-            <h1 style="font-size: clamp(1.8rem, 8vw, 2.75rem); word-break: break-word;"><span style="color:#AF1E2D;">Hockey</span>Blackouts.ca</h1>
-            <p class="subtitle">Select your team below to instantly calculate which NHL games are blacked out in your region, and view the complete TV schedule for exactly where and how to watch the games tonight.</p>
-        </header>
-        
-        <main>
-        <div class="grid">
-            <a href="/montreal/" class="card mtl">Montreal Canadiens</a>
-            <a href="/ottawa/" class="card ott">Ottawa Senators</a>
-            <a href="/toronto/" class="card tor">Toronto Maple Leafs</a>
-            <a href="/winnipeg/" class="card wpg">Winnipeg Jets</a>
-            <a href="/edmonton/" class="card edm">Edmonton Oilers</a>
-            <a href="/calgary/" class="card cgy">Calgary Flames</a>
-            <a href="/vancouver/" class="card van">Vancouver Canucks</a>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
+
+  <!-- Global Network Bar -->
+  <nav class="bg-slate-900 text-slate-400 text-xs border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between overflow-x-auto whitespace-nowrap hide-scrollbar">
+      <div class="flex items-center space-x-1 py-2 font-semibold">
+        <span class="px-2.5 py-1 rounded-md text-white font-bold bg-white/15 border border-white/10">🇨🇦 Canada View</span>
+<span class="text-slate-600 px-1">|</span>
+        <a href="https://hockeyblackouts.com/" class="px-2.5 py-1 rounded-md text-slate-300 hover:text-white hover:bg-white/10 transition border border-transparent">🇺🇸 Switch to US</a>
+        <div class="w-px h-4 bg-slate-700 mx-2"></div>
+        <a href="/" class="px-3 py-1 rounded-md text-white font-bold bg-white/10 transition border border-white/10 mr-1">
+          <i class="fa-solid fa-house mr-1 opacity-70"></i> <span class="text-rose-400">Hockey</span>Blackouts.ca
+        </a>
+        <div class="w-px h-4 bg-slate-700 mx-2"></div>
+        <a href="/montreal/" class="px-2.5 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">MTL</a>
+        <a href="/ottawa/" class="px-2.5 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">OTT</a>
+        <a href="/toronto/" class="px-2.5 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">TOR</a>
+        <a href="/winnipeg/" class="px-2.5 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">WPG</a>
+        <a href="/edmonton/" class="px-2.5 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">EDM</a>
+        <a href="/calgary/" class="px-2.5 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">CGY</a>
+        <a href="/vancouver/" class="px-2.5 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">VAN</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Banner -->
+  <header class="bg-gradient-to-r from-teamSecondary via-teamDark to-teamPrimary text-white shadow-lg border-b-4 border-white/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-4 text-center md:text-left">
+        <div class="w-14 h-14 rounded-2xl bg-white flex items-center justify-center shadow-md p-1 border-2 border-teamSecondary flex-shrink-0">
+          <span class="font-teko text-3xl font-bold text-teamSecondary tracking-tighter">CAN</span>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 flex-wrap justify-center md:justify-start">
+            <h1 class="text-2xl sm:text-3xl font-black tracking-tight font-teko uppercase text-white"><span class="text-rose-400">Hockey</span>Blackouts.ca</h1>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-white/15 text-slate-200 border border-white/20">Unofficial Fan Resource</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-200 font-medium max-w-3xl">Select your team below to instantly calculate which NHL games are blacked out in your region, and view the complete TV schedule for exactly where and how to watch the games tonight.</p>
+        </div>
+      </div>
+      <div class="flex items-center space-x-3 flex-wrap justify-center">
+<a href="https://hockeyblackouts.com/" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="Switch to US Edition">
+          <span>🇨🇦 Canada View | 🇺🇸 Switch to US</span>
+        </a>
+        <a href="#faq" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs border border-white/20 shadow-sm flex items-center gap-1.5 transition" title="Blackout FAQ">
+          <i class="fa-solid fa-circle-question text-sky-300"></i>
+          <span class="hidden sm:inline">FAQ</span>
+        </a>
+        <button onclick="toggleTheme()" class="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/20 shadow-sm flex items-center justify-center transition" title="Toggle Night Mode" id="themeToggleBtn" aria-label="Toggle Night Mode">
+          <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-8 flex-1 w-full">
+
+      <!-- Hero Canadian Region Blackout Lookup Card -->
+      <section id="ca-region-lookup" data-component="ca-region-blackout-lookup" class="bg-white dark:bg-slate-900 p-5 sm:p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+        <div class="border-b border-slate-100 dark:border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div class="flex items-center space-x-2">
+            <span class="w-2.5 h-6 bg-teamPrimary rounded-full inline-block"></span>
+            <h2 class="text-base sm:text-lg font-bold">Canadian Broadcast Region Blackout Lookup</h2>
+          </div>
+          <span class="text-xs text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-full font-medium self-start sm:self-auto">Sportsnet, TSN, RDS &amp; Prime Territory Checker</span>
         </div>
 
-        <!-- Upcoming Canadian Matchups Spotlight Section -->
-        <section class="upcoming-section" data-section="upcoming-matchups">
-            <div class="section-header">
-                <h2>
-                    <i class="fa-solid fa-calendar-day" style="color: #AF1E2D;"></i>
-                    Tonight &amp; Upcoming Canadian Matchups
-                </h2>
-                <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Full 7-Team Coverage</span>
+        <div>
+          <label for="regionSelect" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 dark:text-slate-300 mb-2">
+            Where do you live in Canada?
+          </label>
+          <form id="caRegionLookupForm" class="flex flex-col sm:flex-row gap-3" onsubmit="event.preventDefault();">
+            <select
+              id="regionSelect"
+              aria-label="Where do you live in Canada?"
+              class="w-full bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-200 px-4 py-3 rounded-xl shadow-sm text-sm font-medium focus:outline-none focus:ring-2 focus:ring-teamSecondary"
+            >
+              <option value="">Select your Canadian province or broadcast region...</option>
+              <option value="on_east_qc_atl">Quebec, Eastern Ontario (Ottawa), Atlantic Canada</option>
+              <option value="on_overlap">Ontario Overlap (Belleville, Kingston, Pembroke)</option>
+              <option value="on_west">Ontario West (Toronto, London, Niagara)</option>
+              <option value="nw_on">Northwestern Ontario (Thunder Bay)</option>
+              <option value="mb">Manitoba</option>
+              <option value="sk">Saskatchewan, NWT &amp; Nunavut</option>
+              <option value="ab">Alberta</option>
+              <option value="bc">British Columbia &amp; Yukon</option>
+              <option value="us_intl">USA &amp; International</option>
+            </select>
+            <button
+              type="submit"
+              id="regionLookupBtn"
+              class="px-5 py-3 rounded-xl bg-teamSecondary hover:bg-teamDark text-white font-bold text-sm border border-white/20 shadow-sm flex items-center justify-center gap-2 transition whitespace-nowrap"
+            >
+              <i class="fa-solid fa-location-crosshairs"></i>
+              <span>Check Regional Blackouts</span>
+            </button>
+          </form>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
+            Select your broadcast region to see which Canadian NHL teams are in-market on standard regional TV (TSN / RDS / Sportsnet) and which teams require <strong>Sportsnet+ Premium</strong> or <strong>NHL Centre Ice</strong>.
+          </p>
+          <div id="regionLookupStatus" class="hidden mt-4 p-4 rounded-xl border text-xs sm:text-sm space-y-2"></div>
+        </div>
+      </section>
+
+      <!-- 7 Canadian NHL Teams Grid -->
+      <section class="space-y-4">
+        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+          <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-slate-900 dark:text-white">Select Your Canadian NHL Team (7 Teams)</h2>
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Sportsnet • TSN • RDS • TVA Sports • Prime</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <a href="/montreal/" style="border-left: 6px solid #AF1E2D;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Montreal Canadiens</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">TSN2 &amp; RDS • Sportsnet, TVA Sports &amp; Prime</span>
             </div>
-            <div class="matchup-grid">
-                
-  <div class="matchup-card" data-timestamp="1794355200000">
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/ottawa/" style="border-left: 6px solid #C52032;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Ottawa Senators</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">TSN5 &amp; RDS • Sportsnet, TVA Sports &amp; Prime</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/toronto/" style="border-left: 6px solid #00205B;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Toronto Maple Leafs</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">TSN4 &amp; SN Ontario • Sportsnet &amp; Prime</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/winnipeg/" style="border-left: 6px solid #041E42;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Winnipeg Jets</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">TSN3 • Sportsnet &amp; Prime Video</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/edmonton/" style="border-left: 6px solid #FF4C00;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Edmonton Oilers</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet West • Sportsnet &amp; Prime Video</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/calgary/" style="border-left: 6px solid #C8102E;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Calgary Flames</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet West • Sportsnet &amp; Prime Video</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/vancouver/" style="border-left: 6px solid #00205B;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Vancouver Canucks</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet Pacific • Sportsnet &amp; Prime Video</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 25 US NHL Teams in Canada Grid -->
+      <section class="space-y-4">
+        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+          <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-slate-900 dark:text-white">US NHL Teams — Canadian Broadcast &amp; Streaming Guides (25 Teams)</h2>
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Sportsnet • Prime Video • SN+ Premium • Centre Ice</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="/anaheim-ducks/" style="border-left: 6px solid #CF4520;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Anaheim Ducks</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/boston-bruins/" style="border-left: 6px solid #FFB81C;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Boston Bruins</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/buffalo-sabres/" style="border-left: 6px solid #003087;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Buffalo Sabres</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/carolina-hurricanes/" style="border-left: 6px solid #CE1126;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Carolina Hurricanes</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/chicago-blackhawks/" style="border-left: 6px solid #CF0A2C;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Chicago Blackhawks</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/colorado-avalanche/" style="border-left: 6px solid #6F263D;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Colorado Avalanche</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/columbus-blue-jackets/" style="border-left: 6px solid #CE1126;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Columbus Blue Jackets</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/dallas-stars/" style="border-left: 6px solid #006847;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Dallas Stars</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/detroit-red-wings/" style="border-left: 6px solid #CE1126;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Detroit Red Wings</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/florida-panthers/" style="border-left: 6px solid #C8102E;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Florida Panthers</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/los-angeles-kings/" style="border-left: 6px solid #111111;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Los Angeles Kings</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/minnesota-wild/" style="border-left: 6px solid #A6192E;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Minnesota Wild</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/nashville-predators/" style="border-left: 6px solid #FFB81C;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Nashville Predators</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/new-jersey-devils/" style="border-left: 6px solid #CE1126;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">New Jersey Devils</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/new-york-islanders/" style="border-left: 6px solid #F47D30;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">New York Islanders</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/new-york-rangers/" style="border-left: 6px solid #CE1126;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">New York Rangers</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/philadelphia-flyers/" style="border-left: 6px solid #F74902;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Philadelphia Flyers</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/pittsburgh-penguins/" style="border-left: 6px solid #FCB514;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Pittsburgh Penguins</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/san-jose-sharks/" style="border-left: 6px solid #006D75;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">San Jose Sharks</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/seattle-kraken/" style="border-left: 6px solid #68A2B9;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Seattle Kraken</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/st-louis-blues/" style="border-left: 6px solid #FCB514;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">St. Louis Blues</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/tampa-bay-lightning/" style="border-left: 6px solid #002868;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Tampa Bay Lightning</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/utah-mammoth/" style="border-left: 6px solid #69B3E7;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Utah Mammoth</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/vegas-golden-knights/" style="border-left: 6px solid #B4975A;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Vegas Golden Knights</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+          <a href="/washington-capitals/" style="border-left: 6px solid #C8102E;" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
+            <div>
+              <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">Washington Capitals</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sportsnet • Prime Video • SN+ Premium</span>
+            </div>
+            <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Upcoming Canadian Matchups Spotlight Section -->
+      <section class="space-y-4" data-section="upcoming-matchups">
+        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+          <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-slate-900 dark:text-white flex items-center gap-2">
+            <i class="fa-solid fa-calendar-day text-teamPrimary text-base"></i>
+            <span>Tonight &amp; Upcoming Canadian Matchups</span>
+          </h2>
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Full 7-Team Coverage</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          
+  <div class="matchup-card bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-3" data-timestamp="1794443400000">
     <div>
-      <div class="matchup-card-header">
-        <span>Tue, Nov 10, 2026 • 8:00 PM</span>
-        <span class="matchup-badge">TSN2</span>
-      </div>
-      <h3 class="matchup-card-title">Minnesota Wild @ Montreal Canadiens</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Centre Bell</div>
-    </div>
-    <div class="matchup-card-footer">
-      <a href="/montreal/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Montreal Canadiens
-      </a>
-      <a href="/game/2026-11-10/montreal-vs-minnesota/" class="matchup-link">
-        <span>Can I Watch? &rarr;</span>
-      </a>
-    </div>
-  </div>
-
-
-  <div class="matchup-card" data-timestamp="1794355200000">
-    <div>
-      <div class="matchup-card-header">
-        <span>Tue, Nov 10, 2026 • 8:00 PM</span>
-        <span class="matchup-badge">TSN4</span>
-      </div>
-      <h3 class="matchup-card-title">Colorado Avalanche @ Toronto Maple Leafs</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Scotiabank Arena</div>
-    </div>
-    <div class="matchup-card-footer">
-      <a href="/toronto/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Toronto Maple Leafs
-      </a>
-      <a href="/game/2026-11-10/toronto-vs-colorado/" class="matchup-link">
-        <span>Can I Watch? &rarr;</span>
-      </a>
-    </div>
-  </div>
-
-
-  <div class="matchup-card" data-timestamp="1794355200000">
-    <div>
-      <div class="matchup-card-header">
-        <span>Tue Nov 10 2026 • 7:00 PM</span>
-        <span class="matchup-badge">TSN5</span>
-      </div>
-      <h3 class="matchup-card-title">Washington Capitals @ Ottawa Senators</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Canadian Tire Centre</div>
-    </div>
-    <div class="matchup-card-footer">
-      <a href="/ottawa/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Ottawa Senators
-      </a>
-      <a href="/game/2026-11-11/ottawa-vs-washington/" class="matchup-link">
-        <span>Can I Watch? &rarr;</span>
-      </a>
-    </div>
-  </div>
-
-
-  <div class="matchup-card" data-timestamp="1794355200000">
-    <div>
-      <div class="matchup-card-header">
-        <span>Tue Nov 10 2026 • 7:00 PM</span>
-        <span class="matchup-badge">TSN3</span>
-      </div>
-      <h3 class="matchup-card-title">New Jersey Devils @ Winnipeg Jets</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Canada Life Centre</div>
-    </div>
-    <div class="matchup-card-footer">
-      <a href="/winnipeg/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Winnipeg Jets
-      </a>
-      <a href="/game/2026-11-11/winnipeg-vs-new-jersey/" class="matchup-link">
-        <span>Can I Watch? &rarr;</span>
-      </a>
-    </div>
-  </div>
-
-
-  <div class="matchup-card" data-timestamp="1794443400000">
-    <div>
-      <div class="matchup-card-header">
+      <div class="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
         <span>Wed Nov 11 2026 • 7:30 PM</span>
-        <span class="matchup-badge">Prime Video</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-rose-50 dark:bg-rose-950/50 text-teamPrimary dark:text-rose-300 border border-rose-200/60 dark:border-rose-800/50">Prime Video</span>
       </div>
-      <h3 class="matchup-card-title">New York Rangers @ Calgary Flames</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Scotiabank Saddledome</div>
+      <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white leading-snug">New York Rangers @ Calgary Flames</h3>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-[11px] mr-1"></i>Scotiabank Saddledome</div>
     </div>
-    <div class="matchup-card-footer">
-      <a href="/calgary/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Calgary Flames
+    <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800 text-xs">
+      <a href="/calgary/" class="font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+        <i class="fa-solid fa-shield-halved text-[11px]"></i> Calgary Flames
       </a>
-      <a href="/game/2026-11-12/calgary-vs-new-york/" class="matchup-link">
+      <a href="/game/2026-11-12/calgary-vs-new-york/" class="font-bold text-teamPrimary dark:text-rose-400 hover:underline flex items-center gap-1">
         <span>Can I Watch? &rarr;</span>
       </a>
     </div>
   </div>
 
 
-  <div class="matchup-card" data-timestamp="1794448800000">
+  <div class="matchup-card bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-3" data-timestamp="1794448800000">
     <div>
-      <div class="matchup-card-header">
+      <div class="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
         <span>Wed Nov 11 2026 • 9:00 PM</span>
-        <span class="matchup-badge">Sportsnet West</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-rose-50 dark:bg-rose-950/50 text-teamPrimary dark:text-rose-300 border border-rose-200/60 dark:border-rose-800/50">Sportsnet West</span>
       </div>
-      <h3 class="matchup-card-title">Philadelphia Flyers @ Edmonton Oilers</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Rogers Place</div>
+      <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white leading-snug">Philadelphia Flyers @ Edmonton Oilers</h3>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-[11px] mr-1"></i>Rogers Place</div>
     </div>
-    <div class="matchup-card-footer">
-      <a href="/edmonton/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Edmonton Oilers
+    <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800 text-xs">
+      <a href="/edmonton/" class="font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+        <i class="fa-solid fa-shield-halved text-[11px]"></i> Edmonton Oilers
       </a>
-      <a href="/game/2026-11-12/edmonton-vs-philadelphia/" class="matchup-link">
+      <a href="/game/2026-11-12/edmonton-vs-philadelphia/" class="font-bold text-teamPrimary dark:text-rose-400 hover:underline flex items-center gap-1">
         <span>Can I Watch? &rarr;</span>
       </a>
     </div>
   </div>
 
 
-  <div class="matchup-card" data-timestamp="1794528000000">
+  <div class="matchup-card bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-3" data-timestamp="1794528000000">
     <div>
-      <div class="matchup-card-header">
+      <div class="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
         <span>Thu, Nov 12, 2026 • 8:00 PM</span>
-        <span class="matchup-badge">TSN2</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-rose-50 dark:bg-rose-950/50 text-teamPrimary dark:text-rose-300 border border-rose-200/60 dark:border-rose-800/50">TSN2</span>
       </div>
-      <h3 class="matchup-card-title">Montreal Canadiens @ Boston Bruins</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>TD Garden</div>
+      <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white leading-snug">Montreal Canadiens @ Boston Bruins</h3>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-[11px] mr-1"></i>TD Garden</div>
     </div>
-    <div class="matchup-card-footer">
-      <a href="/montreal/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Montreal Canadiens
+    <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800 text-xs">
+      <a href="/montreal/" class="font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+        <i class="fa-solid fa-shield-halved text-[11px]"></i> Montreal Canadiens
       </a>
-      <a href="/game/2026-11-12/boston-vs-montreal/" class="matchup-link">
+      <a href="/game/2026-11-12/boston-vs-montreal/" class="font-bold text-teamPrimary dark:text-rose-400 hover:underline flex items-center gap-1">
         <span>Can I Watch? &rarr;</span>
       </a>
     </div>
   </div>
 
 
-  <div class="matchup-card" data-timestamp="1794528000000">
+  <div class="matchup-card bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-3" data-timestamp="1794528000000">
     <div>
-      <div class="matchup-card-header">
+      <div class="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
         <span>Thu, Nov 12, 2026 • 8:00 PM</span>
-        <span class="matchup-badge">Sportsnet</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-rose-50 dark:bg-rose-950/50 text-teamPrimary dark:text-rose-300 border border-rose-200/60 dark:border-rose-800/50">Sportsnet</span>
       </div>
-      <h3 class="matchup-card-title">Minnesota Wild @ Toronto Maple Leafs</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Scotiabank Arena</div>
+      <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white leading-snug">Minnesota Wild @ Toronto Maple Leafs</h3>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-[11px] mr-1"></i>Scotiabank Arena</div>
     </div>
-    <div class="matchup-card-footer">
-      <a href="/toronto/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Toronto Maple Leafs
+    <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800 text-xs">
+      <a href="/toronto/" class="font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+        <i class="fa-solid fa-shield-halved text-[11px]"></i> Toronto Maple Leafs
       </a>
-      <a href="/game/2026-11-12/toronto-vs-minnesota/" class="matchup-link">
+      <a href="/game/2026-11-12/toronto-vs-minnesota/" class="font-bold text-teamPrimary dark:text-rose-400 hover:underline flex items-center gap-1">
         <span>Can I Watch? &rarr;</span>
       </a>
     </div>
   </div>
 
 
-  <div class="matchup-card" data-timestamp="1794528000000">
+  <div class="matchup-card bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-3" data-timestamp="1794528000000">
     <div>
-      <div class="matchup-card-header">
+      <div class="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
         <span>Thu Nov 12 2026 • 7:00 PM</span>
-        <span class="matchup-badge">TSN5</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-rose-50 dark:bg-rose-950/50 text-teamPrimary dark:text-rose-300 border border-rose-200/60 dark:border-rose-800/50">TSN5</span>
       </div>
-      <h3 class="matchup-card-title">Colorado Avalanche @ Ottawa Senators</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>Canadian Tire Centre</div>
+      <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white leading-snug">Colorado Avalanche @ Ottawa Senators</h3>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-[11px] mr-1"></i>Canadian Tire Centre</div>
     </div>
-    <div class="matchup-card-footer">
-      <a href="/ottawa/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Ottawa Senators
+    <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800 text-xs">
+      <a href="/ottawa/" class="font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+        <i class="fa-solid fa-shield-halved text-[11px]"></i> Ottawa Senators
       </a>
-      <a href="/game/2026-11-13/ottawa-vs-colorado/" class="matchup-link">
+      <a href="/game/2026-11-13/ottawa-vs-colorado/" class="font-bold text-teamPrimary dark:text-rose-400 hover:underline flex items-center gap-1">
         <span>Can I Watch? &rarr;</span>
       </a>
     </div>
   </div>
 
 
-  <div class="matchup-card" data-timestamp="1794531600000">
+  <div class="matchup-card bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-3" data-timestamp="1794531600000">
     <div>
-      <div class="matchup-card-header">
+      <div class="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
         <span>Thu Nov 12 2026 • 8:00 PM</span>
-        <span class="matchup-badge">TSN3</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-rose-50 dark:bg-rose-950/50 text-teamPrimary dark:text-rose-300 border border-rose-200/60 dark:border-rose-800/50">TSN3</span>
       </div>
-      <h3 class="matchup-card-title">Winnipeg Jets @ Dallas Stars</h3>
-      <div class="matchup-card-venue"><i class="fa-solid fa-location-dot" style="font-size: 0.7rem; margin-right: 4px;"></i>American Airlines Center</div>
+      <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white leading-snug">Winnipeg Jets @ Dallas Stars</h3>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-[11px] mr-1"></i>American Airlines Center</div>
     </div>
-    <div class="matchup-card-footer">
-      <a href="/winnipeg/" class="matchup-link" style="color: var(--text-muted); font-size: 0.75rem;">
-        <i class="fa-solid fa-shield-halved" style="font-size: 0.7rem;"></i> Winnipeg Jets
+    <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800 text-xs">
+      <a href="/winnipeg/" class="font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+        <i class="fa-solid fa-shield-halved text-[11px]"></i> Winnipeg Jets
       </a>
-      <a href="/game/2026-11-13/dallas-vs-winnipeg/" class="matchup-link">
+      <a href="/game/2026-11-13/dallas-vs-winnipeg/" class="font-bold text-teamPrimary dark:text-rose-400 hover:underline flex items-center gap-1">
         <span>Can I Watch? &rarr;</span>
       </a>
     </div>
   </div>
 
-            </div>
-            <script>
-                (function() {
-                    var now = Date.now();
-                    var expiry = 3.5 * 60 * 60 * 1000;
-                    var cards = document.querySelectorAll('.matchup-card[data-timestamp]');
-                    var visibleCount = 0;
-                    cards.forEach(function(card) {
-                        var ts = parseInt(card.getAttribute('data-timestamp'), 10);
-                        if (ts && (now - ts) > expiry) {
-                            card.remove();
-                        } else if (visibleCount >= 6) {
-                            card.remove();
-                        } else {
-                            visibleCount++;
-                        }
-                    });
-                })();
-            </script>
-        </section>
 
-        <div class="content-section">
-            <h2>Why are NHL games blacked out in Canada?</h2>
-            <p>If you've ever tuned in to watch your team tonight only to be met with a blank screen and a Sportsnet blackout or NHL regional blackout message, you aren't alone. The NHL's broadcasting rights in Canada are governed by a complex set of regional television boundaries.</p>
-            <p>The 84-game schedule is split into two categories: <strong>National Games</strong> and <strong>Regional Games</strong>.</p>
-            <p>National games (like Hockey Night in Canada, or the new Amazon Prime broadcasts) are available to everyone coast-to-coast without restriction. However, Regional games are strictly geofenced. For example, if a network like TSN5 owns the regional rights to the Ottawa Senators, only people physically located within the Senators' designated territory (Eastern Ontario, Quebec, Maritimes) are allowed to watch that channel.</p>
-        </div>
-
-        <div class="content-section">
-            <h2>How this calculator works</h2>
-            <p>Figuring out exactly which channel carries the game tonight—and whether your specific TV package or streaming service (like Sportsnet+ Premium) will actually let you watch it—requires cross-referencing your physical location with the NHL's territory map.</p>
-            <p>That is exactly what these calculators do. Simply select your team above, input your province and your current subscriptions, and the algorithm will parse the entire 2026-2027 NHL broadcast schedule to mathematically calculate exactly which games you can watch, and which ones will be blacked out.</p>
-        </div>
-
-        <div class="content-section">
-            <h2>Canadian Broadcast &amp; Blackout Deep Dives</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin-top: 1rem;">
-                <a href="/sportsnet-plus-blackout-rules/" class="matchup-card" style="text-decoration: none;">
-                    <div class="matchup-card-title" style="margin: 0 0 0.25rem 0;">Sportsnet+ Blackout Rules &rarr;</div>
-                    <div class="matchup-card-venue">Standard vs. Premium &amp; regional territory walls explained.</div>
-                </a>
-                <a href="/tsn-hockey-blackout-rules/" class="matchup-card" style="text-decoration: none;">
-                    <div class="matchup-card-title" style="margin: 0 0 0.25rem 0;">TSN Blackout Rules &rarr;</div>
-                    <div class="matchup-card-venue">Channels (TSN1–5), regional boundaries &amp; the TSN+ trap.</div>
-                </a>
-                <a href="/prime-hockey-schedule-canada/" class="matchup-card" style="text-decoration: none;">
-                    <div class="matchup-card-title" style="margin: 0 0 0.25rem 0;">Prime Video Hockey Schedule &rarr;</div>
-                    <div class="matchup-card-venue">Every Canadian game streaming coast-to-coast on Prime.</div>
-                </a>
-                <a href="/rds-vs-tva-sports-blackouts/" class="matchup-card" style="text-decoration: none;">
-                    <div class="matchup-card-title" style="margin: 0 0 0.25rem 0;">RDS vs. TVA Sports &rarr;</div>
-                    <div class="matchup-card-venue">French regional vs. national rights across Canada.</div>
-                </a>
-                <a href="/how-blackouts-work/" class="matchup-card" style="text-decoration: none;">
-                    <div class="matchup-card-title" style="margin: 0 0 0.25rem 0;">Territory Map &amp; Methodology &rarr;</div>
-                    <div class="matchup-card-venue">Official broadcast boundaries, overlap zones &amp; data sources.</div>
-                </a>
-            </div>
-        </div>
-        </main>
-
-        <footer>
-            <p>&copy; 2026 HockeyBlackouts.ca. All Rights Reserved. Not affiliated with the NHL, Rogers Media, Bell Media, or Amazon.</p>
-        </footer>
+  <div class="matchup-card bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-3" data-timestamp="1794621600000">
+    <div>
+      <div class="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+        <span>Fri Nov 13 2026 • 9:00 PM</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-rose-50 dark:bg-rose-950/50 text-teamPrimary dark:text-rose-300 border border-rose-200/60 dark:border-rose-800/50">Sportsnet</span>
+      </div>
+      <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white leading-snug">New York Rangers @ Vancouver Canucks</h3>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-[11px] mr-1"></i>Rogers Arena</div>
     </div>
+    <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800 text-xs">
+      <a href="/vancouver/" class="font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+        <i class="fa-solid fa-shield-halved text-[11px]"></i> Vancouver Canucks
+      </a>
+      <a href="/game/2026-11-14/vancouver-vs-new-york/" class="font-bold text-teamPrimary dark:text-rose-400 hover:underline flex items-center gap-1">
+        <span>Can I Watch? &rarr;</span>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="matchup-card bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-3" data-timestamp="1794688200000">
+    <div>
+      <div class="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+        <span>Sat Nov 14 2026 • 3:30 PM</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-rose-50 dark:bg-rose-950/50 text-teamPrimary dark:text-rose-300 border border-rose-200/60 dark:border-rose-800/50">Sportsnet</span>
+      </div>
+      <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white leading-snug">Winnipeg Jets @ Chicago Blackhawks</h3>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-[11px] mr-1"></i>United Center</div>
+    </div>
+    <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800 text-xs">
+      <a href="/winnipeg/" class="font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+        <i class="fa-solid fa-shield-halved text-[11px]"></i> Winnipeg Jets
+      </a>
+      <a href="/game/2026-11-14/chicago-vs-winnipeg/" class="font-bold text-teamPrimary dark:text-rose-400 hover:underline flex items-center gap-1">
+        <span>Can I Watch? &rarr;</span>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="matchup-card bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-3" data-timestamp="1794700800000">
+    <div>
+      <div class="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+        <span>Sat, Nov 14, 2026 • 8:00 PM</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-rose-50 dark:bg-rose-950/50 text-teamPrimary dark:text-rose-300 border border-rose-200/60 dark:border-rose-800/50">Sportsnet East</span>
+      </div>
+      <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white leading-snug">Colorado Avalanche @ Montreal Canadiens</h3>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-[11px] mr-1"></i>Centre Bell</div>
+    </div>
+    <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800 text-xs">
+      <a href="/montreal/" class="font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+        <i class="fa-solid fa-shield-halved text-[11px]"></i> Montreal Canadiens
+      </a>
+      <a href="/game/2026-11-14/montreal-vs-colorado/" class="font-bold text-teamPrimary dark:text-rose-400 hover:underline flex items-center gap-1">
+        <span>Can I Watch? &rarr;</span>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="matchup-card bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-3" data-timestamp="1794700800000">
+    <div>
+      <div class="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
+        <span>Sat, Nov 14, 2026 • 8:00 PM</span>
+        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-rose-50 dark:bg-rose-950/50 text-teamPrimary dark:text-rose-300 border border-rose-200/60 dark:border-rose-800/50">Sportsnet</span>
+      </div>
+      <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white leading-snug">Edmonton Oilers @ Toronto Maple Leafs</h3>
+      <div class="text-xs text-slate-500 dark:text-slate-400 mt-1"><i class="fa-solid fa-location-dot text-[11px] mr-1"></i>Scotiabank Arena</div>
+    </div>
+    <div class="flex items-center justify-between pt-3 border-t border-slate-100 dark:border-slate-800 text-xs">
+      <a href="/toronto/" class="font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition flex items-center gap-1">
+        <i class="fa-solid fa-shield-halved text-[11px]"></i> Toronto Maple Leafs
+      </a>
+      <a href="/game/2026-11-14/toronto-vs-edmonton/" class="font-bold text-teamPrimary dark:text-rose-400 hover:underline flex items-center gap-1">
+        <span>Can I Watch? &rarr;</span>
+      </a>
+    </div>
+  </div>
+
+        </div>
+        <script>
+          (function() {
+            var now = Date.now();
+            var expiry = 3.5 * 60 * 60 * 1000;
+            var cards = document.querySelectorAll('.matchup-card[data-timestamp]');
+            var visibleCount = 0;
+            cards.forEach(function(card) {
+              var ts = parseInt(card.getAttribute('data-timestamp'), 10);
+              if (ts && (now - ts) > expiry) {
+                card.remove();
+              } else if (visibleCount >= 6) {
+                card.remove();
+              } else {
+                visibleCount++;
+              }
+            });
+          })();
+        </script>
+      </section>
+
+      <!-- Canadian Broadcast & Blackout Deep Dives -->
+      <section class="space-y-4">
+        <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+          <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-slate-900 dark:text-white">Canadian Broadcast &amp; Blackout Deep Dives</h2>
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">Rules &amp; Territory Maps</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <a href="/sportsnet-plus-blackout-rules/" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-2 group">
+            <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-teamPrimary transition">Sportsnet+ Blackout Rules &rarr;</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Standard vs. Premium &amp; regional territory walls explained.</div>
+          </a>
+          <a href="/tsn-hockey-blackout-rules/" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-2 group">
+            <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-teamPrimary transition">TSN Blackout Rules &rarr;</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Channels (TSN1–5), regional boundaries &amp; the TSN+ trap.</div>
+          </a>
+          <a href="/prime-hockey-schedule-canada/" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-2 group">
+            <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-teamPrimary transition">Prime Video Hockey Schedule &rarr;</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Every Canadian game streaming coast-to-coast on Prime.</div>
+          </a>
+          <a href="/rds-vs-tva-sports-blackouts/" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-2 group">
+            <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-teamPrimary transition">RDS vs. TVA Sports &rarr;</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">French regional vs. national rights across Canada.</div>
+          </a>
+          <a href="/how-blackouts-work/" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-2 group">
+            <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-teamPrimary transition">Territory Map &amp; IP Inspector &rarr;</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Official broadcast boundaries, overlap zones &amp; live IP geolocation check.</div>
+          </a>
+          <a href="https://hockeyblackouts.com/" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-2 group">
+            <div class="font-bold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-teamPrimary transition">🇺🇸 US NHL Blackout &amp; RSN Guide &rarr;</div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">Check US ZIP code blackouts on ESPN+, MSG, NESN, FanDuel SN &amp; TNT.</div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Explainer & FAQ Section -->
+      <section id="faq" class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+        <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-teamPrimary border-b border-slate-100 dark:border-slate-800 pb-3">Why are NHL games blacked out in Canada?</h2>
+        <p>
+          If you've ever tuned in to watch your team tonight only to be met with a blank screen and a Sportsnet blackout or NHL regional blackout message, you aren't alone. The NHL's broadcasting rights in Canada are governed by a complex set of regional television boundaries.
+        </p>
+        <p>
+          The 84-game schedule is split into two categories: <strong>National Games</strong> and <strong>Regional Games</strong>.
+        </p>
+        <p>
+          National games (like Hockey Night in Canada, or the new Amazon Prime broadcasts) are available to everyone coast-to-coast without restriction. However, Regional games are strictly geofenced. For example, if a network like TSN5 owns the regional rights to the Ottawa Senators, only people physically located within the Senators' designated territory (Eastern Ontario, Quebec, Maritimes) are allowed to watch that channel.
+        </p>
+        <div class="pt-2 border-t border-slate-100 dark:border-slate-800 space-y-3">
+          <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-teamPrimary">How this calculator works</h2>
+          <p>
+            Figuring out exactly which channel carries the game tonight—and whether your specific TV package or streaming service (like Sportsnet+ Premium) will actually let you watch it—requires cross-referencing your physical location with the NHL's territory map.
+          </p>
+          <p>
+            That is exactly what these calculators do. Simply select your team above, input your province and your current subscriptions, and the algorithm will parse the entire 2026-2027 NHL broadcast schedule to mathematically calculate exactly which games you can watch, and which ones will be blacked out.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+
+      <!-- Community Support Link -->
+      <div class="inline-flex items-center gap-2 p-2 px-4 rounded-2xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+        <i class="fa-solid fa-mug-hot text-amber-500"></i>
+        <span>Found this Canadian NHL blackout guide helpful?</span>
+        <a href="https://ko-fi.com/maltosmk" id="kofiFooterBtn" data-umami-event="kofi-click" data-umami-event-variant="control" target="_blank" rel="noopener" class="font-bold text-blue-600 dark:text-blue-400 hover:underline ml-1">
+          Support HockeyBlackouts.ca on Ko-fi &rarr;
+        </a>
+      </div>
+
+      <div class="py-2 flex flex-wrap items-center justify-center gap-2 text-xs">
+        <span class="font-semibold text-slate-600 dark:text-slate-300"><i class="fa-solid fa-map-location-dot mr-1"></i> Canadian Team Guides:</span>
+        <a href="/montreal/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold">Montreal Canadiens</a>
+        <a href="/ottawa/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold">Ottawa Senators</a>
+        <a href="/toronto/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold">Toronto Maple Leafs</a>
+        <a href="/winnipeg/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold">Winnipeg Jets</a>
+        <a href="/edmonton/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold">Edmonton Oilers</a>
+        <a href="/calgary/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold">Calgary Flames</a>
+        <a href="/vancouver/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold">Vancouver Canucks</a>
+      </div>
+
+      <div class="py-1 flex flex-wrap items-center justify-center gap-2 text-xs">
+        <span class="font-semibold text-slate-600 dark:text-slate-400">Broadcast Deep Dives:</span>
+        <a href="/sportsnet-plus-blackout-rules/" class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-medium">Sportsnet+ Blackout Rules</a>
+        <a href="/tsn-hockey-blackout-rules/" class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-medium">TSN Blackout Rules</a>
+        <a href="/prime-hockey-schedule-canada/" class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-medium">Prime Video Hockey Schedule</a>
+        <a href="/rds-vs-tva-sports-blackouts/" class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-medium">RDS vs. TVA Sports</a>
+        <a href="/how-blackouts-work/" class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-medium">How Blackouts Work &amp; Methodology</a>
+        <a href="https://hockeyblackouts.com/" class="px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-medium">🇺🇸 US NHL Blackout Guide</a>
+      </div>
+
+      <!-- About the Data -->
+      <div class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-300 max-w-2xl mx-auto text-left bg-slate-50 dark:bg-slate-800 p-4 rounded-xl border border-slate-200 dark:border-slate-700 mb-6">
+        <strong class="text-slate-700 dark:text-slate-300">About the Data Source:</strong> This independent blackout guide calculates watchability in real-time by cross-referencing your selected Canadian broadcast region and TV subscriptions against the official NHL API schedule. By analyzing regional broadcast boundaries (Sportsnet, TSN, RDS) alongside national coast-to-coast broadcasts (Hockey Night in Canada, TVA Sports, Amazon Prime Video), this tool determines which games are watchable locally vs. subject to regional blackouts.
+      </div>
+
+      <p class="font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider text-[11px] pt-2">
+        Non-Affiliation &amp; Nominative Fair Use Disclaimer
+      </p>
+      <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-300">
+        This website is an independent fan resource created exclusively for public informational purposes. This service is <strong>not affiliated with, maintained by, endorsed by, or in any way associated with</strong> the National Hockey League (NHL), Rogers Media, Bell Media, Amazon, or any NHL member clubs.
+      </p>
+      <p class="text-xs text-slate-600 dark:text-slate-300 pt-2">
+        <i class="fa-regular fa-envelope mr-1"></i> Contact Us: <a href="mailto:info@hockeyblackouts.ca" class="font-bold text-blue-600 dark:text-blue-400 hover:underline">info@hockeyblackouts.ca</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const regionSelect = document.getElementById('regionSelect');
+      const regionForm = document.getElementById('caRegionLookupForm');
+      const statusBox = document.getElementById('regionLookupStatus');
+
+      const CA_TEAMS = [
+        { id: 'MTL', name: 'Montreal Canadiens', slug: 'montreal', net: 'TSN2 & RDS', regions: ['on_east_qc_atl', 'on_overlap'] },
+        { id: 'OTT', name: 'Ottawa Senators', slug: 'ottawa', net: 'TSN5 & RDS', regions: ['on_east_qc_atl', 'on_overlap'] },
+        { id: 'TOR', name: 'Toronto Maple Leafs', slug: 'toronto', net: 'TSN4 & Sportsnet Ontario', regions: ['on_west', 'on_overlap', 'nw_on'] },
+        { id: 'WPG', name: 'Winnipeg Jets', slug: 'winnipeg', net: 'TSN3', regions: ['mb', 'sk', 'nw_on'] },
+        { id: 'EDM', name: 'Edmonton Oilers', slug: 'edmonton', net: 'Sportsnet West', regions: ['ab', 'sk'] },
+        { id: 'CGY', name: 'Calgary Flames', slug: 'calgary', net: 'Sportsnet West', regions: ['ab', 'sk'] },
+        { id: 'VAN', name: 'Vancouver Canucks', slug: 'vancouver', net: 'Sportsnet Pacific', regions: ['bc'] }
+      ];
+
+      const REGION_LABELS = {
+        on_east_qc_atl: 'Quebec, Eastern Ontario (Ottawa), Atlantic Canada',
+        on_overlap: 'Ontario Overlap (Belleville, Kingston, Pembroke)',
+        on_west: 'Ontario West (Toronto, London, Niagara)',
+        nw_on: 'Northwestern Ontario (Thunder Bay)',
+        mb: 'Manitoba',
+        sk: 'Saskatchewan, NWT & Nunavut',
+        ab: 'Alberta',
+        bc: 'British Columbia & Yukon',
+        us_intl: 'USA & International'
+      };
+
+      function evaluateRegion(regionVal) {
+        if (!regionVal || !REGION_LABELS[regionVal]) {
+          statusBox.className = 'hidden mt-4 p-4 rounded-xl border text-xs sm:text-sm space-y-2';
+          statusBox.innerHTML = '';
+          return;
+        }
+
+        try { localStorage.setItem('hockeyblackouts_region', regionVal); } catch (e) {}
+
+        if (regionVal === 'us_intl') {
+          statusBox.className = 'mt-4 p-4 rounded-xl border text-xs sm:text-sm space-y-2 bg-amber-50 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800/50 text-amber-950 dark:text-amber-200';
+          statusBox.innerHTML = `
+            <div class="flex items-start justify-between flex-col sm:flex-row gap-3">
+              <div>
+                <strong>USA &amp; International Viewers:</strong> Canadian regional channels (TSN, RDS, Sportsnet) are geoblocked outside Canada. If you live in the United States, use our dedicated US ZIP Code &amp; ESPN+ Blackout Tracker.
+              </div>
+              <a href="https://hockeyblackouts.com/" class="px-3.5 py-2 rounded-lg bg-teamPrimary text-white font-bold text-xs whitespace-nowrap self-start sm:self-center">Open US Tracker &rarr;</a>
+            </div>
+          `;
+          return;
+        }
+
+        const localTeams = CA_TEAMS.filter(t => t.regions.includes(regionVal));
+        const oomTeams = CA_TEAMS.filter(t => !t.regions.includes(regionVal));
+
+        const localCards = localTeams.map(t => `
+          <a href="/${t.slug}/" class="flex items-center justify-between gap-2 p-2.5 rounded-lg bg-white dark:bg-slate-900 border border-emerald-200 dark:border-emerald-800/60 hover:border-emerald-400 transition">
+            <div>
+              <span class="font-bold text-slate-900 dark:text-white">${t.name}</span>
+              <span class="block text-[11px] text-slate-600 dark:text-slate-300">In-Market • Watch regional games on <strong>${t.net}</strong></span>
+            </div>
+            <span class="text-xs font-bold text-emerald-700 dark:text-emerald-400 whitespace-nowrap">View Schedule &rarr;</span>
+          </a>
+        `).join('');
+
+        const oomList = oomTeams.map(t => `<a href="/${t.slug}/" class="underline font-semibold hover:text-teamPrimary">${t.name}</a>`).join(', ');
+
+        statusBox.className = 'mt-4 p-4 rounded-xl border text-xs sm:text-sm space-y-3 bg-emerald-50 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800/50 text-emerald-950 dark:text-emerald-200';
+        statusBox.innerHTML = `
+          <div class="flex items-start gap-2">
+            <i class="fa-solid fa-circle-check text-emerald-600 dark:text-emerald-400 mt-0.5"></i>
+            <div>
+              <strong>${REGION_LABELS[regionVal]} Territory Verdict:</strong> You are <strong>In-Market</strong> for <strong>${localTeams.length} Canadian NHL team${localTeams.length > 1 ? 's' : ''}</strong>. Their regional games clear on local TV/streaming without out-of-market blackouts:
+            </div>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">${localCards}</div>
+          <div class="text-[11px] text-slate-700 dark:text-slate-300 pt-1 border-t border-emerald-200/60 dark:border-emerald-800/50">
+            <i class="fa-solid fa-lock text-amber-600 dark:text-amber-400 mr-1"></i><strong>Out-of-Market Regional Blackouts:</strong> Regional games for ${oomList} are blacked out on standard cable in your region and require <strong>Sportsnet+ Premium</strong> or <strong>NHL Centre Ice</strong> (national games on Saturday Sportsnet &amp; Amazon Prime clear coast-to-coast).
+          </div>
+        `;
+      }
+
+      try {
+        const savedRegion = localStorage.getItem('hockeyblackouts_region') || '';
+        if (savedRegion && REGION_LABELS[savedRegion] && regionSelect) {
+          regionSelect.value = savedRegion;
+          evaluateRegion(savedRegion);
+        }
+      } catch (e) {}
+
+      if (regionSelect) {
+        regionSelect.addEventListener('change', () => {
+          evaluateRegion(regionSelect.value);
+        });
+      }
+      if (regionForm) {
+        regionForm.addEventListener('submit', e => {
+          e.preventDefault();
+          evaluateRegion(regionSelect ? regionSelect.value : '');
+        });
+      }
+    });
+  </script>
+
 </body>
 </html>

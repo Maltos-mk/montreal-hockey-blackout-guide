@@ -1,0 +1,15 @@
+{
+  "name": "Seattle Kraken Blackout Guide",
+  "short_name": "SEA",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
+  "display": "standalone",
+  "background_color": "#000C17",
+  "theme_color": "#68A2B9",
+  "icons": [
+    {
+      "src": "shared/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

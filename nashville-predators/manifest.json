@@ -1,0 +1,15 @@
+{
+  "name": "Nashville Predators Blackout Guide",
+  "short_name": "NSH",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
+  "display": "standalone",
+  "background_color": "#021126",
+  "theme_color": "#FFB81C",
+  "icons": [
+    {
+      "src": "shared/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

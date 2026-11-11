@@ -46,7 +46,7 @@
       "description": "Why is your NHL game blacked out tonight? Run our instant diagnostic to detect false ISP glitches vs. regional broadcast walls across all Canadian teams.",
       "url": "https://hockeyblackouts.ca/how-blackouts-work/",
       "datePublished": "2026-10-01",
-      "dateModified": "2026-11-10",
+      "dateModified": "2026-11-11",
       "author": {
         "@type": "Organization",
         "name": "HockeyBlackouts.ca",
@@ -173,7 +173,7 @@
       <span>/</span>
       <span class="text-slate-200 font-semibold">Blackout Diagnostic & Rules</span>
     </div>
-    <span class="text-[11px] text-slate-400" data-freshness="verified-date">Verified for 2026–27 Season • Updated Nov 10, 2026</span>
+    <span class="text-[11px] text-slate-400" data-freshness="verified-date">Verified for 2026–27 Season • Updated Nov 11, 2026</span>
   </nav>
 
   <!-- Main Content -->
@@ -618,7 +618,7 @@
     if (!btn) return;
 
     var detectedData = null;
-    var UPCOMING_MATCHES = {"MTL":{"id":"MTL","name":"Montreal Canadiens","nickname":"Habs","dir":"montreal","primaryColor":"#AF1E2D","date":"Tue, Nov 10, 2026","time":"8:00 PM","vs":"vs Wild","opp":"MIN","oppName":"Minnesota Wild","venue":"Centre Bell","netEN":"TSN2","netFR":"RDS","typeEN":"regional","isToday":true},"OTT":{"id":"OTT","name":"Ottawa Senators","nickname":"Sens","dir":"ottawa","primaryColor":"#c52032","date":"Tue Nov 10 2026","time":"7:00 PM","vs":"vs Capitals","opp":"WSH","oppName":"Washington Capitals","venue":"Canadian Tire Centre","netEN":"TSN5","netFR":"RDS2","typeEN":"regional","isToday":false},"TOR":{"id":"TOR","name":"Toronto Maple Leafs","nickname":"Leafs","dir":"toronto","primaryColor":"#00205B","date":"Tue, Nov 10, 2026","time":"8:00 PM","vs":"vs Avalanche","opp":"COL","oppName":"Colorado Avalanche","venue":"Scotiabank Arena","netEN":"TSN4","netFR":"TVA Sports","typeEN":"regional","isToday":true},"WPG":{"id":"WPG","name":"Winnipeg Jets","nickname":"Jets","dir":"winnipeg","primaryColor":"#041E42","date":"Tue Nov 10 2026","time":"7:00 PM","vs":"vs Devils","opp":"NJD","oppName":"New Jersey Devils","venue":"Canada Life Centre","netEN":"TSN3","netFR":"—","typeEN":"regional","isToday":false},"EDM":{"id":"EDM","name":"Edmonton Oilers","nickname":"Oilers","dir":"edmonton","primaryColor":"#041E42","date":"Wed Nov 11 2026","time":"9:00 PM","vs":"vs Flyers","opp":"PHI","oppName":"Philadelphia Flyers","venue":"Rogers Place","netEN":"Sportsnet West","netFR":"—","typeEN":"regional","isToday":false},"CGY":{"id":"CGY","name":"Calgary Flames","nickname":"Flames","dir":"calgary","primaryColor":"#C8102E","date":"Wed Nov 11 2026","time":"7:30 PM","vs":"vs Rangers","opp":"NYR","oppName":"New York Rangers","venue":"Scotiabank Saddledome","netEN":"Prime Video","netFR":"Prime Video","typeEN":"national","isToday":false},"VAN":{"id":"VAN","name":"Vancouver Canucks","nickname":"Canucks","dir":"vancouver","primaryColor":"#00205B","date":"Fri Nov 13 2026","time":"9:00 PM","vs":"vs Rangers","opp":"NYR","oppName":"New York Rangers","venue":"Rogers Arena","netEN":"Sportsnet","netFR":"TVA Sports","typeEN":"national","isToday":false}};
+    var UPCOMING_MATCHES = {"MTL":{"id":"MTL","name":"Montreal Canadiens","nickname":"Habs","dir":"montreal","primaryColor":"#AF1E2D","date":"Thu, Nov 12, 2026","time":"8:00 PM","vs":"@ Bruins","opp":"BOS","oppName":"Boston Bruins","venue":"TD Garden","netEN":"TSN2","netFR":"RDS","typeEN":"regional","isToday":false},"OTT":{"id":"OTT","name":"Ottawa Senators","nickname":"Sens","dir":"ottawa","primaryColor":"#c52032","date":"Thu Nov 12 2026","time":"7:00 PM","vs":"vs Avalanche","opp":"COL","oppName":"Colorado Avalanche","venue":"Canadian Tire Centre","netEN":"TSN5","netFR":"RDS2","typeEN":"regional","isToday":false},"TOR":{"id":"TOR","name":"Toronto Maple Leafs","nickname":"Leafs","dir":"toronto","primaryColor":"#00205B","date":"Thu, Nov 12, 2026","time":"8:00 PM","vs":"vs Wild","opp":"MIN","oppName":"Minnesota Wild","venue":"Scotiabank Arena","netEN":"Sportsnet","netFR":"—","typeEN":"national","isToday":false},"WPG":{"id":"WPG","name":"Winnipeg Jets","nickname":"Jets","dir":"winnipeg","primaryColor":"#041E42","date":"Thu Nov 12 2026","time":"8:00 PM","vs":"@ Stars","opp":"DAL","oppName":"Dallas Stars","venue":"American Airlines Center","netEN":"TSN3","netFR":"—","typeEN":"regional","isToday":false},"EDM":{"id":"EDM","name":"Edmonton Oilers","nickname":"Oilers","dir":"edmonton","primaryColor":"#041E42","date":"Wed Nov 11 2026","time":"9:00 PM","vs":"vs Flyers","opp":"PHI","oppName":"Philadelphia Flyers","venue":"Rogers Place","netEN":"Sportsnet West","netFR":"—","typeEN":"regional","isToday":false},"CGY":{"id":"CGY","name":"Calgary Flames","nickname":"Flames","dir":"calgary","primaryColor":"#C8102E","date":"Wed Nov 11 2026","time":"7:30 PM","vs":"vs Rangers","opp":"NYR","oppName":"New York Rangers","venue":"Scotiabank Saddledome","netEN":"Prime Video","netFR":"Prime Video","typeEN":"national","isToday":false},"VAN":{"id":"VAN","name":"Vancouver Canucks","nickname":"Canucks","dir":"vancouver","primaryColor":"#00205B","date":"Fri Nov 13 2026","time":"9:00 PM","vs":"vs Rangers","opp":"NYR","oppName":"New York Rangers","venue":"Rogers Arena","netEN":"Sportsnet","netFR":"TVA Sports","typeEN":"national","isToday":false}};
 
     var TEAM_DATA = {
       'MTL': {
@@ -1091,6 +1091,9 @@
       </p>
       <p class="text-[11px] leading-relaxed text-slate-400">
         This website is an independent fan resource created exclusively for public informational purposes. This service is <strong>not affiliated with, maintained by, endorsed by, or in any way associated with</strong> the National Hockey League (NHL), Rogers Media, Bell Media, Amazon, or any member clubs. All team names, schedules, network titles (Sportsnet, TSN, RDS, TVA Sports, Amazon Prime Video), and trademarks referenced herein are used strictly for descriptive and nominative identification under applicable intellectual property laws.
+      </p>
+      <p class="text-xs text-slate-300 pt-2">
+        <i class="fa-regular fa-envelope mr-1"></i> Contact Us: <a href="mailto:info@hockeyblackouts.ca" class="font-bold text-blue-400 hover:underline">info@hockeyblackouts.ca</a>
       </p>
     </div>
   </footer>

@@ -1,0 +1,15 @@
+{
+  "name": "Tampa Bay Lightning Blackout Guide",
+  "short_name": "TBL",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
+  "display": "standalone",
+  "background_color": "#001233",
+  "theme_color": "#002868",
+  "icons": [
+    {
+      "src": "shared/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

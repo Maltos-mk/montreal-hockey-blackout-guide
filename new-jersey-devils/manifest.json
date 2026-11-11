@@ -1,0 +1,15 @@
+{
+  "name": "New Jersey Devils Blackout Guide",
+  "short_name": "NJD",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#CE1126",
+  "icons": [
+    {
+      "src": "shared/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

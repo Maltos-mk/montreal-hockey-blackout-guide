@@ -1,0 +1,15 @@
+{
+  "name": "Washington Capitals Blackout Guide",
+  "short_name": "WSH",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
+  "display": "standalone",
+  "background_color": "#021126",
+  "theme_color": "#C8102E",
+  "icons": [
+    {
+      "src": "shared/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

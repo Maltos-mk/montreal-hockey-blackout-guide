@@ -1,0 +1,15 @@
+{
+  "name": "San Jose Sharks Blackout Guide",
+  "short_name": "SJS",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
+  "display": "standalone",
+  "background_color": "#081C20",
+  "theme_color": "#006D75",
+  "icons": [
+    {
+      "src": "shared/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

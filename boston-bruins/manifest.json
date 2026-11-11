@@ -1,0 +1,15 @@
+{
+  "name": "Boston Bruins Blackout Guide",
+  "short_name": "BOS",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#FFB81C",
+  "icons": [
+    {
+      "src": "shared/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

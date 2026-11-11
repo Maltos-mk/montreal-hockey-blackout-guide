@@ -1,0 +1,15 @@
+{
+  "name": "St. Louis Blues Blackout Guide",
+  "short_name": "STL",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
+  "display": "standalone",
+  "background_color": "#001B4E",
+  "theme_color": "#FCB514",
+  "icons": [
+    {
+      "src": "shared/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

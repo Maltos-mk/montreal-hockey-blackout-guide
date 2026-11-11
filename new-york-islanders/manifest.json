@@ -1,0 +1,15 @@
+{
+  "name": "New York Islanders Blackout Guide",
+  "short_name": "NYI",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
+  "display": "standalone",
+  "background_color": "#002E56",
+  "theme_color": "#F47D30",
+  "icons": [
+    {
+      "src": "shared/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

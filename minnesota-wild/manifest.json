@@ -1,0 +1,15 @@
+{
+  "name": "Minnesota Wild Blackout Guide",
+  "short_name": "MIN",
+  "start_url": "./?utm_source=pwa&utm_medium=homescreen",
+  "display": "standalone",
+  "background_color": "#0B291E",
+  "theme_color": "#A6192E",
+  "icons": [
+    {
+      "src": "shared/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

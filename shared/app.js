@@ -253,9 +253,14 @@ function slugifyCity(cityName) {
   return cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
+const CA_7_SET = new Set(['MTL', 'TOR', 'OTT', 'VAN', 'CGY', 'EDM', 'WPG']);
+
 function getGameUrl(g) {
   if (!window.TEAM_DATA || !window.TEAM_DATA.team) return '#';
   const currentTeamId = window.TEAM_DATA.team.id;
+  if (!CA_7_SET.has(currentTeamId) && !CA_7_SET.has(g.opp)) {
+    return '#scheduleTableBody';
+  }
   const isHome = g.vs.startsWith('vs ');
   const homeId = isHome ? currentTeamId : g.opp;
   const awayId = isHome ? g.opp : currentTeamId;
