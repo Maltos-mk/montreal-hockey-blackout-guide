@@ -533,7 +533,7 @@ dataFiles.forEach(({ meta, file }) => {
   }
   html = html.replace(/\{\{PRERENDERED_RECENT_RESULTS\}\}/g, recentResultsHtml);
 
-  const teamDir = `teams/${team.name.split(' ')[0].toLowerCase()}`;
+  const teamDir = `teams/${team.slug || team.name.split(' ')[0].toLowerCase()}`; // must match the slug build_all.js copies from (e.g. anaheim-ducks)
   if (!fs.existsSync(teamDir)) fs.mkdirSync(teamDir, { recursive: true });
   
   fs.writeFileSync(path.join(teamDir, 'index.html'), html);
