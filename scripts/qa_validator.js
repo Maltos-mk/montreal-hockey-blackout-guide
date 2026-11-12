@@ -152,8 +152,8 @@ function validateHtml(filePath, site = 'ca') {
       if (!content.includes('"@type": "WebSite"') || !content.includes('"@type": "Organization"')) {
         errors.push('US Homepage is missing WebSite or Organization Schema.');
       }
-      if (!content.includes('"name": "HockeyBlackouts.com"')) {
-        errors.push('US Homepage Organization Schema name must be "HockeyBlackouts.com".');
+      if (!content.includes('"name": "HockeyBlackouts.com"') || content.includes('"name": "HockeyBlackouts US Guide"')) {
+        errors.push('US Homepage Organization & WebSite Schema names must be "HockeyBlackouts.com".');
       }
     } else {
       if (!content.includes('"@type": "FAQPage"')) {
@@ -843,6 +843,20 @@ caTeamsMetaQa.forEach(t => {
   }
 });
 const caSplashHtml = fs.readFileSync(path.join(buildDir, 'index.html'), 'utf-8');
+const caRootManifestPath = path.join(buildDir, 'manifest.json');
+if (!fs.existsSync(caRootManifestPath)) {
+  console.error('\n❌ QA FAILED: build/manifest.json is missing.');
+  process.exit(1);
+}
+const caRootManifest = JSON.parse(fs.readFileSync(caRootManifestPath, 'utf-8'));
+if (caRootManifest.id !== '/' || !caRootManifest.start_url?.includes('utm_source=pwa') || !caRootManifest.icons?.some(i => i.sizes === '192x192' && i.type === 'image/png')) {
+  console.error('\n❌ QA FAILED: build/manifest.json must declare id="/", utm_source=pwa start_url, and a 192x192 PNG icon.');
+  process.exit(1);
+}
+if (!caSplashHtml.includes('rel="manifest" href="/manifest.json"')) {
+  console.error('\n❌ QA FAILED: build/index.html must link <link rel="manifest" href="/manifest.json">.');
+  process.exit(1);
+}
 if (!caSplashHtml.includes('data-umami-event="switch-to-us"')) {
   console.error('\n❌ QA FAILED: build/index.html Switch to US links must carry data-umami-event="switch-to-us".');
   process.exit(1);

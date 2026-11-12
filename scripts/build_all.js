@@ -197,6 +197,7 @@ let splashHtml = fs.readFileSync('templates/splash.html', 'utf-8');
 splashHtml = splashHtml.replace(/\{\{SPLASH_UPCOMING_MATCHUPS_HTML\}\}/g, splashUpcomingHtml);
 splashHtml = splashHtml.replace(/\{\{SPLASH_US_TEAMS_IN_CA_HTML\}\}/g, splashUsTeamsInCaHtml);
 fs.writeFileSync(path.join(BUILD_DIR, 'index.html'), splashHtml);
+fs.copyFileSync(path.join(__dirname, '../manifest.json'), path.join(BUILD_DIR, 'manifest.json'));
 
 // Build Phase 2 Per-Game Matchup Pages
 execSync('node scripts/build_game_pages.js', { stdio: 'inherit' });
