@@ -254,6 +254,7 @@ function slugifyCity(cityName) {
 }
 
 const CA_7_SET = new Set(['MTL', 'TOR', 'OTT', 'VAN', 'CGY', 'EDM', 'WPG']);
+const ET_DATE_FMT = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Toronto' });
 
 function getGameUrl(g) {
   if (!window.TEAM_DATA || !window.TEAM_DATA.team) return '#';
@@ -268,7 +269,10 @@ function getGameUrl(g) {
   const awayCity = TEAM_CITIES[awayId] || awayId;
   const homeSlug = slugifyCity(homeCity);
   const awaySlug = slugifyCity(awayCity);
-  const datePrefix = g.iso ? g.iso.split('T')[0] : g.date;
+  const parsedIso = g.iso ? new Date(g.iso) : null;
+  const datePrefix = parsedIso && !Number.isNaN(parsedIso.getTime())
+    ? ET_DATE_FMT.format(parsedIso)
+    : (g.iso ? g.iso.split('T')[0] : g.date);
   return `/game/${datePrefix}/${homeSlug}-vs-${awaySlug}/`;
 }
 
@@ -1272,148 +1276,68 @@ function render() {
 
 
 
-// --- PDF Export Logic ---
+// --- PDF Export Logic (delegates to shared/pdf-export.js, lazy-loaded on click) ---
 window.exportPDF = function() {
-  const btn = document.getElementById('btnExportPDF');
-  const originalText = btn.innerHTML;
-  btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span class="hidden sm:inline">' + tx('Generating...') + '</span>';
-  btn.disabled = true;
-
-  const ensureLogoAndBuild = () => {
-    if (typeof window.PDF_LOGO_B64 === 'undefined') {
-      const appScript = document.querySelector('script[src*="shared/app.js"]');
-      const logoSrc = appScript ? appScript.src.replace(/app\.js.*$/, 'pdf-logo.js') : '../shared/pdf-logo.js';
-      const logoScript = document.createElement('script');
-      logoScript.src = logoSrc;
-      logoScript.onload = () => buildAndDownloadPDF(btn, originalText);
-      logoScript.onerror = () => buildAndDownloadPDF(btn, originalText);
-      document.head.appendChild(logoScript);
-    } else {
-      buildAndDownloadPDF(btn, originalText);
-    }
-  };
-
-  // We need to load jsPDF and AutoTable sequentially
-  if (typeof window.jspdf === 'undefined') {
-    const script1 = document.createElement('script');
-    script1.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
-    script1.onload = () => {
-      const script2 = document.createElement('script');
-      script2.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js';
-      script2.onload = () => ensureLogoAndBuild();
-      document.head.appendChild(script2);
-    };
-    document.head.appendChild(script1);
-  } else {
-    ensureLogoAndBuild();
-  }
-};
-
-function buildAndDownloadPDF(btn, originalText) {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF('p', 'pt', 'letter');
-  
   const teamName = window.TEAM_DATA ? teamFullName(window.TEAM_DATA.team.id, window.TEAM_DATA.team.name) : 'Team';
-
-  // 1. Branding Header
-  const logoB64 = window.PDF_LOGO_B64;
-  
-  // addImage(imageData, format, x, y, width, height)
-  // Letter size is 612 x 792 pt
-  const pageWidth = doc.internal.pageSize.getWidth();
-  
-  // Title
-  doc.setFont('helvetica', 'bold');
-  doc.setFontSize(22);
-  doc.text(tx('{0} - 2026-27 TV Schedule', teamName), 40, 50);
-
-  // URL
-  doc.setFont('helvetica', 'normal');
-  doc.setFontSize(10);
-  doc.setTextColor(59, 130, 246); // blue-500
-  const cleanUrl = window.location.origin + window.location.pathname.replace('index.html', '');
-  doc.text(cleanUrl, 40, 68);
-
-  // Logo (Right aligned)
-  if (logoB64) {
-    const logoHeight = 45;
-    const logoWidth = 45; // 1:1 aspect ratio
-    doc.addImage(logoB64, 'JPEG', pageWidth - logoWidth - 40, 35, logoWidth, logoHeight);
-  }
-
-  // Divider Line
-  doc.setDrawColor(226, 232, 240); // slate-200
-  doc.setLineWidth(2);
-  doc.line(40, 85, pageWidth - 40, 85);
-
-  // 2. Subtitle / Context
   const regionSelect = document.getElementById('regionSelect');
-  const regionText = regionSelect.options[regionSelect.selectedIndex].text;
-  
+  const regionText = regionSelect && regionSelect.options[regionSelect.selectedIndex]
+    ? regionSelect.options[regionSelect.selectedIndex].text
+    : '';
   const subLabels = [];
   document.querySelectorAll('input[type="checkbox"]:checked').forEach(cb => {
-    let name = cb.nextElementSibling.querySelector('p:first-child').textContent;
-    subLabels.push(name.trim());
+    const p = cb.nextElementSibling && cb.nextElementSibling.querySelector('p:first-child');
+    if (p) subLabels.push(p.textContent.trim());
   });
 
-  doc.setFontSize(11);
-  doc.setTextColor(71, 85, 105); // slate-600
-  const contextStr = tx('Configured Region: {0}  |  Active Subscriptions: {1}', regionText, subLabels.length > 0 ? subLabels.join(', ') : tx('None'));
-  const contextLines = doc.splitTextToSize(contextStr, pageWidth - 80);
-  doc.text(contextLines, 40, 105);
-  
-  const dynamicStartY = 105 + (contextLines.length * 14);
+  const appScript = document.querySelector('script[src*="shared/app.js"]');
+  const exportSrc = appScript ? appScript.src.replace(/app\.js.*$/, 'pdf-export.js') : '../shared/pdf-export.js';
+  const logoSrc = appScript ? appScript.src.replace(/app\.js.*$/, 'pdf-logo.js') : '../shared/pdf-logo.js';
 
-  // 3. Table Data
-  const head = [[tx('Date & Time'), tx('Matchup'), tx('Network'), tx('Access Status')]];
-  const body = [];
+  const opts = {
+    buttonId: 'btnExportPDF',
+    generatingText: tx('Generating...'),
+    logoSrc,
+    title: tx('{0} - 2026-27 TV Schedule', teamName),
+    contextStr: tx('Configured Region: {0}  |  Active Subscriptions: {1}', regionText, subLabels.length > 0 ? subLabels.join(', ') : tx('None')),
+    head: [tx('Date & Time'), tx('Matchup'), tx('Network'), tx('Access Status')],
+    statusTerms: {
+      watchable: [tx('Watchable')],
+      blackedOut: [tx('Blacked Out')],
+      outOfMarket: [tx('Out-of-Market')]
+    },
+    fileName: tx('{0}_Schedule.pdf', teamName.replace(/\s+/g, '_'))
+  };
 
-  const sourceRows = document.getElementById('scheduleTableBody').querySelectorAll('tr');
-  sourceRows.forEach((row) => {
-    if (row.style.display === 'none' || row.classList.contains('hidden')) return;
+  if (typeof window.runSchedulePdfExport === 'function') {
+    window.runSchedulePdfExport(opts);
+    return;
+  }
 
-    const cells = row.querySelectorAll('td');
-    if(cells.length >= 6) {
-      body.push([
-        cells[1].innerText.replace(/\n/g, ' '),
-        cells[2].innerText.replace(/\n/g, ' '),
-        cells[3].innerText.replace(/\n/g, ' '),
-        cells[5].innerText.replace(/\n/g, ' - ')
-      ]);
+  const btn = document.getElementById('btnExportPDF');
+  const originalText = btn ? btn.innerHTML : '';
+  if (btn) {
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span class="hidden sm:inline">' + tx('Generating...') + '</span>';
+    btn.disabled = true;
+  }
+  const s = document.createElement('script');
+  s.src = exportSrc;
+  s.onload = () => {
+    if (typeof window.runSchedulePdfExport === 'function') {
+      if (btn) btn.innerHTML = originalText;
+      window.runSchedulePdfExport(opts);
+    } else if (btn) {
+      btn.innerHTML = originalText;
+      btn.disabled = false;
     }
-  });
-
-  // 4. AutoTable
-  doc.autoTable({
-    startY: dynamicStartY,
-    head: head,
-    body: body,
-    theme: 'striped',
-    headStyles: { fillColor: [241, 245, 249], textColor: [15, 23, 42], fontStyle: 'bold', lineWidth: 0.5, lineColor: [203, 213, 225] },
-    bodyStyles: { textColor: [15, 23, 42] },
-    alternateRowStyles: { fillColor: [248, 250, 252] },
-    margin: { top: 40, right: 40, bottom: 40, left: 40 },
-    didParseCell: function (data) {
-      // Colorize the Access Status column
-      if (data.section === 'body' && data.column.index === 3) {
-        if (data.cell.raw.includes(tx('Watchable'))) {
-          data.cell.styles.textColor = [5, 150, 105]; // emerald-600
-        } else if (data.cell.raw.includes(tx('Blacked Out'))) {
-          data.cell.styles.textColor = [220, 38, 38]; // red-600
-        } else if (data.cell.raw.includes(tx('Out-of-Market'))) {
-          data.cell.styles.textColor = [217, 119, 6]; // amber-600
-        }
-      }
+  };
+  s.onerror = () => {
+    if (btn) {
+      btn.innerHTML = originalText;
+      btn.disabled = false;
     }
-  });
-
-  // 5. Save
-  doc.save(tx('{0}_Schedule.pdf', teamName.replace(/\s+/g, '_')));
-
-  // Reset button
-  btn.innerHTML = originalText;
-  btn.disabled = false;
-}
+  };
+  document.head.appendChild(s);
+};
 // --- Node.js Exports for Testing ---
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { evaluateGame, broadcastZones, tx, trSummary };

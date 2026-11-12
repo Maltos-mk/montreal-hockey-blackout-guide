@@ -10,6 +10,8 @@
   <meta name="description" content="Why is your NHL game blacked out tonight? Run our instant diagnostic to detect false ISP glitches vs. regional broadcast walls across all Canadian teams.">
   <meta name="author" content="HockeyBlackouts.ca">
   <link rel="canonical" href="https://hockeyblackouts.ca/how-blackouts-work/">
+  <link rel="alternate" hreflang="en-CA" href="https://hockeyblackouts.ca/how-blackouts-work/" />
+  <link rel="alternate" hreflang="x-default" href="https://hockeyblackouts.ca/how-blackouts-work/" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="https://hockeyblackouts.ca/shared/favicon.svg">
@@ -46,7 +48,7 @@
       "description": "Why is your NHL game blacked out tonight? Run our instant diagnostic to detect false ISP glitches vs. regional broadcast walls across all Canadian teams.",
       "url": "https://hockeyblackouts.ca/how-blackouts-work/",
       "datePublished": "2026-10-01",
-      "dateModified": "2026-11-11",
+      "dateModified": "2026-11-12",
       "author": {
         "@type": "Organization",
         "name": "HockeyBlackouts.ca",
@@ -388,7 +390,7 @@
       <ul class="text-xs text-slate-400 space-y-1.5 list-disc pl-4 leading-relaxed">
         <li><strong>The Wrong Broadcaster:</strong> Sportsnet does not own regional games for Ottawa, Montreal, or Winnipeg (and only half of Toronto's). Those games are exclusive to TSN and RDS.</li>
         <li><strong>The Predatory Upsell:</strong> Sportsnet+ often tells in-market fans to "Upgrade to Premium". If TSN owns the game, paying $35 for Premium will still leave you blacked out.</li>
-        <li><strong>Monday Prime Exclusives:</strong> Monday night games air exclusively on Amazon Prime Video nationwide—not on cable or Sportsnet+.</li>
+        <li><strong>Wednesday Prime Exclusives:</strong> Wednesday night games air exclusively on Amazon Prime Video nationwide—not on cable or Sportsnet+.</li>
       </ul>
       <p class="text-xs text-sky-300 font-semibold pt-1">
         &rarr; Fix: No router trick will help. You need the specific network holding tonight's rights.
@@ -618,7 +620,7 @@
     if (!btn) return;
 
     var detectedData = null;
-    var UPCOMING_MATCHES = {"MTL":{"id":"MTL","name":"Montreal Canadiens","nickname":"Habs","dir":"montreal","primaryColor":"#AF1E2D","date":"Thu, Nov 12, 2026","time":"8:00 PM","vs":"@ Bruins","opp":"BOS","oppName":"Boston Bruins","venue":"TD Garden","netEN":"TSN2","netFR":"RDS","typeEN":"regional","isToday":false},"OTT":{"id":"OTT","name":"Ottawa Senators","nickname":"Sens","dir":"ottawa","primaryColor":"#c52032","date":"Thu Nov 12 2026","time":"7:00 PM","vs":"vs Avalanche","opp":"COL","oppName":"Colorado Avalanche","venue":"Canadian Tire Centre","netEN":"TSN5","netFR":"RDS2","typeEN":"regional","isToday":false},"TOR":{"id":"TOR","name":"Toronto Maple Leafs","nickname":"Leafs","dir":"toronto","primaryColor":"#00205B","date":"Thu, Nov 12, 2026","time":"8:00 PM","vs":"vs Wild","opp":"MIN","oppName":"Minnesota Wild","venue":"Scotiabank Arena","netEN":"Sportsnet","netFR":"—","typeEN":"national","isToday":false},"WPG":{"id":"WPG","name":"Winnipeg Jets","nickname":"Jets","dir":"winnipeg","primaryColor":"#041E42","date":"Thu Nov 12 2026","time":"8:00 PM","vs":"@ Stars","opp":"DAL","oppName":"Dallas Stars","venue":"American Airlines Center","netEN":"TSN3","netFR":"—","typeEN":"regional","isToday":false},"EDM":{"id":"EDM","name":"Edmonton Oilers","nickname":"Oilers","dir":"edmonton","primaryColor":"#041E42","date":"Wed Nov 11 2026","time":"9:00 PM","vs":"vs Flyers","opp":"PHI","oppName":"Philadelphia Flyers","venue":"Rogers Place","netEN":"Sportsnet West","netFR":"—","typeEN":"regional","isToday":false},"CGY":{"id":"CGY","name":"Calgary Flames","nickname":"Flames","dir":"calgary","primaryColor":"#C8102E","date":"Wed Nov 11 2026","time":"7:30 PM","vs":"vs Rangers","opp":"NYR","oppName":"New York Rangers","venue":"Scotiabank Saddledome","netEN":"Prime Video","netFR":"Prime Video","typeEN":"national","isToday":false},"VAN":{"id":"VAN","name":"Vancouver Canucks","nickname":"Canucks","dir":"vancouver","primaryColor":"#00205B","date":"Fri Nov 13 2026","time":"9:00 PM","vs":"vs Rangers","opp":"NYR","oppName":"New York Rangers","venue":"Rogers Arena","netEN":"Sportsnet","netFR":"TVA Sports","typeEN":"national","isToday":false}};
+    var UPCOMING_MATCHES = {"MTL":{"id":"MTL","name":"Montreal Canadiens","nickname":"Habs","dir":"montreal","primaryColor":"#AF1E2D","date":"Thu, Nov 12, 2026","time":"8:00 PM","vs":"@ Bruins","opp":"BOS","oppName":"Boston Bruins","venue":"TD Garden","netEN":"TSN2","netFR":"RDS","typeEN":"regional","isToday":true},"OTT":{"id":"OTT","name":"Ottawa Senators","nickname":"Sens","dir":"ottawa","primaryColor":"#c52032","date":"Thu Nov 12 2026","time":"7:00 PM","vs":"vs Avalanche","opp":"COL","oppName":"Colorado Avalanche","venue":"Canadian Tire Centre","netEN":"TSN5","netFR":"RDS2","typeEN":"regional","isToday":false},"TOR":{"id":"TOR","name":"Toronto Maple Leafs","nickname":"Leafs","dir":"toronto","primaryColor":"#00205B","date":"Thu, Nov 12, 2026","time":"8:00 PM","vs":"vs Wild","opp":"MIN","oppName":"Minnesota Wild","venue":"Scotiabank Arena","netEN":"Sportsnet","netFR":"—","typeEN":"national","isToday":true},"WPG":{"id":"WPG","name":"Winnipeg Jets","nickname":"Jets","dir":"winnipeg","primaryColor":"#041E42","date":"Thu Nov 12 2026","time":"8:00 PM","vs":"@ Stars","opp":"DAL","oppName":"Dallas Stars","venue":"American Airlines Center","netEN":"TSN3","netFR":"—","typeEN":"regional","isToday":false},"EDM":{"id":"EDM","name":"Edmonton Oilers","nickname":"Oilers","dir":"edmonton","primaryColor":"#041E42","date":"Wed Nov 11 2026","time":"9:00 PM","vs":"vs Flyers","opp":"PHI","oppName":"Philadelphia Flyers","venue":"Rogers Place","netEN":"Sportsnet West","netFR":"—","typeEN":"regional","isToday":true},"CGY":{"id":"CGY","name":"Calgary Flames","nickname":"Flames","dir":"calgary","primaryColor":"#C8102E","date":"Wed Nov 11 2026","time":"7:30 PM","vs":"vs Rangers","opp":"NYR","oppName":"New York Rangers","venue":"Scotiabank Saddledome","netEN":"Prime Video","netFR":"Prime Video","typeEN":"national","isToday":true},"VAN":{"id":"VAN","name":"Vancouver Canucks","nickname":"Canucks","dir":"vancouver","primaryColor":"#00205B","date":"Fri Nov 13 2026","time":"9:00 PM","vs":"vs Rangers","opp":"NYR","oppName":"New York Rangers","venue":"Rogers Arena","netEN":"Sportsnet","netFR":"TVA Sports","typeEN":"national","isToday":false}};
 
     var TEAM_DATA = {
       'MTL': {
@@ -877,7 +879,7 @@
             '<p class="text-[11px] text-slate-200 leading-normal">26 Maple Leafs games are exclusive to <strong>TSN4</strong> in Ontario. If tonight is a TSN game, Sportsnet+ will black you out, and upgrading to Premium will not unlock it.</p>' +
           '</div>';
         } else {
-          rightsWarning = '<p class="text-slate-300">If your game is blacked out on Sportsnet+, check if you are on basic Sportsnet without regional access, or if tonight is exclusive to <strong>Amazon Prime Video</strong> (Monday Night Hockey).</p>';
+          rightsWarning = '<p class="text-slate-300">If your game is blacked out on Sportsnet+, check if you are on basic Sportsnet without regional access, or if tonight is exclusive to <strong>Amazon Prime Video</strong> (Wednesday Night Hockey).</p>';
         }
 
         verdictBox.innerHTML = '<div class="flex items-center justify-between gap-2 border-b border-emerald-500/20 pb-2.5">' +
