@@ -294,14 +294,14 @@
       "opp": "NJD",
       "fullMatchup": "Edmonton Oilers at New Jersey Devils",
       "venue": "Prudential Center",
-      "rsn": "MSG Sportsnet",
-      "netUSNat": null,
+      "rsn": null,
+      "netUSNat": "ESPN+",
       "primaryNet": "ESPN+",
-      "secondaryNet": "MSG Sportsnet",
+      "secondaryNet": "Hulu / Disney+",
       "espnPlus": true,
-      "typeUS": "regional",
-      "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in New Jersey Devils market (MSG Sportsnet)"
+      "typeUS": "national",
+      "coverageLabel": "ESPN+ / Hulu Exclusive",
+      "bannerText": "National Streaming Exclusive on ESPN+ / Hulu (No local RSN blackout)"
     },
     {
       "id": 2026020260,
@@ -438,14 +438,14 @@
       "opp": "TBL",
       "fullMatchup": "Edmonton Oilers at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
-      "rsn": "Scripps Sports (The Spot)",
-      "netUSNat": null,
+      "rsn": null,
+      "netUSNat": "ESPN+",
       "primaryNet": "ESPN+",
-      "secondaryNet": "Scripps Sports (The Spot)",
+      "secondaryNet": "Hulu / Disney+",
       "espnPlus": true,
-      "typeUS": "regional",
-      "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
+      "typeUS": "national",
+      "coverageLabel": "ESPN+ / Hulu Exclusive",
+      "bannerText": "National Streaming Exclusive on ESPN+ / Hulu (No local RSN blackout)"
     },
     {
       "id": 2026020359,
@@ -816,14 +816,14 @@
       "opp": "NSH",
       "fullMatchup": "Edmonton Oilers at Nashville Predators",
       "venue": "Bridgestone Arena",
-      "rsn": "Scripps Sports (The Spot)",
-      "netUSNat": null,
+      "rsn": null,
+      "netUSNat": "ESPN+",
       "primaryNet": "ESPN+",
-      "secondaryNet": "Scripps Sports (The Spot)",
+      "secondaryNet": "Hulu / Disney+",
       "espnPlus": true,
-      "typeUS": "regional",
-      "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (Scripps Sports (The Spot))"
+      "typeUS": "national",
+      "coverageLabel": "ESPN+ / Hulu Exclusive",
+      "bannerText": "National Streaming Exclusive on ESPN+ / Hulu (No local RSN blackout)"
     },
     {
       "id": 2026020701,

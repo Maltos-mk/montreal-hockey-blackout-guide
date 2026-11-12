@@ -1,150 +1,121 @@
 const fs = require('fs');
+const path = require('path');
 const https = require('https');
+const {
+  LEGACY_CA_PATHS,
+  loadNetworkAliases,
+  formatEtDate,
+  classifyCaGameBroadcasts
+} = require('./lib/data_audit_core');
 
-const teams = {
-  'MTL': 'data/mtl.json',
-  'TOR': 'data/tor.json',
-  'OTT': 'data/ott.json',
-  'VAN': 'data/van.json',
-  'CGY': 'data/cgy.json',
-  'EDM': 'data/edm.json',
-  'WPG': 'data/wpg.json'
-};
+const ROOT_DIR = path.join(__dirname, '..');
 
-const networkMap = {
-  'Prime': 'Prime Video',
-  'SNE': 'Sportsnet East',
-  'SNO': 'Sportsnet Ontario',
-  'SNP': 'Sportsnet Pacific',
-  'SNW': 'Sportsnet West',
-  'SN': 'Sportsnet',
-  'SN1': 'Sportsnet One',
-  'SN360': 'Sportsnet 360',
-  'TVAS': 'TVA Sports',
-  'TVAS2': 'TVA Sports 2',
-  'RDS': 'RDS',
-  'RDS2': 'RDS2',
-  'TSN2': 'TSN2',
-  'TSN4': 'TSN4',
-  'TSN5': 'TSN5',
-  'CBC': 'CBC',
-  'CITY': 'CityTV',
-  'ESPN': 'ESPN',
-  'TNT': 'TNT'
-};
-
-function fetchJSON(url) {
+function fetchJSON(url, redirectsLeft = 3) {
   return new Promise((resolve, reject) => {
-    https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }, (res) => {
-      let data = '';
-      res.on('data', chunk => data += chunk);
-      res.on('end', () => {
-        try {
-          resolve(JSON.parse(data));
-        } catch (e) { reject(e); }
-      });
-    }).on('error', reject);
+    https
+      .get(url, { headers: { 'User-Agent': 'Mozilla/5.0' } }, res => {
+        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location && redirectsLeft > 0) {
+          res.resume();
+          const nextUrl = new URL(res.headers.location, url).toString();
+          resolve(fetchJSON(nextUrl, redirectsLeft - 1));
+          return;
+        }
+        if (res.statusCode < 200 || res.statusCode >= 300) {
+          res.resume();
+          reject(new Error(`HTTP ${res.statusCode} fetching ${url}`));
+          return;
+        }
+        let data = '';
+        res.on('data', chunk => {
+          data += chunk;
+        });
+        res.on('end', () => {
+          try {
+            resolve(JSON.parse(data));
+          } catch (e) {
+            reject(e);
+          }
+        });
+      })
+      .on('error', reject);
   });
 }
 
-function convertDate(dt) {
-  return dt.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric', timeZone: 'America/New_York' }).replace(/,/g, '');
-}
-
 async function run() {
-  for (const [abbrev, file] of Object.entries(teams)) {
-    console.log(`Fetching ${abbrev} 2026-2027...`);
-    const live = await fetchJSON(`https://api-web.nhle.com/v1/club-schedule-season/${abbrev}/20262027`);
-    const local = JSON.parse(fs.readFileSync(file, 'utf-8'));
-    
+  const aliases = loadNetworkAliases(ROOT_DIR);
+  const caTeams = JSON.parse(
+    fs.readFileSync(path.join(ROOT_DIR, 'data/ca_teams.json'), 'utf-8')
+  );
+  const unknownCodesFound = new Set();
+
+  for (const teamMeta of caTeams) {
+    const abbrev = teamMeta.id;
+    const caFile = path.join(ROOT_DIR, `data/ca/${teamMeta.slug}.json`);
+    console.log(`Fetching CA schedule for ${abbrev} (${teamMeta.name})...`);
+    const live = await fetchJSON(
+      `https://api-web.nhle.com/v1/club-schedule-season/${abbrev}/20262027`
+    );
+    const existing = fs.existsSync(caFile)
+      ? JSON.parse(fs.readFileSync(caFile, 'utf-8'))
+      : { team: teamMeta, schedule: [] };
+
     const newSchedule = [];
-    
-    for (const g of live.games) {
-      if (g.gameType !== 2) continue; // Only regular season
-      
+    for (const g of live.games || []) {
+      if (g.gameType !== 2) continue;
       const dt = new Date(g.startTimeUTC);
-      
-      let vs = '';
-      let opp = '';
-      if (g.homeTeam.abbrev === abbrev) {
-        vs = `vs ${g.awayTeam.commonName.default}`;
-        opp = g.awayTeam.abbrev;
-      } else {
-        vs = `@ ${g.homeTeam.commonName.default}`;
-        opp = g.homeTeam.abbrev;
-      }
-      
-      let netEN = '';
-      let netFR = '';
-      
-      
-      const broadcasts = g.tvBroadcasts || [];
-      const canadianNets = broadcasts.filter(b => b.countryCode === 'CA').map(b => networkMap[b.network] || b.network);
-      
-      let typeEN = 'regional';
-      let typeFR = 'regional';
-      if (canadianNets.includes('Prime Video')) {
-        netEN = 'Prime Video';
-        netFR = 'Prime Video';
-        typeEN = 'national';
-        typeFR = 'national';
-      } else {
-        let enNets = canadianNets.filter(n => !n.includes('RDS') && !n.includes('TVA'));
-        let frNets = canadianNets.filter(n => n.includes('RDS') || n.includes('TVA'));
-        
+      const isHome = g.homeTeam.abbrev === abbrev;
+      const vs = isHome
+        ? `vs ${g.awayTeam.commonName.default}`
+        : `@ ${g.homeTeam.commonName.default}`;
+      const opp = isHome ? g.awayTeam.abbrev : g.homeTeam.abbrev;
+      const broadcast = classifyCaGameBroadcasts(g, abbrev, aliases);
 
-        let hasNationalEN = enNets.some(n => n === 'Sportsnet' || n === 'Sportsnet One' || n === 'Sportsnet 360' || n === 'CBC' || n === 'CityTV' || n === 'SN+');
-        const hasNationalFR = frNets.some(n => n.includes('TVA Sports'));
-        
-        const dateStr = convertDate(dt);
-        const isSaturday = dateStr.startsWith('Sat ');
-        // Hockey Night in Canada Rule: Any Saturday game on ANY Sportsnet channel is a National broadcast
-        if (isSaturday && enNets.some(n => n.includes('Sportsnet'))) {
-            hasNationalEN = true;
-        }
-        
-        if (hasNationalEN) typeEN = 'national';
+      broadcast.unknownCodes.forEach(c => unknownCodesFound.add(`${abbrev}:${c}`));
 
-        if (hasNationalFR) typeFR = 'national';
-        
-        // Fallbacks for regional gaps
-        if (enNets.length === 0) {
-            if (abbrev === 'MTL') enNets = ['TSN2'];
-            if (abbrev === 'TOR') enNets = ['TSN4'];
-            if (abbrev === 'OTT') enNets = ['TSN5'];
-            if (abbrev === 'VAN') enNets = ['Sportsnet Pacific'];
-            if (abbrev === 'CGY') enNets = ['Sportsnet West'];
-            if (abbrev === 'EDM') enNets = ['Sportsnet West'];
-            if (abbrev === 'WPG') enNets = ['TSN3'];
-        }
-        if (frNets.length === 0) {
-            if (abbrev === 'MTL') frNets = ['RDS'];
-            if (abbrev === 'OTT') frNets = ['RDS'];
-        }
-        
-        netEN = enNets.join(', ');
-        netFR = frNets.join(', ');
-      }
-      
       newSchedule.push({
         id: g.id,
-        date: convertDate(dt),
+        date: formatEtDate(dt),
         iso: g.startTimeUTC,
-        time: dt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York' }),
-        vs: vs,
-        opp: opp,
+        time: dt.toLocaleTimeString('en-US', {
+          hour: 'numeric',
+          minute: '2-digit',
+          timeZone: 'America/New_York'
+        }),
+        vs,
+        opp,
         venue: g.venue.default,
-        netEN: netEN,
-        netFR: netFR,
-        typeEN: typeEN,
-        typeFR: typeFR
+        netEN: broadcast.netEN,
+        netFR: broadcast.netFR,
+        typeEN: broadcast.typeEN,
+        typeFR: broadcast.typeFR
       });
     }
-    
-    local.schedule = newSchedule;
-    fs.writeFileSync(file, JSON.stringify(local, null, 2));
-    console.log(`Saved ${newSchedule.length} games to ${file}`);
+
+    const updated = { ...existing, schedule: newSchedule };
+    const serialized = JSON.stringify(updated, null, 2);
+    fs.writeFileSync(caFile, serialized);
+
+    const legacyRel = LEGACY_CA_PATHS[abbrev];
+    if (legacyRel) {
+      const legacyPath = path.join(ROOT_DIR, legacyRel);
+      const legacyExisting = fs.existsSync(legacyPath)
+        ? JSON.parse(fs.readFileSync(legacyPath, 'utf-8'))
+        : { team: teamMeta, schedule: [] };
+      fs.writeFileSync(
+        legacyPath,
+        JSON.stringify({ ...legacyExisting, schedule: newSchedule }, null, 2)
+      );
+    }
+    console.log(`Saved ${newSchedule.length} games to data/ca/${teamMeta.slug}.json`);
+  }
+
+  if (unknownCodesFound.size > 0) {
+    console.error('❌ Unmapped CA broadcast codes encountered:', [...unknownCodesFound]);
+    process.exitCode = 1;
   }
 }
 
-run().catch(console.error);
+run().catch(err => {
+  console.error(err);
+  process.exit(1);
+});

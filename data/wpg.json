@@ -85,7 +85,7 @@
       "vs": "vs Ducks",
       "opp": "ANA",
       "venue": "Canada Life Centre",
-      "netEN": "Sportsnet One",
+      "netEN": "Sportsnet, Sportsnet One",
       "netFR": "",
       "typeEN": "national",
       "typeFR": "regional"
@@ -671,9 +671,9 @@
       "opp": "EDM",
       "venue": "Rogers Place",
       "netEN": "TSN3, Sportsnet West",
-      "netFR": "",
+      "netFR": "TVA Sports",
       "typeEN": "regional",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020790,

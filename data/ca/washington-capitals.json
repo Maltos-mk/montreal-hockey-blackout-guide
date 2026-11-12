@@ -582,9 +582,9 @@
       "opp": "ANA",
       "venue": "Honda Center",
       "netEN": "SN+ Premium",
-      "netFR": "",
+      "netFR": "TVA Sports",
       "typeEN": "regional",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020731,
@@ -816,9 +816,9 @@
       "opp": "BOS",
       "venue": "TD Garden",
       "netEN": "Sportsnet",
-      "netFR": "TVA Sports 2",
+      "netFR": "",
       "typeEN": "national",
-      "typeFR": "national"
+      "typeFR": "regional"
     },
     {
       "id": 2026021014,

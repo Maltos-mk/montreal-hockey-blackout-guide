@@ -10,11 +10,13 @@
     "build": "node scripts/build_all.js",
     "build:css": "tailwindcss -i shared/input.css -o shared/tailwind.min.css --minify",
     "build:us": "node scripts/generate_us_team_pages.js",
+    "audit:data": "node scripts/audit_data.js",
+    "audit:table": "node scripts/audit_data.js --write-table",
     "test": "playwright test",
     "e2e:install": "npm install --save-dev @playwright/test && npx playwright install chromium",
     "test:e2e": "playwright test tests/blackout-engine.spec.js",
     "test:e2e:headed": "playwright test tests/blackout-engine.spec.js --headed --workers=1",
-    "test:all": "bash tests/check_privacy.sh && node scripts/matrix_test.js && node scripts/qa_validator.js && npx playwright test tests/ui.spec.js tests/game_flow.spec.js tests/blackout-engine.spec.js --workers=2"
+    "test:all": "bash tests/check_privacy.sh && node tests/data_audit.test.js && node scripts/audit_data.js && node scripts/matrix_test.js && node scripts/qa_validator.js && npx playwright test tests/ui.spec.js tests/game_flow.spec.js tests/blackout-engine.spec.js --workers=2"
   },
   "repository": {
     "type": "git",

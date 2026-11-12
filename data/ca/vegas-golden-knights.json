@@ -205,7 +205,7 @@
       "opp": "OTT",
       "venue": "T-Mobile Arena",
       "netEN": "TSN5",
-      "netFR": "RDSI",
+      "netFR": "RDS Info",
       "typeEN": "regional",
       "typeFR": "regional"
     },
@@ -673,9 +673,9 @@
       "opp": "CAR",
       "venue": "Lenovo Center",
       "netEN": "Sportsnet, Sportsnet 360",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "typeEN": "national",
-      "typeFR": "national"
+      "typeFR": "regional"
     },
     {
       "id": 2026020797,

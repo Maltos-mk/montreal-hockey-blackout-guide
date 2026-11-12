@@ -52,8 +52,13 @@
 
     var localBlackoutRsn = hasUsTerritory ? team.rsn : (isOpponentInMarket && oppInfo ? oppInfo.rsn : '');
 
-    // 1. National Exclusive (ESPN, ABC, TNT)
+    // 1. National Exclusive (ESPN, ABC, TNT, ESPN+ / Hulu Streaming)
     if (g.typeUS === 'national' || (netUSNat && netUSNat !== 'NHLN')) {
+      if (netUSNat === 'ESPN+' || g.primaryNet === 'ESPN+') {
+        var extraLabel = g.secondaryNet ? ' / ' + g.secondaryNet : '';
+        if (state.subs.espn_plus) return { status: 'watchable', reason: 'Watch on ESPN+' + extraLabel + ' (National Exclusive)' };
+        return { status: 'missing_sub', reason: 'Requires ESPN+' + extraLabel + ' (National Streaming Exclusive)' };
+      }
       if (netUSNat === 'ABC' || g.primaryNet === 'ABC') {
         if (state.subs.espn_abc) return { status: 'watchable', reason: 'Watch on ABC' };
         if (state.subs.espn_plus) return { status: 'watchable', reason: 'Watch on ESPN+ (ABC Simulcast)' };
@@ -320,9 +325,21 @@
       if (state.channelFilter === 'LOCAL_RSN') {
         var isLocalGame = g.typeUS === 'regional' || (g.typeUS === 'nhl_network' && g.rsn && g.rsn !== 'NHLN');
         if (!isLocalGame) return;
+      } else if (state.channelFilter === 'ESPN+') {
+        var isEspnPlusGame = Boolean(g.espnPlus || g.netUSNat === 'ESPN+' || g.primaryNet === 'ESPN+' || g.secondaryNet === 'ESPN+');
+        if (!isEspnPlusGame) return;
+      } else if (state.channelFilter === 'ESPN') {
+        var isEspnAbcLinear = g.typeUS === 'national' && (g.netUSNat === 'ESPN' || g.netUSNat === 'ABC' || g.primaryNet === 'ESPN' || g.primaryNet === 'ABC');
+        if (!isEspnAbcLinear) return;
+      } else if (state.channelFilter === 'TNT') {
+        var isTntGame = g.typeUS === 'national' && (g.netUSNat === 'TNT' || g.primaryNet === 'TNT');
+        if (!isTntGame) return;
+      } else if (state.channelFilter === 'NHLN') {
+        var isNhlnGame = g.typeUS === 'nhl_network' || g.netUSNat === 'NHLN';
+        if (!isNhlnGame) return;
       } else if (state.channelFilter !== 'all') {
-        var nets = (g.primaryNet || '') + ' ' + (g.secondaryNet || '') + ' ' + (g.rsn || '');
-        if (nets.toLowerCase().indexOf(state.channelFilter.toLowerCase()) === -1) return;
+        var tokens = [g.primaryNet, g.secondaryNet, g.rsn, g.netUSNat].filter(Boolean).map(function(s) { return String(s).toLowerCase(); });
+        if (tokens.indexOf(state.channelFilter.toLowerCase()) === -1) return;
       }
 
       if (state.search) {

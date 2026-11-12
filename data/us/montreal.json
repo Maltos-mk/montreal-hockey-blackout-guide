@@ -654,14 +654,14 @@
       "opp": "BUF",
       "fullMatchup": "Montreal Canadiens at Buffalo Sabres",
       "venue": "KeyBank Center",
-      "rsn": "MSG Western NY",
-      "netUSNat": null,
+      "rsn": null,
+      "netUSNat": "ESPN+",
       "primaryNet": "ESPN+",
-      "secondaryNet": "MSG Western NY",
+      "secondaryNet": "Hulu / Disney+",
       "espnPlus": true,
-      "typeUS": "regional",
-      "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Buffalo Sabres market (MSG Western NY)"
+      "typeUS": "national",
+      "coverageLabel": "ESPN+ / Hulu Exclusive",
+      "bannerText": "National Streaming Exclusive on ESPN+ / Hulu (No local RSN blackout)"
     },
     {
       "id": 2026020573,

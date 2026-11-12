@@ -1,6 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+const {
+  loadNetworkAliases,
+  formatEtDate,
+  classifyUsBroadcast
+} = require('./lib/data_audit_core');
 
 const DATA_PATH = path.join(__dirname, '../data/us_teams.json');
 const US_DATA_DIR = path.join(__dirname, '../data/us');
@@ -74,17 +79,7 @@ const NHL_TEAMS = {
   WPG: 'Winnipeg Jets'
 };
 
-const US_NATIONAL_NETWORKS = new Set([
-  'ESPN',
-  'ABC',
-  'TNT',
-  'truTV',
-  'HBO MAX',
-  'MAX',
-  'NHLN',
-  'ESPN+',
-  'HULU'
-]);
+const NETWORK_ALIASES = loadNetworkAliases(path.join(__dirname, '..'));
 
 function fetchJSON(url) {
   return new Promise((resolve, reject) => {
@@ -104,141 +99,10 @@ function fetchJSON(url) {
   });
 }
 
-function convertDate(dt) {
-  return dt
-    .toLocaleDateString('en-US', {
-      weekday: 'short',
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
-      timeZone: 'America/New_York'
-    })
-    .replace(/,/g, '');
-}
-
 function getFullMatchup(teamName, vsStr, oppCode) {
   const oppName = NHL_TEAMS[oppCode] || oppCode;
   const isAway = vsStr.startsWith('@');
   return isAway ? `${teamName} at ${oppName}` : `${teamName} vs ${oppName}`;
-}
-
-function classifyUsBroadcast(rawGame, team) {
-  const isHome = rawGame.homeTeam.abbrev === team.abbreviation;
-  const usBroadcasts = (rawGame.tvBroadcasts || [])
-    .filter(b => b.countryCode === 'US')
-    .map(b => ({ ...b, network: String(b.network || '').trim() }))
-    .filter(b => b.network);
-  const targetMarket = isHome ? 'H' : 'A';
-
-  const nationalNets = usBroadcasts
-    .filter(b => b.market === 'N' || US_NATIONAL_NETWORKS.has(b.network))
-    .map(b => b.network);
-
-  const localRsnBroadcasts = usBroadcasts
-    .filter(b => b.market === targetMarket && !US_NATIONAL_NETWORKS.has(b.network))
-    .map(b => b.network);
-
-  const hasEspnLinear = nationalNets.includes('ESPN');
-  const hasAbc = nationalNets.includes('ABC');
-  const hasTnt = nationalNets.includes('TNT');
-  const hasMax = nationalNets.includes('HBO MAX') || nationalNets.includes('MAX');
-  const hasNhln = nationalNets.includes('NHLN');
-  const hasExplicitEspnPlus = nationalNets.includes('ESPN+') || nationalNets.includes('HULU');
-
-  const rsnFeed = localRsnBroadcasts.length > 0 ? localRsnBroadcasts[0] : team.rsn;
-
-  // Exclusive US National Game (ESPN, ABC, TNT)
-  if ((hasEspnLinear || hasAbc || hasTnt) && localRsnBroadcasts.length === 0) {
-    let primaryNet = 'ESPN';
-    let secondaryNet = '';
-    if (hasAbc) {
-      primaryNet = 'ABC';
-      secondaryNet = 'ESPN+';
-    } else if (hasTnt) {
-      primaryNet = 'TNT';
-      secondaryNet = hasMax ? 'HBO MAX' : '';
-    } else if (hasEspnLinear) {
-      primaryNet = 'ESPN';
-      secondaryNet = hasExplicitEspnPlus ? 'ESPN+' : '';
-    }
-
-    const espnPlusSimulcast = Boolean(hasAbc || hasExplicitEspnPlus);
-    return {
-      rsn: null,
-      netUSNat: primaryNet,
-      primaryNet,
-      secondaryNet,
-      espnPlus: espnPlusSimulcast,
-      typeUS: 'national',
-      coverageLabel: 'US National Exclusive',
-      bannerText: espnPlusSimulcast
-        ? `National Broadcast on ${primaryNet} / Simulcast on ESPN+`
-        : `National TV Exclusive on ${primaryNet} (Blacked out on ESPN+ & local RSN)`
-    };
-  }
-
-  // NHL Network Showcase (Local RSN in-market, NHL Network out-of-market, blacked out on ESPN+)
-  if (hasNhln) {
-    if (team.country === 'CA') {
-      const oppAbbrev = isHome ? rawGame.awayTeam.abbrev : rawGame.homeTeam.abbrev;
-      const oppInfo = US_TERRITORIES_MAP[oppAbbrev];
-      const oppHasUsRsn = oppInfo && Array.isArray(oppInfo.zipRanges) && oppInfo.zipRanges.length > 0;
-      const oppRsn = oppHasUsRsn ? oppInfo.rsn : null;
-      return {
-        rsn: oppRsn || 'NHLN',
-        netUSNat: 'NHLN',
-        primaryNet: 'NHLN',
-        secondaryNet: oppRsn || '',
-        espnPlus: false,
-        typeUS: 'nhl_network',
-        coverageLabel: oppRsn ? 'NHL Network / Opponent RSN' : 'NHL Network Exclusive',
-        bannerText: oppRsn
-          ? `National on NHL Network / Local ${oppInfo.name} market on ${oppRsn} (Blacked out on ESPN+)`
-          : 'National TV Exclusive on NHL Network (Blacked out on ESPN+)'
-      };
-    }
-    return {
-      rsn: rsnFeed,
-      netUSNat: 'NHLN',
-      primaryNet: rsnFeed,
-      secondaryNet: 'NHLN',
-      espnPlus: false,
-      typeUS: 'nhl_network',
-      coverageLabel: 'NHL Network / Local RSN',
-      bannerText: `In-market on ${rsnFeed} / Out-of-market on NHL Network (Blacked out on ESPN+)`
-    };
-  }
-
-  // Standard Regional Game (Local RSN in-market, ESPN+ out-of-market)
-  if (team.country === 'CA') {
-    const oppAbbrev = isHome ? rawGame.awayTeam.abbrev : rawGame.homeTeam.abbrev;
-    const oppInfo = US_TERRITORIES_MAP[oppAbbrev];
-    const oppHasUsRsn = oppInfo && Array.isArray(oppInfo.zipRanges) && oppInfo.zipRanges.length > 0;
-    const oppRsn = oppHasUsRsn ? oppInfo.rsn : null;
-    return {
-      rsn: oppRsn || 'ESPN+',
-      netUSNat: null,
-      primaryNet: 'ESPN+',
-      secondaryNet: oppRsn || '',
-      espnPlus: true,
-      typeUS: 'regional',
-      coverageLabel: oppRsn ? 'ESPN+ / Opponent RSN' : 'ESPN+ Out-of-Market',
-      bannerText: oppRsn
-        ? `Available on ESPN+ / Subject to local RSN blackout in ${oppInfo.name} market (${oppRsn})`
-        : 'Available nationwide in the US on ESPN+ (No local RSN blackout)'
-    };
-  }
-
-  return {
-    rsn: rsnFeed,
-    netUSNat: null,
-    primaryNet: rsnFeed,
-    secondaryNet: 'ESPN+',
-    espnPlus: true,
-    typeUS: 'regional',
-    coverageLabel: 'Regional RSN / ESPN+',
-    bannerText: `Available on ESPN+ / Subject to local RSN blackout (${rsnFeed})`
-  };
 }
 
 async function ensureUsTeamData(team, forceRefresh) {
@@ -292,20 +156,12 @@ async function ensureUsTeamData(team, forceRefresh) {
               : 'Available nationwide in the US on ESPN+ (No local RSN blackout)'
           };
         }
-        const legacyFallbackRe = /^(?:FanDuel Sports .*|Victory\+.*)$/i;
         const rawRsn = typeof g.rsn === 'string' ? g.rsn.trim() : g.rsn;
         const rawPrimary = typeof g.primaryNet === 'string' ? g.primaryNet.trim() : g.primaryNet;
-        const normalizedRsn = legacyFallbackRe.test(rawRsn || '') ? team.rsn : rawRsn;
-        const normalizedPrimary = legacyFallbackRe.test(rawPrimary || '') ? team.rsn : rawPrimary;
-        const normalizedBanner =
-          typeof g.bannerText === 'string'
-            ? g.bannerText.replace(/(?:FanDuel Sports [^)]+|Victory\+[^)]*)/gi, team.rsn).trim()
-            : g.bannerText;
         return {
           ...g,
-          rsn: normalizedRsn,
-          primaryNet: normalizedPrimary,
-          bannerText: normalizedBanner,
+          rsn: rawRsn,
+          primaryNet: rawPrimary,
           netUSNat
         };
       });
@@ -332,11 +188,11 @@ async function ensureUsTeamData(team, forceRefresh) {
     const vs = isHome ? `vs ${oppCommon}` : `@ ${oppCommon}`;
     const fullMatchup = getFullMatchup(team.name, vs, opp);
 
-    const bcast = classifyUsBroadcast(g, team);
+    const bcast = classifyUsBroadcast(g, team, US_TERRITORIES_MAP, NETWORK_ALIASES);
 
     schedule.push({
       id: g.id,
-      date: convertDate(dt),
+      date: formatEtDate(dt),
       iso: g.startTimeUTC,
       time: dt.toLocaleTimeString('en-US', {
         hour: 'numeric',
@@ -727,9 +583,12 @@ function renderTeamPage(team, teamData, allTeams) {
   upcomingGames.slice(0, 10).forEach(g => {
     const origIdx = schedule.findIndex(orig => orig.id === g.id);
     const gameNum = origIdx + 1;
-    const statusBadge = g.espnPlus
-      ? '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-tv mr-1 text-[10px]"></i>ESPN+ / RSN</span>'
-      : '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 whitespace-nowrap"><i class="fa-solid fa-satellite-dish mr-1 text-[10px]"></i>National TV</span>';
+    const statusBadge =
+      g.typeUS === 'national' && g.netUSNat === 'ESPN+'
+        ? '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-tv mr-1 text-[10px]"></i>ESPN+ Exclusive</span>'
+        : g.espnPlus
+        ? '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 whitespace-nowrap"><i class="fa-solid fa-tv mr-1 text-[10px]"></i>ESPN+ / RSN</span>'
+        : '<span class="inline-flex items-center h-5 px-2 rounded-full text-xs font-semibold bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 whitespace-nowrap"><i class="fa-solid fa-satellite-dish mr-1 text-[10px]"></i>National TV</span>';
 
     desktopRows += `
       <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-800/40 transition border-b border-slate-100 dark:border-slate-800/60">

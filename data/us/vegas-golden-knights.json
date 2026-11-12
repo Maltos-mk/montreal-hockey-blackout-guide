@@ -451,14 +451,14 @@
       "opp": "DAL",
       "fullMatchup": "Vegas Golden Knights vs Dallas Stars",
       "venue": "T-Mobile Arena",
-      "rsn": "Scripps Sports",
-      "netUSNat": null,
-      "primaryNet": "Scripps Sports",
-      "secondaryNet": "ESPN+",
+      "rsn": null,
+      "netUSNat": "ESPN+",
+      "primaryNet": "ESPN+",
+      "secondaryNet": "Hulu / Disney+",
       "espnPlus": true,
-      "typeUS": "regional",
-      "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports)"
+      "typeUS": "national",
+      "coverageLabel": "ESPN+ / Hulu Exclusive",
+      "bannerText": "National Streaming Exclusive on ESPN+ / Hulu (No local RSN blackout)"
     },
     {
       "id": 2026020369,
@@ -1279,14 +1279,14 @@
       "opp": "SJS",
       "fullMatchup": "Vegas Golden Knights vs San Jose Sharks",
       "venue": "T-Mobile Arena",
-      "rsn": "Scripps Sports",
-      "netUSNat": null,
-      "primaryNet": "Scripps Sports",
-      "secondaryNet": "ESPN+",
+      "rsn": null,
+      "netUSNat": "ESPN+",
+      "primaryNet": "ESPN+",
+      "secondaryNet": "Hulu / Disney+",
       "espnPlus": true,
-      "typeUS": "regional",
-      "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports)"
+      "typeUS": "national",
+      "coverageLabel": "ESPN+ / Hulu Exclusive",
+      "bannerText": "National Streaming Exclusive on ESPN+ / Hulu (No local RSN blackout)"
     },
     {
       "id": 2026021116,

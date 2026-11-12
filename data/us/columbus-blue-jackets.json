@@ -307,14 +307,14 @@
       "opp": "FLA",
       "fullMatchup": "Columbus Blue Jackets vs Florida Panthers",
       "venue": "Nationwide Arena",
-      "rsn": "Blue Jackets Hockey Network (CBJHN)",
-      "netUSNat": null,
-      "primaryNet": "Blue Jackets Hockey Network (CBJHN)",
-      "secondaryNet": "ESPN+",
+      "rsn": null,
+      "netUSNat": "ESPN+",
+      "primaryNet": "ESPN+",
+      "secondaryNet": "Hulu / Disney+",
       "espnPlus": true,
-      "typeUS": "regional",
-      "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Blue Jackets Hockey Network (CBJHN))"
+      "typeUS": "national",
+      "coverageLabel": "ESPN+ / Hulu Exclusive",
+      "bannerText": "National Streaming Exclusive on ESPN+ / Hulu (No local RSN blackout)"
     },
     {
       "id": 2026020304,

@@ -138,9 +138,9 @@
       "opp": "FLA",
       "venue": "Amerant Bank Arena",
       "netEN": "Sportsnet Pacific",
-      "netFR": "",
+      "netFR": "TVA Sports",
       "typeEN": "regional",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020123,
@@ -163,7 +163,7 @@
       "vs": "vs Hurricanes",
       "opp": "CAR",
       "venue": "Rogers Arena",
-      "netEN": "Sportsnet Pacific, Sportsnet 360",
+      "netEN": "Sportsnet",
       "netFR": "",
       "typeEN": "national",
       "typeFR": "regional"
@@ -957,7 +957,7 @@
       "opp": "OTT",
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet Pacific, TSN5",
-      "netFR": "RDSI",
+      "netFR": "RDS Info",
       "typeEN": "regional",
       "typeFR": "regional"
     },
