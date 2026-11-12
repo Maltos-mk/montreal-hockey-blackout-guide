@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('@playwright/test');
-const { formatEtDate } = require('./lib/date_utils');
+const { formatEtDate, getPrimaryCanadianTeamId, formatTeamGameTime, formatTeamGameDate } = require('./lib/date_utils');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const OG_DIR = path.join(BUILD_DIR, 'og');
@@ -342,6 +342,10 @@ activeGames.forEach(({ game: g, homeId, awayId, datePrefix }) => {
     statusClass = 'status-national';
   }
 
+  const primaryTeamId = getPrimaryCanadianTeamId(homeId, awayId);
+  const displayDate = formatTeamGameDate(g.iso, primaryTeamId, g.date);
+  const displayTime = formatTeamGameTime(g.iso, primaryTeamId);
+
   const networks = [g.netEN || 'Sportsnet'];
   if (g.netFR && g.netFR !== 'None') networks.push(g.netFR);
   const networkStr = networks.join(' / ');
@@ -353,7 +357,7 @@ activeGames.forEach(({ game: g, homeId, awayId, datePrefix }) => {
       statusTag,
       statusClass,
       headline: `${awayCity} vs. ${homeCity} — TV & Blackout Status`,
-      subheadline: `${g.date} • ${g.time || '7:00 PM ET'} • Networks: ${networkStr}`,
+      subheadline: `${displayDate} • ${displayTime} • Networks: ${networkStr}`,
       ctaText: 'Check Your Region & Channels → hockeyblackouts.ca'
     }
   });

@@ -15,7 +15,12 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-const { formatEtDate } = require('./lib/date_utils');
+const {
+  TEAM_TIMEZONES,
+  formatEtDate,
+  getPrimaryCanadianTeamId,
+  formatTeamGameTime
+} = require('./lib/date_utils');
 
 const BSKY_SERVICE = 'https://bsky.social';
 const isDryRun = process.argv.includes('--dry-run');
@@ -118,47 +123,6 @@ const CANADIAN_TEAMS = {
     timeZoneAbbr: 'CT',
     timeZoneAbbrFr: 'HC'
   }
-};
-
-// All 32 NHL Teams Timezone Metadata
-const TEAM_TIMEZONES = {
-  // Canadian Teams
-  'VAN': { timeZone: 'America/Vancouver', abbr: 'PT', abbrFr: 'HP' },
-  'CGY': { timeZone: 'America/Edmonton', abbr: 'MT', abbrFr: 'HR' },
-  'EDM': { timeZone: 'America/Edmonton', abbr: 'MT', abbrFr: 'HR' },
-  'WPG': { timeZone: 'America/Winnipeg', abbr: 'CT', abbrFr: 'HC' },
-  'TOR': { timeZone: 'America/Toronto', abbr: 'ET', abbrFr: 'HE' },
-  'OTT': { timeZone: 'America/Toronto', abbr: 'ET', abbrFr: 'HE' },
-  'MTL': { timeZone: 'America/Toronto', abbr: 'ET', abbrFr: 'HE' },
-  // US Eastern Teams
-  'BOS': { timeZone: 'America/New_York', abbr: 'ET' },
-  'BUF': { timeZone: 'America/New_York', abbr: 'ET' },
-  'DET': { timeZone: 'America/New_York', abbr: 'ET' },
-  'FLA': { timeZone: 'America/New_York', abbr: 'ET' },
-  'TBL': { timeZone: 'America/New_York', abbr: 'ET' },
-  'CAR': { timeZone: 'America/New_York', abbr: 'ET' },
-  'NJD': { timeZone: 'America/New_York', abbr: 'ET' },
-  'NYI': { timeZone: 'America/New_York', abbr: 'ET' },
-  'NYR': { timeZone: 'America/New_York', abbr: 'ET' },
-  'PHI': { timeZone: 'America/New_York', abbr: 'ET' },
-  'PIT': { timeZone: 'America/New_York', abbr: 'ET' },
-  'WSH': { timeZone: 'America/New_York', abbr: 'ET' },
-  'CBJ': { timeZone: 'America/New_York', abbr: 'ET' },
-  // US Central Teams
-  'CHI': { timeZone: 'America/Chicago', abbr: 'CT' },
-  'DAL': { timeZone: 'America/Chicago', abbr: 'CT' },
-  'MIN': { timeZone: 'America/Chicago', abbr: 'CT' },
-  'NSH': { timeZone: 'America/Chicago', abbr: 'CT' },
-  'STL': { timeZone: 'America/Chicago', abbr: 'CT' },
-  // US Mountain Teams
-  'COL': { timeZone: 'America/Denver', abbr: 'MT' },
-  'UTA': { timeZone: 'America/Denver', abbr: 'MT' },
-  // US Pacific Teams
-  'ANA': { timeZone: 'America/Los_Angeles', abbr: 'PT' },
-  'LAK': { timeZone: 'America/Los_Angeles', abbr: 'PT' },
-  'SJS': { timeZone: 'America/Los_Angeles', abbr: 'PT' },
-  'SEA': { timeZone: 'America/Los_Angeles', abbr: 'PT' },
-  'VGK': { timeZone: 'America/Los_Angeles', abbr: 'PT' }
 };
 
 const ALL_CITIES = {
@@ -377,22 +341,7 @@ function resolveCardImage(datePrefix, homeSlug, awaySlug, primaryTeamSlug) {
 }
 
 // Format game times in specific team timezones
-function formatGameTime(iso, teamId) {
-  const tzConfig = TEAM_TIMEZONES[teamId] || { timeZone: 'America/Toronto', abbr: 'ET' };
-  if (iso) {
-    const dt = new Date(iso);
-    if (!isNaN(dt.getTime())) {
-      const formatted = new Intl.DateTimeFormat('en-US', {
-        timeZone: tzConfig.timeZone,
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-      }).format(dt);
-      return `${formatted} ${tzConfig.abbr}`;
-    }
-  }
-  return `7:00 PM ${tzConfig.abbr}`;
-}
+const formatGameTime = formatTeamGameTime;
 
 function formatGameTimeFr(iso, teamId = 'MTL') {
   const tzConfig = TEAM_TIMEZONES[teamId] || { timeZone: 'America/Toronto', abbrFr: 'HE' };
@@ -570,7 +519,7 @@ async function main() {
             homeId,
             awayId,
             datePrefix,
-            primaryTeamCode: teamCode
+            primaryTeamId: getPrimaryCanadianTeamId(homeId, awayId)
           });
         }
       }
@@ -593,13 +542,13 @@ async function main() {
 
   const postTasks = [];
 
-  activeGames.forEach(({ game, homeId, awayId, datePrefix, primaryTeamCode }) => {
+  activeGames.forEach(({ game, homeId, awayId, datePrefix, primaryTeamId }) => {
     const homeCity = ALL_CITIES[homeId] || homeId;
     const awayCity = ALL_CITIES[awayId] || awayId;
     const homeSlug = slugify(homeCity);
     const awaySlug = slugify(awayCity);
     const gameUrl = `https://hockeyblackouts.ca/game/${datePrefix}/${homeSlug}-vs-${awaySlug}/`;
-    const cardImagePath = resolveCardImage(datePrefix, homeSlug, awaySlug, CANADIAN_TEAMS[primaryTeamCode]?.slug || 'toronto');
+    const cardImagePath = resolveCardImage(datePrefix, homeSlug, awaySlug, CANADIAN_TEAMS[primaryTeamId]?.slug || 'toronto');
 
     const campaign = (game.netEN === 'SN+' && game.typeEN === 'national') ? 'sn_exclusive' : 'blackout_guide';
 
