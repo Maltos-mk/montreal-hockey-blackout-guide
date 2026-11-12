@@ -842,7 +842,7 @@
       "opp": "OTT",
       "venue": "KeyBank Center",
       "netEN": "Sportsnet",
-      "netFR": "RDS",
+      "netFR": "",
       "typeEN": "national",
       "typeFR": "regional"
     },
@@ -998,9 +998,9 @@
       "opp": "NYI",
       "venue": "UBS Arena",
       "netEN": "SN+",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "typeEN": "national",
-      "typeFR": "national"
+      "typeFR": "regional"
     },
     {
       "id": 2026021196,

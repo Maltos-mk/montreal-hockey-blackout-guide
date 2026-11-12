@@ -358,7 +358,7 @@
       "vs": "@ Blues",
       "opp": "STL",
       "venue": "Enterprise Center",
-      "netEN": "Sportsnet",
+      "netEN": "Sportsnet West, Sportsnet One",
       "netFR": "",
       "typeEN": "national",
       "typeFR": "regional"
@@ -684,9 +684,9 @@
       "opp": "WPG",
       "venue": "Rogers Place",
       "netEN": "Sportsnet West, TSN3",
-      "netFR": "",
+      "netFR": "TVA Sports",
       "typeEN": "regional",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020797,

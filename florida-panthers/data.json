@@ -348,7 +348,7 @@
       "opp": "OTT",
       "venue": "Amerant Bank Arena",
       "netEN": "TSN5",
-      "netFR": "RDSI",
+      "netFR": "RDS Info",
       "typeEN": "regional",
       "typeFR": "regional"
     },
@@ -634,9 +634,9 @@
       "opp": "MIN",
       "venue": "Grand Casino Arena",
       "netEN": "SN+",
-      "netFR": "",
+      "netFR": "TVA Sports",
       "typeEN": "national",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020760,
@@ -738,9 +738,9 @@
       "opp": "NYI",
       "venue": "Amerant Bank Arena",
       "netEN": "SN+",
-      "netFR": "",
+      "netFR": "TVA Sports",
       "typeEN": "national",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020888,

@@ -189,7 +189,7 @@
       "vs": "vs Kraken",
       "opp": "SEA",
       "venue": "Scotiabank Saddledome",
-      "netEN": "Sportsnet West, Sportsnet 360",
+      "netEN": "Sportsnet, Sportsnet 360",
       "netFR": "",
       "typeEN": "national",
       "typeFR": "regional"
@@ -930,9 +930,9 @@
       "vs": "@ Hurricanes",
       "opp": "CAR",
       "venue": "Lenovo Center",
-      "netEN": "Sportsnet",
+      "netEN": "Sportsnet West",
       "netFR": "",
-      "typeEN": "national",
+      "typeEN": "regional",
       "typeFR": "regional"
     },
     {

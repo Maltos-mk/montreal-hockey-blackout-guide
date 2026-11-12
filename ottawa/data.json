@@ -73,7 +73,7 @@
       "opp": "PHI",
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
-      "netFR": "RDSI",
+      "netFR": "RDS Info",
       "typeEN": "regional",
       "typeFR": "regional"
     },
@@ -86,9 +86,9 @@
       "opp": "NSH",
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet One",
-      "netFR": "RDS",
+      "netFR": "TVA Sports Direct",
       "typeEN": "national",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020088,
@@ -112,7 +112,7 @@
       "opp": "STL",
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
-      "netFR": "RDSI",
+      "netFR": "RDS Info",
       "typeEN": "regional",
       "typeFR": "regional"
     },
@@ -138,9 +138,9 @@
       "opp": "PHI",
       "venue": "Xfinity Mobile Arena",
       "netEN": "Sportsnet One",
-      "netFR": "RDS",
+      "netFR": "TVA Sports Direct",
       "typeEN": "national",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020153,
@@ -190,7 +190,7 @@
       "opp": "VGK",
       "venue": "T-Mobile Arena",
       "netEN": "TSN5",
-      "netFR": "RDSI",
+      "netFR": "RDS Info",
       "typeEN": "regional",
       "typeFR": "regional"
     },
@@ -203,7 +203,7 @@
       "opp": "LAK",
       "venue": "Crypto.com Arena",
       "netEN": "TSN5",
-      "netFR": "RDSI",
+      "netFR": "RDS Info",
       "typeEN": "regional",
       "typeFR": "regional"
     },
@@ -216,7 +216,7 @@
       "opp": "SJS",
       "venue": "SAP Center at San Jose",
       "netEN": "TSN5",
-      "netFR": "RDSI",
+      "netFR": "RDS Info",
       "typeEN": "regional",
       "typeFR": "regional"
     },
@@ -255,9 +255,9 @@
       "opp": "UTA",
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet One",
-      "netFR": "RDS",
+      "netFR": "TVA Sports Direct",
       "typeEN": "national",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020288,
@@ -333,9 +333,9 @@
       "opp": "LAK",
       "venue": "Canadian Tire Centre",
       "netEN": "Sportsnet One",
-      "netFR": "RDS",
+      "netFR": "TVA Sports 2",
       "typeEN": "national",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020380,
@@ -359,7 +359,7 @@
       "opp": "FLA",
       "venue": "Amerant Bank Arena",
       "netEN": "TSN5",
-      "netFR": "RDSI",
+      "netFR": "RDS Info",
       "typeEN": "regional",
       "typeFR": "regional"
     },
@@ -541,7 +541,7 @@
       "opp": "DAL",
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
-      "netFR": "RDSI",
+      "netFR": "RDS Info",
       "typeEN": "regional",
       "typeFR": "regional"
     },
@@ -957,7 +957,7 @@
       "opp": "VAN",
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5, Sportsnet Pacific",
-      "netFR": "RDSI",
+      "netFR": "RDS Info",
       "typeEN": "regional",
       "typeFR": "regional"
     },

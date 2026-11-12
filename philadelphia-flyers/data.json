@@ -88,7 +88,7 @@
       "opp": "OTT",
       "venue": "Canadian Tire Centre",
       "netEN": "TSN5",
-      "netFR": "RDSI",
+      "netFR": "RDS Info",
       "typeEN": "regional",
       "typeFR": "regional"
     },
@@ -153,9 +153,9 @@
       "opp": "OTT",
       "venue": "Xfinity Mobile Arena",
       "netEN": "Sportsnet One",
-      "netFR": "TVAS-D",
+      "netFR": "TVA Sports Direct",
       "typeEN": "national",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020138,

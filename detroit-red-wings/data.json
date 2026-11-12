@@ -647,9 +647,9 @@
       "opp": "MIN",
       "venue": "Little Caesars Arena",
       "netEN": "SN+",
-      "netFR": "",
+      "netFR": "TVA Sports",
       "typeEN": "national",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020786,
@@ -686,9 +686,9 @@
       "opp": "TBL",
       "venue": "Little Caesars Arena",
       "netEN": "Sportsnet",
-      "netFR": "",
+      "netFR": "TVA Sports",
       "typeEN": "national",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020830,

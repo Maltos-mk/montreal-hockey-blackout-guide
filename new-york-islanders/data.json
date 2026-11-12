@@ -530,7 +530,7 @@
       "opp": "OTT",
       "venue": "UBS Arena",
       "netEN": "TSN5",
-      "netFR": "RDS",
+      "netFR": "",
       "typeEN": "regional",
       "typeFR": "regional"
     },
@@ -738,9 +738,9 @@
       "opp": "FLA",
       "venue": "Amerant Bank Arena",
       "netEN": "SN+",
-      "netFR": "",
+      "netFR": "TVA Sports",
       "typeEN": "national",
-      "typeFR": "regional"
+      "typeFR": "national"
     },
     {
       "id": 2026020887,
@@ -998,9 +998,9 @@
       "opp": "BUF",
       "venue": "UBS Arena",
       "netEN": "SN+",
-      "netFR": "TVA Sports",
+      "netFR": "",
       "typeEN": "national",
-      "typeFR": "national"
+      "typeFR": "regional"
     },
     {
       "id": 2026021218,
