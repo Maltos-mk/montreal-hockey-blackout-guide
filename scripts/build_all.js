@@ -1,6 +1,17 @@
 const { execSync } = require("child_process");
 const fs = require('fs');
 const path = require('path');
+const { formatEtDate } = require('./lib/date_utils');
+
+function copySharedAssets(targetRootDir) {
+  const destShared = path.join(targetRootDir, 'shared');
+  execSync(`cp -r shared ${targetRootDir}/`);
+  fs.readdirSync(destShared, { withFileTypes: true }).forEach(entry => {
+    if (entry.isFile() && entry.name.endsWith('.backup')) {
+      fs.unlinkSync(path.join(destShared, entry.name));
+    }
+  });
+}
 
 console.log('Compiling static Tailwind CSS...');
 execSync('npx tailwindcss -i shared/input.css -o shared/tailwind.min.css --minify', { stdio: 'inherit' });
@@ -19,7 +30,7 @@ if (fs.existsSync(BUILD_COM_DIR)) {
   fs.rmSync(BUILD_COM_DIR, { recursive: true, force: true });
 }
 
-execSync(`cp -r shared ${BUILD_DIR}/`);
+copySharedAssets(BUILD_DIR);
 execSync(`cp LICENSE ${BUILD_DIR}/`);
 if (fs.existsSync("robots.txt")) fs.copyFileSync("robots.txt", path.join(BUILD_DIR, "robots.txt"));
 if (fs.existsSync("shared/favicon-48x48.png")) fs.copyFileSync("shared/favicon-48x48.png", path.join(BUILD_DIR, "favicon.ico"));
@@ -121,7 +132,7 @@ teams.forEach(team => {
     const awayId = isHome ? g.opp : data.team.id;
     const homeCity = TEAM_CITIES[homeId] || homeId;
     const awayCity = TEAM_CITIES[awayId] || awayId;
-    const datePrefix = g.iso.split('T')[0];
+    const datePrefix = formatEtDate(g.iso);
     const matchKey = `${datePrefix}_${homeId}_${awayId}`;
 
     if (!allUniqueUpcoming.has(matchKey)) {
@@ -204,14 +215,13 @@ execSync('node scripts/generate_og_cards.js', { stdio: 'inherit' });
 execSync('node scripts/generate_us_team_pages.js', { stdio: 'inherit' });
 
 // Assemble the rest of the .com package: shared assets, OG image, robots.txt, sitemap.xml
-execSync(`cp -r shared ${BUILD_COM_DIR}/`);
+copySharedAssets(BUILD_COM_DIR);
 execSync(`cp LICENSE ${BUILD_COM_DIR}/`);
 if (fs.existsSync('shared/favicon-48x48.png')) fs.copyFileSync('shared/favicon-48x48.png', path.join(BUILD_COM_DIR, 'favicon.ico'));
 // IndexNow ownership key for hockeyblackouts.com (separate from the .ca key above)
 const indexNowKeyFileCom = "68ca54b3a94f5825cf4f6ca859c94e8f.txt";
 fs.copyFileSync(indexNowKeyFileCom, path.join(BUILD_COM_DIR, indexNowKeyFileCom));
 fs.mkdirSync(path.join(BUILD_COM_DIR, 'og'), { recursive: true });
-fs.copyFileSync(path.join(BUILD_DIR, 'og', 'default.png'), path.join(BUILD_COM_DIR, 'og', 'default.png'));
 fs.writeFileSync(path.join(BUILD_COM_DIR, 'robots.txt'), 'User-agent: *\nAllow: /\n\nSitemap: https://hockeyblackouts.com/sitemap.xml\n');
 const usTeamsMeta = JSON.parse(fs.readFileSync('data/us_teams.json', 'utf-8'));
 const comLastmod = new Date().toISOString().split('T')[0];
@@ -235,12 +245,12 @@ let masterSitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <priority>1.0</priority>
   </url>
 `;
-teams.forEach(team => {
+all32CaTeams.forEach(team => {
   masterSitemap += `  <url>
     <loc>https://hockeyblackouts.ca/${team.dir}/</loc>
     <lastmod>${buildDateIso}</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <priority>${team.country === 'CA' ? '0.9' : '0.85'}</priority>
   </url>\n`;
 });
 masterSitemap += `  <url>
@@ -266,11 +276,17 @@ explainerSlugs.forEach(slug => {
   </url>\n`;
 });
 
-// Add active game URLs to master sitemap (rolling window: past 7 days through next 14 days to preserve crawl budget)
+// Add active game URLs to master sitemap (rolling window: past 7 days through next 14 days),
+// capped so total sitemap URLs never exceed 80 across /, 32 team hubs, /fr/montreal/, and 5 explainers.
 // Synchronized with scripts/build_game_pages.js POST_GAME_RETENTION_DAYS = 7
 const POST_GAME_RETENTION_DAYS = 7;
+const CA_SITEMAP_MAX_URLS = 80;
+const evergreenCount = 1 + all32CaTeams.length + 1 + explainerSlugs.length;
+const maxGameUrls = Math.max(0, CA_SITEMAP_MAX_URLS - evergreenCount);
 const gamesBaseDir = path.join(BUILD_DIR, 'game');
-if (fs.existsSync(gamesBaseDir)) {
+if (fs.existsSync(gamesBaseDir) && maxGameUrls > 0) {
+  const todayEt = formatEtDate(now.toISOString());
+  const gameCandidates = [];
   const dates = fs.readdirSync(gamesBaseDir);
   dates.forEach(date => {
     const gameDate = new Date(date + 'T23:59:59Z');
@@ -286,14 +302,29 @@ if (fs.existsSync(gamesBaseDir)) {
           const content = fs.readFileSync(htmlPath, 'utf-8');
           if (content.includes('http-equiv="refresh"')) return;
         }
-        masterSitemap += `  <url>
+        gameCandidates.push({ date, matchup });
+      });
+    }
+  });
+
+  // Prioritize upcoming/today games soonest-first, then most recent past games
+  gameCandidates.sort((a, b) => {
+    const aUpcoming = a.date >= todayEt ? 0 : 1;
+    const bUpcoming = b.date >= todayEt ? 0 : 1;
+    if (aUpcoming !== bUpcoming) return aUpcoming - bUpcoming;
+    if (aUpcoming === 0) {
+      return a.date.localeCompare(b.date) || a.matchup.localeCompare(b.matchup);
+    }
+    return b.date.localeCompare(a.date) || a.matchup.localeCompare(b.matchup);
+  });
+
+  gameCandidates.slice(0, maxGameUrls).forEach(({ date, matchup }) => {
+    masterSitemap += `  <url>
     <loc>https://hockeyblackouts.ca/game/${date}/${matchup}/</loc>
     <lastmod>${buildDateIso}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>\n`;
-      });
-    }
   });
 }
 

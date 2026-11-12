@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { formatEtDate } = require('./lib/date_utils');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const GAMES_DIR = path.join(BUILD_DIR, 'game');
@@ -77,7 +78,7 @@ const uniqueGames = new Map();
     const awayTeamId = isHome ? g.opp : teamId;
     
     // Key by date and home/away to deduplicate Canadian vs Canadian games
-    const datePrefix = g.iso.split('T')[0];
+    const datePrefix = formatEtDate(g.iso);
     const matchKey = `${datePrefix}_${homeTeamId}_${awayTeamId}`;
 
     if (!uniqueGames.has(matchKey)) {
@@ -237,7 +238,7 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
       badgeText = 'Prime Video (National)';
       badgeClass = 'bg-emerald-500 text-slate-950 font-bold px-3 py-1 rounded-full text-xs shadow-sm';
       boxClass = 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400';
-      explanation = 'National Prime Monday Night broadcast. Streams anywhere in Canada with an Amazon Prime membership. No regional blackout restrictions.';
+      explanation = 'National Prime Wednesday Night broadcast. Streams anywhere in Canada with an Amazon Prime membership. No regional blackout restrictions.';
       icon = '<i class="fa-solid fa-circle-check text-emerald-400 text-lg"></i>';
     } else if (isNational) {
       headline = `Coast-to-Coast Broadcast on ${g.netEN || 'Sportsnet'}`;
@@ -419,7 +420,7 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
   
   if (isPrime) {
     streamingProviderName = 'Amazon Prime Video';
-    streamingDescription = 'Exclusive national broadcast for Prime Monday Night Hockey.';
+    streamingDescription = 'Exclusive national broadcast for Prime Wednesday Night Hockey.';
     streamingActionLink = '<a href="https://www.amazon.ca/tryprimefree?tag=maltos-20" data-umami-event="amazon-prime-click" target="_blank" rel="sponsored noopener noreferrer" class="w-fit text-xs font-bold text-blue-400 hover:text-blue-300 flex items-center gap-1 transition"><span>Try Prime 30-Day Free Trial</span><i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>';
   } else if (g.netEN && g.netEN.includes('TSN') && !isNational) {
     streamingProviderName = 'TSN+';

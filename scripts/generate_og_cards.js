@@ -1,19 +1,23 @@
 const fs = require('fs');
 const path = require('path');
 const { chromium } = require('@playwright/test');
+const { formatEtDate } = require('./lib/date_utils');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const OG_DIR = path.join(BUILD_DIR, 'og');
 const TEAMS_OG_DIR = path.join(OG_DIR, 'teams');
 const EXPLAINERS_OG_DIR = path.join(OG_DIR, 'explainers');
 const GAMES_OG_DIR = path.join(OG_DIR, 'games');
+const COM_OG_DIR = path.join(__dirname, '../build_com/og');
+const COM_TEAMS_OG_DIR = path.join(COM_OG_DIR, 'teams');
 
 // Ensure output directories exist
-[OG_DIR, TEAMS_OG_DIR, EXPLAINERS_OG_DIR, GAMES_OG_DIR].forEach(dir => {
+[OG_DIR, TEAMS_OG_DIR, EXPLAINERS_OG_DIR, GAMES_OG_DIR, COM_OG_DIR, COM_TEAMS_OG_DIR].forEach(dir => {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 });
 
 function renderCardHtml({
+  brandName = 'HockeyBlackouts.ca',
   brandBadge = 'Canadian Broadcast Guide',
   statusTag = '',
   statusClass = 'status-regional',
@@ -150,7 +154,7 @@ function renderCardHtml({
   <div class="header">
     <div class="brand">
       <span class="brand-icon">🏒</span>
-      <span class="brand-name">HockeyBlackouts.ca</span>
+      <span class="brand-name">${brandName}</span>
     </div>
     <div class="badge">${brandBadge}</div>
   </div>
@@ -241,7 +245,7 @@ const EXPLAINERS_CONFIG = [
     slug: 'prime-hockey-schedule-canada',
     tag: 'National Broadcast Schedule',
     statusClass: 'status-prime',
-    headline: 'Amazon Prime Monday Night Hockey',
+    headline: 'Amazon Prime Wednesday Night Hockey',
     subheadline: 'Full broadcast schedule and streaming guide. Watch exclusive Prime Video NHL games coast-to-coast in Canada with zero blackouts.'
   },
   {
@@ -304,7 +308,7 @@ const activeGames = new Map();
       const isHome = g.vs.startsWith('vs ');
       const homeId = isHome ? data.team.id : g.opp;
       const awayId = isHome ? g.opp : data.team.id;
-      const datePrefix = g.iso.split('T')[0];
+      const datePrefix = formatEtDate(g.iso);
       const matchKey = `${datePrefix}_${homeId}_${awayId}`;
       if (!activeGames.has(matchKey)) {
         activeGames.set(matchKey, {
@@ -351,6 +355,41 @@ activeGames.forEach(({ game: g, homeId, awayId, datePrefix }) => {
       headline: `${awayCity} vs. ${homeCity} — TV & Blackout Status`,
       subheadline: `${g.date} • ${g.time || '7:00 PM ET'} • Networks: ${networkStr}`,
       ctaText: 'Check Your Region & Channels → hockeyblackouts.ca'
+    }
+  });
+});
+
+// 5. US Site (hockeyblackouts.com) OpenGraph cards: default + 32 team hubs
+cardsToGenerate.push({
+  path: path.join(COM_OG_DIR, 'default.png'),
+  data: {
+    brandName: 'HockeyBlackouts.com',
+    brandBadge: 'US NHL TV & RSN Guide',
+    statusTag: 'Interactive ZIP Blackout Finder',
+    statusClass: 'status-national',
+    headline: 'Where & How to Watch NHL Games in the US',
+    subheadline: 'Check local RSN coverage, ESPN+ ZIP code blackouts, and national TV channels for all 32 NHL teams.',
+    footerMeta: '100% Free • Independent • US NHL Broadcasts',
+    ctaText: 'Check Your ZIP & Channels → hockeyblackouts.com'
+  }
+});
+
+const usTeamsMeta = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/us_teams.json'), 'utf-8'));
+usTeamsMeta.forEach(t => {
+  const isCaTeam = t.country === 'CA';
+  cardsToGenerate.push({
+    path: path.join(COM_TEAMS_OG_DIR, `${t.slug}.png`),
+    data: {
+      brandName: 'HockeyBlackouts.com',
+      brandBadge: isCaTeam ? 'US Out-of-Market Guide' : `${t.rsn} & ESPN+ Guide`,
+      statusTag: isCaTeam ? 'US Streaming & TV Availability' : `${t.name} Broadcast Territory`,
+      statusClass: 'status-info',
+      headline: isCaTeam ? `How to Watch ${t.name} in the US` : `Watch ${t.name} Without Blackouts`,
+      subheadline: isCaTeam
+        ? `US out-of-market streaming on ESPN+ plus national broadcasts on ESPN, ABC, TNT, and NHL Network.`
+        : `In-market ${t.rsn} coverage, US ZIP code blackout checker, and out-of-market ESPN+ streaming.`,
+      footerMeta: '100% Free • Independent • US NHL Broadcasts',
+      ctaText: 'Check Your ZIP & Channels → hockeyblackouts.com'
     }
   });
 });

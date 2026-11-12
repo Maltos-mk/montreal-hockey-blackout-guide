@@ -9,7 +9,15 @@ function validateHtml(filePath, site = 'ca') {
   const hostRe = host.replace(/\./g, '\\.');
   const siteRoot = path.join(__dirname, '..', site === 'com' ? 'build_com' : 'build');
 
-  if (!content.includes(`<link rel="canonical" href="https://${host}/`)) {
+  const is404 = path.basename(filePath) === '404.html';
+  if (is404) {
+    if (content.includes('<link rel="canonical"')) {
+      errors.push('404 page must not include a <link rel="canonical"> tag.');
+    }
+    if (!content.includes('content="noindex, nofollow"')) {
+      errors.push('404 page must include <meta name="robots" content="noindex, nofollow">.');
+    }
+  } else if (!content.includes(`<link rel="canonical" href="https://${host}/`)) {
     errors.push(`Missing or invalid canonical link (must point to https://${host}/)`);
   }
   if (!content.includes('<title>')) {
@@ -29,8 +37,8 @@ function validateHtml(filePath, site = 'ca') {
   const isSplash = site === 'ca' && filePath.endsWith('build/index.html');
   const isGamePage = filePath.includes('/game/');
   const isExplainerPage = EXPLAINER_SLUGS.some(slug => filePath.includes(`/${slug}/`));
-  const isUsTeamPage = site === 'com';
-  const isTeamPage = !isSplash && !isGamePage && !isExplainerPage && !isUsTeamPage && !isRedirect;
+  const isUsTeamPage = site === 'com' && !is404;
+  const isTeamPage = !isSplash && !isGamePage && !isExplainerPage && !isUsTeamPage && !isRedirect && !is404;
 
   // H1 Tag Validation (Crucial for SEO & Bing/Google accessibility audits - required on all pages including redirects)
   const h1Matches = content.match(/<h1[^>]*>([\s\S]*?)<\/h1>/gi);
@@ -144,9 +152,15 @@ function validateHtml(filePath, site = 'ca') {
       if (!content.includes('"@type": "WebSite"') || !content.includes('"@type": "Organization"')) {
         errors.push('US Homepage is missing WebSite or Organization Schema.');
       }
+      if (!content.includes('"name": "HockeyBlackouts.com"')) {
+        errors.push('US Homepage Organization Schema name must be "HockeyBlackouts.com".');
+      }
     } else {
       if (!content.includes('"@type": "FAQPage"')) {
         errors.push('US Team page is missing FAQPage Schema.');
+      }
+      if (!content.includes('https://hockeyblackouts.com/og/teams/')) {
+        errors.push('US Team page og:image must use team-specific /og/teams/<slug>.png card.');
       }
       const cleanedForUsCheck = content
         .replace(/MSG Sportsnet/gi, '')
@@ -158,7 +172,7 @@ function validateHtml(filePath, site = 'ca') {
   }
 
   // 1-to-1 Cross-Border Hreflang Validation (Homepages & All 32 Team Pages across CA & US)
-  if ((isSplash || isUsTeamPage || (isTeamPage && !filePath.includes('/fr/'))) && !isRedirect) {
+  if ((isSplash || isUsTeamPage || (isTeamPage && !filePath.includes('/fr/'))) && !isRedirect && !is404) {
     if (!content.includes('hreflang="en-US" href="https://hockeyblackouts.com/')) {
       errors.push('Missing hreflang="en-US" pointing to https://hockeyblackouts.com/');
     }
@@ -233,10 +247,13 @@ function validateHtml(filePath, site = 'ca') {
   if (site === 'com' && content.includes('cloud.umami.is/script.js') && !content.includes('data-website-id="de005e6e-2c1b-4ecb-8158-7ec341b15192"')) {
     errors.push('.com Umami script tag must use the .com website ID (de005e6e-2c1b-4ecb-8158-7ec341b15192).');
   }
-  if (site === 'ca' && content.includes('cloud.umami.is/script.js') && !content.includes('data-exclude-hash="true"')) {
+  if (site === 'ca' && content.includes('de005e6e-2c1b-4ecb-8158-7ec341b15192')) {
+    errors.push('.ca page contains the .com Umami website ID.');
+  }
+  if ((site === 'ca' || site === 'com') && content.includes('cloud.umami.is/script.js') && !content.includes('data-exclude-hash="true"')) {
     errors.push('Umami script tag is missing data-exclude-hash="true" (hash updates artificially inflate pageviews).');
   }
-  if (site === 'ca' && content.includes('cloud.umami.is/script.js') && !content.includes(`data-domains="${host}"`)) {
+  if ((site === 'ca' || site === 'com') && content.includes('cloud.umami.is/script.js') && !content.includes(`data-domains="${host}"`)) {
     errors.push(`Umami script tag is missing data-domains="${host}" (prevents test and localhost pollution).`);
   }
   if (content.includes('amazon.ca')) {
@@ -396,14 +413,116 @@ comHtmlFiles.forEach(file => {
   const comErrors = [];
   if (/href="\/us\//.test(c)) comErrors.push('.com page contains a /us/ link (US pages live at the .com root).');
   if (c.includes('b68ec99c-ee81-4587-91dc-cd69b239def8')) comErrors.push('.com page contains the .ca Umami website ID (must use its own UMAMI_WEBSITE_ID_US).');
+  if (Buffer.byteLength(c, 'utf-8') > 125000) comErrors.push(`.com page exceeds 125 KB HTML size ceiling (${Buffer.byteLength(c, 'utf-8')} bytes).`);
   if (comErrors.length) {
     console.error(`\n❌ QA FAILED in ${file}:`);
     comErrors.forEach(e => console.error(`   - ${e}`));
     process.exit(1);
   }
 });
+['us-territories.js', 'us-app.js', 'us-pwa.js', 'pdf-export.js', 'pdf-logo.js'].forEach(asset => {
+  if (!fs.existsSync(path.join(comDir, 'shared', asset))) {
+    console.error(`\n❌ QA FAILED: build_com/shared/${asset} is missing.`);
+    process.exit(1);
+  }
+});
+['pdf-export.js', 'pdf-logo.js'].forEach(asset => {
+  if (!fs.existsSync(path.join(buildDir, 'shared', asset))) {
+    console.error(`\n❌ QA FAILED: build/shared/${asset} is missing.`);
+    process.exit(1);
+  }
+});
+[path.join(buildDir, 'shared'), path.join(comDir, 'shared')].forEach(sharedOut => {
+  const backupFiles = fs.readdirSync(sharedOut).filter(n => n.endsWith('.backup'));
+  if (backupFiles.length) {
+    console.error(`\n❌ QA FAILED: ${sharedOut} contains backup files (${backupFiles.join(', ')}).`);
+    process.exit(1);
+  }
+});
+
+// Verify build_com PWA manifests (root + all 32 teams)
+const usTeamsMetaQa = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/us_teams.json'), 'utf-8'));
+const expectedComManifests = [
+  { path: path.join(comDir, 'manifest.json'), id: '/' },
+  ...usTeamsMetaQa.map(t => ({ path: path.join(comDir, t.slug, 'manifest.json'), id: `/${t.slug}/` }))
+];
+expectedComManifests.forEach(({ path: manifestPath, id }) => {
+  if (!fs.existsSync(manifestPath)) {
+    console.error(`\n❌ QA FAILED: Missing US PWA manifest at ${manifestPath}.`);
+    process.exit(1);
+  }
+  let manifestJson;
+  try {
+    manifestJson = JSON.parse(fs.readFileSync(manifestPath, 'utf-8'));
+  } catch (err) {
+    console.error(`\n❌ QA FAILED: Invalid JSON in ${manifestPath}: ${err.message}`);
+    process.exit(1);
+  }
+  if (manifestJson.id !== id) {
+    console.error(`\n❌ QA FAILED: ${manifestPath} id expected "${id}", got "${manifestJson.id}".`);
+    process.exit(1);
+  }
+  if (!manifestJson.start_url || !manifestJson.start_url.includes('utm_source=pwa')) {
+    console.error(`\n❌ QA FAILED: ${manifestPath} start_url must include utm_source=pwa.`);
+    process.exit(1);
+  }
+  const has192Png = Array.isArray(manifestJson.icons) && manifestJson.icons.some(icon => icon.sizes === '192x192' && icon.type === 'image/png');
+  if (!has192Png) {
+    console.error(`\n❌ QA FAILED: ${manifestPath} must include a 192x192 image/png icon.`);
+    process.exit(1);
+  }
+});
+
+comHtmlFiles.forEach(file => {
+  const baseName = path.basename(file);
+  const c = fs.readFileSync(file, 'utf-8');
+  const isTeamHub = baseName === 'index.html' && path.dirname(file) !== comDir;
+  if (isTeamHub) {
+    if (!c.includes('id="btnExportPDF"') || !c.includes('data-umami-event="export-pdf-click"')) {
+      console.error(`\n❌ QA FAILED: ${file} is missing PDF export button (#btnExportPDF with export-pdf-click).`);
+      process.exit(1);
+    }
+  }
+  if (baseName !== '404.html' && baseName === 'index.html') {
+    ['rel="manifest"', '/shared/us-pwa.js', 'id="pwaInstallBanner"', 'id="directInstallModal"'].forEach(token => {
+      if (!c.includes(token)) {
+        console.error(`\n❌ QA FAILED: ${file} is missing US PWA element/asset (${token}).`);
+        process.exit(1);
+      }
+    });
+  }
+  const caLinkRegex = /<a\b[^>]*href="(https:\/\/hockeyblackouts\.ca[^"]*)"[^>]*>/g;
+  let caMatch;
+  while ((caMatch = caLinkRegex.exec(c)) !== null) {
+    const tag = caMatch[0];
+    const href = caMatch[1];
+    if (!href.includes('utm_source=hockeyblackouts.com') || !href.includes('utm_medium=crosslink')) {
+      console.error(`\n❌ QA FAILED: ${file} outbound .ca link missing UTM parameters (${href}).`);
+      process.exit(1);
+    }
+    if (!tag.includes('data-umami-event="switch-to-ca"')) {
+      console.error(`\n❌ QA FAILED: ${file} outbound .ca link missing data-umami-event="switch-to-ca" (${href}).`);
+      process.exit(1);
+    }
+  }
+});
 if (!comHtmlFiles.every(f => fs.readFileSync(f, 'utf-8').includes('data-website-id="de005e6e-2c1b-4ecb-8158-7ec341b15192"'))) {
   console.error('\n❌ QA FAILED: every build_com/ page must include the .com Umami script.');
+  process.exit(1);
+}
+const com404Path = path.join(comDir, '404.html');
+if (!fs.existsSync(com404Path)) {
+  console.error('\n❌ QA FAILED: build_com/404.html is missing (Cloudflare Pages will serve 200 soft-404 HTML for unknown routes).');
+  process.exit(1);
+}
+const comHeadersPath = path.join(comDir, '_headers');
+const comHeadersText = fs.existsSync(comHeadersPath) ? fs.readFileSync(comHeadersPath, 'utf-8') : '';
+if (!comHeadersText.includes('https://:project.pages.dev/*') || !comHeadersText.includes('https://:version.:project.pages.dev/*') || !comHeadersText.includes('X-Robots-Tag: noindex, nofollow')) {
+  console.error('\n❌ QA FAILED: build_com/_headers must send X-Robots-Tag: noindex, nofollow on *.pages.dev hosts.');
+  process.exit(1);
+}
+if (!comHeadersText.includes('Strict-Transport-Security: max-age=31536000; includeSubDomains') || !comHeadersText.includes('X-Content-Type-Options: nosniff')) {
+  console.error('\n❌ QA FAILED: build_com/_headers must send Strict-Transport-Security and X-Content-Type-Options: nosniff.');
   process.exit(1);
 }
 if (fs.existsSync(path.join(buildDir, 'us'))) {
@@ -448,9 +567,51 @@ usTeamSlugs.forEach(slug => {
   }
 });
 caTeamSlugs.forEach(slug => {
-  if (!fs.existsSync(path.join(buildDir, slug, 'index.html'))) {
+  const teamIndexPath = path.join(buildDir, slug, 'index.html');
+  if (!fs.existsSync(teamIndexPath)) {
     console.error(`\n❌ QA FAILED: build/${slug}/index.html is missing (.ca must have all 32 teams).`);
     process.exit(1);
+  }
+  const teamHtml = fs.readFileSync(teamIndexPath, 'utf-8');
+  const faqBlocks = [...teamHtml.matchAll(/<script type="application\/ld\+json">\s*([\s\S]*?)<\/script>/g)]
+    .map(m => { try { return JSON.parse(m[1]); } catch (e) { return null; } })
+    .filter(Boolean);
+  const faqSchema = faqBlocks.find(b => b['@type'] === 'FAQPage');
+  const faqSectionMatch = teamHtml.match(/<section id="faq"[\s\S]*?<\/section>/);
+  const faqSectionHtml = faqSectionMatch ? faqSectionMatch[0] : '';
+  const norm = s => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  const visibleQuestions = [...faqSectionHtml.matchAll(/itemprop="name"[^>]*>([\s\S]*?)<\/h3>/g)].map(m => norm(m[1]));
+  const visibleAnswers = [...faqSectionHtml.matchAll(/itemprop="text"[^>]*>([\s\S]*?)<\/p>/g)].map(m => norm(m[1]));
+  if (!faqSchema || !Array.isArray(faqSchema.mainEntity) || faqSchema.mainEntity.length !== visibleQuestions.length || visibleQuestions.length !== visibleAnswers.length) {
+    console.error(`\n❌ QA FAILED: build/${slug}/index.html FAQPage JSON-LD count mismatches visible #faq items.`);
+    process.exit(1);
+  }
+  faqSchema.mainEntity.forEach((entry, idx) => {
+    const qSchema = norm(entry.name || '');
+    const aSchema = norm((entry.acceptedAnswer && entry.acceptedAnswer.text) || '');
+    if (qSchema !== visibleQuestions[idx] || aSchema !== visibleAnswers[idx]) {
+      console.error(`\n❌ QA FAILED: build/${slug}/index.html FAQPage item ${idx + 1} does not match visible #faq text.`);
+      process.exit(1);
+    }
+  });
+});
+
+// Verify build/sitemap.xml covers all 32 .ca team hubs and zero broken internal /game/ links exist on .ca
+const caSitemapXml = fs.existsSync(path.join(buildDir, 'sitemap.xml')) ? fs.readFileSync(path.join(buildDir, 'sitemap.xml'), 'utf-8') : '';
+caTeamSlugs.forEach(slug => {
+  if (!caSitemapXml.includes(`<loc>https://hockeyblackouts.ca/${slug}/</loc>`)) {
+    console.error(`\n❌ QA FAILED: build/sitemap.xml is missing https://hockeyblackouts.ca/${slug}/`);
+    process.exit(1);
+  }
+});
+allHtmlFiles.forEach(file => {
+  const html = fs.readFileSync(file, 'utf-8');
+  for (const m of html.matchAll(/href="(\/game\/[^"]+)"/g)) {
+    const relPath = m[1].split('?')[0].split('#')[0];
+    if (!fs.existsSync(path.join(buildDir, relPath, 'index.html'))) {
+      console.error(`\n❌ QA FAILED: ${path.relative(buildDir, file)} has broken internal link ${m[1]}`);
+      process.exit(1);
+    }
   }
 });
 
@@ -667,5 +828,37 @@ if (fs.existsSync(path.join(buildDir, 'README.md'))) {
     }
   }
 });
+
+// Validate all 32 .ca English team hubs link Switch to US to https://hockeyblackouts.com/<slug>/ with UTMs and data-umami-event="switch-to-us"
+const caTeamsMetaQa = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/ca_teams.json'), 'utf-8'));
+caTeamsMetaQa.forEach(t => {
+  const htmlPath = path.join(buildDir, t.slug, 'index.html');
+  if (fs.existsSync(htmlPath)) {
+    const html = fs.readFileSync(htmlPath, 'utf-8');
+    const expectedSwitch = `href="https://hockeyblackouts.com/${t.slug}/?utm_source=hockeyblackouts.ca&amp;utm_medium=crosslink&amp;utm_campaign=blackout_guide&amp;utm_content=nav_switch" data-umami-event="switch-to-us" data-umami-event-team="${t.slug}"`;
+    if (!html.includes(expectedSwitch)) {
+      console.error(`\n❌ QA FAILED: build/${t.slug}/index.html Switch to US link must point to https://hockeyblackouts.com/${t.slug}/ with UTMs and switch-to-us event.`);
+      process.exit(1);
+    }
+  }
+});
+const caSplashHtml = fs.readFileSync(path.join(buildDir, 'index.html'), 'utf-8');
+if (!caSplashHtml.includes('data-umami-event="switch-to-us"')) {
+  console.error('\n❌ QA FAILED: build/index.html Switch to US links must carry data-umami-event="switch-to-us".');
+  process.exit(1);
+}
+if (!caSplashHtml.includes('id="regionLookupBtn"') || !caSplashHtml.includes('data-umami-event="region-lookup-check"')) {
+  console.error('\n❌ QA FAILED: build/index.html #regionLookupBtn must carry data-umami-event="region-lookup-check".');
+  process.exit(1);
+}
+const caSplashComLinkRegex = /<a\b[^>]*href="(https:\/\/hockeyblackouts\.com[^"]*)"[^>]*>/g;
+let caSplashComMatch;
+while ((caSplashComMatch = caSplashComLinkRegex.exec(caSplashHtml)) !== null) {
+  const href = caSplashComMatch[1];
+  if (!href.includes('utm_source=hockeyblackouts.ca') || !href.includes('utm_medium=crosslink')) {
+    console.error(`\n❌ QA FAILED: build/index.html outbound .com link missing UTM parameters (${href}).`);
+    process.exit(1);
+  }
+}
 
 console.log('✅ All pages passed SEO QA validation.');

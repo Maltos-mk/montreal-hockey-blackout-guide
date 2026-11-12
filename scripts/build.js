@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { formatEtDate } = require('./lib/date_utils');
 
 const templateHtml = fs.readFileSync('templates/index.html', 'utf8');
 const caTeamsMeta = JSON.parse(fs.readFileSync('data/ca_teams.json', 'utf8'));
@@ -86,31 +87,33 @@ dataFiles.forEach(({ meta, file }) => {
   }
   html = html.replace(/\{\{QUICK_SUMMARY\}\}/g, quickSummary);
 
-
-  
-  let faqHtml = '';
-  let schemaText = '';
+  let faqQuestion = '';
+  let faqAnswerHtml = '';
   if (!isCanadianTeam) {
-    faqHtml = `<p><strong>Why are ${team.name} games considered out-of-market across Canada?</strong><br>Because the ${team.name} are based in the US, their games are out-of-market in Canada and do not have a local Canadian regional TV territory. Watch them using <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable/satellite), unless the matchup is selected for a coast-to-coast Canadian national broadcast on <strong>Sportsnet</strong>, <strong>Amazon Prime Video</strong>, or <strong>TVA Sports</strong>, or played against a Canadian team inside that Canadian team's home broadcast region.</p>`;
-    schemaText = `Because the ${team.name} are based in the US, their games are out-of-market in Canada. Watch them using Sportsnet+ Premium or NHL Centre Ice, unless the game is broadcast nationally in Canada on Sportsnet, Amazon Prime Video, or TVA Sports.`;
+    faqQuestion = `Why are ${team.name} games considered out-of-market across Canada?`;
+    faqAnswerHtml = `Because the ${team.name} are based in the US, their games are out-of-market in Canada and do not have a local Canadian regional TV territory. Watch them using <strong>Sportsnet+ Premium</strong> (streaming) or <strong>NHL Centre Ice</strong> (cable/satellite), unless the matchup is selected for a coast-to-coast Canadian national broadcast on <strong>Sportsnet</strong>, <strong>Amazon Prime Video</strong>, or <strong>TVA Sports</strong>, or played against a Canadian team inside that Canadian team's home broadcast region.`;
   } else if (team.id === 'TOR') {
-    faqHtml = `<p><strong>Why are Toronto Maple Leafs games blacked out on TSN4 or Sportsnet Ontario in Eastern Ontario?</strong><br>The NHL broadcast boundary line in Ontario is drawn near Belleville. If you live west of Belleville (including Toronto and the GTA), you are in the Leafs' home territory and can watch regional games on standard cable. If you live strictly in Eastern Ontario (Ottawa, Cornwall, Brockville), you are in the Senators/Canadiens home territory. In that zone, regional Leafs games are blacked out to protect local Sens/Habs rights unless you subscribe to <strong>Sportsnet+ Premium</strong> or <strong>NHL Centre Ice</strong>. <em>(Note: The Belleville to Kingston corridor is a designated "Overlap" zone where providers offer feeds for both regions. Use the "Ontario Overlap" region in the dropdown above to accurately see your games).</em></p>`;
-    schemaText = "The broadcast boundary line in Ontario is drawn between Belleville and Kingston. If you live in the Eastern Ontario (Kingston, Ottawa, etc) or further east, you are in the Senators/Canadiens territory. Regional Leafs games are blacked out there unless you subscribe to Sportsnet+ Premium or NHL Centre Ice.";
+    faqQuestion = 'Why are Toronto Maple Leafs games blacked out on TSN4 or Sportsnet Ontario in Eastern Ontario?';
+    faqAnswerHtml = `The NHL broadcast boundary line in Ontario is drawn near Belleville. If you live west of Belleville (including Toronto and the GTA), you are in the Leafs' home territory and can watch regional games on standard cable. If you live strictly in Eastern Ontario (Ottawa, Cornwall, Brockville), you are in the Senators/Canadiens home territory. In that zone, regional Leafs games are blacked out to protect local Sens/Habs rights unless you subscribe to <strong>Sportsnet+ Premium</strong> or <strong>NHL Centre Ice</strong>. <em>(Note: The Belleville to Kingston corridor is a designated "Overlap" zone where providers offer feeds for both regions. Use the "Ontario Overlap" region in the dropdown above to accurately see your games).</em>`;
   } else if (team.id === 'VAN') {
-    faqHtml = `<p><strong>Why are Canucks games blacked out in Alberta?</strong><br>The NHL broadcast boundary for the Canucks is drawn at the British Columbia border. The Canucks' home territory covers strictly BC and the Yukon. If you live in Alberta, Saskatchewan, or the NWT, you are in the Flames/Oilers territory. In that zone, regional Canucks games on Sportsnet Pacific are blacked out to protect local rights unless you subscribe to Sportsnet+ Premium or NHL Centre Ice.</p>`;
-    schemaText = "The broadcast boundary for the Canucks is the BC border. If you live in Alberta or further east, you are in the Flames/Oilers territory. Regional Canucks games are blacked out there unless you subscribe to Sportsnet+ Premium or NHL Centre Ice.";
+    faqQuestion = 'Why are Canucks games blacked out in Alberta?';
+    faqAnswerHtml = `The NHL broadcast boundary for the Canucks is drawn at the British Columbia border. The Canucks' home territory covers strictly BC and the Yukon. If you live in Alberta, Saskatchewan, or the NWT, you are in the Flames/Oilers territory. In that zone, regional Canucks games on Sportsnet Pacific are blacked out to protect local rights unless you subscribe to <strong>Sportsnet+ Premium</strong> or <strong>NHL Centre Ice</strong>.`;
   } else if (team.id === 'CGY' || team.id === 'EDM') {
-    faqHtml = `<p><strong>Why are ${team.nickname} games blacked out in British Columbia?</strong><br>The Flames and Oilers share a massive broadcast territory that covers all of Alberta, Saskatchewan, Nunavut, and the Northwest Territories. If you live in British Columbia, you are in the Canucks' home territory. In that zone, regional ${team.nickname} games on Sportsnet West are blacked out to protect local rights unless you subscribe to Sportsnet+ Premium or NHL Centre Ice.</p>`;
-    schemaText = "The Flames and Oilers territory covers Alberta and Saskatchewan. If you live in BC, you are in the Canucks territory. Regional Flames and Oilers games are blacked out there unless you subscribe to Sportsnet+ Premium or NHL Centre Ice.";
+    faqQuestion = `Why are ${team.nickname} games blacked out in British Columbia?`;
+    faqAnswerHtml = `The Flames and Oilers share a massive broadcast territory that covers all of Alberta, Saskatchewan, Nunavut, and the Northwest Territories. If you live in British Columbia, you are in the Canucks' home territory. In that zone, regional ${team.nickname} games on Sportsnet West are blacked out to protect local rights unless you subscribe to <strong>Sportsnet+ Premium</strong> or <strong>NHL Centre Ice</strong>.`;
   } else if (team.id === 'WPG') {
-    faqHtml = `<p><strong>Why are Jets games blacked out in Ontario?</strong><br>The NHL broadcast territory for the Jets covers Manitoba, Saskatchewan, Nunavut, and Northwestern Ontario (including Thunder Bay). If you live further east in Ontario (like Toronto or Ottawa), you are in the Leafs or Senators home territory. In that zone, regional Jets games on TSN3 are blacked out to protect local rights unless you subscribe to Sportsnet+ Premium or NHL Centre Ice.</p>`;
-    schemaText = "The Jets territory covers Manitoba, Saskatchewan, and Northwestern Ontario. If you live further east, you are in the Leafs or Senators territory. Regional Jets games are blacked out there unless you subscribe to Sportsnet+ Premium or NHL Centre Ice.";
+    faqQuestion = 'Why are Jets games blacked out in Ontario?';
+    faqAnswerHtml = `The NHL broadcast territory for the Jets covers Manitoba, Saskatchewan, Nunavut, and Northwestern Ontario (including Thunder Bay). If you live further east in Ontario (like Toronto or Ottawa), you are in the Leafs or Senators home territory. In that zone, regional Jets games on TSN3 are blacked out to protect local rights unless you subscribe to <strong>Sportsnet+ Premium</strong> or <strong>NHL Centre Ice</strong>.`;
   } else {
-    faqHtml = `<p><strong>Why are ${team.name} games blacked out on ${team.networks.regionalEN} in Western Ontario?</strong><br>The NHL broadcast boundary line in Ontario is drawn near Belleville. If you live strictly in Eastern Ontario (Ottawa, Cornwall, Brockville) or further east into Quebec and Atlantic Canada, you are in the ${team.name}' home territory and can watch regional games on standard cable. However, if you live west of Belleville (including Toronto and the GTA), you are in the Maple Leafs' home territory. In that zone, regional ${team.name} games are blacked out to protect local Leafs rights unless you subscribe to <strong>Sportsnet+ Premium</strong> or <strong>NHL Centre Ice</strong>. <em>(Note: The Belleville to Kingston corridor is a designated "Overlap" zone where providers offer feeds for both regions. Use the "Ontario Overlap" region in the dropdown above to accurately see your games).</em></p>`;
-    schemaText = `The broadcast boundary line in Ontario is drawn between Belleville and Kingston. If you live in Toronto, Belleville, or anywhere west of there, you are in the Maple Leafs territory. Regional ${team.name} games are blacked out there unless you subscribe to Sportsnet+ Premium or NHL Centre Ice.`;
+    faqQuestion = `Why are ${team.name} games blacked out on ${team.networks.regionalEN} in Western Ontario?`;
+    faqAnswerHtml = `The NHL broadcast boundary line in Ontario is drawn near Belleville. If you live strictly in Eastern Ontario (Ottawa, Cornwall, Brockville) or further east into Quebec and Atlantic Canada, you are in the ${team.name}' home territory and can watch regional games on standard cable. However, if you live west of Belleville (including Toronto and the GTA), you are in the Maple Leafs' home territory. In that zone, regional ${team.name} games are blacked out to protect local Leafs rights unless you subscribe to <strong>Sportsnet+ Premium</strong> or <strong>NHL Centre Ice</strong>. <em>(Note: The Belleville to Kingston corridor is a designated "Overlap" zone where providers offer feeds for both regions. Use the "Ontario Overlap" region in the dropdown above to accurately see your games).</em>`;
   }
-  html = html.replace(/\{\{FAQ_ONTARIO_BOUNDARY\}\}/g, faqHtml);
-  html = html.replace(/\{\{SCHEMA_ONTARIO_BOUNDARY\}\}/g, schemaText);
+  const faqHtml = `<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">\n          <h3 class="font-bold text-slate-800 dark:text-slate-200 mb-1" itemprop="name">${faqQuestion}</h3>\n          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">\n            <p itemprop="text">${faqAnswerHtml}</p>\n          </div>\n        </div>`;
+  const schemaQuestionJson = JSON.stringify(faqQuestion).slice(1, -1);
+  const schemaTextJson = JSON.stringify(faqAnswerHtml.replace(/<[^>]+>/g, '')).slice(1, -1);
+  html = html.replace(/\{\{FAQ_ONTARIO_BOUNDARY\}\}/g, () => faqHtml);
+  html = html.replace(/\{\{SCHEMA_ONTARIO_QUESTION\}\}/g, () => schemaQuestionJson);
+  html = html.replace(/\{\{SCHEMA_ONTARIO_BOUNDARY\}\}/g, () => schemaTextJson);
 
 
   html = html.replace(/\{\{COLOR_PRIMARY\}\}/g, team.colors.primary);
@@ -181,7 +184,7 @@ dataFiles.forEach(({ meta, file }) => {
     return a.name.localeCompare(b.name);
   });
 
-  let topNavLinks = '<span class="px-2.5 py-1 rounded-md text-white font-bold bg-white/15 border border-white/10">🇨🇦 Canada View</span><span class="text-slate-600 px-1">|</span><a href="https://hockeyblackouts.com/" class="px-2.5 py-1 rounded-md text-slate-300 hover:text-white hover:bg-white/10 transition border border-transparent">🇺🇸 Switch to US</a><div class="w-px h-4 bg-slate-700 mx-2"></div><a href="https://hockeyblackouts.ca/" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent mr-2"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span class="text-rose-400">Hockey</span>Blackouts.ca</a><div class="w-px h-4 bg-slate-700 mx-2"></div>';
+  let topNavLinks = `<span class="px-2.5 py-1 rounded-md text-white font-bold bg-white/15 border border-white/10">🇨🇦 Canada View</span><span class="text-slate-600 px-1">|</span><a href="https://hockeyblackouts.com/${teamDirSlug}/?utm_source=hockeyblackouts.ca&amp;utm_medium=crosslink&amp;utm_campaign=blackout_guide&amp;utm_content=nav_switch" data-umami-event="switch-to-us" data-umami-event-team="${teamDirSlug}" data-umami-event-placement="nav" class="px-2.5 py-1 rounded-md text-slate-300 hover:text-white hover:bg-white/10 transition border border-transparent">🇺🇸 Switch to US</a><div class="w-px h-4 bg-slate-700 mx-2"></div><a href="https://hockeyblackouts.ca/" class="px-3 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent mr-2"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span class="text-rose-400">Hockey</span>Blackouts.ca</a><div class="w-px h-4 bg-slate-700 mx-2"></div>`;
   let footerNavLinks = '<a href="https://hockeyblackouts.ca/" class="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition font-bold"><i class="fa-solid fa-house mr-1 opacity-50"></i> <span class="text-[#AF1E2D] dark:text-rose-400">Hockey</span>Blackouts.ca</a>\n';
   allTeams.forEach(t => {
     if (t.id === team.id) {
@@ -233,7 +236,7 @@ dataFiles.forEach(({ meta, file }) => {
     const awayCity = (TEAM_CITIES[awayId] || awayId);
     const homeSlug = slugifyCity(homeCity);
     const awaySlug = slugifyCity(awayCity);
-    const datePrefix = g.iso ? g.iso.split('T')[0] : g.date;
+    const datePrefix = g.iso ? formatEtDate(g.iso, g.date) : g.date;
     return `/game/${datePrefix}/${homeSlug}-vs-${awaySlug}/`;
   }
 
@@ -374,8 +377,8 @@ dataFiles.forEach(({ meta, file }) => {
       </div>`;
   });
 
-  html = html.replace(/\{\{PRERENDERED_DESKTOP_SCHEDULE\}\}/g, desktopRows);
-  html = html.replace(/\{\{PRERENDERED_MOBILE_SCHEDULE\}\}/g, mobileCards);
+  html = html.replace(/\{\{PRERENDERED_DESKTOP_SCHEDULE\}\}/g, desktopRows.replace(/^[ \t]+/gm, ''));
+  html = html.replace(/\{\{PRERENDERED_MOBILE_SCHEDULE\}\}/g, mobileCards.replace(/^[ \t]+/gm, ''));
 
   // Find next upcoming game and generate static spotlight hero
   const nextGame = upcomingGames[0] || data.schedule[data.schedule.length - 1];

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>Page Not Found (404) | HockeyBlackouts.com</title>
+  <meta name="title" content="Page Not Found (404) | HockeyBlackouts.com">
+  <meta name="description" content="The page you requested could not be found on HockeyBlackouts.com. Look up your US ZIP code or browse all 32 NHL TV and ESPN+ blackout guides.">
+  <meta name="author" content="HockeyBlackouts.com">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="https://hockeyblackouts.com/shared/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="https://hockeyblackouts.com/shared/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://hockeyblackouts.com/shared/favicon-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hockeyblackouts.com/shared/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="HockeyBlackouts.com">
+  <meta property="og:title" content="Page Not Found (404) | HockeyBlackouts.com">
+  <meta property="og:description" content="Page not found on HockeyBlackouts.com. Look up your US ZIP code or browse all 32 NHL TV and blackout guides.">
+  <meta property="og:image" content="https://hockeyblackouts.com/og/default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="HockeyBlackouts.com US NHL TV channels and ESPN+ blackout lookup tool">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Page Not Found (404) | HockeyBlackouts.com">
+  <meta name="twitter:description" content="Page not found on HockeyBlackouts.com. Look up your US ZIP code or browse all 32 NHL TV and blackout guides.">
+  <meta name="twitter:image" content="https://hockeyblackouts.com/og/default.png">
+
+  <!-- Preload Local Fonts & Icons -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="/shared/fonts/teko-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/shared/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  <!-- Umami Analytics -->
+  {{UMAMI_SNIPPET}}
+
+  <!-- Dynamic Team Color Tokens (Default NHL/US Accent) -->
+  <style>
+    :root {
+      --color-team-primary: #AF1E2D;
+      --color-team-secondary: #0F172A;
+      --color-team-dark: #020617;
+    }
+  </style>
+
+  <!-- Precompiled Tailwind CSS & Application CSS -->
+  <link rel="stylesheet" href="/shared/tailwind.min.css">
+  <link rel="stylesheet" href="/shared/app.css">
+
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    function toggleTheme() {
+      var isDark = document.documentElement.classList.toggle('dark');
+      try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (e) {}
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen transition-colors duration-200 flex flex-col justify-between">
+
+{{US_HEADER}}
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-8 flex-1 w-full">
+
+    <section class="bg-white dark:bg-slate-900 p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-5">
+      <div class="border-b border-slate-100 dark:border-slate-800 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div class="flex items-center space-x-2">
+          <span class="w-2.5 h-6 bg-teamPrimary rounded-full inline-block" aria-hidden="true"></span>
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">We Could Not Find That Page</h2>
+        </div>
+        <span class="text-xs text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-2.5 py-1 rounded-full font-semibold self-start sm:self-auto">HTTP 404</span>
+      </div>
+
+      <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl">
+        The URL you opened does not exist on <strong>HockeyBlackouts.com</strong>. It may have been mistyped, removed, or belong to a Canadian route on <strong>HockeyBlackouts.ca</strong>.
+      </p>
+
+      <div class="flex flex-wrap gap-3 pt-1">
+        <a href="/" class="px-5 py-3 rounded-xl bg-teamSecondary hover:bg-teamDark text-white font-bold text-sm border border-white/20 shadow-sm inline-flex items-center gap-2 transition">
+          <i class="fa-solid fa-location-crosshairs" aria-hidden="true"></i>
+          <span>Go to US ZIP Code Lookup</span>
+        </a>
+        <a href="https://hockeyblackouts.ca/?utm_source=hockeyblackouts.com&amp;utm_medium=crosslink&amp;utm_campaign=blackout_guide&amp;utm_content=404_cta" data-umami-event="switch-to-ca" data-umami-event-team="home" data-umami-event-placement="404" class="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-semibold text-sm border border-slate-200 dark:border-slate-700 inline-flex items-center gap-2 transition">
+          <span aria-hidden="true">🇨🇦</span>
+          <span>Switch to Canada Edition</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+        <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-slate-900 dark:text-white">Browse All 32 US NHL Team Guides</h2>
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-semibold">RSN + ESPN+ Coverage</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {{US_TEAM_CARDS_HTML}}
+      </div>
+    </section>
+
+    <section id="faq" class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+      <h2 class="text-xl font-bold font-teko uppercase tracking-wide text-teamPrimary border-b border-slate-100 dark:border-slate-800 pb-3">Looking for Tonight's Broadcast &amp; Blackout Rules?</h2>
+      <p>
+        Select any team above or visit the <a href="/" class="font-bold text-blue-600 dark:text-blue-400 hover:underline">HockeyBlackouts.com home page</a> to enter your 5-digit US ZIP code and check whether tonight's game streams on ESPN+, requires a local Regional Sports Network (RSN), or airs exclusively on national TV.
+      </p>
+    </section>
+
+  </main>
+
+{{US_FOOTER}}
+
+</body>
+</html>

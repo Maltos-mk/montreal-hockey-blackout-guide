@@ -12,7 +12,7 @@ const SITE_ORIGIN = 'https://hockeyblackouts.com';
 const CA_ORIGIN = 'https://hockeyblackouts.ca';
 
 // Umami: the .com site has its own Umami website (separate from the .ca one), hardcoded on purpose.
-const UMAMI_SNIPPET = '<script defer src="https://cloud.umami.is/script.js" data-website-id="de005e6e-2c1b-4ecb-8158-7ec341b15192"></script>';
+const UMAMI_SNIPPET = '<script defer src="https://cloud.umami.is/script.js" data-website-id="de005e6e-2c1b-4ecb-8158-7ec341b15192" data-domains="hockeyblackouts.com" data-exclude-hash="true"></script>';
 
 if (!fs.existsSync(DATA_PATH)) {
   console.error(`Missing US teams data file at: ${DATA_PATH}`);
@@ -24,6 +24,7 @@ const headerTemplate = fs.readFileSync(path.join(TEMPLATES_DIR, 'us_header.html'
 const footerTemplate = fs.readFileSync(path.join(TEMPLATES_DIR, 'us_footer.html'), 'utf-8');
 const teamTemplate = fs.readFileSync(path.join(TEMPLATES_DIR, 'us_team.html'), 'utf-8');
 const splashTemplate = fs.readFileSync(path.join(TEMPLATES_DIR, 'us_splash.html'), 'utf-8');
+const notFoundTemplate = fs.readFileSync(path.join(TEMPLATES_DIR, 'us_404.html'), 'utf-8');
 
 const US_TERRITORIES_MAP = {};
 usTeams.forEach(t => {
@@ -535,7 +536,7 @@ function renderTeamPage(team, teamData, allTeams) {
   const metaDescription = buildMetaDescription(team);
   const ogTitle = buildOgTitle(team);
   const ogDescription = buildOgDescription(team);
-  const ogImageUrl = `${SITE_ORIGIN}/og/default.png`;
+  const ogImageUrl = `${SITE_ORIGIN}/og/teams/${team.slug}.png`;
   const ogImageAlt = `${team.name} Broadcast & Blackout Guide (${team.rsn} and ESPN+)`;
   const { schemaJson, faqs } = buildSchema(team, pageTitle, metaDescription, canonicalUrl);
 
@@ -706,6 +707,8 @@ function renderTeamPage(team, teamData, allTeams) {
     </div>`;
 
   const renderedHeader = headerTemplate
+    .replace(/\{\{CA_SWITCH_PATH\}\}/g, `/${team.slug}/`)
+    .replace(/\{\{SWITCH_TEAM_KEY\}\}/g, team.slug)
     .replace(/\{\{US_NETWORK_LINKS\}\}/g, buildTopNavLinks(team.slug, allTeams))
     .replace(/\{\{HEADER_BADGE_TEXT\}\}/g, team.abbreviation)
     .replace(
@@ -764,7 +767,6 @@ function renderTeamPage(team, teamData, allTeams) {
     .replace(/\{\{TEAM_RSN\}\}/g, team.rsn)
     .replace(/\{\{SAMPLE_ZIP\}\}/g, sampleZip)
     .replace(/\{\{TERRITORY_DESCRIPTION\}\}/g, territoryDescription)
-    .replace(/\{\{US_TERRITORIES_JSON\}\}/g, US_TERRITORIES_JSON)
     .replace(/\{\{TOTAL_GAMES\}\}/g, totalGames)
     .replace(/\{\{ESPN_PLUS_COUNT\}\}/g, espnPlusCount)
     .replace(/\{\{ESPN_PLUS_PCT\}\}/g, espnPlusPct)
@@ -783,26 +785,22 @@ function renderTeamPage(team, teamData, allTeams) {
     .replace(/\{\{FAQ_ITEMS_HTML\}\}/g, faqItemsHtml);
 }
 
-function renderUsSplashPage(allTeams) {
+const US_NETWORK_SUMMARY =
+  'ESPN+, ESPN, ABC, TNT, NHL Network, MSG, NESN, FanDuel Sports Network, Altitude, Victory+, Scripps Sports';
+
+function buildUsDirectoryShell(allTeams, badgeText, h1Text, subtitleText) {
   const renderedHeader = headerTemplate
+    .replace(/\{\{CA_SWITCH_PATH\}\}/g, '/')
+    .replace(/\{\{SWITCH_TEAM_KEY\}\}/g, 'home')
     .replace(/\{\{US_NETWORK_LINKS\}\}/g, buildTopNavLinks('', allTeams))
-    .replace(/\{\{HEADER_BADGE_TEXT\}\}/g, 'USA')
-    .replace(
-      /\{\{HEADER_H1\}\}/g,
-      'Where &amp; How to Watch NHL Games in the US (RSN &amp; ESPN+ Blackouts)'
-    )
-    .replace(
-      /\{\{HEADER_SUBTITLE\}\}/g,
-      'Enter your 5-digit US ZIP code or select your team below to check Regional Sports Network (RSN) and ESPN+ blackouts.'
-    );
+    .replace(/\{\{HEADER_BADGE_TEXT\}\}/g, badgeText)
+    .replace(/\{\{HEADER_H1\}\}/g, h1Text)
+    .replace(/\{\{HEADER_SUBTITLE\}\}/g, subtitleText);
 
   const renderedFooter = footerTemplate
     .replace(/\{\{FOOTER_TEAM_LABEL\}\}/g, 'US NHL Blackout')
     .replace(/\{\{US_FOOTER_LINKS\}\}/g, buildFooterLinks('', allTeams))
-    .replace(
-      /\{\{FOOTER_NETWORK_SUMMARY\}\}/g,
-      'ESPN+, ESPN, ABC, TNT, NHL Network, MSG, NESN, FanDuel Sports Network, Altitude, Victory+, Scripps Sports'
-    );
+    .replace(/\{\{FOOTER_NETWORK_SUMMARY\}\}/g, US_NETWORK_SUMMARY);
 
   const teamCardsHtml = allTeams
     .map(t => {
@@ -817,6 +815,17 @@ function renderUsSplashPage(allTeams) {
     })
     .join('\n');
 
+  return { renderedHeader, renderedFooter, teamCardsHtml };
+}
+
+function renderUsSplashPage(allTeams) {
+  const { renderedHeader, renderedFooter, teamCardsHtml } = buildUsDirectoryShell(
+    allTeams,
+    'USA',
+    'Where &amp; How to Watch NHL Games in the US (RSN &amp; ESPN+ Blackouts)',
+    'Enter your 5-digit US ZIP code or select your team below to check Regional Sports Network (RSN) and ESPN+ blackouts.'
+  );
+
   return splashTemplate
     .replace(/\{\{US_HEADER\}\}/g, renderedHeader)
     .replace(/\{\{US_FOOTER\}\}/g, renderedFooter)
@@ -825,25 +834,124 @@ function renderUsSplashPage(allTeams) {
     .replace(/\{\{US_TERRITORIES_JSON\}\}/g, US_TERRITORIES_JSON);
 }
 
+function renderUs404Page(allTeams) {
+  const { renderedHeader, renderedFooter, teamCardsHtml } = buildUsDirectoryShell(
+    allTeams,
+    '404',
+    'Page Not Found (404)',
+    'That NHL blackout guide or schedule URL could not be found on HockeyBlackouts.com.'
+  );
+
+  return notFoundTemplate
+    .replace(/\{\{US_HEADER\}\}/g, renderedHeader)
+    .replace(/\{\{US_FOOTER\}\}/g, renderedFooter)
+    .replace(/\{\{UMAMI_SNIPPET\}\}/g, () => UMAMI_SNIPPET)
+    .replace(/\{\{US_TEAM_CARDS_HTML\}\}/g, teamCardsHtml);
+}
+
+function buildUsManifestJson({ id, name, shortName, description, startUrl, scope, backgroundColor, themeColor }) {
+  return JSON.stringify(
+    {
+      id,
+      name,
+      short_name: shortName,
+      description,
+      start_url: startUrl,
+      scope,
+      display: 'standalone',
+      background_color: backgroundColor,
+      theme_color: themeColor,
+      icons: [
+        { src: '/shared/favicon.svg', sizes: 'any', type: 'image/svg+xml' },
+        { src: '/shared/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
+        { src: '/shared/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+      ]
+    },
+    null,
+    2
+  ) + '\n';
+}
+
 async function main() {
   const forceRefresh = process.argv.includes('--refresh');
   fs.mkdirSync(BUILD_COM_DIR, { recursive: true });
 
-  // Generate US Homepage (build_com/index.html -> hockeyblackouts.com/)
+  // Generate US Homepage (build_com/index.html -> hockeyblackouts.com/), root PWA manifest, and static 404.html
   const splashHtml = renderUsSplashPage(usTeams);
   fs.writeFileSync(path.join(BUILD_COM_DIR, 'index.html'), splashHtml, 'utf-8');
+  fs.writeFileSync(
+    path.join(BUILD_COM_DIR, 'manifest.json'),
+    buildUsManifestJson({
+      id: '/',
+      name: 'HockeyBlackouts.com — US NHL Blackout Guide',
+      shortName: 'Hockey US',
+      description: 'US NHL blackout tracker, local ZIP code RSN lookup, and ESPN+ schedule guide.',
+      startUrl: '/?utm_source=pwa&utm_medium=homescreen',
+      scope: '/',
+      backgroundColor: '#0f172a',
+      themeColor: '#0f172a'
+    }),
+    'utf-8'
+  );
+  const notFoundHtml = renderUs404Page(usTeams);
+  fs.writeFileSync(path.join(BUILD_COM_DIR, '404.html'), notFoundHtml, 'utf-8');
+  // Block search engine indexing of Cloudflare Pages *.pages.dev preview/mirror hosts while keeping hockeyblackouts.com indexable
+  const cfHeaders = [
+    'https://:project.pages.dev/*',
+    '  X-Robots-Tag: noindex, nofollow',
+    '',
+    'https://:version.:project.pages.dev/*',
+    '  X-Robots-Tag: noindex, nofollow',
+    '',
+    '/*',
+    '  Strict-Transport-Security: max-age=31536000; includeSubDomains',
+    '  X-Content-Type-Options: nosniff',
+    ''
+  ].join('\n');
+  fs.writeFileSync(path.join(BUILD_COM_DIR, '_headers'), cfHeaders, 'utf-8');
 
-  // Ingest schedules and generate 25 US Team Pages (build_com/[slug]/index.html + data.json -> hockeyblackouts.com/[slug]/)
+  const comSharedDir = path.join(BUILD_COM_DIR, 'shared');
+  fs.mkdirSync(comSharedDir, { recursive: true });
+  fs.writeFileSync(
+    path.join(comSharedDir, 'us-territories.js'),
+    `window.US_TERRITORIES = ${US_TERRITORIES_JSON};\n`,
+    'utf-8'
+  );
+  fs.copyFileSync(
+    path.join(__dirname, '../shared/us-pwa.js'),
+    path.join(comSharedDir, 'us-pwa.js')
+  );
+  fs.copyFileSync(
+    path.join(__dirname, '../shared/us-app.js'),
+    path.join(comSharedDir, 'us-app.js')
+  );
+
+  // Ingest schedules and generate 32 US Team Pages (build_com/[slug]/index.html + data.json + manifest.json)
   for (const team of usTeams) {
     const teamData = await ensureUsTeamData(team, forceRefresh);
     const teamDir = path.join(BUILD_COM_DIR, team.slug);
     fs.mkdirSync(teamDir, { recursive: true });
 
+    const colors = team.colors || { secondary: '#0F172A', dark: '#020617' };
     const html = renderTeamPage(team, teamData, usTeams);
     fs.writeFileSync(path.join(teamDir, 'index.html'), html, 'utf-8');
     fs.writeFileSync(
       path.join(teamDir, 'data.json'),
       JSON.stringify(teamData, null, 2),
+      'utf-8'
+    );
+    fs.writeFileSync(
+      path.join(teamDir, 'manifest.json'),
+      buildUsManifestJson({
+        id: `/${team.slug}/`,
+        name: `${team.name} US Blackout Guide`,
+        shortName: team.abbreviation,
+        description: `US TV channels, local RSN (${team.rsn}), ZIP lookup, and ESPN+ schedule for ${team.name}.`,
+        startUrl: `/${team.slug}/?utm_source=pwa&utm_medium=homescreen`,
+        scope: `/${team.slug}/`,
+        backgroundColor: colors.dark || '#020617',
+        themeColor: colors.secondary || '#0F172A'
+      }),
       'utf-8'
     );
   }

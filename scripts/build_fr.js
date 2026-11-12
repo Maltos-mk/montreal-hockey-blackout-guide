@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const HB_FR = require('../shared/lang-fr.js');
+const { formatEtDate } = require('./lib/date_utils');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const templateHtml = fs.readFileSync(path.join(__dirname, '../templates/index-fr.html'), 'utf8');
@@ -30,7 +31,7 @@ function getGamePath(g, currentTeamId) {
   const awayCity = TEAM_CITIES[awayId] || awayId;
   const homeSlug = slugifyCity(homeCity);
   const awaySlug = slugifyCity(awayCity);
-  const datePrefix = g.iso ? g.iso.split('T')[0] : g.date;
+  const datePrefix = g.iso ? formatEtDate(g.iso, g.date) : g.date;
   return `/game/${datePrefix}/${homeSlug}-vs-${awaySlug}/`;
 }
 

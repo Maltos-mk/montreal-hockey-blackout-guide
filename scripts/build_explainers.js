@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { formatEtDate } = require('./lib/date_utils');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const DATA_DIR = path.join(__dirname, '../data');
@@ -153,8 +154,8 @@ const EXPLAINER_OG_META = {
   },
   'prime-hockey-schedule-canada': {
     title: 'Prime Video NHL Hockey Schedule | HockeyBlackouts.ca',
-    description: 'Prime Monday Night Hockey schedule and streaming rules in Canada. Coast-to-coast games with no blackouts.',
-    alt: 'Amazon Prime Video NHL Monday Night Hockey schedule guide'
+    description: 'Prime Wednesday Night Hockey schedule and streaming rules in Canada. Coast-to-coast games with no blackouts.',
+    alt: 'Amazon Prime Video NHL Wednesday Night Hockey schedule guide'
   },
   'rds-vs-tva-sports-blackouts': {
     title: 'RDS vs TVA Sports Blackouts Explained | HockeyBlackouts',
@@ -313,7 +314,7 @@ const snBodyHtml = `
         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i><span><strong>Bypasses Out-of-Market Blackouts:</strong> Streams over 1,000 out-of-market regional games across Canada—even when the game is carried on TSN or RDS in its home market (e.g., watching Habs, Sens, or regional Leafs games from Alberta or BC).</span></li>
         <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-400 mt-1"></i><span><strong>Includes All Standard Content:</strong> Includes every national Sportsnet broadcast and all Stanley Cup Playoff games.</span></li>
         <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-amber-400 mt-1"></i><span><strong>The In-Market TSN Catch:</strong> If you live <em>inside</em> the home territory of a TSN team (like living in Ottawa for the Senators or Winnipeg for the Jets), local TSN regional games are still blacked out on Sportsnet+ Premium to protect TSN's local territory rights.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-amber-400 mt-1"></i><span><strong>Prime Exclusives Excluded:</strong> National Wednesday/Monday games exclusive to Amazon Prime Video require a separate Prime membership.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-triangle-exclamation text-amber-400 mt-1"></i><span><strong>Prime Exclusives Excluded:</strong> National Wednesday games exclusive to Amazon Prime Video require a separate Prime membership.</span></li>
       </ul>
     </div>
   </section>
@@ -434,7 +435,7 @@ teamDatasets.forEach(d => {
       const isHome = g.vs.startsWith('vs ');
       const homeId = isHome ? d.team.id : g.opp;
       const awayId = isHome ? g.opp : d.team.id;
-      const datePrefix = g.iso.split('T')[0];
+      const datePrefix = formatEtDate(g.iso);
       const key = `${datePrefix}_${homeId}_${awayId}`;
       if (!primeMap.has(key)) {
         const homeCity = TEAM_CITIES[homeId] || homeId;
@@ -903,7 +904,7 @@ const methodologyBodyHtml = `
       <ul class="text-xs text-slate-400 space-y-1.5 list-disc pl-4 leading-relaxed">
         <li><strong>The Wrong Broadcaster:</strong> Sportsnet does not own regional games for Ottawa, Montreal, or Winnipeg (and only half of Toronto's). Those games are exclusive to TSN and RDS.</li>
         <li><strong>The Predatory Upsell:</strong> Sportsnet+ often tells in-market fans to "Upgrade to Premium". If TSN owns the game, paying $35 for Premium will still leave you blacked out.</li>
-        <li><strong>Monday Prime Exclusives:</strong> Monday night games air exclusively on Amazon Prime Video nationwide—not on cable or Sportsnet+.</li>
+        <li><strong>Wednesday Prime Exclusives:</strong> Wednesday night games air exclusively on Amazon Prime Video nationwide—not on cable or Sportsnet+.</li>
       </ul>
       <p class="text-xs text-sky-300 font-semibold pt-1">
         &rarr; Fix: No router trick will help. You need the specific network holding tonight's rights.
@@ -1323,7 +1324,7 @@ const methodologyBodyHtml = `
             '<p class="text-[11px] text-slate-200 leading-normal">26 Maple Leafs games are exclusive to <strong>TSN4</strong> in Ontario. If tonight is a TSN game, Sportsnet+ will black you out, and upgrading to Premium will not unlock it.</p>' +
           '</div>';
         } else {
-          rightsWarning = '<p class="text-slate-300">If your game is blacked out on Sportsnet+, check if you are on basic Sportsnet without regional access, or if tonight is exclusive to <strong>Amazon Prime Video</strong> (Monday Night Hockey).</p>';
+          rightsWarning = '<p class="text-slate-300">If your game is blacked out on Sportsnet+, check if you are on basic Sportsnet without regional access, or if tonight is exclusive to <strong>Amazon Prime Video</strong> (Wednesday Night Hockey).</p>';
         }
 
         verdictBox.innerHTML = '<div class="flex items-center justify-between gap-2 border-b border-emerald-500/20 pb-2.5">' +
@@ -1626,7 +1627,7 @@ writeExplainerPage({
     },
     {
       q: 'Does TSN broadcast any national NHL games or Stanley Cup Playoff games?',
-      aPlain: 'No. In English, national broadcast rights (including Saturday night Hockey Night in Canada and the entire Stanley Cup Playoffs) belong exclusively to Rogers Sportsnet, while Monday and Wednesday national regular-season games stream on Amazon Prime Video. Every single NHL game shown on TSN is a regional broadcast.'
+      aPlain: 'No. In English, national broadcast rights (including Saturday night Hockey Night in Canada and the entire Stanley Cup Playoffs) belong exclusively to Rogers Sportsnet, while Wednesday night national regular-season games stream on Amazon Prime Video. Every single NHL game shown on TSN is a regional broadcast.'
     },
     {
       q: 'Why are Winnipeg Jets games blacked out on TSN3 in Ontario and Western Canada?',

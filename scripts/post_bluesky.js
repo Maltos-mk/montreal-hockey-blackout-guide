@@ -15,6 +15,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const { formatEtDate } = require('./lib/date_utils');
 
 const BSKY_SERVICE = 'https://bsky.social';
 const isDryRun = process.argv.includes('--dry-run');
@@ -561,7 +562,7 @@ async function main() {
         const isHome = g.vs.startsWith('vs ');
         const homeId = isHome ? teamData.team.id : g.opp;
         const awayId = isHome ? g.opp : teamData.team.id;
-        const datePrefix = g.iso.split('T')[0];
+        const datePrefix = formatEtDate(g.iso);
         const matchKey = `${datePrefix}_${homeId}_${awayId}`;
         if (!activeGames.has(matchKey)) {
           activeGames.set(matchKey, {

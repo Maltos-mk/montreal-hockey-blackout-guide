@@ -13,6 +13,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { formatEtDate } = require('./lib/date_utils');
 
 const BSKY_SERVICE = 'https://bsky.social';
 const isDryRun = process.argv.includes('--dry-run');
@@ -42,8 +43,8 @@ const SEARCH_CATEGORIES = [
   },
   {
     id: 'B',
-    name: 'Cable vs. Sportsnet+ / Monday Exclusive',
-    query: '("Sportsnet+" OR "Sportsnet Plus" OR "Monday") (cable OR Bell OR Telus OR channel OR blackout)',
+    name: 'Cable vs. Sportsnet+ / Wednesday Exclusive',
+    query: '("Sportsnet+" OR "Sportsnet Plus" OR "Wednesday") (cable OR Bell OR Telus OR channel OR blackout)',
     defaultUrl: 'https://hockeyblackouts.ca/sportsnet-plus-blackout-rules/?utm_source=bluesky&utm_medium=social&utm_campaign=sn_exclusive&utm_content=comment_reply'
   },
   {
@@ -111,7 +112,7 @@ function findTodayGameForTeam(teamId) {
     const awayCity = ALL_CITIES[awayId] || awayId;
     const homeSlug = slugify(homeCity);
     const awaySlug = slugify(awayCity);
-    const datePrefix = game.iso.split('T')[0];
+    const datePrefix = formatEtDate(game.iso);
 
     return {
       game,
@@ -186,9 +187,9 @@ function draftReply(category, postText) {
       replyText = `Regional NHL games on TSN & Sportsnet are locked to local broadcast zones on cable. Full breakdown of blackout boundaries: ${category.defaultUrl}`;
     }
   } else if (category.id === 'B') {
-    replyText = `Monday games stream exclusively on Sportsnet+ (app only) and are not on linear cable. Full breakdown of the rules: ${category.defaultUrl}`;
+    replyText = `Wednesday games stream exclusively on Prime Video (app only) and are not on linear cable. Full breakdown of the rules: ${category.defaultUrl}`;
   } else if (category.id === 'C') {
-    replyText = `Amazon Prime has exclusive Canadian rights to Monday Night Hockey, so cable cannot carry it. Full Prime schedule: ${category.defaultUrl}`;
+    replyText = `Amazon Prime has exclusive Canadian rights to Wednesday Night Hockey, so cable cannot carry it. Full Prime schedule: ${category.defaultUrl}`;
   } else if (category.id === 'D') {
     replyText = `ISP routing (Starlink or mobile cell data) often misidentifies your province and causes blackouts. Free IP scan: ${category.defaultUrl}`;
   }
