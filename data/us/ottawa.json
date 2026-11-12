@@ -60,14 +60,14 @@
       "opp": "DET",
       "fullMatchup": "Ottawa Senators at Detroit Red Wings",
       "venue": "Little Caesars Arena",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026020059,
@@ -96,14 +96,14 @@
       "opp": "NSH",
       "fullMatchup": "Ottawa Senators vs Nashville Predators",
       "venue": "Canadian Tire Centre",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020088,
@@ -132,14 +132,14 @@
       "opp": "STL",
       "fullMatchup": "Ottawa Senators vs St. Louis Blues",
       "venue": "Canadian Tire Centre",
-      "rsn": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Midwest",
+      "secondaryNet": "Blue Note+ (BN+)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (FanDuel Sports Midwest)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (Blue Note+ (BN+))"
     },
     {
       "id": 2026020109,
@@ -258,14 +258,14 @@
       "opp": "LAK",
       "fullMatchup": "Ottawa Senators at Los Angeles Kings",
       "venue": "Crypto.com Arena",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026020222,
@@ -294,14 +294,14 @@
       "opp": "ANA",
       "fullMatchup": "Ottawa Senators at Anaheim Ducks",
       "venue": "Honda Center",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020247,
@@ -330,14 +330,14 @@
       "opp": "UTA",
       "fullMatchup": "Ottawa Senators vs Utah Mammoth",
       "venue": "Canadian Tire Centre",
-      "rsn": "Utah 16 / SEG+",
+      "rsn": "Mammoth+ / Utah 16",
       "netUSNat": "NHLN",
       "primaryNet": "NHLN",
-      "secondaryNet": "Utah 16 / SEG+",
+      "secondaryNet": "Mammoth+ / Utah 16",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Opponent RSN",
-      "bannerText": "National on NHL Network / Local Utah Mammoth market on Utah 16 / SEG+ (Blacked out on ESPN+)"
+      "bannerText": "National on NHL Network / Local Utah Mammoth market on Mammoth+ / Utah 16 (Blacked out on ESPN+)"
     },
     {
       "id": 2026020288,
@@ -438,14 +438,14 @@
       "opp": "LAK",
       "fullMatchup": "Ottawa Senators vs Los Angeles Kings",
       "venue": "Canadian Tire Centre",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026020380,
@@ -492,14 +492,14 @@
       "opp": "TBL",
       "fullMatchup": "Ottawa Senators at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020421,
@@ -510,14 +510,14 @@
       "opp": "CAR",
       "fullMatchup": "Ottawa Senators at Carolina Hurricanes",
       "venue": "Lenovo Center",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Hurricanes Hockey Network (HHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026020430,
@@ -528,14 +528,14 @@
       "opp": "NSH",
       "fullMatchup": "Ottawa Senators at Nashville Predators",
       "venue": "Bridgestone Arena",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": "NHLN",
       "primaryNet": "NHLN",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Opponent RSN",
-      "bannerText": "National on NHL Network / Local Nashville Predators market on FanDuel Sports South (Blacked out on ESPN+)"
+      "bannerText": "National on NHL Network / Local Nashville Predators market on Scripps Sports (The Spot) (Blacked out on ESPN+)"
     },
     {
       "id": 2026020449,
@@ -564,14 +564,14 @@
       "opp": "TBL",
       "fullMatchup": "Ottawa Senators vs Tampa Bay Lightning",
       "venue": "Canadian Tire Centre",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020478,
@@ -600,14 +600,14 @@
       "opp": "ANA",
       "fullMatchup": "Ottawa Senators vs Anaheim Ducks",
       "venue": "Canadian Tire Centre",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020501,
@@ -726,14 +726,14 @@
       "opp": "DAL",
       "fullMatchup": "Ottawa Senators vs Dallas Stars",
       "venue": "Canadian Tire Centre",
-      "rsn": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+",
+      "secondaryNet": "Prime Video / KDFW 4",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Victory+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Prime Video / KDFW 4)"
     },
     {
       "id": 2026020642,
@@ -780,14 +780,14 @@
       "opp": "UTA",
       "fullMatchup": "Ottawa Senators at Utah Mammoth",
       "venue": "Delta Center",
-      "rsn": "Utah 16 / SEG+",
+      "rsn": "Mammoth+ / Utah 16",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Utah 16 / SEG+",
+      "secondaryNet": "Mammoth+ / Utah 16",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Utah 16 / SEG+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Mammoth+ / Utah 16)"
     },
     {
       "id": 2026020691,
@@ -816,14 +816,14 @@
       "opp": "STL",
       "fullMatchup": "Ottawa Senators at St. Louis Blues",
       "venue": "Enterprise Center",
-      "rsn": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Midwest",
+      "secondaryNet": "Blue Note+ (BN+)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (FanDuel Sports Midwest)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (Blue Note+ (BN+))"
     },
     {
       "id": 2026020734,
@@ -834,14 +834,14 @@
       "opp": "DAL",
       "fullMatchup": "Ottawa Senators at Dallas Stars",
       "venue": "American Airlines Center",
-      "rsn": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+",
+      "secondaryNet": "Prime Video / KDFW 4",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Victory+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Prime Video / KDFW 4)"
     },
     {
       "id": 2026020746,
@@ -870,14 +870,14 @@
       "opp": "TBL",
       "fullMatchup": "Ottawa Senators at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020784,
@@ -924,14 +924,14 @@
       "opp": "CBJ",
       "fullMatchup": "Ottawa Senators vs Columbus Blue Jackets",
       "venue": "Canadian Tire Centre",
-      "rsn": "FanDuel Sports Ohio",
+      "rsn": "Blue Jackets Hockey Network (CBJHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Ohio",
+      "secondaryNet": "Blue Jackets Hockey Network (CBJHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (FanDuel Sports Ohio)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (Blue Jackets Hockey Network (CBJHN))"
     },
     {
       "id": 2026020832,
@@ -942,14 +942,14 @@
       "opp": "CAR",
       "fullMatchup": "Ottawa Senators vs Carolina Hurricanes",
       "venue": "Canadian Tire Centre",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Hurricanes Hockey Network (HHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026020849,
@@ -996,14 +996,14 @@
       "opp": "CBJ",
       "fullMatchup": "Ottawa Senators vs Columbus Blue Jackets",
       "venue": "Canadian Tire Centre",
-      "rsn": "FanDuel Sports Ohio",
+      "rsn": "Blue Jackets Hockey Network (CBJHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Ohio",
+      "secondaryNet": "Blue Jackets Hockey Network (CBJHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (FanDuel Sports Ohio)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (Blue Jackets Hockey Network (CBJHN))"
     },
     {
       "id": 2026020903,
@@ -1014,14 +1014,14 @@
       "opp": "CBJ",
       "fullMatchup": "Ottawa Senators at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
-      "rsn": "FanDuel Sports Ohio",
+      "rsn": "Blue Jackets Hockey Network (CBJHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Ohio",
+      "secondaryNet": "Blue Jackets Hockey Network (CBJHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (FanDuel Sports Ohio)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (Blue Jackets Hockey Network (CBJHN))"
     },
     {
       "id": 2026020918,
@@ -1050,14 +1050,14 @@
       "opp": "MIN",
       "fullMatchup": "Ottawa Senators at Minnesota Wild",
       "venue": "Grand Casino Arena",
-      "rsn": "FanDuel Sports North",
+      "rsn": "Wild+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports North",
+      "secondaryNet": "Wild+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (FanDuel Sports North)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (Wild+)"
     },
     {
       "id": 2026020950,
@@ -1068,14 +1068,14 @@
       "opp": "SEA",
       "fullMatchup": "Ottawa Senators at Seattle Kraken",
       "venue": "Climate Pledge Arena",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020959,
@@ -1140,14 +1140,14 @@
       "opp": "DET",
       "fullMatchup": "Ottawa Senators vs Detroit Red Wings",
       "venue": "Canadian Tire Centre",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026021012,
@@ -1212,14 +1212,14 @@
       "opp": "SEA",
       "fullMatchup": "Ottawa Senators vs Seattle Kraken",
       "venue": "Canadian Tire Centre",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026021085,
@@ -1266,14 +1266,14 @@
       "opp": "MIN",
       "fullMatchup": "Ottawa Senators vs Minnesota Wild",
       "venue": "Canadian Tire Centre",
-      "rsn": "FanDuel Sports North",
+      "rsn": "Wild+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports North",
+      "secondaryNet": "Wild+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (FanDuel Sports North)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (Wild+)"
     },
     {
       "id": 2026021126,
@@ -1356,14 +1356,14 @@
       "opp": "TBL",
       "fullMatchup": "Ottawa Senators vs Tampa Bay Lightning",
       "venue": "Canadian Tire Centre",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026021208,
@@ -1428,14 +1428,14 @@
       "opp": "DET",
       "fullMatchup": "Ottawa Senators at Detroit Red Wings",
       "venue": "Little Caesars Arena",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026021273,
@@ -1464,14 +1464,14 @@
       "opp": "DET",
       "fullMatchup": "Ottawa Senators vs Detroit Red Wings",
       "venue": "Canadian Tire Centre",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026021313,
@@ -1482,14 +1482,14 @@
       "opp": "CAR",
       "fullMatchup": "Ottawa Senators at Carolina Hurricanes",
       "venue": "Lenovo Center",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Hurricanes Hockey Network (HHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026021316,

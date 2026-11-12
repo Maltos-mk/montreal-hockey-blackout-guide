@@ -5,12 +5,7 @@
     "nickname": "Kraken",
     "city": "Seattle",
     "slug": "seattle-kraken",
-    "rsn": "Kraken Hockey Network",
-    "colors": {
-      "primary": "#68A2B9",
-      "secondary": "#001628",
-      "dark": "#000C17"
-    },
+    "rsn": "Prime Video / Kraken Hockey Network",
     "territoryDescription": "Washington, Oregon, Alaska & Northern Idaho",
     "zipRanges": [
       [
@@ -21,7 +16,12 @@
         970,
         999
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#68A2B9",
+      "secondary": "#001628",
+      "dark": "#000C17"
+    }
   },
   "schedule": [
     {
@@ -34,13 +34,13 @@
       "fullMatchup": "Seattle Kraken at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020028,
@@ -52,13 +52,13 @@
       "fullMatchup": "Seattle Kraken at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "Prime Video",
+      "netUSNat": "NHLN",
       "primaryNet": "Prime Video",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on Prime Video / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on Prime Video / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020038,
@@ -70,13 +70,13 @@
       "fullMatchup": "Seattle Kraken vs Calgary Flames",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020051,
@@ -88,13 +88,13 @@
       "fullMatchup": "Seattle Kraken vs Vegas Golden Knights",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020066,
@@ -106,13 +106,13 @@
       "fullMatchup": "Seattle Kraken at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020084,
@@ -124,13 +124,13 @@
       "fullMatchup": "Seattle Kraken at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020094,
@@ -142,13 +142,13 @@
       "fullMatchup": "Seattle Kraken at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020111,
@@ -160,13 +160,13 @@
       "fullMatchup": "Seattle Kraken at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020124,
@@ -178,13 +178,13 @@
       "fullMatchup": "Seattle Kraken at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020149,
@@ -196,13 +196,13 @@
       "fullMatchup": "Seattle Kraken vs Detroit Red Wings",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020164,
@@ -213,14 +213,14 @@
       "opp": "UTA",
       "fullMatchup": "Seattle Kraken vs Utah Mammoth",
       "venue": "Climate Pledge Arena",
-      "rsn": "Kraken Hockey Network",
-      "primaryNet": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
+      "netUSNat": null,
+      "primaryNet": "Prime Video / Kraken Hockey Network",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Kraken Hockey Network)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020179,
@@ -232,13 +232,13 @@
       "fullMatchup": "Seattle Kraken vs Minnesota Wild",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020202,
@@ -250,13 +250,13 @@
       "fullMatchup": "Seattle Kraken vs Toronto Maple Leafs",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020216,
@@ -268,13 +268,13 @@
       "fullMatchup": "Seattle Kraken at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020250,
@@ -286,13 +286,13 @@
       "fullMatchup": "Seattle Kraken vs Calgary Flames",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020267,
@@ -304,13 +304,13 @@
       "fullMatchup": "Seattle Kraken vs New York Rangers",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020309,
@@ -322,13 +322,13 @@
       "fullMatchup": "Seattle Kraken vs Carolina Hurricanes",
       "venue": "Veikkaus Arena",
       "rsn": "Prime Video",
+      "netUSNat": "NHLN",
       "primaryNet": "Prime Video",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on Prime Video / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on Prime Video / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020321,
@@ -340,13 +340,13 @@
       "fullMatchup": "Seattle Kraken at Carolina Hurricanes",
       "venue": "Veikkaus Arena",
       "rsn": "Prime Video",
+      "netUSNat": "NHLN",
       "primaryNet": "Prime Video",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on Prime Video / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on Prime Video / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020357,
@@ -358,13 +358,13 @@
       "fullMatchup": "Seattle Kraken vs Vancouver Canucks",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020372,
@@ -376,13 +376,13 @@
       "fullMatchup": "Seattle Kraken at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020383,
@@ -394,13 +394,13 @@
       "fullMatchup": "Seattle Kraken vs Anaheim Ducks",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020399,
@@ -412,13 +412,13 @@
       "fullMatchup": "Seattle Kraken vs Chicago Blackhawks",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020414,
@@ -430,13 +430,13 @@
       "fullMatchup": "Seattle Kraken at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020427,
@@ -448,13 +448,13 @@
       "fullMatchup": "Seattle Kraken vs Edmonton Oilers",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020442,
@@ -466,13 +466,13 @@
       "fullMatchup": "Seattle Kraken vs Dallas Stars",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020457,
@@ -483,14 +483,14 @@
       "opp": "DAL",
       "fullMatchup": "Seattle Kraken vs Dallas Stars",
       "venue": "Climate Pledge Arena",
-      "rsn": "Kraken Hockey Network",
-      "primaryNet": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
+      "netUSNat": null,
+      "primaryNet": "Prime Video / Kraken Hockey Network",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Kraken Hockey Network)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020463,
@@ -502,13 +502,13 @@
       "fullMatchup": "Seattle Kraken at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020481,
@@ -520,13 +520,13 @@
       "fullMatchup": "Seattle Kraken vs Buffalo Sabres",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020495,
@@ -538,13 +538,13 @@
       "fullMatchup": "Seattle Kraken at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020509,
@@ -556,13 +556,13 @@
       "fullMatchup": "Seattle Kraken vs Washington Capitals",
       "venue": "Climate Pledge Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020526,
@@ -574,13 +574,13 @@
       "fullMatchup": "Seattle Kraken vs Nashville Predators",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020543,
@@ -592,13 +592,13 @@
       "fullMatchup": "Seattle Kraken at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020556,
@@ -610,13 +610,13 @@
       "fullMatchup": "Seattle Kraken at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020563,
@@ -628,13 +628,13 @@
       "fullMatchup": "Seattle Kraken at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020584,
@@ -646,13 +646,13 @@
       "fullMatchup": "Seattle Kraken at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020599,
@@ -664,13 +664,13 @@
       "fullMatchup": "Seattle Kraken vs San Jose Sharks",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020635,
@@ -682,13 +682,13 @@
       "fullMatchup": "Seattle Kraken vs Philadelphia Flyers",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020640,
@@ -700,13 +700,13 @@
       "fullMatchup": "Seattle Kraken at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020668,
@@ -718,13 +718,13 @@
       "fullMatchup": "Seattle Kraken vs New York Islanders",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020673,
@@ -736,13 +736,13 @@
       "fullMatchup": "Seattle Kraken vs Vancouver Canucks",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020688,
@@ -754,13 +754,13 @@
       "fullMatchup": "Seattle Kraken vs Tampa Bay Lightning",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020706,
@@ -772,13 +772,13 @@
       "fullMatchup": "Seattle Kraken at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020720,
@@ -790,13 +790,13 @@
       "fullMatchup": "Seattle Kraken at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020736,
@@ -808,13 +808,13 @@
       "fullMatchup": "Seattle Kraken vs Florida Panthers",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020752,
@@ -826,13 +826,13 @@
       "fullMatchup": "Seattle Kraken at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020771,
@@ -844,13 +844,13 @@
       "fullMatchup": "Seattle Kraken vs San Jose Sharks",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020782,
@@ -862,13 +862,13 @@
       "fullMatchup": "Seattle Kraken vs Columbus Blue Jackets",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020791,
@@ -879,14 +879,14 @@
       "opp": "LAK",
       "fullMatchup": "Seattle Kraken at Los Angeles Kings",
       "venue": "Crypto.com Arena",
-      "rsn": "Kraken Hockey Network",
-      "primaryNet": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
+      "netUSNat": null,
+      "primaryNet": "Prime Video / Kraken Hockey Network",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Kraken Hockey Network)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020798,
@@ -898,13 +898,13 @@
       "fullMatchup": "Seattle Kraken at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020819,
@@ -916,13 +916,13 @@
       "fullMatchup": "Seattle Kraken at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020831,
@@ -934,13 +934,13 @@
       "fullMatchup": "Seattle Kraken at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020838,
@@ -952,13 +952,13 @@
       "fullMatchup": "Seattle Kraken at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020857,
@@ -970,13 +970,13 @@
       "fullMatchup": "Seattle Kraken at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020879,
@@ -988,13 +988,13 @@
       "fullMatchup": "Seattle Kraken vs New Jersey Devils",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020894,
@@ -1006,13 +1006,13 @@
       "fullMatchup": "Seattle Kraken vs Montreal Canadiens",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020926,
@@ -1024,13 +1024,13 @@
       "fullMatchup": "Seattle Kraken vs St. Louis Blues",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020933,
@@ -1042,13 +1042,13 @@
       "fullMatchup": "Seattle Kraken vs Pittsburgh Penguins",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020950,
@@ -1060,13 +1060,13 @@
       "fullMatchup": "Seattle Kraken vs Ottawa Senators",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020966,
@@ -1078,13 +1078,13 @@
       "fullMatchup": "Seattle Kraken at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020976,
@@ -1096,13 +1096,13 @@
       "fullMatchup": "Seattle Kraken at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020990,
@@ -1114,13 +1114,13 @@
       "fullMatchup": "Seattle Kraken vs Boston Bruins",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021002,
@@ -1132,13 +1132,13 @@
       "fullMatchup": "Seattle Kraken at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021028,
@@ -1150,13 +1150,13 @@
       "fullMatchup": "Seattle Kraken vs Winnipeg Jets",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021039,
@@ -1168,13 +1168,13 @@
       "fullMatchup": "Seattle Kraken at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021048,
@@ -1186,13 +1186,13 @@
       "fullMatchup": "Seattle Kraken at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021057,
@@ -1204,13 +1204,13 @@
       "fullMatchup": "Seattle Kraken at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021073,
@@ -1222,13 +1222,13 @@
       "fullMatchup": "Seattle Kraken at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021089,
@@ -1240,13 +1240,13 @@
       "fullMatchup": "Seattle Kraken at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021115,
@@ -1257,14 +1257,14 @@
       "opp": "LAK",
       "fullMatchup": "Seattle Kraken vs Los Angeles Kings",
       "venue": "Climate Pledge Arena",
-      "rsn": "Kraken Hockey Network",
-      "primaryNet": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
+      "netUSNat": null,
+      "primaryNet": "Prime Video / Kraken Hockey Network",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Kraken Hockey Network)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026021133,
@@ -1276,13 +1276,13 @@
       "fullMatchup": "Seattle Kraken vs Edmonton Oilers",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021145,
@@ -1294,13 +1294,13 @@
       "fullMatchup": "Seattle Kraken vs St. Louis Blues",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021159,
@@ -1312,13 +1312,13 @@
       "fullMatchup": "Seattle Kraken at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021173,
@@ -1330,13 +1330,13 @@
       "fullMatchup": "Seattle Kraken vs Colorado Avalanche",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021191,
@@ -1348,13 +1348,13 @@
       "fullMatchup": "Seattle Kraken vs Los Angeles Kings",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021206,
@@ -1366,13 +1366,13 @@
       "fullMatchup": "Seattle Kraken vs Vegas Golden Knights",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021222,
@@ -1384,13 +1384,13 @@
       "fullMatchup": "Seattle Kraken vs Anaheim Ducks",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021228,
@@ -1402,13 +1402,13 @@
       "fullMatchup": "Seattle Kraken at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021240,
@@ -1420,13 +1420,13 @@
       "fullMatchup": "Seattle Kraken at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021257,
@@ -1438,13 +1438,13 @@
       "fullMatchup": "Seattle Kraken vs Utah Mammoth",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021284,
@@ -1456,13 +1456,13 @@
       "fullMatchup": "Seattle Kraken vs Winnipeg Jets",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021299,
@@ -1474,13 +1474,13 @@
       "fullMatchup": "Seattle Kraken at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021307,
@@ -1492,13 +1492,13 @@
       "fullMatchup": "Seattle Kraken at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021321,
@@ -1510,13 +1510,13 @@
       "fullMatchup": "Seattle Kraken at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021336,
@@ -1528,13 +1528,13 @@
       "fullMatchup": "Seattle Kraken at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     }
   ]
 }

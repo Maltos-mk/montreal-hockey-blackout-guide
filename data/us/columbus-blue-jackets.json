@@ -5,12 +5,7 @@
     "nickname": "Blue Jackets",
     "city": "Columbus",
     "slug": "columbus-blue-jackets",
-    "rsn": "FanDuel Sports Ohio",
-    "colors": {
-      "primary": "#CE1126",
-      "secondary": "#002654",
-      "dark": "#001530"
-    },
+    "rsn": "Blue Jackets Hockey Network (CBJHN)",
     "territoryDescription": "Ohio, Eastern/Central Kentucky & Southern West Virginia",
     "zipRanges": [
       [
@@ -25,7 +20,12 @@
         430,
         458
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#002654",
+      "dark": "#001530"
+    }
   },
   "schedule": [
     {
@@ -38,13 +38,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Buffalo Sabres",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020027,
@@ -56,13 +56,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Utah Mammoth",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020068,
@@ -74,13 +74,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Pittsburgh Penguins",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020079,
@@ -92,13 +92,13 @@
       "fullMatchup": "Columbus Blue Jackets at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020091,
@@ -110,13 +110,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Florida Panthers",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020129,
@@ -128,13 +128,13 @@
       "fullMatchup": "Columbus Blue Jackets vs New York Rangers",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020135,
@@ -146,13 +146,13 @@
       "fullMatchup": "Columbus Blue Jackets at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020145,
@@ -164,13 +164,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Toronto Maple Leafs",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020174,
@@ -182,13 +182,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Vegas Golden Knights",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020188,
@@ -200,13 +200,13 @@
       "fullMatchup": "Columbus Blue Jackets at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020206,
@@ -218,13 +218,13 @@
       "fullMatchup": "Columbus Blue Jackets at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020225,
@@ -236,13 +236,13 @@
       "fullMatchup": "Columbus Blue Jackets at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020244,
@@ -254,13 +254,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Colorado Avalanche",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020258,
@@ -272,13 +272,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Dallas Stars",
       "venue": "Nationwide Arena",
       "rsn": "WWHO",
+      "netUSNat": null,
       "primaryNet": "WWHO",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)"
     },
     {
       "id": 2026020262,
@@ -290,13 +290,13 @@
       "fullMatchup": "Columbus Blue Jackets at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020289,
@@ -307,14 +307,14 @@
       "opp": "FLA",
       "fullMatchup": "Columbus Blue Jackets vs Florida Panthers",
       "venue": "Nationwide Arena",
-      "rsn": "FanDuel Sports Ohio",
-      "primaryNet": "FanDuel Sports Ohio",
+      "rsn": "Blue Jackets Hockey Network (CBJHN)",
+      "netUSNat": null,
+      "primaryNet": "Blue Jackets Hockey Network (CBJHN)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports Ohio)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Blue Jackets Hockey Network (CBJHN))"
     },
     {
       "id": 2026020304,
@@ -326,13 +326,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Tampa Bay Lightning",
       "venue": "Nationwide Arena",
       "rsn": "WWHO",
+      "netUSNat": null,
       "primaryNet": "WWHO",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)"
     },
     {
       "id": 2026020319,
@@ -344,13 +344,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Philadelphia Flyers",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020336,
@@ -362,13 +362,13 @@
       "fullMatchup": "Columbus Blue Jackets at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020353,
@@ -380,13 +380,13 @@
       "fullMatchup": "Columbus Blue Jackets at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020364,
@@ -398,13 +398,13 @@
       "fullMatchup": "Columbus Blue Jackets at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020378,
@@ -416,13 +416,13 @@
       "fullMatchup": "Columbus Blue Jackets at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "CBJHN",
+      "netUSNat": "NHLN",
       "primaryNet": "CBJHN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on CBJHN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on CBJHN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020393,
@@ -434,13 +434,13 @@
       "fullMatchup": "Columbus Blue Jackets vs New Jersey Devils",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020407,
@@ -452,13 +452,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Detroit Red Wings",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020432,
@@ -470,13 +470,13 @@
       "fullMatchup": "Columbus Blue Jackets at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "WWHO",
+      "netUSNat": null,
       "primaryNet": "WWHO",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)"
     },
     {
       "id": 2026020453,
@@ -488,13 +488,13 @@
       "fullMatchup": "Columbus Blue Jackets at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020466,
@@ -506,13 +506,13 @@
       "fullMatchup": "Columbus Blue Jackets at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020483,
@@ -524,13 +524,13 @@
       "fullMatchup": "Columbus Blue Jackets at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "WWHO",
+      "netUSNat": null,
       "primaryNet": "WWHO",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)"
     },
     {
       "id": 2026020505,
@@ -542,13 +542,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Minnesota Wild",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020515,
@@ -560,13 +560,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Montreal Canadiens",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020528,
@@ -578,13 +578,13 @@
       "fullMatchup": "Columbus Blue Jackets at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020541,
@@ -596,13 +596,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Carolina Hurricanes",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020556,
@@ -614,13 +614,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Seattle Kraken",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020572,
@@ -632,13 +632,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Los Angeles Kings",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020587,
@@ -650,13 +650,13 @@
       "fullMatchup": "Columbus Blue Jackets at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020594,
@@ -668,13 +668,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Montreal Canadiens",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020605,
@@ -686,13 +686,13 @@
       "fullMatchup": "Columbus Blue Jackets at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020613,
@@ -704,13 +704,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Edmonton Oilers",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020626,
@@ -722,13 +722,13 @@
       "fullMatchup": "Columbus Blue Jackets at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020645,
@@ -740,13 +740,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Washington Capitals",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020660,
@@ -758,13 +758,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Boston Bruins",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020670,
@@ -776,13 +776,13 @@
       "fullMatchup": "Columbus Blue Jackets at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020682,
@@ -794,13 +794,13 @@
       "fullMatchup": "Columbus Blue Jackets vs New York Rangers",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020695,
@@ -812,13 +812,13 @@
       "fullMatchup": "Columbus Blue Jackets at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "WWHO",
+      "netUSNat": null,
       "primaryNet": "WWHO",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)"
     },
     {
       "id": 2026020704,
@@ -830,13 +830,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Buffalo Sabres",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020735,
@@ -848,13 +848,13 @@
       "fullMatchup": "Columbus Blue Jackets at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020756,
@@ -866,13 +866,13 @@
       "fullMatchup": "Columbus Blue Jackets at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020770,
@@ -884,13 +884,13 @@
       "fullMatchup": "Columbus Blue Jackets at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020782,
@@ -902,13 +902,13 @@
       "fullMatchup": "Columbus Blue Jackets at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020804,
@@ -920,13 +920,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Calgary Flames",
       "venue": "Nationwide Arena",
       "rsn": "WWHO",
+      "netUSNat": null,
       "primaryNet": "WWHO",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)"
     },
     {
       "id": 2026020813,
@@ -938,13 +938,13 @@
       "fullMatchup": "Columbus Blue Jackets at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020825,
@@ -956,13 +956,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Anaheim Ducks",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020834,
@@ -974,13 +974,13 @@
       "fullMatchup": "Columbus Blue Jackets at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020852,
@@ -992,13 +992,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Winnipeg Jets",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020873,
@@ -1010,13 +1010,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Detroit Red Wings",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020895,
@@ -1028,13 +1028,13 @@
       "fullMatchup": "Columbus Blue Jackets at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "WWHO",
+      "netUSNat": null,
       "primaryNet": "WWHO",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)"
     },
     {
       "id": 2026020897,
@@ -1046,13 +1046,13 @@
       "fullMatchup": "Columbus Blue Jackets at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020903,
@@ -1064,13 +1064,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Ottawa Senators",
       "venue": "Nationwide Arena",
       "rsn": "WWHO",
+      "netUSNat": null,
       "primaryNet": "WWHO",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)"
     },
     {
       "id": 2026020917,
@@ -1082,13 +1082,13 @@
       "fullMatchup": "Columbus Blue Jackets at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020932,
@@ -1100,13 +1100,13 @@
       "fullMatchup": "Columbus Blue Jackets at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020947,
@@ -1118,13 +1118,13 @@
       "fullMatchup": "Columbus Blue Jackets at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020960,
@@ -1136,13 +1136,13 @@
       "fullMatchup": "Columbus Blue Jackets at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020971,
@@ -1154,13 +1154,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Nashville Predators",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026020987,
@@ -1172,13 +1172,13 @@
       "fullMatchup": "Columbus Blue Jackets vs New York Islanders",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021015,
@@ -1190,13 +1190,13 @@
       "fullMatchup": "Columbus Blue Jackets vs New Jersey Devils",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021025,
@@ -1208,13 +1208,13 @@
       "fullMatchup": "Columbus Blue Jackets vs New York Islanders",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021038,
@@ -1226,13 +1226,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Carolina Hurricanes",
       "venue": "Nationwide Arena",
       "rsn": "WWHO",
+      "netUSNat": null,
       "primaryNet": "WWHO",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)"
     },
     {
       "id": 2026021055,
@@ -1244,13 +1244,13 @@
       "fullMatchup": "Columbus Blue Jackets at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021069,
@@ -1262,13 +1262,13 @@
       "fullMatchup": "Columbus Blue Jackets at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021087,
@@ -1280,13 +1280,13 @@
       "fullMatchup": "Columbus Blue Jackets at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021110,
@@ -1298,13 +1298,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Vancouver Canucks",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021129,
@@ -1316,13 +1316,13 @@
       "fullMatchup": "Columbus Blue Jackets vs San Jose Sharks",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021150,
@@ -1334,13 +1334,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Pittsburgh Penguins",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021163,
@@ -1352,13 +1352,13 @@
       "fullMatchup": "Columbus Blue Jackets at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021181,
@@ -1370,13 +1370,13 @@
       "fullMatchup": "Columbus Blue Jackets at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021193,
@@ -1388,13 +1388,13 @@
       "fullMatchup": "Columbus Blue Jackets at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "WWHO",
+      "netUSNat": null,
       "primaryNet": "WWHO",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (WWHO)"
     },
     {
       "id": 2026021217,
@@ -1406,13 +1406,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Chicago Blackhawks",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021235,
@@ -1424,13 +1424,13 @@
       "fullMatchup": "Columbus Blue Jackets vs St. Louis Blues",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021251,
@@ -1442,13 +1442,13 @@
       "fullMatchup": "Columbus Blue Jackets at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021264,
@@ -1460,13 +1460,13 @@
       "fullMatchup": "Columbus Blue Jackets at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021280,
@@ -1478,13 +1478,13 @@
       "fullMatchup": "Columbus Blue Jackets at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021304,
@@ -1496,13 +1496,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Washington Capitals",
       "venue": "Nationwide Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     },
     {
       "id": 2026021319,
@@ -1514,13 +1514,13 @@
       "fullMatchup": "Columbus Blue Jackets vs Philadelphia Flyers",
       "venue": "Nationwide Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021332,
@@ -1532,13 +1532,13 @@
       "fullMatchup": "Columbus Blue Jackets at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "CBJHN",
+      "netUSNat": null,
       "primaryNet": "CBJHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CBJHN)"
     }
   ]
 }

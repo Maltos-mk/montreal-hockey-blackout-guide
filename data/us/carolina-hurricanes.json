@@ -5,19 +5,19 @@
     "nickname": "Hurricanes",
     "city": "Carolina",
     "slug": "carolina-hurricanes",
-    "rsn": "FanDuel Sports South",
-    "colors": {
-      "primary": "#CE1126",
-      "secondary": "#111111",
-      "dark": "#0A0A0A"
-    },
+    "rsn": "Hurricanes Hockey Network (HHN)",
     "territoryDescription": "North Carolina & South Carolina",
     "zipRanges": [
       [
         270,
         299
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#111111",
+      "dark": "#0A0A0A"
+    }
   },
   "schedule": [
     {
@@ -30,13 +30,13 @@
       "fullMatchup": "Carolina Hurricanes vs Florida Panthers",
       "venue": "Lenovo Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020018,
@@ -48,13 +48,13 @@
       "fullMatchup": "Carolina Hurricanes vs Washington Capitals",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020025,
@@ -66,13 +66,13 @@
       "fullMatchup": "Carolina Hurricanes at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020045,
@@ -84,13 +84,13 @@
       "fullMatchup": "Carolina Hurricanes at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020061,
@@ -102,13 +102,13 @@
       "fullMatchup": "Carolina Hurricanes vs Vancouver Canucks",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020078,
@@ -120,13 +120,13 @@
       "fullMatchup": "Carolina Hurricanes at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020086,
@@ -138,13 +138,13 @@
       "fullMatchup": "Carolina Hurricanes at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "HHN",
+      "netUSNat": "NHLN",
       "primaryNet": "HHN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on HHN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on HHN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020093,
@@ -156,13 +156,13 @@
       "fullMatchup": "Carolina Hurricanes vs Washington Capitals",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020122,
@@ -174,13 +174,13 @@
       "fullMatchup": "Carolina Hurricanes at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020136,
@@ -192,13 +192,13 @@
       "fullMatchup": "Carolina Hurricanes at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020150,
@@ -210,13 +210,13 @@
       "fullMatchup": "Carolina Hurricanes at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020163,
@@ -228,13 +228,13 @@
       "fullMatchup": "Carolina Hurricanes at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020175,
@@ -246,13 +246,13 @@
       "fullMatchup": "Carolina Hurricanes at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020189,
@@ -264,13 +264,13 @@
       "fullMatchup": "Carolina Hurricanes vs Boston Bruins",
       "venue": "Lenovo Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020206,
@@ -282,13 +282,13 @@
       "fullMatchup": "Carolina Hurricanes vs Columbus Blue Jackets",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020227,
@@ -300,13 +300,13 @@
       "fullMatchup": "Carolina Hurricanes vs Winnipeg Jets",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": "NHLN",
       "primaryNet": "HHN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on HHN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on HHN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020245,
@@ -318,13 +318,13 @@
       "fullMatchup": "Carolina Hurricanes at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020255,
@@ -335,14 +335,14 @@
       "opp": "NYI",
       "fullMatchup": "Carolina Hurricanes at New York Islanders",
       "venue": "UBS Arena",
-      "rsn": "FanDuel Sports South",
-      "primaryNet": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
+      "netUSNat": null,
+      "primaryNet": "Hurricanes Hockey Network (HHN)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports South)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026020271,
@@ -354,13 +354,13 @@
       "fullMatchup": "Carolina Hurricanes vs Chicago Blackhawks",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020309,
@@ -372,13 +372,13 @@
       "fullMatchup": "Carolina Hurricanes at Seattle Kraken",
       "venue": "Veikkaus Arena",
       "rsn": "HHN",
+      "netUSNat": "NHLN",
       "primaryNet": "HHN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on HHN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on HHN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020321,
@@ -390,13 +390,13 @@
       "fullMatchup": "Carolina Hurricanes vs Seattle Kraken",
       "venue": "Veikkaus Arena",
       "rsn": "HHN",
+      "netUSNat": "NHLN",
       "primaryNet": "HHN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on HHN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on HHN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020352,
@@ -408,13 +408,13 @@
       "fullMatchup": "Carolina Hurricanes vs Montreal Canadiens",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020359,
@@ -426,13 +426,13 @@
       "fullMatchup": "Carolina Hurricanes vs Edmonton Oilers",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": "NHLN",
       "primaryNet": "HHN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on HHN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on HHN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020373,
@@ -444,13 +444,13 @@
       "fullMatchup": "Carolina Hurricanes at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "HHN",
+      "netUSNat": "NHLN",
       "primaryNet": "HHN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on HHN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on HHN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020388,
@@ -462,13 +462,13 @@
       "fullMatchup": "Carolina Hurricanes at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020421,
@@ -480,13 +480,13 @@
       "fullMatchup": "Carolina Hurricanes vs Ottawa Senators",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020431,
@@ -498,13 +498,13 @@
       "fullMatchup": "Carolina Hurricanes at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020453,
@@ -516,13 +516,13 @@
       "fullMatchup": "Carolina Hurricanes vs Columbus Blue Jackets",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020471,
@@ -534,13 +534,13 @@
       "fullMatchup": "Carolina Hurricanes vs Toronto Maple Leafs",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020490,
@@ -552,13 +552,13 @@
       "fullMatchup": "Carolina Hurricanes vs New York Rangers",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020512,
@@ -570,13 +570,13 @@
       "fullMatchup": "Carolina Hurricanes vs New York Islanders",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020527,
@@ -588,13 +588,13 @@
       "fullMatchup": "Carolina Hurricanes vs Boston Bruins",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020541,
@@ -606,13 +606,13 @@
       "fullMatchup": "Carolina Hurricanes at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020558,
@@ -624,13 +624,13 @@
       "fullMatchup": "Carolina Hurricanes at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020565,
@@ -642,13 +642,13 @@
       "fullMatchup": "Carolina Hurricanes at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020589,
@@ -660,13 +660,13 @@
       "fullMatchup": "Carolina Hurricanes at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020606,
@@ -678,13 +678,13 @@
       "fullMatchup": "Carolina Hurricanes vs Pittsburgh Penguins",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020623,
@@ -696,13 +696,13 @@
       "fullMatchup": "Carolina Hurricanes vs Tampa Bay Lightning",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020630,
@@ -714,13 +714,13 @@
       "fullMatchup": "Carolina Hurricanes at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020643,
@@ -732,13 +732,13 @@
       "fullMatchup": "Carolina Hurricanes at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020659,
@@ -750,13 +750,13 @@
       "fullMatchup": "Carolina Hurricanes vs Nashville Predators",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020681,
@@ -768,13 +768,13 @@
       "fullMatchup": "Carolina Hurricanes vs St. Louis Blues",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020698,
@@ -786,13 +786,13 @@
       "fullMatchup": "Carolina Hurricanes vs Pittsburgh Penguins",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020712,
@@ -804,13 +804,13 @@
       "fullMatchup": "Carolina Hurricanes at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020728,
@@ -822,13 +822,13 @@
       "fullMatchup": "Carolina Hurricanes at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020748,
@@ -840,13 +840,13 @@
       "fullMatchup": "Carolina Hurricanes at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020755,
@@ -858,13 +858,13 @@
       "fullMatchup": "Carolina Hurricanes vs Philadelphia Flyers",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020774,
@@ -876,13 +876,13 @@
       "fullMatchup": "Carolina Hurricanes vs Vegas Golden Knights",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020800,
@@ -894,13 +894,13 @@
       "fullMatchup": "Carolina Hurricanes at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020817,
@@ -912,13 +912,13 @@
       "fullMatchup": "Carolina Hurricanes vs Anaheim Ducks",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020832,
@@ -930,13 +930,13 @@
       "fullMatchup": "Carolina Hurricanes at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020836,
@@ -948,13 +948,13 @@
       "fullMatchup": "Carolina Hurricanes at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020851,
@@ -966,13 +966,13 @@
       "fullMatchup": "Carolina Hurricanes vs New York Islanders",
       "venue": "Lenovo Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020872,
@@ -984,13 +984,13 @@
       "fullMatchup": "Carolina Hurricanes vs Los Angeles Kings",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020898,
@@ -1001,14 +1001,14 @@
       "opp": "COL",
       "fullMatchup": "Carolina Hurricanes vs Colorado Avalanche",
       "venue": "Lenovo Center",
-      "rsn": "FanDuel Sports South",
-      "primaryNet": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
+      "netUSNat": null,
+      "primaryNet": "Hurricanes Hockey Network (HHN)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports South)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026020904,
@@ -1020,13 +1020,13 @@
       "fullMatchup": "Carolina Hurricanes vs Minnesota Wild",
       "venue": "Lenovo Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020921,
@@ -1038,13 +1038,13 @@
       "fullMatchup": "Carolina Hurricanes vs Buffalo Sabres",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020939,
@@ -1056,13 +1056,13 @@
       "fullMatchup": "Carolina Hurricanes at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020951,
@@ -1074,13 +1074,13 @@
       "fullMatchup": "Carolina Hurricanes at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020962,
@@ -1092,13 +1092,13 @@
       "fullMatchup": "Carolina Hurricanes vs Detroit Red Wings",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026020977,
@@ -1110,13 +1110,13 @@
       "fullMatchup": "Carolina Hurricanes vs New York Rangers",
       "venue": "Lenovo Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020993,
@@ -1127,14 +1127,14 @@
       "opp": "NJD",
       "fullMatchup": "Carolina Hurricanes at New Jersey Devils",
       "venue": "Prudential Center",
-      "rsn": "FanDuel Sports South",
-      "primaryNet": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
+      "netUSNat": null,
+      "primaryNet": "Hurricanes Hockey Network (HHN)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports South)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026021006,
@@ -1146,13 +1146,13 @@
       "fullMatchup": "Carolina Hurricanes vs San Jose Sharks",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021024,
@@ -1164,13 +1164,13 @@
       "fullMatchup": "Carolina Hurricanes vs Tampa Bay Lightning",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021038,
@@ -1182,13 +1182,13 @@
       "fullMatchup": "Carolina Hurricanes at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021050,
@@ -1200,13 +1200,13 @@
       "fullMatchup": "Carolina Hurricanes at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021065,
@@ -1218,13 +1218,13 @@
       "fullMatchup": "Carolina Hurricanes vs Toronto Maple Leafs",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021082,
@@ -1236,13 +1236,13 @@
       "fullMatchup": "Carolina Hurricanes vs Utah Mammoth",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021098,
@@ -1253,14 +1253,14 @@
       "opp": "MIN",
       "fullMatchup": "Carolina Hurricanes at Minnesota Wild",
       "venue": "Grand Casino Arena",
-      "rsn": "FanDuel Sports South",
-      "primaryNet": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
+      "netUSNat": null,
+      "primaryNet": "Hurricanes Hockey Network (HHN)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports South)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026021119,
@@ -1272,13 +1272,13 @@
       "fullMatchup": "Carolina Hurricanes vs Calgary Flames",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021128,
@@ -1290,13 +1290,13 @@
       "fullMatchup": "Carolina Hurricanes vs New Jersey Devils",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021152,
@@ -1307,14 +1307,14 @@
       "opp": "ANA",
       "fullMatchup": "Carolina Hurricanes at Anaheim Ducks",
       "venue": "Honda Center",
-      "rsn": "FanDuel Sports South",
-      "primaryNet": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
+      "netUSNat": null,
+      "primaryNet": "Hurricanes Hockey Network (HHN)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports South)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026021170,
@@ -1326,13 +1326,13 @@
       "fullMatchup": "Carolina Hurricanes at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021185,
@@ -1344,13 +1344,13 @@
       "fullMatchup": "Carolina Hurricanes at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021201,
@@ -1362,13 +1362,13 @@
       "fullMatchup": "Carolina Hurricanes at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021216,
@@ -1380,13 +1380,13 @@
       "fullMatchup": "Carolina Hurricanes vs Dallas Stars",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021234,
@@ -1398,13 +1398,13 @@
       "fullMatchup": "Carolina Hurricanes at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021244,
@@ -1416,13 +1416,13 @@
       "fullMatchup": "Carolina Hurricanes at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021252,
@@ -1433,14 +1433,14 @@
       "opp": "NYI",
       "fullMatchup": "Carolina Hurricanes at New York Islanders",
       "venue": "UBS Arena",
-      "rsn": "FanDuel Sports South",
-      "primaryNet": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
+      "netUSNat": null,
+      "primaryNet": "Hurricanes Hockey Network (HHN)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports South)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026021272,
@@ -1452,13 +1452,13 @@
       "fullMatchup": "Carolina Hurricanes at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021281,
@@ -1470,13 +1470,13 @@
       "fullMatchup": "Carolina Hurricanes vs New Jersey Devils",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021296,
@@ -1488,13 +1488,13 @@
       "fullMatchup": "Carolina Hurricanes vs Philadelphia Flyers",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021313,
@@ -1506,13 +1506,13 @@
       "fullMatchup": "Carolina Hurricanes vs Ottawa Senators",
       "venue": "Lenovo Center",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     },
     {
       "id": 2026021334,
@@ -1524,13 +1524,13 @@
       "fullMatchup": "Carolina Hurricanes at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "HHN",
+      "netUSNat": null,
       "primaryNet": "HHN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (HHN)"
     }
   ]
 }

@@ -5,19 +5,19 @@
     "nickname": "Wild",
     "city": "Minnesota",
     "slug": "minnesota-wild",
-    "rsn": "FanDuel Sports North",
-    "colors": {
-      "primary": "#A6192E",
-      "secondary": "#154734",
-      "dark": "#0B291E"
-    },
+    "rsn": "Wild+",
     "territoryDescription": "Minnesota, Wisconsin, North Dakota & South Dakota",
     "zipRanges": [
       [
         530,
         588
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#A6192E",
+      "secondary": "#154734",
+      "dark": "#0B291E"
+    }
   },
   "schedule": [
     {
@@ -30,13 +30,13 @@
       "fullMatchup": "Minnesota Wild at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020031,
@@ -48,13 +48,13 @@
       "fullMatchup": "Minnesota Wild vs Boston Bruins",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020049,
@@ -66,13 +66,13 @@
       "fullMatchup": "Minnesota Wild at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020060,
@@ -84,13 +84,13 @@
       "fullMatchup": "Minnesota Wild at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020073,
@@ -102,13 +102,13 @@
       "fullMatchup": "Minnesota Wild at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020089,
@@ -120,13 +120,13 @@
       "fullMatchup": "Minnesota Wild vs Vegas Golden Knights",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020099,
@@ -138,13 +138,13 @@
       "fullMatchup": "Minnesota Wild at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020116,
@@ -156,13 +156,13 @@
       "fullMatchup": "Minnesota Wild vs St. Louis Blues",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020135,
@@ -174,13 +174,13 @@
       "fullMatchup": "Minnesota Wild vs Columbus Blue Jackets",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020148,
@@ -192,13 +192,13 @@
       "fullMatchup": "Minnesota Wild at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020162,
@@ -210,13 +210,13 @@
       "fullMatchup": "Minnesota Wild at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020179,
@@ -228,13 +228,13 @@
       "fullMatchup": "Minnesota Wild at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020184,
@@ -246,13 +246,13 @@
       "fullMatchup": "Minnesota Wild at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020195,
@@ -264,13 +264,13 @@
       "fullMatchup": "Minnesota Wild at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020210,
@@ -282,13 +282,13 @@
       "fullMatchup": "Minnesota Wild vs New York Islanders",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020228,
@@ -300,13 +300,13 @@
       "fullMatchup": "Minnesota Wild at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020241,
@@ -318,13 +318,13 @@
       "fullMatchup": "Minnesota Wild at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020263,
@@ -336,13 +336,13 @@
       "fullMatchup": "Minnesota Wild vs San Jose Sharks",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": "NHLN",
       "primaryNet": "Wild+",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on Wild+ / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on Wild+ / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020273,
@@ -354,13 +354,13 @@
       "fullMatchup": "Minnesota Wild vs Tampa Bay Lightning",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020287,
@@ -372,13 +372,13 @@
       "fullMatchup": "Minnesota Wild at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020300,
@@ -390,13 +390,13 @@
       "fullMatchup": "Minnesota Wild at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020313,
@@ -408,13 +408,13 @@
       "fullMatchup": "Minnesota Wild at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020340,
@@ -426,13 +426,13 @@
       "fullMatchup": "Minnesota Wild vs Nashville Predators",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020355,
@@ -444,13 +444,13 @@
       "fullMatchup": "Minnesota Wild at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020371,
@@ -462,13 +462,13 @@
       "fullMatchup": "Minnesota Wild at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020384,
@@ -480,13 +480,13 @@
       "fullMatchup": "Minnesota Wild at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020396,
@@ -498,13 +498,13 @@
       "fullMatchup": "Minnesota Wild vs Utah Mammoth",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020408,
@@ -516,13 +516,13 @@
       "fullMatchup": "Minnesota Wild vs Colorado Avalanche",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020428,
@@ -534,13 +534,13 @@
       "fullMatchup": "Minnesota Wild at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "Wild+",
+      "netUSNat": "NHLN",
       "primaryNet": "Wild+",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on Wild+ / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on Wild+ / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020443,
@@ -552,13 +552,13 @@
       "fullMatchup": "Minnesota Wild at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020459,
@@ -570,13 +570,13 @@
       "fullMatchup": "Minnesota Wild at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020473,
@@ -588,13 +588,13 @@
       "fullMatchup": "Minnesota Wild vs Philadelphia Flyers",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020494,
@@ -606,13 +606,13 @@
       "fullMatchup": "Minnesota Wild vs Edmonton Oilers",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020505,
@@ -624,13 +624,13 @@
       "fullMatchup": "Minnesota Wild at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020517,
@@ -642,13 +642,13 @@
       "fullMatchup": "Minnesota Wild vs Winnipeg Jets",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020544,
@@ -660,13 +660,13 @@
       "fullMatchup": "Minnesota Wild vs Toronto Maple Leafs",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020564,
@@ -678,13 +678,13 @@
       "fullMatchup": "Minnesota Wild vs Anaheim Ducks",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020573,
@@ -696,13 +696,13 @@
       "fullMatchup": "Minnesota Wild vs Montreal Canadiens",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020598,
@@ -713,14 +713,14 @@
       "opp": "LAK",
       "fullMatchup": "Minnesota Wild vs Los Angeles Kings",
       "venue": "Grand Casino Arena",
-      "rsn": "FanDuel Sports North",
-      "primaryNet": "FanDuel Sports North",
+      "rsn": "Wild+",
+      "netUSNat": null,
+      "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports North)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020608,
@@ -732,13 +732,13 @@
       "fullMatchup": "Minnesota Wild vs Winnipeg Jets",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020619,
@@ -750,13 +750,13 @@
       "fullMatchup": "Minnesota Wild vs Vegas Golden Knights",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020654,
@@ -768,13 +768,13 @@
       "fullMatchup": "Minnesota Wild at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020661,
@@ -786,13 +786,13 @@
       "fullMatchup": "Minnesota Wild vs St. Louis Blues",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020689,
@@ -803,14 +803,14 @@
       "opp": "ANA",
       "fullMatchup": "Minnesota Wild at Anaheim Ducks",
       "venue": "Honda Center",
-      "rsn": "FanDuel Sports North",
-      "primaryNet": "FanDuel Sports North",
+      "rsn": "Wild+",
+      "netUSNat": null,
+      "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports North)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020703,
@@ -822,13 +822,13 @@
       "fullMatchup": "Minnesota Wild at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020717,
@@ -840,13 +840,13 @@
       "fullMatchup": "Minnesota Wild vs Nashville Predators",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020751,
@@ -858,13 +858,13 @@
       "fullMatchup": "Minnesota Wild vs Florida Panthers",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020767,
@@ -876,13 +876,13 @@
       "fullMatchup": "Minnesota Wild at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020772,
@@ -894,13 +894,13 @@
       "fullMatchup": "Minnesota Wild at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020790,
@@ -912,13 +912,13 @@
       "fullMatchup": "Minnesota Wild at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020806,
@@ -930,13 +930,13 @@
       "fullMatchup": "Minnesota Wild vs Detroit Red Wings",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020821,
@@ -948,13 +948,13 @@
       "fullMatchup": "Minnesota Wild vs New York Rangers",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020833,
@@ -966,13 +966,13 @@
       "fullMatchup": "Minnesota Wild at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020844,
@@ -984,13 +984,13 @@
       "fullMatchup": "Minnesota Wild vs Vancouver Canucks",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020857,
@@ -1002,13 +1002,13 @@
       "fullMatchup": "Minnesota Wild vs Seattle Kraken",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020875,
@@ -1020,13 +1020,13 @@
       "fullMatchup": "Minnesota Wild vs Dallas Stars",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020904,
@@ -1038,13 +1038,13 @@
       "fullMatchup": "Minnesota Wild at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020920,
@@ -1056,13 +1056,13 @@
       "fullMatchup": "Minnesota Wild at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020934,
@@ -1074,13 +1074,13 @@
       "fullMatchup": "Minnesota Wild vs Ottawa Senators",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020943,
@@ -1092,13 +1092,13 @@
       "fullMatchup": "Minnesota Wild at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020958,
@@ -1110,13 +1110,13 @@
       "fullMatchup": "Minnesota Wild vs Los Angeles Kings",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026020969,
@@ -1128,13 +1128,13 @@
       "fullMatchup": "Minnesota Wild at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026020998,
@@ -1146,13 +1146,13 @@
       "fullMatchup": "Minnesota Wild vs Pittsburgh Penguins",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021021,
@@ -1164,13 +1164,13 @@
       "fullMatchup": "Minnesota Wild at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021032,
@@ -1182,13 +1182,13 @@
       "fullMatchup": "Minnesota Wild vs New Jersey Devils",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021051,
@@ -1200,13 +1200,13 @@
       "fullMatchup": "Minnesota Wild at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021077,
@@ -1218,13 +1218,13 @@
       "fullMatchup": "Minnesota Wild at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021088,
@@ -1236,13 +1236,13 @@
       "fullMatchup": "Minnesota Wild vs Washington Capitals",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021098,
@@ -1253,14 +1253,14 @@
       "opp": "CAR",
       "fullMatchup": "Minnesota Wild vs Carolina Hurricanes",
       "venue": "Grand Casino Arena",
-      "rsn": "FanDuel Sports North",
-      "primaryNet": "FanDuel Sports North",
+      "rsn": "Wild+",
+      "netUSNat": null,
+      "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports North)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021107,
@@ -1272,13 +1272,13 @@
       "fullMatchup": "Minnesota Wild at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021137,
@@ -1290,13 +1290,13 @@
       "fullMatchup": "Minnesota Wild vs Buffalo Sabres",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021156,
@@ -1308,13 +1308,13 @@
       "fullMatchup": "Minnesota Wild at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021171,
@@ -1326,13 +1326,13 @@
       "fullMatchup": "Minnesota Wild vs Calgary Flames",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021186,
@@ -1344,13 +1344,13 @@
       "fullMatchup": "Minnesota Wild vs Utah Mammoth",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021202,
@@ -1362,13 +1362,13 @@
       "fullMatchup": "Minnesota Wild vs Chicago Blackhawks",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021220,
@@ -1380,13 +1380,13 @@
       "fullMatchup": "Minnesota Wild vs Edmonton Oilers",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021228,
@@ -1398,13 +1398,13 @@
       "fullMatchup": "Minnesota Wild vs Seattle Kraken",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021245,
@@ -1416,13 +1416,13 @@
       "fullMatchup": "Minnesota Wild at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021259,
@@ -1434,13 +1434,13 @@
       "fullMatchup": "Minnesota Wild at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021274,
@@ -1452,13 +1452,13 @@
       "fullMatchup": "Minnesota Wild vs Dallas Stars",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021290,
@@ -1470,13 +1470,13 @@
       "fullMatchup": "Minnesota Wild vs Colorado Avalanche",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021308,
@@ -1488,13 +1488,13 @@
       "fullMatchup": "Minnesota Wild vs Chicago Blackhawks",
       "venue": "Grand Casino Arena",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021323,
@@ -1506,13 +1506,13 @@
       "fullMatchup": "Minnesota Wild at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "Wild+",
+      "netUSNat": null,
       "primaryNet": "Wild+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Wild+)"
     },
     {
       "id": 2026021330,
@@ -1524,13 +1524,13 @@
       "fullMatchup": "Minnesota Wild at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     }
   ]
 }

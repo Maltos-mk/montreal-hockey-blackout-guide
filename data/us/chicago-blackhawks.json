@@ -6,11 +6,6 @@
     "city": "Chicago",
     "slug": "chicago-blackhawks",
     "rsn": "Chicago Sports Network",
-    "colors": {
-      "primary": "#CF0A2C",
-      "secondary": "#111111",
-      "dark": "#0A0A0A"
-    },
     "territoryDescription": "Illinois, Indiana & Iowa",
     "zipRanges": [
       [
@@ -25,7 +20,12 @@
         600,
         629
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#CF0A2C",
+      "secondary": "#111111",
+      "dark": "#0A0A0A"
+    }
   },
   "schedule": [
     {
@@ -38,13 +38,13 @@
       "fullMatchup": "Chicago Blackhawks at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020013,
@@ -56,13 +56,13 @@
       "fullMatchup": "Chicago Blackhawks at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "Chicago Sports Network",
+      "netUSNat": null,
       "primaryNet": "Chicago Sports Network",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Chicago Sports Network)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Chicago Sports Network)"
     },
     {
       "id": 2026020022,
@@ -74,13 +74,13 @@
       "fullMatchup": "Chicago Blackhawks at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020050,
@@ -92,13 +92,13 @@
       "fullMatchup": "Chicago Blackhawks vs St. Louis Blues",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020062,
@@ -110,13 +110,13 @@
       "fullMatchup": "Chicago Blackhawks at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020078,
@@ -128,13 +128,13 @@
       "fullMatchup": "Chicago Blackhawks vs Carolina Hurricanes",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020098,
@@ -146,13 +146,13 @@
       "fullMatchup": "Chicago Blackhawks vs Pittsburgh Penguins",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020114,
@@ -164,13 +164,13 @@
       "fullMatchup": "Chicago Blackhawks vs Winnipeg Jets",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020130,
@@ -182,13 +182,13 @@
       "fullMatchup": "Chicago Blackhawks vs Dallas Stars",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020166,
@@ -200,13 +200,13 @@
       "fullMatchup": "Chicago Blackhawks vs Montreal Canadiens",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": "NHLN",
       "primaryNet": "CHSN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on CHSN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on CHSN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020180,
@@ -218,13 +218,13 @@
       "fullMatchup": "Chicago Blackhawks vs Florida Panthers",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020190,
@@ -236,13 +236,13 @@
       "fullMatchup": "Chicago Blackhawks vs Los Angeles Kings",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020203,
@@ -254,13 +254,13 @@
       "fullMatchup": "Chicago Blackhawks at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "Chicago Sports Network",
+      "netUSNat": null,
       "primaryNet": "Chicago Sports Network",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Chicago Sports Network)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Chicago Sports Network)"
     },
     {
       "id": 2026020217,
@@ -272,13 +272,13 @@
       "fullMatchup": "Chicago Blackhawks at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020234,
@@ -290,13 +290,13 @@
       "fullMatchup": "Chicago Blackhawks vs Colorado Avalanche",
       "venue": "United Center",
       "rsn": "CHSN+",
+      "netUSNat": null,
       "primaryNet": "CHSN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN+)"
     },
     {
       "id": 2026020248,
@@ -308,13 +308,13 @@
       "fullMatchup": "Chicago Blackhawks at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020253,
@@ -326,13 +326,13 @@
       "fullMatchup": "Chicago Blackhawks at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020271,
@@ -344,13 +344,13 @@
       "fullMatchup": "Chicago Blackhawks at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020305,
@@ -362,13 +362,13 @@
       "fullMatchup": "Chicago Blackhawks vs Buffalo Sabres",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020312,
@@ -380,13 +380,13 @@
       "fullMatchup": "Chicago Blackhawks vs Winnipeg Jets",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020338,
@@ -398,13 +398,13 @@
       "fullMatchup": "Chicago Blackhawks vs Toronto Maple Leafs",
       "venue": "United Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020353,
@@ -416,13 +416,13 @@
       "fullMatchup": "Chicago Blackhawks vs Columbus Blue Jackets",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020360,
@@ -434,13 +434,13 @@
       "fullMatchup": "Chicago Blackhawks at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020377,
@@ -452,13 +452,13 @@
       "fullMatchup": "Chicago Blackhawks at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020399,
@@ -470,13 +470,13 @@
       "fullMatchup": "Chicago Blackhawks at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020411,
@@ -488,13 +488,13 @@
       "fullMatchup": "Chicago Blackhawks vs New York Rangers",
       "venue": "United Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020428,
@@ -506,13 +506,13 @@
       "fullMatchup": "Chicago Blackhawks vs Minnesota Wild",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": "NHLN",
       "primaryNet": "CHSN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on CHSN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on CHSN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020434,
@@ -524,13 +524,13 @@
       "fullMatchup": "Chicago Blackhawks at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020454,
@@ -542,13 +542,13 @@
       "fullMatchup": "Chicago Blackhawks at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020461,
@@ -560,13 +560,13 @@
       "fullMatchup": "Chicago Blackhawks at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020479,
@@ -578,13 +578,13 @@
       "fullMatchup": "Chicago Blackhawks vs Edmonton Oilers",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020489,
@@ -596,13 +596,13 @@
       "fullMatchup": "Chicago Blackhawks at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020506,
@@ -614,13 +614,13 @@
       "fullMatchup": "Chicago Blackhawks at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020522,
@@ -632,13 +632,13 @@
       "fullMatchup": "Chicago Blackhawks vs Utah Mammoth",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020560,
@@ -650,13 +650,13 @@
       "fullMatchup": "Chicago Blackhawks at Ottawa Senators",
       "venue": "PSD Bank Dome",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020577,
@@ -668,13 +668,13 @@
       "fullMatchup": "Chicago Blackhawks vs Ottawa Senators",
       "venue": "PSD Bank Dome",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020612,
@@ -686,13 +686,13 @@
       "fullMatchup": "Chicago Blackhawks vs Philadelphia Flyers",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020631,
@@ -704,13 +704,13 @@
       "fullMatchup": "Chicago Blackhawks vs Vegas Golden Knights",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020651,
@@ -722,13 +722,13 @@
       "fullMatchup": "Chicago Blackhawks vs Boston Bruins",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020664,
@@ -740,13 +740,13 @@
       "fullMatchup": "Chicago Blackhawks at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020675,
@@ -758,13 +758,13 @@
       "fullMatchup": "Chicago Blackhawks at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020696,
@@ -776,13 +776,13 @@
       "fullMatchup": "Chicago Blackhawks at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020709,
@@ -794,13 +794,13 @@
       "fullMatchup": "Chicago Blackhawks at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020722,
@@ -812,13 +812,13 @@
       "fullMatchup": "Chicago Blackhawks at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020732,
@@ -830,13 +830,13 @@
       "fullMatchup": "Chicago Blackhawks vs Utah Mammoth",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020745,
@@ -848,13 +848,13 @@
       "fullMatchup": "Chicago Blackhawks at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020766,
@@ -866,13 +866,13 @@
       "fullMatchup": "Chicago Blackhawks vs Detroit Red Wings",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020785,
@@ -884,13 +884,13 @@
       "fullMatchup": "Chicago Blackhawks vs Calgary Flames",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020796,
@@ -902,13 +902,13 @@
       "fullMatchup": "Chicago Blackhawks vs Dallas Stars",
       "venue": "United Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020809,
@@ -920,13 +920,13 @@
       "fullMatchup": "Chicago Blackhawks vs Vancouver Canucks",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020829,
@@ -938,13 +938,13 @@
       "fullMatchup": "Chicago Blackhawks vs Vegas Golden Knights",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020841,
@@ -956,13 +956,13 @@
       "fullMatchup": "Chicago Blackhawks at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "Chicago Sports Network",
+      "netUSNat": null,
       "primaryNet": "Chicago Sports Network",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Chicago Sports Network)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Chicago Sports Network)"
     },
     {
       "id": 2026020859,
@@ -974,13 +974,13 @@
       "fullMatchup": "Chicago Blackhawks at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "Chicago Sports Network",
+      "netUSNat": null,
       "primaryNet": "Chicago Sports Network",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Chicago Sports Network)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Chicago Sports Network)"
     },
     {
       "id": 2026020867,
@@ -992,13 +992,13 @@
       "fullMatchup": "Chicago Blackhawks at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020902,
@@ -1010,13 +1010,13 @@
       "fullMatchup": "Chicago Blackhawks at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020905,
@@ -1028,13 +1028,13 @@
       "fullMatchup": "Chicago Blackhawks at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020916,
@@ -1046,13 +1046,13 @@
       "fullMatchup": "Chicago Blackhawks at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020945,
@@ -1064,13 +1064,13 @@
       "fullMatchup": "Chicago Blackhawks vs St. Louis Blues",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020969,
@@ -1082,13 +1082,13 @@
       "fullMatchup": "Chicago Blackhawks vs Minnesota Wild",
       "venue": "United Center",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026020979,
@@ -1100,13 +1100,13 @@
       "fullMatchup": "Chicago Blackhawks vs New Jersey Devils",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026020995,
@@ -1118,13 +1118,13 @@
       "fullMatchup": "Chicago Blackhawks vs New York Islanders",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021016,
@@ -1136,13 +1136,13 @@
       "fullMatchup": "Chicago Blackhawks vs Los Angeles Kings",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021033,
@@ -1154,13 +1154,13 @@
       "fullMatchup": "Chicago Blackhawks vs Colorado Avalanche",
       "venue": "United Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021040,
@@ -1172,13 +1172,13 @@
       "fullMatchup": "Chicago Blackhawks vs Edmonton Oilers",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021053,
@@ -1190,13 +1190,13 @@
       "fullMatchup": "Chicago Blackhawks at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021067,
@@ -1208,13 +1208,13 @@
       "fullMatchup": "Chicago Blackhawks at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021078,
@@ -1226,13 +1226,13 @@
       "fullMatchup": "Chicago Blackhawks at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021091,
@@ -1244,13 +1244,13 @@
       "fullMatchup": "Chicago Blackhawks vs Tampa Bay Lightning",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021105,
@@ -1262,13 +1262,13 @@
       "fullMatchup": "Chicago Blackhawks vs Washington Capitals",
       "venue": "United Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021122,
@@ -1280,13 +1280,13 @@
       "fullMatchup": "Chicago Blackhawks at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021135,
@@ -1298,13 +1298,13 @@
       "fullMatchup": "Chicago Blackhawks vs Anaheim Ducks",
       "venue": "United Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021151,
@@ -1316,13 +1316,13 @@
       "fullMatchup": "Chicago Blackhawks vs San Jose Sharks",
       "venue": "United Center",
       "rsn": "Chicago Sports Network",
+      "netUSNat": null,
       "primaryNet": "Chicago Sports Network",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Chicago Sports Network)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Chicago Sports Network)"
     },
     {
       "id": 2026021172,
@@ -1334,13 +1334,13 @@
       "fullMatchup": "Chicago Blackhawks at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021188,
@@ -1352,13 +1352,13 @@
       "fullMatchup": "Chicago Blackhawks at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021202,
@@ -1370,13 +1370,13 @@
       "fullMatchup": "Chicago Blackhawks at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021217,
@@ -1388,13 +1388,13 @@
       "fullMatchup": "Chicago Blackhawks at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021225,
@@ -1406,13 +1406,13 @@
       "fullMatchup": "Chicago Blackhawks vs Nashville Predators",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021240,
@@ -1424,13 +1424,13 @@
       "fullMatchup": "Chicago Blackhawks vs Seattle Kraken",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021254,
@@ -1442,13 +1442,13 @@
       "fullMatchup": "Chicago Blackhawks at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021270,
@@ -1460,13 +1460,13 @@
       "fullMatchup": "Chicago Blackhawks at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021282,
@@ -1478,13 +1478,13 @@
       "fullMatchup": "Chicago Blackhawks at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021308,
@@ -1496,13 +1496,13 @@
       "fullMatchup": "Chicago Blackhawks at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021320,
@@ -1514,13 +1514,13 @@
       "fullMatchup": "Chicago Blackhawks vs Nashville Predators",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     },
     {
       "id": 2026021336,
@@ -1532,13 +1532,13 @@
       "fullMatchup": "Chicago Blackhawks vs Seattle Kraken",
       "venue": "United Center",
       "rsn": "CHSN",
+      "netUSNat": null,
       "primaryNet": "CHSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (CHSN)"
     }
   ]
 }

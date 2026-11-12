@@ -6,11 +6,6 @@
     "city": "New York",
     "slug": "new-york-rangers",
     "rsn": "MSG Network",
-    "colors": {
-      "primary": "#CE1126",
-      "secondary": "#0038A8",
-      "dark": "#001F5C"
-    },
     "territoryDescription": "New York State, New Jersey & Connecticut",
     "zipRanges": [
       [
@@ -21,7 +16,12 @@
         100,
         149
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#0038A8",
+      "dark": "#001F5C"
+    }
   },
   "schedule": [
     {
@@ -34,13 +34,13 @@
       "fullMatchup": "New York Rangers at Boston Bruins",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020010,
@@ -52,13 +52,13 @@
       "fullMatchup": "New York Rangers vs Tampa Bay Lightning",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020017,
@@ -70,13 +70,13 @@
       "fullMatchup": "New York Rangers at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020036,
@@ -88,13 +88,13 @@
       "fullMatchup": "New York Rangers vs Utah Mammoth",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020048,
@@ -106,13 +106,13 @@
       "fullMatchup": "New York Rangers vs New York Islanders",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020067,
@@ -124,13 +124,13 @@
       "fullMatchup": "New York Rangers at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "MSG",
+      "netUSNat": "NHLN",
       "primaryNet": "MSG",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020085,
@@ -142,13 +142,13 @@
       "fullMatchup": "New York Rangers vs Vancouver Canucks",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020095,
@@ -160,13 +160,13 @@
       "fullMatchup": "New York Rangers vs Tampa Bay Lightning",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020113,
@@ -178,13 +178,13 @@
       "fullMatchup": "New York Rangers at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020129,
@@ -196,13 +196,13 @@
       "fullMatchup": "New York Rangers at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020137,
@@ -214,13 +214,13 @@
       "fullMatchup": "New York Rangers vs Anaheim Ducks",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020155,
@@ -232,13 +232,13 @@
       "fullMatchup": "New York Rangers at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020171,
@@ -250,13 +250,13 @@
       "fullMatchup": "New York Rangers at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "MSG",
+      "netUSNat": "NHLN",
       "primaryNet": "MSG",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020185,
@@ -268,13 +268,13 @@
       "fullMatchup": "New York Rangers vs Los Angeles Kings",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": "NHLN",
       "primaryNet": "MSG",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020230,
@@ -286,13 +286,13 @@
       "fullMatchup": "New York Rangers vs Edmonton Oilers",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": "NHLN",
       "primaryNet": "MSG",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020240,
@@ -304,13 +304,13 @@
       "fullMatchup": "New York Rangers vs St. Louis Blues",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020256,
@@ -322,13 +322,13 @@
       "fullMatchup": "New York Rangers vs Philadelphia Flyers",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020267,
@@ -340,13 +340,13 @@
       "fullMatchup": "New York Rangers at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "MSG 2",
+      "netUSNat": null,
       "primaryNet": "MSG 2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)"
     },
     {
       "id": 2026020283,
@@ -358,13 +358,13 @@
       "fullMatchup": "New York Rangers at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020294,
@@ -376,13 +376,13 @@
       "fullMatchup": "New York Rangers at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020310,
@@ -394,13 +394,13 @@
       "fullMatchup": "New York Rangers at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020331,
@@ -412,13 +412,13 @@
       "fullMatchup": "New York Rangers vs Montreal Canadiens",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020373,
@@ -430,13 +430,13 @@
       "fullMatchup": "New York Rangers vs Carolina Hurricanes",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": "NHLN",
       "primaryNet": "MSG",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020387,
@@ -448,13 +448,13 @@
       "fullMatchup": "New York Rangers at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "MSG 2",
+      "netUSNat": null,
       "primaryNet": "MSG 2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)"
     },
     {
       "id": 2026020411,
@@ -466,13 +466,13 @@
       "fullMatchup": "New York Rangers at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020419,
@@ -484,13 +484,13 @@
       "fullMatchup": "New York Rangers vs Calgary Flames",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": "NHLN",
       "primaryNet": "MSG",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020431,
@@ -502,13 +502,13 @@
       "fullMatchup": "New York Rangers vs Carolina Hurricanes",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020451,
@@ -520,13 +520,13 @@
       "fullMatchup": "New York Rangers vs San Jose Sharks",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020470,
@@ -538,13 +538,13 @@
       "fullMatchup": "New York Rangers vs Colorado Avalanche",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020484,
@@ -556,13 +556,13 @@
       "fullMatchup": "New York Rangers vs New Jersey Devils",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020490,
@@ -574,13 +574,13 @@
       "fullMatchup": "New York Rangers at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020510,
@@ -592,13 +592,13 @@
       "fullMatchup": "New York Rangers at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020528,
@@ -610,13 +610,13 @@
       "fullMatchup": "New York Rangers vs Columbus Blue Jackets",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020539,
@@ -628,13 +628,13 @@
       "fullMatchup": "New York Rangers at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020547,
@@ -646,13 +646,13 @@
       "fullMatchup": "New York Rangers at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020561,
@@ -664,13 +664,13 @@
       "fullMatchup": "New York Rangers vs Nashville Predators",
       "venue": "Madison Square Garden",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020582,
@@ -682,13 +682,13 @@
       "fullMatchup": "New York Rangers at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020592,
@@ -700,13 +700,13 @@
       "fullMatchup": "New York Rangers vs New Jersey Devils",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020614,
@@ -718,13 +718,13 @@
       "fullMatchup": "New York Rangers at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "MSG 2",
+      "netUSNat": null,
       "primaryNet": "MSG 2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)"
     },
     {
       "id": 2026020629,
@@ -736,13 +736,13 @@
       "fullMatchup": "New York Rangers vs Detroit Red Wings",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020649,
@@ -754,13 +754,13 @@
       "fullMatchup": "New York Rangers at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020670,
@@ -772,13 +772,13 @@
       "fullMatchup": "New York Rangers vs Columbus Blue Jackets",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020682,
@@ -790,13 +790,13 @@
       "fullMatchup": "New York Rangers at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020696,
@@ -808,13 +808,13 @@
       "fullMatchup": "New York Rangers vs Chicago Blackhawks",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020721,
@@ -826,13 +826,13 @@
       "fullMatchup": "New York Rangers at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020727,
@@ -844,13 +844,13 @@
       "fullMatchup": "New York Rangers at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020737,
@@ -862,13 +862,13 @@
       "fullMatchup": "New York Rangers at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020758,
@@ -880,13 +880,13 @@
       "fullMatchup": "New York Rangers vs Boston Bruins",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026020773,
@@ -898,13 +898,13 @@
       "fullMatchup": "New York Rangers vs Dallas Stars",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020788,
@@ -916,13 +916,13 @@
       "fullMatchup": "New York Rangers vs Philadelphia Flyers",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020805,
@@ -934,13 +934,13 @@
       "fullMatchup": "New York Rangers at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020821,
@@ -952,13 +952,13 @@
       "fullMatchup": "New York Rangers at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020831,
@@ -970,13 +970,13 @@
       "fullMatchup": "New York Rangers vs Seattle Kraken",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020847,
@@ -988,13 +988,13 @@
       "fullMatchup": "New York Rangers vs Florida Panthers",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020862,
@@ -1006,13 +1006,13 @@
       "fullMatchup": "New York Rangers at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020870,
@@ -1024,13 +1024,13 @@
       "fullMatchup": "New York Rangers at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020889,
@@ -1042,13 +1042,13 @@
       "fullMatchup": "New York Rangers vs Winnipeg Jets",
       "venue": "Madison Square Garden",
       "rsn": "MSG 2",
+      "netUSNat": null,
       "primaryNet": "MSG 2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)"
     },
     {
       "id": 2026020909,
@@ -1060,13 +1060,13 @@
       "fullMatchup": "New York Rangers vs New York Islanders",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020927,
@@ -1078,13 +1078,13 @@
       "fullMatchup": "New York Rangers at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020931,
@@ -1096,13 +1096,13 @@
       "fullMatchup": "New York Rangers vs Buffalo Sabres",
       "venue": "Madison Square Garden",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020955,
@@ -1114,13 +1114,13 @@
       "fullMatchup": "New York Rangers at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020967,
@@ -1132,13 +1132,13 @@
       "fullMatchup": "New York Rangers at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026020977,
@@ -1150,13 +1150,13 @@
       "fullMatchup": "New York Rangers at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020994,
@@ -1168,13 +1168,13 @@
       "fullMatchup": "New York Rangers at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026021014,
@@ -1186,13 +1186,13 @@
       "fullMatchup": "New York Rangers vs Washington Capitals",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026021031,
@@ -1204,13 +1204,13 @@
       "fullMatchup": "New York Rangers at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021049,
@@ -1222,13 +1222,13 @@
       "fullMatchup": "New York Rangers vs Boston Bruins",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026021072,
@@ -1240,13 +1240,13 @@
       "fullMatchup": "New York Rangers at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021086,
@@ -1258,13 +1258,13 @@
       "fullMatchup": "New York Rangers vs Vegas Golden Knights",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021102,
@@ -1276,13 +1276,13 @@
       "fullMatchup": "New York Rangers at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026021114,
@@ -1294,13 +1294,13 @@
       "fullMatchup": "New York Rangers at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "MSG 2",
+      "netUSNat": null,
       "primaryNet": "MSG 2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)"
     },
     {
       "id": 2026021132,
@@ -1312,13 +1312,13 @@
       "fullMatchup": "New York Rangers at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026021148,
@@ -1330,13 +1330,13 @@
       "fullMatchup": "New York Rangers vs Ottawa Senators",
       "venue": "Madison Square Garden",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021165,
@@ -1348,13 +1348,13 @@
       "fullMatchup": "New York Rangers vs Toronto Maple Leafs",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026021182,
@@ -1366,13 +1366,13 @@
       "fullMatchup": "New York Rangers vs Pittsburgh Penguins",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021189,
@@ -1384,13 +1384,13 @@
       "fullMatchup": "New York Rangers vs Washington Capitals",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021200,
@@ -1402,13 +1402,13 @@
       "fullMatchup": "New York Rangers at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "MSG 2",
+      "netUSNat": null,
       "primaryNet": "MSG 2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)"
     },
     {
       "id": 2026021214,
@@ -1420,13 +1420,13 @@
       "fullMatchup": "New York Rangers at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026021233,
@@ -1438,13 +1438,13 @@
       "fullMatchup": "New York Rangers at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026021245,
@@ -1456,13 +1456,13 @@
       "fullMatchup": "New York Rangers vs Minnesota Wild",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026021263,
@@ -1474,13 +1474,13 @@
       "fullMatchup": "New York Rangers at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "MSG 2",
+      "netUSNat": null,
       "primaryNet": "MSG 2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)"
     },
     {
       "id": 2026021277,
@@ -1492,13 +1492,13 @@
       "fullMatchup": "New York Rangers vs Florida Panthers",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021306,
@@ -1510,13 +1510,13 @@
       "fullMatchup": "New York Rangers vs Pittsburgh Penguins",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021339,
@@ -1528,13 +1528,13 @@
       "fullMatchup": "New York Rangers vs Toronto Maple Leafs",
       "venue": "Madison Square Garden",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     }
   ]
 }

@@ -6,11 +6,6 @@
     "city": "Pittsburgh",
     "slug": "pittsburgh-penguins",
     "rsn": "SportsNet Pittsburgh",
-    "colors": {
-      "primary": "#FCB514",
-      "secondary": "#111111",
-      "dark": "#000000"
-    },
     "territoryDescription": "Western & Central Pennsylvania, West Virginia & Eastern Ohio",
     "zipRanges": [
       [
@@ -25,7 +20,12 @@
         439,
         439
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#FCB514",
+      "secondary": "#111111",
+      "dark": "#000000"
+    }
   },
   "schedule": [
     {
@@ -38,13 +38,13 @@
       "fullMatchup": "Pittsburgh Penguins at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020026,
@@ -56,13 +56,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Montreal Canadiens",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020042,
@@ -74,13 +74,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Winnipeg Jets",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020053,
@@ -92,13 +92,13 @@
       "fullMatchup": "Pittsburgh Penguins at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020068,
@@ -110,13 +110,13 @@
       "fullMatchup": "Pittsburgh Penguins at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020077,
@@ -128,13 +128,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Dallas Stars",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020098,
@@ -146,13 +146,13 @@
       "fullMatchup": "Pittsburgh Penguins at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020119,
@@ -164,13 +164,13 @@
       "fullMatchup": "Pittsburgh Penguins at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020134,
@@ -182,13 +182,13 @@
       "fullMatchup": "Pittsburgh Penguins at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020140,
@@ -200,13 +200,13 @@
       "fullMatchup": "Pittsburgh Penguins at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020158,
@@ -218,13 +218,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Florida Panthers",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020172,
@@ -236,13 +236,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Nashville Predators",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020205,
@@ -254,13 +254,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Utah Mammoth",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020223,
@@ -272,13 +272,13 @@
       "fullMatchup": "Pittsburgh Penguins at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020242,
@@ -290,13 +290,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Vegas Golden Knights",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020257,
@@ -308,13 +308,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Boston Bruins",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020275,
@@ -326,13 +326,13 @@
       "fullMatchup": "Pittsburgh Penguins at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020282,
@@ -344,13 +344,13 @@
       "fullMatchup": "Pittsburgh Penguins at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020298,
@@ -362,13 +362,13 @@
       "fullMatchup": "Pittsburgh Penguins at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020317,
@@ -380,13 +380,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Ottawa Senators",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020350,
@@ -398,13 +398,13 @@
       "fullMatchup": "Pittsburgh Penguins vs St. Louis Blues",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020362,
@@ -416,13 +416,13 @@
       "fullMatchup": "Pittsburgh Penguins at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020376,
@@ -434,13 +434,13 @@
       "fullMatchup": "Pittsburgh Penguins at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020391,
@@ -452,13 +452,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Calgary Flames",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020413,
@@ -470,13 +470,13 @@
       "fullMatchup": "Pittsburgh Penguins at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020420,
@@ -488,13 +488,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Toronto Maple Leafs",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020432,
@@ -506,13 +506,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Columbus Blue Jackets",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020446,
@@ -524,13 +524,13 @@
       "fullMatchup": "Pittsburgh Penguins at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020467,
@@ -542,13 +542,13 @@
       "fullMatchup": "Pittsburgh Penguins vs New Jersey Devils",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020476,
@@ -560,13 +560,13 @@
       "fullMatchup": "Pittsburgh Penguins vs San Jose Sharks",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020489,
@@ -578,13 +578,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Chicago Blackhawks",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020503,
@@ -596,13 +596,13 @@
       "fullMatchup": "Pittsburgh Penguins at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020516,
@@ -614,13 +614,13 @@
       "fullMatchup": "Pittsburgh Penguins at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020540,
@@ -632,13 +632,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Tampa Bay Lightning",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020554,
@@ -650,13 +650,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Los Angeles Kings",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020563,
@@ -668,13 +668,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Seattle Kraken",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020593,
@@ -686,13 +686,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Buffalo Sabres",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020606,
@@ -704,13 +704,13 @@
       "fullMatchup": "Pittsburgh Penguins at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020630,
@@ -722,13 +722,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Carolina Hurricanes",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020642,
@@ -740,13 +740,13 @@
       "fullMatchup": "Pittsburgh Penguins at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020654,
@@ -758,13 +758,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Minnesota Wild",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020669,
@@ -776,13 +776,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Edmonton Oilers",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020698,
@@ -794,13 +794,13 @@
       "fullMatchup": "Pittsburgh Penguins at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020714,
@@ -812,13 +812,13 @@
       "fullMatchup": "Pittsburgh Penguins at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020730,
@@ -830,13 +830,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Colorado Avalanche",
       "venue": "PPG Paints Arena",
       "rsn": "SportsNet Pittsburgh",
+      "netUSNat": null,
       "primaryNet": "SportsNet Pittsburgh",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SportsNet Pittsburgh)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SportsNet Pittsburgh)"
     },
     {
       "id": 2026020739,
@@ -848,13 +848,13 @@
       "fullMatchup": "Pittsburgh Penguins at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020762,
@@ -866,13 +866,13 @@
       "fullMatchup": "Pittsburgh Penguins at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020780,
@@ -884,13 +884,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Washington Capitals",
       "venue": "PPG Paints Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020803,
@@ -902,13 +902,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Anaheim Ducks",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020816,
@@ -920,13 +920,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Vancouver Canucks",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020830,
@@ -938,13 +938,13 @@
       "fullMatchup": "Pittsburgh Penguins at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020840,
@@ -956,13 +956,13 @@
       "fullMatchup": "Pittsburgh Penguins vs New York Islanders",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020862,
@@ -974,13 +974,13 @@
       "fullMatchup": "Pittsburgh Penguins vs New York Rangers",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020878,
@@ -992,13 +992,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Philadelphia Flyers",
       "venue": "PPG Paints Arena",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026020885,
@@ -1010,13 +1010,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Tampa Bay Lightning",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020922,
@@ -1028,13 +1028,13 @@
       "fullMatchup": "Pittsburgh Penguins at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020933,
@@ -1046,13 +1046,13 @@
       "fullMatchup": "Pittsburgh Penguins at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020944,
@@ -1064,13 +1064,13 @@
       "fullMatchup": "Pittsburgh Penguins at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020964,
@@ -1082,13 +1082,13 @@
       "fullMatchup": "Pittsburgh Penguins at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020983,
@@ -1100,13 +1100,13 @@
       "fullMatchup": "Pittsburgh Penguins at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026020998,
@@ -1118,13 +1118,13 @@
       "fullMatchup": "Pittsburgh Penguins at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026021005,
@@ -1136,13 +1136,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Toronto Maple Leafs",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026021031,
@@ -1154,13 +1154,13 @@
       "fullMatchup": "Pittsburgh Penguins vs New York Rangers",
       "venue": "PPG Paints Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021043,
@@ -1172,13 +1172,13 @@
       "fullMatchup": "Pittsburgh Penguins at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026021060,
@@ -1190,13 +1190,13 @@
       "fullMatchup": "Pittsburgh Penguins at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021071,
@@ -1208,13 +1208,13 @@
       "fullMatchup": "Pittsburgh Penguins at Boston Bruins",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021080,
@@ -1226,13 +1226,13 @@
       "fullMatchup": "Pittsburgh Penguins at New York Islanders",
       "venue": "UBS Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021095,
@@ -1244,13 +1244,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Ottawa Senators",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026021109,
@@ -1262,13 +1262,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Boston Bruins",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026021120,
@@ -1280,13 +1280,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Washington Capitals",
       "venue": "PPG Paints Arena",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021134,
@@ -1298,13 +1298,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Detroit Red Wings",
       "venue": "PPG Paints Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021150,
@@ -1316,13 +1316,13 @@
       "fullMatchup": "Pittsburgh Penguins at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026021164,
@@ -1334,13 +1334,13 @@
       "fullMatchup": "Pittsburgh Penguins at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026021182,
@@ -1352,13 +1352,13 @@
       "fullMatchup": "Pittsburgh Penguins at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021193,
@@ -1370,13 +1370,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Columbus Blue Jackets",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026021215,
@@ -1388,13 +1388,13 @@
       "fullMatchup": "Pittsburgh Penguins vs New Jersey Devils",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026021234,
@@ -1406,13 +1406,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Carolina Hurricanes",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026021253,
@@ -1424,13 +1424,13 @@
       "fullMatchup": "Pittsburgh Penguins at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026021267,
@@ -1442,13 +1442,13 @@
       "fullMatchup": "Pittsburgh Penguins vs New York Islanders",
       "venue": "PPG Paints Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026021285,
@@ -1460,13 +1460,13 @@
       "fullMatchup": "Pittsburgh Penguins vs Philadelphia Flyers",
       "venue": "PPG Paints Arena",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021293,
@@ -1478,13 +1478,13 @@
       "fullMatchup": "Pittsburgh Penguins at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021306,
@@ -1496,13 +1496,13 @@
       "fullMatchup": "Pittsburgh Penguins at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021325,
@@ -1514,13 +1514,13 @@
       "fullMatchup": "Pittsburgh Penguins at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     },
     {
       "id": 2026021335,
@@ -1532,13 +1532,13 @@
       "fullMatchup": "Pittsburgh Penguins at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "SN-PIT",
+      "netUSNat": null,
       "primaryNet": "SN-PIT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SN-PIT)"
     }
   ]
 }

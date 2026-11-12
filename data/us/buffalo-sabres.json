@@ -6,11 +6,6 @@
     "city": "Buffalo",
     "slug": "buffalo-sabres",
     "rsn": "MSG Western NY",
-    "colors": {
-      "primary": "#003087",
-      "secondary": "#00205B",
-      "dark": "#00133A"
-    },
     "territoryDescription": "Western & Central New York (Buffalo, Rochester, Syracuse) & Northwestern PA",
     "zipRanges": [
       [
@@ -21,7 +16,12 @@
         163,
         167
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#003087",
+      "secondary": "#00205B",
+      "dark": "#00133A"
+    }
   },
   "schedule": [
     {
@@ -34,13 +34,13 @@
       "fullMatchup": "Buffalo Sabres at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020022,
@@ -52,13 +52,13 @@
       "fullMatchup": "Buffalo Sabres vs Chicago Blackhawks",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020049,
@@ -70,13 +70,13 @@
       "fullMatchup": "Buffalo Sabres vs Minnesota Wild",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020057,
@@ -88,13 +88,13 @@
       "fullMatchup": "Buffalo Sabres vs Dallas Stars",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020074,
@@ -106,13 +106,13 @@
       "fullMatchup": "Buffalo Sabres vs Utah Mammoth",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020087,
@@ -124,13 +124,13 @@
       "fullMatchup": "Buffalo Sabres vs Florida Panthers",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020092,
@@ -142,13 +142,13 @@
       "fullMatchup": "Buffalo Sabres at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020108,
@@ -160,13 +160,13 @@
       "fullMatchup": "Buffalo Sabres at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020126,
@@ -178,13 +178,13 @@
       "fullMatchup": "Buffalo Sabres at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "MSG-B",
+      "netUSNat": "NHLN",
       "primaryNet": "MSG-B",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MSG-B / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MSG-B / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020152,
@@ -196,13 +196,13 @@
       "fullMatchup": "Buffalo Sabres vs Philadelphia Flyers",
       "venue": "KeyBank Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020173,
@@ -214,13 +214,13 @@
       "fullMatchup": "Buffalo Sabres at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020198,
@@ -232,13 +232,13 @@
       "fullMatchup": "Buffalo Sabres at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020211,
@@ -250,13 +250,13 @@
       "fullMatchup": "Buffalo Sabres at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "MSG Western NY",
+      "netUSNat": null,
       "primaryNet": "MSG Western NY",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Western NY)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Western NY)"
     },
     {
       "id": 2026020221,
@@ -268,13 +268,13 @@
       "fullMatchup": "Buffalo Sabres at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020247,
@@ -286,13 +286,13 @@
       "fullMatchup": "Buffalo Sabres vs Ottawa Senators",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020262,
@@ -304,13 +304,13 @@
       "fullMatchup": "Buffalo Sabres vs Columbus Blue Jackets",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020278,
@@ -322,13 +322,13 @@
       "fullMatchup": "Buffalo Sabres vs Vegas Golden Knights",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020293,
@@ -340,13 +340,13 @@
       "fullMatchup": "Buffalo Sabres vs Tampa Bay Lightning",
       "venue": "KeyBank Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020305,
@@ -358,13 +358,13 @@
       "fullMatchup": "Buffalo Sabres at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020322,
@@ -376,13 +376,13 @@
       "fullMatchup": "Buffalo Sabres at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020337,
@@ -394,13 +394,13 @@
       "fullMatchup": "Buffalo Sabres at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020351,
@@ -412,13 +412,13 @@
       "fullMatchup": "Buffalo Sabres at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020361,
@@ -430,13 +430,13 @@
       "fullMatchup": "Buffalo Sabres at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020374,
@@ -448,13 +448,13 @@
       "fullMatchup": "Buffalo Sabres at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "MSG-B",
+      "netUSNat": "NHLN",
       "primaryNet": "MSG-B",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MSG-B / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MSG-B / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020387,
@@ -466,13 +466,13 @@
       "fullMatchup": "Buffalo Sabres vs New York Rangers",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020413,
@@ -484,13 +484,13 @@
       "fullMatchup": "Buffalo Sabres vs Pittsburgh Penguins",
       "venue": "KeyBank Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020441,
@@ -502,13 +502,13 @@
       "fullMatchup": "Buffalo Sabres at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020455,
@@ -520,13 +520,13 @@
       "fullMatchup": "Buffalo Sabres at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020462,
@@ -538,13 +538,13 @@
       "fullMatchup": "Buffalo Sabres at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020481,
@@ -556,13 +556,13 @@
       "fullMatchup": "Buffalo Sabres at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020499,
@@ -574,13 +574,13 @@
       "fullMatchup": "Buffalo Sabres vs Edmonton Oilers",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020518,
@@ -592,13 +592,13 @@
       "fullMatchup": "Buffalo Sabres vs Anaheim Ducks",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020531,
@@ -610,13 +610,13 @@
       "fullMatchup": "Buffalo Sabres at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020537,
@@ -628,13 +628,13 @@
       "fullMatchup": "Buffalo Sabres vs Calgary Flames",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020559,
@@ -646,13 +646,13 @@
       "fullMatchup": "Buffalo Sabres vs Montreal Canadiens",
       "venue": "KeyBank Center",
       "rsn": "MSG Western NY",
+      "netUSNat": null,
       "primaryNet": "MSG Western NY",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Western NY)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Western NY)"
     },
     {
       "id": 2026020579,
@@ -664,13 +664,13 @@
       "fullMatchup": "Buffalo Sabres vs Los Angeles Kings",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020593,
@@ -682,13 +682,13 @@
       "fullMatchup": "Buffalo Sabres at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020603,
@@ -700,13 +700,13 @@
       "fullMatchup": "Buffalo Sabres vs New Jersey Devils",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020620,
@@ -718,13 +718,13 @@
       "fullMatchup": "Buffalo Sabres vs Detroit Red Wings",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020638,
@@ -736,13 +736,13 @@
       "fullMatchup": "Buffalo Sabres at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020657,
@@ -754,13 +754,13 @@
       "fullMatchup": "Buffalo Sabres at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020674,
@@ -772,13 +772,13 @@
       "fullMatchup": "Buffalo Sabres vs Winnipeg Jets",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020683,
@@ -790,13 +790,13 @@
       "fullMatchup": "Buffalo Sabres at Boston Bruins",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020704,
@@ -808,13 +808,13 @@
       "fullMatchup": "Buffalo Sabres at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020712,
@@ -826,13 +826,13 @@
       "fullMatchup": "Buffalo Sabres vs Carolina Hurricanes",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020729,
@@ -844,13 +844,13 @@
       "fullMatchup": "Buffalo Sabres vs New Jersey Devils",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020744,
@@ -862,13 +862,13 @@
       "fullMatchup": "Buffalo Sabres vs Colorado Avalanche",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020761,
@@ -880,13 +880,13 @@
       "fullMatchup": "Buffalo Sabres vs Nashville Predators",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020776,
@@ -898,13 +898,13 @@
       "fullMatchup": "Buffalo Sabres vs Montreal Canadiens",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020793,
@@ -916,13 +916,13 @@
       "fullMatchup": "Buffalo Sabres at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020798,
@@ -934,13 +934,13 @@
       "fullMatchup": "Buffalo Sabres vs Seattle Kraken",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020824,
@@ -952,13 +952,13 @@
       "fullMatchup": "Buffalo Sabres at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020848,
@@ -970,13 +970,13 @@
       "fullMatchup": "Buffalo Sabres at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020858,
@@ -988,13 +988,13 @@
       "fullMatchup": "Buffalo Sabres at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020868,
@@ -1006,13 +1006,13 @@
       "fullMatchup": "Buffalo Sabres at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020887,
@@ -1024,13 +1024,13 @@
       "fullMatchup": "Buffalo Sabres vs New York Islanders",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020921,
@@ -1042,13 +1042,13 @@
       "fullMatchup": "Buffalo Sabres at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020931,
@@ -1060,13 +1060,13 @@
       "fullMatchup": "Buffalo Sabres at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020951,
@@ -1078,13 +1078,13 @@
       "fullMatchup": "Buffalo Sabres vs Carolina Hurricanes",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020968,
@@ -1096,13 +1096,13 @@
       "fullMatchup": "Buffalo Sabres at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026020978,
@@ -1114,13 +1114,13 @@
       "fullMatchup": "Buffalo Sabres at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020999,
@@ -1132,13 +1132,13 @@
       "fullMatchup": "Buffalo Sabres at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021012,
@@ -1150,13 +1150,13 @@
       "fullMatchup": "Buffalo Sabres vs Ottawa Senators",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021022,
@@ -1168,13 +1168,13 @@
       "fullMatchup": "Buffalo Sabres vs Toronto Maple Leafs",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021043,
@@ -1186,13 +1186,13 @@
       "fullMatchup": "Buffalo Sabres vs Pittsburgh Penguins",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021056,
@@ -1204,13 +1204,13 @@
       "fullMatchup": "Buffalo Sabres vs St. Louis Blues",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021072,
@@ -1222,13 +1222,13 @@
       "fullMatchup": "Buffalo Sabres vs New York Rangers",
       "venue": "KeyBank Center",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021085,
@@ -1240,13 +1240,13 @@
       "fullMatchup": "Buffalo Sabres at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021092,
@@ -1258,13 +1258,13 @@
       "fullMatchup": "Buffalo Sabres vs Vancouver Canucks",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021117,
@@ -1276,13 +1276,13 @@
       "fullMatchup": "Buffalo Sabres at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021137,
@@ -1294,13 +1294,13 @@
       "fullMatchup": "Buffalo Sabres at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021140,
@@ -1312,13 +1312,13 @@
       "fullMatchup": "Buffalo Sabres vs San Jose Sharks",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021160,
@@ -1330,13 +1330,13 @@
       "fullMatchup": "Buffalo Sabres vs Washington Capitals",
       "venue": "KeyBank Center",
       "rsn": "MSG Western NY",
+      "netUSNat": null,
       "primaryNet": "MSG Western NY",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Western NY)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Western NY)"
     },
     {
       "id": 2026021174,
@@ -1348,13 +1348,13 @@
       "fullMatchup": "Buffalo Sabres vs Florida Panthers",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021187,
@@ -1366,13 +1366,13 @@
       "fullMatchup": "Buffalo Sabres at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021196,
@@ -1384,13 +1384,13 @@
       "fullMatchup": "Buffalo Sabres at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021212,
@@ -1402,13 +1402,13 @@
       "fullMatchup": "Buffalo Sabres vs Toronto Maple Leafs",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021243,
@@ -1420,13 +1420,13 @@
       "fullMatchup": "Buffalo Sabres at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021255,
@@ -1438,13 +1438,13 @@
       "fullMatchup": "Buffalo Sabres at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021268,
@@ -1456,13 +1456,13 @@
       "fullMatchup": "Buffalo Sabres vs Boston Bruins",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021283,
@@ -1474,13 +1474,13 @@
       "fullMatchup": "Buffalo Sabres at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021297,
@@ -1492,13 +1492,13 @@
       "fullMatchup": "Buffalo Sabres vs Tampa Bay Lightning",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     },
     {
       "id": 2026021312,
@@ -1510,13 +1510,13 @@
       "fullMatchup": "Buffalo Sabres vs Boston Bruins",
       "venue": "KeyBank Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021333,
@@ -1528,13 +1528,13 @@
       "fullMatchup": "Buffalo Sabres vs Detroit Red Wings",
       "venue": "KeyBank Center",
       "rsn": "MSG-B",
+      "netUSNat": null,
       "primaryNet": "MSG-B",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG-B)"
     }
   ]
 }

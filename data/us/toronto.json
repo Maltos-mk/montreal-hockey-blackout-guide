@@ -78,14 +78,14 @@
       "opp": "NSH",
       "fullMatchup": "Toronto Maple Leafs vs Nashville Predators",
       "venue": "Scotiabank Arena",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020065,
@@ -132,14 +132,14 @@
       "opp": "UTA",
       "fullMatchup": "Toronto Maple Leafs at Utah Mammoth",
       "venue": "Delta Center",
-      "rsn": "Utah 16 / SEG+",
+      "rsn": "Mammoth+ / Utah 16",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Utah 16 / SEG+",
+      "secondaryNet": "Mammoth+ / Utah 16",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Utah 16 / SEG+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Mammoth+ / Utah 16)"
     },
     {
       "id": 2026020108,
@@ -204,14 +204,14 @@
       "opp": "CBJ",
       "fullMatchup": "Toronto Maple Leafs at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
-      "rsn": "FanDuel Sports Ohio",
+      "rsn": "Blue Jackets Hockey Network (CBJHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Ohio",
+      "secondaryNet": "Blue Jackets Hockey Network (CBJHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (FanDuel Sports Ohio)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (Blue Jackets Hockey Network (CBJHN))"
     },
     {
       "id": 2026020155,
@@ -276,14 +276,14 @@
       "opp": "SEA",
       "fullMatchup": "Toronto Maple Leafs at Seattle Kraken",
       "venue": "Climate Pledge Arena",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020224,
@@ -312,14 +312,14 @@
       "opp": "UTA",
       "fullMatchup": "Toronto Maple Leafs vs Utah Mammoth",
       "venue": "Scotiabank Arena",
-      "rsn": "Utah 16 / SEG+",
+      "rsn": "Mammoth+ / Utah 16",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Utah 16 / SEG+",
+      "secondaryNet": "Mammoth+ / Utah 16",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Utah 16 / SEG+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Mammoth+ / Utah 16)"
     },
     {
       "id": 2026020268,
@@ -384,14 +384,14 @@
       "opp": "MIN",
       "fullMatchup": "Toronto Maple Leafs vs Minnesota Wild",
       "venue": "Scotiabank Arena",
-      "rsn": "FanDuel Sports North",
+      "rsn": "Wild+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports North",
+      "secondaryNet": "Wild+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (FanDuel Sports North)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (Wild+)"
     },
     {
       "id": 2026020314,
@@ -438,14 +438,14 @@
       "opp": "LAK",
       "fullMatchup": "Toronto Maple Leafs vs Los Angeles Kings",
       "venue": "Scotiabank Arena",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026020364,
@@ -456,14 +456,14 @@
       "opp": "CBJ",
       "fullMatchup": "Toronto Maple Leafs vs Columbus Blue Jackets",
       "venue": "Scotiabank Arena",
-      "rsn": "FanDuel Sports Ohio",
+      "rsn": "Blue Jackets Hockey Network (CBJHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Ohio",
+      "secondaryNet": "Blue Jackets Hockey Network (CBJHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (FanDuel Sports Ohio)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (Blue Jackets Hockey Network (CBJHN))"
     },
     {
       "id": 2026020381,
@@ -564,14 +564,14 @@
       "opp": "CAR",
       "fullMatchup": "Toronto Maple Leafs at Carolina Hurricanes",
       "venue": "Lenovo Center",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Hurricanes Hockey Network (HHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026020497,
@@ -582,14 +582,14 @@
       "opp": "DAL",
       "fullMatchup": "Toronto Maple Leafs at Dallas Stars",
       "venue": "American Airlines Center",
-      "rsn": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+",
+      "secondaryNet": "Prime Video / KDFW 4",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Victory+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Prime Video / KDFW 4)"
     },
     {
       "id": 2026020519,
@@ -618,14 +618,14 @@
       "opp": "ANA",
       "fullMatchup": "Toronto Maple Leafs vs Anaheim Ducks",
       "venue": "Scotiabank Arena",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020544,
@@ -636,14 +636,14 @@
       "opp": "MIN",
       "fullMatchup": "Toronto Maple Leafs at Minnesota Wild",
       "venue": "Grand Casino Arena",
-      "rsn": "FanDuel Sports North",
+      "rsn": "Wild+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports North",
+      "secondaryNet": "Wild+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (FanDuel Sports North)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (Wild+)"
     },
     {
       "id": 2026020553,
@@ -672,14 +672,14 @@
       "opp": "TBL",
       "fullMatchup": "Toronto Maple Leafs vs Tampa Bay Lightning",
       "venue": "Scotiabank Arena",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020585,
@@ -708,14 +708,14 @@
       "opp": "DET",
       "fullMatchup": "Toronto Maple Leafs at Detroit Red Wings",
       "venue": "Little Caesars Arena",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026020604,
@@ -744,14 +744,14 @@
       "opp": "ANA",
       "fullMatchup": "Toronto Maple Leafs at Anaheim Ducks",
       "venue": "Honda Center",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020641,
@@ -762,14 +762,14 @@
       "opp": "LAK",
       "fullMatchup": "Toronto Maple Leafs at Los Angeles Kings",
       "venue": "Crypto.com Arena",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026020663,
@@ -906,14 +906,14 @@
       "opp": "STL",
       "fullMatchup": "Toronto Maple Leafs vs St. Louis Blues",
       "venue": "Scotiabank Arena",
-      "rsn": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Midwest",
+      "secondaryNet": "Blue Note+ (BN+)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (FanDuel Sports Midwest)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (Blue Note+ (BN+))"
     },
     {
       "id": 2026020794,
@@ -942,14 +942,14 @@
       "opp": "STL",
       "fullMatchup": "Toronto Maple Leafs at St. Louis Blues",
       "venue": "Enterprise Center",
-      "rsn": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Midwest",
+      "secondaryNet": "Blue Note+ (BN+)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (FanDuel Sports Midwest)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (Blue Note+ (BN+))"
     },
     {
       "id": 2026020835,
@@ -978,14 +978,14 @@
       "opp": "DET",
       "fullMatchup": "Toronto Maple Leafs at Detroit Red Wings",
       "venue": "Little Caesars Arena",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026020869,
@@ -1014,14 +1014,14 @@
       "opp": "CBJ",
       "fullMatchup": "Toronto Maple Leafs vs Columbus Blue Jackets",
       "venue": "Scotiabank Arena",
-      "rsn": "FanDuel Sports Ohio",
+      "rsn": "Blue Jackets Hockey Network (CBJHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Ohio",
+      "secondaryNet": "Blue Jackets Hockey Network (CBJHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (FanDuel Sports Ohio)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (Blue Jackets Hockey Network (CBJHN))"
     },
     {
       "id": 2026020901,
@@ -1068,14 +1068,14 @@
       "opp": "CAR",
       "fullMatchup": "Toronto Maple Leafs vs Carolina Hurricanes",
       "venue": "Scotiabank Arena",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Hurricanes Hockey Network (HHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026020956,
@@ -1086,14 +1086,14 @@
       "opp": "NSH",
       "fullMatchup": "Toronto Maple Leafs at Nashville Predators",
       "venue": "Bridgestone Arena",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020973,
@@ -1104,14 +1104,14 @@
       "opp": "TBL",
       "fullMatchup": "Toronto Maple Leafs at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020991,
@@ -1122,14 +1122,14 @@
       "opp": "DET",
       "fullMatchup": "Toronto Maple Leafs vs Detroit Red Wings",
       "venue": "Scotiabank Arena",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026021005,
@@ -1176,14 +1176,14 @@
       "opp": "DET",
       "fullMatchup": "Toronto Maple Leafs vs Detroit Red Wings",
       "venue": "Scotiabank Arena",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026021048,
@@ -1194,14 +1194,14 @@
       "opp": "SEA",
       "fullMatchup": "Toronto Maple Leafs vs Seattle Kraken",
       "venue": "Scotiabank Arena",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026021065,
@@ -1212,14 +1212,14 @@
       "opp": "CAR",
       "fullMatchup": "Toronto Maple Leafs at Carolina Hurricanes",
       "venue": "Lenovo Center",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Hurricanes Hockey Network (HHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026021076,
@@ -1248,14 +1248,14 @@
       "opp": "DAL",
       "fullMatchup": "Toronto Maple Leafs vs Dallas Stars",
       "venue": "Scotiabank Arena",
-      "rsn": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+",
+      "secondaryNet": "Prime Video / KDFW 4",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Victory+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Prime Video / KDFW 4)"
     },
     {
       "id": 2026021112,
@@ -1320,14 +1320,14 @@
       "opp": "TBL",
       "fullMatchup": "Toronto Maple Leafs vs Tampa Bay Lightning",
       "venue": "Scotiabank Arena",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026021165,
@@ -1446,14 +1446,14 @@
       "opp": "TBL",
       "fullMatchup": "Toronto Maple Leafs at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026021265,

@@ -5,12 +5,7 @@
     "nickname": "Ducks",
     "city": "Anaheim",
     "slug": "anaheim-ducks",
-    "rsn": "Victory+ / KCOP-13",
-    "colors": {
-      "primary": "#CF4520",
-      "secondary": "#111111",
-      "dark": "#0A0A0A"
-    },
+    "rsn": "Prime Video / FOXLA+",
     "territoryDescription": "Southern California (Orange County, Los Angeles, Inland Empire, San Diego) & Hawaii",
     "zipRanges": [
       [
@@ -21,7 +16,12 @@
         967,
         968
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#CF4520",
+      "secondary": "#111111",
+      "dark": "#0A0A0A"
+    }
   },
   "schedule": [
     {
@@ -34,13 +34,13 @@
       "fullMatchup": "Anaheim Ducks at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020037,
@@ -52,13 +52,13 @@
       "fullMatchup": "Anaheim Ducks vs Florida Panthers",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020055,
@@ -70,13 +70,13 @@
       "fullMatchup": "Anaheim Ducks vs Edmonton Oilers",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020069,
@@ -88,13 +88,13 @@
       "fullMatchup": "Anaheim Ducks at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020082,
@@ -106,13 +106,13 @@
       "fullMatchup": "Anaheim Ducks at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020103,
@@ -124,13 +124,13 @@
       "fullMatchup": "Anaheim Ducks vs Calgary Flames",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020120,
@@ -142,13 +142,13 @@
       "fullMatchup": "Anaheim Ducks vs Boston Bruins",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020137,
@@ -160,13 +160,13 @@
       "fullMatchup": "Anaheim Ducks at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020143,
@@ -178,13 +178,13 @@
       "fullMatchup": "Anaheim Ducks at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020157,
@@ -196,13 +196,13 @@
       "fullMatchup": "Anaheim Ducks at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020168,
@@ -214,13 +214,13 @@
       "fullMatchup": "Anaheim Ducks at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "FOXLA+",
+      "netUSNat": "NHLN",
       "primaryNet": "FOXLA+",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on FOXLA+ / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on FOXLA+ / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020197,
@@ -232,13 +232,13 @@
       "fullMatchup": "Anaheim Ducks vs Vancouver Canucks",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020211,
@@ -249,14 +249,14 @@
       "opp": "BUF",
       "fullMatchup": "Anaheim Ducks vs Buffalo Sabres",
       "venue": "Honda Center",
-      "rsn": "Victory+ / KCOP-13",
-      "primaryNet": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
+      "netUSNat": null,
+      "primaryNet": "Prime Video / FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Victory+ / KCOP-13)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020231,
@@ -268,13 +268,13 @@
       "fullMatchup": "Anaheim Ducks vs Ottawa Senators",
       "venue": "Honda Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020246,
@@ -286,13 +286,13 @@
       "fullMatchup": "Anaheim Ducks at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020260,
@@ -304,13 +304,13 @@
       "fullMatchup": "Anaheim Ducks at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020264,
@@ -322,13 +322,13 @@
       "fullMatchup": "Anaheim Ducks at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020282,
@@ -340,13 +340,13 @@
       "fullMatchup": "Anaheim Ducks vs Pittsburgh Penguins",
       "venue": "Honda Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020297,
@@ -358,13 +358,13 @@
       "fullMatchup": "Anaheim Ducks vs Nashville Predators",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020324,
@@ -376,13 +376,13 @@
       "fullMatchup": "Anaheim Ducks vs New York Islanders",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020328,
@@ -394,13 +394,13 @@
       "fullMatchup": "Anaheim Ducks vs Calgary Flames",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020339,
@@ -412,13 +412,13 @@
       "fullMatchup": "Anaheim Ducks at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020356,
@@ -430,13 +430,13 @@
       "fullMatchup": "Anaheim Ducks at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020370,
@@ -448,13 +448,13 @@
       "fullMatchup": "Anaheim Ducks at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020383,
@@ -466,13 +466,13 @@
       "fullMatchup": "Anaheim Ducks at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020398,
@@ -484,13 +484,13 @@
       "fullMatchup": "Anaheim Ducks vs San Jose Sharks",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020409,
@@ -502,13 +502,13 @@
       "fullMatchup": "Anaheim Ducks vs Los Angeles Kings",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020426,
@@ -520,13 +520,13 @@
       "fullMatchup": "Anaheim Ducks at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020443,
@@ -538,13 +538,13 @@
       "fullMatchup": "Anaheim Ducks vs Minnesota Wild",
       "venue": "Honda Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020463,
@@ -556,13 +556,13 @@
       "fullMatchup": "Anaheim Ducks vs Seattle Kraken",
       "venue": "Honda Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020480,
@@ -574,13 +574,13 @@
       "fullMatchup": "Anaheim Ducks vs Winnipeg Jets",
       "venue": "Honda Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020487,
@@ -592,13 +592,13 @@
       "fullMatchup": "Anaheim Ducks at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020500,
@@ -610,13 +610,13 @@
       "fullMatchup": "Anaheim Ducks at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020518,
@@ -628,13 +628,13 @@
       "fullMatchup": "Anaheim Ducks at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020529,
@@ -646,13 +646,13 @@
       "fullMatchup": "Anaheim Ducks at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020549,
@@ -664,13 +664,13 @@
       "fullMatchup": "Anaheim Ducks vs Vancouver Canucks",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020564,
@@ -682,13 +682,13 @@
       "fullMatchup": "Anaheim Ducks at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020583,
@@ -700,13 +700,13 @@
       "fullMatchup": "Anaheim Ducks at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020600,
@@ -718,13 +718,13 @@
       "fullMatchup": "Anaheim Ducks vs Vegas Golden Knights",
       "venue": "Honda Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020618,
@@ -736,13 +736,13 @@
       "fullMatchup": "Anaheim Ducks vs Colorado Avalanche",
       "venue": "Honda Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020636,
@@ -754,13 +754,13 @@
       "fullMatchup": "Anaheim Ducks vs Toronto Maple Leafs",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020652,
@@ -772,13 +772,13 @@
       "fullMatchup": "Anaheim Ducks vs New Jersey Devils",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020672,
@@ -790,13 +790,13 @@
       "fullMatchup": "Anaheim Ducks vs Philadelphia Flyers",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020689,
@@ -807,14 +807,14 @@
       "opp": "MIN",
       "fullMatchup": "Anaheim Ducks vs Minnesota Wild",
       "venue": "Honda Center",
-      "rsn": "Victory+ / KCOP-13",
-      "primaryNet": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
+      "netUSNat": null,
+      "primaryNet": "Prime Video / FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Victory+ / KCOP-13)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020707,
@@ -826,13 +826,13 @@
       "fullMatchup": "Anaheim Ducks vs Dallas Stars",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020724,
@@ -844,13 +844,13 @@
       "fullMatchup": "Anaheim Ducks vs Washington Capitals",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020737,
@@ -862,13 +862,13 @@
       "fullMatchup": "Anaheim Ducks vs New York Rangers",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020753,
@@ -880,13 +880,13 @@
       "fullMatchup": "Anaheim Ducks vs St. Louis Blues",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020768,
@@ -898,13 +898,13 @@
       "fullMatchup": "Anaheim Ducks at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020786,
@@ -916,13 +916,13 @@
       "fullMatchup": "Anaheim Ducks at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020803,
@@ -934,13 +934,13 @@
       "fullMatchup": "Anaheim Ducks at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020817,
@@ -952,13 +952,13 @@
       "fullMatchup": "Anaheim Ducks at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020825,
@@ -970,13 +970,13 @@
       "fullMatchup": "Anaheim Ducks at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020843,
@@ -988,13 +988,13 @@
       "fullMatchup": "Anaheim Ducks at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020859,
@@ -1005,14 +1005,14 @@
       "opp": "CHI",
       "fullMatchup": "Anaheim Ducks vs Chicago Blackhawks",
       "venue": "Honda Center",
-      "rsn": "Victory+ / KCOP-13",
-      "primaryNet": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
+      "netUSNat": null,
+      "primaryNet": "Prime Video / FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Victory+ / KCOP-13)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020877,
@@ -1024,13 +1024,13 @@
       "fullMatchup": "Anaheim Ducks vs Nashville Predators",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020900,
@@ -1042,13 +1042,13 @@
       "fullMatchup": "Anaheim Ducks vs Detroit Red Wings",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020905,
@@ -1060,13 +1060,13 @@
       "fullMatchup": "Anaheim Ducks vs Chicago Blackhawks",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020913,
@@ -1078,13 +1078,13 @@
       "fullMatchup": "Anaheim Ducks at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020929,
@@ -1096,13 +1096,13 @@
       "fullMatchup": "Anaheim Ducks at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020941,
@@ -1114,13 +1114,13 @@
       "fullMatchup": "Anaheim Ducks at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020953,
@@ -1132,13 +1132,13 @@
       "fullMatchup": "Anaheim Ducks at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026020970,
@@ -1150,13 +1150,13 @@
       "fullMatchup": "Anaheim Ducks at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021002,
@@ -1168,13 +1168,13 @@
       "fullMatchup": "Anaheim Ducks vs Seattle Kraken",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021018,
@@ -1186,13 +1186,13 @@
       "fullMatchup": "Anaheim Ducks at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021027,
@@ -1204,13 +1204,13 @@
       "fullMatchup": "Anaheim Ducks vs Montreal Canadiens",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021041,
@@ -1222,13 +1222,13 @@
       "fullMatchup": "Anaheim Ducks at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021068,
@@ -1240,13 +1240,13 @@
       "fullMatchup": "Anaheim Ducks vs Tampa Bay Lightning",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021087,
@@ -1258,13 +1258,13 @@
       "fullMatchup": "Anaheim Ducks vs Columbus Blue Jackets",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021106,
@@ -1276,13 +1276,13 @@
       "fullMatchup": "Anaheim Ducks at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021123,
@@ -1294,13 +1294,13 @@
       "fullMatchup": "Anaheim Ducks at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021135,
@@ -1312,13 +1312,13 @@
       "fullMatchup": "Anaheim Ducks at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021152,
@@ -1329,14 +1329,14 @@
       "opp": "CAR",
       "fullMatchup": "Anaheim Ducks vs Carolina Hurricanes",
       "venue": "Honda Center",
-      "rsn": "Victory+ / KCOP-13",
-      "primaryNet": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
+      "netUSNat": null,
+      "primaryNet": "Prime Video / FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Victory+ / KCOP-13)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video / FOXLA+)"
     },
     {
       "id": 2026021169,
@@ -1347,14 +1347,14 @@
       "opp": "UTA",
       "fullMatchup": "Anaheim Ducks vs Utah Mammoth",
       "venue": "Honda Center",
-      "rsn": "Victory+ / KCOP-13",
-      "primaryNet": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
+      "netUSNat": null,
+      "primaryNet": "Prime Video / FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Victory+ / KCOP-13)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video / FOXLA+)"
     },
     {
       "id": 2026021184,
@@ -1366,13 +1366,13 @@
       "fullMatchup": "Anaheim Ducks vs Vegas Golden Knights",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021195,
@@ -1384,13 +1384,13 @@
       "fullMatchup": "Anaheim Ducks vs San Jose Sharks",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021210,
@@ -1402,13 +1402,13 @@
       "fullMatchup": "Anaheim Ducks at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021222,
@@ -1420,13 +1420,13 @@
       "fullMatchup": "Anaheim Ducks at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021229,
@@ -1438,13 +1438,13 @@
       "fullMatchup": "Anaheim Ducks at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021258,
@@ -1456,13 +1456,13 @@
       "fullMatchup": "Anaheim Ducks vs Colorado Avalanche",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021271,
@@ -1474,13 +1474,13 @@
       "fullMatchup": "Anaheim Ducks at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021288,
@@ -1492,13 +1492,13 @@
       "fullMatchup": "Anaheim Ducks vs Edmonton Oilers",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021311,
@@ -1510,13 +1510,13 @@
       "fullMatchup": "Anaheim Ducks vs Los Angeles Kings",
       "venue": "Honda Center",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     },
     {
       "id": 2026021331,
@@ -1528,13 +1528,13 @@
       "fullMatchup": "Anaheim Ducks at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "FOXLA+",
+      "netUSNat": null,
       "primaryNet": "FOXLA+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FOXLA+)"
     }
   ]
 }

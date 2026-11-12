@@ -5,7 +5,7 @@
     "city": "Anaheim",
     "abbreviation": "ANA",
     "slug": "anaheim-ducks",
-    "rsn": "Victory+ / KCOP-13",
+    "rsn": "Prime Video / FOXLA+",
     "territoryDescription": "Southern California (Orange County, Los Angeles, Inland Empire, San Diego) & Hawaii",
     "zipRanges": [
       [
@@ -96,7 +96,7 @@
     "city": "Carolina",
     "abbreviation": "CAR",
     "slug": "carolina-hurricanes",
-    "rsn": "FanDuel Sports South",
+    "rsn": "Hurricanes Hockey Network (HHN)",
     "territoryDescription": "North Carolina & South Carolina",
     "zipRanges": [
       [
@@ -178,7 +178,7 @@
     "city": "Columbus",
     "abbreviation": "CBJ",
     "slug": "columbus-blue-jackets",
-    "rsn": "FanDuel Sports Ohio",
+    "rsn": "Blue Jackets Hockey Network (CBJHN)",
     "territoryDescription": "Ohio, Eastern/Central Kentucky & Southern West Virginia",
     "zipRanges": [
       [
@@ -208,7 +208,7 @@
     "city": "Dallas",
     "abbreviation": "DAL",
     "slug": "dallas-stars",
-    "rsn": "Victory+",
+    "rsn": "Prime Video / KDFW 4",
     "territoryDescription": "Texas, Oklahoma, Louisiana & Arkansas",
     "zipRanges": [
       [
@@ -230,7 +230,7 @@
     "city": "Detroit",
     "abbreviation": "DET",
     "slug": "detroit-red-wings",
-    "rsn": "FanDuel Sports Detroit",
+    "rsn": "Detroit SportsNet (DSN)",
     "territoryDescription": "Michigan, Northwestern Ohio (Toledo) & Northeastern Indiana",
     "zipRanges": [
       [
@@ -311,7 +311,7 @@
     "city": "Los Angeles",
     "abbreviation": "LAK",
     "slug": "los-angeles-kings",
-    "rsn": "FanDuel Sports West",
+    "rsn": "ABTV / DAZN",
     "territoryDescription": "Southern California (Los Angeles, Orange County, Inland Empire, San Diego) & Hawaii",
     "zipRanges": [
       [
@@ -337,7 +337,7 @@
     "city": "Minnesota",
     "abbreviation": "MIN",
     "slug": "minnesota-wild",
-    "rsn": "FanDuel Sports North",
+    "rsn": "Wild+",
     "territoryDescription": "Minnesota, Wisconsin, North Dakota & South Dakota",
     "zipRanges": [
       [
@@ -376,7 +376,7 @@
     "city": "Nashville",
     "abbreviation": "NSH",
     "slug": "nashville-predators",
-    "rsn": "FanDuel Sports South",
+    "rsn": "Scripps Sports (The Spot)",
     "territoryDescription": "Tennessee, Alabama, Mississippi, Georgia & Western Kentucky",
     "zipRanges": [
       [
@@ -587,7 +587,7 @@
     "city": "Seattle",
     "abbreviation": "SEA",
     "slug": "seattle-kraken",
-    "rsn": "Kraken Hockey Network",
+    "rsn": "Prime Video / Kraken Hockey Network",
     "territoryDescription": "Washington, Oregon, Alaska & Northern Idaho",
     "zipRanges": [
       [
@@ -613,7 +613,7 @@
     "city": "St. Louis",
     "abbreviation": "STL",
     "slug": "st-louis-blues",
-    "rsn": "FanDuel Sports Midwest",
+    "rsn": "Blue Note+ (BN+)",
     "territoryDescription": "Missouri, Southern Illinois, Eastern Kansas & Arkansas",
     "zipRanges": [
       [
@@ -639,7 +639,7 @@
     "city": "Tampa Bay",
     "abbreviation": "TBL",
     "slug": "tampa-bay-lightning",
-    "rsn": "FanDuel Sports Sun",
+    "rsn": "Scripps Sports (The Spot)",
     "territoryDescription": "Central & North Florida (Tampa Bay, Orlando, Jacksonville, Gainesville & Sarasota)",
     "zipRanges": [
       [
@@ -686,7 +686,7 @@
     "city": "Utah",
     "abbreviation": "UTA",
     "slug": "utah-mammoth",
-    "rsn": "Utah 16 / SEG+",
+    "rsn": "Mammoth+ / Utah 16",
     "territoryDescription": "Utah, Montana & Southeastern Idaho",
     "zipRanges": [
       [

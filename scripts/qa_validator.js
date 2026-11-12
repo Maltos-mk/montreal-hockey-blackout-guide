@@ -164,10 +164,17 @@ function validateHtml(filePath, site = 'ca') {
       }
       const cleanedForUsCheck = content
         .replace(/MSG Sportsnet/gi, '')
-        .replace(/SportsNet Pittsburgh/gi, '');
+        .replace(/SportsNet Pittsburgh/gi, '')
+        .replace(/Detroit SportsNet/gi, '');
       if (/\b(Sportsnet|TSN|TSN[1-5]|RDS|TVA Sports|Centre Ice)\b/i.test(cleanedForUsCheck)) {
         errors.push('US Team page leaked Canadian broadcaster terminology (Sportsnet, TSN, RDS, TVA Sports, or Centre Ice).');
       }
+    }
+    if (/ESPN\+ \(Out-of-Market\)\s*(?:&amp;|&|•|and|,)\s*ESPN\+|My Local RSN \(ESPN\+ \(Out-of-Market\)\)|watched via ESPN\+ \(Out-of-Market\)|Watch on ESPN\+ \(Out-of-Market\)/i.test(content)) {
+      errors.push('US site page has redundant or contradictory "ESPN+ (Out-of-Market) & ESPN+" copy.');
+    }
+    if (/\bFanDuel Sports\b|\bFanDuel SN\b|Victory\+/i.test(content)) {
+      errors.push('US site page contains defunct FanDuel Sports / Victory+ RSN terminology.');
     }
   }
 

@@ -5,12 +5,7 @@
     "nickname": "Red Wings",
     "city": "Detroit",
     "slug": "detroit-red-wings",
-    "rsn": "FanDuel Sports Detroit",
-    "colors": {
-      "primary": "#CE1126",
-      "secondary": "#9E0B1C",
-      "dark": "#1A0508"
-    },
+    "rsn": "Detroit SportsNet (DSN)",
     "territoryDescription": "Michigan, Northwestern Ohio (Toledo) & Northeastern Indiana",
     "zipRanges": [
       [
@@ -25,7 +20,12 @@
         480,
         499
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#9E0B1C",
+      "dark": "#1A0508"
+    }
   },
   "schedule": [
     {
@@ -38,13 +38,13 @@
       "fullMatchup": "Detroit Red Wings vs New York Rangers",
       "venue": "Little Caesars Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020035,
@@ -56,13 +56,13 @@
       "fullMatchup": "Detroit Red Wings vs Winnipeg Jets",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": "NHLN",
       "primaryNet": "DSN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on DSN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on DSN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020046,
@@ -74,13 +74,13 @@
       "fullMatchup": "Detroit Red Wings vs Ottawa Senators",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020066,
@@ -92,13 +92,13 @@
       "fullMatchup": "Detroit Red Wings vs Seattle Kraken",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020075,
@@ -110,13 +110,13 @@
       "fullMatchup": "Detroit Red Wings at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020090,
@@ -128,13 +128,13 @@
       "fullMatchup": "Detroit Red Wings vs New Jersey Devils",
       "venue": "Little Caesars Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020110,
@@ -145,14 +145,14 @@
       "opp": "PHI",
       "fullMatchup": "Detroit Red Wings vs Philadelphia Flyers",
       "venue": "Little Caesars Arena",
-      "rsn": "FanDuel Sports Detroit",
-      "primaryNet": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
+      "netUSNat": null,
+      "primaryNet": "Detroit SportsNet (DSN)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports Detroit)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026020127,
@@ -164,13 +164,13 @@
       "fullMatchup": "Detroit Red Wings vs San Jose Sharks",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020149,
@@ -182,13 +182,13 @@
       "fullMatchup": "Detroit Red Wings at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020165,
@@ -200,13 +200,13 @@
       "fullMatchup": "Detroit Red Wings at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020178,
@@ -218,13 +218,13 @@
       "fullMatchup": "Detroit Red Wings at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020187,
@@ -236,13 +236,13 @@
       "fullMatchup": "Detroit Red Wings at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020203,
@@ -253,14 +253,14 @@
       "opp": "CHI",
       "fullMatchup": "Detroit Red Wings vs Chicago Blackhawks",
       "venue": "Little Caesars Arena",
-      "rsn": "FanDuel Sports Detroit",
-      "primaryNet": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
+      "netUSNat": null,
+      "primaryNet": "Detroit SportsNet (DSN)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports Detroit)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026020218,
@@ -272,13 +272,13 @@
       "fullMatchup": "Detroit Red Wings vs St. Louis Blues",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020233,
@@ -290,13 +290,13 @@
       "fullMatchup": "Detroit Red Wings at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020238,
@@ -308,13 +308,13 @@
       "fullMatchup": "Detroit Red Wings at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020252,
@@ -326,13 +326,13 @@
       "fullMatchup": "Detroit Red Wings vs Vegas Golden Knights",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020274,
@@ -344,13 +344,13 @@
       "fullMatchup": "Detroit Red Wings at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020290,
@@ -362,13 +362,13 @@
       "fullMatchup": "Detroit Red Wings at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020302,
@@ -379,14 +379,14 @@
       "opp": "FLA",
       "fullMatchup": "Detroit Red Wings at Florida Panthers",
       "venue": "Amerant Bank Arena",
-      "rsn": "FanDuel Sports Detroit",
-      "primaryNet": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
+      "netUSNat": null,
+      "primaryNet": "Detroit SportsNet (DSN)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports Detroit)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026020316,
@@ -398,13 +398,13 @@
       "fullMatchup": "Detroit Red Wings at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020344,
@@ -416,13 +416,13 @@
       "fullMatchup": "Detroit Red Wings vs Boston Bruins",
       "venue": "Little Caesars Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020367,
@@ -434,13 +434,13 @@
       "fullMatchup": "Detroit Red Wings vs New York Islanders",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020394,
@@ -452,13 +452,13 @@
       "fullMatchup": "Detroit Red Wings vs Vancouver Canucks",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020407,
@@ -470,13 +470,13 @@
       "fullMatchup": "Detroit Red Wings at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020417,
@@ -488,13 +488,13 @@
       "fullMatchup": "Detroit Red Wings vs Nashville Predators",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020436,
@@ -506,13 +506,13 @@
       "fullMatchup": "Detroit Red Wings vs Calgary Flames",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020450,
@@ -524,13 +524,13 @@
       "fullMatchup": "Detroit Red Wings vs Colorado Avalanche",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020464,
@@ -542,13 +542,13 @@
       "fullMatchup": "Detroit Red Wings at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020496,
@@ -560,13 +560,13 @@
       "fullMatchup": "Detroit Red Wings at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020510,
@@ -578,13 +578,13 @@
       "fullMatchup": "Detroit Red Wings vs New York Rangers",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020521,
@@ -596,13 +596,13 @@
       "fullMatchup": "Detroit Red Wings vs Florida Panthers",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020538,
@@ -613,14 +613,14 @@
       "opp": "LAK",
       "fullMatchup": "Detroit Red Wings vs Los Angeles Kings",
       "venue": "Little Caesars Arena",
-      "rsn": "FanDuel Sports Detroit",
-      "primaryNet": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
+      "netUSNat": null,
+      "primaryNet": "Detroit SportsNet (DSN)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports Detroit)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026020555,
@@ -632,13 +632,13 @@
       "fullMatchup": "Detroit Red Wings at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020562,
@@ -650,13 +650,13 @@
       "fullMatchup": "Detroit Red Wings at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020578,
@@ -668,13 +668,13 @@
       "fullMatchup": "Detroit Red Wings vs Tampa Bay Lightning",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020595,
@@ -686,13 +686,13 @@
       "fullMatchup": "Detroit Red Wings vs Toronto Maple Leafs",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020607,
@@ -704,13 +704,13 @@
       "fullMatchup": "Detroit Red Wings at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020620,
@@ -722,13 +722,13 @@
       "fullMatchup": "Detroit Red Wings at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020629,
@@ -740,13 +740,13 @@
       "fullMatchup": "Detroit Red Wings at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020643,
@@ -758,13 +758,13 @@
       "fullMatchup": "Detroit Red Wings vs Carolina Hurricanes",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020655,
@@ -776,13 +776,13 @@
       "fullMatchup": "Detroit Red Wings vs Edmonton Oilers",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020677,
@@ -794,13 +794,13 @@
       "fullMatchup": "Detroit Red Wings at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020694,
@@ -812,13 +812,13 @@
       "fullMatchup": "Detroit Red Wings vs Utah Mammoth",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020715,
@@ -830,13 +830,13 @@
       "fullMatchup": "Detroit Red Wings vs Boston Bruins",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020740,
@@ -848,13 +848,13 @@
       "fullMatchup": "Detroit Red Wings at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020766,
@@ -866,13 +866,13 @@
       "fullMatchup": "Detroit Red Wings at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020772,
@@ -884,13 +884,13 @@
       "fullMatchup": "Detroit Red Wings vs Minnesota Wild",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020786,
@@ -902,13 +902,13 @@
       "fullMatchup": "Detroit Red Wings vs Anaheim Ducks",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020806,
@@ -920,13 +920,13 @@
       "fullMatchup": "Detroit Red Wings at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020812,
@@ -938,13 +938,13 @@
       "fullMatchup": "Detroit Red Wings vs Tampa Bay Lightning",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020830,
@@ -956,13 +956,13 @@
       "fullMatchup": "Detroit Red Wings vs Pittsburgh Penguins",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020846,
@@ -974,13 +974,13 @@
       "fullMatchup": "Detroit Red Wings vs Toronto Maple Leafs",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020861,
@@ -992,13 +992,13 @@
       "fullMatchup": "Detroit Red Wings vs Florida Panthers",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020873,
@@ -1010,13 +1010,13 @@
       "fullMatchup": "Detroit Red Wings at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020900,
@@ -1028,13 +1028,13 @@
       "fullMatchup": "Detroit Red Wings at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020906,
@@ -1046,13 +1046,13 @@
       "fullMatchup": "Detroit Red Wings at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020914,
@@ -1064,13 +1064,13 @@
       "fullMatchup": "Detroit Red Wings at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020937,
@@ -1082,13 +1082,13 @@
       "fullMatchup": "Detroit Red Wings at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020952,
@@ -1100,13 +1100,13 @@
       "fullMatchup": "Detroit Red Wings vs Montreal Canadiens",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020962,
@@ -1118,13 +1118,13 @@
       "fullMatchup": "Detroit Red Wings at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026020978,
@@ -1136,13 +1136,13 @@
       "fullMatchup": "Detroit Red Wings vs Buffalo Sabres",
       "venue": "Little Caesars Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020991,
@@ -1154,13 +1154,13 @@
       "fullMatchup": "Detroit Red Wings at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021004,
@@ -1172,13 +1172,13 @@
       "fullMatchup": "Detroit Red Wings at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021019,
@@ -1190,13 +1190,13 @@
       "fullMatchup": "Detroit Red Wings at Boston Bruins",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021036,
@@ -1208,13 +1208,13 @@
       "fullMatchup": "Detroit Red Wings at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021059,
@@ -1226,13 +1226,13 @@
       "fullMatchup": "Detroit Red Wings vs New Jersey Devils",
       "venue": "Little Caesars Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021075,
@@ -1244,13 +1244,13 @@
       "fullMatchup": "Detroit Red Wings vs Dallas Stars",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021099,
@@ -1262,13 +1262,13 @@
       "fullMatchup": "Detroit Red Wings at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021117,
@@ -1280,13 +1280,13 @@
       "fullMatchup": "Detroit Red Wings vs Buffalo Sabres",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021134,
@@ -1298,13 +1298,13 @@
       "fullMatchup": "Detroit Red Wings at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021149,
@@ -1316,13 +1316,13 @@
       "fullMatchup": "Detroit Red Wings at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021163,
@@ -1334,13 +1334,13 @@
       "fullMatchup": "Detroit Red Wings vs Columbus Blue Jackets",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021175,
@@ -1352,13 +1352,13 @@
       "fullMatchup": "Detroit Red Wings vs Montreal Canadiens",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021199,
@@ -1369,14 +1369,14 @@
       "opp": "WSH",
       "fullMatchup": "Detroit Red Wings at Washington Capitals",
       "venue": "Capital One Arena",
-      "rsn": "FanDuel Sports Detroit",
-      "primaryNet": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
+      "netUSNat": null,
+      "primaryNet": "Detroit SportsNet (DSN)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports Detroit)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026021209,
@@ -1388,13 +1388,13 @@
       "fullMatchup": "Detroit Red Wings vs Washington Capitals",
       "venue": "Little Caesars Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021237,
@@ -1406,13 +1406,13 @@
       "fullMatchup": "Detroit Red Wings at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021242,
@@ -1424,13 +1424,13 @@
       "fullMatchup": "Detroit Red Wings at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021249,
@@ -1442,13 +1442,13 @@
       "fullMatchup": "Detroit Red Wings vs Ottawa Senators",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021272,
@@ -1460,13 +1460,13 @@
       "fullMatchup": "Detroit Red Wings vs Carolina Hurricanes",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021292,
@@ -1478,13 +1478,13 @@
       "fullMatchup": "Detroit Red Wings at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021305,
@@ -1496,13 +1496,13 @@
       "fullMatchup": "Detroit Red Wings at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021325,
@@ -1514,13 +1514,13 @@
       "fullMatchup": "Detroit Red Wings vs Pittsburgh Penguins",
       "venue": "Little Caesars Arena",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     },
     {
       "id": 2026021333,
@@ -1532,13 +1532,13 @@
       "fullMatchup": "Detroit Red Wings at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "DSN",
+      "netUSNat": null,
       "primaryNet": "DSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (DSN)"
     }
   ]
 }

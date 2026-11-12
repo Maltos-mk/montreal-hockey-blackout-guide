@@ -6,18 +6,18 @@
     "city": "Boston",
     "slug": "boston-bruins",
     "rsn": "NESN",
-    "colors": {
-      "primary": "#FFB81C",
-      "secondary": "#111111",
-      "dark": "#000000"
-    },
     "territoryDescription": "New England (MA, RI, NH, ME, VT & Eastern/Central CT)",
     "zipRanges": [
       [
         10,
         63
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#FFB81C",
+      "secondary": "#111111",
+      "dark": "#000000"
+    }
   },
   "schedule": [
     {
@@ -30,13 +30,13 @@
       "fullMatchup": "Boston Bruins vs New York Rangers",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020019,
@@ -48,13 +48,13 @@
       "fullMatchup": "Boston Bruins at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020031,
@@ -66,13 +66,13 @@
       "fullMatchup": "Boston Bruins at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020041,
@@ -84,13 +84,13 @@
       "fullMatchup": "Boston Bruins vs Ottawa Senators",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020056,
@@ -102,13 +102,13 @@
       "fullMatchup": "Boston Bruins vs Utah Mammoth",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020070,
@@ -120,13 +120,13 @@
       "fullMatchup": "Boston Bruins vs Philadelphia Flyers",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": "NHLN",
       "primaryNet": "NESN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on NESN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on NESN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020105,
@@ -138,13 +138,13 @@
       "fullMatchup": "Boston Bruins at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020120,
@@ -156,13 +156,13 @@
       "fullMatchup": "Boston Bruins at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020132,
@@ -174,13 +174,13 @@
       "fullMatchup": "Boston Bruins at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020147,
@@ -192,13 +192,13 @@
       "fullMatchup": "Boston Bruins at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020154,
@@ -210,13 +210,13 @@
       "fullMatchup": "Boston Bruins vs Nashville Predators",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020170,
@@ -228,13 +228,13 @@
       "fullMatchup": "Boston Bruins vs San Jose Sharks",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020189,
@@ -246,13 +246,13 @@
       "fullMatchup": "Boston Bruins at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020207,
@@ -264,13 +264,13 @@
       "fullMatchup": "Boston Bruins at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020217,
@@ -282,13 +282,13 @@
       "fullMatchup": "Boston Bruins vs Chicago Blackhawks",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020232,
@@ -300,13 +300,13 @@
       "fullMatchup": "Boston Bruins vs Vegas Golden Knights",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": "NHLN",
       "primaryNet": "NESN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on NESN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on NESN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020257,
@@ -318,13 +318,13 @@
       "fullMatchup": "Boston Bruins at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020277,
@@ -336,13 +336,13 @@
       "fullMatchup": "Boston Bruins vs Florida Panthers",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": "NHLN",
       "primaryNet": "NESN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on NESN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on NESN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020299,
@@ -354,13 +354,13 @@
       "fullMatchup": "Boston Bruins vs Montreal Canadiens",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020313,
@@ -372,13 +372,13 @@
       "fullMatchup": "Boston Bruins vs Minnesota Wild",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020333,
@@ -390,13 +390,13 @@
       "fullMatchup": "Boston Bruins vs Los Angeles Kings",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020344,
@@ -408,13 +408,13 @@
       "fullMatchup": "Boston Bruins at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020363,
@@ -426,13 +426,13 @@
       "fullMatchup": "Boston Bruins vs Washington Capitals",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020386,
@@ -444,13 +444,13 @@
       "fullMatchup": "Boston Bruins vs Winnipeg Jets",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020400,
@@ -462,13 +462,13 @@
       "fullMatchup": "Boston Bruins vs Toronto Maple Leafs",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020429,
@@ -480,13 +480,13 @@
       "fullMatchup": "Boston Bruins vs Vancouver Canucks",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020440,
@@ -498,13 +498,13 @@
       "fullMatchup": "Boston Bruins vs Colorado Avalanche",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020464,
@@ -516,13 +516,13 @@
       "fullMatchup": "Boston Bruins vs Detroit Red Wings",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020488,
@@ -534,13 +534,13 @@
       "fullMatchup": "Boston Bruins at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020502,
@@ -552,13 +552,13 @@
       "fullMatchup": "Boston Bruins at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020514,
@@ -570,13 +570,13 @@
       "fullMatchup": "Boston Bruins vs New Jersey Devils",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020527,
@@ -588,13 +588,13 @@
       "fullMatchup": "Boston Bruins at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020536,
@@ -606,13 +606,13 @@
       "fullMatchup": "Boston Bruins vs Florida Panthers",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020551,
@@ -624,13 +624,13 @@
       "fullMatchup": "Boston Bruins vs St. Louis Blues",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020567,
@@ -642,13 +642,13 @@
       "fullMatchup": "Boston Bruins at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020576,
@@ -660,13 +660,13 @@
       "fullMatchup": "Boston Bruins vs Philadelphia Flyers",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020591,
@@ -678,13 +678,13 @@
       "fullMatchup": "Boston Bruins at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020602,
@@ -696,13 +696,13 @@
       "fullMatchup": "Boston Bruins vs New York Islanders",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020616,
@@ -714,13 +714,13 @@
       "fullMatchup": "Boston Bruins at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020639,
@@ -732,13 +732,13 @@
       "fullMatchup": "Boston Bruins vs Edmonton Oilers",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020651,
@@ -750,13 +750,13 @@
       "fullMatchup": "Boston Bruins at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020660,
@@ -768,13 +768,13 @@
       "fullMatchup": "Boston Bruins at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020683,
@@ -786,13 +786,13 @@
       "fullMatchup": "Boston Bruins vs Buffalo Sabres",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020690,
@@ -804,13 +804,13 @@
       "fullMatchup": "Boston Bruins at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020715,
@@ -822,13 +822,13 @@
       "fullMatchup": "Boston Bruins at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020728,
@@ -840,13 +840,13 @@
       "fullMatchup": "Boston Bruins vs Carolina Hurricanes",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020743,
@@ -858,13 +858,13 @@
       "fullMatchup": "Boston Bruins vs Dallas Stars",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020758,
@@ -876,13 +876,13 @@
       "fullMatchup": "Boston Bruins at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026020777,
@@ -894,13 +894,13 @@
       "fullMatchup": "Boston Bruins vs Tampa Bay Lightning",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020795,
@@ -912,13 +912,13 @@
       "fullMatchup": "Boston Bruins at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020811,
@@ -930,13 +930,13 @@
       "fullMatchup": "Boston Bruins at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020822,
@@ -948,13 +948,13 @@
       "fullMatchup": "Boston Bruins at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020834,
@@ -966,13 +966,13 @@
       "fullMatchup": "Boston Bruins vs Columbus Blue Jackets",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020849,
@@ -984,13 +984,13 @@
       "fullMatchup": "Boston Bruins at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020869,
@@ -1002,13 +1002,13 @@
       "fullMatchup": "Boston Bruins vs Toronto Maple Leafs",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020901,
@@ -1020,13 +1020,13 @@
       "fullMatchup": "Boston Bruins at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020917,
@@ -1038,13 +1038,13 @@
       "fullMatchup": "Boston Bruins vs Columbus Blue Jackets",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020929,
@@ -1056,13 +1056,13 @@
       "fullMatchup": "Boston Bruins vs Anaheim Ducks",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020948,
@@ -1074,13 +1074,13 @@
       "fullMatchup": "Boston Bruins at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020965,
@@ -1092,13 +1092,13 @@
       "fullMatchup": "Boston Bruins at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020985,
@@ -1110,13 +1110,13 @@
       "fullMatchup": "Boston Bruins at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026020990,
@@ -1128,13 +1128,13 @@
       "fullMatchup": "Boston Bruins at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021007,
@@ -1146,13 +1146,13 @@
       "fullMatchup": "Boston Bruins vs Washington Capitals",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021019,
@@ -1164,13 +1164,13 @@
       "fullMatchup": "Boston Bruins vs Detroit Red Wings",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021049,
@@ -1182,13 +1182,13 @@
       "fullMatchup": "Boston Bruins at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021058,
@@ -1200,13 +1200,13 @@
       "fullMatchup": "Boston Bruins at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021071,
@@ -1218,13 +1218,13 @@
       "fullMatchup": "Boston Bruins vs Pittsburgh Penguins",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021089,
@@ -1236,13 +1236,13 @@
       "fullMatchup": "Boston Bruins vs Seattle Kraken",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021104,
@@ -1254,13 +1254,13 @@
       "fullMatchup": "Boston Bruins at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021109,
@@ -1272,13 +1272,13 @@
       "fullMatchup": "Boston Bruins at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021124,
@@ -1290,13 +1290,13 @@
       "fullMatchup": "Boston Bruins vs Calgary Flames",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021139,
@@ -1308,13 +1308,13 @@
       "fullMatchup": "Boston Bruins vs New York Islanders",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021166,
@@ -1326,13 +1326,13 @@
       "fullMatchup": "Boston Bruins at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021178,
@@ -1344,13 +1344,13 @@
       "fullMatchup": "Boston Bruins at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021196,
@@ -1362,13 +1362,13 @@
       "fullMatchup": "Boston Bruins vs Buffalo Sabres",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021211,
@@ -1380,13 +1380,13 @@
       "fullMatchup": "Boston Bruins vs Ottawa Senators",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021224,
@@ -1398,13 +1398,13 @@
       "fullMatchup": "Boston Bruins at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021248,
@@ -1416,13 +1416,13 @@
       "fullMatchup": "Boston Bruins vs Montreal Canadiens",
       "venue": "TD Garden",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021268,
@@ -1434,13 +1434,13 @@
       "fullMatchup": "Boston Bruins at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021278,
@@ -1452,13 +1452,13 @@
       "fullMatchup": "Boston Bruins vs Tampa Bay Lightning",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021298,
@@ -1470,13 +1470,13 @@
       "fullMatchup": "Boston Bruins at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021312,
@@ -1488,13 +1488,13 @@
       "fullMatchup": "Boston Bruins at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021326,
@@ -1506,13 +1506,13 @@
       "fullMatchup": "Boston Bruins at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "NESN",
+      "netUSNat": null,
       "primaryNet": "NESN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NESN)"
     },
     {
       "id": 2026021341,
@@ -1524,13 +1524,13 @@
       "fullMatchup": "Boston Bruins at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     }
   ]
 }

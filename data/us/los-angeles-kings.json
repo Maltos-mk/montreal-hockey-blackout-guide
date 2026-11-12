@@ -5,12 +5,7 @@
     "nickname": "Kings",
     "city": "Los Angeles",
     "slug": "los-angeles-kings",
-    "rsn": "FanDuel Sports West",
-    "colors": {
-      "primary": "#111111",
-      "secondary": "#1F2937",
-      "dark": "#090D16"
-    },
+    "rsn": "ABTV / DAZN",
     "territoryDescription": "Southern California (Los Angeles, Orange County, Inland Empire, San Diego) & Hawaii",
     "zipRanges": [
       [
@@ -21,7 +16,12 @@
         967,
         968
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#111111",
+      "secondary": "#1F2937",
+      "dark": "#090D16"
+    }
   },
   "schedule": [
     {
@@ -34,13 +34,13 @@
       "fullMatchup": "Los Angeles Kings at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020034,
@@ -51,14 +51,14 @@
       "opp": "SJS",
       "fullMatchup": "Los Angeles Kings at San Jose Sharks",
       "venue": "SAP Center at San Jose",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020052,
@@ -70,13 +70,13 @@
       "fullMatchup": "Los Angeles Kings vs Florida Panthers",
       "venue": "Crypto.com Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020083,
@@ -87,14 +87,14 @@
       "opp": "VGK",
       "fullMatchup": "Los Angeles Kings at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020104,
@@ -105,14 +105,14 @@
       "opp": "EDM",
       "fullMatchup": "Los Angeles Kings vs Edmonton Oilers",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020132,
@@ -123,14 +123,14 @@
       "opp": "BOS",
       "fullMatchup": "Los Angeles Kings vs Boston Bruins",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020144,
@@ -141,14 +141,14 @@
       "opp": "WSH",
       "fullMatchup": "Los Angeles Kings at Washington Capitals",
       "venue": "Capital One Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020159,
@@ -159,14 +159,14 @@
       "opp": "NYI",
       "fullMatchup": "Los Angeles Kings at New York Islanders",
       "venue": "UBS Arena",
-      "rsn": "FanDuel Sports West",
-      "primaryNet": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
+      "netUSNat": null,
+      "primaryNet": "ABTV / DAZN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports West)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV / DAZN)"
     },
     {
       "id": 2026020169,
@@ -177,14 +177,14 @@
       "opp": "NJD",
       "fullMatchup": "Los Angeles Kings at New Jersey Devils",
       "venue": "Prudential Center",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020185,
@@ -195,14 +195,14 @@
       "opp": "NYR",
       "fullMatchup": "Los Angeles Kings at New York Rangers",
       "venue": "Madison Square Garden",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": "NHLN",
+      "primaryNet": "ABTV",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on ABTV  / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on ABTV / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020190,
@@ -213,14 +213,14 @@
       "opp": "CHI",
       "fullMatchup": "Los Angeles Kings at Chicago Blackhawks",
       "venue": "United Center",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020212,
@@ -231,14 +231,14 @@
       "opp": "OTT",
       "fullMatchup": "Los Angeles Kings vs Ottawa Senators",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020221,
@@ -249,14 +249,14 @@
       "opp": "BUF",
       "fullMatchup": "Los Angeles Kings vs Buffalo Sabres",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020249,
@@ -268,13 +268,13 @@
       "fullMatchup": "Los Angeles Kings vs San Jose Sharks",
       "venue": "Crypto.com Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020275,
@@ -285,14 +285,14 @@
       "opp": "PIT",
       "fullMatchup": "Los Angeles Kings vs Pittsburgh Penguins",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020292,
@@ -303,14 +303,14 @@
       "opp": "NSH",
       "fullMatchup": "Los Angeles Kings vs Nashville Predators",
       "venue": "Crypto.com Arena",
-      "rsn": "FanDuel Sports West",
-      "primaryNet": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
+      "netUSNat": null,
+      "primaryNet": "ABTV / DAZN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports West)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV / DAZN)"
     },
     {
       "id": 2026020308,
@@ -321,14 +321,14 @@
       "opp": "NYI",
       "fullMatchup": "Los Angeles Kings vs New York Islanders",
       "venue": "Crypto.com Arena",
-      "rsn": "FanDuel Sports West",
-      "primaryNet": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
+      "netUSNat": null,
+      "primaryNet": "ABTV / DAZN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports West)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV / DAZN)"
     },
     {
       "id": 2026020325,
@@ -339,14 +339,14 @@
       "opp": "CGY",
       "fullMatchup": "Los Angeles Kings vs Calgary Flames",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020333,
@@ -357,14 +357,14 @@
       "opp": "BOS",
       "fullMatchup": "Los Angeles Kings at Boston Bruins",
       "venue": "TD Garden",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020347,
@@ -375,14 +375,14 @@
       "opp": "TOR",
       "fullMatchup": "Los Angeles Kings at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020366,
@@ -393,14 +393,14 @@
       "opp": "OTT",
       "fullMatchup": "Los Angeles Kings at Ottawa Senators",
       "venue": "Canadian Tire Centre",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020379,
@@ -411,14 +411,14 @@
       "opp": "MTL",
       "fullMatchup": "Los Angeles Kings at Montreal Canadiens",
       "venue": "Centre Bell",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020409,
@@ -429,14 +429,14 @@
       "opp": "ANA",
       "fullMatchup": "Los Angeles Kings at Anaheim Ducks",
       "venue": "Honda Center",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020426,
@@ -447,14 +447,14 @@
       "opp": "ANA",
       "fullMatchup": "Los Angeles Kings vs Anaheim Ducks",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020444,
@@ -465,14 +465,14 @@
       "opp": "VGK",
       "fullMatchup": "Los Angeles Kings vs Vegas Golden Knights",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020459,
@@ -483,14 +483,14 @@
       "opp": "MIN",
       "fullMatchup": "Los Angeles Kings vs Minnesota Wild",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020474,
@@ -501,14 +501,14 @@
       "opp": "UTA",
       "fullMatchup": "Los Angeles Kings vs Utah Mammoth",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020498,
@@ -520,13 +520,13 @@
       "fullMatchup": "Los Angeles Kings vs San Jose Sharks",
       "venue": "Crypto.com Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020513,
@@ -537,14 +537,14 @@
       "opp": "SJS",
       "fullMatchup": "Los Angeles Kings at San Jose Sharks",
       "venue": "SAP Center at San Jose",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020525,
@@ -555,14 +555,14 @@
       "opp": "VAN",
       "fullMatchup": "Los Angeles Kings vs Vancouver Canucks",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020538,
@@ -573,14 +573,14 @@
       "opp": "DET",
       "fullMatchup": "Los Angeles Kings at Detroit Red Wings",
       "venue": "Little Caesars Arena",
-      "rsn": "FanDuel Sports West",
-      "primaryNet": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
+      "netUSNat": null,
+      "primaryNet": "ABTV / DAZN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports West)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV / DAZN)"
     },
     {
       "id": 2026020554,
@@ -591,14 +591,14 @@
       "opp": "PIT",
       "fullMatchup": "Los Angeles Kings at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020572,
@@ -609,14 +609,14 @@
       "opp": "CBJ",
       "fullMatchup": "Los Angeles Kings at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020579,
@@ -627,14 +627,14 @@
       "opp": "BUF",
       "fullMatchup": "Los Angeles Kings at Buffalo Sabres",
       "venue": "KeyBank Center",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020598,
@@ -645,14 +645,14 @@
       "opp": "MIN",
       "fullMatchup": "Los Angeles Kings at Minnesota Wild",
       "venue": "Grand Casino Arena",
-      "rsn": "FanDuel Sports West",
-      "primaryNet": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
+      "netUSNat": null,
+      "primaryNet": "ABTV / DAZN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports West)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV / DAZN)"
     },
     {
       "id": 2026020610,
@@ -663,14 +663,14 @@
       "opp": "UTA",
       "fullMatchup": "Los Angeles Kings vs Utah Mammoth",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020625,
@@ -681,14 +681,14 @@
       "opp": "VAN",
       "fullMatchup": "Los Angeles Kings at Vancouver Canucks",
       "venue": "Rogers Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020641,
@@ -699,14 +699,14 @@
       "opp": "TOR",
       "fullMatchup": "Los Angeles Kings vs Toronto Maple Leafs",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020665,
@@ -717,14 +717,14 @@
       "opp": "NJD",
       "fullMatchup": "Los Angeles Kings vs New Jersey Devils",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020679,
@@ -735,14 +735,14 @@
       "opp": "PHI",
       "fullMatchup": "Los Angeles Kings vs Philadelphia Flyers",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020692,
@@ -753,14 +753,14 @@
       "opp": "WSH",
       "fullMatchup": "Los Angeles Kings vs Washington Capitals",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020718,
@@ -771,14 +771,14 @@
       "opp": "DAL",
       "fullMatchup": "Los Angeles Kings vs Dallas Stars",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020727,
@@ -789,14 +789,14 @@
       "opp": "NYR",
       "fullMatchup": "Los Angeles Kings vs New York Rangers",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020742,
@@ -807,14 +807,14 @@
       "opp": "STL",
       "fullMatchup": "Los Angeles Kings vs St. Louis Blues",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020757,
@@ -825,14 +825,14 @@
       "opp": "UTA",
       "fullMatchup": "Los Angeles Kings at Utah Mammoth",
       "venue": "Delta Center",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020769,
@@ -843,14 +843,14 @@
       "opp": "CGY",
       "fullMatchup": "Los Angeles Kings at Calgary Flames",
       "venue": "Scotiabank Saddledome",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020791,
@@ -861,14 +861,14 @@
       "opp": "SEA",
       "fullMatchup": "Los Angeles Kings vs Seattle Kraken",
       "venue": "Crypto.com Arena",
-      "rsn": "FanDuel Sports West",
-      "primaryNet": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
+      "netUSNat": null,
+      "primaryNet": "ABTV / DAZN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports West)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV / DAZN)"
     },
     {
       "id": 2026020807,
@@ -879,14 +879,14 @@
       "opp": "EDM",
       "fullMatchup": "Los Angeles Kings vs Edmonton Oilers",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020814,
@@ -897,14 +897,14 @@
       "opp": "NSH",
       "fullMatchup": "Los Angeles Kings at Nashville Predators",
       "venue": "Bridgestone Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020827,
@@ -915,14 +915,14 @@
       "opp": "FLA",
       "fullMatchup": "Los Angeles Kings at Florida Panthers",
       "venue": "Amerant Bank Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020837,
@@ -933,14 +933,14 @@
       "opp": "TBL",
       "fullMatchup": "Los Angeles Kings at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020850,
@@ -951,14 +951,14 @@
       "opp": "PHI",
       "fullMatchup": "Los Angeles Kings at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
-      "rsn": "FanDuel Sports West",
-      "primaryNet": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
+      "netUSNat": null,
+      "primaryNet": "ABTV / DAZN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports West)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV / DAZN)"
     },
     {
       "id": 2026020872,
@@ -969,14 +969,14 @@
       "opp": "CAR",
       "fullMatchup": "Los Angeles Kings at Carolina Hurricanes",
       "venue": "Lenovo Center",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020896,
@@ -987,14 +987,14 @@
       "opp": "DAL",
       "fullMatchup": "Los Angeles Kings at Dallas Stars",
       "venue": "American Airlines Center",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020899,
@@ -1005,14 +1005,14 @@
       "opp": "STL",
       "fullMatchup": "Los Angeles Kings at St. Louis Blues",
       "venue": "Enterprise Center",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020906,
@@ -1023,14 +1023,14 @@
       "opp": "DET",
       "fullMatchup": "Los Angeles Kings vs Detroit Red Wings",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020916,
@@ -1041,14 +1041,14 @@
       "opp": "CHI",
       "fullMatchup": "Los Angeles Kings vs Chicago Blackhawks",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020938,
@@ -1059,14 +1059,14 @@
       "opp": "CGY",
       "fullMatchup": "Los Angeles Kings vs Calgary Flames",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020946,
@@ -1077,14 +1077,14 @@
       "opp": "WPG",
       "fullMatchup": "Los Angeles Kings at Winnipeg Jets",
       "venue": "Canada Life Centre",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020958,
@@ -1095,14 +1095,14 @@
       "opp": "MIN",
       "fullMatchup": "Los Angeles Kings at Minnesota Wild",
       "venue": "Grand Casino Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026020976,
@@ -1113,14 +1113,14 @@
       "opp": "SEA",
       "fullMatchup": "Los Angeles Kings vs Seattle Kraken",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021003,
@@ -1131,14 +1131,14 @@
       "opp": "MTL",
       "fullMatchup": "Los Angeles Kings vs Montreal Canadiens",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021016,
@@ -1149,14 +1149,14 @@
       "opp": "CHI",
       "fullMatchup": "Los Angeles Kings at Chicago Blackhawks",
       "venue": "United Center",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021029,
@@ -1167,14 +1167,14 @@
       "opp": "NSH",
       "fullMatchup": "Los Angeles Kings at Nashville Predators",
       "venue": "Bridgestone Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021041,
@@ -1185,14 +1185,14 @@
       "opp": "ANA",
       "fullMatchup": "Los Angeles Kings vs Anaheim Ducks",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021054,
@@ -1203,14 +1203,14 @@
       "opp": "TBL",
       "fullMatchup": "Los Angeles Kings vs Tampa Bay Lightning",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021069,
@@ -1221,14 +1221,14 @@
       "opp": "CBJ",
       "fullMatchup": "Los Angeles Kings vs Columbus Blue Jackets",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021084,
@@ -1239,14 +1239,14 @@
       "opp": "COL",
       "fullMatchup": "Los Angeles Kings vs Colorado Avalanche",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021100,
@@ -1257,14 +1257,14 @@
       "opp": "EDM",
       "fullMatchup": "Los Angeles Kings at Edmonton Oilers",
       "venue": "Rogers Place",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021115,
@@ -1275,14 +1275,14 @@
       "opp": "SEA",
       "fullMatchup": "Los Angeles Kings at Seattle Kraken",
       "venue": "Climate Pledge Arena",
-      "rsn": "FanDuel Sports West",
-      "primaryNet": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
+      "netUSNat": null,
+      "primaryNet": "ABTV / DAZN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports West)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV / DAZN)"
     },
     {
       "id": 2026021131,
@@ -1293,14 +1293,14 @@
       "opp": "DAL",
       "fullMatchup": "Los Angeles Kings vs Dallas Stars",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021153,
@@ -1311,14 +1311,14 @@
       "opp": "WPG",
       "fullMatchup": "Los Angeles Kings vs Winnipeg Jets",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021170,
@@ -1329,14 +1329,14 @@
       "opp": "CAR",
       "fullMatchup": "Los Angeles Kings vs Carolina Hurricanes",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021191,
@@ -1347,14 +1347,14 @@
       "opp": "SEA",
       "fullMatchup": "Los Angeles Kings at Seattle Kraken",
       "venue": "Climate Pledge Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021207,
@@ -1365,14 +1365,14 @@
       "opp": "VAN",
       "fullMatchup": "Los Angeles Kings at Vancouver Canucks",
       "venue": "Rogers Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021221,
@@ -1383,14 +1383,14 @@
       "opp": "CGY",
       "fullMatchup": "Los Angeles Kings at Calgary Flames",
       "venue": "Scotiabank Saddledome",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021227,
@@ -1401,14 +1401,14 @@
       "opp": "EDM",
       "fullMatchup": "Los Angeles Kings at Edmonton Oilers",
       "venue": "Rogers Place",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021246,
@@ -1419,14 +1419,14 @@
       "opp": "VAN",
       "fullMatchup": "Los Angeles Kings vs Vancouver Canucks",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021261,
@@ -1437,14 +1437,14 @@
       "opp": "WPG",
       "fullMatchup": "Los Angeles Kings vs Winnipeg Jets",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021275,
@@ -1455,14 +1455,14 @@
       "opp": "COL",
       "fullMatchup": "Los Angeles Kings at Colorado Avalanche",
       "venue": "Ball Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021289,
@@ -1473,14 +1473,14 @@
       "opp": "STL",
       "fullMatchup": "Los Angeles Kings vs St. Louis Blues",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021311,
@@ -1491,14 +1491,14 @@
       "opp": "ANA",
       "fullMatchup": "Los Angeles Kings at Anaheim Ducks",
       "venue": "Honda Center",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021324,
@@ -1509,14 +1509,14 @@
       "opp": "VGK",
       "fullMatchup": "Los Angeles Kings vs Vegas Golden Knights",
       "venue": "Crypto.com Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     },
     {
       "id": 2026021344,
@@ -1527,14 +1527,14 @@
       "opp": "VGK",
       "fullMatchup": "Los Angeles Kings at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
-      "rsn": "ABTV ",
-      "primaryNet": "ABTV ",
+      "rsn": "ABTV",
+      "netUSNat": null,
+      "primaryNet": "ABTV",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV )",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABTV)"
     }
   ]
 }

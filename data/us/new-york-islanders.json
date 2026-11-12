@@ -6,11 +6,6 @@
     "city": "New York",
     "slug": "new-york-islanders",
     "rsn": "MSG Sportsnet",
-    "colors": {
-      "primary": "#F47D30",
-      "secondary": "#00539B",
-      "dark": "#002E56"
-    },
     "territoryDescription": "Long Island, New York City, Westchester, Hudson Valley, NJ & Connecticut",
     "zipRanges": [
       [
@@ -21,7 +16,12 @@
         100,
         129
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#F47D30",
+      "secondary": "#00539B",
+      "dark": "#002E56"
+    }
   },
   "schedule": [
     {
@@ -34,13 +34,13 @@
       "fullMatchup": "New York Islanders at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020029,
@@ -52,13 +52,13 @@
       "fullMatchup": "New York Islanders vs New Jersey Devils",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020048,
@@ -70,13 +70,13 @@
       "fullMatchup": "New York Islanders at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020062,
@@ -88,13 +88,13 @@
       "fullMatchup": "New York Islanders vs Chicago Blackhawks",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020081,
@@ -106,13 +106,13 @@
       "fullMatchup": "New York Islanders vs Tampa Bay Lightning",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020097,
@@ -124,13 +124,13 @@
       "fullMatchup": "New York Islanders vs Vancouver Canucks",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020109,
@@ -142,13 +142,13 @@
       "fullMatchup": "New York Islanders at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020125,
@@ -160,13 +160,13 @@
       "fullMatchup": "New York Islanders at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020143,
@@ -178,13 +178,13 @@
       "fullMatchup": "New York Islanders vs Anaheim Ducks",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020159,
@@ -196,13 +196,13 @@
       "fullMatchup": "New York Islanders vs Los Angeles Kings",
       "venue": "UBS Arena",
       "rsn": "MSG Sportsnet",
+      "netUSNat": null,
       "primaryNet": "MSG Sportsnet",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)"
     },
     {
       "id": 2026020181,
@@ -214,13 +214,13 @@
       "fullMatchup": "New York Islanders at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020192,
@@ -232,13 +232,13 @@
       "fullMatchup": "New York Islanders at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020210,
@@ -250,13 +250,13 @@
       "fullMatchup": "New York Islanders at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020220,
@@ -268,13 +268,13 @@
       "fullMatchup": "New York Islanders vs Edmonton Oilers",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020255,
@@ -286,13 +286,13 @@
       "fullMatchup": "New York Islanders vs Carolina Hurricanes",
       "venue": "UBS Arena",
       "rsn": "MSG Sportsnet",
+      "netUSNat": null,
       "primaryNet": "MSG Sportsnet",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)"
     },
     {
       "id": 2026020270,
@@ -304,13 +304,13 @@
       "fullMatchup": "New York Islanders vs New Jersey Devils",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020285,
@@ -322,13 +322,13 @@
       "fullMatchup": "New York Islanders at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020308,
@@ -340,13 +340,13 @@
       "fullMatchup": "New York Islanders at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "MSG Sportsnet",
+      "netUSNat": null,
       "primaryNet": "MSG Sportsnet",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)"
     },
     {
       "id": 2026020324,
@@ -358,13 +358,13 @@
       "fullMatchup": "New York Islanders at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020336,
@@ -376,13 +376,13 @@
       "fullMatchup": "New York Islanders vs Columbus Blue Jackets",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020354,
@@ -394,13 +394,13 @@
       "fullMatchup": "New York Islanders at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020367,
@@ -412,13 +412,13 @@
       "fullMatchup": "New York Islanders at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020381,
@@ -430,13 +430,13 @@
       "fullMatchup": "New York Islanders vs Toronto Maple Leafs",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020390,
@@ -448,13 +448,13 @@
       "fullMatchup": "New York Islanders vs St. Louis Blues",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020412,
@@ -466,13 +466,13 @@
       "fullMatchup": "New York Islanders vs Winnipeg Jets",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020423,
@@ -484,13 +484,13 @@
       "fullMatchup": "New York Islanders at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020438,
@@ -502,13 +502,13 @@
       "fullMatchup": "New York Islanders vs Florida Panthers",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020452,
@@ -520,13 +520,13 @@
       "fullMatchup": "New York Islanders at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "MSG Sportsnet",
+      "netUSNat": null,
       "primaryNet": "MSG Sportsnet",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)"
     },
     {
       "id": 2026020460,
@@ -538,13 +538,13 @@
       "fullMatchup": "New York Islanders vs San Jose Sharks",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020482,
@@ -556,13 +556,13 @@
       "fullMatchup": "New York Islanders vs Colorado Avalanche",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020504,
@@ -574,13 +574,13 @@
       "fullMatchup": "New York Islanders vs Calgary Flames",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020512,
@@ -592,13 +592,13 @@
       "fullMatchup": "New York Islanders at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020545,
@@ -610,13 +610,13 @@
       "fullMatchup": "New York Islanders at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020548,
@@ -628,13 +628,13 @@
       "fullMatchup": "New York Islanders at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020566,
@@ -646,13 +646,13 @@
       "fullMatchup": "New York Islanders at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020582,
@@ -664,13 +664,13 @@
       "fullMatchup": "New York Islanders vs New York Rangers",
       "venue": "UBS Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020591,
@@ -682,13 +682,13 @@
       "fullMatchup": "New York Islanders vs Boston Bruins",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020602,
@@ -700,13 +700,13 @@
       "fullMatchup": "New York Islanders at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020617,
@@ -718,13 +718,13 @@
       "fullMatchup": "New York Islanders vs Ottawa Senators",
       "venue": "UBS Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020637,
@@ -736,13 +736,13 @@
       "fullMatchup": "New York Islanders vs Washington Capitals",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020668,
@@ -754,13 +754,13 @@
       "fullMatchup": "New York Islanders at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020687,
@@ -772,13 +772,13 @@
       "fullMatchup": "New York Islanders at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020700,
@@ -790,13 +790,13 @@
       "fullMatchup": "New York Islanders at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020711,
@@ -808,13 +808,13 @@
       "fullMatchup": "New York Islanders at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020739,
@@ -826,13 +826,13 @@
       "fullMatchup": "New York Islanders vs Pittsburgh Penguins",
       "venue": "UBS Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020754,
@@ -844,13 +844,13 @@
       "fullMatchup": "New York Islanders vs Dallas Stars",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020763,
@@ -862,13 +862,13 @@
       "fullMatchup": "New York Islanders at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020778,
@@ -880,13 +880,13 @@
       "fullMatchup": "New York Islanders vs Nashville Predators",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020793,
@@ -898,13 +898,13 @@
       "fullMatchup": "New York Islanders vs Buffalo Sabres",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020808,
@@ -916,13 +916,13 @@
       "fullMatchup": "New York Islanders at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020819,
@@ -934,13 +934,13 @@
       "fullMatchup": "New York Islanders vs Seattle Kraken",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020840,
@@ -952,13 +952,13 @@
       "fullMatchup": "New York Islanders at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020851,
@@ -970,13 +970,13 @@
       "fullMatchup": "New York Islanders at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020871,
@@ -988,13 +988,13 @@
       "fullMatchup": "New York Islanders at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020881,
@@ -1006,13 +1006,13 @@
       "fullMatchup": "New York Islanders at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020887,
@@ -1024,13 +1024,13 @@
       "fullMatchup": "New York Islanders at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020909,
@@ -1042,13 +1042,13 @@
       "fullMatchup": "New York Islanders at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020920,
@@ -1060,13 +1060,13 @@
       "fullMatchup": "New York Islanders vs Minnesota Wild",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020930,
@@ -1078,13 +1078,13 @@
       "fullMatchup": "New York Islanders vs Utah Mammoth",
       "venue": "UBS Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020955,
@@ -1096,13 +1096,13 @@
       "fullMatchup": "New York Islanders vs New York Rangers",
       "venue": "UBS Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020972,
@@ -1114,13 +1114,13 @@
       "fullMatchup": "New York Islanders at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020987,
@@ -1132,13 +1132,13 @@
       "fullMatchup": "New York Islanders at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020995,
@@ -1150,13 +1150,13 @@
       "fullMatchup": "New York Islanders at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021013,
@@ -1168,13 +1168,13 @@
       "fullMatchup": "New York Islanders vs Philadelphia Flyers",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021025,
@@ -1186,13 +1186,13 @@
       "fullMatchup": "New York Islanders at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021037,
@@ -1204,13 +1204,13 @@
       "fullMatchup": "New York Islanders vs Washington Capitals",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021061,
@@ -1222,13 +1222,13 @@
       "fullMatchup": "New York Islanders vs Vegas Golden Knights",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021080,
@@ -1240,13 +1240,13 @@
       "fullMatchup": "New York Islanders vs Pittsburgh Penguins",
       "venue": "UBS Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021094,
@@ -1258,13 +1258,13 @@
       "fullMatchup": "New York Islanders vs Montreal Canadiens",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021118,
@@ -1276,13 +1276,13 @@
       "fullMatchup": "New York Islanders at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021127,
@@ -1294,13 +1294,13 @@
       "fullMatchup": "New York Islanders at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021139,
@@ -1312,13 +1312,13 @@
       "fullMatchup": "New York Islanders at Boston Bruins",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021154,
@@ -1330,13 +1330,13 @@
       "fullMatchup": "New York Islanders at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021176,
@@ -1348,13 +1348,13 @@
       "fullMatchup": "New York Islanders vs Philadelphia Flyers",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021187,
@@ -1366,13 +1366,13 @@
       "fullMatchup": "New York Islanders vs Buffalo Sabres",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021218,
@@ -1384,13 +1384,13 @@
       "fullMatchup": "New York Islanders at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026021237,
@@ -1402,13 +1402,13 @@
       "fullMatchup": "New York Islanders vs Detroit Red Wings",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021252,
@@ -1420,13 +1420,13 @@
       "fullMatchup": "New York Islanders vs Carolina Hurricanes",
       "venue": "UBS Arena",
       "rsn": "MSG Sportsnet",
+      "netUSNat": null,
       "primaryNet": "MSG Sportsnet",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)"
     },
     {
       "id": 2026021267,
@@ -1438,13 +1438,13 @@
       "fullMatchup": "New York Islanders at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021273,
@@ -1456,13 +1456,13 @@
       "fullMatchup": "New York Islanders vs Ottawa Senators",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021294,
@@ -1474,13 +1474,13 @@
       "fullMatchup": "New York Islanders vs Montreal Canadiens",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021305,
@@ -1492,13 +1492,13 @@
       "fullMatchup": "New York Islanders vs Detroit Red Wings",
       "venue": "UBS Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026021318,
@@ -1510,13 +1510,13 @@
       "fullMatchup": "New York Islanders at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026021332,
@@ -1528,13 +1528,13 @@
       "fullMatchup": "New York Islanders vs Columbus Blue Jackets",
       "venue": "UBS Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     }
   ]
 }

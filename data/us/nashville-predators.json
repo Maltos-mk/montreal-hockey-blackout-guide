@@ -5,12 +5,7 @@
     "nickname": "Predators",
     "city": "Nashville",
     "slug": "nashville-predators",
-    "rsn": "FanDuel Sports South",
-    "colors": {
-      "primary": "#FFB81C",
-      "secondary": "#041E42",
-      "dark": "#021126"
-    },
+    "rsn": "Scripps Sports (The Spot)",
     "territoryDescription": "Tennessee, Alabama, Mississippi, Georgia & Western Kentucky",
     "zipRanges": [
       [
@@ -25,7 +20,12 @@
         420,
         427
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#FFB81C",
+      "secondary": "#041E42",
+      "dark": "#021126"
+    }
   },
   "schedule": [
     {
@@ -38,13 +38,13 @@
       "fullMatchup": "Nashville Predators vs Minnesota Wild",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020030,
@@ -56,13 +56,13 @@
       "fullMatchup": "Nashville Predators vs Dallas Stars",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020044,
@@ -74,13 +74,13 @@
       "fullMatchup": "Nashville Predators at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020058,
@@ -92,13 +92,13 @@
       "fullMatchup": "Nashville Predators at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020076,
@@ -110,13 +110,13 @@
       "fullMatchup": "Nashville Predators at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020101,
@@ -128,13 +128,13 @@
       "fullMatchup": "Nashville Predators vs Vegas Golden Knights",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020115,
@@ -146,13 +146,13 @@
       "fullMatchup": "Nashville Predators vs San Jose Sharks",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020131,
@@ -164,13 +164,13 @@
       "fullMatchup": "Nashville Predators vs St. Louis Blues",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020154,
@@ -182,13 +182,13 @@
       "fullMatchup": "Nashville Predators at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020172,
@@ -200,13 +200,13 @@
       "fullMatchup": "Nashville Predators at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020183,
@@ -218,13 +218,13 @@
       "fullMatchup": "Nashville Predators vs Colorado Avalanche",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020192,
@@ -236,13 +236,13 @@
       "fullMatchup": "Nashville Predators vs New York Islanders",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020208,
@@ -254,13 +254,13 @@
       "fullMatchup": "Nashville Predators vs Washington Capitals",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020219,
@@ -272,13 +272,13 @@
       "fullMatchup": "Nashville Predators vs Tampa Bay Lightning",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020245,
@@ -290,13 +290,13 @@
       "fullMatchup": "Nashville Predators vs Carolina Hurricanes",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020261,
@@ -307,14 +307,14 @@
       "opp": "COL",
       "fullMatchup": "Nashville Predators at Colorado Avalanche",
       "venue": "Ball Arena",
-      "rsn": "FanDuel Sports South",
-      "primaryNet": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
+      "netUSNat": null,
+      "primaryNet": "Scripps Sports (The Spot)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports South)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020266,
@@ -326,13 +326,13 @@
       "fullMatchup": "Nashville Predators vs St. Louis Blues",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": "NHLN",
       "primaryNet": "SCRIPPS",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on SCRIPPS / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on SCRIPPS / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020292,
@@ -343,14 +343,14 @@
       "opp": "LAK",
       "fullMatchup": "Nashville Predators at Los Angeles Kings",
       "venue": "Crypto.com Arena",
-      "rsn": "FanDuel Sports South",
-      "primaryNet": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
+      "netUSNat": null,
+      "primaryNet": "Scripps Sports (The Spot)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports South)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020297,
@@ -362,13 +362,13 @@
       "fullMatchup": "Nashville Predators at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020311,
@@ -380,13 +380,13 @@
       "fullMatchup": "Nashville Predators at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020330,
@@ -398,13 +398,13 @@
       "fullMatchup": "Nashville Predators at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020340,
@@ -416,13 +416,13 @@
       "fullMatchup": "Nashville Predators at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020362,
@@ -434,13 +434,13 @@
       "fullMatchup": "Nashville Predators vs Pittsburgh Penguins",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020395,
@@ -452,13 +452,13 @@
       "fullMatchup": "Nashville Predators at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020402,
@@ -470,13 +470,13 @@
       "fullMatchup": "Nashville Predators vs Utah Mammoth",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020417,
@@ -488,13 +488,13 @@
       "fullMatchup": "Nashville Predators at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020430,
@@ -506,13 +506,13 @@
       "fullMatchup": "Nashville Predators vs Ottawa Senators",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": "NHLN",
       "primaryNet": "SCRIPPS",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on SCRIPPS / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on SCRIPPS / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020454,
@@ -524,13 +524,13 @@
       "fullMatchup": "Nashville Predators vs Chicago Blackhawks",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020466,
@@ -542,13 +542,13 @@
       "fullMatchup": "Nashville Predators vs Columbus Blue Jackets",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020477,
@@ -560,13 +560,13 @@
       "fullMatchup": "Nashville Predators at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020493,
@@ -578,13 +578,13 @@
       "fullMatchup": "Nashville Predators at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020508,
@@ -596,13 +596,13 @@
       "fullMatchup": "Nashville Predators at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020526,
@@ -614,13 +614,13 @@
       "fullMatchup": "Nashville Predators at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020543,
@@ -632,13 +632,13 @@
       "fullMatchup": "Nashville Predators vs Seattle Kraken",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020561,
@@ -650,13 +650,13 @@
       "fullMatchup": "Nashville Predators at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020581,
@@ -668,13 +668,13 @@
       "fullMatchup": "Nashville Predators at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020596,
@@ -686,13 +686,13 @@
       "fullMatchup": "Nashville Predators vs Winnipeg Jets",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020607,
@@ -704,13 +704,13 @@
       "fullMatchup": "Nashville Predators vs Detroit Red Wings",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020621,
@@ -722,13 +722,13 @@
       "fullMatchup": "Nashville Predators at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020628,
@@ -740,13 +740,13 @@
       "fullMatchup": "Nashville Predators at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020650,
@@ -758,13 +758,13 @@
       "fullMatchup": "Nashville Predators vs Florida Panthers",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020659,
@@ -776,13 +776,13 @@
       "fullMatchup": "Nashville Predators at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020684,
@@ -793,14 +793,14 @@
       "opp": "EDM",
       "fullMatchup": "Nashville Predators vs Edmonton Oilers",
       "venue": "Bridgestone Arena",
-      "rsn": "FanDuel Sports South",
-      "primaryNet": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
+      "netUSNat": null,
+      "primaryNet": "Scripps Sports (The Spot)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports South)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020699,
@@ -812,13 +812,13 @@
       "fullMatchup": "Nashville Predators at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020717,
@@ -830,13 +830,13 @@
       "fullMatchup": "Nashville Predators at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020723,
@@ -848,13 +848,13 @@
       "fullMatchup": "Nashville Predators at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020733,
@@ -866,13 +866,13 @@
       "fullMatchup": "Nashville Predators vs Philadelphia Flyers",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020749,
@@ -884,13 +884,13 @@
       "fullMatchup": "Nashville Predators vs Montreal Canadiens",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020761,
@@ -902,13 +902,13 @@
       "fullMatchup": "Nashville Predators at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020778,
@@ -920,13 +920,13 @@
       "fullMatchup": "Nashville Predators at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020792,
@@ -938,13 +938,13 @@
       "fullMatchup": "Nashville Predators vs Vancouver Canucks",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020802,
@@ -956,13 +956,13 @@
       "fullMatchup": "Nashville Predators at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020814,
@@ -974,13 +974,13 @@
       "fullMatchup": "Nashville Predators vs Los Angeles Kings",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020842,
@@ -992,13 +992,13 @@
       "fullMatchup": "Nashville Predators vs Vegas Golden Knights",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020860,
@@ -1010,13 +1010,13 @@
       "fullMatchup": "Nashville Predators at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020877,
@@ -1028,13 +1028,13 @@
       "fullMatchup": "Nashville Predators at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020880,
@@ -1046,13 +1046,13 @@
       "fullMatchup": "Nashville Predators at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020886,
@@ -1064,13 +1064,13 @@
       "fullMatchup": "Nashville Predators at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020913,
@@ -1082,13 +1082,13 @@
       "fullMatchup": "Nashville Predators vs Anaheim Ducks",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020942,
@@ -1100,13 +1100,13 @@
       "fullMatchup": "Nashville Predators vs New Jersey Devils",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020956,
@@ -1118,13 +1118,13 @@
       "fullMatchup": "Nashville Predators vs Toronto Maple Leafs",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020971,
@@ -1136,13 +1136,13 @@
       "fullMatchup": "Nashville Predators at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020981,
@@ -1154,13 +1154,13 @@
       "fullMatchup": "Nashville Predators at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020996,
@@ -1172,13 +1172,13 @@
       "fullMatchup": "Nashville Predators vs Winnipeg Jets",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021009,
@@ -1190,13 +1190,13 @@
       "fullMatchup": "Nashville Predators vs Edmonton Oilers",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021029,
@@ -1208,13 +1208,13 @@
       "fullMatchup": "Nashville Predators vs Los Angeles Kings",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021047,
@@ -1226,13 +1226,13 @@
       "fullMatchup": "Nashville Predators vs Colorado Avalanche",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021062,
@@ -1244,13 +1244,13 @@
       "fullMatchup": "Nashville Predators vs Utah Mammoth",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021077,
@@ -1262,13 +1262,13 @@
       "fullMatchup": "Nashville Predators vs Minnesota Wild",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021097,
@@ -1280,13 +1280,13 @@
       "fullMatchup": "Nashville Predators at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021113,
@@ -1298,13 +1298,13 @@
       "fullMatchup": "Nashville Predators at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021121,
@@ -1316,13 +1316,13 @@
       "fullMatchup": "Nashville Predators at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021144,
@@ -1334,13 +1334,13 @@
       "fullMatchup": "Nashville Predators at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021158,
@@ -1352,13 +1352,13 @@
       "fullMatchup": "Nashville Predators at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021178,
@@ -1370,13 +1370,13 @@
       "fullMatchup": "Nashville Predators vs Boston Bruins",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021200,
@@ -1388,13 +1388,13 @@
       "fullMatchup": "Nashville Predators vs New York Rangers",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021225,
@@ -1406,13 +1406,13 @@
       "fullMatchup": "Nashville Predators at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021238,
@@ -1424,13 +1424,13 @@
       "fullMatchup": "Nashville Predators at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021255,
@@ -1442,13 +1442,13 @@
       "fullMatchup": "Nashville Predators vs Buffalo Sabres",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021270,
@@ -1460,13 +1460,13 @@
       "fullMatchup": "Nashville Predators vs Chicago Blackhawks",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021279,
@@ -1478,13 +1478,13 @@
       "fullMatchup": "Nashville Predators vs Calgary Flames",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021307,
@@ -1496,13 +1496,13 @@
       "fullMatchup": "Nashville Predators vs Seattle Kraken",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021320,
@@ -1514,13 +1514,13 @@
       "fullMatchup": "Nashville Predators at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021337,
@@ -1532,13 +1532,13 @@
       "fullMatchup": "Nashville Predators vs Dallas Stars",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     }
   ]
 }

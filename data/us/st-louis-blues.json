@@ -5,12 +5,7 @@
     "nickname": "Blues",
     "city": "St. Louis",
     "slug": "st-louis-blues",
-    "rsn": "FanDuel Sports Midwest",
-    "colors": {
-      "primary": "#FCB514",
-      "secondary": "#002F87",
-      "dark": "#001B4E"
-    },
+    "rsn": "Blue Note+ (BN+)",
     "territoryDescription": "Missouri, Southern Illinois, Eastern Kansas & Arkansas",
     "zipRanges": [
       [
@@ -21,7 +16,12 @@
         716,
         729
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#FCB514",
+      "secondary": "#002F87",
+      "dark": "#001B4E"
+    }
   },
   "schedule": [
     {
@@ -34,13 +34,13 @@
       "fullMatchup": "St. Louis Blues at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020032,
@@ -52,13 +52,13 @@
       "fullMatchup": "St. Louis Blues at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020050,
@@ -70,13 +70,13 @@
       "fullMatchup": "St. Louis Blues at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020063,
@@ -87,14 +87,14 @@
       "opp": "SJS",
       "fullMatchup": "St. Louis Blues vs San Jose Sharks",
       "venue": "Enterprise Center",
-      "rsn": "FanDuel Sports Midwest",
-      "primaryNet": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
+      "netUSNat": null,
+      "primaryNet": "Blue Note+ (BN+)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports Midwest)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Blue Note+ (BN+))"
     },
     {
       "id": 2026020079,
@@ -106,13 +106,13 @@
       "fullMatchup": "St. Louis Blues vs Columbus Blue Jackets",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020096,
@@ -124,13 +124,13 @@
       "fullMatchup": "St. Louis Blues at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020116,
@@ -142,13 +142,13 @@
       "fullMatchup": "St. Louis Blues at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020131,
@@ -160,13 +160,13 @@
       "fullMatchup": "St. Louis Blues at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020146,
@@ -178,13 +178,13 @@
       "fullMatchup": "St. Louis Blues vs Winnipeg Jets",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020160,
@@ -196,13 +196,13 @@
       "fullMatchup": "St. Louis Blues vs Vegas Golden Knights",
       "venue": "Enterprise Center",
       "rsn": "ABC32",
+      "netUSNat": null,
       "primaryNet": "ABC32",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)"
     },
     {
       "id": 2026020175,
@@ -214,13 +214,13 @@
       "fullMatchup": "St. Louis Blues vs Carolina Hurricanes",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020191,
@@ -232,13 +232,13 @@
       "fullMatchup": "St. Louis Blues vs Montreal Canadiens",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020207,
@@ -250,13 +250,13 @@
       "fullMatchup": "St. Louis Blues vs Boston Bruins",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020218,
@@ -268,13 +268,13 @@
       "fullMatchup": "St. Louis Blues at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020240,
@@ -286,13 +286,13 @@
       "fullMatchup": "St. Louis Blues at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020254,
@@ -304,13 +304,13 @@
       "fullMatchup": "St. Louis Blues at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "ABC32",
+      "netUSNat": null,
       "primaryNet": "ABC32",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)"
     },
     {
       "id": 2026020266,
@@ -322,13 +322,13 @@
       "fullMatchup": "St. Louis Blues at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "BN+",
+      "netUSNat": "NHLN",
       "primaryNet": "BN+",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on BN+ / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on BN+ / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020290,
@@ -340,13 +340,13 @@
       "fullMatchup": "St. Louis Blues vs Detroit Red Wings",
       "venue": "Enterprise Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020307,
@@ -358,13 +358,13 @@
       "fullMatchup": "St. Louis Blues at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020320,
@@ -376,13 +376,13 @@
       "fullMatchup": "St. Louis Blues vs Florida Panthers",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020339,
@@ -394,13 +394,13 @@
       "fullMatchup": "St. Louis Blues vs Anaheim Ducks",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020350,
@@ -412,13 +412,13 @@
       "fullMatchup": "St. Louis Blues at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "ABC32",
+      "netUSNat": null,
       "primaryNet": "ABC32",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)"
     },
     {
       "id": 2026020368,
@@ -430,13 +430,13 @@
       "fullMatchup": "St. Louis Blues vs New Jersey Devils",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020375,
@@ -448,13 +448,13 @@
       "fullMatchup": "St. Louis Blues vs Edmonton Oilers",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020390,
@@ -466,13 +466,13 @@
       "fullMatchup": "St. Louis Blues at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020403,
@@ -484,13 +484,13 @@
       "fullMatchup": "St. Louis Blues vs Dallas Stars",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": "NHLN",
       "primaryNet": "BN+",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on BN+ / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on BN+ / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020422,
@@ -502,13 +502,13 @@
       "fullMatchup": "St. Louis Blues vs Washington Capitals",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020446,
@@ -520,13 +520,13 @@
       "fullMatchup": "St. Louis Blues vs Pittsburgh Penguins",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020461,
@@ -538,13 +538,13 @@
       "fullMatchup": "St. Louis Blues vs Chicago Blackhawks",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020477,
@@ -556,13 +556,13 @@
       "fullMatchup": "St. Louis Blues vs Nashville Predators",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020491,
@@ -573,14 +573,14 @@
       "opp": "COL",
       "fullMatchup": "St. Louis Blues vs Colorado Avalanche",
       "venue": "Enterprise Center",
-      "rsn": "FanDuel Sports Midwest",
-      "primaryNet": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
+      "netUSNat": null,
+      "primaryNet": "Blue Note+ (BN+)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports Midwest)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Blue Note+ (BN+))"
     },
     {
       "id": 2026020507,
@@ -592,13 +592,13 @@
       "fullMatchup": "St. Louis Blues at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020523,
@@ -610,13 +610,13 @@
       "fullMatchup": "St. Louis Blues at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020530,
@@ -628,13 +628,13 @@
       "fullMatchup": "St. Louis Blues vs Tampa Bay Lightning",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020542,
@@ -646,13 +646,13 @@
       "fullMatchup": "St. Louis Blues vs Winnipeg Jets",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020551,
@@ -664,13 +664,13 @@
       "fullMatchup": "St. Louis Blues at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "ABC32",
+      "netUSNat": null,
       "primaryNet": "ABC32",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)"
     },
     {
       "id": 2026020571,
@@ -682,13 +682,13 @@
       "fullMatchup": "St. Louis Blues at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020586,
@@ -700,13 +700,13 @@
       "fullMatchup": "St. Louis Blues at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020590,
@@ -718,13 +718,13 @@
       "fullMatchup": "St. Louis Blues at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020614,
@@ -736,13 +736,13 @@
       "fullMatchup": "St. Louis Blues vs New York Rangers",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020633,
@@ -754,13 +754,13 @@
       "fullMatchup": "St. Louis Blues at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020646,
@@ -772,13 +772,13 @@
       "fullMatchup": "St. Louis Blues at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "ABC32",
+      "netUSNat": null,
       "primaryNet": "ABC32",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)"
     },
     {
       "id": 2026020661,
@@ -790,13 +790,13 @@
       "fullMatchup": "St. Louis Blues at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020671,
@@ -808,13 +808,13 @@
       "fullMatchup": "St. Louis Blues vs Calgary Flames",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020681,
@@ -826,13 +826,13 @@
       "fullMatchup": "St. Louis Blues at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020705,
@@ -844,13 +844,13 @@
       "fullMatchup": "St. Louis Blues vs Ottawa Senators",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020742,
@@ -862,13 +862,13 @@
       "fullMatchup": "St. Louis Blues at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020753,
@@ -880,13 +880,13 @@
       "fullMatchup": "St. Louis Blues at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020767,
@@ -898,13 +898,13 @@
       "fullMatchup": "St. Louis Blues vs Minnesota Wild",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020783,
@@ -916,13 +916,13 @@
       "fullMatchup": "St. Louis Blues at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020799,
@@ -934,13 +934,13 @@
       "fullMatchup": "St. Louis Blues at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "ABC32",
+      "netUSNat": null,
       "primaryNet": "ABC32",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)"
     },
     {
       "id": 2026020818,
@@ -952,13 +952,13 @@
       "fullMatchup": "St. Louis Blues vs Toronto Maple Leafs",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020841,
@@ -969,14 +969,14 @@
       "opp": "CHI",
       "fullMatchup": "St. Louis Blues vs Chicago Blackhawks",
       "venue": "Enterprise Center",
-      "rsn": "FanDuel Sports Midwest",
-      "primaryNet": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
+      "netUSNat": null,
+      "primaryNet": "Blue Note+ (BN+)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports Midwest)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Blue Note+ (BN+))"
     },
     {
       "id": 2026020853,
@@ -988,13 +988,13 @@
       "fullMatchup": "St. Louis Blues vs Colorado Avalanche",
       "venue": "Enterprise Center",
       "rsn": "ABC32",
+      "netUSNat": null,
       "primaryNet": "ABC32",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)"
     },
     {
       "id": 2026020865,
@@ -1006,13 +1006,13 @@
       "fullMatchup": "St. Louis Blues vs Vancouver Canucks",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020899,
@@ -1024,13 +1024,13 @@
       "fullMatchup": "St. Louis Blues vs Los Angeles Kings",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020910,
@@ -1042,13 +1042,13 @@
       "fullMatchup": "St. Louis Blues at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020926,
@@ -1060,13 +1060,13 @@
       "fullMatchup": "St. Louis Blues at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020936,
@@ -1078,13 +1078,13 @@
       "fullMatchup": "St. Louis Blues vs Philadelphia Flyers",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020945,
@@ -1096,13 +1096,13 @@
       "fullMatchup": "St. Louis Blues at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020963,
@@ -1114,13 +1114,13 @@
       "fullMatchup": "St. Louis Blues at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026020982,
@@ -1132,13 +1132,13 @@
       "fullMatchup": "St. Louis Blues vs Utah Mammoth",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021008,
@@ -1150,13 +1150,13 @@
       "fullMatchup": "St. Louis Blues vs Vancouver Canucks",
       "venue": "Enterprise Center",
       "rsn": "ABC32",
+      "netUSNat": null,
       "primaryNet": "ABC32",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)"
     },
     {
       "id": 2026021021,
@@ -1168,13 +1168,13 @@
       "fullMatchup": "St. Louis Blues vs Minnesota Wild",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021035,
@@ -1186,13 +1186,13 @@
       "fullMatchup": "St. Louis Blues vs Dallas Stars",
       "venue": "Enterprise Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021056,
@@ -1204,13 +1204,13 @@
       "fullMatchup": "St. Louis Blues at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021081,
@@ -1222,13 +1222,13 @@
       "fullMatchup": "St. Louis Blues at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021097,
@@ -1240,13 +1240,13 @@
       "fullMatchup": "St. Louis Blues vs Nashville Predators",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021111,
@@ -1258,13 +1258,13 @@
       "fullMatchup": "St. Louis Blues vs San Jose Sharks",
       "venue": "Enterprise Center",
       "rsn": "ABC32",
+      "netUSNat": null,
       "primaryNet": "ABC32",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)"
     },
     {
       "id": 2026021123,
@@ -1276,13 +1276,13 @@
       "fullMatchup": "St. Louis Blues vs Anaheim Ducks",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021145,
@@ -1294,13 +1294,13 @@
       "fullMatchup": "St. Louis Blues at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021168,
@@ -1312,13 +1312,13 @@
       "fullMatchup": "St. Louis Blues at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021183,
@@ -1330,13 +1330,13 @@
       "fullMatchup": "St. Louis Blues at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021190,
@@ -1348,13 +1348,13 @@
       "fullMatchup": "St. Louis Blues at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021203,
@@ -1366,13 +1366,13 @@
       "fullMatchup": "St. Louis Blues at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021218,
@@ -1384,13 +1384,13 @@
       "fullMatchup": "St. Louis Blues vs New York Islanders",
       "venue": "Enterprise Center",
       "rsn": "ABC32",
+      "netUSNat": null,
       "primaryNet": "ABC32",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (ABC32)"
     },
     {
       "id": 2026021235,
@@ -1402,13 +1402,13 @@
       "fullMatchup": "St. Louis Blues at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021243,
@@ -1420,13 +1420,13 @@
       "fullMatchup": "St. Louis Blues vs Buffalo Sabres",
       "venue": "Enterprise Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021269,
@@ -1438,13 +1438,13 @@
       "fullMatchup": "St. Louis Blues vs Calgary Flames",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021289,
@@ -1456,13 +1456,13 @@
       "fullMatchup": "St. Louis Blues at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021295,
@@ -1474,13 +1474,13 @@
       "fullMatchup": "St. Louis Blues at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021310,
@@ -1492,13 +1492,13 @@
       "fullMatchup": "St. Louis Blues at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021321,
@@ -1510,13 +1510,13 @@
       "fullMatchup": "St. Louis Blues vs Seattle Kraken",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     },
     {
       "id": 2026021340,
@@ -1528,13 +1528,13 @@
       "fullMatchup": "St. Louis Blues vs Utah Mammoth",
       "venue": "Enterprise Center",
       "rsn": "BN+",
+      "netUSNat": null,
       "primaryNet": "BN+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (BN+)"
     }
   ]
 }

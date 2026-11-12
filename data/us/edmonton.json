@@ -60,14 +60,14 @@
       "opp": "SEA",
       "fullMatchup": "Edmonton Oilers vs Seattle Kraken",
       "venue": "Rogers Place",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": "NHLN",
       "primaryNet": "NHLN",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Opponent RSN",
-      "bannerText": "National on NHL Network / Local Seattle Kraken market on Kraken Hockey Network (Blacked out on ESPN+)"
+      "bannerText": "National on NHL Network / Local Seattle Kraken market on Prime Video / Kraken Hockey Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020055,
@@ -78,14 +78,14 @@
       "opp": "ANA",
       "fullMatchup": "Edmonton Oilers at Anaheim Ducks",
       "venue": "Honda Center",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020072,
@@ -114,14 +114,14 @@
       "opp": "LAK",
       "fullMatchup": "Edmonton Oilers at Los Angeles Kings",
       "venue": "Crypto.com Arena",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026020117,
@@ -132,14 +132,14 @@
       "opp": "UTA",
       "fullMatchup": "Edmonton Oilers vs Utah Mammoth",
       "venue": "Rogers Place",
-      "rsn": "Utah 16 / SEG+",
+      "rsn": "Mammoth+ / Utah 16",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Utah 16 / SEG+",
+      "secondaryNet": "Mammoth+ / Utah 16",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Utah 16 / SEG+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Mammoth+ / Utah 16)"
     },
     {
       "id": 2026020133,
@@ -150,14 +150,14 @@
       "opp": "UTA",
       "fullMatchup": "Edmonton Oilers at Utah Mammoth",
       "venue": "Delta Center",
-      "rsn": "Utah 16 / SEG+",
+      "rsn": "Mammoth+ / Utah 16",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Utah 16 / SEG+",
+      "secondaryNet": "Mammoth+ / Utah 16",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Utah 16 / SEG+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Mammoth+ / Utah 16)"
     },
     {
       "id": 2026020148,
@@ -168,14 +168,14 @@
       "opp": "MIN",
       "fullMatchup": "Edmonton Oilers vs Minnesota Wild",
       "venue": "Rogers Place",
-      "rsn": "FanDuel Sports North",
+      "rsn": "Wild+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports North",
+      "secondaryNet": "Wild+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (FanDuel Sports North)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (Wild+)"
     },
     {
       "id": 2026020163,
@@ -186,14 +186,14 @@
       "opp": "CAR",
       "fullMatchup": "Edmonton Oilers vs Carolina Hurricanes",
       "venue": "Rogers Place",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Hurricanes Hockey Network (HHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026020176,
@@ -222,14 +222,14 @@
       "opp": "DET",
       "fullMatchup": "Edmonton Oilers vs Detroit Red Wings",
       "venue": "Rogers Place",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026020200,
@@ -312,14 +312,14 @@
       "opp": "ANA",
       "fullMatchup": "Edmonton Oilers vs Anaheim Ducks",
       "venue": "Rogers Place",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020276,
@@ -438,14 +438,14 @@
       "opp": "TBL",
       "fullMatchup": "Edmonton Oilers at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020359,
@@ -456,14 +456,14 @@
       "opp": "CAR",
       "fullMatchup": "Edmonton Oilers at Carolina Hurricanes",
       "venue": "Lenovo Center",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
       "netUSNat": "NHLN",
       "primaryNet": "NHLN",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Hurricanes Hockey Network (HHN)",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Opponent RSN",
-      "bannerText": "National on NHL Network / Local Carolina Hurricanes market on FanDuel Sports South (Blacked out on ESPN+)"
+      "bannerText": "National on NHL Network / Local Carolina Hurricanes market on Hurricanes Hockey Network (HHN) (Blacked out on ESPN+)"
     },
     {
       "id": 2026020375,
@@ -474,14 +474,14 @@
       "opp": "STL",
       "fullMatchup": "Edmonton Oilers at St. Louis Blues",
       "venue": "Enterprise Center",
-      "rsn": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Midwest",
+      "secondaryNet": "Blue Note+ (BN+)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (FanDuel Sports Midwest)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (Blue Note+ (BN+))"
     },
     {
       "id": 2026020385,
@@ -510,14 +510,14 @@
       "opp": "SEA",
       "fullMatchup": "Edmonton Oilers vs Seattle Kraken",
       "venue": "Rogers Place",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020427,
@@ -528,14 +528,14 @@
       "opp": "SEA",
       "fullMatchup": "Edmonton Oilers at Seattle Kraken",
       "venue": "Climate Pledge Arena",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020441,
@@ -600,14 +600,14 @@
       "opp": "MIN",
       "fullMatchup": "Edmonton Oilers at Minnesota Wild",
       "venue": "Grand Casino Arena",
-      "rsn": "FanDuel Sports North",
+      "rsn": "Wild+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports North",
+      "secondaryNet": "Wild+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (FanDuel Sports North)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (Wild+)"
     },
     {
       "id": 2026020499,
@@ -672,14 +672,14 @@
       "opp": "DAL",
       "fullMatchup": "Edmonton Oilers vs Dallas Stars",
       "venue": "Rogers Place",
-      "rsn": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+",
+      "secondaryNet": "Prime Video / KDFW 4",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Victory+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Prime Video / KDFW 4)"
     },
     {
       "id": 2026020569,
@@ -690,14 +690,14 @@
       "opp": "UTA",
       "fullMatchup": "Edmonton Oilers vs Utah Mammoth",
       "venue": "Rogers Place",
-      "rsn": "Utah 16 / SEG+",
+      "rsn": "Mammoth+ / Utah 16",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Utah 16 / SEG+",
+      "secondaryNet": "Mammoth+ / Utah 16",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Utah 16 / SEG+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Mammoth+ / Utah 16)"
     },
     {
       "id": 2026020583,
@@ -708,14 +708,14 @@
       "opp": "ANA",
       "fullMatchup": "Edmonton Oilers vs Anaheim Ducks",
       "venue": "Rogers Place",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020613,
@@ -726,14 +726,14 @@
       "opp": "CBJ",
       "fullMatchup": "Edmonton Oilers at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
-      "rsn": "FanDuel Sports Ohio",
+      "rsn": "Blue Jackets Hockey Network (CBJHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Ohio",
+      "secondaryNet": "Blue Jackets Hockey Network (CBJHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (FanDuel Sports Ohio)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (Blue Jackets Hockey Network (CBJHN))"
     },
     {
       "id": 2026020622,
@@ -780,14 +780,14 @@
       "opp": "DET",
       "fullMatchup": "Edmonton Oilers at Detroit Red Wings",
       "venue": "Little Caesars Arena",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026020669,
@@ -816,14 +816,14 @@
       "opp": "NSH",
       "fullMatchup": "Edmonton Oilers at Nashville Predators",
       "venue": "Bridgestone Arena",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020701,
@@ -870,14 +870,14 @@
       "opp": "TBL",
       "fullMatchup": "Edmonton Oilers vs Tampa Bay Lightning",
       "venue": "Rogers Place",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020741,
@@ -906,14 +906,14 @@
       "opp": "CBJ",
       "fullMatchup": "Edmonton Oilers vs Columbus Blue Jackets",
       "venue": "Rogers Place",
-      "rsn": "FanDuel Sports Ohio",
+      "rsn": "Blue Jackets Hockey Network (CBJHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Ohio",
+      "secondaryNet": "Blue Jackets Hockey Network (CBJHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (FanDuel Sports Ohio)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (Blue Jackets Hockey Network (CBJHN))"
     },
     {
       "id": 2026020775,
@@ -960,14 +960,14 @@
       "opp": "LAK",
       "fullMatchup": "Edmonton Oilers at Los Angeles Kings",
       "venue": "Crypto.com Arena",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026020823,
@@ -1068,14 +1068,14 @@
       "opp": "STL",
       "fullMatchup": "Edmonton Oilers vs St. Louis Blues",
       "venue": "Rogers Place",
-      "rsn": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Midwest",
+      "secondaryNet": "Blue Note+ (BN+)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (FanDuel Sports Midwest)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (Blue Note+ (BN+))"
     },
     {
       "id": 2026020922,
@@ -1158,14 +1158,14 @@
       "opp": "NSH",
       "fullMatchup": "Edmonton Oilers at Nashville Predators",
       "venue": "Bridgestone Arena",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026021020,
@@ -1176,14 +1176,14 @@
       "opp": "DAL",
       "fullMatchup": "Edmonton Oilers at Dallas Stars",
       "venue": "American Airlines Center",
-      "rsn": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+",
+      "secondaryNet": "Prime Video / KDFW 4",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Victory+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Prime Video / KDFW 4)"
     },
     {
       "id": 2026021040,
@@ -1248,14 +1248,14 @@
       "opp": "LAK",
       "fullMatchup": "Edmonton Oilers vs Los Angeles Kings",
       "venue": "Rogers Place",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026021113,
@@ -1266,14 +1266,14 @@
       "opp": "NSH",
       "fullMatchup": "Edmonton Oilers vs Nashville Predators",
       "venue": "Rogers Place",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026021133,
@@ -1284,14 +1284,14 @@
       "opp": "SEA",
       "fullMatchup": "Edmonton Oilers at Seattle Kraken",
       "venue": "Climate Pledge Arena",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026021143,
@@ -1320,14 +1320,14 @@
       "opp": "STL",
       "fullMatchup": "Edmonton Oilers vs St. Louis Blues",
       "venue": "Rogers Place",
-      "rsn": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Midwest",
+      "secondaryNet": "Blue Note+ (BN+)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (FanDuel Sports Midwest)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (Blue Note+ (BN+))"
     },
     {
       "id": 2026021177,
@@ -1338,14 +1338,14 @@
       "opp": "DAL",
       "fullMatchup": "Edmonton Oilers vs Dallas Stars",
       "venue": "Rogers Place",
-      "rsn": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+",
+      "secondaryNet": "Prime Video / KDFW 4",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Victory+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Prime Video / KDFW 4)"
     },
     {
       "id": 2026021192,
@@ -1410,14 +1410,14 @@
       "opp": "LAK",
       "fullMatchup": "Edmonton Oilers vs Los Angeles Kings",
       "venue": "Rogers Place",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026021260,
@@ -1464,14 +1464,14 @@
       "opp": "ANA",
       "fullMatchup": "Edmonton Oilers at Anaheim Ducks",
       "venue": "Honda Center",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026021301,

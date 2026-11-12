@@ -8,7 +8,7 @@
   <title>{{PAGE_TITLE}}</title>
   <meta name="title" content="{{PAGE_TITLE}}">
   <meta name="description" content="{{META_DESCRIPTION}}">
-  <meta name="keywords" content="{{TEAM_NAME}} game tonight, {{TEAM_NICKNAME}} blackout rules, {{TEAM_NAME}} broadcast schedule, {{TEAM_RSN}} blackout, watch {{TEAM_NICKNAME}} on ESPN+, {{CITY_NAME}} hockey live stream">
+  <meta name="keywords" content="{{META_KEYWORDS}}">
   <meta name="author" content="HockeyBlackouts.com">
   <link rel="canonical" href="{{CANONICAL_URL}}">
   <link rel="alternate" hreflang="en-US" href="https://hockeyblackouts.com/{{TEAM_SLUG}}/" />
@@ -134,7 +134,7 @@
             </button>
           </form>
           <div id="zipLookupStatus" class="text-xs text-slate-600 dark:text-slate-300 mt-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/80">
-            📍 <strong>Default View: In-Market ({{TERRITORY_DESCRIPTION}})</strong>. Enter any 5-digit US ZIP code above to switch between in-market RSN (<strong>{{TEAM_RSN}}</strong>) and out-of-market (<strong>ESPN+</strong>) blackout rules.
+            {{DEFAULT_ZIP_STATUS_HTML}}
           </div>
         </div>
 
@@ -148,8 +148,8 @@
             <label class="sub-item flex items-center space-x-3 p-3 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-50 dark:hover:bg-slate-800/60 cursor-pointer transition">
               <input type="checkbox" id="sub_us_rsn" class="rounded border-slate-300 text-teamSecondary focus:ring-teamSecondary h-4 w-4">
               <div class="flex-1">
-                <p class="text-sm font-semibold">My Local RSN ({{TEAM_RSN}})</p>
-                <p class="text-[10px] text-slate-600 dark:text-slate-300 font-medium">{{REGIONAL_COUNT}} Regional {{TEAM_NICKNAME}} games (in-market)</p>
+                <p class="text-sm font-semibold">{{US_RSN_CHECKBOX_TITLE}}</p>
+                <p class="text-[10px] text-slate-600 dark:text-slate-300 font-medium">{{US_RSN_CHECKBOX_DESC}}</p>
               </div>
             </label>
 
@@ -245,12 +245,7 @@
         <!-- Official Advice Card -->
         <div id="adviceCard" class="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 text-xs sm:text-sm min-h-[96px]">
           <div class="space-y-4">
-            <div>
-              <h3 class="font-bold text-slate-900 dark:text-white">In-Market Full Season Setup</h3>
-              <p class="text-slate-600 dark:text-slate-300 mt-1">
-                In-market fans in <strong>{{TERRITORY_DESCRIPTION}}</strong> need <strong>{{TEAM_RSN}}</strong> ({{REGIONAL_COUNT}} regional games) plus ESPN/TNT for national exclusives. Out-of-market US fans can stream {{ESPN_PLUS_COUNT}} {{TEAM_NAME}} games on <strong>ESPN+</strong>.
-              </p>
-            </div>
+            {{DEFAULT_ADVICE_HTML}}
           </div>
         </div>
 
@@ -319,7 +314,7 @@
 
           <select id="channelFilter" aria-label="Filter games by broadcast channel" class="px-3 py-1.5 text-xs rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-teamSecondary">
             <option value="all">Channel: All</option>
-            <option value="{{TEAM_RSN}}">{{TEAM_RSN}}</option>
+            {{CHANNEL_FILTER_RSN_OPTION}}
             <option value="ESPN+">ESPN+</option>
             <option value="ESPN">ESPN / ABC</option>
             <option value="TNT">TNT / Max</option>
@@ -362,38 +357,7 @@
 
     <!-- SEO Article Section (Identical Card & Typography to Canadian Site) -->
     <article class="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 text-xs sm:text-sm space-y-4 shadow-sm">
-      <h2 class="text-base font-bold text-slate-900 dark:text-white uppercase font-teko text-2xl tracking-wider text-teamPrimary">
-        {{TEAM_NAME}} Hockey Broadcast Rights &amp; Regional Blackout Guide (2026–27 {{TEAM_NICKNAME}} Season)
-      </h2>
-      <p class="leading-relaxed">
-        Following the <strong>{{TEAM_NAME}}</strong> regular season across the United States requires understanding how NHL broadcast territory rights are split between regional sports networks and national streaming partners. For {{TEAM_NAME}} fans, games are divided across <strong>{{TEAM_RSN}}, ESPN+, ESPN/ABC, TNT, and NHL Network</strong>.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
-          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Regional {{TEAM_NAME}} Games ({{TEAM_RSN}})</h3>
-          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300">
-            <strong>{{TEAM_RSN}}</strong> holds the official in-market regional broadcast rights for the {{TEAM_NAME}} ({{REGIONAL_COUNT}} regular-season games) across <strong>{{TERRITORY_DESCRIPTION}}</strong>. If your US ZIP code falls inside the {{TEAM_NAME}} local broadcast territory, regional games are <strong>blacked out on ESPN+</strong> and must be watched via {{TEAM_RSN}}.
-          </p>
-          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300 mt-2">
-            If you live outside the {{TEAM_NAME}} local broadcast territory in the US, regional {{TEAM_NICKNAME}} games stream live on <strong>ESPN+</strong> (unless the {{TEAM_NAME}} are playing an opponent whose local broadcast territory includes your ZIP code).
-          </p>
-        </div>
-
-        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
-          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">National {{TEAM_NICKNAME}} Games (ESPN, ABC, TNT &amp; NHL Network)</h3>
-          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300">
-            When the {{TEAM_NAME}} are selected for an exclusive national US broadcast on <strong>ESPN, TNT, or NHL Network</strong> ({{NATIONAL_COUNT}} games), the broadcast is blacked out on ESPN+ nationwide unless simulcast on ABC/ESPN+.
-          </p>
-          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300 mt-2">
-            Viewers both in-market and out-of-market need access to the designated national television channel or streaming tier (such as Max for TNT simulcasts) to watch these national exclusives.
-          </p>
-        </div>
-      </div>
-
-      <div class="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/40 text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
-        <strong>Quick Summary for {{TEAM_NICKNAME}} Fans:</strong> Use the US ZIP Code Lookup above to check your local market status. In-market ZIP codes ({{TERRITORY_DESCRIPTION}}) watch regional games on <strong>{{TEAM_RSN}}</strong>; out-of-market US ZIP codes stream regional games on <strong>ESPN+</strong>.
-      </div>
+      {{SEO_ARTICLE_HTML}}
     </article>
 
     <!-- FAQ Section (Identical Card & Table Structure to Canadian Site) -->
@@ -411,21 +375,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">Regional (In-Market ZIP)</td>
-              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">{{TEAM_RSN}}</td>
-              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Blacked Out on ESPN+ (Watch on {{TEAM_RSN}})</td>
-            </tr>
-            <tr>
-              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">Regional (Out-of-Market ZIP)</td>
-              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">ESPN+</td>
-              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Stream on ESPN+ (Unless Opponent Is Local to Your ZIP)</td>
-            </tr>
-            <tr>
-              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">US National Exclusive</td>
-              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">ESPN / ABC / TNT / NHL Network</td>
-              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Requires National Channel (Unless ABC/ESPN+ Simulcast)</td>
-            </tr>
+            {{FAQ_TABLE_ROWS_HTML}}
           </tbody>
         </table>
       </div>

@@ -24,14 +24,14 @@
       "opp": "SEA",
       "fullMatchup": "Calgary Flames vs Seattle Kraken",
       "venue": "Scotiabank Saddledome",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020033,
@@ -60,14 +60,14 @@
       "opp": "SEA",
       "fullMatchup": "Calgary Flames at Seattle Kraken",
       "venue": "Climate Pledge Arena",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020064,
@@ -96,14 +96,14 @@
       "opp": "ANA",
       "fullMatchup": "Calgary Flames vs Anaheim Ducks",
       "venue": "Scotiabank Saddledome",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020103,
@@ -114,14 +114,14 @@
       "opp": "ANA",
       "fullMatchup": "Calgary Flames at Anaheim Ducks",
       "venue": "Honda Center",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020118,
@@ -150,14 +150,14 @@
       "opp": "CAR",
       "fullMatchup": "Calgary Flames vs Carolina Hurricanes",
       "venue": "Scotiabank Saddledome",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Hurricanes Hockey Network (HHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026020162,
@@ -168,14 +168,14 @@
       "opp": "MIN",
       "fullMatchup": "Calgary Flames vs Minnesota Wild",
       "venue": "Scotiabank Saddledome",
-      "rsn": "FanDuel Sports North",
+      "rsn": "Wild+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports North",
+      "secondaryNet": "Wild+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (FanDuel Sports North)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (Wild+)"
     },
     {
       "id": 2026020178,
@@ -186,14 +186,14 @@
       "opp": "DET",
       "fullMatchup": "Calgary Flames vs Detroit Red Wings",
       "venue": "Scotiabank Saddledome",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026020186,
@@ -240,14 +240,14 @@
       "opp": "SEA",
       "fullMatchup": "Calgary Flames vs Seattle Kraken",
       "venue": "Scotiabank Saddledome",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020226,
@@ -294,14 +294,14 @@
       "opp": "SEA",
       "fullMatchup": "Calgary Flames at Seattle Kraken",
       "venue": "Climate Pledge Arena",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020264,
@@ -312,14 +312,14 @@
       "opp": "ANA",
       "fullMatchup": "Calgary Flames vs Anaheim Ducks",
       "venue": "Scotiabank Saddledome",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020281,
@@ -366,14 +366,14 @@
       "opp": "LAK",
       "fullMatchup": "Calgary Flames at Los Angeles Kings",
       "venue": "Crypto.com Arena",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026020328,
@@ -384,14 +384,14 @@
       "opp": "ANA",
       "fullMatchup": "Calgary Flames at Anaheim Ducks",
       "venue": "Honda Center",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020343,
@@ -420,14 +420,14 @@
       "opp": "MIN",
       "fullMatchup": "Calgary Flames vs Minnesota Wild",
       "venue": "Scotiabank Saddledome",
-      "rsn": "FanDuel Sports North",
+      "rsn": "Wild+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports North",
+      "secondaryNet": "Wild+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (FanDuel Sports North)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (Wild+)"
     },
     {
       "id": 2026020360,
@@ -528,14 +528,14 @@
       "opp": "DET",
       "fullMatchup": "Calgary Flames at Detroit Red Wings",
       "venue": "Little Caesars Arena",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026020455,
@@ -582,14 +582,14 @@
       "opp": "NSH",
       "fullMatchup": "Calgary Flames vs Nashville Predators",
       "venue": "Scotiabank Saddledome",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020504,
@@ -654,14 +654,14 @@
       "opp": "TBL",
       "fullMatchup": "Calgary Flames at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020568,
@@ -690,14 +690,14 @@
       "opp": "DAL",
       "fullMatchup": "Calgary Flames at Dallas Stars",
       "venue": "American Airlines Center",
-      "rsn": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+",
+      "secondaryNet": "Prime Video / KDFW 4",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Victory+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Prime Video / KDFW 4)"
     },
     {
       "id": 2026020609,
@@ -780,14 +780,14 @@
       "opp": "STL",
       "fullMatchup": "Calgary Flames at St. Louis Blues",
       "venue": "Enterprise Center",
-      "rsn": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Midwest",
+      "secondaryNet": "Blue Note+ (BN+)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (FanDuel Sports Midwest)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (Blue Note+ (BN+))"
     },
     {
       "id": 2026020685,
@@ -834,14 +834,14 @@
       "opp": "TBL",
       "fullMatchup": "Calgary Flames vs Tampa Bay Lightning",
       "venue": "Scotiabank Saddledome",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020735,
@@ -852,14 +852,14 @@
       "opp": "CBJ",
       "fullMatchup": "Calgary Flames vs Columbus Blue Jackets",
       "venue": "Scotiabank Saddledome",
-      "rsn": "FanDuel Sports Ohio",
+      "rsn": "Blue Jackets Hockey Network (CBJHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Ohio",
+      "secondaryNet": "Blue Jackets Hockey Network (CBJHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (FanDuel Sports Ohio)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (Blue Jackets Hockey Network (CBJHN))"
     },
     {
       "id": 2026020750,
@@ -888,14 +888,14 @@
       "opp": "LAK",
       "fullMatchup": "Calgary Flames vs Los Angeles Kings",
       "venue": "Scotiabank Saddledome",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026020785,
@@ -924,14 +924,14 @@
       "opp": "CBJ",
       "fullMatchup": "Calgary Flames at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
-      "rsn": "FanDuel Sports Ohio",
+      "rsn": "Blue Jackets Hockey Network (CBJHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Ohio",
+      "secondaryNet": "Blue Jackets Hockey Network (CBJHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (FanDuel Sports Ohio)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (Blue Jackets Hockey Network (CBJHN))"
     },
     {
       "id": 2026020815,
@@ -1032,14 +1032,14 @@
       "opp": "UTA",
       "fullMatchup": "Calgary Flames vs Utah Mammoth",
       "venue": "Scotiabank Saddledome",
-      "rsn": "Utah 16 / SEG+",
+      "rsn": "Mammoth+ / Utah 16",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Utah 16 / SEG+",
+      "secondaryNet": "Mammoth+ / Utah 16",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Utah 16 / SEG+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Mammoth+ / Utah 16)"
     },
     {
       "id": 2026020911,
@@ -1050,14 +1050,14 @@
       "opp": "UTA",
       "fullMatchup": "Calgary Flames at Utah Mammoth",
       "venue": "Delta Center",
-      "rsn": "Utah 16 / SEG+",
+      "rsn": "Mammoth+ / Utah 16",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Utah 16 / SEG+",
+      "secondaryNet": "Mammoth+ / Utah 16",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Utah 16 / SEG+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Mammoth+ / Utah 16)"
     },
     {
       "id": 2026020925,
@@ -1086,14 +1086,14 @@
       "opp": "LAK",
       "fullMatchup": "Calgary Flames at Los Angeles Kings",
       "venue": "Crypto.com Arena",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026020948,
@@ -1158,14 +1158,14 @@
       "opp": "UTA",
       "fullMatchup": "Calgary Flames at Utah Mammoth",
       "venue": "Delta Center",
-      "rsn": "Utah 16 / SEG+",
+      "rsn": "Mammoth+ / Utah 16",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Utah 16 / SEG+",
+      "secondaryNet": "Mammoth+ / Utah 16",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Utah 16 / SEG+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Mammoth+ / Utah 16)"
     },
     {
       "id": 2026021030,
@@ -1266,14 +1266,14 @@
       "opp": "CAR",
       "fullMatchup": "Calgary Flames at Carolina Hurricanes",
       "venue": "Lenovo Center",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Hurricanes Hockey Network (HHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026021124,
@@ -1302,14 +1302,14 @@
       "opp": "NSH",
       "fullMatchup": "Calgary Flames vs Nashville Predators",
       "venue": "Scotiabank Saddledome",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026021157,
@@ -1320,14 +1320,14 @@
       "opp": "DAL",
       "fullMatchup": "Calgary Flames vs Dallas Stars",
       "venue": "Scotiabank Saddledome",
-      "rsn": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+",
+      "secondaryNet": "Prime Video / KDFW 4",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Victory+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Prime Video / KDFW 4)"
     },
     {
       "id": 2026021171,
@@ -1338,14 +1338,14 @@
       "opp": "MIN",
       "fullMatchup": "Calgary Flames at Minnesota Wild",
       "venue": "Grand Casino Arena",
-      "rsn": "FanDuel Sports North",
+      "rsn": "Wild+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports North",
+      "secondaryNet": "Wild+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (FanDuel Sports North)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (Wild+)"
     },
     {
       "id": 2026021190,
@@ -1356,14 +1356,14 @@
       "opp": "STL",
       "fullMatchup": "Calgary Flames vs St. Louis Blues",
       "venue": "Scotiabank Saddledome",
-      "rsn": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Midwest",
+      "secondaryNet": "Blue Note+ (BN+)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (FanDuel Sports Midwest)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (Blue Note+ (BN+))"
     },
     {
       "id": 2026021205,
@@ -1392,14 +1392,14 @@
       "opp": "LAK",
       "fullMatchup": "Calgary Flames vs Los Angeles Kings",
       "venue": "Scotiabank Saddledome",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026021239,
@@ -1428,14 +1428,14 @@
       "opp": "DAL",
       "fullMatchup": "Calgary Flames at Dallas Stars",
       "venue": "American Airlines Center",
-      "rsn": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+",
+      "secondaryNet": "Prime Video / KDFW 4",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Victory+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Prime Video / KDFW 4)"
     },
     {
       "id": 2026021269,
@@ -1446,14 +1446,14 @@
       "opp": "STL",
       "fullMatchup": "Calgary Flames at St. Louis Blues",
       "venue": "Enterprise Center",
-      "rsn": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Midwest",
+      "secondaryNet": "Blue Note+ (BN+)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (FanDuel Sports Midwest)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (Blue Note+ (BN+))"
     },
     {
       "id": 2026021279,
@@ -1464,14 +1464,14 @@
       "opp": "NSH",
       "fullMatchup": "Calgary Flames at Nashville Predators",
       "venue": "Bridgestone Arena",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026021301,

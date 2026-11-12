@@ -6,11 +6,6 @@
     "city": "Vegas",
     "slug": "vegas-golden-knights",
     "rsn": "Scripps Sports",
-    "colors": {
-      "primary": "#B4975A",
-      "secondary": "#333F42",
-      "dark": "#111618"
-    },
     "territoryDescription": "Nevada, Arizona & Idaho",
     "zipRanges": [
       [
@@ -25,7 +20,12 @@
         889,
         898
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#B4975A",
+      "secondary": "#333F42",
+      "dark": "#111618"
+    }
   },
   "schedule": [
     {
@@ -38,13 +38,13 @@
       "fullMatchup": "Vegas Golden Knights vs Chicago Blackhawks",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020021,
@@ -56,13 +56,13 @@
       "fullMatchup": "Vegas Golden Knights vs Anaheim Ducks",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020039,
@@ -74,13 +74,13 @@
       "fullMatchup": "Vegas Golden Knights at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020051,
@@ -92,13 +92,13 @@
       "fullMatchup": "Vegas Golden Knights at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020065,
@@ -110,13 +110,13 @@
       "fullMatchup": "Vegas Golden Knights vs Toronto Maple Leafs",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020083,
@@ -128,13 +128,13 @@
       "fullMatchup": "Vegas Golden Knights vs Los Angeles Kings",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020089,
@@ -146,13 +146,13 @@
       "fullMatchup": "Vegas Golden Knights at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020101,
@@ -164,13 +164,13 @@
       "fullMatchup": "Vegas Golden Knights at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020118,
@@ -182,13 +182,13 @@
       "fullMatchup": "Vegas Golden Knights vs Calgary Flames",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020134,
@@ -200,13 +200,13 @@
       "fullMatchup": "Vegas Golden Knights vs Pittsburgh Penguins",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020151,
@@ -218,13 +218,13 @@
       "fullMatchup": "Vegas Golden Knights vs Tampa Bay Lightning",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020160,
@@ -236,13 +236,13 @@
       "fullMatchup": "Vegas Golden Knights at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020174,
@@ -254,13 +254,13 @@
       "fullMatchup": "Vegas Golden Knights at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020196,
@@ -272,13 +272,13 @@
       "fullMatchup": "Vegas Golden Knights vs Ottawa Senators",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020214,
@@ -290,13 +290,13 @@
       "fullMatchup": "Vegas Golden Knights vs New Jersey Devils",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020232,
@@ -308,13 +308,13 @@
       "fullMatchup": "Vegas Golden Knights at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "SCRIPPS",
+      "netUSNat": "NHLN",
       "primaryNet": "SCRIPPS",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on SCRIPPS / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on SCRIPPS / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020242,
@@ -326,13 +326,13 @@
       "fullMatchup": "Vegas Golden Knights at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020252,
@@ -344,13 +344,13 @@
       "fullMatchup": "Vegas Golden Knights at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020278,
@@ -362,13 +362,13 @@
       "fullMatchup": "Vegas Golden Knights at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020296,
@@ -380,13 +380,13 @@
       "fullMatchup": "Vegas Golden Knights vs Utah Mammoth",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020311,
@@ -398,13 +398,13 @@
       "fullMatchup": "Vegas Golden Knights vs Nashville Predators",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020329,
@@ -416,13 +416,13 @@
       "fullMatchup": "Vegas Golden Knights vs Vancouver Canucks",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020342,
@@ -434,13 +434,13 @@
       "fullMatchup": "Vegas Golden Knights vs Dallas Stars",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020358,
@@ -452,13 +452,13 @@
       "fullMatchup": "Vegas Golden Knights vs Dallas Stars",
       "venue": "T-Mobile Arena",
       "rsn": "Scripps Sports",
+      "netUSNat": null,
       "primaryNet": "Scripps Sports",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports)"
     },
     {
       "id": 2026020369,
@@ -470,13 +470,13 @@
       "fullMatchup": "Vegas Golden Knights at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020385,
@@ -488,13 +488,13 @@
       "fullMatchup": "Vegas Golden Knights at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020410,
@@ -506,13 +506,13 @@
       "fullMatchup": "Vegas Golden Knights at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020415,
@@ -524,13 +524,13 @@
       "fullMatchup": "Vegas Golden Knights vs Montreal Canadiens",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020444,
@@ -542,13 +542,13 @@
       "fullMatchup": "Vegas Golden Knights at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020458,
@@ -560,13 +560,13 @@
       "fullMatchup": "Vegas Golden Knights vs Utah Mammoth",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020472,
@@ -578,13 +578,13 @@
       "fullMatchup": "Vegas Golden Knights vs Winnipeg Jets",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020486,
@@ -596,13 +596,13 @@
       "fullMatchup": "Vegas Golden Knights at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020501,
@@ -614,13 +614,13 @@
       "fullMatchup": "Vegas Golden Knights at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020519,
@@ -632,13 +632,13 @@
       "fullMatchup": "Vegas Golden Knights at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020550,
@@ -650,13 +650,13 @@
       "fullMatchup": "Vegas Golden Knights vs San Jose Sharks",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020566,
@@ -668,13 +668,13 @@
       "fullMatchup": "Vegas Golden Knights vs New York Islanders",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020589,
@@ -686,13 +686,13 @@
       "fullMatchup": "Vegas Golden Knights vs Carolina Hurricanes",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020600,
@@ -704,13 +704,13 @@
       "fullMatchup": "Vegas Golden Knights at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020611,
@@ -722,13 +722,13 @@
       "fullMatchup": "Vegas Golden Knights at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020619,
@@ -740,13 +740,13 @@
       "fullMatchup": "Vegas Golden Knights at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020631,
@@ -758,13 +758,13 @@
       "fullMatchup": "Vegas Golden Knights at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020646,
@@ -776,13 +776,13 @@
       "fullMatchup": "Vegas Golden Knights vs St. Louis Blues",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020667,
@@ -794,13 +794,13 @@
       "fullMatchup": "Vegas Golden Knights vs Colorado Avalanche",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020678,
@@ -812,13 +812,13 @@
       "fullMatchup": "Vegas Golden Knights at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020703,
@@ -830,13 +830,13 @@
       "fullMatchup": "Vegas Golden Knights vs Minnesota Wild",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020720,
@@ -848,13 +848,13 @@
       "fullMatchup": "Vegas Golden Knights vs Seattle Kraken",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020731,
@@ -866,13 +866,13 @@
       "fullMatchup": "Vegas Golden Knights at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020747,
@@ -884,13 +884,13 @@
       "fullMatchup": "Vegas Golden Knights at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020760,
@@ -902,13 +902,13 @@
       "fullMatchup": "Vegas Golden Knights at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020774,
@@ -920,13 +920,13 @@
       "fullMatchup": "Vegas Golden Knights at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020797,
@@ -938,13 +938,13 @@
       "fullMatchup": "Vegas Golden Knights vs Edmonton Oilers",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020811,
@@ -956,13 +956,13 @@
       "fullMatchup": "Vegas Golden Knights vs Boston Bruins",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020829,
@@ -974,13 +974,13 @@
       "fullMatchup": "Vegas Golden Knights at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020842,
@@ -992,13 +992,13 @@
       "fullMatchup": "Vegas Golden Knights at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020858,
@@ -1010,13 +1010,13 @@
       "fullMatchup": "Vegas Golden Knights vs Buffalo Sabres",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020876,
@@ -1028,13 +1028,13 @@
       "fullMatchup": "Vegas Golden Knights vs Washington Capitals",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020882,
@@ -1046,13 +1046,13 @@
       "fullMatchup": "Vegas Golden Knights at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020892,
@@ -1064,13 +1064,13 @@
       "fullMatchup": "Vegas Golden Knights at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020925,
@@ -1082,13 +1082,13 @@
       "fullMatchup": "Vegas Golden Knights vs Calgary Flames",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020937,
@@ -1100,13 +1100,13 @@
       "fullMatchup": "Vegas Golden Knights vs Detroit Red Wings",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020960,
@@ -1118,13 +1118,13 @@
       "fullMatchup": "Vegas Golden Knights vs Columbus Blue Jackets",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020974,
@@ -1136,13 +1136,13 @@
       "fullMatchup": "Vegas Golden Knights at Dallas Stars",
       "venue": "AT&T Stadium",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026020989,
@@ -1154,13 +1154,13 @@
       "fullMatchup": "Vegas Golden Knights at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021001,
@@ -1172,13 +1172,13 @@
       "fullMatchup": "Vegas Golden Knights vs Florida Panthers",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021018,
@@ -1190,13 +1190,13 @@
       "fullMatchup": "Vegas Golden Knights vs Anaheim Ducks",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021046,
@@ -1208,13 +1208,13 @@
       "fullMatchup": "Vegas Golden Knights at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021061,
@@ -1226,13 +1226,13 @@
       "fullMatchup": "Vegas Golden Knights at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021063,
@@ -1244,13 +1244,13 @@
       "fullMatchup": "Vegas Golden Knights at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021086,
@@ -1262,13 +1262,13 @@
       "fullMatchup": "Vegas Golden Knights at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021103,
@@ -1280,13 +1280,13 @@
       "fullMatchup": "Vegas Golden Knights vs San Jose Sharks",
       "venue": "T-Mobile Arena",
       "rsn": "Scripps Sports",
+      "netUSNat": null,
       "primaryNet": "Scripps Sports",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports)"
     },
     {
       "id": 2026021116,
@@ -1298,13 +1298,13 @@
       "fullMatchup": "Vegas Golden Knights vs Philadelphia Flyers",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021132,
@@ -1316,13 +1316,13 @@
       "fullMatchup": "Vegas Golden Knights vs New York Rangers",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021146,
@@ -1334,13 +1334,13 @@
       "fullMatchup": "Vegas Golden Knights vs Winnipeg Jets",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021159,
@@ -1352,13 +1352,13 @@
       "fullMatchup": "Vegas Golden Knights vs Seattle Kraken",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021184,
@@ -1370,13 +1370,13 @@
       "fullMatchup": "Vegas Golden Knights at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021206,
@@ -1388,13 +1388,13 @@
       "fullMatchup": "Vegas Golden Knights at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021223,
@@ -1406,13 +1406,13 @@
       "fullMatchup": "Vegas Golden Knights at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021239,
@@ -1424,13 +1424,13 @@
       "fullMatchup": "Vegas Golden Knights at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021262,
@@ -1442,13 +1442,13 @@
       "fullMatchup": "Vegas Golden Knights vs Vancouver Canucks",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021276,
@@ -1460,13 +1460,13 @@
       "fullMatchup": "Vegas Golden Knights vs Edmonton Oilers",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021286,
@@ -1478,13 +1478,13 @@
       "fullMatchup": "Vegas Golden Knights at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021310,
@@ -1496,13 +1496,13 @@
       "fullMatchup": "Vegas Golden Knights vs St. Louis Blues",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021324,
@@ -1514,13 +1514,13 @@
       "fullMatchup": "Vegas Golden Knights at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021344,
@@ -1532,13 +1532,13 @@
       "fullMatchup": "Vegas Golden Knights vs Los Angeles Kings",
       "venue": "T-Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     }
   ]
 }

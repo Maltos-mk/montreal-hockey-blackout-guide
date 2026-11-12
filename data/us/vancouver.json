@@ -96,14 +96,14 @@
       "opp": "CAR",
       "fullMatchup": "Vancouver Canucks at Carolina Hurricanes",
       "venue": "Lenovo Center",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Hurricanes Hockey Network (HHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026020071,
@@ -186,14 +186,14 @@
       "opp": "TBL",
       "fullMatchup": "Vancouver Canucks at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020150,
@@ -204,14 +204,14 @@
       "opp": "CAR",
       "fullMatchup": "Vancouver Canucks vs Carolina Hurricanes",
       "venue": "Rogers Arena",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Hurricanes Hockey Network (HHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Hurricanes Hockey Network (HHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Carolina Hurricanes market (Hurricanes Hockey Network (HHN))"
     },
     {
       "id": 2026020165,
@@ -222,14 +222,14 @@
       "opp": "DET",
       "fullMatchup": "Vancouver Canucks vs Detroit Red Wings",
       "venue": "Rogers Arena",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026020184,
@@ -240,14 +240,14 @@
       "opp": "MIN",
       "fullMatchup": "Vancouver Canucks vs Minnesota Wild",
       "venue": "Rogers Arena",
-      "rsn": "FanDuel Sports North",
+      "rsn": "Wild+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports North",
+      "secondaryNet": "Wild+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (FanDuel Sports North)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (Wild+)"
     },
     {
       "id": 2026020197,
@@ -258,14 +258,14 @@
       "opp": "ANA",
       "fullMatchup": "Vancouver Canucks at Anaheim Ducks",
       "venue": "Honda Center",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020213,
@@ -312,14 +312,14 @@
       "opp": "ANA",
       "fullMatchup": "Vancouver Canucks vs Anaheim Ducks",
       "venue": "Rogers Arena",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020259,
@@ -420,14 +420,14 @@
       "opp": "UTA",
       "fullMatchup": "Vancouver Canucks at Utah Mammoth",
       "venue": "Delta Center",
-      "rsn": "Utah 16 / SEG+",
+      "rsn": "Mammoth+ / Utah 16",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Utah 16 / SEG+",
+      "secondaryNet": "Mammoth+ / Utah 16",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Utah 16 / SEG+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Mammoth+ / Utah 16)"
     },
     {
       "id": 2026020357,
@@ -438,14 +438,14 @@
       "opp": "SEA",
       "fullMatchup": "Vancouver Canucks at Seattle Kraken",
       "venue": "Climate Pledge Arena",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020371,
@@ -456,14 +456,14 @@
       "opp": "MIN",
       "fullMatchup": "Vancouver Canucks vs Minnesota Wild",
       "venue": "Rogers Arena",
-      "rsn": "FanDuel Sports North",
+      "rsn": "Wild+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports North",
+      "secondaryNet": "Wild+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (FanDuel Sports North)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (Wild+)"
     },
     {
       "id": 2026020377,
@@ -492,14 +492,14 @@
       "opp": "DET",
       "fullMatchup": "Vancouver Canucks at Detroit Red Wings",
       "venue": "Little Caesars Arena",
-      "rsn": "FanDuel Sports Detroit",
+      "rsn": "Detroit SportsNet (DSN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Detroit",
+      "secondaryNet": "Detroit SportsNet (DSN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (FanDuel Sports Detroit)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Detroit Red Wings market (Detroit SportsNet (DSN))"
     },
     {
       "id": 2026020405,
@@ -582,14 +582,14 @@
       "opp": "DAL",
       "fullMatchup": "Vancouver Canucks vs Dallas Stars",
       "venue": "Rogers Arena",
-      "rsn": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+",
+      "secondaryNet": "Prime Video / KDFW 4",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Victory+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Prime Video / KDFW 4)"
     },
     {
       "id": 2026020485,
@@ -618,14 +618,14 @@
       "opp": "NSH",
       "fullMatchup": "Vancouver Canucks vs Nashville Predators",
       "venue": "Rogers Arena",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020525,
@@ -636,14 +636,14 @@
       "opp": "LAK",
       "fullMatchup": "Vancouver Canucks at Los Angeles Kings",
       "venue": "Crypto.com Arena",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026020535,
@@ -672,14 +672,14 @@
       "opp": "ANA",
       "fullMatchup": "Vancouver Canucks at Anaheim Ducks",
       "venue": "Honda Center",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026020575,
@@ -708,14 +708,14 @@
       "opp": "UTA",
       "fullMatchup": "Vancouver Canucks vs Utah Mammoth",
       "venue": "Rogers Arena",
-      "rsn": "Utah 16 / SEG+",
+      "rsn": "Mammoth+ / Utah 16",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Utah 16 / SEG+",
+      "secondaryNet": "Mammoth+ / Utah 16",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Utah 16 / SEG+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Mammoth+ / Utah 16)"
     },
     {
       "id": 2026020609,
@@ -744,14 +744,14 @@
       "opp": "LAK",
       "fullMatchup": "Vancouver Canucks vs Los Angeles Kings",
       "venue": "Rogers Arena",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026020640,
@@ -762,14 +762,14 @@
       "opp": "SEA",
       "fullMatchup": "Vancouver Canucks vs Seattle Kraken",
       "venue": "Rogers Arena",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020666,
@@ -780,14 +780,14 @@
       "opp": "UTA",
       "fullMatchup": "Vancouver Canucks at Utah Mammoth",
       "venue": "Delta Center",
-      "rsn": "Utah 16 / SEG+",
+      "rsn": "Mammoth+ / Utah 16",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Utah 16 / SEG+",
+      "secondaryNet": "Mammoth+ / Utah 16",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Utah 16 / SEG+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Utah Mammoth market (Mammoth+ / Utah 16)"
     },
     {
       "id": 2026020673,
@@ -798,14 +798,14 @@
       "opp": "SEA",
       "fullMatchup": "Vancouver Canucks at Seattle Kraken",
       "venue": "Climate Pledge Arena",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020687,
@@ -834,14 +834,14 @@
       "opp": "TBL",
       "fullMatchup": "Vancouver Canucks vs Tampa Bay Lightning",
       "venue": "Rogers Arena",
-      "rsn": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Sun",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (FanDuel Sports Sun)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Tampa Bay Lightning market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020719,
@@ -870,14 +870,14 @@
       "opp": "SEA",
       "fullMatchup": "Vancouver Canucks vs Seattle Kraken",
       "venue": "Rogers Arena",
-      "rsn": "Kraken Hockey Network",
+      "rsn": "Prime Video / Kraken Hockey Network",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Kraken Hockey Network",
+      "secondaryNet": "Prime Video / Kraken Hockey Network",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Kraken Hockey Network)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Seattle Kraken market (Prime Video / Kraken Hockey Network)"
     },
     {
       "id": 2026020770,
@@ -888,14 +888,14 @@
       "opp": "CBJ",
       "fullMatchup": "Vancouver Canucks vs Columbus Blue Jackets",
       "venue": "Rogers Arena",
-      "rsn": "FanDuel Sports Ohio",
+      "rsn": "Blue Jackets Hockey Network (CBJHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Ohio",
+      "secondaryNet": "Blue Jackets Hockey Network (CBJHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (FanDuel Sports Ohio)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (Blue Jackets Hockey Network (CBJHN))"
     },
     {
       "id": 2026020779,
@@ -924,14 +924,14 @@
       "opp": "NSH",
       "fullMatchup": "Vancouver Canucks at Nashville Predators",
       "venue": "Bridgestone Arena",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020809,
@@ -978,14 +978,14 @@
       "opp": "MIN",
       "fullMatchup": "Vancouver Canucks at Minnesota Wild",
       "venue": "Grand Casino Arena",
-      "rsn": "FanDuel Sports North",
+      "rsn": "Wild+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports North",
+      "secondaryNet": "Wild+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (FanDuel Sports North)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Minnesota Wild market (Wild+)"
     },
     {
       "id": 2026020854,
@@ -996,14 +996,14 @@
       "opp": "DAL",
       "fullMatchup": "Vancouver Canucks at Dallas Stars",
       "venue": "American Airlines Center",
-      "rsn": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+",
+      "secondaryNet": "Prime Video / KDFW 4",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Victory+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Prime Video / KDFW 4)"
     },
     {
       "id": 2026020865,
@@ -1014,14 +1014,14 @@
       "opp": "STL",
       "fullMatchup": "Vancouver Canucks at St. Louis Blues",
       "venue": "Enterprise Center",
-      "rsn": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Midwest",
+      "secondaryNet": "Blue Note+ (BN+)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (FanDuel Sports Midwest)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (Blue Note+ (BN+))"
     },
     {
       "id": 2026020883,
@@ -1158,14 +1158,14 @@
       "opp": "DAL",
       "fullMatchup": "Vancouver Canucks at Dallas Stars",
       "venue": "American Airlines Center",
-      "rsn": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+",
+      "secondaryNet": "Prime Video / KDFW 4",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Victory+)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Dallas Stars market (Prime Video / KDFW 4)"
     },
     {
       "id": 2026021008,
@@ -1176,14 +1176,14 @@
       "opp": "STL",
       "fullMatchup": "Vancouver Canucks at St. Louis Blues",
       "venue": "Enterprise Center",
-      "rsn": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Midwest",
+      "secondaryNet": "Blue Note+ (BN+)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (FanDuel Sports Midwest)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (Blue Note+ (BN+))"
     },
     {
       "id": 2026021030,
@@ -1266,14 +1266,14 @@
       "opp": "CBJ",
       "fullMatchup": "Vancouver Canucks at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
-      "rsn": "FanDuel Sports Ohio",
+      "rsn": "Blue Jackets Hockey Network (CBJHN)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Ohio",
+      "secondaryNet": "Blue Jackets Hockey Network (CBJHN)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (FanDuel Sports Ohio)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Columbus Blue Jackets market (Blue Jackets Hockey Network (CBJHN))"
     },
     {
       "id": 2026021125,
@@ -1320,14 +1320,14 @@
       "opp": "NSH",
       "fullMatchup": "Vancouver Canucks vs Nashville Predators",
       "venue": "Rogers Arena",
-      "rsn": "FanDuel Sports South",
+      "rsn": "Scripps Sports (The Spot)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports South",
+      "secondaryNet": "Scripps Sports (The Spot)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (FanDuel Sports South)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Nashville Predators market (Scripps Sports (The Spot))"
     },
     {
       "id": 2026021183,
@@ -1338,14 +1338,14 @@
       "opp": "STL",
       "fullMatchup": "Vancouver Canucks vs St. Louis Blues",
       "venue": "Rogers Arena",
-      "rsn": "FanDuel Sports Midwest",
+      "rsn": "Blue Note+ (BN+)",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports Midwest",
+      "secondaryNet": "Blue Note+ (BN+)",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (FanDuel Sports Midwest)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in St. Louis Blues market (Blue Note+ (BN+))"
     },
     {
       "id": 2026021192,
@@ -1374,14 +1374,14 @@
       "opp": "LAK",
       "fullMatchup": "Vancouver Canucks vs Los Angeles Kings",
       "venue": "Rogers Arena",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026021223,
@@ -1410,14 +1410,14 @@
       "opp": "ANA",
       "fullMatchup": "Vancouver Canucks vs Anaheim Ducks",
       "venue": "Rogers Arena",
-      "rsn": "Victory+ / KCOP-13",
+      "rsn": "Prime Video / FOXLA+",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "Victory+ / KCOP-13",
+      "secondaryNet": "Prime Video / FOXLA+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Victory+ / KCOP-13)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Anaheim Ducks market (Prime Video / FOXLA+)"
     },
     {
       "id": 2026021246,
@@ -1428,14 +1428,14 @@
       "opp": "LAK",
       "fullMatchup": "Vancouver Canucks at Los Angeles Kings",
       "venue": "Crypto.com Arena",
-      "rsn": "FanDuel Sports West",
+      "rsn": "ABTV / DAZN",
       "netUSNat": null,
       "primaryNet": "ESPN+",
-      "secondaryNet": "FanDuel Sports West",
+      "secondaryNet": "ABTV / DAZN",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "ESPN+ / Opponent RSN",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (FanDuel Sports West)"
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout in Los Angeles Kings market (ABTV / DAZN)"
     },
     {
       "id": 2026021262,

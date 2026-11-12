@@ -6,11 +6,6 @@
     "city": "Washington",
     "slug": "washington-capitals",
     "rsn": "Monumental Sports",
-    "colors": {
-      "primary": "#C8102E",
-      "secondary": "#041E42",
-      "dark": "#021126"
-    },
     "territoryDescription": "Washington D.C., Maryland, Virginia & Eastern West Virginia",
     "zipRanges": [
       [
@@ -25,7 +20,12 @@
         267,
         268
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#041E42",
+      "dark": "#021126"
+    }
   },
   "schedule": [
     {
@@ -38,13 +38,13 @@
       "fullMatchup": "Washington Capitals at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020024,
@@ -56,13 +56,13 @@
       "fullMatchup": "Washington Capitals at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020053,
@@ -74,13 +74,13 @@
       "fullMatchup": "Washington Capitals vs Pittsburgh Penguins",
       "venue": "Capital One Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020067,
@@ -92,13 +92,13 @@
       "fullMatchup": "Washington Capitals vs New York Rangers",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": "NHLN",
       "primaryNet": "MNMT",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MNMT / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MNMT / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020084,
@@ -110,13 +110,13 @@
       "fullMatchup": "Washington Capitals vs Seattle Kraken",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020093,
@@ -128,13 +128,13 @@
       "fullMatchup": "Washington Capitals at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020106,
@@ -146,13 +146,13 @@
       "fullMatchup": "Washington Capitals vs Montreal Canadiens",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020121,
@@ -164,13 +164,13 @@
       "fullMatchup": "Washington Capitals vs New Jersey Devils",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": "NHLN",
       "primaryNet": "MNMT",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MNMT / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MNMT / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020144,
@@ -182,13 +182,13 @@
       "fullMatchup": "Washington Capitals vs Los Angeles Kings",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020173,
@@ -200,13 +200,13 @@
       "fullMatchup": "Washington Capitals vs Buffalo Sabres",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020199,
@@ -218,13 +218,13 @@
       "fullMatchup": "Washington Capitals vs Philadelphia Flyers",
       "venue": "Capital One Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020208,
@@ -236,13 +236,13 @@
       "fullMatchup": "Washington Capitals at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020228,
@@ -254,13 +254,13 @@
       "fullMatchup": "Washington Capitals vs Minnesota Wild",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020243,
@@ -272,13 +272,13 @@
       "fullMatchup": "Washington Capitals vs Dallas Stars",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020265,
@@ -290,13 +290,13 @@
       "fullMatchup": "Washington Capitals vs Florida Panthers",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020288,
@@ -308,13 +308,13 @@
       "fullMatchup": "Washington Capitals at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020303,
@@ -326,13 +326,13 @@
       "fullMatchup": "Washington Capitals at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020318,
@@ -344,13 +344,13 @@
       "fullMatchup": "Washington Capitals vs New Jersey Devils",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020334,
@@ -362,13 +362,13 @@
       "fullMatchup": "Washington Capitals at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "Monumental Sports",
+      "netUSNat": null,
       "primaryNet": "Monumental Sports",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Monumental Sports)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Monumental Sports)"
     },
     {
       "id": 2026020351,
@@ -380,13 +380,13 @@
       "fullMatchup": "Washington Capitals vs Buffalo Sabres",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020363,
@@ -398,13 +398,13 @@
       "fullMatchup": "Washington Capitals at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020392,
@@ -416,13 +416,13 @@
       "fullMatchup": "Washington Capitals vs Philadelphia Flyers",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020406,
@@ -434,13 +434,13 @@
       "fullMatchup": "Washington Capitals vs Florida Panthers",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020422,
@@ -452,13 +452,13 @@
       "fullMatchup": "Washington Capitals at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "MNMT2",
+      "netUSNat": null,
       "primaryNet": "MNMT2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT2)"
     },
     {
       "id": 2026020439,
@@ -470,13 +470,13 @@
       "fullMatchup": "Washington Capitals vs Vancouver Canucks",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020456,
@@ -488,13 +488,13 @@
       "fullMatchup": "Washington Capitals at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "MNMT2",
+      "netUSNat": null,
       "primaryNet": "MNMT2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT2)"
     },
     {
       "id": 2026020468,
@@ -506,13 +506,13 @@
       "fullMatchup": "Washington Capitals at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020485,
@@ -524,13 +524,13 @@
       "fullMatchup": "Washington Capitals at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020509,
@@ -542,13 +542,13 @@
       "fullMatchup": "Washington Capitals at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020524,
@@ -560,13 +560,13 @@
       "fullMatchup": "Washington Capitals at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "MNMT2",
+      "netUSNat": null,
       "primaryNet": "MNMT2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT2)"
     },
     {
       "id": 2026020546,
@@ -578,13 +578,13 @@
       "fullMatchup": "Washington Capitals at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020555,
@@ -596,13 +596,13 @@
       "fullMatchup": "Washington Capitals vs Detroit Red Wings",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020571,
@@ -614,13 +614,13 @@
       "fullMatchup": "Washington Capitals vs St. Louis Blues",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020585,
@@ -632,13 +632,13 @@
       "fullMatchup": "Washington Capitals at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020605,
@@ -650,13 +650,13 @@
       "fullMatchup": "Washington Capitals vs Columbus Blue Jackets",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020622,
@@ -668,13 +668,13 @@
       "fullMatchup": "Washington Capitals vs Edmonton Oilers",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020637,
@@ -686,13 +686,13 @@
       "fullMatchup": "Washington Capitals at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020645,
@@ -704,13 +704,13 @@
       "fullMatchup": "Washington Capitals at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020658,
@@ -722,13 +722,13 @@
       "fullMatchup": "Washington Capitals vs Ottawa Senators",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020676,
@@ -740,13 +740,13 @@
       "fullMatchup": "Washington Capitals vs Toronto Maple Leafs",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020692,
@@ -758,13 +758,13 @@
       "fullMatchup": "Washington Capitals at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020708,
@@ -776,13 +776,13 @@
       "fullMatchup": "Washington Capitals at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "MNMT2",
+      "netUSNat": null,
       "primaryNet": "MNMT2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT2)"
     },
     {
       "id": 2026020724,
@@ -794,13 +794,13 @@
       "fullMatchup": "Washington Capitals at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020731,
@@ -812,13 +812,13 @@
       "fullMatchup": "Washington Capitals vs Vegas Golden Knights",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020748,
@@ -830,13 +830,13 @@
       "fullMatchup": "Washington Capitals vs Carolina Hurricanes",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020765,
@@ -848,13 +848,13 @@
       "fullMatchup": "Washington Capitals vs Colorado Avalanche",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020780,
@@ -866,13 +866,13 @@
       "fullMatchup": "Washington Capitals at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020789,
@@ -884,13 +884,13 @@
       "fullMatchup": "Washington Capitals vs Montreal Canadiens",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020808,
@@ -902,13 +902,13 @@
       "fullMatchup": "Washington Capitals vs New York Islanders",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020828,
@@ -920,13 +920,13 @@
       "fullMatchup": "Washington Capitals at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020863,
@@ -938,13 +938,13 @@
       "fullMatchup": "Washington Capitals at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020876,
@@ -956,13 +956,13 @@
       "fullMatchup": "Washington Capitals at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "MNMT2",
+      "netUSNat": null,
       "primaryNet": "MNMT2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT2)"
     },
     {
       "id": 2026020884,
@@ -974,13 +974,13 @@
       "fullMatchup": "Washington Capitals vs Winnipeg Jets",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020888,
@@ -992,13 +992,13 @@
       "fullMatchup": "Washington Capitals at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020912,
@@ -1010,13 +1010,13 @@
       "fullMatchup": "Washington Capitals at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020928,
@@ -1028,13 +1028,13 @@
       "fullMatchup": "Washington Capitals vs Utah Mammoth",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020941,
@@ -1046,13 +1046,13 @@
       "fullMatchup": "Washington Capitals vs Anaheim Ducks",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020961,
@@ -1064,13 +1064,13 @@
       "fullMatchup": "Washington Capitals vs San Jose Sharks",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020981,
@@ -1082,13 +1082,13 @@
       "fullMatchup": "Washington Capitals vs Nashville Predators",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026020994,
@@ -1100,13 +1100,13 @@
       "fullMatchup": "Washington Capitals vs New York Rangers",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021007,
@@ -1118,13 +1118,13 @@
       "fullMatchup": "Washington Capitals at Boston Bruins",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021014,
@@ -1136,13 +1136,13 @@
       "fullMatchup": "Washington Capitals at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021037,
@@ -1154,13 +1154,13 @@
       "fullMatchup": "Washington Capitals at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021050,
@@ -1172,13 +1172,13 @@
       "fullMatchup": "Washington Capitals vs Carolina Hurricanes",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021066,
@@ -1190,13 +1190,13 @@
       "fullMatchup": "Washington Capitals at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021088,
@@ -1208,13 +1208,13 @@
       "fullMatchup": "Washington Capitals at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021096,
@@ -1226,13 +1226,13 @@
       "fullMatchup": "Washington Capitals vs Calgary Flames",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021105,
@@ -1244,13 +1244,13 @@
       "fullMatchup": "Washington Capitals at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021120,
@@ -1262,13 +1262,13 @@
       "fullMatchup": "Washington Capitals at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021138,
@@ -1280,13 +1280,13 @@
       "fullMatchup": "Washington Capitals vs Tampa Bay Lightning",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021154,
@@ -1298,13 +1298,13 @@
       "fullMatchup": "Washington Capitals vs New York Islanders",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021160,
@@ -1316,13 +1316,13 @@
       "fullMatchup": "Washington Capitals at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "Monumental Sports",
+      "netUSNat": null,
       "primaryNet": "Monumental Sports",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Monumental Sports)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Monumental Sports)"
     },
     {
       "id": 2026021189,
@@ -1334,13 +1334,13 @@
       "fullMatchup": "Washington Capitals at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021199,
@@ -1352,13 +1352,13 @@
       "fullMatchup": "Washington Capitals vs Detroit Red Wings",
       "venue": "Capital One Arena",
       "rsn": "Monumental Sports",
+      "netUSNat": null,
       "primaryNet": "Monumental Sports",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Monumental Sports)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Monumental Sports)"
     },
     {
       "id": 2026021209,
@@ -1370,13 +1370,13 @@
       "fullMatchup": "Washington Capitals at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "MNMT2",
+      "netUSNat": null,
       "primaryNet": "MNMT2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT2)"
     },
     {
       "id": 2026021224,
@@ -1388,13 +1388,13 @@
       "fullMatchup": "Washington Capitals vs Boston Bruins",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021241,
@@ -1406,13 +1406,13 @@
       "fullMatchup": "Washington Capitals at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021254,
@@ -1424,13 +1424,13 @@
       "fullMatchup": "Washington Capitals vs Chicago Blackhawks",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021266,
@@ -1442,13 +1442,13 @@
       "fullMatchup": "Washington Capitals at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021280,
@@ -1460,13 +1460,13 @@
       "fullMatchup": "Washington Capitals vs Columbus Blue Jackets",
       "venue": "Capital One Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021293,
@@ -1478,13 +1478,13 @@
       "fullMatchup": "Washington Capitals vs Pittsburgh Penguins",
       "venue": "Capital One Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021304,
@@ -1496,13 +1496,13 @@
       "fullMatchup": "Washington Capitals at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021316,
@@ -1514,13 +1514,13 @@
       "fullMatchup": "Washington Capitals at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "MNMT",
+      "netUSNat": null,
       "primaryNet": "MNMT",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MNMT)"
     },
     {
       "id": 2026021329,
@@ -1532,13 +1532,13 @@
       "fullMatchup": "Washington Capitals at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     }
   ]
 }

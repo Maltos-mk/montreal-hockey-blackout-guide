@@ -5,19 +5,19 @@
     "nickname": "Stars",
     "city": "Dallas",
     "slug": "dallas-stars",
-    "rsn": "Victory+",
-    "colors": {
-      "primary": "#006847",
-      "secondary": "#004B33",
-      "dark": "#111111"
-    },
+    "rsn": "Prime Video / KDFW 4",
     "territoryDescription": "Texas, Oklahoma, Louisiana & Arkansas",
     "zipRanges": [
       [
         700,
         799
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#006847",
+      "secondary": "#004B33",
+      "dark": "#111111"
+    }
   },
   "schedule": [
     {
@@ -30,13 +30,13 @@
       "fullMatchup": "Dallas Stars vs St. Louis Blues",
       "venue": "American Airlines Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020030,
@@ -48,13 +48,13 @@
       "fullMatchup": "Dallas Stars at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020043,
@@ -66,13 +66,13 @@
       "fullMatchup": "Dallas Stars vs San Jose Sharks",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020057,
@@ -84,13 +84,13 @@
       "fullMatchup": "Dallas Stars at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020077,
@@ -102,13 +102,13 @@
       "fullMatchup": "Dallas Stars at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020100,
@@ -120,13 +120,13 @@
       "fullMatchup": "Dallas Stars vs Colorado Avalanche",
       "venue": "American Airlines Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020107,
@@ -138,13 +138,13 @@
       "fullMatchup": "Dallas Stars at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020130,
@@ -156,13 +156,13 @@
       "fullMatchup": "Dallas Stars at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020147,
@@ -174,13 +174,13 @@
       "fullMatchup": "Dallas Stars vs Boston Bruins",
       "venue": "American Airlines Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020161,
@@ -192,13 +192,13 @@
       "fullMatchup": "Dallas Stars vs Winnipeg Jets",
       "venue": "American Airlines Center",
       "rsn": "KDFW 4",
+      "netUSNat": null,
       "primaryNet": "KDFW 4",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)"
     },
     {
       "id": 2026020181,
@@ -210,13 +210,13 @@
       "fullMatchup": "Dallas Stars vs New York Islanders",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020193,
@@ -228,13 +228,13 @@
       "fullMatchup": "Dallas Stars vs New Jersey Devils",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020209,
@@ -246,13 +246,13 @@
       "fullMatchup": "Dallas Stars vs Montreal Canadiens",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020225,
@@ -264,13 +264,13 @@
       "fullMatchup": "Dallas Stars vs Columbus Blue Jackets",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020243,
@@ -282,13 +282,13 @@
       "fullMatchup": "Dallas Stars at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020258,
@@ -300,13 +300,13 @@
       "fullMatchup": "Dallas Stars at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020272,
@@ -318,13 +318,13 @@
       "fullMatchup": "Dallas Stars vs San Jose Sharks",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020306,
@@ -336,13 +336,13 @@
       "fullMatchup": "Dallas Stars vs Winnipeg Jets",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020322,
@@ -354,13 +354,13 @@
       "fullMatchup": "Dallas Stars vs Buffalo Sabres",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020327,
@@ -372,13 +372,13 @@
       "fullMatchup": "Dallas Stars vs Florida Panthers",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": "NHLN",
       "primaryNet": "Prime Video",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on Prime Video / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on Prime Video / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020342,
@@ -390,13 +390,13 @@
       "fullMatchup": "Dallas Stars at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020358,
@@ -407,14 +407,14 @@
       "opp": "VGK",
       "fullMatchup": "Dallas Stars at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
-      "rsn": "Victory+",
-      "primaryNet": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
+      "netUSNat": null,
+      "primaryNet": "Prime Video / KDFW 4",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Victory+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video / KDFW 4)"
     },
     {
       "id": 2026020376,
@@ -426,13 +426,13 @@
       "fullMatchup": "Dallas Stars vs Pittsburgh Penguins",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020395,
@@ -444,13 +444,13 @@
       "fullMatchup": "Dallas Stars vs Nashville Predators",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020403,
@@ -462,13 +462,13 @@
       "fullMatchup": "Dallas Stars at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "Prime Video",
+      "netUSNat": "NHLN",
       "primaryNet": "Prime Video",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on Prime Video / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on Prime Video / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020424,
@@ -480,13 +480,13 @@
       "fullMatchup": "Dallas Stars vs Utah Mammoth",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020442,
@@ -498,13 +498,13 @@
       "fullMatchup": "Dallas Stars at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020457,
@@ -515,14 +515,14 @@
       "opp": "SEA",
       "fullMatchup": "Dallas Stars at Seattle Kraken",
       "venue": "Climate Pledge Arena",
-      "rsn": "Victory+",
-      "primaryNet": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
+      "netUSNat": null,
+      "primaryNet": "Prime Video / KDFW 4",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Victory+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video / KDFW 4)"
     },
     {
       "id": 2026020475,
@@ -534,13 +534,13 @@
       "fullMatchup": "Dallas Stars at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020497,
@@ -552,13 +552,13 @@
       "fullMatchup": "Dallas Stars vs Toronto Maple Leafs",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020523,
@@ -570,13 +570,13 @@
       "fullMatchup": "Dallas Stars vs St. Louis Blues",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020546,
@@ -588,13 +588,13 @@
       "fullMatchup": "Dallas Stars vs Washington Capitals",
       "venue": "American Airlines Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020557,
@@ -606,13 +606,13 @@
       "fullMatchup": "Dallas Stars at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020574,
@@ -624,13 +624,13 @@
       "fullMatchup": "Dallas Stars at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020580,
@@ -642,13 +642,13 @@
       "fullMatchup": "Dallas Stars at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020597,
@@ -660,13 +660,13 @@
       "fullMatchup": "Dallas Stars vs Calgary Flames",
       "venue": "American Airlines Center",
       "rsn": "KDFW 4",
+      "netUSNat": null,
       "primaryNet": "KDFW 4",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)"
     },
     {
       "id": 2026020615,
@@ -678,13 +678,13 @@
       "fullMatchup": "Dallas Stars at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020627,
@@ -696,13 +696,13 @@
       "fullMatchup": "Dallas Stars at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020649,
@@ -714,13 +714,13 @@
       "fullMatchup": "Dallas Stars vs New York Rangers",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020664,
@@ -732,13 +732,13 @@
       "fullMatchup": "Dallas Stars vs Chicago Blackhawks",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020677,
@@ -750,13 +750,13 @@
       "fullMatchup": "Dallas Stars vs Detroit Red Wings",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020693,
@@ -768,13 +768,13 @@
       "fullMatchup": "Dallas Stars at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020707,
@@ -786,13 +786,13 @@
       "fullMatchup": "Dallas Stars at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020718,
@@ -804,13 +804,13 @@
       "fullMatchup": "Dallas Stars at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020734,
@@ -822,13 +822,13 @@
       "fullMatchup": "Dallas Stars vs Ottawa Senators",
       "venue": "American Airlines Center",
       "rsn": "KDFW 4",
+      "netUSNat": null,
       "primaryNet": "KDFW 4",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)"
     },
     {
       "id": 2026020743,
@@ -840,13 +840,13 @@
       "fullMatchup": "Dallas Stars at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020754,
@@ -858,13 +858,13 @@
       "fullMatchup": "Dallas Stars at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020773,
@@ -876,13 +876,13 @@
       "fullMatchup": "Dallas Stars at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020787,
@@ -893,14 +893,14 @@
       "opp": "NJD",
       "fullMatchup": "Dallas Stars at New Jersey Devils",
       "venue": "Prudential Center",
-      "rsn": "Victory+",
-      "primaryNet": "Victory+",
+      "rsn": "Prime Video / KDFW 4",
+      "netUSNat": null,
+      "primaryNet": "Prime Video / KDFW 4",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Victory+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video / KDFW 4)"
     },
     {
       "id": 2026020796,
@@ -912,13 +912,13 @@
       "fullMatchup": "Dallas Stars at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020810,
@@ -930,13 +930,13 @@
       "fullMatchup": "Dallas Stars vs Colorado Avalanche",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020826,
@@ -948,13 +948,13 @@
       "fullMatchup": "Dallas Stars at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020843,
@@ -966,13 +966,13 @@
       "fullMatchup": "Dallas Stars vs Anaheim Ducks",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020854,
@@ -984,13 +984,13 @@
       "fullMatchup": "Dallas Stars vs Vancouver Canucks",
       "venue": "American Airlines Center",
       "rsn": "KDFW 4",
+      "netUSNat": null,
       "primaryNet": "KDFW 4",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)"
     },
     {
       "id": 2026020875,
@@ -1002,13 +1002,13 @@
       "fullMatchup": "Dallas Stars at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020896,
@@ -1020,13 +1020,13 @@
       "fullMatchup": "Dallas Stars vs Los Angeles Kings",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020907,
@@ -1038,13 +1038,13 @@
       "fullMatchup": "Dallas Stars at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020915,
@@ -1056,13 +1056,13 @@
       "fullMatchup": "Dallas Stars at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026020943,
@@ -1074,13 +1074,13 @@
       "fullMatchup": "Dallas Stars vs Minnesota Wild",
       "venue": "American Airlines Center",
       "rsn": "KDFW 4",
+      "netUSNat": null,
       "primaryNet": "KDFW 4",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)"
     },
     {
       "id": 2026020957,
@@ -1092,13 +1092,13 @@
       "fullMatchup": "Dallas Stars vs Philadelphia Flyers",
       "venue": "American Airlines Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020974,
@@ -1110,13 +1110,13 @@
       "fullMatchup": "Dallas Stars vs Vegas Golden Knights",
       "venue": "AT&T Stadium",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026020997,
@@ -1128,13 +1128,13 @@
       "fullMatchup": "Dallas Stars vs Vancouver Canucks",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021010,
@@ -1146,13 +1146,13 @@
       "fullMatchup": "Dallas Stars vs Tampa Bay Lightning",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021020,
@@ -1164,13 +1164,13 @@
       "fullMatchup": "Dallas Stars vs Edmonton Oilers",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021035,
@@ -1182,13 +1182,13 @@
       "fullMatchup": "Dallas Stars at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021051,
@@ -1200,13 +1200,13 @@
       "fullMatchup": "Dallas Stars vs Minnesota Wild",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021064,
@@ -1218,13 +1218,13 @@
       "fullMatchup": "Dallas Stars at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021075,
@@ -1236,13 +1236,13 @@
       "fullMatchup": "Dallas Stars at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021090,
@@ -1254,13 +1254,13 @@
       "fullMatchup": "Dallas Stars at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "KDFW 4",
+      "netUSNat": null,
       "primaryNet": "KDFW 4",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)"
     },
     {
       "id": 2026021106,
@@ -1272,13 +1272,13 @@
       "fullMatchup": "Dallas Stars vs Anaheim Ducks",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021131,
@@ -1290,13 +1290,13 @@
       "fullMatchup": "Dallas Stars at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021142,
@@ -1308,13 +1308,13 @@
       "fullMatchup": "Dallas Stars at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021157,
@@ -1326,13 +1326,13 @@
       "fullMatchup": "Dallas Stars at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021177,
@@ -1344,13 +1344,13 @@
       "fullMatchup": "Dallas Stars at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021201,
@@ -1362,13 +1362,13 @@
       "fullMatchup": "Dallas Stars vs Carolina Hurricanes",
       "venue": "American Airlines Center",
       "rsn": "KDFW 4",
+      "netUSNat": null,
       "primaryNet": "KDFW 4",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)"
     },
     {
       "id": 2026021216,
@@ -1380,13 +1380,13 @@
       "fullMatchup": "Dallas Stars at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021238,
@@ -1398,13 +1398,13 @@
       "fullMatchup": "Dallas Stars vs Nashville Predators",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021256,
@@ -1416,13 +1416,13 @@
       "fullMatchup": "Dallas Stars vs Calgary Flames",
       "venue": "American Airlines Center",
       "rsn": "KDFW 4",
+      "netUSNat": null,
       "primaryNet": "KDFW 4",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)"
     },
     {
       "id": 2026021274,
@@ -1434,13 +1434,13 @@
       "fullMatchup": "Dallas Stars at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021282,
@@ -1452,13 +1452,13 @@
       "fullMatchup": "Dallas Stars vs Chicago Blackhawks",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021299,
@@ -1470,13 +1470,13 @@
       "fullMatchup": "Dallas Stars vs Seattle Kraken",
       "venue": "American Airlines Center",
       "rsn": "KDFW 4",
+      "netUSNat": null,
       "primaryNet": "KDFW 4",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (KDFW 4)"
     },
     {
       "id": 2026021315,
@@ -1488,13 +1488,13 @@
       "fullMatchup": "Dallas Stars at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021328,
@@ -1506,13 +1506,13 @@
       "fullMatchup": "Dallas Stars vs Utah Mammoth",
       "venue": "American Airlines Center",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     },
     {
       "id": 2026021337,
@@ -1524,13 +1524,13 @@
       "fullMatchup": "Dallas Stars at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "Prime Video",
+      "netUSNat": null,
       "primaryNet": "Prime Video",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Prime Video)"
     }
   ]
 }

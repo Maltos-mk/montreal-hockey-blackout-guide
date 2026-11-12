@@ -6,11 +6,6 @@
     "city": "San Jose",
     "slug": "san-jose-sharks",
     "rsn": "NBC Sports California",
-    "colors": {
-      "primary": "#006D75",
-      "secondary": "#00484E",
-      "dark": "#081C20"
-    },
     "territoryDescription": "Northern & Central California (Bay Area, Sacramento, Fresno) & Northern Nevada",
     "zipRanges": [
       [
@@ -21,7 +16,12 @@
         936,
         961
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#006D75",
+      "secondary": "#00484E",
+      "dark": "#081C20"
+    }
   },
   "schedule": [
     {
@@ -34,13 +34,13 @@
       "fullMatchup": "San Jose Sharks vs Florida Panthers",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020034,
@@ -52,13 +52,13 @@
       "fullMatchup": "San Jose Sharks vs Los Angeles Kings",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020043,
@@ -70,13 +70,13 @@
       "fullMatchup": "San Jose Sharks at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020063,
@@ -88,13 +88,13 @@
       "fullMatchup": "San Jose Sharks at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "NBC Sports California",
+      "netUSNat": null,
       "primaryNet": "NBC Sports California",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports California)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports California)"
     },
     {
       "id": 2026020072,
@@ -106,13 +106,13 @@
       "fullMatchup": "San Jose Sharks vs Edmonton Oilers",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020105,
@@ -124,13 +124,13 @@
       "fullMatchup": "San Jose Sharks vs Boston Bruins",
       "venue": "SAP Center at San Jose",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020115,
@@ -142,13 +142,13 @@
       "fullMatchup": "San Jose Sharks at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020127,
@@ -160,13 +160,13 @@
       "fullMatchup": "San Jose Sharks at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020139,
@@ -178,13 +178,13 @@
       "fullMatchup": "San Jose Sharks at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020141,
@@ -196,13 +196,13 @@
       "fullMatchup": "San Jose Sharks at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020156,
@@ -214,13 +214,13 @@
       "fullMatchup": "San Jose Sharks at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020170,
@@ -232,13 +232,13 @@
       "fullMatchup": "San Jose Sharks at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020198,
@@ -250,13 +250,13 @@
       "fullMatchup": "San Jose Sharks vs Buffalo Sabres",
       "venue": "SAP Center at San Jose",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020213,
@@ -268,13 +268,13 @@
       "fullMatchup": "San Jose Sharks vs Vancouver Canucks",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020222,
@@ -286,13 +286,13 @@
       "fullMatchup": "San Jose Sharks vs Ottawa Senators",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020235,
@@ -304,13 +304,13 @@
       "fullMatchup": "San Jose Sharks vs Calgary Flames",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020249,
@@ -322,13 +322,13 @@
       "fullMatchup": "San Jose Sharks at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020263,
@@ -340,13 +340,13 @@
       "fullMatchup": "San Jose Sharks at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "NBCSCA",
+      "netUSNat": "NHLN",
       "primaryNet": "NBCSCA",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on NBCSCA / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on NBCSCA / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020272,
@@ -358,13 +358,13 @@
       "fullMatchup": "San Jose Sharks at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020285,
@@ -376,13 +376,13 @@
       "fullMatchup": "San Jose Sharks vs New York Islanders",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020298,
@@ -394,13 +394,13 @@
       "fullMatchup": "San Jose Sharks vs Pittsburgh Penguins",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020323,
@@ -412,13 +412,13 @@
       "fullMatchup": "San Jose Sharks at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020330,
@@ -430,13 +430,13 @@
       "fullMatchup": "San Jose Sharks vs Nashville Predators",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020343,
@@ -448,13 +448,13 @@
       "fullMatchup": "San Jose Sharks vs Calgary Flames",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020372,
@@ -466,13 +466,13 @@
       "fullMatchup": "San Jose Sharks vs Seattle Kraken",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020384,
@@ -484,13 +484,13 @@
       "fullMatchup": "San Jose Sharks vs Minnesota Wild",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020398,
@@ -502,13 +502,13 @@
       "fullMatchup": "San Jose Sharks at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020410,
@@ -520,13 +520,13 @@
       "fullMatchup": "San Jose Sharks vs Vegas Golden Knights",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020425,
@@ -538,13 +538,13 @@
       "fullMatchup": "San Jose Sharks at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020437,
@@ -556,13 +556,13 @@
       "fullMatchup": "San Jose Sharks at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "NBC Sports California",
+      "netUSNat": null,
       "primaryNet": "NBC Sports California",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports California)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports California)"
     },
     {
       "id": 2026020451,
@@ -574,13 +574,13 @@
       "fullMatchup": "San Jose Sharks at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020460,
@@ -592,13 +592,13 @@
       "fullMatchup": "San Jose Sharks at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020476,
@@ -610,13 +610,13 @@
       "fullMatchup": "San Jose Sharks at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020495,
@@ -628,13 +628,13 @@
       "fullMatchup": "San Jose Sharks vs Seattle Kraken",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020498,
@@ -646,13 +646,13 @@
       "fullMatchup": "San Jose Sharks at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020513,
@@ -664,13 +664,13 @@
       "fullMatchup": "San Jose Sharks vs Los Angeles Kings",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020535,
@@ -682,13 +682,13 @@
       "fullMatchup": "San Jose Sharks vs Vancouver Canucks",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020550,
@@ -700,13 +700,13 @@
       "fullMatchup": "San Jose Sharks at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020575,
@@ -718,13 +718,13 @@
       "fullMatchup": "San Jose Sharks at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020599,
@@ -736,13 +736,13 @@
       "fullMatchup": "San Jose Sharks at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020611,
@@ -754,13 +754,13 @@
       "fullMatchup": "San Jose Sharks vs Vegas Golden Knights",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020624,
@@ -772,13 +772,13 @@
       "fullMatchup": "San Jose Sharks at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020632,
@@ -790,13 +790,13 @@
       "fullMatchup": "San Jose Sharks at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020653,
@@ -808,13 +808,13 @@
       "fullMatchup": "San Jose Sharks vs Philadelphia Flyers",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020663,
@@ -826,13 +826,13 @@
       "fullMatchup": "San Jose Sharks vs Toronto Maple Leafs",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020680,
@@ -844,13 +844,13 @@
       "fullMatchup": "San Jose Sharks vs New Jersey Devils",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020693,
@@ -862,13 +862,13 @@
       "fullMatchup": "San Jose Sharks vs Dallas Stars",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020708,
@@ -880,13 +880,13 @@
       "fullMatchup": "San Jose Sharks vs Washington Capitals",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020721,
@@ -898,13 +898,13 @@
       "fullMatchup": "San Jose Sharks vs New York Rangers",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020741,
@@ -916,13 +916,13 @@
       "fullMatchup": "San Jose Sharks at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020750,
@@ -934,13 +934,13 @@
       "fullMatchup": "San Jose Sharks at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020771,
@@ -952,13 +952,13 @@
       "fullMatchup": "San Jose Sharks at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020781,
@@ -970,13 +970,13 @@
       "fullMatchup": "San Jose Sharks vs Utah Mammoth",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020823,
@@ -988,13 +988,13 @@
       "fullMatchup": "San Jose Sharks vs Edmonton Oilers",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020860,
@@ -1006,13 +1006,13 @@
       "fullMatchup": "San Jose Sharks vs Nashville Predators",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020867,
@@ -1024,13 +1024,13 @@
       "fullMatchup": "San Jose Sharks vs Chicago Blackhawks",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020902,
@@ -1042,13 +1042,13 @@
       "fullMatchup": "San Jose Sharks vs Chicago Blackhawks",
       "venue": "SAP Center at San Jose",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020914,
@@ -1060,13 +1060,13 @@
       "fullMatchup": "San Jose Sharks vs Detroit Red Wings",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020935,
@@ -1078,13 +1078,13 @@
       "fullMatchup": "San Jose Sharks vs Winnipeg Jets",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020961,
@@ -1096,13 +1096,13 @@
       "fullMatchup": "San Jose Sharks at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020980,
@@ -1114,13 +1114,13 @@
       "fullMatchup": "San Jose Sharks at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026020992,
@@ -1132,13 +1132,13 @@
       "fullMatchup": "San Jose Sharks at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021006,
@@ -1150,13 +1150,13 @@
       "fullMatchup": "San Jose Sharks at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021023,
@@ -1168,13 +1168,13 @@
       "fullMatchup": "San Jose Sharks at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021042,
@@ -1186,13 +1186,13 @@
       "fullMatchup": "San Jose Sharks vs Montreal Canadiens",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021055,
@@ -1204,13 +1204,13 @@
       "fullMatchup": "San Jose Sharks vs Columbus Blue Jackets",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021070,
@@ -1222,13 +1222,13 @@
       "fullMatchup": "San Jose Sharks vs Colorado Avalanche",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021079,
@@ -1240,13 +1240,13 @@
       "fullMatchup": "San Jose Sharks vs Tampa Bay Lightning",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021103,
@@ -1258,13 +1258,13 @@
       "fullMatchup": "San Jose Sharks at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "NBC Sports California",
+      "netUSNat": null,
       "primaryNet": "NBC Sports California",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports California)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports California)"
     },
     {
       "id": 2026021111,
@@ -1276,13 +1276,13 @@
       "fullMatchup": "San Jose Sharks at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021129,
@@ -1294,13 +1294,13 @@
       "fullMatchup": "San Jose Sharks at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021140,
@@ -1312,13 +1312,13 @@
       "fullMatchup": "San Jose Sharks at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021151,
@@ -1330,13 +1330,13 @@
       "fullMatchup": "San Jose Sharks at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "NBC Sports California",
+      "netUSNat": null,
       "primaryNet": "NBC Sports California",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports California)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports California)"
     },
     {
       "id": 2026021167,
@@ -1348,13 +1348,13 @@
       "fullMatchup": "San Jose Sharks at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021185,
@@ -1366,13 +1366,13 @@
       "fullMatchup": "San Jose Sharks vs Carolina Hurricanes",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021195,
@@ -1384,13 +1384,13 @@
       "fullMatchup": "San Jose Sharks at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021210,
@@ -1402,13 +1402,13 @@
       "fullMatchup": "San Jose Sharks vs Anaheim Ducks",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021226,
@@ -1420,13 +1420,13 @@
       "fullMatchup": "San Jose Sharks at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021247,
@@ -1438,13 +1438,13 @@
       "fullMatchup": "San Jose Sharks vs Colorado Avalanche",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021260,
@@ -1456,13 +1456,13 @@
       "fullMatchup": "San Jose Sharks at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021287,
@@ -1474,13 +1474,13 @@
       "fullMatchup": "San Jose Sharks at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021295,
@@ -1492,13 +1492,13 @@
       "fullMatchup": "San Jose Sharks vs St. Louis Blues",
       "venue": "SAP Center at San Jose",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021323,
@@ -1510,13 +1510,13 @@
       "fullMatchup": "San Jose Sharks vs Minnesota Wild",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     },
     {
       "id": 2026021331,
@@ -1528,13 +1528,13 @@
       "fullMatchup": "San Jose Sharks vs Anaheim Ducks",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSCA",
+      "netUSNat": null,
       "primaryNet": "NBCSCA",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSCA)"
     }
   ]
 }

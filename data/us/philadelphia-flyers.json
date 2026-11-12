@@ -6,11 +6,6 @@
     "city": "Philadelphia",
     "slug": "philadelphia-flyers",
     "rsn": "NBC Sports Philadelphia",
-    "colors": {
-      "primary": "#F74902",
-      "secondary": "#111111",
-      "dark": "#000000"
-    },
     "territoryDescription": "Eastern & Central Pennsylvania (Philadelphia, Lehigh Valley, Harrisburg), South Jersey & Delaware",
     "zipRanges": [
       [
@@ -21,7 +16,12 @@
         170,
         199
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#F74902",
+      "secondary": "#111111",
+      "dark": "#000000"
+    }
   },
   "schedule": [
     {
@@ -34,13 +34,13 @@
       "fullMatchup": "Philadelphia Flyers vs Pittsburgh Penguins",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020009,
@@ -52,13 +52,13 @@
       "fullMatchup": "Philadelphia Flyers at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "NBC Sports Philadelphia",
+      "netUSNat": null,
       "primaryNet": "NBC Sports Philadelphia",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports Philadelphia)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports Philadelphia)"
     },
     {
       "id": 2026020025,
@@ -70,13 +70,13 @@
       "fullMatchup": "Philadelphia Flyers vs Carolina Hurricanes",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020040,
@@ -88,13 +88,13 @@
       "fullMatchup": "Philadelphia Flyers at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "NBCSP",
+      "netUSNat": "NHLN",
       "primaryNet": "NBCSP",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on NBCSP / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on NBCSP / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020059,
@@ -106,13 +106,13 @@
       "fullMatchup": "Philadelphia Flyers at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020070,
@@ -124,13 +124,13 @@
       "fullMatchup": "Philadelphia Flyers at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "NBCSP",
+      "netUSNat": "NHLN",
       "primaryNet": "NBCSP",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on NBCSP / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on NBCSP / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020086,
@@ -142,13 +142,13 @@
       "fullMatchup": "Philadelphia Flyers vs Carolina Hurricanes",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": "NHLN",
       "primaryNet": "NBCSP",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on NBCSP / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on NBCSP / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020094,
@@ -160,13 +160,13 @@
       "fullMatchup": "Philadelphia Flyers vs Seattle Kraken",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020110,
@@ -178,13 +178,13 @@
       "fullMatchup": "Philadelphia Flyers at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "NBC Sports Philadelphia",
+      "netUSNat": null,
       "primaryNet": "NBC Sports Philadelphia",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports Philadelphia)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports Philadelphia)"
     },
     {
       "id": 2026020128,
@@ -196,13 +196,13 @@
       "fullMatchup": "Philadelphia Flyers vs Ottawa Senators",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020138,
@@ -214,13 +214,13 @@
       "fullMatchup": "Philadelphia Flyers vs Colorado Avalanche",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020152,
@@ -232,13 +232,13 @@
       "fullMatchup": "Philadelphia Flyers at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020168,
@@ -250,13 +250,13 @@
       "fullMatchup": "Philadelphia Flyers vs Anaheim Ducks",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": "NHLN",
       "primaryNet": "NBCSP",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on NBCSP / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on NBCSP / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020188,
@@ -268,13 +268,13 @@
       "fullMatchup": "Philadelphia Flyers vs Columbus Blue Jackets",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020199,
@@ -286,13 +286,13 @@
       "fullMatchup": "Philadelphia Flyers at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "NBCSP+",
+      "netUSNat": null,
       "primaryNet": "NBCSP+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)"
     },
     {
       "id": 2026020229,
@@ -304,13 +304,13 @@
       "fullMatchup": "Philadelphia Flyers vs Utah Mammoth",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020241,
@@ -322,13 +322,13 @@
       "fullMatchup": "Philadelphia Flyers vs Minnesota Wild",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020256,
@@ -340,13 +340,13 @@
       "fullMatchup": "Philadelphia Flyers at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020281,
@@ -358,13 +358,13 @@
       "fullMatchup": "Philadelphia Flyers at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020284,
@@ -376,13 +376,13 @@
       "fullMatchup": "Philadelphia Flyers at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020295,
@@ -394,13 +394,13 @@
       "fullMatchup": "Philadelphia Flyers at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020319,
@@ -412,13 +412,13 @@
       "fullMatchup": "Philadelphia Flyers at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020326,
@@ -430,13 +430,13 @@
       "fullMatchup": "Philadelphia Flyers vs Edmonton Oilers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020337,
@@ -448,13 +448,13 @@
       "fullMatchup": "Philadelphia Flyers vs Buffalo Sabres",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020348,
@@ -466,13 +466,13 @@
       "fullMatchup": "Philadelphia Flyers at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020365,
@@ -484,13 +484,13 @@
       "fullMatchup": "Philadelphia Flyers at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "NBCSP",
+      "netUSNat": "NHLN",
       "primaryNet": "NBCSP",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on NBCSP / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on NBCSP / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020392,
@@ -502,13 +502,13 @@
       "fullMatchup": "Philadelphia Flyers at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "NBCSP+",
+      "netUSNat": null,
       "primaryNet": "NBCSP+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)"
     },
     {
       "id": 2026020405,
@@ -520,13 +520,13 @@
       "fullMatchup": "Philadelphia Flyers vs Vancouver Canucks",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020423,
@@ -538,13 +538,13 @@
       "fullMatchup": "Philadelphia Flyers vs New York Islanders",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020433,
@@ -556,13 +556,13 @@
       "fullMatchup": "Philadelphia Flyers at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020452,
@@ -574,13 +574,13 @@
       "fullMatchup": "Philadelphia Flyers vs New York Islanders",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBC Sports Philadelphia",
+      "netUSNat": null,
       "primaryNet": "NBC Sports Philadelphia",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports Philadelphia)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports Philadelphia)"
     },
     {
       "id": 2026020473,
@@ -592,13 +592,13 @@
       "fullMatchup": "Philadelphia Flyers at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020492,
@@ -610,13 +610,13 @@
       "fullMatchup": "Philadelphia Flyers at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020511,
@@ -628,13 +628,13 @@
       "fullMatchup": "Philadelphia Flyers vs Calgary Flames",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020532,
@@ -646,13 +646,13 @@
       "fullMatchup": "Philadelphia Flyers vs Florida Panthers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020547,
@@ -664,13 +664,13 @@
       "fullMatchup": "Philadelphia Flyers vs New York Rangers",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020562,
@@ -682,13 +682,13 @@
       "fullMatchup": "Philadelphia Flyers vs Detroit Red Wings",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020576,
@@ -700,13 +700,13 @@
       "fullMatchup": "Philadelphia Flyers at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020587,
@@ -718,13 +718,13 @@
       "fullMatchup": "Philadelphia Flyers vs Columbus Blue Jackets",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020612,
@@ -736,13 +736,13 @@
       "fullMatchup": "Philadelphia Flyers at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020635,
@@ -754,13 +754,13 @@
       "fullMatchup": "Philadelphia Flyers at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020653,
@@ -772,13 +772,13 @@
       "fullMatchup": "Philadelphia Flyers at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020672,
@@ -790,13 +790,13 @@
       "fullMatchup": "Philadelphia Flyers at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020679,
@@ -808,13 +808,13 @@
       "fullMatchup": "Philadelphia Flyers at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "NBCSP+",
+      "netUSNat": null,
       "primaryNet": "NBCSP+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)"
     },
     {
       "id": 2026020697,
@@ -826,13 +826,13 @@
       "fullMatchup": "Philadelphia Flyers vs Toronto Maple Leafs",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020713,
@@ -844,13 +844,13 @@
       "fullMatchup": "Philadelphia Flyers at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020722,
@@ -862,13 +862,13 @@
       "fullMatchup": "Philadelphia Flyers vs Chicago Blackhawks",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP+",
+      "netUSNat": null,
       "primaryNet": "NBCSP+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)"
     },
     {
       "id": 2026020733,
@@ -880,13 +880,13 @@
       "fullMatchup": "Philadelphia Flyers at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020755,
@@ -898,13 +898,13 @@
       "fullMatchup": "Philadelphia Flyers at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020764,
@@ -916,13 +916,13 @@
       "fullMatchup": "Philadelphia Flyers vs Montreal Canadiens",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020788,
@@ -934,13 +934,13 @@
       "fullMatchup": "Philadelphia Flyers at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020802,
@@ -952,13 +952,13 @@
       "fullMatchup": "Philadelphia Flyers vs Nashville Predators",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020820,
@@ -970,13 +970,13 @@
       "fullMatchup": "Philadelphia Flyers vs New Jersey Devils",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP+",
+      "netUSNat": null,
       "primaryNet": "NBCSP+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)"
     },
     {
       "id": 2026020839,
@@ -988,13 +988,13 @@
       "fullMatchup": "Philadelphia Flyers vs Florida Panthers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020850,
@@ -1006,13 +1006,13 @@
       "fullMatchup": "Philadelphia Flyers vs Los Angeles Kings",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBC Sports Philadelphia",
+      "netUSNat": null,
       "primaryNet": "NBC Sports Philadelphia",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports Philadelphia)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBC Sports Philadelphia)"
     },
     {
       "id": 2026020864,
@@ -1024,13 +1024,13 @@
       "fullMatchup": "Philadelphia Flyers vs Winnipeg Jets",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020878,
@@ -1042,13 +1042,13 @@
       "fullMatchup": "Philadelphia Flyers at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026020890,
@@ -1060,13 +1060,13 @@
       "fullMatchup": "Philadelphia Flyers vs Tampa Bay Lightning",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020923,
@@ -1078,13 +1078,13 @@
       "fullMatchup": "Philadelphia Flyers vs New Jersey Devils",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP+",
+      "netUSNat": null,
       "primaryNet": "NBCSP+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)"
     },
     {
       "id": 2026020936,
@@ -1096,13 +1096,13 @@
       "fullMatchup": "Philadelphia Flyers at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020957,
@@ -1114,13 +1114,13 @@
       "fullMatchup": "Philadelphia Flyers at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020967,
@@ -1132,13 +1132,13 @@
       "fullMatchup": "Philadelphia Flyers vs New York Rangers",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026020986,
@@ -1150,13 +1150,13 @@
       "fullMatchup": "Philadelphia Flyers vs Montreal Canadiens",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026020999,
@@ -1168,13 +1168,13 @@
       "fullMatchup": "Philadelphia Flyers vs Buffalo Sabres",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021013,
@@ -1186,13 +1186,13 @@
       "fullMatchup": "Philadelphia Flyers at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026021023,
@@ -1204,13 +1204,13 @@
       "fullMatchup": "Philadelphia Flyers vs San Jose Sharks",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026021046,
@@ -1222,13 +1222,13 @@
       "fullMatchup": "Philadelphia Flyers vs Vegas Golden Knights",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026021064,
@@ -1240,13 +1240,13 @@
       "fullMatchup": "Philadelphia Flyers vs Dallas Stars",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026021081,
@@ -1258,13 +1258,13 @@
       "fullMatchup": "Philadelphia Flyers vs St. Louis Blues",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021101,
@@ -1276,13 +1276,13 @@
       "fullMatchup": "Philadelphia Flyers at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026021116,
@@ -1294,13 +1294,13 @@
       "fullMatchup": "Philadelphia Flyers at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "NBCSP+",
+      "netUSNat": null,
       "primaryNet": "NBCSP+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)"
     },
     {
       "id": 2026021130,
@@ -1312,13 +1312,13 @@
       "fullMatchup": "Philadelphia Flyers at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026021149,
@@ -1330,13 +1330,13 @@
       "fullMatchup": "Philadelphia Flyers vs Detroit Red Wings",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026021166,
@@ -1348,13 +1348,13 @@
       "fullMatchup": "Philadelphia Flyers vs Boston Bruins",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026021176,
@@ -1366,13 +1366,13 @@
       "fullMatchup": "Philadelphia Flyers at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026021198,
@@ -1384,13 +1384,13 @@
       "fullMatchup": "Philadelphia Flyers at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026021213,
@@ -1402,13 +1402,13 @@
       "fullMatchup": "Philadelphia Flyers at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021230,
@@ -1420,13 +1420,13 @@
       "fullMatchup": "Philadelphia Flyers at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026021253,
@@ -1438,13 +1438,13 @@
       "fullMatchup": "Philadelphia Flyers vs Pittsburgh Penguins",
       "venue": "Xfinity Mobile Arena",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026021266,
@@ -1456,13 +1456,13 @@
       "fullMatchup": "Philadelphia Flyers vs Washington Capitals",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021285,
@@ -1474,13 +1474,13 @@
       "fullMatchup": "Philadelphia Flyers at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021296,
@@ -1492,13 +1492,13 @@
       "fullMatchup": "Philadelphia Flyers at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "NBCSP",
+      "netUSNat": null,
       "primaryNet": "NBCSP",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP)"
     },
     {
       "id": 2026021319,
@@ -1510,13 +1510,13 @@
       "fullMatchup": "Philadelphia Flyers at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "NBCSP+",
+      "netUSNat": null,
       "primaryNet": "NBCSP+",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (NBCSP+)"
     },
     {
       "id": 2026021329,
@@ -1528,13 +1528,13 @@
       "fullMatchup": "Philadelphia Flyers vs Washington Capitals",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     }
   ]
 }

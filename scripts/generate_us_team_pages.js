@@ -124,7 +124,10 @@ function getFullMatchup(teamName, vsStr, oppCode) {
 
 function classifyUsBroadcast(rawGame, team) {
   const isHome = rawGame.homeTeam.abbrev === team.abbreviation;
-  const usBroadcasts = (rawGame.tvBroadcasts || []).filter(b => b.countryCode === 'US');
+  const usBroadcasts = (rawGame.tvBroadcasts || [])
+    .filter(b => b.countryCode === 'US')
+    .map(b => ({ ...b, network: String(b.network || '').trim() }))
+    .filter(b => b.network);
   const targetMarket = isHome ? 'H' : 'A';
 
   const nationalNets = usBroadcasts
@@ -289,8 +292,20 @@ async function ensureUsTeamData(team, forceRefresh) {
               : 'Available nationwide in the US on ESPN+ (No local RSN blackout)'
           };
         }
+        const legacyFallbackRe = /^(?:FanDuel Sports .*|Victory\+.*)$/i;
+        const rawRsn = typeof g.rsn === 'string' ? g.rsn.trim() : g.rsn;
+        const rawPrimary = typeof g.primaryNet === 'string' ? g.primaryNet.trim() : g.primaryNet;
+        const normalizedRsn = legacyFallbackRe.test(rawRsn || '') ? team.rsn : rawRsn;
+        const normalizedPrimary = legacyFallbackRe.test(rawPrimary || '') ? team.rsn : rawPrimary;
+        const normalizedBanner =
+          typeof g.bannerText === 'string'
+            ? g.bannerText.replace(/(?:FanDuel Sports [^)]+|Victory\+[^)]*)/gi, team.rsn).trim()
+            : g.bannerText;
         return {
           ...g,
+          rsn: normalizedRsn,
+          primaryNet: normalizedPrimary,
+          bannerText: normalizedBanner,
           netUSNat
         };
       });
@@ -401,7 +416,9 @@ function buildMetaDescription(team) {
   }
   const base = `How to watch ${team.name} games without blackouts on ${team.rsn} and ESPN+. Check local RSN territory rules, national TV exclusives, and US ZIP code blackouts.`;
   if (base.length <= 160) return base;
-  return `How to watch ${team.name} games without blackouts on ${team.rsn} and ESPN+. Check local RSN coverage and US ZIP code blackout rules.`;
+  const medium = `How to watch ${team.name} games without blackouts on ${team.rsn} and ESPN+. Check local RSN coverage and US ZIP code blackout rules.`;
+  if (medium.length <= 160) return medium;
+  return `Watch ${team.name} games on ${team.rsn} and ESPN+. Check US ZIP code blackouts and national TV schedules.`;
 }
 
 function buildOgTitle(team) {
@@ -530,6 +547,145 @@ function buildSchema(team, pageTitle, metaDescription, canonicalUrl) {
   return { schemaJson: JSON.stringify(schemaObj, null, 2), faqs };
 }
 
+/**
+ * Build static HTML copy tailored for Canadian franchises (no local US RSN territory)
+ * versus US franchises (local RSN in-market + ESPN+ out-of-market).
+ */
+function buildUsTeamCopy(
+  team,
+  { nickname, city, territoryDescription, regionalCount, espnPlusCount, nationalCount }
+) {
+  const isCa = team.country === 'CA';
+
+  const nationalCardHtml = `
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">National ${nickname} Games (ESPN, ABC, TNT &amp; NHL Network)</h3>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300">
+            When the ${team.name} are selected for an exclusive national US broadcast on <strong>ESPN, TNT, or NHL Network</strong> (${nationalCount} games), the broadcast is blacked out on ESPN+ nationwide unless simulcast on ABC/ESPN+.
+          </p>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300 mt-2">
+            Viewers across all US ZIP codes need access to the designated national television channel or streaming tier (such as Max for TNT simulcasts) to watch these national exclusives.
+          </p>
+        </div>`;
+
+  const nationalFaqRow = `
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">US National Exclusive</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">ESPN / ABC / TNT / NHL Network</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Requires National Channel (Unless ABC/ESPN+ Simulcast)</td>
+            </tr>`;
+
+  if (isCa) {
+    return {
+      ogImageAlt: `${team.name} US Broadcast & Blackout Guide (ESPN+ and National TV)`,
+      headerNetworksLabel: 'ESPN+ &amp; US National TV',
+      footerNetworkSummary: 'ESPN+, ESPN, ABC, TNT, NHL Network',
+      nextGameAvailableLabel: 'Available on ESPN+ (Out-of-Market)',
+      metaKeywords: `${team.name} game tonight, ${nickname} blackout rules, ${team.name} US broadcast schedule, watch ${nickname} on ESPN+, ${team.name} US TV channel, ${city} hockey live stream`,
+      defaultZipStatusHtml: `📍 <strong>Out-of-Market Across the US:</strong> As a Canadian NHL franchise, the ${team.name} have no local US RSN blackout territory. Regional games stream live on <strong>ESPN+</strong> nationwide (enter your 5-digit US ZIP code above to check for local US opponent RSN blackouts).`,
+      usRsnCheckboxTitle: 'My Local US Opponent RSN',
+      usRsnCheckboxDesc: 'Unlocks matchups blacked out on ESPN+ against your local US team',
+      defaultAdviceHtml: `<div>
+              <h3 class="font-bold text-slate-900 dark:text-white">Out-of-Market US Setup</h3>
+              <p class="text-slate-600 dark:text-slate-300 mt-1">
+                Because the ${team.name} are based in Canada, regional games stream across the US on <strong>ESPN+</strong> (${espnPlusCount} out-of-market &amp; simulcast games). Add ESPN, TNT, and NHL Network for US national broadcasts, or enter your ZIP code above if they play your local US team.
+              </p>
+            </div>`,
+      channelFilterRsnOption: '',
+      seoArticleHtml: `
+      <h2 class="text-base font-bold text-slate-900 dark:text-white uppercase font-teko text-2xl tracking-wider text-teamPrimary">
+        ${team.name} US Broadcast Rights &amp; ESPN+ Blackout Guide (2026–27 ${nickname} Season)
+      </h2>
+      <p class="leading-relaxed">
+        Following the <strong>${team.name}</strong> regular season across the United States depends on whether a matchup airs as an out-of-market regional feed or a US national TV broadcast. For ${team.name} fans in the US, games are divided across <strong>ESPN+, ESPN/ABC, TNT, NHL Network, and local US opponent RSNs</strong>.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Out-of-Market ${team.name} Games (ESPN+)</h3>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300">
+            Because the ${team.name} are a Canadian franchise, they do not hold a designated US Regional Sports Network territory. Nearly all non-national ${team.name} games stream live across the US on <strong>ESPN+</strong> (${espnPlusCount} games including simulcasts).
+          </p>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300 mt-2">
+            The only regional exception occurs when the ${team.name} play a US NHL team whose local broadcast territory covers your 5-digit ZIP code—those matchups are blacked out on ESPN+ in that market and air on your opponent's local RSN.
+          </p>
+        </div>
+        ${nationalCardHtml}
+      </div>
+
+      <div class="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/40 text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
+        <strong>Quick Summary for ${nickname} Fans in the US:</strong> Regional ${team.name} games stream nationwide on <strong>ESPN+</strong> unless they visit a US opponent whose local RSN territory includes your ZIP code. Enter your ZIP code above to flag any local opponent blackouts.
+      </div>`,
+      faqTableRowsHtml: `
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">Regional (Most US ZIPs)</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">ESPN+</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Stream Live Out-of-Market on ESPN+</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">Regional (Local US Opponent ZIP)</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Opponent Local RSN</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Blacked Out on ESPN+ (Watch on Opponent RSN)</td>
+            </tr>
+            ${nationalFaqRow}`
+    };
+  }
+
+  return {
+    ogImageAlt: `${team.name} Broadcast & Blackout Guide (${team.rsn} and ESPN+)`,
+    headerNetworksLabel: `${team.rsn} &amp; ESPN+`,
+    footerNetworkSummary: `${team.rsn}, ESPN+, ESPN, ABC, TNT, NHL Network`,
+    nextGameAvailableLabel: 'Available on ESPN+ (OOM) / Local RSN',
+    metaKeywords: `${team.name} game tonight, ${nickname} blackout rules, ${team.name} broadcast schedule, ${team.rsn} blackout, watch ${nickname} on ESPN+, ${city} hockey live stream`,
+    defaultZipStatusHtml: `📍 <strong>Default View: In-Market (${territoryDescription})</strong>. Enter any 5-digit US ZIP code above to switch between in-market RSN (<strong>${team.rsn}</strong>) and out-of-market (<strong>ESPN+</strong>) blackout rules.`,
+    usRsnCheckboxTitle: `My Local RSN (${team.rsn})`,
+    usRsnCheckboxDesc: `${regionalCount} Regional ${nickname} games (in-market)`,
+    defaultAdviceHtml: `<div>
+              <h3 class="font-bold text-slate-900 dark:text-white">In-Market Full Season Setup</h3>
+              <p class="text-slate-600 dark:text-slate-300 mt-1">
+                In-market fans in <strong>${territoryDescription}</strong> need <strong>${team.rsn}</strong> (${regionalCount} regional games) plus ESPN/TNT for national exclusives. Out-of-market US fans can stream ${espnPlusCount} ${team.name} games on <strong>ESPN+</strong>.
+              </p>
+            </div>`,
+    channelFilterRsnOption: `<option value="LOCAL_RSN">${team.rsn}</option>`,
+    seoArticleHtml: `
+      <h2 class="text-base font-bold text-slate-900 dark:text-white uppercase font-teko text-2xl tracking-wider text-teamPrimary">
+        ${team.name} Hockey Broadcast Rights &amp; Regional Blackout Guide (2026–27 ${nickname} Season)
+      </h2>
+      <p class="leading-relaxed">
+        Following the <strong>${team.name}</strong> regular season across the United States requires understanding how NHL broadcast territory rights are split between regional sports networks and national streaming partners. For ${team.name} fans, games are divided across <strong>${team.rsn}, ESPN+, ESPN/ABC, TNT, and NHL Network</strong>.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+          <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1">Regional ${team.name} Games (${team.rsn})</h3>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300">
+            <strong>${team.rsn}</strong> holds the official in-market regional broadcast rights for the ${team.name} (${regionalCount} regular-season games) across <strong>${territoryDescription}</strong>. If your US ZIP code falls inside the ${team.name} local broadcast territory, regional games are <strong>blacked out on ESPN+</strong> and must be watched via ${team.rsn}.
+          </p>
+          <p class="text-xs leading-relaxed text-slate-500 dark:text-slate-300 mt-2">
+            If you live outside the ${team.name} local broadcast territory in the US, regional ${nickname} games stream live on <strong>ESPN+</strong> (unless the ${team.name} are playing an opponent whose local broadcast territory includes your ZIP code).
+          </p>
+        </div>
+        ${nationalCardHtml}
+      </div>
+
+      <div class="p-4 rounded-xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800/40 text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
+        <strong>Quick Summary for ${nickname} Fans:</strong> Use the US ZIP Code Lookup above to check your local market status. In-market ZIP codes (${territoryDescription}) watch regional games on <strong>${team.rsn}</strong>; out-of-market US ZIP codes stream regional games on <strong>ESPN+</strong>.
+      </div>`,
+    faqTableRowsHtml: `
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">Regional (In-Market ZIP)</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">${team.rsn}</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Blacked Out on ESPN+ (Watch on ${team.rsn})</td>
+            </tr>
+            <tr>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2 font-semibold">Regional (Out-of-Market ZIP)</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">ESPN+</td>
+              <td class="border border-slate-200 dark:border-slate-700 px-4 py-2">Stream on ESPN+ (Unless Opponent Is Local to Your ZIP)</td>
+            </tr>
+            ${nationalFaqRow}`
+  };
+}
+
 function renderTeamPage(team, teamData, allTeams) {
   const canonicalUrl = `${SITE_ORIGIN}/${team.slug}/`;
   const pageTitle = buildPageTitle(team);
@@ -537,7 +693,6 @@ function renderTeamPage(team, teamData, allTeams) {
   const ogTitle = buildOgTitle(team);
   const ogDescription = buildOgDescription(team);
   const ogImageUrl = `${SITE_ORIGIN}/og/teams/${team.slug}.png`;
-  const ogImageAlt = `${team.name} Broadcast & Blackout Guide (${team.rsn} and ESPN+)`;
   const { schemaJson, faqs } = buildSchema(team, pageTitle, metaDescription, canonicalUrl);
 
   const colors = team.colors || {
@@ -632,11 +787,21 @@ function renderTeamPage(team, teamData, allTeams) {
       </div>`;
   });
 
+  const territoryDescription = team.territoryDescription || `${city} Metro & Regional Market`;
+  const copy = buildUsTeamCopy(team, {
+    nickname,
+    city,
+    territoryDescription,
+    regionalCount,
+    espnPlusCount,
+    nationalCount
+  });
+
   // Next Game Spotlight Hero (Identical to scripts/build.js)
   const nextGame = upcomingGames[0] || schedule[schedule.length - 1];
   const nextGameIdx = schedule.findIndex(orig => orig.id === nextGame.id) + 1;
   const nextGameBadge = nextGame.espnPlus
-    ? '<span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-700 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-tv"></i> Available on ESPN+ (OOM) / Local RSN</span>'
+    ? `<span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-700 text-white shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-tv"></i> ${copy.nextGameAvailableLabel}</span>`
     : '<span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 shadow-sm flex items-center gap-1.5"><i class="fa-solid fa-satellite-dish"></i> US National Exclusive</span>';
 
   const upcoming3 = upcomingGames.slice(0, 3);
@@ -713,7 +878,7 @@ function renderTeamPage(team, teamData, allTeams) {
     .replace(/\{\{HEADER_BADGE_TEXT\}\}/g, team.abbreviation)
     .replace(
       /\{\{HEADER_H1\}\}/g,
-      `What channel is the ${team.name} game on tonight? (${team.rsn} &amp; ESPN+)`
+      `What channel is the ${team.name} game on tonight? (${copy.headerNetworksLabel})`
     )
     .replace(
       /\{\{HEADER_SUBTITLE\}\}/g,
@@ -725,7 +890,7 @@ function renderTeamPage(team, teamData, allTeams) {
     .replace(/\{\{US_FOOTER_LINKS\}\}/g, buildFooterLinks(team.slug, allTeams))
     .replace(
       /\{\{FOOTER_NETWORK_SUMMARY\}\}/g,
-      `${team.rsn}, ESPN+, ESPN, ABC, TNT, NHL Network`
+      copy.footerNetworkSummary
     );
 
   const faqItemsHtml = faqs
@@ -742,19 +907,19 @@ function renderTeamPage(team, teamData, allTeams) {
   const samplePrefix =
     team.zipRanges && team.zipRanges.length > 0 ? String(team.zipRanges[0][0]).padStart(3, '0') : '100';
   const sampleZip = `${samplePrefix}01`;
-  const territoryDescription = team.territoryDescription || `${city} Metro & Regional Market`;
 
   return teamTemplate
     .replace(/\{\{US_HEADER\}\}/g, renderedHeader)
     .replace(/\{\{US_FOOTER\}\}/g, renderedFooter)
     .replace(/\{\{PAGE_TITLE\}\}/g, pageTitle)
     .replace(/\{\{META_DESCRIPTION\}\}/g, metaDescription)
+    .replace(/\{\{META_KEYWORDS\}\}/g, copy.metaKeywords)
     .replace(/\{\{CANONICAL_URL\}\}/g, canonicalUrl)
     .replace(/\{\{UMAMI_SNIPPET\}\}/g, () => UMAMI_SNIPPET)
     .replace(/\{\{OG_TITLE\}\}/g, ogTitle)
     .replace(/\{\{OG_DESCRIPTION\}\}/g, ogDescription)
     .replace(/\{\{OG_IMAGE_URL\}\}/g, ogImageUrl)
-    .replace(/\{\{OG_IMAGE_ALT\}\}/g, ogImageAlt)
+    .replace(/\{\{OG_IMAGE_ALT\}\}/g, copy.ogImageAlt)
     .replace(/\{\{SCHEMA_JSON\}\}/g, schemaJson)
     .replace(/\{\{COLOR_PRIMARY\}\}/g, colors.primary)
     .replace(/\{\{COLOR_SECONDARY\}\}/g, colors.secondary)
@@ -767,6 +932,13 @@ function renderTeamPage(team, teamData, allTeams) {
     .replace(/\{\{TEAM_RSN\}\}/g, team.rsn)
     .replace(/\{\{SAMPLE_ZIP\}\}/g, sampleZip)
     .replace(/\{\{TERRITORY_DESCRIPTION\}\}/g, territoryDescription)
+    .replace(/\{\{DEFAULT_ZIP_STATUS_HTML\}\}/g, copy.defaultZipStatusHtml)
+    .replace(/\{\{US_RSN_CHECKBOX_TITLE\}\}/g, copy.usRsnCheckboxTitle)
+    .replace(/\{\{US_RSN_CHECKBOX_DESC\}\}/g, copy.usRsnCheckboxDesc)
+    .replace(/\{\{DEFAULT_ADVICE_HTML\}\}/g, copy.defaultAdviceHtml)
+    .replace(/\{\{CHANNEL_FILTER_RSN_OPTION\}\}/g, copy.channelFilterRsnOption)
+    .replace(/\{\{SEO_ARTICLE_HTML\}\}/g, copy.seoArticleHtml)
+    .replace(/\{\{FAQ_TABLE_ROWS_HTML\}\}/g, copy.faqTableRowsHtml)
     .replace(/\{\{TOTAL_GAMES\}\}/g, totalGames)
     .replace(/\{\{ESPN_PLUS_COUNT\}\}/g, espnPlusCount)
     .replace(/\{\{ESPN_PLUS_PCT\}\}/g, espnPlusPct)
@@ -786,7 +958,7 @@ function renderTeamPage(team, teamData, allTeams) {
 }
 
 const US_NETWORK_SUMMARY =
-  'ESPN+, ESPN, ABC, TNT, NHL Network, MSG, NESN, FanDuel Sports Network, Altitude, Victory+, Scripps Sports';
+  'ESPN+, ESPN, ABC, TNT, NHL Network, Prime Video, Scripps Sports, MSG, NESN, Altitude, DSN, Wild+, BN+, ABTV, HHN, CBJHN';
 
 function buildUsDirectoryShell(allTeams, badgeText, h1Text, subtitleText) {
   const renderedHeader = headerTemplate
@@ -805,10 +977,12 @@ function buildUsDirectoryShell(allTeams, badgeText, h1Text, subtitleText) {
   const teamCardsHtml = allTeams
     .map(t => {
       const borderColor = (t.colors && t.colors.primary) || '#AF1E2D';
+      const networkLabel =
+        t.country === 'CA' ? 'ESPN+ (Out-of-Market) • US National TV' : `${t.rsn} • ESPN+`;
       return `        <a href="/${t.slug}/" style="border-left: 6px solid ${borderColor};" class="bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex items-center justify-between gap-3 group">
           <div>
             <span class="font-bold text-base sm:text-lg text-slate-900 dark:text-white block">${t.name}</span>
-            <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">${t.rsn} • ESPN+</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">${networkLabel}</span>
           </div>
           <span class="text-slate-400 group-hover:text-slate-900 dark:group-hover:text-white group-hover:translate-x-1 transition font-bold">&rarr;</span>
         </a>`;
@@ -940,13 +1114,17 @@ async function main() {
       JSON.stringify(teamData, null, 2),
       'utf-8'
     );
+    const manifestDesc =
+      team.country === 'CA'
+        ? `US TV channels, ZIP lookup, ESPN+, and national TV schedule for ${team.name}.`
+        : `US TV channels, local RSN (${team.rsn}), ZIP lookup, and ESPN+ schedule for ${team.name}.`;
     fs.writeFileSync(
       path.join(teamDir, 'manifest.json'),
       buildUsManifestJson({
         id: `/${team.slug}/`,
         name: `${team.name} US Blackout Guide`,
         shortName: team.abbreviation,
-        description: `US TV channels, local RSN (${team.rsn}), ZIP lookup, and ESPN+ schedule for ${team.name}.`,
+        description: manifestDesc,
         startUrl: `/${team.slug}/?utm_source=pwa&utm_medium=homescreen`,
         scope: `/${team.slug}/`,
         backgroundColor: colors.dark || '#020617',

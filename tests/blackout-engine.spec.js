@@ -216,3 +216,28 @@ test.describe('CA site: cross-border (Bruins)', () => {
     await expect(advice).toContainText('Out-of-Market');
   });
 });
+
+// =====================================================================
+// 5. US Local RSN channel filter & 2026-27 network alignment
+// =====================================================================
+test.describe('US site: 2026-27 RSN labels and Local RSN channel filter', () => {
+  test('Seattle Kraken lists Prime Video in Local RSN and filters regional games cleanly', async ({ page }) => {
+    await openTeam(page, `${US_SITE}/seattle-kraken/`);
+    await expect(sub(page, 'sub_us_rsn')).toContainText('Prime Video');
+
+    await page.locator('#channelFilter').selectOption('LOCAL_RSN');
+    const filteredRows = await page.locator('#scheduleTableBody tr').count();
+    expect(filteredRows).toBeGreaterThan(5);
+    await expect(page.locator('#scheduleTableBody')).toContainText('Prime Video');
+  });
+
+  test('Detroit Red Wings uses Detroit SportsNet (DSN) and filters DSN rows cleanly', async ({ page }) => {
+    await openTeam(page, `${US_SITE}/detroit-red-wings/`);
+    await expect(sub(page, 'sub_us_rsn')).toContainText('Detroit SportsNet (DSN)');
+    await expect(sub(page, 'sub_us_rsn')).not.toContainText('FanDuel');
+
+    await page.locator('#channelFilter').selectOption('LOCAL_RSN');
+    const filteredRows = await page.locator('#scheduleTableBody tr').count();
+    expect(filteredRows).toBeGreaterThan(5);
+  });
+});

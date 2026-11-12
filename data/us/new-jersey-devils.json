@@ -6,11 +6,6 @@
     "city": "New Jersey",
     "slug": "new-jersey-devils",
     "rsn": "MSG Sportsnet",
-    "colors": {
-      "primary": "#CE1126",
-      "secondary": "#111111",
-      "dark": "#000000"
-    },
     "territoryDescription": "Northern & Central New Jersey, NYC Metro & Hudson Valley",
     "zipRanges": [
       [
@@ -25,7 +20,12 @@
         124,
         127
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#CE1126",
+      "secondary": "#111111",
+      "dark": "#000000"
+    }
   },
   "schedule": [
     {
@@ -38,13 +38,13 @@
       "fullMatchup": "New Jersey Devils vs Philadelphia Flyers",
       "venue": "Prudential Center",
       "rsn": "MSG Sportsnet",
+      "netUSNat": null,
       "primaryNet": "MSG Sportsnet",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)"
     },
     {
       "id": 2026020029,
@@ -56,13 +56,13 @@
       "fullMatchup": "New Jersey Devils at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020047,
@@ -74,13 +74,13 @@
       "fullMatchup": "New Jersey Devils vs Utah Mammoth",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020071,
@@ -92,13 +92,13 @@
       "fullMatchup": "New Jersey Devils vs Vancouver Canucks",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020088,
@@ -110,13 +110,13 @@
       "fullMatchup": "New Jersey Devils vs Ottawa Senators",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": "NHLN",
       "primaryNet": "MSGSN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MSGSN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MSGSN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020090,
@@ -128,13 +128,13 @@
       "fullMatchup": "New Jersey Devils at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020113,
@@ -146,13 +146,13 @@
       "fullMatchup": "New Jersey Devils vs New York Rangers",
       "venue": "Prudential Center",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020121,
@@ -164,13 +164,13 @@
       "fullMatchup": "New Jersey Devils at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "MSGSN",
+      "netUSNat": "NHLN",
       "primaryNet": "MSGSN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MSGSN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MSGSN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020142,
@@ -182,13 +182,13 @@
       "fullMatchup": "New Jersey Devils vs Colorado Avalanche",
       "venue": "Prudential Center",
       "rsn": "MSG 2",
+      "netUSNat": null,
       "primaryNet": "MSG 2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)"
     },
     {
       "id": 2026020157,
@@ -200,13 +200,13 @@
       "fullMatchup": "New Jersey Devils vs Anaheim Ducks",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020169,
@@ -218,13 +218,13 @@
       "fullMatchup": "New Jersey Devils vs Los Angeles Kings",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020193,
@@ -236,13 +236,13 @@
       "fullMatchup": "New Jersey Devils at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020201,
@@ -254,13 +254,13 @@
       "fullMatchup": "New Jersey Devils at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020214,
@@ -272,13 +272,13 @@
       "fullMatchup": "New Jersey Devils at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020239,
@@ -290,13 +290,13 @@
       "fullMatchup": "New Jersey Devils vs Edmonton Oilers",
       "venue": "Prudential Center",
       "rsn": "MSG Sportsnet",
+      "netUSNat": null,
       "primaryNet": "MSG Sportsnet",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)"
     },
     {
       "id": 2026020254,
@@ -308,13 +308,13 @@
       "fullMatchup": "New Jersey Devils vs St. Louis Blues",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020270,
@@ -326,13 +326,13 @@
       "fullMatchup": "New Jersey Devils at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020279,
@@ -344,13 +344,13 @@
       "fullMatchup": "New Jersey Devils at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "MSGSN",
+      "netUSNat": "NHLN",
       "primaryNet": "MSGSN",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MSGSN / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MSGSN / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020291,
@@ -362,13 +362,13 @@
       "fullMatchup": "New Jersey Devils at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020303,
@@ -380,13 +380,13 @@
       "fullMatchup": "New Jersey Devils vs Washington Capitals",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020318,
@@ -398,13 +398,13 @@
       "fullMatchup": "New Jersey Devils at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020345,
@@ -416,13 +416,13 @@
       "fullMatchup": "New Jersey Devils vs Montreal Canadiens",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020368,
@@ -434,13 +434,13 @@
       "fullMatchup": "New Jersey Devils at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020378,
@@ -452,13 +452,13 @@
       "fullMatchup": "New Jersey Devils vs Columbus Blue Jackets",
       "venue": "Prudential Center",
       "rsn": "MSG",
+      "netUSNat": "NHLN",
       "primaryNet": "MSG",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on MSG / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020393,
@@ -470,13 +470,13 @@
       "fullMatchup": "New Jersey Devils at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020401,
@@ -488,13 +488,13 @@
       "fullMatchup": "New Jersey Devils vs Calgary Flames",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020418,
@@ -506,13 +506,13 @@
       "fullMatchup": "New Jersey Devils vs Winnipeg Jets",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020437,
@@ -524,13 +524,13 @@
       "fullMatchup": "New Jersey Devils vs San Jose Sharks",
       "venue": "Prudential Center",
       "rsn": "MSG Sportsnet",
+      "netUSNat": null,
       "primaryNet": "MSG Sportsnet",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)"
     },
     {
       "id": 2026020449,
@@ -542,13 +542,13 @@
       "fullMatchup": "New Jersey Devils at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020467,
@@ -560,13 +560,13 @@
       "fullMatchup": "New Jersey Devils at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020484,
@@ -578,13 +578,13 @@
       "fullMatchup": "New Jersey Devils at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020496,
@@ -596,13 +596,13 @@
       "fullMatchup": "New Jersey Devils vs Detroit Red Wings",
       "venue": "Prudential Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020514,
@@ -614,13 +614,13 @@
       "fullMatchup": "New Jersey Devils at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020539,
@@ -632,13 +632,13 @@
       "fullMatchup": "New Jersey Devils vs New York Rangers",
       "venue": "Prudential Center",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020553,
@@ -650,13 +650,13 @@
       "fullMatchup": "New Jersey Devils vs Toronto Maple Leafs",
       "venue": "Prudential Center",
       "rsn": "MSG Sportsnet",
+      "netUSNat": null,
       "primaryNet": "MSG Sportsnet",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)"
     },
     {
       "id": 2026020567,
@@ -668,13 +668,13 @@
       "fullMatchup": "New Jersey Devils vs Boston Bruins",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020581,
@@ -686,13 +686,13 @@
       "fullMatchup": "New Jersey Devils vs Nashville Predators",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020592,
@@ -704,13 +704,13 @@
       "fullMatchup": "New Jersey Devils at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020603,
@@ -722,13 +722,13 @@
       "fullMatchup": "New Jersey Devils at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020616,
@@ -740,13 +740,13 @@
       "fullMatchup": "New Jersey Devils vs Boston Bruins",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020634,
@@ -758,13 +758,13 @@
       "fullMatchup": "New Jersey Devils at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020652,
@@ -776,13 +776,13 @@
       "fullMatchup": "New Jersey Devils at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020665,
@@ -794,13 +794,13 @@
       "fullMatchup": "New Jersey Devils at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020680,
@@ -812,13 +812,13 @@
       "fullMatchup": "New Jersey Devils at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020695,
@@ -830,13 +830,13 @@
       "fullMatchup": "New Jersey Devils vs Columbus Blue Jackets",
       "venue": "Prudential Center",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020709,
@@ -848,13 +848,13 @@
       "fullMatchup": "New Jersey Devils vs Chicago Blackhawks",
       "venue": "Prudential Center",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020729,
@@ -866,13 +866,13 @@
       "fullMatchup": "New Jersey Devils at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020738,
@@ -884,13 +884,13 @@
       "fullMatchup": "New Jersey Devils at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020763,
@@ -902,13 +902,13 @@
       "fullMatchup": "New Jersey Devils vs New York Islanders",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020787,
@@ -920,13 +920,13 @@
       "fullMatchup": "New Jersey Devils vs Dallas Stars",
       "venue": "Prudential Center",
       "rsn": "MSG Sportsnet",
+      "netUSNat": null,
       "primaryNet": "MSG Sportsnet",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)"
     },
     {
       "id": 2026020801,
@@ -938,13 +938,13 @@
       "fullMatchup": "New Jersey Devils vs Tampa Bay Lightning",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020820,
@@ -956,13 +956,13 @@
       "fullMatchup": "New Jersey Devils at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020828,
@@ -974,13 +974,13 @@
       "fullMatchup": "New Jersey Devils vs Washington Capitals",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020838,
@@ -992,13 +992,13 @@
       "fullMatchup": "New Jersey Devils vs Seattle Kraken",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020856,
@@ -1010,13 +1010,13 @@
       "fullMatchup": "New Jersey Devils at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020866,
@@ -1028,13 +1028,13 @@
       "fullMatchup": "New Jersey Devils at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020879,
@@ -1046,13 +1046,13 @@
       "fullMatchup": "New Jersey Devils at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020893,
@@ -1064,13 +1064,13 @@
       "fullMatchup": "New Jersey Devils at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026020923,
@@ -1082,13 +1082,13 @@
       "fullMatchup": "New Jersey Devils at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "MSG",
+      "netUSNat": null,
       "primaryNet": "MSG",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG)"
     },
     {
       "id": 2026020942,
@@ -1100,13 +1100,13 @@
       "fullMatchup": "New Jersey Devils at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020954,
@@ -1118,13 +1118,13 @@
       "fullMatchup": "New Jersey Devils at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020968,
@@ -1136,13 +1136,13 @@
       "fullMatchup": "New Jersey Devils vs Buffalo Sabres",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020979,
@@ -1154,13 +1154,13 @@
       "fullMatchup": "New Jersey Devils at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026020993,
@@ -1172,13 +1172,13 @@
       "fullMatchup": "New Jersey Devils vs Carolina Hurricanes",
       "venue": "Prudential Center",
       "rsn": "MSG Sportsnet",
+      "netUSNat": null,
       "primaryNet": "MSG Sportsnet",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG Sportsnet)"
     },
     {
       "id": 2026021015,
@@ -1190,13 +1190,13 @@
       "fullMatchup": "New Jersey Devils at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026021032,
@@ -1208,13 +1208,13 @@
       "fullMatchup": "New Jersey Devils at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021045,
@@ -1226,13 +1226,13 @@
       "fullMatchup": "New Jersey Devils vs Ottawa Senators",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021059,
@@ -1244,13 +1244,13 @@
       "fullMatchup": "New Jersey Devils at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021063,
@@ -1262,13 +1262,13 @@
       "fullMatchup": "New Jersey Devils vs Vegas Golden Knights",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021093,
@@ -1280,13 +1280,13 @@
       "fullMatchup": "New Jersey Devils at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026021108,
@@ -1298,13 +1298,13 @@
       "fullMatchup": "New Jersey Devils at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021128,
@@ -1316,13 +1316,13 @@
       "fullMatchup": "New Jersey Devils at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "MSG 2",
+      "netUSNat": null,
       "primaryNet": "MSG 2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSG 2)"
     },
     {
       "id": 2026021164,
@@ -1334,13 +1334,13 @@
       "fullMatchup": "New Jersey Devils vs Pittsburgh Penguins",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021180,
@@ -1352,13 +1352,13 @@
       "fullMatchup": "New Jersey Devils vs Toronto Maple Leafs",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021198,
@@ -1370,13 +1370,13 @@
       "fullMatchup": "New Jersey Devils vs Philadelphia Flyers",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021215,
@@ -1388,13 +1388,13 @@
       "fullMatchup": "New Jersey Devils at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021232,
@@ -1406,13 +1406,13 @@
       "fullMatchup": "New Jersey Devils at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     },
     {
       "id": 2026021244,
@@ -1424,13 +1424,13 @@
       "fullMatchup": "New Jersey Devils vs Carolina Hurricanes",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021259,
@@ -1442,13 +1442,13 @@
       "fullMatchup": "New Jersey Devils vs Minnesota Wild",
       "venue": "Prudential Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021281,
@@ -1460,13 +1460,13 @@
       "fullMatchup": "New Jersey Devils at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021291,
@@ -1478,13 +1478,13 @@
       "fullMatchup": "New Jersey Devils vs Florida Panthers",
       "venue": "Prudential Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021303,
@@ -1496,13 +1496,13 @@
       "fullMatchup": "New Jersey Devils vs Tampa Bay Lightning",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021318,
@@ -1514,13 +1514,13 @@
       "fullMatchup": "New Jersey Devils vs New York Islanders",
       "venue": "Prudential Center",
       "rsn": "MSGSN",
+      "netUSNat": null,
       "primaryNet": "MSGSN",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN)"
     },
     {
       "id": 2026021335,
@@ -1532,13 +1532,13 @@
       "fullMatchup": "New Jersey Devils vs Pittsburgh Penguins",
       "venue": "Prudential Center",
       "rsn": "MSGSN2",
+      "netUSNat": null,
       "primaryNet": "MSGSN2",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (MSGSN2)"
     }
   ]
 }

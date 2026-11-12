@@ -5,12 +5,7 @@
     "nickname": "Lightning",
     "city": "Tampa Bay",
     "slug": "tampa-bay-lightning",
-    "rsn": "FanDuel Sports Sun",
-    "colors": {
-      "primary": "#002868",
-      "secondary": "#00205B",
-      "dark": "#001233"
-    },
+    "rsn": "Scripps Sports (The Spot)",
     "territoryDescription": "Central & North Florida (Tampa Bay, Orlando, Jacksonville, Gainesville & Sarasota)",
     "zipRanges": [
       [
@@ -25,7 +20,12 @@
         342,
         347
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#002868",
+      "secondary": "#00205B",
+      "dark": "#001233"
+    }
   },
   "schedule": [
     {
@@ -38,13 +38,13 @@
       "fullMatchup": "Tampa Bay Lightning at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020024,
@@ -56,13 +56,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Washington Capitals",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020040,
@@ -74,13 +74,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Philadelphia Flyers",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": "NHLN",
       "primaryNet": "The Spot",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on The Spot / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on The Spot / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020060,
@@ -92,13 +92,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Minnesota Wild",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020081,
@@ -110,13 +110,13 @@
       "fullMatchup": "Tampa Bay Lightning at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020095,
@@ -128,13 +128,13 @@
       "fullMatchup": "Tampa Bay Lightning at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020111,
@@ -146,13 +146,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Seattle Kraken",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020123,
@@ -164,13 +164,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Vancouver Canucks",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020151,
@@ -182,13 +182,13 @@
       "fullMatchup": "Tampa Bay Lightning at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020167,
@@ -200,13 +200,13 @@
       "fullMatchup": "Tampa Bay Lightning at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020177,
@@ -218,13 +218,13 @@
       "fullMatchup": "Tampa Bay Lightning at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020204,
@@ -236,13 +236,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Winnipeg Jets",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020219,
@@ -254,13 +254,13 @@
       "fullMatchup": "Tampa Bay Lightning at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020238,
@@ -272,13 +272,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Detroit Red Wings",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020253,
@@ -290,13 +290,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Chicago Blackhawks",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020273,
@@ -308,13 +308,13 @@
       "fullMatchup": "Tampa Bay Lightning at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020280,
@@ -326,13 +326,13 @@
       "fullMatchup": "Tampa Bay Lightning at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020293,
@@ -344,13 +344,13 @@
       "fullMatchup": "Tampa Bay Lightning at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020304,
@@ -362,13 +362,13 @@
       "fullMatchup": "Tampa Bay Lightning at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020316,
@@ -380,13 +380,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Detroit Red Wings",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020334,
@@ -397,14 +397,14 @@
       "opp": "WSH",
       "fullMatchup": "Tampa Bay Lightning vs Washington Capitals",
       "venue": "Benchmark International Arena",
-      "rsn": "FanDuel Sports Sun",
-      "primaryNet": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
+      "netUSNat": null,
+      "primaryNet": "Scripps Sports (The Spot)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports Sun)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020349,
@@ -415,14 +415,14 @@
       "opp": "EDM",
       "fullMatchup": "Tampa Bay Lightning vs Edmonton Oilers",
       "venue": "Benchmark International Arena",
-      "rsn": "FanDuel Sports Sun",
-      "primaryNet": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
+      "netUSNat": null,
+      "primaryNet": "Scripps Sports (The Spot)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports Sun)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020374,
@@ -434,13 +434,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Buffalo Sabres",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": "NHLN",
       "primaryNet": "The Spot",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on The Spot / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on The Spot / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020388,
@@ -452,13 +452,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Carolina Hurricanes",
       "venue": "Benchmark International Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020404,
@@ -470,13 +470,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Ottawa Senators",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020416,
@@ -488,13 +488,13 @@
       "fullMatchup": "Tampa Bay Lightning at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020445,
@@ -506,13 +506,13 @@
       "fullMatchup": "Tampa Bay Lightning at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020469,
@@ -524,13 +524,13 @@
       "fullMatchup": "Tampa Bay Lightning at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020483,
@@ -542,13 +542,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Columbus Blue Jackets",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020502,
@@ -560,13 +560,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Boston Bruins",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020516,
@@ -578,13 +578,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Pittsburgh Penguins",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020530,
@@ -596,13 +596,13 @@
       "fullMatchup": "Tampa Bay Lightning at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020540,
@@ -614,13 +614,13 @@
       "fullMatchup": "Tampa Bay Lightning at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020552,
@@ -632,13 +632,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Calgary Flames",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020570,
@@ -650,13 +650,13 @@
       "fullMatchup": "Tampa Bay Lightning at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020578,
@@ -668,13 +668,13 @@
       "fullMatchup": "Tampa Bay Lightning at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020590,
@@ -686,13 +686,13 @@
       "fullMatchup": "Tampa Bay Lightning vs St. Louis Blues",
       "venue": "Benchmark International Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020601,
@@ -704,13 +704,13 @@
       "fullMatchup": "Tampa Bay Lightning at Florida Panthers",
       "venue": "Amerant Bank Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020623,
@@ -722,13 +722,13 @@
       "fullMatchup": "Tampa Bay Lightning at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020628,
@@ -740,13 +740,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Nashville Predators",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020644,
@@ -758,13 +758,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Montreal Canadiens",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020657,
@@ -776,13 +776,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Buffalo Sabres",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020688,
@@ -794,13 +794,13 @@
       "fullMatchup": "Tampa Bay Lightning at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020702,
@@ -812,13 +812,13 @@
       "fullMatchup": "Tampa Bay Lightning at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020710,
@@ -830,13 +830,13 @@
       "fullMatchup": "Tampa Bay Lightning at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020726,
@@ -848,13 +848,13 @@
       "fullMatchup": "Tampa Bay Lightning at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020747,
@@ -866,13 +866,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Vegas Golden Knights",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020759,
@@ -884,13 +884,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Ottawa Senators",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020777,
@@ -902,13 +902,13 @@
       "fullMatchup": "Tampa Bay Lightning at Boston Bruins",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020801,
@@ -920,13 +920,13 @@
       "fullMatchup": "Tampa Bay Lightning at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020812,
@@ -938,13 +938,13 @@
       "fullMatchup": "Tampa Bay Lightning at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020837,
@@ -956,13 +956,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Los Angeles Kings",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020871,
@@ -974,13 +974,13 @@
       "fullMatchup": "Tampa Bay Lightning vs New York Islanders",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020885,
@@ -992,13 +992,13 @@
       "fullMatchup": "Tampa Bay Lightning at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020890,
@@ -1010,13 +1010,13 @@
       "fullMatchup": "Tampa Bay Lightning at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020907,
@@ -1028,13 +1028,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Dallas Stars",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020919,
@@ -1046,13 +1046,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Colorado Avalanche",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020940,
@@ -1063,14 +1063,14 @@
       "opp": "FLA",
       "fullMatchup": "Tampa Bay Lightning vs Florida Panthers",
       "venue": "Benchmark International Arena",
-      "rsn": "FanDuel Sports Sun",
-      "primaryNet": "FanDuel Sports Sun",
+      "rsn": "Scripps Sports (The Spot)",
+      "netUSNat": null,
+      "primaryNet": "Scripps Sports (The Spot)",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (FanDuel Sports Sun)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports (The Spot))"
     },
     {
       "id": 2026020953,
@@ -1082,13 +1082,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Anaheim Ducks",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020973,
@@ -1100,13 +1100,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Toronto Maple Leafs",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026020992,
@@ -1118,13 +1118,13 @@
       "fullMatchup": "Tampa Bay Lightning vs San Jose Sharks",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021010,
@@ -1136,13 +1136,13 @@
       "fullMatchup": "Tampa Bay Lightning at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021024,
@@ -1154,13 +1154,13 @@
       "fullMatchup": "Tampa Bay Lightning at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021034,
@@ -1172,13 +1172,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Utah Mammoth",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021054,
@@ -1190,13 +1190,13 @@
       "fullMatchup": "Tampa Bay Lightning at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021068,
@@ -1208,13 +1208,13 @@
       "fullMatchup": "Tampa Bay Lightning at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021079,
@@ -1226,13 +1226,13 @@
       "fullMatchup": "Tampa Bay Lightning at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021091,
@@ -1244,13 +1244,13 @@
       "fullMatchup": "Tampa Bay Lightning at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021108,
@@ -1262,13 +1262,13 @@
       "fullMatchup": "Tampa Bay Lightning vs New Jersey Devils",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021127,
@@ -1280,13 +1280,13 @@
       "fullMatchup": "Tampa Bay Lightning vs New York Islanders",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021138,
@@ -1298,13 +1298,13 @@
       "fullMatchup": "Tampa Bay Lightning at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021155,
@@ -1316,13 +1316,13 @@
       "fullMatchup": "Tampa Bay Lightning at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021161,
@@ -1334,13 +1334,13 @@
       "fullMatchup": "Tampa Bay Lightning at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021179,
@@ -1352,13 +1352,13 @@
       "fullMatchup": "Tampa Bay Lightning at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021197,
@@ -1370,13 +1370,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Florida Panthers",
       "venue": "Benchmark International Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021213,
@@ -1388,13 +1388,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Philadelphia Flyers",
       "venue": "Benchmark International Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021233,
@@ -1406,13 +1406,13 @@
       "fullMatchup": "Tampa Bay Lightning vs New York Rangers",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021250,
@@ -1424,13 +1424,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Toronto Maple Leafs",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021264,
@@ -1442,13 +1442,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Columbus Blue Jackets",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021278,
@@ -1460,13 +1460,13 @@
       "fullMatchup": "Tampa Bay Lightning at Boston Bruins",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021297,
@@ -1478,13 +1478,13 @@
       "fullMatchup": "Tampa Bay Lightning at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021303,
@@ -1496,13 +1496,13 @@
       "fullMatchup": "Tampa Bay Lightning at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021317,
@@ -1514,13 +1514,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Montreal Canadiens",
       "venue": "Benchmark International Arena",
       "rsn": "The Spot",
+      "netUSNat": null,
       "primaryNet": "The Spot",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (The Spot)"
     },
     {
       "id": 2026021341,
@@ -1532,13 +1532,13 @@
       "fullMatchup": "Tampa Bay Lightning vs Boston Bruins",
       "venue": "Benchmark International Arena",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     }
   ]
 }

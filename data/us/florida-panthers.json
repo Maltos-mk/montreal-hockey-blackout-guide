@@ -6,11 +6,6 @@
     "city": "Florida",
     "slug": "florida-panthers",
     "rsn": "Scripps Sports",
-    "colors": {
-      "primary": "#C8102E",
-      "secondary": "#041E42",
-      "dark": "#021126"
-    },
     "territoryDescription": "South Florida (Miami, Fort Lauderdale, West Palm Beach, Fort Myers & Naples)",
     "zipRanges": [
       [
@@ -29,7 +24,12 @@
         349,
         349
       ]
-    ]
+    ],
+    "colors": {
+      "primary": "#C8102E",
+      "secondary": "#041E42",
+      "dark": "#021126"
+    }
   },
   "schedule": [
     {
@@ -42,13 +42,13 @@
       "fullMatchup": "Florida Panthers at Carolina Hurricanes",
       "venue": "Lenovo Center",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020016,
@@ -60,13 +60,13 @@
       "fullMatchup": "Florida Panthers at San Jose Sharks",
       "venue": "SAP Center at San Jose",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020037,
@@ -78,13 +78,13 @@
       "fullMatchup": "Florida Panthers at Anaheim Ducks",
       "venue": "Honda Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020052,
@@ -96,13 +96,13 @@
       "fullMatchup": "Florida Panthers at Los Angeles Kings",
       "venue": "Crypto.com Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020073,
@@ -114,13 +114,13 @@
       "fullMatchup": "Florida Panthers vs Minnesota Wild",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020087,
@@ -132,13 +132,13 @@
       "fullMatchup": "Florida Panthers at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020091,
@@ -150,13 +150,13 @@
       "fullMatchup": "Florida Panthers at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020112,
@@ -168,13 +168,13 @@
       "fullMatchup": "Florida Panthers vs Vancouver Canucks",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020124,
@@ -186,13 +186,13 @@
       "fullMatchup": "Florida Panthers vs Seattle Kraken",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020153,
@@ -204,13 +204,13 @@
       "fullMatchup": "Florida Panthers at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020158,
@@ -222,13 +222,13 @@
       "fullMatchup": "Florida Panthers at Pittsburgh Penguins",
       "venue": "PPG Paints Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020180,
@@ -240,13 +240,13 @@
       "fullMatchup": "Florida Panthers at Chicago Blackhawks",
       "venue": "United Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020194,
@@ -258,13 +258,13 @@
       "fullMatchup": "Florida Panthers at Winnipeg Jets",
       "venue": "Canada Life Centre",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020215,
@@ -276,13 +276,13 @@
       "fullMatchup": "Florida Panthers vs Winnipeg Jets",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020233,
@@ -294,13 +294,13 @@
       "fullMatchup": "Florida Panthers vs Detroit Red Wings",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020248,
@@ -312,13 +312,13 @@
       "fullMatchup": "Florida Panthers vs Chicago Blackhawks",
       "venue": "Amerant Bank Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020265,
@@ -330,13 +330,13 @@
       "fullMatchup": "Florida Panthers at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020277,
@@ -348,13 +348,13 @@
       "fullMatchup": "Florida Panthers at Boston Bruins",
       "venue": "TD Garden",
       "rsn": "SCRIPPS",
+      "netUSNat": "NHLN",
       "primaryNet": "SCRIPPS",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on SCRIPPS / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on SCRIPPS / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020289,
@@ -366,13 +366,13 @@
       "fullMatchup": "Florida Panthers at Columbus Blue Jackets",
       "venue": "Nationwide Arena",
       "rsn": "Scripps Sports",
+      "netUSNat": null,
       "primaryNet": "Scripps Sports",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports)"
     },
     {
       "id": 2026020302,
@@ -384,13 +384,13 @@
       "fullMatchup": "Florida Panthers vs Detroit Red Wings",
       "venue": "Amerant Bank Arena",
       "rsn": "Scripps Sports",
+      "netUSNat": null,
       "primaryNet": "Scripps Sports",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports)"
     },
     {
       "id": 2026020320,
@@ -402,13 +402,13 @@
       "fullMatchup": "Florida Panthers at St. Louis Blues",
       "venue": "Enterprise Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020327,
@@ -420,13 +420,13 @@
       "fullMatchup": "Florida Panthers at Dallas Stars",
       "venue": "American Airlines Center",
       "rsn": "SCRIPPS",
+      "netUSNat": "NHLN",
       "primaryNet": "SCRIPPS",
       "secondaryNet": "NHLN",
       "espnPlus": false,
       "typeUS": "nhl_network",
       "coverageLabel": "NHL Network / Local RSN",
-      "bannerText": "In-market on SCRIPPS / Out-of-market on NHL Network (Blacked out on ESPN+)",
-      "netUSNat": "NHLN"
+      "bannerText": "In-market on SCRIPPS / Out-of-market on NHL Network (Blacked out on ESPN+)"
     },
     {
       "id": 2026020335,
@@ -438,13 +438,13 @@
       "fullMatchup": "Florida Panthers vs Edmonton Oilers",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020361,
@@ -456,13 +456,13 @@
       "fullMatchup": "Florida Panthers vs Buffalo Sabres",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020389,
@@ -474,13 +474,13 @@
       "fullMatchup": "Florida Panthers vs Ottawa Senators",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020406,
@@ -492,13 +492,13 @@
       "fullMatchup": "Florida Panthers at Washington Capitals",
       "venue": "Capital One Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020416,
@@ -510,13 +510,13 @@
       "fullMatchup": "Florida Panthers vs Tampa Bay Lightning",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020438,
@@ -528,13 +528,13 @@
       "fullMatchup": "Florida Panthers at New York Islanders",
       "venue": "UBS Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020448,
@@ -546,13 +546,13 @@
       "fullMatchup": "Florida Panthers at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020465,
@@ -564,13 +564,13 @@
       "fullMatchup": "Florida Panthers at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020488,
@@ -582,13 +582,13 @@
       "fullMatchup": "Florida Panthers vs Boston Bruins",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020503,
@@ -600,13 +600,13 @@
       "fullMatchup": "Florida Panthers vs Pittsburgh Penguins",
       "venue": "Amerant Bank Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020521,
@@ -618,13 +618,13 @@
       "fullMatchup": "Florida Panthers at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020532,
@@ -636,13 +636,13 @@
       "fullMatchup": "Florida Panthers at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020536,
@@ -654,13 +654,13 @@
       "fullMatchup": "Florida Panthers at Boston Bruins",
       "venue": "TD Garden",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020568,
@@ -672,13 +672,13 @@
       "fullMatchup": "Florida Panthers vs Calgary Flames",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020586,
@@ -690,13 +690,13 @@
       "fullMatchup": "Florida Panthers vs St. Louis Blues",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020601,
@@ -708,13 +708,13 @@
       "fullMatchup": "Florida Panthers vs Tampa Bay Lightning",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020621,
@@ -726,13 +726,13 @@
       "fullMatchup": "Florida Panthers vs Nashville Predators",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020638,
@@ -744,13 +744,13 @@
       "fullMatchup": "Florida Panthers vs Buffalo Sabres",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020650,
@@ -762,13 +762,13 @@
       "fullMatchup": "Florida Panthers at Nashville Predators",
       "venue": "Bridgestone Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020656,
@@ -780,13 +780,13 @@
       "fullMatchup": "Florida Panthers vs Montreal Canadiens",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020685,
@@ -798,13 +798,13 @@
       "fullMatchup": "Florida Panthers at Calgary Flames",
       "venue": "Scotiabank Saddledome",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020701,
@@ -816,13 +816,13 @@
       "fullMatchup": "Florida Panthers at Edmonton Oilers",
       "venue": "Rogers Place",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020719,
@@ -834,13 +834,13 @@
       "fullMatchup": "Florida Panthers at Vancouver Canucks",
       "venue": "Rogers Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020736,
@@ -852,13 +852,13 @@
       "fullMatchup": "Florida Panthers at Seattle Kraken",
       "venue": "Climate Pledge Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020751,
@@ -870,13 +870,13 @@
       "fullMatchup": "Florida Panthers at Minnesota Wild",
       "venue": "Grand Casino Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020760,
@@ -888,13 +888,13 @@
       "fullMatchup": "Florida Panthers vs Vegas Golden Knights",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020784,
@@ -906,13 +906,13 @@
       "fullMatchup": "Florida Panthers vs Ottawa Senators",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020800,
@@ -924,13 +924,13 @@
       "fullMatchup": "Florida Panthers vs Carolina Hurricanes",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020827,
@@ -942,13 +942,13 @@
       "fullMatchup": "Florida Panthers vs Los Angeles Kings",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020839,
@@ -960,13 +960,13 @@
       "fullMatchup": "Florida Panthers at Philadelphia Flyers",
       "venue": "Xfinity Mobile Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020847,
@@ -978,13 +978,13 @@
       "fullMatchup": "Florida Panthers at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026020861,
@@ -996,13 +996,13 @@
       "fullMatchup": "Florida Panthers at Detroit Red Wings",
       "venue": "Little Caesars Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020881,
@@ -1014,13 +1014,13 @@
       "fullMatchup": "Florida Panthers vs New York Islanders",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020888,
@@ -1032,13 +1032,13 @@
       "fullMatchup": "Florida Panthers vs Washington Capitals",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020908,
@@ -1050,13 +1050,13 @@
       "fullMatchup": "Florida Panthers vs Colorado Avalanche",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020915,
@@ -1068,13 +1068,13 @@
       "fullMatchup": "Florida Panthers vs Dallas Stars",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020940,
@@ -1086,13 +1086,13 @@
       "fullMatchup": "Florida Panthers at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": "Scripps Sports",
+      "netUSNat": null,
       "primaryNet": "Scripps Sports",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (Scripps Sports)"
     },
     {
       "id": 2026020954,
@@ -1104,13 +1104,13 @@
       "fullMatchup": "Florida Panthers vs New Jersey Devils",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020970,
@@ -1122,13 +1122,13 @@
       "fullMatchup": "Florida Panthers vs Anaheim Ducks",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026020980,
@@ -1140,13 +1140,13 @@
       "fullMatchup": "Florida Panthers vs San Jose Sharks",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021001,
@@ -1158,13 +1158,13 @@
       "fullMatchup": "Florida Panthers at Vegas Golden Knights",
       "venue": "T-Mobile Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021017,
@@ -1176,13 +1176,13 @@
       "fullMatchup": "Florida Panthers at Utah Mammoth",
       "venue": "Delta Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021026,
@@ -1194,13 +1194,13 @@
       "fullMatchup": "Florida Panthers at Colorado Avalanche",
       "venue": "Ball Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021044,
@@ -1212,13 +1212,13 @@
       "fullMatchup": "Florida Panthers vs Utah Mammoth",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021060,
@@ -1230,13 +1230,13 @@
       "fullMatchup": "Florida Panthers vs Pittsburgh Penguins",
       "venue": "Amerant Bank Arena",
       "rsn": null,
+      "netUSNat": "ESPN",
       "primaryNet": "ESPN",
       "secondaryNet": "",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "ESPN"
+      "bannerText": "National TV Exclusive on ESPN (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021076,
@@ -1248,13 +1248,13 @@
       "fullMatchup": "Florida Panthers vs Toronto Maple Leafs",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021093,
@@ -1266,13 +1266,13 @@
       "fullMatchup": "Florida Panthers vs New Jersey Devils",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021118,
@@ -1284,13 +1284,13 @@
       "fullMatchup": "Florida Panthers vs New York Islanders",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021141,
@@ -1302,13 +1302,13 @@
       "fullMatchup": "Florida Panthers at Toronto Maple Leafs",
       "venue": "Scotiabank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021147,
@@ -1320,13 +1320,13 @@
       "fullMatchup": "Florida Panthers at Montreal Canadiens",
       "venue": "Centre Bell",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021162,
@@ -1338,13 +1338,13 @@
       "fullMatchup": "Florida Panthers at Ottawa Senators",
       "venue": "Canadian Tire Centre",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021174,
@@ -1356,13 +1356,13 @@
       "fullMatchup": "Florida Panthers at Buffalo Sabres",
       "venue": "KeyBank Center",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021197,
@@ -1374,13 +1374,13 @@
       "fullMatchup": "Florida Panthers at Tampa Bay Lightning",
       "venue": "Benchmark International Arena",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021214,
@@ -1392,13 +1392,13 @@
       "fullMatchup": "Florida Panthers vs New York Rangers",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021230,
@@ -1410,13 +1410,13 @@
       "fullMatchup": "Florida Panthers vs Philadelphia Flyers",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021251,
@@ -1428,13 +1428,13 @@
       "fullMatchup": "Florida Panthers vs Columbus Blue Jackets",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021265,
@@ -1446,13 +1446,13 @@
       "fullMatchup": "Florida Panthers vs Toronto Maple Leafs",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021277,
@@ -1464,13 +1464,13 @@
       "fullMatchup": "Florida Panthers at New York Rangers",
       "venue": "Madison Square Garden",
       "rsn": null,
+      "netUSNat": "ABC",
       "primaryNet": "ABC",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+",
-      "netUSNat": "ABC"
+      "bannerText": "National Broadcast on ABC / Simulcast on ESPN+"
     },
     {
       "id": 2026021291,
@@ -1482,13 +1482,13 @@
       "fullMatchup": "Florida Panthers at New Jersey Devils",
       "venue": "Prudential Center",
       "rsn": null,
+      "netUSNat": "TNT",
       "primaryNet": "TNT",
       "secondaryNet": "HBO MAX",
       "espnPlus": false,
       "typeUS": "national",
       "coverageLabel": "US National Exclusive",
-      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)",
-      "netUSNat": "TNT"
+      "bannerText": "National TV Exclusive on TNT (Blacked out on ESPN+ & local RSN)"
     },
     {
       "id": 2026021302,
@@ -1500,13 +1500,13 @@
       "fullMatchup": "Florida Panthers vs Montreal Canadiens",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021326,
@@ -1518,13 +1518,13 @@
       "fullMatchup": "Florida Panthers vs Boston Bruins",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     },
     {
       "id": 2026021334,
@@ -1536,13 +1536,13 @@
       "fullMatchup": "Florida Panthers vs Carolina Hurricanes",
       "venue": "Amerant Bank Arena",
       "rsn": "SCRIPPS",
+      "netUSNat": null,
       "primaryNet": "SCRIPPS",
       "secondaryNet": "ESPN+",
       "espnPlus": true,
       "typeUS": "regional",
       "coverageLabel": "Regional RSN / ESPN+",
-      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)",
-      "netUSNat": null
+      "bannerText": "Available on ESPN+ / Subject to local RSN blackout (SCRIPPS)"
     }
   ]
 }
