@@ -235,18 +235,6 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://hockeyblackouts.ca/game/2026-11-11/calgary-vs-new-york/</loc>
-    <lastmod>2026-11-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hockeyblackouts.ca/game/2026-11-11/edmonton-vs-philadelphia/</loc>
-    <lastmod>2026-11-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://hockeyblackouts.ca/game/2026-11-12/boston-vs-montreal/</loc>
     <lastmod>2026-11-12</lastmod>
     <changefreq>daily</changefreq>
@@ -476,6 +464,18 @@
   </url>
   <url>
     <loc>https://hockeyblackouts.ca/game/2026-11-23/ottawa-vs-calgary/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hockeyblackouts.ca/game/2026-11-23/winnipeg-vs-utah/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://hockeyblackouts.ca/game/2026-11-24/edmonton-vs-vegas/</loc>
     <lastmod>2026-11-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
