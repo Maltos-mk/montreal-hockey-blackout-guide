@@ -50,6 +50,8 @@
     var rsnLabel = g.rsn || team.rsn;
     var netUSNat = g.netUSNat || (g.typeUS === 'national' ? g.primaryNet : (g.typeUS === 'nhl_network' ? 'NHLN' : null));
 
+    var localBlackoutRsn = hasUsTerritory ? team.rsn : (isOpponentInMarket && oppInfo ? oppInfo.rsn : '');
+
     // 1. National Exclusive (ESPN, ABC, TNT)
     if (g.typeUS === 'national' || (netUSNat && netUSNat !== 'NHLN')) {
       if (netUSNat === 'ABC' || g.primaryNet === 'ABC') {
@@ -60,7 +62,7 @@
       if (netUSNat === 'TNT' || g.primaryNet === 'TNT') {
         if (state.subs.tnt_max) return { status: 'watchable', reason: 'Watch on TNT / HBO Max' };
         if (state.subs.espn_plus || state.subs.us_rsn) {
-          return { status: 'blacked_out', reason: 'BLACKED OUT on ESPN+ & ' + team.rsn + ' (National TNT Exclusive). Requires TNT or Max.' };
+          return { status: 'blacked_out', reason: 'BLACKED OUT on ESPN+' + (localBlackoutRsn ? ' & ' + localBlackoutRsn : '') + ' (National TNT Exclusive). Requires TNT or Max.' };
         }
         return { status: 'missing_sub', reason: 'Requires TNT or HBO Max (National Exclusive)' };
       }
@@ -68,7 +70,7 @@
       if (state.subs.espn_abc) return { status: 'watchable', reason: 'Watch on ESPN' };
       if (g.espnPlus && state.subs.espn_plus) return { status: 'watchable', reason: 'Watch on ESPN+ (Simulcast)' };
       if (state.subs.espn_plus || state.subs.us_rsn) {
-        return { status: 'blacked_out', reason: 'BLACKED OUT on ESPN+ & ' + team.rsn + ' (National ESPN Exclusive). Requires ESPN.' };
+        return { status: 'blacked_out', reason: 'BLACKED OUT on ESPN+' + (localBlackoutRsn ? ' & ' + localBlackoutRsn : '') + ' (National ESPN Exclusive). Requires ESPN.' };
       }
       return { status: 'missing_sub', reason: 'Requires ESPN (Linear TV or Live Stream)' };
     }
@@ -315,7 +317,10 @@
 
       if (state.statusFilter !== 'all' && g.evalStatus !== state.statusFilter) return;
 
-      if (state.channelFilter !== 'all') {
+      if (state.channelFilter === 'LOCAL_RSN') {
+        var isLocalGame = g.typeUS === 'regional' || (g.typeUS === 'nhl_network' && g.rsn && g.rsn !== 'NHLN');
+        if (!isLocalGame) return;
+      } else if (state.channelFilter !== 'all') {
         var nets = (g.primaryNet || '') + ' ' + (g.secondaryNet || '') + ' ' + (g.rsn || '');
         if (nets.toLowerCase().indexOf(state.channelFilter.toLowerCase()) === -1) return;
       }
