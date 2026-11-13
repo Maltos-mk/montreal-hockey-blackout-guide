@@ -3,6 +3,11 @@ const path = require('path');
 const { chromium } = require('@playwright/test');
 const { formatEtDate, getPrimaryCanadianTeamId, formatTeamGameTime, formatTeamGameDate } = require('./lib/date_utils');
 
+const FONTS_DIR = path.join(__dirname, '../shared/fonts');
+const BARLOW_700_B64 = fs.readFileSync(path.join(FONTS_DIR, 'barlow-sc-700-latin.woff2')).toString('base64');
+const BARLOW_800_B64 = fs.readFileSync(path.join(FONTS_DIR, 'barlow-sc-800-latin.woff2')).toString('base64');
+const INTER_B64 = fs.readFileSync(path.join(FONTS_DIR, 'inter-latin.woff2')).toString('base64');
+
 const BUILD_DIR = path.join(__dirname, '../build');
 const OG_DIR = path.join(BUILD_DIR, 'og');
 const TEAMS_OG_DIR = path.join(OG_DIR, 'teams');
@@ -26,135 +31,231 @@ function renderCardHtml({
   footerMeta = '100% Free • Independent • Canadian NHL Broadcasts',
   ctaText = 'Check Your Region & Channels → hockeyblackouts.ca'
 }) {
+  const isUs = brandName.toLowerCase().includes('.com');
+  const crestCode = isUs ? 'USA' : 'CAN';
+  const brandHtml = brandName.replace(/^Hockey/i, '<span class="brand-accent">Hockey</span>');
+
   return `<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <style>
+  @font-face {
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 700;
+    src: url('data:font/woff2;base64,${BARLOW_700_B64}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 800;
+    src: url('data:font/woff2;base64,${BARLOW_800_B64}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400 800;
+    src: url('data:font/woff2;base64,${INTER_B64}') format('woff2');
+  }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
+    position: relative;
     width: 1200px;
     height: 630px;
-    background: radial-gradient(circle at 85% 15%, #1e293b 0%, #0f172a 75%);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #070b13;
+    background-image:
+      radial-gradient(ellipse 60% 85% at 10% 0%, rgba(200, 16, 46, 0.24), transparent 65%),
+      radial-gradient(ellipse 55% 80% at 92% 100%, rgba(0, 81, 186, 0.22), transparent 65%),
+      linear-gradient(180deg, #0b111e 0%, #070b13 100%);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 56px 64px;
+    padding: 48px 60px 54px;
     overflow: hidden;
+  }
+  body::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    background: linear-gradient(
+      90deg,
+      #c8102e 0%,
+      #c8102e 49.5%,
+      rgba(255, 255, 255, 0.92) 49.5%,
+      rgba(255, 255, 255, 0.92) 50.5%,
+      #0051ba 50.5%,
+      #0051ba 100%
+    );
   }
   .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+    padding-bottom: 22px;
   }
   .brand {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
   }
-  .brand-icon {
-    font-size: 32px;
+  .brand-crest {
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    background: #ffffff;
+    border: 2px solid #c8102e;
+    color: #070b13;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
   }
   .brand-name {
-    font-size: 24px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 28px;
     font-weight: 800;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #f8fafc;
   }
+  .brand-accent {
+    color: #fb7185;
+  }
   .badge {
-    background: rgba(16, 185, 129, 0.15);
-    border: 1px solid rgba(16, 185, 129, 0.4);
-    color: #34d399;
-    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(14, 21, 34, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.26);
+    color: #e2e8f0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 16px;
     font-weight: 700;
-    padding: 8px 18px;
-    border-radius: 9999px;
+    padding: 8px 16px;
+    border-radius: 4px;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
+  }
+  .badge::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: #c8102e;
+    box-shadow: 0 0 0 3px rgba(200, 16, 46, 0.28);
   }
   .content {
     margin: auto 0;
   }
   .status-tag {
     display: inline-block;
-    font-size: 14px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 16px;
     font-weight: 800;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 6px 14px;
-    border-radius: 8px;
+    border-radius: 4px;
     margin-bottom: 18px;
   }
   .status-regional {
-    background: rgba(245, 158, 11, 0.2);
+    background: rgba(245, 158, 11, 0.16);
     border: 1px solid rgba(245, 158, 11, 0.5);
     color: #fbbf24;
   }
   .status-national {
-    background: rgba(16, 185, 129, 0.2);
+    background: rgba(16, 185, 129, 0.16);
     border: 1px solid rgba(16, 185, 129, 0.5);
     color: #34d399;
   }
   .status-prime {
-    background: rgba(56, 189, 248, 0.2);
+    background: rgba(56, 189, 248, 0.16);
     border: 1px solid rgba(56, 189, 248, 0.5);
     color: #38bdf8;
   }
   .status-info {
-    background: rgba(148, 163, 184, 0.2);
-    border: 1px solid rgba(148, 163, 184, 0.4);
+    background: rgba(148, 163, 184, 0.16);
+    border: 1px solid rgba(148, 163, 184, 0.35);
     color: #e2e8f0;
   }
   .headline {
-    font-size: 52px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 58px;
     font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    line-height: 1.08;
+    letter-spacing: -0.005em;
     color: #ffffff;
     margin-bottom: 16px;
-    max-width: 1060px;
+    max-width: 1080px;
   }
   .subheadline {
-    font-size: 24px;
+    font-size: 23px;
     font-weight: 500;
     line-height: 1.4;
-    color: #94a3b8;
+    color: #cbd5e1;
     max-width: 1020px;
   }
   .footer {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid rgba(148, 163, 184, 0.18);
     padding-top: 24px;
+  }
+  .footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 88px;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      #c8102e 0 42px,
+      transparent 42px 46px,
+      #0051ba 46px 88px
+    );
   }
   .footer-meta {
     font-size: 16px;
-    color: #64748b;
+    color: #94a3b8;
     font-weight: 600;
   }
   .cta-btn {
-    background: #10b981;
-    color: #022c22;
-    font-size: 18px;
+    background: #f8fafc;
+    color: #070b13;
+    border-left: 4px solid #c8102e;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 20px;
     font-weight: 800;
-    padding: 14px 28px;
-    border-radius: 12px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 10px 20px -3px rgba(16, 185, 129, 0.35);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
   }
 </style>
 </head>
 <body>
   <div class="header">
     <div class="brand">
-      <span class="brand-icon">🏒</span>
-      <span class="brand-name">${brandName}</span>
+      <div class="brand-crest">${crestCode}</div>
+      <span class="brand-name">${brandHtml}</span>
     </div>
     <div class="badge">${brandBadge}</div>
   </div>
