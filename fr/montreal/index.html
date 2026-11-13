@@ -83,7 +83,7 @@
     "name": "Guide de diffusion et des blackouts des Canadiens de Montréal",
     "inLanguage": "fr-CA",
     "url": "https://hockeyblackouts.ca/fr/montreal/",
-    "dateModified": "2026-11-12",
+    "dateModified": "2026-11-13",
     "description": "Horaire télé interactif et calculateur de blackouts régionaux pour les matchs des Canadiens de Montréal sur RDS, TVA Sports, TSN2, Sportsnet et Prime Video."
   }
   </script>
@@ -181,8 +181,8 @@
   </style>
 
   <!-- Precompiled Tailwind CSS & Application CSS -->
-  <link rel="stylesheet" href="/shared/tailwind.min.css?v=1794503491110">
-  <link rel="stylesheet" href="/shared/app.css?v=1794503491110">
+  <link rel="stylesheet" href="/shared/tailwind.min.css?v=1794532471124">
+  <link rel="stylesheet" href="/shared/app.css?v=1794532471124">
 
   <script>
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -1404,6 +1404,25 @@
       <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between gap-2 text-xs">
         <div>
           <div class="flex items-center justify-between gap-1 mb-1">
+            <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#19</span>
+            <span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Régional</span>
+          </div>
+          <a href="/game/2026-11-12/boston-vs-montreal/" class="font-bold text-sm text-slate-900 dark:text-white hover:text-teamPrimary transition flex items-center gap-1 group">
+            <span class="group-hover:underline">@ Bruins</span>
+            <i class="fa-solid fa-chevron-right text-[8px] text-slate-400 group-hover:translate-x-0.5 transition-transform"></i>
+          </a>
+          <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">jeu. 12 nov. 2026</div>
+        </div>
+        <div class="pt-2 border-t border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between">
+          <span class="text-[11px] font-medium text-slate-700 dark:text-slate-300">RDS</span>
+          <a href="/game/2026-11-12/boston-vs-montreal/" class="text-[11px] font-semibold text-teamPrimary hover:underline flex items-center gap-1">
+            <span>Détails &rarr;</span>
+          </a>
+        </div>
+      </div>
+      <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between gap-2 text-xs">
+        <div>
+          <div class="flex items-center justify-between gap-1 mb-1">
             <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#18</span>
             <span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Régional</span>
           </div>
@@ -1435,25 +1454,6 @@
         <div class="pt-2 border-t border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between">
           <span class="text-[11px] font-medium text-slate-700 dark:text-slate-300">TVA Sports</span>
           <a href="/game/2026-11-07/toronto-vs-montreal/" class="text-[11px] font-semibold text-teamPrimary hover:underline flex items-center gap-1">
-            <span>Détails &rarr;</span>
-          </a>
-        </div>
-      </div>
-      <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-800 flex flex-col justify-between gap-2 text-xs">
-        <div>
-          <div class="flex items-center justify-between gap-1 mb-1">
-            <span class="font-teko text-base font-bold text-slate-600 dark:text-slate-300">#16</span>
-            <span class="text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300">Régional</span>
-          </div>
-          <a href="/game/2026-11-05/montreal-vs-utah/" class="font-bold text-sm text-slate-900 dark:text-white hover:text-teamPrimary transition flex items-center gap-1 group">
-            <span class="group-hover:underline">vs Mammoth</span>
-            <i class="fa-solid fa-chevron-right text-[8px] text-slate-400 group-hover:translate-x-0.5 transition-transform"></i>
-          </a>
-          <div class="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5">jeu. 5 nov. 2026</div>
-        </div>
-        <div class="pt-2 border-t border-slate-200/60 dark:border-slate-700/60 flex items-center justify-between">
-          <span class="text-[11px] font-medium text-slate-700 dark:text-slate-300">RDS</span>
-          <a href="/game/2026-11-05/montreal-vs-utah/" class="text-[11px] font-semibold text-teamPrimary hover:underline flex items-center gap-1">
             <span>Détails &rarr;</span>
           </a>
         </div>
@@ -1547,10 +1547,10 @@
   </div>
 
   <script>
-    window.TEAM_DATA_URL = "/montreal/data.json?v=1794503491110";
+    window.TEAM_DATA_URL = "/montreal/data.json?v=1794532471124";
   </script>
-  <script defer src="../../shared/lang-fr.js?v=1794503491110"></script>
-  <script defer src="../../shared/app.js?v=1794503491110"></script>
+  <script defer src="../../shared/lang-fr.js?v=1794532471124"></script>
+  <script defer src="../../shared/app.js?v=1794532471124"></script>
 
 </body>
 </html>

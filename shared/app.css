@@ -16,12 +16,297 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/shared/fonts/barlow-sc-700-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Barlow Semi Condensed';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/shared/fonts/barlow-sc-800-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  color-scheme: light;
+  --rink-red: #c8102e;
+  --rink-blue: #0051ba;
+  --surface-canvas: #eef2f6;
+  --surface-card: #ffffff;
+  --surface-subtle: #f5f7fa;
+  --border-hairline: #d2dae4;
+  --border-strong: #b6c2d1;
+  --row-stripe: rgba(241, 245, 249, 0.55);
+  --row-hover: #edf2f8;
+  --scrollbar-thumb: #94a3b8;
+  --scrollbar-track: #e2e8f0;
+}
+
+html {
+  accent-color: var(--color-team-primary, #af1e2d);
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+html.dark {
+  color-scheme: dark;
+  --surface-canvas: #070b12;
+  --surface-card: #0e1522;
+  --surface-subtle: #141d2e;
+  --border-hairline: rgba(148, 163, 184, 0.16);
+  --border-strong: rgba(148, 163, 184, 0.28);
+  --row-stripe: rgba(15, 23, 42, 0.45);
+  --row-hover: rgba(30, 41, 59, 0.65);
+  --scrollbar-thumb: #334155;
+  --scrollbar-track: #0b111c;
+}
+
+@supports not (scrollbar-color: auto) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+}
+
 .font-teko { 
   font-family: 'Teko', Impact, 'Arial Narrow', sans-serif; 
+  letter-spacing: 0.02em;
+}
+
+/* Use crisp, athletic Barlow Semi Condensed for multi-word headings; reserve Teko for crest badges & big numbers */
+h1.font-teko,
+h2.font-teko,
+h3.font-teko,
+main h2 {
+  font-family: 'Barlow Semi Condensed', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.005em;
+  line-height: 1.2;
+}
+
+header h1.font-teko {
+  text-transform: none;
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+}
+
+main h2.font-teko,
+main h2 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.025em;
 }
 
 body { 
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: var(--surface-canvas);
+  background-image: radial-gradient(ellipse 90% 35% at 50% 0%, rgba(0, 81, 186, 0.045), transparent 70%);
+}
+
+html.dark body {
+  background-color: var(--surface-canvas);
+  background-image: radial-gradient(ellipse 90% 35% at 50% 0%, rgba(56, 189, 248, 0.06), transparent 70%);
+}
+
+/* Crisp Architectural Geometry (Broadcast Scorebug aesthetic) */
+header .rounded-2xl,
+main .rounded-2xl,
+aside.rounded-2xl,
+footer .rounded-2xl {
+  border-radius: 6px;
+}
+
+header .rounded-xl,
+main .rounded-xl,
+#directInstallModal .rounded-xl,
+#pwaInstallModal .rounded-xl {
+  border-radius: 4px;
+}
+
+#directInstallModal .rounded-3xl,
+#pwaInstallModal .rounded-3xl {
+  border-radius: 8px;
+}
+
+/* Broadcast Scorebug Surface Cards */
+main section.rounded-2xl,
+main .rounded-2xl.bg-white,
+main div.rounded-2xl[class*="border"] {
+  background-color: var(--surface-card);
+  border-color: var(--border-hairline);
+  box-shadow: 0 1px 2px rgba(2, 6, 23, 0.05);
+}
+
+html.dark main section.rounded-2xl,
+html.dark main .rounded-2xl.bg-white,
+html.dark main div.rounded-2xl[class*="border"] {
+  background-color: var(--surface-card);
+  border-color: var(--border-hairline);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* Top Broadcast Network Ticker Bar */
+body > nav {
+  background-color: #05080f;
+  border-bottom-color: rgba(255, 255, 255, 0.09);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Arena Broadcast Masthead Header + Dasher-Board Red/Blue Line */
+body > header.bg-gradient-to-r {
+  position: relative;
+  border-bottom: 0;
+  background-color: #090e18;
+  background-image:
+    radial-gradient(ellipse 55% 130% at 12% 0%, color-mix(in srgb, var(--color-team-primary, #c8102e) 32%, transparent), transparent 65%),
+    radial-gradient(ellipse 50% 110% at 92% 100%, color-mix(in srgb, var(--color-team-secondary, #0f172a) 45%, transparent), transparent 65%),
+    linear-gradient(180deg, #0b111e 0%, #070b13 100%);
+  box-shadow: 0 4px 16px rgba(2, 6, 23, 0.28);
+}
+
+body > header.bg-gradient-to-r::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--rink-red) 0%,
+    var(--rink-red) 49.5%,
+    rgba(255, 255, 255, 0.9) 49.5%,
+    rgba(255, 255, 255, 0.9) 50.5%,
+    var(--rink-blue) 50.5%,
+    var(--rink-blue) 100%
+  );
+  pointer-events: none;
+}
+
+/* Header Crest Badge & Broadcast Control Buttons */
+body > header .w-14.h-14.rounded-2xl {
+  border-radius: 6px;
+  border-width: 2px;
+  border-color: var(--color-team-primary, var(--rink-red));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+body > header a.rounded-xl,
+body > header button.rounded-xl {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+body > header a.rounded-xl:hover,
+body > header button.rounded-xl:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.36);
+}
+
+/* Subtle Red/Blue Rink-Line Section Dividers */
+main section > div.border-b,
+#faq > h2.border-b {
+  position: relative;
+  border-bottom-color: var(--border-hairline);
+}
+
+main section > div.border-b::after,
+#faq > h2.border-b::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 72px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--rink-red) 0 34px,
+    transparent 34px 38px,
+    var(--rink-blue) 38px 72px
+  );
+  pointer-events: none;
+}
+
+/* Faceoff-Dot Section Indicators (replaces generic tall pills) */
+main section .w-2\.5.h-6.rounded-full {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: var(--color-team-primary, var(--rink-red));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-team-primary, var(--rink-red)) 22%, transparent);
+  flex-shrink: 0;
+}
+
+/* Tabular Numerals & Scorebug Schedule Table */
+table,
+#scheduleCardsMobile,
+.filter-btn {
+  font-variant-numeric: tabular-nums;
+}
+
+main table thead th {
+  font-size: 0.6875rem;
+  letter-spacing: 0.07em;
+  border-bottom: 2px solid var(--border-strong);
+}
+
+#scheduleTableBody tr:nth-child(even) {
+  background-color: var(--row-stripe);
+}
+
+#scheduleTableBody tr {
+  transition: background-color 120ms ease, box-shadow 120ms ease;
+}
+
+#scheduleTableBody tr:hover {
+  background-color: var(--row-hover);
+  box-shadow: inset 3px 0 0 var(--color-team-primary, var(--rink-red));
+}
+
+/* Scorebug Broadcast & Status Tags inside Schedule */
+#scheduleTableBody span.rounded-full,
+#scheduleCardsMobile span.rounded-full {
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+}
+
+/* Team Cards & Interactive Tiles */
+main a.rounded-2xl,
+main a.rounded-xl,
+label.sub-item {
+  transition: transform 140ms ease, border-color 140ms ease, background-color 140ms ease, box-shadow 140ms ease;
+}
+
+main a.rounded-2xl:hover,
+main a.rounded-xl:hover {
+  border-color: var(--border-strong);
+}
+
+label.sub-item:has(input:checked) {
+  border-color: var(--color-team-primary, var(--rink-red));
+  background-color: color-mix(in srgb, var(--color-team-primary, var(--rink-red)) 6%, var(--surface-card));
+}
+
+/* Accessible Focus Rings */
+:is(a, button, input, select):focus-visible {
+  outline: 2px solid var(--color-team-primary, var(--rink-red));
+  outline-offset: 2px;
 }
 
 /* Print / PDF Export Styles */
