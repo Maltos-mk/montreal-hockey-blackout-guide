@@ -193,7 +193,21 @@ const splashUsTeamsInCaHtml = all32CaTeams
   })
   .join('\n');
 
+const caOrder = ['MTL', 'OTT', 'TOR', 'WPG', 'EDM', 'CGY', 'VAN'];
+const splashNavTeamLinksHtml = [...all32CaTeams]
+  .sort((a, b) => {
+    const ia = caOrder.indexOf(a.id.toUpperCase());
+    const ib = caOrder.indexOf(b.id.toUpperCase());
+    if (ia !== -1 && ib !== -1) return ia - ib;
+    if (ia !== -1) return -1;
+    if (ib !== -1) return 1;
+    return a.name.localeCompare(b.name);
+  })
+  .map(t => `        <a href="/${t.dir}/" class="px-2.5 py-1 rounded-md hover:text-white hover:bg-white/10 transition border border-transparent">${t.id.toUpperCase()}</a>`)
+  .join('\n');
+
 let splashHtml = fs.readFileSync('templates/splash.html', 'utf-8');
+splashHtml = splashHtml.replace(/\{\{SPLASH_NAV_TEAM_LINKS\}\}/g, splashNavTeamLinksHtml);
 splashHtml = splashHtml.replace(/\{\{SPLASH_UPCOMING_MATCHUPS_HTML\}\}/g, splashUpcomingHtml);
 splashHtml = splashHtml.replace(/\{\{SPLASH_US_TEAMS_IN_CA_HTML\}\}/g, splashUsTeamsInCaHtml);
 fs.writeFileSync(path.join(BUILD_DIR, 'index.html'), splashHtml);

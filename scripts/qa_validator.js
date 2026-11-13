@@ -145,6 +145,13 @@ function validateHtml(filePath, site = 'ca') {
     if (!content.includes('"@type": "WebSite"') || !content.includes('"@type": "Organization"')) {
       errors.push('Splash page is missing WebSite or Organization Schema.');
     }
+    const navMatch = content.match(/<nav\b[^>]*>([\s\S]*?)<\/nav>/i);
+    const navHtml = navMatch ? navMatch[1] : '';
+    const sampleUsNavSlugs = ['/boston-bruins/', '/new-york-rangers/', '/seattle-kraken/', '/vegas-golden-knights/'];
+    const missingUsNav = sampleUsNavSlugs.filter(slug => !navHtml.includes(slug));
+    if (missingUsNav.length > 0) {
+      errors.push(`Splash page top <nav> is missing US team links (${missingUsNav.join(', ')}).`);
+    }
   }
 
   if (isUsTeamPage && !isRedirect) {
