@@ -79,8 +79,8 @@ test.describe('US site: in-market RSN (Rangers, ZIP 10001)', () => {
     expect(withRsn - withoutRsn).toBeGreaterThan(total * 0.3); // "significantly"
     expect(await blackedOut(page)).toBeGreaterThan(blackedWithRsn);
 
-    // Game cards: local blackout banner naming the ZIP and the missing RSN.
-    const blackedRow = page.locator('#scheduleTableBody tr', { hasText: 'Blacked Out' }).first();
+    // Game cards: local blackout banner naming the ZIP and the missing RSN (skip national exclusives).
+    const blackedRow = page.locator('#scheduleTableBody tr', { hasText: 'Blacked Out' }).filter({ hasText: 'ZIP 10001' }).first();
     await expect(blackedRow).toBeVisible();
     await expect(blackedRow).toContainText('BLACKED OUT on ESPN+ in ZIP 10001');
     await expect(blackedRow).toContainText('Requires MSG');
