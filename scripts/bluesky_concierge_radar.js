@@ -4,9 +4,10 @@
  * scripts/bluesky_concierge_radar.js
  *
  * Semi-Automated "Helpful Concierge" Radar for HockeyBlackouts.ca
- * - Searches Bluesky for Canadian hockey fans experiencing broadcast blackouts
- * - Filters out reposts, self-handles, and posts older than 90 minutes
- * - Classifies into Categories A, B, C, D and detects Canadian team context
+ * - Searches Bluesky for Canadian & US hockey fans experiencing broadcast blackouts
+ * - Uses simple space-separated Bluesky search queries (no unsupported OR/parentheses) + local regex filtering
+ * - Filters out reposts, self-handles, and posts older than LOOKBACK_MINUTES (360 min / 6h)
+ * - Classifies into Categories A, B, C, D, E and detects team context
  * - Generates context-aware, helpful replies (< 270 characters)
  * - Sends embeds to Discord webhook (CONCIERGE_WEBHOOK_URL) and GitHub Step Summary
  */
@@ -18,8 +19,9 @@ const { formatEtDate } = require('./lib/date_utils');
 const BSKY_SERVICE = 'https://bsky.social';
 const isDryRun = process.argv.includes('--dry-run');
 
-// 90 minutes search window
-const LOOKBACK_MINUTES = 90;
+// 360 minutes (6 hours) search window to absorb GitHub Actions cron delays without re-alerting yesterday's games
+const lookbackArg = process.argv.find(a => a.startsWith('--lookback='));
+const LOOKBACK_MINUTES = Number(lookbackArg ? lookbackArg.split('=')[1] : (process.env.LOOKBACK_MINUTES || 360));
 const now = Date.now();
 const sinceIso = new Date(now - LOOKBACK_MINUTES * 60 * 1000).toISOString();
 
@@ -34,30 +36,78 @@ const CANADIAN_TEAMS = [
   { id: 'WPG', name: 'Jets', keywords: /\b(jets|winnipeg)\b/i, territory: 'Manitoba & Saskatchewan' }
 ];
 
+const US_BROADCAST_RE = /\b(espn\b|hulu|tnt|max|msg|nesn|bally|fanduel|altitude|nhl network|peacock)|\bespn\+|\bvictory\+/i;
+const CA_TEAM_OR_BROADCASTER_RE = /\b(tsn[2-5]?|sportsnet|rds|leafs|maple leafs|habs|canadiens|sens|senators|canucks|oilers|flames|jets)\b|\bsn\+/i;
+const BLACKOUT_RE = /\b(blacked?\s*out|blackout)\b/i;
+const HOCKEY_RE = /\b(nhl|hockey|leafs|maple leafs|habs|canadiens|sens|senators|canucks|oilers|flames|jets|rangers|bruins|islanders|devils|flyers|penguins|capitals|hurricanes|panthers|lightning|red wings|sabres|blackhawks|blues|wild|stars|avalanche|predators|ducks|kings|sharks|kraken|golden knights|mammoth)\b/i;
+
 const SEARCH_CATEGORIES = [
   {
     id: 'A',
     name: 'Regional Blackout (TSN / Sportsnet)',
-    query: '("blacked out" OR "blackout") (TSN OR TSN2 OR TSN3 OR TSN4 OR TSN5 OR Sportsnet OR RDS OR Leafs OR Habs OR Sens OR Canucks OR Oilers OR Flames OR Jets)',
+    queries: [
+      '"blacked out" TSN',
+      '"blacked out" Sportsnet',
+      'blackout TSN',
+      'blackout Sportsnet',
+      '"blacked out" NHL',
+      '"blacked out" hockey',
+      'blackout RDS'
+    ],
+    match: (text) => BLACKOUT_RE.test(text) && HOCKEY_RE.test(text) && (!US_BROADCAST_RE.test(text) || CA_TEAM_OR_BROADCASTER_RE.test(text)),
     defaultUrl: 'https://hockeyblackouts.ca/tsn-hockey-blackout-rules/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_guide&utm_content=comment_reply'
   },
   {
     id: 'B',
     name: 'Cable vs. Sportsnet+ / Wednesday Exclusive',
-    query: '("Sportsnet+" OR "Sportsnet Plus" OR "Wednesday") (cable OR Bell OR Telus OR channel OR blackout)',
+    queries: [
+      '"Sportsnet+" blackout',
+      '"Sportsnet Plus" blackout',
+      '"Sportsnet+" channel',
+      'Sportsnet cable hockey'
+    ],
+    match: (text) => (/\b(sportsnet plus|sportsnet)\b|\bsportsnet\+|\bsn\+/i).test(text) && /\b(blacked?\s*out|blackout|cable|bell|telus|rogers|channel|wednesday|prime|stream)\b/i.test(text) && (/\b(sportsnet plus)\b|\bsportsnet\+|\bsn\+/i.test(text) || /\bgame\b/i.test(text) || HOCKEY_RE.test(text)),
     defaultUrl: 'https://hockeyblackouts.ca/sportsnet-plus-blackout-rules/?utm_source=bluesky&utm_medium=social&utm_campaign=sn_exclusive&utm_content=comment_reply'
   },
   {
     id: 'C',
     name: 'Amazon Prime Video Hockey Exclusive',
-    query: '(Prime OR Amazon) (Leafs OR Habs OR Sens OR Canucks OR Oilers OR Flames OR Jets OR hockey)',
+    queries: [
+      'Prime hockey',
+      'Amazon hockey',
+      'Prime NHL',
+      '"Prime Video" NHL',
+      '"Prime Video" hockey'
+    ],
+    match: (text) => /\b(prime|amazon)\b/i.test(text) && /\b(nhl|hockey|leafs|habs|canadiens|sens|senators|canucks|oilers|flames|jets)\b/i.test(text) && /\b(blacked?\s*out|blackout|watch|stream|cable|tsn|sportsnet|monday|wednesday|exclusive|game)\b/i.test(text),
     defaultUrl: 'https://hockeyblackouts.ca/prime-hockey-schedule-canada/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_guide&utm_content=comment_reply'
   },
   {
     id: 'D',
     name: 'IP Geolocation & ISP Technical Glitch',
-    query: '("in market" OR "live in" OR Starlink OR Bell OR Rogers) ("blacked out" OR region OR location) (Sportsnet OR TSN)',
+    queries: [
+      'Starlink Sportsnet',
+      'Starlink TSN',
+      'Starlink blackout hockey',
+      '"in market" blackout NHL',
+      '"in market" "blacked out" hockey'
+    ],
+    match: (text) => /\b(starlink|in[- ]market|out[- ]of[- ]market|location|region|province|isp|rogers|bell|telus|ip address)\b/i.test(text) && BLACKOUT_RE.test(text) && (/\b(tsn[2-5]?|sportsnet|espn|nhl|hockey)\b|\bespn\+/i).test(text),
     defaultUrl: 'https://hockeyblackouts.ca/how-blackouts-work/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_inspector&utm_content=comment_reply'
+  },
+  {
+    id: 'E',
+    name: 'US National / RSN Blackout (ESPN+ / TNT / RSNs)',
+    queries: [
+      '"blacked out" "ESPN+"',
+      'blackout "ESPN+"',
+      '"ESPN+" NHL blackout',
+      '"blacked out" MSG hockey',
+      '"blacked out" NESN',
+      'blackout NHL TNT'
+    ],
+    match: (text) => BLACKOUT_RE.test(text) && US_BROADCAST_RE.test(text) && HOCKEY_RE.test(text),
+    defaultUrl: 'https://hockeyblackouts.com/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_guide&utm_content=comment_reply'
   }
 ];
 
@@ -192,6 +242,8 @@ function draftReply(category, postText) {
     replyText = `Amazon Prime has exclusive Canadian rights to Wednesday Night Hockey, so cable cannot carry it. Full Prime schedule: ${category.defaultUrl}`;
   } else if (category.id === 'D') {
     replyText = `ISP routing (Starlink or mobile cell data) often misidentifies your province and causes blackouts. Free IP scan: ${category.defaultUrl}`;
+  } else if (category.id === 'E') {
+    replyText = `ESPN+ blacks out in-market RSN games & national exclusives (TNT/ESPN/NHL Network). Check tonight's channel & ZIP blackout rules: ${category.defaultUrl}`;
   }
 
   return {
@@ -324,44 +376,55 @@ async function main() {
 
   if (session) {
     for (const cat of SEARCH_CATEGORIES) {
-      console.log(`Searching Category ${cat.id}: "${cat.name}"...`);
-      try {
-        const posts = await searchPosts(session.accessJwt, cat.query, 25);
-        console.log(`Found ${posts.length} post(s) for Category ${cat.id}.`);
+      console.log(`Searching Category ${cat.id}: "${cat.name}" (${cat.queries.length} queries)...`);
+      let rawCount = 0;
+      let catMatched = 0;
 
-        for (const post of posts) {
-          if (!post.uri || seenUris.has(post.uri)) continue;
-          seenUris.add(post.uri);
+      for (const query of cat.queries) {
+        try {
+          const posts = await searchPosts(session.accessJwt, query, 25);
+          rawCount += posts.length;
 
-          const authorHandle = post.author?.handle || '';
-          // Filter out our own accounts
-          if (authorHandle.includes('hockeyblackouts.ca') || authorHandle === identifier) continue;
+          for (const post of posts) {
+            if (!post.uri || seenUris.has(post.uri)) continue;
 
-          // Filter out retweets / quotes
-          const text = post.record?.text || '';
-          if (text.startsWith('RT ') || text.length < 15) continue;
+            const authorHandle = post.author?.handle || '';
+            // Filter out our own accounts
+            if (authorHandle.includes('hockeyblackouts.ca') || authorHandle.includes('hockeyblackouts.com') || authorHandle === identifier) continue;
 
-          // Check post age (< 90 minutes)
-          const postDate = new Date(post.record?.createdAt || post.indexedAt).getTime();
-          if (now - postDate > LOOKBACK_MINUTES * 60 * 1000) continue;
+            // Filter out retweets / short posts
+            const text = post.record?.text || '';
+            if (text.startsWith('RT ') || text.length < 15) continue;
 
-          const draft = draftReply(cat, text);
-          const rkey = getRkeyFromUri(post.uri);
-          const postUrl = `https://bsky.app/profile/${authorHandle}/post/${rkey}`;
+            // Check post age (< LOOKBACK_MINUTES)
+            const postDate = new Date(post.record?.createdAt || post.indexedAt).getTime();
+            if (now - postDate > LOOKBACK_MINUTES * 60 * 1000) continue;
 
-          matchedPosts.push({
-            category: cat,
-            post,
-            authorHandle,
-            text,
-            postUrl,
-            draft,
-            createdAt: post.record?.createdAt || post.indexedAt
-          });
+            // Local regex filter to replace unsupported Bluesky OR/parentheses operators
+            if (cat.match && !cat.match(text)) continue;
+
+            seenUris.add(post.uri);
+            catMatched++;
+
+            const draft = draftReply(cat, text);
+            const rkey = getRkeyFromUri(post.uri);
+            const postUrl = `https://bsky.app/profile/${authorHandle}/post/${rkey}`;
+
+            matchedPosts.push({
+              category: cat,
+              post,
+              authorHandle,
+              text,
+              postUrl,
+              draft,
+              createdAt: post.record?.createdAt || post.indexedAt
+            });
+          }
+        } catch (err) {
+          console.warn(`Error querying Category ${cat.id} (${query}): ${err.message}`);
         }
-      } catch (err) {
-        console.warn(`Error querying Category ${cat.id}: ${err.message}`);
       }
+      console.log(`Category ${cat.id}: ${rawCount} raw post(s), ${catMatched} matched filter.`);
     }
   } else {
     // Simulated dry-run sample when running locally without credentials
