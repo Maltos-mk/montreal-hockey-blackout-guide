@@ -32,6 +32,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Build US Site Data (build_com)
+        run: npm run build:us
+
       - name: Run Bluesky Concierge Radar
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
@@ -44,5 +47,7 @@ jobs:
         env:
           BSKY_MAIN_IDENTIFIER: ${{ secrets.BSKY_MAIN_IDENTIFIER }}
           BSKY_MAIN_PASSWORD: ${{ secrets.BSKY_MAIN_PASSWORD }}
+          BSKY_US_IDENTIFIER: ${{ secrets.BSKY_US_IDENTIFIER }}
+          BSKY_US_PASSWORD: ${{ secrets.BSKY_US_PASSWORD }}
           CONCIERGE_WEBHOOK_URL: ${{ secrets.CONCIERGE_WEBHOOK_URL }}
           GITHUB_STEP_SUMMARY: ${{ github.step_summary }}

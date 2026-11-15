@@ -36,6 +36,41 @@ const CANADIAN_TEAMS = [
   { id: 'WPG', name: 'Jets', keywords: /\b(jets|winnipeg)\b/i, territory: 'Manitoba & Saskatchewan' }
 ];
 
+// US Team Detection & Metadata (loaded from data/us_teams.json)
+const US_TEAM_KEYWORD_MAP = {
+  ANA: /\b(ducks|anaheim)\b/i,
+  BOS: /\b(bruins|boston)\b/i,
+  BUF: /\b(sabres|buffalo)\b/i,
+  CAR: /\b(hurricanes|carolina|canes)\b/i,
+  CBJ: /\b(blue jackets|columbus)\b/i,
+  CHI: /\b(blackhawks|chicago|hawks)\b/i,
+  COL: /\b(avalanche|colorado|avs)\b/i,
+  DAL: /\b(stars|dallas)\b/i,
+  DET: /\b(red wings|detroit)\b/i,
+  FLA: /\b(panthers|florida)\b/i,
+  LAK: /\b(kings|los angeles)\b/i,
+  MIN: /\b(wild|minnesota)\b/i,
+  NJD: /\b(devils|new jersey)\b/i,
+  NSH: /\b(predators|nashville|preds)\b/i,
+  NYI: /\b(islanders|isles)\b/i,
+  NYR: /\b(rangers)\b/i,
+  PHI: /\b(flyers|philadelphia)\b/i,
+  PIT: /\b(penguins|pittsburgh|pens)\b/i,
+  SEA: /\b(kraken|seattle)\b/i,
+  SJS: /\b(sharks|san jose)\b/i,
+  STL: /\b(blues|st\.?\s*louis)\b/i,
+  TBL: /\b(lightning|tampa bay|bolts)\b/i,
+  UTA: /\b(mammoth|utah)\b/i,
+  VGK: /\b(golden knights|vegas)\b/i,
+  WSH: /\b(capitals|washington|caps)\b/i
+};
+
+const usTeamsPath = path.join(__dirname, '../data/us_teams.json');
+const ALL_US_TEAMS_META = fs.existsSync(usTeamsPath) ? JSON.parse(fs.readFileSync(usTeamsPath, 'utf-8')) : [];
+const US_TEAMS = ALL_US_TEAMS_META
+  .filter(t => t.country === 'US' && US_TEAM_KEYWORD_MAP[t.id])
+  .map(t => ({ ...t, keywords: US_TEAM_KEYWORD_MAP[t.id] }));
+
 const US_BROADCAST_RE = /\b(espn\b|hulu|tnt|max|msg|nesn|bally|fanduel|altitude|nhl network|peacock)|\bespn\+|\bvictory\+/i;
 const CA_TEAM_OR_BROADCASTER_RE = /\b(tsn[2-5]?|sportsnet|rds|leafs|maple leafs|habs|canadiens|sens|senators|canucks|oilers|flames|jets)\b|\bsn\+/i;
 const BLACKOUT_RE = /\b(blacked?\s*out|blackout)\b/i;
@@ -175,6 +210,52 @@ function findTodayGameForTeam(teamId) {
   }
 }
 
+// Find if a US team has an active game today in build_com/<slug>/data.json (or data/us/<slug>.json)
+function findTodayUsGameForTeam(teamSlug) {
+  if (!teamSlug) return null;
+  const today = getTodayIsoDate();
+  const buildComPath = path.join(__dirname, `../build_com/${teamSlug}/data.json`);
+  const fallbackPath = path.join(__dirname, `../data/us/${teamSlug}.json`);
+  const dataPath = fs.existsSync(buildComPath) ? buildComPath : fallbackPath;
+  if (!fs.existsSync(dataPath)) return null;
+
+  try {
+    const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+    const game = data.schedule.find(g => getGameLocalDate(g.iso) === today);
+    if (!game) return null;
+
+    const isHome = game.vs.startsWith('vs ');
+    const homeId = isHome ? data.team.id : game.opp;
+    const awayId = isHome ? game.opp : data.team.id;
+
+    const ALL_CITIES = {
+      'MTL': 'Montreal', 'TOR': 'Toronto', 'OTT': 'Ottawa', 'VAN': 'Vancouver',
+      'CGY': 'Calgary', 'EDM': 'Edmonton', 'WPG': 'Winnipeg', 'BOS': 'Boston',
+      'BUF': 'Buffalo', 'DET': 'Detroit', 'FLA': 'Florida', 'TBL': 'Tampa Bay',
+      'CAR': 'Carolina', 'NJD': 'New Jersey', 'NYI': 'New York', 'NYR': 'New York',
+      'PHI': 'Philadelphia', 'PIT': 'Pittsburgh', 'WSH': 'Washington', 'CBJ': 'Columbus',
+      'CHI': 'Chicago', 'COL': 'Colorado', 'DAL': 'Dallas', 'MIN': 'Minnesota',
+      'NSH': 'Nashville', 'STL': 'St Louis', 'UTA': 'Utah', 'ANA': 'Anaheim',
+      'LAK': 'Los Angeles', 'SJS': 'San Jose', 'SEA': 'Seattle', 'VGK': 'Vegas'
+    };
+
+    const homeCity = ALL_CITIES[homeId] || homeId;
+    const awayCity = ALL_CITIES[awayId] || awayId;
+    const homeTeam = ALL_US_TEAMS_META.find(t => t.id === homeId);
+    const linkSlug = homeTeam?.slug || teamSlug;
+
+    return {
+      game,
+      url: `https://hockeyblackouts.com/${linkSlug}/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_guide&utm_content=comment_reply`,
+      homeCity,
+      awayCity,
+      matchupText: `${awayCity} at ${homeCity}`
+    };
+  } catch (err) {
+    return null;
+  }
+}
+
 // AT Protocol Client calls
 async function createSession(identifier, password) {
   const res = await fetch(`${BSKY_SERVICE}/xrpc/com.atproto.server.createSession`, {
@@ -216,40 +297,81 @@ async function searchPosts(accessJwt, query, limit = 25) {
 // Generate smart, context-aware reply
 function draftReply(category, postText) {
   // Detect Canadian team
-  let detectedTeam = null;
+  let detectedCaTeam = null;
   for (const team of CANADIAN_TEAMS) {
     if (team.keywords.test(postText)) {
-      detectedTeam = team;
+      detectedCaTeam = team;
       break;
     }
   }
 
-  const todayGame = detectedTeam ? findTodayGameForTeam(detectedTeam.id) : null;
+  // Detect US team
+  let detectedUsTeam = null;
+  for (const team of US_TEAMS) {
+    if (team.keywords.test(postText)) {
+      detectedUsTeam = team;
+      break;
+    }
+  }
+
+  // Determine target account (.ca vs .com)
+  const isUsTarget =
+    category.id === 'E' ||
+    (category.id === 'D' && !detectedCaTeam && !CA_TEAM_OR_BROADCASTER_RE.test(postText) && (US_BROADCAST_RE.test(postText) || Boolean(detectedUsTeam)));
+  const targetSite = isUsTarget ? '.com' : '.ca';
+
+  const todayCaGame = !isUsTarget && detectedCaTeam ? findTodayGameForTeam(detectedCaTeam.id) : null;
+  const todayUsGame = isUsTarget && detectedUsTeam ? findTodayUsGameForTeam(detectedUsTeam.slug) : null;
 
   let replyText = '';
+  let targetUrl = category.defaultUrl;
 
   if (category.id === 'A') {
-    if (todayGame) {
-      replyText = `Regional NHL games are locked to local zones on cable. Fans outside ${detectedTeam.territory} are blacked out tonight. Channel options: ${todayGame.url}`;
-    } else if (detectedTeam) {
-      replyText = `Regional NHL games for the ${detectedTeam.name} are locked to ${detectedTeam.territory} on cable/TSN/SN+. Full boundary breakdown: ${category.defaultUrl}`;
+    if (todayCaGame) {
+      targetUrl = todayCaGame.url;
+      replyText = `Regional NHL games are locked to local zones on cable. Fans outside ${detectedCaTeam.territory} are blacked out tonight. Channel options: ${targetUrl}`;
+    } else if (detectedCaTeam) {
+      replyText = `Regional NHL games for the ${detectedCaTeam.name} are locked to ${detectedCaTeam.territory} on cable/TSN/SN+. Full boundary breakdown: ${targetUrl}`;
     } else {
-      replyText = `Regional NHL games on TSN & Sportsnet are locked to local broadcast zones on cable. Full breakdown of blackout boundaries: ${category.defaultUrl}`;
+      replyText = `Regional NHL games on TSN & Sportsnet are locked to local broadcast zones on cable. Full breakdown of blackout boundaries: ${targetUrl}`;
     }
   } else if (category.id === 'B') {
-    replyText = `Wednesday games stream exclusively on Prime Video (app only) and are not on linear cable. Full breakdown of the rules: ${category.defaultUrl}`;
+    replyText = `Wednesday games stream exclusively on Prime Video (app only) and are not on linear cable. Full breakdown of the rules: ${targetUrl}`;
   } else if (category.id === 'C') {
-    replyText = `Amazon Prime has exclusive Canadian rights to Wednesday Night Hockey, so cable cannot carry it. Full Prime schedule: ${category.defaultUrl}`;
+    replyText = `Amazon Prime has exclusive Canadian rights to Wednesday Night Hockey, so cable cannot carry it. Full Prime schedule: ${targetUrl}`;
   } else if (category.id === 'D') {
-    replyText = `ISP routing (Starlink or mobile cell data) often misidentifies your province and causes blackouts. Free IP scan: ${category.defaultUrl}`;
+    if (isUsTarget) {
+      targetUrl = detectedUsTeam
+        ? `https://hockeyblackouts.com/${detectedUsTeam.slug}/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_guide&utm_content=comment_reply`
+        : 'https://hockeyblackouts.com/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_guide&utm_content=comment_reply';
+      replyText = `ISP routing (Starlink or mobile data) often misidentifies your ZIP/DMA and triggers ESPN+ or RSN blackouts. Check ZIP blackout rules: ${targetUrl}`;
+    } else {
+      replyText = `ISP routing (Starlink or mobile cell data) often misidentifies your province and causes blackouts. Free IP scan: ${targetUrl}`;
+    }
   } else if (category.id === 'E') {
-    replyText = `ESPN+ blacks out in-market RSN games & national exclusives (TNT/ESPN/NHL Network). Check tonight's channel & ZIP blackout rules: ${category.defaultUrl}`;
+    if (todayUsGame) {
+      targetUrl = todayUsGame.url;
+      const net = todayUsGame.game.netUSNat || todayUsGame.game.primaryNet || 'ESPN+';
+      if (todayUsGame.game.typeUS === 'national') {
+        replyText = `Tonight's ${detectedUsTeam.nickname} game is a US national exclusive on ${net} (blacked out on ESPN+ & local RSNs). ZIP blackout guide: ${targetUrl}`;
+      } else if (todayUsGame.game.typeUS === 'nhl_network') {
+        replyText = `Tonight's ${detectedUsTeam.nickname} game airs on NHL Network & local RSN (out-of-market ESPN+ is blacked out). ZIP check: ${targetUrl}`;
+      } else {
+        replyText = `ESPN+ carries out-of-market ${detectedUsTeam.nickname} games, while in-market ZIPs air on ${detectedUsTeam.rsn}. Check your ZIP: ${targetUrl}`;
+      }
+    } else if (detectedUsTeam) {
+      targetUrl = `https://hockeyblackouts.com/${detectedUsTeam.slug}/?utm_source=bluesky&utm_medium=social&utm_campaign=blackout_guide&utm_content=comment_reply`;
+      replyText = `ESPN+ blacks out in-market ${detectedUsTeam.nickname} games (${detectedUsTeam.rsn}) & national exclusives (TNT/ESPN/ABC). Check your ZIP: ${targetUrl}`;
+    } else {
+      replyText = `ESPN+ blacks out in-market RSN games & national exclusives (TNT/ABC/ESPN/NHL Network). Check tonight's channel & ZIP blackout rules: ${targetUrl}`;
+    }
   }
 
   return {
     replyText,
-    detectedTeam: detectedTeam ? detectedTeam.name : null,
-    targetUrl: todayGame ? todayGame.url : category.defaultUrl
+    detectedTeam: isUsTarget ? (detectedUsTeam ? detectedUsTeam.name : null) : (detectedCaTeam ? detectedCaTeam.name : null),
+    targetUrl,
+    targetSite
   };
 }
 
@@ -260,19 +382,22 @@ function getRkeyFromUri(uri) {
 
 async function sendDiscordWebhook(webhookUrl, embeds) {
   if (!webhookUrl || embeds.length === 0) return;
-  try {
-    const res = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ embeds })
-    });
-    if (!res.ok) {
-      console.warn(`[Discord Webhook] Status: ${res.status}`);
-    } else {
-      console.log(`✅ Sent ${embeds.length} concierge alert(s) to Discord webhook.`);
+  for (let i = 0; i < embeds.length; i += 10) {
+    const batch = embeds.slice(i, i + 10);
+    try {
+      const res = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ embeds: batch })
+      });
+      if (!res.ok) {
+        console.warn(`[Discord Webhook] Status: ${res.status}`);
+      } else {
+        console.log(`✅ Sent ${batch.length} concierge alert(s) to Discord webhook.`);
+      }
+    } catch (err) {
+      console.warn('[Discord Webhook Error]:', err.message);
     }
-  } catch (err) {
-    console.warn('[Discord Webhook Error]:', err.message);
   }
 }
 
@@ -323,12 +448,62 @@ async function checkTodaysGamePostsPublished(mainIdentifier) {
   return missingGames;
 }
 
+// Check whether today's US games have been published to the .com Bluesky account
+async function checkTodaysUsGamePostsPublished(usIdentifier) {
+  const targetActor = usIdentifier || 'hockeyblackouts.com';
+  const missingGames = [];
+  const today = getTodayIsoDate();
+
+  const seenGames = new Set();
+  const todaysGames = [];
+  ALL_US_TEAMS_META.forEach(teamMeta => {
+    const info = findTodayUsGameForTeam(teamMeta.slug);
+    if (info) {
+      const matchKey = `${info.awayCity} @ ${info.homeCity}`;
+      if (!seenGames.has(matchKey)) {
+        seenGames.add(matchKey);
+        todaysGames.push(info);
+      }
+    }
+  });
+
+  if (todaysGames.length === 0) return missingGames;
+
+  try {
+    const res = await fetch(`https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${encodeURIComponent(targetActor)}&limit=50`);
+    if (!res.ok) return missingGames;
+    const data = await res.json();
+    const feed = data.feed || [];
+
+    for (const g of todaysGames) {
+      const cleanUrl = g.url.split('?')[0];
+      const isPosted = feed.some(item => {
+        const record = item.post?.record;
+        if (!record) return false;
+        if (getGameLocalDate(record.createdAt) !== today) return false;
+        const embedUri = record.embed?.external?.uri || '';
+        const text = record.text || '';
+        return (embedUri.includes(cleanUrl) || text.includes(cleanUrl)) && text.includes(g.matchupText);
+      });
+      if (!isPosted) {
+        missingGames.push(g);
+      }
+    }
+  } catch (err) {
+    console.warn('Could not query US Bluesky public feed for publication check:', err.message);
+  }
+
+  return missingGames;
+}
+
 async function main() {
-  console.log('🚨 HockeyBlackouts.ca - Bluesky Concierge Radar');
+  console.log('🚨 HockeyBlackouts.ca & .com - Bluesky Concierge Radar');
   console.log(`Scanning Bluesky posts from the last ${LOOKBACK_MINUTES} minutes (since ${sinceIso})...\n`);
 
   const identifier = process.env.BSKY_MAIN_IDENTIFIER;
   const password = process.env.BSKY_MAIN_PASSWORD;
+  const usIdentifier = process.env.BSKY_US_IDENTIFIER || 'hockeyblackouts.com';
+  const usPassword = process.env.BSKY_US_PASSWORD;
   const discordWebhook = process.env.CONCIERGE_WEBHOOK_URL;
   const githubStepSummary = process.env.GITHUB_STEP_SUMMARY;
   const discordEmbeds = [];
@@ -336,14 +511,14 @@ async function main() {
   // Watchdog: only alert between 12:00 PM ET and 11:59 PM ET so delayed overnight radar runs don't false-alarm before morning publish
   const currentEtHour = Number(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Toronto', hour: 'numeric', hourCycle: 'h23' }).format(new Date()));
   if (currentEtHour >= 12) {
-    console.log('Checking game-day broadcast publication status on Bluesky...');
+    console.log('Checking game-day broadcast publication status on Bluesky (.ca)...');
     const missingPosts = await checkTodaysGamePostsPublished(identifier);
     if (missingPosts.length > 0) {
-      console.warn(`⚠️ Warning: ${missingPosts.length} game-day post(s) are NOT yet live on Bluesky:`);
+      console.warn(`⚠️ Warning [.ca]: ${missingPosts.length} game-day post(s) are NOT yet live on Bluesky:`);
       missingPosts.forEach(g => {
         console.warn(`   - ${g.awayCity} @ ${g.homeCity} (${g.url.split('?')[0]})`);
         discordEmbeds.push({
-          title: '⚠️ Alert: Missing Game-Day Post on Bluesky',
+          title: '⚠️ Alert [.ca]: Missing Game-Day Post on Bluesky',
           description: `Today's broadcast post for **${g.awayCity} @ ${g.homeCity}** has not yet been published to [@${identifier || 'hockeyblackouts.ca'}](https://bsky.app/profile/${identifier || 'hockeyblackouts.ca'}).\n\nRun the \`Bluesky Game-Day Publisher\` workflow to publish.`,
           color: 16744272,
           footer: { text: 'HockeyBlackouts.ca Concierge Watchdog' },
@@ -351,7 +526,27 @@ async function main() {
         });
       });
     } else {
-      console.log('✅ All active Canadian games for today are published on Bluesky.\n');
+      console.log('✅ All active Canadian games for today are published on Bluesky (.ca).\n');
+    }
+
+    if (usPassword) {
+      console.log('Checking game-day broadcast publication status on Bluesky (.com)...');
+      const missingUsPosts = await checkTodaysUsGamePostsPublished(usIdentifier);
+      if (missingUsPosts.length > 0) {
+        console.warn(`⚠️ Warning [.com]: ${missingUsPosts.length} US game-day post(s) are NOT yet live on Bluesky:`);
+        missingUsPosts.forEach(g => {
+          console.warn(`   - ${g.awayCity} @ ${g.homeCity} (${g.url.split('?')[0]})`);
+          discordEmbeds.push({
+            title: '⚠️ Alert [.com]: Missing Game-Day Post on Bluesky',
+            description: `Today's US broadcast post for **${g.awayCity} @ ${g.homeCity}** has not yet been published to [@${usIdentifier}](https://bsky.app/profile/${usIdentifier}).\n\nRun the \`Bluesky Game-Day Publisher\` workflow to publish.`,
+            color: 16744272,
+            footer: { text: 'HockeyBlackouts.com Concierge Watchdog' },
+            timestamp: new Date().toISOString()
+          });
+        });
+      } else {
+        console.log('✅ All active US games for today are published on Bluesky (.com).\n');
+      }
     }
   } else {
     console.log(`ℹ️ Skipping missing-post watchdog check (${currentEtHour}:00 ET is prior to afternoon window).\n`);
@@ -390,7 +585,12 @@ async function main() {
 
             const authorHandle = post.author?.handle || '';
             // Filter out our own accounts
-            if (authorHandle.includes('hockeyblackouts.ca') || authorHandle.includes('hockeyblackouts.com') || authorHandle === identifier) continue;
+            if (
+              authorHandle.includes('hockeyblackouts.ca') ||
+              authorHandle.includes('hockeyblackouts.com') ||
+              authorHandle === identifier ||
+              authorHandle === usIdentifier
+            ) continue;
 
             // Filter out retweets / short posts
             const text = post.record?.text || '';
@@ -427,9 +627,9 @@ async function main() {
       console.log(`Category ${cat.id}: ${rawCount} raw post(s), ${catMatched} matched filter.`);
     }
   } else {
-    // Simulated dry-run sample when running locally without credentials
+    // Simulated dry-run samples (both .ca and .com) when running locally without credentials
     console.log('Executing simulated sample evaluation for dry-run verification...');
-    const samplePost = {
+    const sampleCaPost = {
       author: { handle: 'leafsfan99.bsky.social' },
       record: {
         text: "Why is the Leafs game blacked out on TSN4 right now?? I pay for TSN and live in Halifax!",
@@ -437,15 +637,34 @@ async function main() {
       },
       uri: 'at://did:plc:sample123/app.bsky.feed.post/3lbtest789'
     };
-    const draft = draftReply(SEARCH_CATEGORIES[0], samplePost.record.text);
+    const draftCa = draftReply(SEARCH_CATEGORIES[0], sampleCaPost.record.text);
     matchedPosts.push({
       category: SEARCH_CATEGORIES[0],
-      post: samplePost,
-      authorHandle: samplePost.author.handle,
-      text: samplePost.record.text,
-      postUrl: `https://bsky.app/profile/${samplePost.author.handle}/post/3lbtest789`,
-      draft,
-      createdAt: samplePost.record.createdAt
+      post: sampleCaPost,
+      authorHandle: sampleCaPost.author.handle,
+      text: sampleCaPost.record.text,
+      postUrl: `https://bsky.app/profile/${sampleCaPost.author.handle}/post/3lbtest789`,
+      draft: draftCa,
+      createdAt: sampleCaPost.record.createdAt
+    });
+
+    const sampleUsPost = {
+      author: { handle: 'bruinsfan88.bsky.social' },
+      record: {
+        text: "Why is the Bruins game blacked out on ESPN+ tonight? I'm in Boston and paying for ESPN+!",
+        createdAt: new Date().toISOString()
+      },
+      uri: 'at://did:plc:sample456/app.bsky.feed.post/3lbtest999'
+    };
+    const draftUs = draftReply(SEARCH_CATEGORIES[4], sampleUsPost.record.text);
+    matchedPosts.push({
+      category: SEARCH_CATEGORIES[4],
+      post: sampleUsPost,
+      authorHandle: sampleUsPost.author.handle,
+      text: sampleUsPost.record.text,
+      postUrl: `https://bsky.app/profile/${sampleUsPost.author.handle}/post/3lbtest999`,
+      draft: draftUs,
+      createdAt: sampleUsPost.record.createdAt
     });
   }
 
@@ -455,8 +674,8 @@ async function main() {
 
   let summaryMarkdown = `## 🏒 Bluesky Concierge Radar Summary\n\n`;
   summaryMarkdown += `Found **${matchedPosts.length}** fan broadcast inquiry/pain-point match(es) in the last ${LOOKBACK_MINUTES} minutes.\n\n`;
-  summaryMarkdown += `| Category | Author | Post Excerpt | Suggested Quick Reply | Direct Link |\n`;
-  summaryMarkdown += `| :--- | :--- | :--- | :--- | :--- |\n`;
+  summaryMarkdown += `| Account | Category | Author | Post Excerpt | Suggested Quick Reply | Direct Link |\n`;
+  summaryMarkdown += `| :--- | :--- | :--- | :--- | :--- | :--- |\n`;
 
   // Process top 10 matches (Discord embed limit)
   const topMatches = matchedPosts.slice(0, 10);
@@ -464,19 +683,29 @@ async function main() {
   topMatches.forEach((item, index) => {
     const cleanPostExcerpt = item.text.replace(/\n+/g, ' ').slice(0, 90) + (item.text.length > 90 ? '...' : '');
     const cleanReply = item.draft.replyText;
+    const targetSite = item.draft.targetSite || '.ca';
+    const accountBadge = targetSite === '.com'
+      ? `🇺🇸 **hockeyblackouts.com** (\`@${usIdentifier}\`)`
+      : `🇨🇦 **hockeyblackouts.ca** (\`@${identifier || 'hockeyblackouts.ca'}\`)`;
 
-    console.log(`[#${index + 1}] Category ${item.category.id}: ${item.category.name}`);
-    console.log(`Author: @${item.authorHandle}`);
-    console.log(`Post:   "${item.text}"`);
-    console.log(`Reply:  "${cleanReply}" (${cleanReply.length} chars)`);
-    console.log(`Link:   ${item.postUrl}\n`);
+    console.log(`[#${index + 1}] [${targetSite}] Category ${item.category.id}: ${item.category.name}`);
+    console.log(`Account: ${targetSite}`);
+    console.log(`Author:  @${item.authorHandle}`);
+    console.log(`Post:    "${item.text}"`);
+    console.log(`Reply:   "${cleanReply}" (${cleanReply.length} chars)`);
+    console.log(`Link:    ${item.postUrl}\n`);
 
     // Discord Embed
     discordEmbeds.push({
-      title: `🚨 Category ${item.category.id}: ${item.category.name}`,
+      title: `🚨 [${targetSite}] Category ${item.category.id}: ${item.category.name}`,
       description: `**Author:** [@${item.authorHandle}](https://bsky.app/profile/${item.authorHandle})\n**Post:** ${item.text}`,
-      color: item.category.id === 'A' ? 15548997 : (item.category.id === 'C' ? 3447003 : 15844367),
+      color: targetSite === '.com' ? 2123412 : (item.category.id === 'A' ? 15548997 : (item.category.id === 'C' ? 3447003 : 15844367)),
       fields: [
+        {
+          name: 'Target Account',
+          value: accountBadge,
+          inline: true
+        },
         {
           name: `Suggested Reply (${cleanReply.length} chars)`,
           value: `\`\`\`\n${cleanReply}\n\`\`\``
@@ -486,12 +715,12 @@ async function main() {
           value: `👉 [Open Post on Bluesky](${item.postUrl})`
         }
       ],
-      footer: { text: `HockeyBlackouts.ca Concierge • Category ${item.category.id}` },
+      footer: { text: `HockeyBlackouts${targetSite} Concierge • Category ${item.category.id}` },
       timestamp: item.createdAt
     });
 
     // GitHub Step Summary Row
-    summaryMarkdown += `| **${item.category.id}** (${item.draft.detectedTeam || 'General'}) | [@${item.authorHandle}](${item.postUrl}) | ${cleanPostExcerpt} | \`${cleanReply.slice(0, 100)}...\` | [Open Post](${item.postUrl}) |\n`;
+    summaryMarkdown += `| **${targetSite}** | **${item.category.id}** (${item.draft.detectedTeam || 'General'}) | [@${item.authorHandle}](${item.postUrl}) | ${cleanPostExcerpt} | \`${cleanReply.slice(0, 100)}...\` | [Open Post](${item.postUrl}) |\n`;
   });
 
   // Write to GitHub Step Summary
@@ -525,7 +754,10 @@ if (require.main === module) {
 module.exports = {
   SEARCH_CATEGORIES,
   CANADIAN_TEAMS,
+  US_TEAMS,
   draftReply,
   findTodayGameForTeam,
+  findTodayUsGameForTeam,
+  checkTodaysUsGamePostsPublished,
   getRkeyFromUri
 };

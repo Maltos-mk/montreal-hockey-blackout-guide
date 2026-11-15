@@ -3,9 +3,10 @@
 /**
  * scripts/post_bluesky.js
  *
- * Automated Bluesky Game-Day Publisher for HockeyBlackouts.ca
+ * Automated Bluesky Game-Day Publisher for HockeyBlackouts.ca & HockeyBlackouts.com
  * - Direct AT Protocol XRPC calls (zero npm dependencies)
- * - Targets Master account (BSKY_MAIN_IDENTIFIER) and optional team accounts
+ * - Targets Canadian Master account (BSKY_MAIN_IDENTIFIER), optional CA team accounts,
+ *   and US Master account (BSKY_US_IDENTIFIER / BSKY_US_PASSWORD)
  * - Embeds 1200x630 verdict card PNG with accurate alt text
  * - Accurate UTF-8 byte-offset richtext facets for links and hashtags
  * - Strict grapheme limit (< 280 graphemes)
@@ -274,11 +275,11 @@ async function createPostRecord(accessJwt, did, { text, facets, embed }) {
 }
 
 // Check public Bluesky feed to prevent duplicate posts for the same game
-async function hasAlreadyPostedGame(actor, targetUrl) {
+async function hasAlreadyPostedGame(actor, targetUrl, today = null, matchupText = null) {
   if (!actor || !targetUrl) return false;
   try {
     const cleanUrl = targetUrl.split('?')[0];
-    const res = await fetch(`https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${encodeURIComponent(actor)}&limit=25`);
+    const res = await fetch(`https://public.api.bsky.app/xrpc/app.bsky.feed.getAuthorFeed?actor=${encodeURIComponent(actor)}&limit=50`);
     if (!res.ok) return false;
     const data = await res.json();
     if (!data.feed || !Array.isArray(data.feed)) return false;
@@ -287,29 +288,41 @@ async function hasAlreadyPostedGame(actor, targetUrl) {
       if (!record) return false;
       const embedUri = record.embed?.external?.uri || '';
       const text = record.text || '';
-      return embedUri.includes(cleanUrl) || text.includes(cleanUrl);
+      const matchesUrl = embedUri.includes(cleanUrl) || text.includes(cleanUrl);
+      if (!matchesUrl) return false;
+      if (today) {
+        const recordDate = getGameLocalDate(record.createdAt);
+        if (recordDate && recordDate !== today) return false;
+      }
+      if (matchupText && !text.includes(matchupText)) {
+        return false;
+      }
+      return true;
     });
   } catch (e) {
     return false;
   }
 }
 
-// Discord Webhook Notification
+// Discord Webhook Notification (chunked to respect Discord's 10-embed-per-message limit)
 async function sendDiscordNotification(webhookUrl, embeds = []) {
   if (!webhookUrl || embeds.length === 0) return;
-  try {
-    const res = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ embeds })
-    });
-    if (!res.ok) {
-      console.warn(`[Discord Webhook] Status: ${res.status}`);
-    } else {
-      console.log('✅ Discord notification sent successfully.');
+  for (let i = 0; i < embeds.length; i += 10) {
+    const batch = embeds.slice(i, i + 10);
+    try {
+      const res = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ embeds: batch })
+      });
+      if (!res.ok) {
+        console.warn(`[Discord Webhook] Status: ${res.status}`);
+      } else {
+        console.log(`✅ Discord notification batch (${batch.length} embed(s)) sent successfully.`);
+      }
+    } catch (err) {
+      console.warn('[Discord Webhook Error]:', err.message);
     }
-  } catch (err) {
-    console.warn('[Discord Webhook Error]:', err.message);
   }
 }
 
@@ -332,6 +345,22 @@ function resolveCardImage(datePrefix, homeSlug, awaySlug, primaryTeamSlug) {
   if (fs.existsSync(teamCard)) return teamCard;
 
   const defaultCard = path.join(__dirname, '../build/og/default.png');
+  if (fs.existsSync(defaultCard)) return defaultCard;
+
+  const avatarCard = path.join(__dirname, '../shared/logo-1000x1000.png');
+  if (fs.existsSync(avatarCard)) return avatarCard;
+
+  return null;
+}
+
+// Resolve US card image from build_com/og/ (team pages only, no game pages on .com)
+function resolveUsCardImage(teamSlug) {
+  if (teamSlug) {
+    const teamCard = path.join(__dirname, `../build_com/og/teams/${teamSlug}.png`);
+    if (fs.existsSync(teamCard)) return teamCard;
+  }
+
+  const defaultCard = path.join(__dirname, '../build_com/og/default.png');
   if (fs.existsSync(defaultCard)) return defaultCard;
 
   const avatarCard = path.join(__dirname, '../shared/logo-1000x1000.png');
@@ -494,12 +523,69 @@ function composeFrenchPost(game, homeId, awayId, gameUrl) {
   return { text, altText, cardTitle, cardDescription };
 }
 
-async function main() {
-  console.log('🏒 HockeyBlackouts.ca - Bluesky Game-Day Publisher');
-  const today = getTodayIsoDate();
-  console.log(`Checking Canadian NHL schedule for today: ${today} (America/Toronto)...`);
+// Compose US Account Copy (hockeyblackouts.com — ESPN+, TNT, ABC, NHLN & US RSNs)
+function composeUsPost(game, homeId, awayId, usUrl, homeTeam, awayTeam) {
+  const homeCity = ALL_CITIES[homeId] || homeId;
+  const awayCity = ALL_CITIES[awayId] || awayId;
+  const timeStr = formatGameTime(game.iso, homeId);
+  const netNat = game.netUSNat || game.primaryNet || '';
+  const isEspnPlusExclusive = game.typeUS === 'national' && netNat === 'ESPN+';
+  const isNational = game.typeUS === 'national' && !isEspnPlusExclusive;
+  const isNhlNetwork = game.typeUS === 'nhl_network' || netNat === 'NHLN';
 
-  // Load schedule from data/*.json
+  const usRsns = [];
+  if (homeTeam && homeTeam.country === 'US' && homeTeam.rsn) usRsns.push(homeTeam.rsn);
+  if (awayTeam && awayTeam.country === 'US' && awayTeam.rsn && !usRsns.includes(awayTeam.rsn)) {
+    usRsns.push(awayTeam.rsn);
+  }
+  if (usRsns.length === 0 && game.rsn && game.rsn !== 'ESPN+' && game.rsn !== 'ESPN+ (Out-of-Market)') {
+    usRsns.push(game.rsn);
+  }
+
+  let scenarioLine = '';
+  let blackoutSummary = '';
+
+  if (isEspnPlusExclusive) {
+    scenarioLine = `Streams exclusively on ESPN+ / Hulu across the US. Zero local RSN blackouts.`;
+    blackoutSummary = `US national streaming exclusive on ESPN+ / Hulu. No local RSN blackouts.`;
+  } else if (isNational) {
+    const tvNet = netNat || 'ESPN';
+    scenarioLine = `US national TV exclusive on ${tvNet}. Blacked out on ESPN+ and local RSNs.`;
+    blackoutSummary = `National TV exclusive on ${tvNet}. Blacked out on ESPN+ & local RSNs.`;
+  } else if (isNhlNetwork) {
+    const rsnText = usRsns.length > 0 ? ` & ${usRsns.join(' / ')} in-market` : '';
+    scenarioLine = `Airs on NHL Network${rsnText}. Out-of-market ESPN+ stream is blacked out nationwide.`;
+    blackoutSummary = `NHL Network broadcast${rsnText}. Out-of-market ESPN+ stream blacked out.`;
+  } else if (usRsns.length > 0) {
+    scenarioLine = `Out-of-market on ESPN+. In-market on ${usRsns.join(' & ')} (blacked out on ESPN+ in local ZIPs).`;
+    blackoutSummary = `Out-of-market on ESPN+. Local RSN blackout on ${usRsns.join(' / ')}.`;
+  } else {
+    scenarioLine = `Streams nationwide in the US on ESPN+ with zero local RSN blackouts.`;
+    blackoutSummary = `Out-of-market US stream on ESPN+. No local RSN blackouts.`;
+  }
+
+  let text = `🏒 Game Day: ${awayCity} at ${homeCity} (${timeStr})\n\n${scenarioLine}\n\nZIP Blackout Guide: ${usUrl}\n\n#NHL`;
+  if (getGraphemeCount(text) > 280 && usRsns.length > 1) {
+    const shortRsn = homeTeam?.country === 'US' && homeTeam.rsn ? homeTeam.rsn : usRsns[0];
+    scenarioLine = isNhlNetwork
+      ? `Airs on NHL Network & ${shortRsn}. Out-of-market ESPN+ stream is blacked out nationwide.`
+      : `Out-of-market on ESPN+. In-market on ${shortRsn} & local RSN (blacked out on ESPN+ locally).`;
+    text = `🏒 Game Day: ${awayCity} at ${homeCity} (${timeStr})\n\n${scenarioLine}\n\nZIP Blackout Guide: ${usUrl}\n\n#NHL`;
+  }
+
+  const altText = `US broadcast verdict for ${awayCity} vs ${homeCity} on ${game.date}. ${blackoutSummary}`;
+  const cardTitle = `${awayCity} vs. ${homeCity} — US TV & ESPN+ Blackout Guide`;
+  const cardDescription = `${blackoutSummary} Check US ZIP code blackouts, ESPN+, TNT, ABC & RSN channels.`;
+
+  return { text, altText, cardTitle, cardDescription };
+}
+
+async function main() {
+  console.log('🏒 HockeyBlackouts.ca & .com - Bluesky Game-Day Publisher');
+  const today = getTodayIsoDate();
+  console.log(`Checking NHL schedules for today: ${today} (America/Toronto)...`);
+
+  // Load Canadian schedule from data/*.json
   const activeGames = new Map();
   ['tor', 'mtl', 'ott', 'van', 'cgy', 'edm', 'wpg'].forEach(teamCode => {
     const dataPath = path.join(__dirname, `../data/${teamCode}.json`);
@@ -526,16 +612,52 @@ async function main() {
     });
   });
 
-  if (activeGames.size === 0) {
-    console.log(`ℹ️ No Canadian NHL games scheduled for today (${today}). Nothing to post.`);
+  // Load US schedule from build_com/<slug>/data.json (falling back to data/us/<slug>.json)
+  const usTeamsPath = path.join(__dirname, '../data/us_teams.json');
+  const usTeamsList = fs.existsSync(usTeamsPath) ? JSON.parse(fs.readFileSync(usTeamsPath, 'utf-8')) : [];
+  const usTeamsById = Object.fromEntries(usTeamsList.map(t => [t.id, t]));
+  const usActiveGames = new Map();
+
+  usTeamsList.forEach(teamMeta => {
+    const buildComDataPath = path.join(__dirname, `../build_com/${teamMeta.slug}/data.json`);
+    const fallbackDataPath = path.join(__dirname, `../data/us/${teamMeta.slug}.json`);
+    const dataPath = fs.existsSync(buildComDataPath) ? buildComDataPath : fallbackDataPath;
+    if (!fs.existsSync(dataPath)) return;
+    const teamData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+    teamData.schedule.forEach(g => {
+      const gameDate = getGameLocalDate(g.iso);
+      if (gameDate === today) {
+        const isHome = g.vs.startsWith('vs ');
+        const homeId = isHome ? teamData.team.id : g.opp;
+        const awayId = isHome ? g.opp : teamData.team.id;
+        const datePrefix = formatEtDate(g.iso);
+        const matchKey = `${datePrefix}_${homeId}_${awayId}`;
+        if (!usActiveGames.has(matchKey)) {
+          usActiveGames.set(matchKey, {
+            game: g,
+            homeId,
+            awayId,
+            datePrefix,
+            homeTeam: usTeamsById[homeId] || null,
+            awayTeam: usTeamsById[awayId] || null
+          });
+        }
+      }
+    });
+  });
+
+  if (activeGames.size === 0 && usActiveGames.size === 0) {
+    console.log(`ℹ️ No NHL games scheduled for today (${today}). Nothing to post.`);
     return;
   }
 
-  console.log(`Found ${activeGames.size} game(s) involving Canadian teams today.\n`);
+  console.log(`Found ${activeGames.size} Canadian-interest game(s) and ${usActiveGames.size} US-slate game(s) today.\n`);
 
   // Accounts configuration
   const masterIdentifier = process.env.BSKY_MAIN_IDENTIFIER;
   const masterPassword = process.env.BSKY_MAIN_PASSWORD;
+  const usIdentifier = process.env.BSKY_US_IDENTIFIER || 'hockeyblackouts.com';
+  const usPassword = process.env.BSKY_US_PASSWORD;
 
   const discordWebhook = process.env.CONCIERGE_WEBHOOK_URL;
   const discordEmbeds = [];
@@ -552,10 +674,11 @@ async function main() {
 
     const campaign = (game.netEN === 'SN+' && game.typeEN === 'national') ? 'sn_exclusive' : 'blackout_guide';
 
-    // 1. Master Account Post
+    // 1. Canadian Master Account Post
     const mainUtmUrl = buildUtmUrl(gameUrl, campaign, 'post_link');
     const mainPost = composeMainPost(game, homeId, awayId, gameUrl);
     postTasks.push({
+      siteLabel: '.ca',
       accountName: 'Master (@hockeyblackouts.ca)',
       identifier: masterIdentifier,
       password: masterPassword,
@@ -568,7 +691,7 @@ async function main() {
       linkMap: { [gameUrl]: mainUtmUrl }
     });
 
-    // 2. Team Accounts (e.g. TOR, MTL)
+    // 2. Canadian Team Accounts (e.g. TOR, MTL)
     [homeId, awayId].forEach(teamId => {
       const teamCfg = CANADIAN_TEAMS[teamId];
       if (!teamCfg) return;
@@ -579,6 +702,7 @@ async function main() {
         const teamUtmUrl = buildUtmUrl(gameUrl, campaign, `${teamCfg.slug}_post`);
         const teamPost = composeTeamPost(teamId, game, homeId, awayId, gameUrl);
         postTasks.push({
+          siteLabel: '.ca',
           accountName: `Team ${teamId} (@${teamIdent})`,
           identifier: teamIdent,
           password: teamPass,
@@ -600,6 +724,7 @@ async function main() {
           const frUtmUrl = buildUtmUrl(gameUrl, campaign, 'montreal_fr_post');
           const frPost = composeFrenchPost(game, homeId, awayId, gameUrl);
           postTasks.push({
+            siteLabel: '.ca',
             accountName: `French MTL (@${frIdent})`,
             identifier: frIdent,
             password: frPass,
@@ -616,6 +741,33 @@ async function main() {
     });
   });
 
+  // 3. US Master Account Posts (.com has team pages only, no individual game pages)
+  usActiveGames.forEach(({ game, homeId, awayId, homeTeam, awayTeam }) => {
+    const homeCity = ALL_CITIES[homeId] || homeId;
+    const awayCity = ALL_CITIES[awayId] || awayId;
+    const targetSlug = homeTeam?.slug || awayTeam?.slug || '';
+    const usBaseUrl = targetSlug ? `https://hockeyblackouts.com/${targetSlug}/` : 'https://hockeyblackouts.com/';
+    const usUtmUrl = buildUtmUrl(usBaseUrl, 'blackout_guide', 'post_link');
+    const cardImagePath = resolveUsCardImage(targetSlug);
+    const usPost = composeUsPost(game, homeId, awayId, usBaseUrl, homeTeam, awayTeam);
+
+    postTasks.push({
+      siteLabel: '.com',
+      accountName: `US Master (@${usIdentifier})`,
+      identifier: usIdentifier,
+      password: usPassword,
+      text: usPost.text,
+      cardTitle: usPost.cardTitle,
+      cardDescription: usPost.cardDescription,
+      targetUrl: usUtmUrl,
+      cardImagePath,
+      gameTitle: `${awayCity} @ ${homeCity}`,
+      linkMap: { [usBaseUrl]: usUtmUrl },
+      dedupeByDateAndMatchup: true,
+      matchupText: `${awayCity} at ${homeCity}`
+    });
+  });
+
   console.log(`Prepared ${postTasks.length} publication task(s):\n`);
 
   let postedCount = 0;
@@ -626,6 +778,7 @@ async function main() {
     const facets = extractFacets(task.text, task.linkMap);
 
     console.log(`------------------------------------------------------------`);
+    console.log(`Site:   ${task.siteLabel}`);
     console.log(`Target: ${task.accountName}`);
     console.log(`Game:   ${task.gameTitle}`);
     console.log(`Length: ${graphemeCount} graphemes (Limit < 280)`);
@@ -643,7 +796,12 @@ async function main() {
     }
 
     if (!isForce && task.identifier) {
-      const alreadyPosted = await hasAlreadyPostedGame(task.identifier, task.targetUrl);
+      const alreadyPosted = await hasAlreadyPostedGame(
+        task.identifier,
+        task.targetUrl,
+        task.dedupeByDateAndMatchup ? today : null,
+        task.matchupText || null
+      );
       if (alreadyPosted) {
         console.log(`⏩ [ALREADY POSTED] Skipping duplicate post on ${task.accountName} for ${task.gameTitle} (${task.targetUrl.split('?')[0]})\n`);
         skippedCount++;
@@ -654,10 +812,10 @@ async function main() {
     if (isDryRun) {
       console.log(`[DRY RUN] Skipping network calls for ${task.accountName}.\n`);
       discordEmbeds.push({
-        title: `[DRY RUN] ${task.gameTitle} → ${task.accountName}`,
+        title: `[DRY RUN] [${task.siteLabel}] ${task.gameTitle} → ${task.accountName}`,
         description: `${task.text}\n\n**External Link Card:** [${task.cardTitle}](${task.targetUrl})\n${task.cardDescription}`,
-        color: 3447003,
-        footer: { text: `HockeyBlackouts.ca • ${graphemeCount} graphemes` },
+        color: task.siteLabel === '.com' ? 2123412 : 3447003,
+        footer: { text: `HockeyBlackouts${task.siteLabel} • ${graphemeCount} graphemes` },
         timestamp: new Date().toISOString()
       });
       continue;
@@ -700,19 +858,19 @@ async function main() {
       postedCount++;
 
       discordEmbeds.push({
-        title: `✅ Published: ${task.gameTitle} → ${task.accountName}`,
+        title: `✅ Published [${task.siteLabel}]: ${task.gameTitle} → ${task.accountName}`,
         description: `${task.text}\n\n**External Link Card:** [${task.cardTitle}](${task.targetUrl})\n**Post URI:** \`${result.uri}\``,
         color: 5763719,
-        footer: { text: `HockeyBlackouts.ca • ${graphemeCount} graphemes` },
+        footer: { text: `HockeyBlackouts${task.siteLabel} • ${graphemeCount} graphemes` },
         timestamp: new Date().toISOString()
       });
     } catch (err) {
       console.error(`❌ Error publishing to ${task.accountName}:`, err.message);
       discordEmbeds.push({
-        title: `❌ Failed: ${task.gameTitle} → ${task.accountName}`,
+        title: `❌ Failed [${task.siteLabel}]: ${task.gameTitle} → ${task.accountName}`,
         description: `Error: ${err.message}`,
         color: 15548997,
-        footer: { text: 'HockeyBlackouts.ca Error' },
+        footer: { text: `HockeyBlackouts${task.siteLabel} Error` },
         timestamp: new Date().toISOString()
       });
     }
@@ -748,5 +906,7 @@ module.exports = {
   composeMainPost,
   composeTeamPost,
   composeFrenchPost,
+  composeUsPost,
+  resolveUsCardImage,
   hasAlreadyPostedGame
 };
