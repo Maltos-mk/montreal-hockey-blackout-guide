@@ -451,7 +451,13 @@ function composeMainPost(game, homeId, awayId, gameUrl) {
   tags.push('#NHL');
   const tagLine = [...new Set(tags)].join(' ');
 
-  const text = `🏒 Game Day: ${awayCity} at ${homeCity} (${timeStr})\n\n${scenarioLine}\n\nBroadcast Guide: ${gameUrl}\n\n${tagLine}`;
+  let text = `🏒 Game Day: ${awayCity} at ${homeCity} (${timeStr})\n\n${scenarioLine}\n\nBroadcast Guide: ${gameUrl}\n\n${tagLine}`;
+  if (getGraphemeCount(text) > 290) {
+    const compactScenario = scenarioLine
+      .replace('Blacked out across the rest of Canada on standard packages.', 'Blacked out elsewhere in Canada.')
+      .replace('Zero regional blackouts from coast to coast.', 'No regional blackouts in Canada.');
+    text = `🏒 Game Day: ${awayCity} at ${homeCity} (${timeStr})\n\n${compactScenario}\n\nBroadcast Guide: ${gameUrl}\n\n${tagLine}`;
+  }
   const altText = `Broadcast verdict for ${awayCity} vs ${homeCity} on ${game.date}. ${blackoutSummary}`;
   const cardTitle = `${awayCity} vs. ${homeCity} — TV & Blackout Status`;
   const cardDescription = `${blackoutSummary} Check Canadian regional channels and streaming options.`;
@@ -781,7 +787,7 @@ async function main() {
     console.log(`Site:   ${task.siteLabel}`);
     console.log(`Target: ${task.accountName}`);
     console.log(`Game:   ${task.gameTitle}`);
-    console.log(`Length: ${graphemeCount} graphemes (Limit < 280)`);
+    console.log(`Length: ${graphemeCount} graphemes (Limit <= 300)`);
     console.log(`Card:   "${task.cardTitle}"`);
     console.log(`Desc:   "${task.cardDescription}"`);
     console.log(`URI:    ${task.targetUrl}`);
@@ -790,9 +796,16 @@ async function main() {
     console.log(`\nContent:\n${task.text}`);
     console.log(`------------------------------------------------------------\n`);
 
-    if (graphemeCount > 280) {
-      console.error(`❌ Post exceeds 280 graphemes (${graphemeCount}). Aborting.`);
-      process.exit(1);
+    if (graphemeCount > 300) {
+      console.error(`❌ Post exceeds 300 graphemes (${graphemeCount}). Skipping ${task.accountName} for ${task.gameTitle}.`);
+      discordEmbeds.push({
+        title: `❌ Skipped [${task.siteLabel}]: ${task.gameTitle} → ${task.accountName}`,
+        description: `Post exceeded Bluesky's 300-grapheme limit (${graphemeCount} graphemes).`,
+        color: 15548997,
+        footer: { text: `HockeyBlackouts${task.siteLabel} Error` },
+        timestamp: new Date().toISOString()
+      });
+      continue;
     }
 
     if (!isForce && task.identifier) {
