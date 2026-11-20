@@ -13,12 +13,12 @@ if (!fs.existsSync(GAMES_DIR)) {
 const template = fs.readFileSync(TEMPLATE_FILE, 'utf-8');
 
 const TEAMS_MAP = {
-  'MTL': { city: 'Montreal', name: 'Montreal Canadiens', nickname: 'Canadiens', dir: 'montreal', radio: 'TSN 690 / 98.5 FM', radioUrl: 'https://www.iheartradio.ca/tsn/tsn-montreal' },
-  'TOR': { city: 'Toronto', name: 'Toronto Maple Leafs', nickname: 'Maple Leafs', dir: 'toronto', radio: 'TSN 1050 / Sportsnet 590', radioUrl: 'https://www.tsn.ca/radio/toronto-1050' },
-  'OTT': { city: 'Ottawa', name: 'Ottawa Senators', nickname: 'Senators', dir: 'ottawa', radio: 'TSN 1200 / 94.5 Unique FM', radioUrl: 'https://www.iheartradio.ca/tsn/tsn-1200' },
+  'MTL': { city: 'Montreal', name: 'Montreal Canadiens', nickname: 'Canadiens', dir: 'montreal', radio: 'TSN 690 / 98.5 FM', radioUrl: 'https://www.tsn.ca/radio/montreal-690/' },
+  'TOR': { city: 'Toronto', name: 'Toronto Maple Leafs', nickname: 'Maple Leafs', dir: 'toronto', radio: 'TSN 1050 / Sportsnet 590', radioUrl: 'https://www.tsn.ca/radio/toronto-1050/' },
+  'OTT': { city: 'Ottawa', name: 'Ottawa Senators', nickname: 'Senators', dir: 'ottawa', radio: 'TSN 1200 / 94.5 Unique FM', radioUrl: 'https://www.tsn.ca/radio/ottawa-1200/' },
   'VAN': { city: 'Vancouver', name: 'Vancouver Canucks', nickname: 'Canucks', dir: 'vancouver', radio: 'Sportsnet 650', radioUrl: 'https://www.sportsnet.ca/650/' },
   'CGY': { city: 'Calgary', name: 'Calgary Flames', nickname: 'Flames', dir: 'calgary', radio: 'Sportsnet 960 The Fan', radioUrl: 'https://www.sportsnet.ca/960/' },
-  'EDM': { city: 'Edmonton', name: 'Edmonton Oilers', nickname: 'Oilers', dir: 'edmonton', radio: '630 CHED', radioUrl: 'https://globalnews.ca/radio/630ched/' },
+  'EDM': { city: 'Edmonton', name: 'Edmonton Oilers', nickname: 'Oilers', dir: 'edmonton', radio: '880 CHED', radioUrl: 'https://globalnews.ca/radio/880ched/' },
   'WPG': { city: 'Winnipeg', name: 'Winnipeg Jets', nickname: 'Jets', dir: 'winnipeg', radio: '680 CJOB', radioUrl: 'https://globalnews.ca/radio/cjob/' },
   'BOS': { city: 'Boston', name: 'Boston Bruins', nickname: 'Bruins' },
   'BUF': { city: 'Buffalo', name: 'Buffalo Sabres', nickname: 'Sabres' },
