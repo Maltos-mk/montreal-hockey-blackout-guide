@@ -206,8 +206,10 @@ test('Ko-fi multivariate testing: assigns variant, persists in localStorage, upd
   const copyText = await page.locator('#kofiCalloutText').textContent();
   expect(copyText).toContain('Zero gambling ads');
 
-  // Navigate to active game page and confirm variant consistency
-  await page.goto('/game/2026-11-07/toronto-vs-montreal/');
+  // Navigate to an active upcoming game page and confirm variant consistency
+  const activeGameHref = await page.locator('a[href^="/game/"]').first().getAttribute('href');
+  expect(activeGameHref).toBeTruthy();
+  await page.goto(activeGameHref);
   await page.waitForSelector('#gameKofiCard');
   const gameBtnVariant = await page.locator('#gameKofiBtn').getAttribute('data-umami-event-variant');
   expect(gameBtnVariant).toBe('anti_gambling');
@@ -314,6 +316,15 @@ test('How Blackouts Work: Diagnostic tool awaits user click, updates territory o
   expect(await page.locator('#teamMarketText').textContent()).toContain('Ontario (West of Belleville)');
   // Verdict updates to match
   expect(await page.locator('#diagnosticVerdictBox').textContent()).toContain('LOCATION MATCH: Your IP (Toronto, Ontario) is INSIDE the Toronto Maple Leafs Territory');
+});
+
+test('Homepage displays upcoming Canadian matchup cards', async ({ page }) => {
+  await page.goto('/');
+  const cards = page.locator('section[data-section="upcoming-matchups"] .matchup-card');
+  const count = await cards.count();
+  expect(count).toBeGreaterThan(0);
+  expect(count).toBeLessThanOrEqual(6);
+  await expect(cards.first()).toBeVisible();
 });
 
 

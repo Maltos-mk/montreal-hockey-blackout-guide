@@ -155,7 +155,7 @@ teams.forEach(team => {
 
 const sortedUpcoming = Array.from(allUniqueUpcoming.values())
   .sort((a, b) => a.timestamp - b.timestamp)
-  .slice(0, 10);
+  .slice(0, 35); // Prerender ~10-14 days of matchups so client-side expiry never leaves the grid empty between rebuilds
 
 const splashUpcomingHtml = sortedUpcoming.map(item => `
   <div class="matchup-card bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-3" data-timestamp="${item.timestamp}">
