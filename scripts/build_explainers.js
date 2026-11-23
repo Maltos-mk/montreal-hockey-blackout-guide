@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { formatEtDate } = require('./lib/date_utils');
+const { formatEtDate, formatEtTime } = require('./lib/date_utils');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const DATA_DIR = path.join(__dirname, '../data');
@@ -443,7 +443,7 @@ teamDatasets.forEach(d => {
         const gameUrl = `/game/${datePrefix}/${slugifyCity(homeCity)}-vs-${slugifyCity(awayCity)}/`;
         primeMap.set(key, {
           date: g.date,
-          time: g.time || '7:00 PM ET',
+          time: formatEtTime(g.iso, g.time),
           iso: g.iso,
           homeId,
           awayId,
@@ -695,7 +695,7 @@ TEAM_ORDER.forEach(id => {
     dir: TEAM_DIRS[teamUpper],
     primaryColor: data.team.colors.primary || '#0284c7',
     date: nextGame.date,
-    time: nextGame.time,
+    time: formatEtTime(nextGame.iso, nextGame.time),
     vs: nextGame.vs,
     opp: nextGame.opp,
     oppName: TEAM_NAMES[nextGame.opp] || nextGame.opp,

@@ -53,6 +53,22 @@ function formatEtDate(iso, fallback = '') {
   return Number.isNaN(parsed.getTime()) ? String(iso).split('T')[0] : etDateFormatter.format(parsed);
 }
 
+const etTimeFormatter = new Intl.DateTimeFormat('en-US', {
+  timeZone: 'America/Toronto',
+  hour: 'numeric',
+  minute: '2-digit',
+  hour12: true
+});
+
+/**
+ * Format an ISO timestamp into 12-hour Eastern Time (America/Toronto, e.g. "7:30 PM").
+ */
+function formatEtTime(iso, fallback = '7:00 PM ET') {
+  if (!iso) return fallback;
+  const parsed = new Date(iso);
+  return Number.isNaN(parsed.getTime()) ? fallback : etTimeFormatter.format(parsed);
+}
+
 /**
  * Pick the primary Canadian team for a matchup (home Canadian team first,
  * otherwise away Canadian team) so card times match copy priority.
@@ -110,6 +126,7 @@ function formatTeamGameDate(iso, teamId, fallback = '') {
 module.exports = {
   TEAM_TIMEZONES,
   formatEtDate,
+  formatEtTime,
   getPrimaryCanadianTeamId,
   formatTeamGameTime,
   formatTeamGameDate

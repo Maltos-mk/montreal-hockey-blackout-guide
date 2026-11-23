@@ -1,8 +1,11 @@
 import urllib.request
 import json
 import datetime
+from zoneinfo import ZoneInfo
 import ssl
 import sys
+
+ET_TZ = ZoneInfo("America/Toronto")
 
 ctx = ssl.create_default_context()
 ctx.check_hostname = False
@@ -49,17 +52,18 @@ for abbrev, filepath in teams.items():
         if gid in live_games:
             new_utc = live_games[gid]
             
-            # Format comparison - we expect our iso to just be the ET representation of new_utc
-            dt = datetime.datetime.strptime(new_utc, "%Y-%m-%dT%H:%M:%SZ")
-            dt_et = dt - datetime.timedelta(hours=4) # Assuming EDT/EST approx for baseline
-            new_iso = dt_et.strftime("%Y-%m-%dT%H:%M:%S-04:00")
+            # Format comparison - convert UTC to America/Toronto (respecting EDT/EST transitions)
+            dt = datetime.datetime.strptime(new_utc, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=datetime.timezone.utc)
+            dt_et = dt.astimezone(ET_TZ)
+            new_iso = dt_et.isoformat()
+            new_time = dt_et.strftime("%I:%M %p").lstrip("0")
+            new_date = dt_et.strftime("%a, %b %d, %Y").replace(" 0", " ")
             
-            # Update if iso changed by more than just timezone offset nuances
-            if g.get("iso") != new_iso:
+            # Update if iso, time, or date drifted
+            if g.get("iso") != new_iso or g.get("time") != new_time:
                 g["iso"] = new_iso
-                # Update time string
-                g["time"] = dt_et.strftime("%I:%M %p").lstrip("0")
-                g["date"] = dt_et.strftime("%a, %b %d, %Y").replace(" 0", " ")
+                g["time"] = new_time
+                g["date"] = new_date
                 updated += 1
                 changed = True
                 

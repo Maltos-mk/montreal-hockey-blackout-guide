@@ -209,6 +209,29 @@ function run() {
   assert.equal(prodAudit.caResults.length, 32, 'Must audit all 32 CA site clubs');
   assert.ok(prodAudit.passed, `Production data audit failed:\n${prodAudit.errors.join('\n')}`);
 
+  // 5. Verify every CA schedule entry's `time` matches `iso` in America/Toronto (catches DST -04:00 vs -05:00 drift)
+  const etTimeFmt = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Toronto',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true
+  });
+  const caMeta = JSON.parse(fs.readFileSync(path.join(ROOT_DIR, 'data/ca_teams.json'), 'utf8'));
+  const ca7 = new Set(['MTL', 'TOR', 'OTT', 'VAN', 'CGY', 'EDM', 'WPG']);
+  const timeMismatches = [];
+  for (const t of caMeta) {
+    const filePath = path.join(ROOT_DIR, ca7.has(t.id) ? `data/${t.id.toLowerCase()}.json` : `data/ca/${t.slug}.json`);
+    const teamData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    for (const g of teamData.schedule || []) {
+      if (!g.iso || !g.time) continue;
+      const expected = etTimeFmt.format(new Date(g.iso));
+      if (g.time !== expected) {
+        timeMismatches.push(`${t.id} ${g.date}: time="${g.time}" != expected="${expected}" (${g.iso})`);
+      }
+    }
+  }
+  assert.equal(timeMismatches.length, 0, `CA schedule time vs iso mismatches:\n${timeMismatches.slice(0, 10).join('\n')}`);
+
   console.log('✅ All data audit unit & fixture contract tests passed.');
 }
 

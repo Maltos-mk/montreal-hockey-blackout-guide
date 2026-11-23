@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { formatEtDate } = require('./lib/date_utils');
+const { formatEtDate, formatEtTime } = require('./lib/date_utils');
 
 const templateHtml = fs.readFileSync('templates/index.html', 'utf8');
 const caTeamsMeta = JSON.parse(fs.readFileSync('data/ca_teams.json', 'utf8'));
@@ -318,7 +318,7 @@ dataFiles.forEach(({ meta, file }) => {
         <td class="py-3 px-4 font-bold text-slate-600 dark:text-slate-300 font-teko text-base text-center">${gameNum}</td>
         <td class="py-3 px-4 whitespace-nowrap">
           <div class="font-semibold text-slate-800 dark:text-slate-200">${g.date}</div>
-          <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.time || '7:00 PM ET'}</div>
+          <div class="text-[11px] text-slate-600 dark:text-slate-300">${formatEtTime(g.iso, g.time)}</div>
         </td>
         <td class="py-3 px-4">
           <div class="font-semibold text-slate-900 dark:text-white flex items-center gap-2">
@@ -358,7 +358,7 @@ dataFiles.forEach(({ meta, file }) => {
               </a>
             </div>
             <div class="text-[10px] text-slate-600 dark:text-slate-300 font-medium leading-tight mt-0.5 truncate">${fullMatchup}</div>
-            <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.date} • ${g.time || '7:00 PM ET'}</div>
+            <div class="text-[11px] text-slate-600 dark:text-slate-300">${g.date} • ${formatEtTime(g.iso, g.time)}</div>
           </div>
           ${statusBadge}
         </div>
@@ -406,7 +406,7 @@ dataFiles.forEach(({ meta, file }) => {
             <span class="text-rose-400 font-teko text-base">#${data.schedule.findIndex(s => s.id === ug.id) + 1}</span>
             <a href="${ugUrl}" class="hover:underline hover:text-rose-400">${ug.vs}</a>
           </div>
-          <div class="text-[11px] text-slate-300 mt-0.5">${ug.date} • ${ug.time || '7:00 PM ET'}</div>
+          <div class="text-[11px] text-slate-300 mt-0.5">${ug.date} • ${formatEtTime(ug.iso, ug.time)}</div>
         </div>
         <div class="text-right shrink-0">
           <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-white/10 text-white border border-white/10">${ug.netEN || 'Sportsnet'}</span>
@@ -424,7 +424,7 @@ dataFiles.forEach(({ meta, file }) => {
             <span class="px-2.5 py-0.5 rounded-full text-[11px] font-black uppercase tracking-wider bg-white/20 text-white">
               Next ${team.nickname} Game
             </span>
-            <span class="text-xs text-slate-300 font-medium">${nextGame.date} • ${nextGame.time || '7:00 PM ET'}</span>
+            <span class="text-xs text-slate-300 font-medium">${nextGame.date} • ${formatEtTime(nextGame.iso, nextGame.time)}</span>
             <span class="text-xs text-slate-400 font-teko text-sm tracking-wide">Game ${nextGameIdx} of ${data.schedule.length}</span>
           </div>
           <h3 class="text-xl sm:text-2xl font-black font-teko uppercase tracking-wide flex items-center gap-2">

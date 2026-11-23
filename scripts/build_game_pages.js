@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { formatEtDate } = require('./lib/date_utils');
+const { formatEtDate, formatEtTime } = require('./lib/date_utils');
 
 const BUILD_DIR = path.join(__dirname, '../build');
 const GAMES_DIR = path.join(BUILD_DIR, 'game');
@@ -514,7 +514,7 @@ uniqueGames.forEach(({ game: g, primaryTeamId, homeTeamId, awayTeamId, datePrefi
   renderedHtml = renderedHtml.replace(/\{\{MATCHUP_TITLE\}\}/g, `${awayTeam.name} @ ${homeTeam.name}`);
   renderedHtml = renderedHtml.replace(/\{\{PRESEASON_BADGE\}\}/g, preseasonBadge);
   renderedHtml = renderedHtml.replace(/\{\{GAME_DATE\}\}/g, g.date);
-  renderedHtml = renderedHtml.replace(/\{\{GAME_TIME\}\}/g, g.time || '7:00 PM ET');
+  renderedHtml = renderedHtml.replace(/\{\{GAME_TIME\}\}/g, formatEtTime(g.iso, g.time));
   renderedHtml = renderedHtml.replace(/\{\{GAME_ISO\}\}/g, g.iso);
   renderedHtml = renderedHtml.replace(/\{\{VENUE_NAME\}\}/g, g.venue || `${homeTeam.city} Arena`);
   renderedHtml = renderedHtml.replace(/\{\{PRIMARY_NET_EN\}\}/g, g.netEN || 'Sportsnet');

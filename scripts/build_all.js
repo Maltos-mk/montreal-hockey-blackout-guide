@@ -1,7 +1,7 @@
 const { execSync } = require("child_process");
 const fs = require('fs');
 const path = require('path');
-const { formatEtDate } = require('./lib/date_utils');
+const { formatEtDate, formatEtTime } = require('./lib/date_utils');
 
 function copySharedAssets(targetRootDir) {
   const destShared = path.join(targetRootDir, 'shared');
@@ -161,7 +161,7 @@ const splashUpcomingHtml = sortedUpcoming.map(item => `
   <div class="matchup-card bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm hover:-translate-y-0.5 hover:shadow-md transition flex flex-col justify-between gap-3" data-timestamp="${item.timestamp}">
     <div>
       <div class="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
-        <span>${item.game.date} • ${item.game.time || '7:00 PM ET'}</span>
+        <span>${item.game.date} • ${formatEtTime(item.game.iso, item.game.time)}</span>
         <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-rose-50 dark:bg-rose-950/50 text-teamPrimary dark:text-rose-300 border border-rose-200/60 dark:border-rose-800/50">${item.game.netEN || 'Sportsnet'}</span>
       </div>
       <h3 class="text-base sm:text-lg font-extrabold text-slate-900 dark:text-white leading-snug">${item.awayName} @ ${item.homeName}</h3>
